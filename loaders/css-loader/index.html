@@ -12,7 +12,7 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css" />
     
-      <link href="/dfd3acb950a9cbfa0992.css" rel="stylesheet">
+      <link href="/306ebfc7c42e8776518d.css" rel="stylesheet">
     
 
     <script src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
@@ -160,7 +160,7 @@ It&apos;s useful when you, for instance, need to post process the CSS as a strin
         Type
     </div>
     <div class="table-td-content">
-        <code>{Boolean}</code>
+        <code>{Boolean|String}</code>
     </div>
   </div><div class="table-td">
     <div class="table-td-title">
@@ -174,7 +174,7 @@ It&apos;s useful when you, for instance, need to post process the CSS as a strin
         Description
     </div>
     <div class="table-td-content">
-        Enable/Disable CSS Modules
+        Enable/Disable CSS Modules and setup mode
     </div>
   </div></div><div class="table-tr"><div class="table-td">
     <div class="table-td-title">
@@ -343,16 +343,116 @@ url<span class="token punctuation">(</span>~module/image.png<span class="token p
         <span class="text"><a href="https://github.com/css-modules/css-modules"><code>modules</code></a></span>
         <a aria-label="&lt;a href=" https:="" github.com="" css-modules="" css-modules"=""><code>modules</code></a>&quot; class=&quot;icon-link&quot; href=&quot;#modules&quot;&gt;
       </h3>
-<p>The query parameter <code>modules</code> enables the <strong>CSS Modules</strong> spec.</p>
-<p>This enables local scoped CSS by default. (You can switch it off with <code>:global(...)</code> or <code>:global</code> for selectors and/or rules.).</p>
-<h4 class="header">
+<p>The <code>modules</code> option enables/disables the <strong>CSS Modules</strong> spec and setup basic behaviour.</p>
+
+    <div class="table">
+        <div class="table-wrap">
+          <div class="table-header">
+              <div class="table-tr"><div class="table-th">Name</div><div class="table-th">Type</div><div class="table-th">Description</div></div>
+          </div>
+          <div class="table-body">
+              <div class="table-tr"><div class="table-td">
+    <div class="table-td-title">
+        Name
+    </div>
+    <div class="table-td-content">
+        <strong><code>true</code></strong>
+    </div>
+  </div><div class="table-td">
+    <div class="table-td-title">
+        Type
+    </div>
+    <div class="table-td-content">
+        <code>{Boolean}</code>
+    </div>
+  </div><div class="table-td">
+    <div class="table-td-title">
+        Description
+    </div>
+    <div class="table-td-content">
+        Enables local scoped CSS by default (use <strong>local</strong> mode by default)
+    </div>
+  </div></div><div class="table-tr"><div class="table-td">
+    <div class="table-td-title">
+        Name
+    </div>
+    <div class="table-td-content">
+        <strong><code>false</code></strong>
+    </div>
+  </div><div class="table-td">
+    <div class="table-td-title">
+        Type
+    </div>
+    <div class="table-td-content">
+        <code>{Boolean}</code>
+    </div>
+  </div><div class="table-td">
+    <div class="table-td-title">
+        Description
+    </div>
+    <div class="table-td-content">
+        Disable the <strong>CSS Modules</strong> spec, all <strong>CSS Modules</strong> features (like <code>@value</code>, <code>:local</code>, <code>:global</code> and <code>composes</code>) will not work
+    </div>
+  </div></div><div class="table-tr"><div class="table-td">
+    <div class="table-td-title">
+        Name
+    </div>
+    <div class="table-td-content">
+        <strong><code>&apos;local&apos;</code></strong>
+    </div>
+  </div><div class="table-td">
+    <div class="table-td-title">
+        Type
+    </div>
+    <div class="table-td-content">
+        <code>{String}</code>
+    </div>
+  </div><div class="table-td">
+    <div class="table-td-title">
+        Description
+    </div>
+    <div class="table-td-content">
+        Enables local scoped CSS by default (same as <code>true</code> value)
+    </div>
+  </div></div><div class="table-tr"><div class="table-td">
+    <div class="table-td-title">
+        Name
+    </div>
+    <div class="table-td-content">
+        <strong><code>&apos;global&apos;</code></strong>
+    </div>
+  </div><div class="table-td">
+    <div class="table-td-title">
+        Type
+    </div>
+    <div class="table-td-content">
+        <code>{String}</code>
+    </div>
+  </div><div class="table-td">
+    <div class="table-td-title">
+        Description
+    </div>
+    <div class="table-td-content">
+        Enables global scoped CSS by default
+    </div>
+  </div></div>
+          </div>
+        </div>
+    </div><p>Using <code>false</code> value increase performance because we avoid parsing <strong>CSS Modules</strong> features, it will be useful for developers who use vanilla css or use other technologies.</p>
+<p>You can read about <strong>modes</strong> below</p>
+<h5 class="header">
         <a class="anchor" aria-hidden="true" href="#scope" id="scope"></a>
         <span class="text"><code>Scope</code></span>
         <a aria-label="&lt;code&gt;Scope&lt;/code&gt;" class="icon-link" href="#scope"></a>
-      </h4>
-<p>By default CSS exports all classnames into a global selector scope. Styles can be locally scoped to avoid globally scoping styles.</p>
+      </h5>
+<p>Using <code>local</code> value requires you to specify <code>:global</code> classes.
+Using <code>global</code> value requires you to specify <code>:local</code> classes.</p>
+<p>You can find more information <a href="https://github.com/css-modules/css-modules">here</a>.</p>
+<p>Styles can be locally scoped to avoid globally scoping styles.</p>
 <p>The syntax <code>:local(.className)</code> can be used to declare <code>className</code> in the local scope. The local identifiers are exported by the module.</p>
-<p>With <code>:local</code> (without brackets) local mode can be switched on for this selector. <code>:global(.className)</code> can be used to declare an explicit global selector. With <code>:global</code> (without brackets) global mode can be switched on for this selector.</p>
+<p>With <code>:local</code> (without brackets) local mode can be switched on for this selector. 
+The <code>:global(.className)</code> nocation can be used to declare an explicit global selector. 
+With <code>:global</code> (without brackets) global mode can be switched on for this selector.</p>
 <p>The loader replaces local selectors with unique identifiers. The chosen unique identifiers are exported by the module.</p>
 <pre><code class="lang-css"><span class="token selector"><span class="token pseudo-class">:local(.className)</span> </span><span class="token punctuation">{</span> <span class="token property">background</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span> <span class="token punctuation">}</span>
 <span class="token selector"><span class="token pseudo-class">:local</span> <span class="token class">.className</span> </span><span class="token punctuation">{</span> <span class="token property">color</span><span class="token punctuation">:</span> green<span class="token punctuation">;</span> <span class="token punctuation">}</span>
@@ -377,11 +477,11 @@ url<span class="token punctuation">(</span>~module/image.png<span class="token p
 <pre><code>file.png <span class="token operator">=</span><span class="token operator">&gt;</span> ./file.png
 ~module/file.png <span class="token operator">=</span><span class="token operator">&gt;</span> module/file.png
 </code></pre><p>You can use <code>:local(#someId)</code>, but this is not recommended. Use classes instead of ids.</p>
-<h4 class="header">
+<h5 class="header">
         <a class="anchor" aria-hidden="true" href="#composing" id="composing"></a>
         <span class="text"><code>Composing</code></span>
         <a aria-label="&lt;code&gt;Composing&lt;/code&gt;" class="icon-link" href="#composing"></a>
-      </h4>
+      </h5>
 <p>When declaring a local classname you can compose a local class from another local classname.</p>
 <pre><code class="lang-css"><span class="token selector"><span class="token pseudo-class">:local(.className)</span> </span><span class="token punctuation">{</span>
   <span class="token property">background</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
@@ -408,11 +508,11 @@ url<span class="token punctuation">(</span>~module/image.png<span class="token p
   <span class="token property">background</span><span class="token punctuation">:</span> blue<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<h4 class="header">
+<h5 class="header">
         <a class="anchor" aria-hidden="true" href="#importing" id="importing"></a>
         <span class="text"><code>Importing</code></span>
         <a aria-label="&lt;code&gt;Importing&lt;/code&gt;" class="icon-link" href="#importing"></a>
-      </h4>
+      </h5>
 <p>To import a local classname from another module.</p>
 <pre><code class="lang-css"><span class="token selector"><span class="token pseudo-class">:local(.continueButton)</span> </span><span class="token punctuation">{</span>
   <span class="token property">composes</span><span class="token punctuation">:</span> button from <span class="token string">&apos;library/button.css&apos;</span><span class="token punctuation">;</span>
@@ -471,7 +571,7 @@ url<span class="token punctuation">(</span>~module/image.png<span class="token p
         <a aria-label="&lt;code&gt;sourceMap&lt;/code&gt;" class="icon-link" href="#sourcemap"></a>
       </h3>
 <p>To include source maps set the <code>sourceMap</code> option.</p>
-<p>I.e. the extract-text-webpack-plugin can handle them.</p>
+<p>I.e. the <code>mini-css-extract-plugin</code> can handle them.</p>
 <p>They are not enabled by default because they expose a runtime overhead and increase in bundle size (JS source maps do not). In addition to that relative paths are buggy and you need to use an absolute public path which includes the server URL.</p>
 <p><strong>webpack.config.js</strong></p>
 <pre><code class="lang-js"><span class="token punctuation">{</span>
