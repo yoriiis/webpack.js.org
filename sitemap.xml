@@ -52,9 +52,6 @@
         <loc>https://webpack.js.org/pluginsapi/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/plugins/index.html</loc>
-    </url>
-    <url>
         <loc>https://webpack.js.org/starter-kits/index.html</loc>
     </url>
     <url>
@@ -65,6 +62,9 @@
     </url>
     <url>
         <loc>https://webpack.js.org/writers-guide/index.html</loc>
+    </url>
+    <url>
+        <loc>https://webpack.js.org/plugins/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/api/cli/index.html</loc>
@@ -211,13 +211,13 @@
         <loc>https://webpack.js.org/contribute/writing-a-loader/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/contribute/writing-a-plugin/index.html</loc>
-    </url>
-    <url>
         <loc>https://webpack.js.org/development/how-to-write-a-loader/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/development/how-to-write-a-plugin/index.html</loc>
+    </url>
+    <url>
+        <loc>https://webpack.js.org/contribute/writing-a-plugin/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/development/plugin-patterns/index.html</loc>
@@ -379,13 +379,13 @@
         <loc>https://webpack.js.org/loaders/json-loader/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/loaders/json5-loader/index.html</loc>
-    </url>
-    <url>
         <loc>https://webpack.js.org/loaders/less-loader/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/loaders/mocha-loader/index.html</loc>
+    </url>
+    <url>
+        <loc>https://webpack.js.org/loaders/json5-loader/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/loaders/multi-loader/index.html</loc>
@@ -409,9 +409,6 @@
         <loc>https://webpack.js.org/loaders/react-proxy-loader/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/loaders/restyle-loader/index.html</loc>
-    </url>
-    <url>
         <loc>https://webpack.js.org/loaders/sass-loader/index.html</loc>
     </url>
     <url>
@@ -419,6 +416,9 @@
     </url>
     <url>
         <loc>https://webpack.js.org/loaders/source-map-loader/index.html</loc>
+    </url>
+    <url>
+        <loc>https://webpack.js.org/loaders/restyle-loader/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/loaders/style-loader/index.html</loc>
@@ -466,10 +466,10 @@
         <loc>https://webpack.js.org/plugins/babel-minify-webpack-plugin/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/plugins/banner-plugin/index.html</loc>
+        <loc>https://webpack.js.org/plugins/closure-webpack-plugin/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/plugins/closure-webpack-plugin/index.html</loc>
+        <loc>https://webpack.js.org/plugins/banner-plugin/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/plugins/commons-chunk-plugin/index.html</loc>

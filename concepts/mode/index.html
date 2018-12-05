@@ -12,7 +12,7 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css" />
     
-      <link href="/7b46d32a073389cc0db2.css" rel="stylesheet">
+      <link href="/776df143bde9b282efea.css" rel="stylesheet">
     
 
     <script src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
@@ -67,7 +67,7 @@
         Description
     </div>
     <div class="table-td-content">
-        Sets <code>process.env.NODE_ENV</code> on <code>DefinePlugin</code> to value <code>production</code>. Enables <code>FlagDependencyUsagePlugin</code>, <code>FlagIncludedChunksPlugin</code>, <code>ModuleConcatenationPlugin</code>, <code>NoEmitOnErrorsPlugin</code>, <code>OccurrenceOrderPlugin</code>, <code>SideEffectsFlagPlugin</code> and <code>UglifyJsPlugin</code>.
+        Sets <code>process.env.NODE_ENV</code> on <code>DefinePlugin</code> to value <code>production</code>. Enables <code>FlagDependencyUsagePlugin</code>, <code>FlagIncludedChunksPlugin</code>, <code>ModuleConcatenationPlugin</code>, <code>NoEmitOnErrorsPlugin</code>, <code>OccurrenceOrderPlugin</code>, <code>SideEffectsFlagPlugin</code> and <code>TerserPlugin</code>.
     </div>
   </div></div><div class="table-tr"><div class="table-td">
     <div class="table-td-title">
@@ -163,7 +163,7 @@ module.exports = {
 <span class="token deleted">-   minimize: true,</span>
 <span class="token deleted">- },</span>
 <span class="token deleted">- plugins: [</span>
-<span class="token deleted">-   new UglifyJsPlugin(/* ... */),</span>
+<span class="token deleted">-   new TerserPlugin(/* ... */),</span>
 <span class="token deleted">-   new webpack.DefinePlugin({ &quot;process.env.NODE_ENV&quot;: JSON.stringify(&quot;production&quot;) }),</span>
 <span class="token deleted">-   new webpack.optimize.ModuleConcatenationPlugin(),</span>
 <span class="token deleted">-   new webpack.NoEmitOnErrorsPlugin()</span>

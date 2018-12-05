@@ -12,7 +12,7 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css" />
     
-      <link href="/7b46d32a073389cc0db2.css" rel="stylesheet">
+      <link href="/776df143bde9b282efea.css" rel="stylesheet">
     
 
     <script src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
@@ -25,7 +25,7 @@
         <a aria-label="&lt;code&gt;optimization.minimize&lt;/code&gt;" class="icon-link" href="#optimization-minimize"></a>
       </h2>
 <p><code>boolean</code></p>
-<p>Tell webpack to minimize the bundle using the <a href="/plugins/uglifyjs-webpack-plugin/">UglifyjsWebpackPlugin</a>.</p>
+<p>Tell webpack to minimize the bundle using the <a href="/plugins/terser-webpack-plugin/">TerserPlugin</a>.</p>
 <p>This is <code>true</code> by default in <code>production</code> mode.</p>
 <p><strong>webpack.config.js</strong></p>
 <pre><code class="lang-js">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
@@ -40,16 +40,16 @@
         <span class="text"><code>optimization.minimizer</code></span>
         <a aria-label="&lt;code&gt;optimization.minimizer&lt;/code&gt;" class="icon-link" href="#optimization-minimizer"></a>
       </h2>
-<p><code>[UglifyjsWebpackPlugin]</code></p>
-<p>Allows you to override the default minimizer by providing a different one or more customized <a href="/plugins/uglifyjs-webpack-plugin/">UglifyjsWebpackPlugin</a> instances.</p>
+<p><code>[TerserPlugin]</code></p>
+<p>Allows you to override the default minimizer by providing a different one or more customized <a href="/plugins/terser-webpack-plugin/">TerserPlugin</a> instances.</p>
 <p><strong>webpack.config.js</strong></p>
-<pre><code class="lang-js"><span class="token keyword">const</span> UglifyJsPlugin <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&apos;uglifyjs-webpack-plugin&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre><code class="lang-js"><span class="token keyword">const</span> TerserPlugin <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&apos;terser-webpack-plugin&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
   <span class="token comment">//...</span>
   optimization<span class="token punctuation">:</span> <span class="token punctuation">{</span>
     minimizer<span class="token punctuation">:</span> <span class="token punctuation">[</span>
-      <span class="token keyword">new</span> <span class="token class-name">UglifyJsPlugin</span><span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token comment">/* your config */</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+      <span class="token keyword">new</span> <span class="token class-name">TerserPlugin</span><span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token comment">/* your config */</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
     <span class="token punctuation">]</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
