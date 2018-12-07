@@ -12,7 +12,7 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css" />
     
-      <link href="/4702b2a04d9299de9983.css" rel="stylesheet">
+      <link href="/85f22ee612074cf014d2.css" rel="stylesheet">
     
 
     <script src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
@@ -48,7 +48,7 @@ Available on:
   http://xxx.xxx.x.x:8080
 Hit CTRL-C to stop the server
 </code></pre>
-<p>If you open your browser to <code>http://localhost:8080</code> (i.e. <code>http://127.0.0.1</code>) you should see your webpack application being served up from the <code>dist</code> directory. If you stop the server and refresh, the webpack application is no longer available.  </p>
+<p>If you open your browser to <code>http://localhost:8080</code> (i.e. <code>http://127.0.0.1</code>) you should see your webpack application being served from the <code>dist</code> directory. If you stop the server and refresh, the webpack application is no longer available.  </p>
 <p>This is what we aim to change. Once we reach the end of this module we should be able to stop the server, hit refresh and still see our application.</p>
 <h2 class="header">
         <a class="anchor" aria-hidden="true" href="#adding-workbox" id="adding-workbox"></a>
@@ -69,20 +69,20 @@ Hit CTRL-C to stop the server
       app: &apos;./src/index.js&apos;,
       print: &apos;./src/print.js&apos;
     },
-  plugins: [
-    new CleanWebpackPlugin([&apos;dist&apos;]),
-    new HtmlWebpackPlugin({
-<span class="token deleted">-     title: &apos;Output Management&apos;</span>
-<span class="token inserted">+     title: &apos;Progressive Web Application&apos;</span>
-<span class="token deleted">-   })</span>
-<span class="token inserted">+   }),</span>
-<span class="token inserted">+   new WorkboxPlugin.GenerateSW({</span>
-<span class="token inserted">+     // these options encourage the ServiceWorkers to get in there fast </span>
-<span class="token inserted">+     // and not allow any straggling &quot;old&quot; SWs to hang around</span>
-<span class="token inserted">+     clientsClaim: true,</span>
-<span class="token inserted">+     skipWaiting: true</span>
-<span class="token inserted">+   })</span>
-  ],
+    plugins: [
+      new CleanWebpackPlugin([&apos;dist&apos;]),
+      new HtmlWebpackPlugin({
+<span class="token deleted">-       title: &apos;Output Management&apos;</span>
+<span class="token inserted">+       title: &apos;Progressive Web Application&apos;</span>
+<span class="token deleted">-     })</span>
+<span class="token inserted">+     }),</span>
+<span class="token inserted">+     new WorkboxPlugin.GenerateSW({</span>
+<span class="token inserted">+       // these options encourage the ServiceWorkers to get in there fast </span>
+<span class="token inserted">+       // and not allow any straggling &quot;old&quot; SWs to hang around</span>
+<span class="token inserted">+       clientsClaim: true,</span>
+<span class="token inserted">+       skipWaiting: true</span>
+<span class="token inserted">+     })</span>
+    ],
     output: {
       filename: &apos;[name].bundle.js&apos;,
       path: path.resolve(__dirname, &apos;dist&apos;)
