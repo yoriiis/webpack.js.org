@@ -12,7 +12,7 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css" />
     
-      <link href="/85f22ee612074cf014d2.css" rel="stylesheet">
+      <link href="/6dd2b43d1fc0b865aeb0.css" rel="stylesheet">
     
 
     <script src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
@@ -37,6 +37,7 @@
 <p>Each article contains a small section at the top written in <a href="https://jekyllrb.com/docs/frontmatter/">YAML Frontmatter</a>:</p>
 <pre><code class="lang-yaml"><span class="token punctuation">---</span>
 <span class="token key atrule">title</span><span class="token punctuation">:</span> My Article
+<span class="token key atrule">group</span><span class="token punctuation">:</span> My Sub<span class="token punctuation">-</span>Section
 <span class="token key atrule">sort</span><span class="token punctuation">:</span> <span class="token number">3</span>
 <span class="token key atrule">contributors</span><span class="token punctuation">:</span>
   <span class="token punctuation">-</span> <span class="token punctuation">[</span>github username<span class="token punctuation">]</span>
@@ -48,7 +49,8 @@
 <p>Let&apos;s break these down:</p>
 <ul>
 <li><code>title</code>: The name of the article.</li>
-<li><code>sort</code>: The order of the article within its section.</li>
+<li><code>group</code>: The name of the sub-section</li>
+<li><code>sort</code>: The order of the article within its section (or) sub-section if it is present.</li>
 <li><code>contributors</code>: A list of GitHub usernames who have contributed to this article.</li>
 <li><code>related</code>: Any related reading or useful examples.</li>
 </ul>
