@@ -12,7 +12,7 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css" />
     
-      <link href="/6dd2b43d1fc0b865aeb0.css" rel="stylesheet">
+      <link href="/1fd2784efd446bb57312.css" rel="stylesheet">
     
 
     <script src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
@@ -40,7 +40,7 @@
 <ul>
 <li><a href="/loaders/json-loader"><code>json-loader</code></a> Loads a <a href="http://json.org/">JSON</a> file (included by default)</li>
 <li><a href="/loaders/json5-loader"><code>json5-loader</code></a> Loads and transpiles a <a href="https://json5.org/">JSON 5</a> file</li>
-<li><code>cson-loader</code> Loads and transpiles a <a href="https://github.com/bevry/cson#what-is-cson">CSON</a> file</li>
+<li><a href="https://github.com/awnist/cson-loader"><code>cson-loader</code></a> Loads and transpiles a <a href="https://github.com/bevry/cson#what-is-cson">CSON</a> file</li>
 </ul>
 <h2 class="header">
         <a class="anchor" aria-hidden="true" href="#transpiling" id="transpiling"></a>
@@ -50,8 +50,8 @@
 <ul>
 <li><a href="/loaders/script-loader"><code>script-loader</code></a> Executes a JavaScript file once in global context (like in script tag), requires are not parsed</li>
 <li><a href="/loaders/babel-loader"><code>babel-loader</code></a> Loads ES2015+ code and transpiles to ES5 using <a href="https://babeljs.io/">Babel</a></li>
-<li><code>buble-loader</code> Loads ES2015+ code and transpiles to ES5 using <a href="https://buble.surge.sh/guide/">Bubl&#xE9;</a></li>
-<li><code>traceur-loader</code> Loads ES2015+ code and transpiles to ES5 using <a href="https://github.com/google/traceur-compiler#readme">Traceur</a></li>
+<li><a href="https://github.com/sairion/buble-loader"><code>buble-loader</code></a> Loads ES2015+ code and transpiles to ES5 using <a href="https://buble.surge.sh/guide/">Bubl&#xE9;</a></li>
+<li><a href="https://github.com/jupl/traceur-loader"><code>traceur-loader</code></a> Loads ES2015+ code and transpiles to ES5 using <a href="https://github.com/google/traceur-compiler#readme">Traceur</a></li>
 <li><a href="https://github.com/TypeStrong/ts-loader"><code>ts-loader</code></a> or <a href="https://github.com/s-panferov/awesome-typescript-loader"><code>awesome-typescript-loader</code></a> Loads <a href="https://www.typescriptlang.org/">TypeScript</a> 2.0+ like JavaScript</li>
 <li><a href="/loaders/coffee-loader"><code>coffee-loader</code></a> Loads <a href="http://coffeescript.org/">CoffeeScript</a> like JavaScript</li>
 <li><a href="https://github.com/fengari-lua/fengari-loader/"><code>fengari-loader</code></a> Loads Lua code using <a href="https://fengari.io/">fengari</a></li>
@@ -63,12 +63,11 @@
       </h2>
 <ul>
 <li><a href="/loaders/html-loader"><code>html-loader</code></a> Exports HTML as string, require references to static resources</li>
-<li><code>pug-loader</code> Loads Pug templates and returns a function</li>
-<li><code>jade-loader</code> Loads Jade templates and returns a function</li>
-<li><code>markdown-loader</code> Compiles Markdown to HTML</li>
+<li><a href="https://github.com/pugjs/pug-loader"><code>pug-loader</code></a> Loads Pug and Jade templates and returns a function</li>
+<li><a href="https://github.com/peerigon/markdown-loader"><code>markdown-loader</code></a> Compiles Markdown to HTML</li>
 <li><a href="https://github.com/javiercf/react-markdown-loader"><code>react-markdown-loader</code></a> Compiles Markdown to a React Component using the markdown-parse parser</li>
-<li><code>posthtml-loader</code> Loads and transforms a HTML file using <a href="https://github.com/posthtml/posthtml">PostHTML</a></li>
-<li><code>handlebars-loader</code> Compiles Handlebars to HTML</li>
+<li><a href="https://github.com/posthtml/posthtml-loader"><code>posthtml-loader</code></a> Loads and transforms a HTML file using <a href="https://github.com/posthtml/posthtml">PostHTML</a></li>
+<li><a href="https://github.com/pcardune/handlebars-loader"><code>handlebars-loader</code></a> Compiles Handlebars to HTML</li>
 <li><a href="https://github.com/asnowwolf/markup-inline-loader"><code>markup-inline-loader</code></a> Inline SVG/MathML files to HTML. It&#x2019;s useful when applying icon font or applying CSS animation to SVG.</li>
 <li><a href="https://github.com/zimmo-be/twig-loader"><code>twig-loader</code></a> Compiles Twig templates and returns a function</li>
 </ul>
@@ -83,7 +82,7 @@
 <li><a href="/loaders/less-loader"><code>less-loader</code></a> Loads and compiles a LESS file</li>
 <li><a href="/loaders/sass-loader"><code>sass-loader</code></a> Loads and compiles a SASS/SCSS file</li>
 <li><a href="/loaders/postcss-loader"><code>postcss-loader</code></a> Loads and transforms a CSS/SSS file using <a href="http://postcss.org">PostCSS</a></li>
-<li><code>stylus-loader</code> Loads and compiles a Stylus file</li>
+<li><a href="https://github.com/shama/stylus-loader"><code>stylus-loader</code></a> Loads and compiles a Stylus file</li>
 </ul>
 <h2 class="header">
         <a class="anchor" aria-hidden="true" href="#linting-testing" id="linting-testing"></a>
@@ -94,7 +93,7 @@
 <li><a href="/loaders/mocha-loader"><code>mocha-loader</code></a> Tests with <a href="https://mochajs.org/">mocha</a> (Browser/NodeJS)</li>
 <li><a href="https://github.com/webpack-contrib/eslint-loader"><code>eslint-loader</code></a> PreLoader for linting code using <a href="https://eslint.org/">ESLint</a></li>
 <li><a href="/loaders/jshint-loader"><code>jshint-loader</code></a> PreLoader for linting code using <a href="http://jshint.com/about/">JSHint</a></li>
-<li><code>jscs-loader</code> PreLoader for code style checking using <a href="http://jscs.info/">JSCS</a></li>
+<li><a href="https://github.com/unindented/jscs-loader"><code>jscs-loader</code></a> PreLoader for code style checking using <a href="http://jscs.info/">JSCS</a></li>
 <li><a href="/loaders/coverjs-loader"><code>coverjs-loader</code></a> PreLoader to determine the testing coverage using <a href="https://github.com/arian/CoverJS">CoverJS</a></li>
 </ul>
 <h2 class="header">
@@ -103,13 +102,13 @@
         <a aria-label="Frameworks" class="icon-link" href="#frameworks"></a>
       </h2>
 <ul>
-<li><code>vue-loader</code> Loads and compiles <a href="https://vuejs.org/v2/guide/components.html">Vue Components</a></li>
-<li><code>polymer-loader</code> Process HTML &amp; CSS with preprocessor of choice and <code>require()</code> Web Components like first-class modules</li>
-<li><code>angular2-template-loader</code> Loads and compiles <a href="https://angular.io/">Angular</a> Components</li>
+<li><a href="https://github.com/vuejs/vue-loader"><code>vue-loader</code></a> Loads and compiles <a href="https://vuejs.org/v2/guide/components.html">Vue Components</a></li>
+<li><a href="https://github.com/webpack-contrib/polymer-webpack-loader"><code>polymer-loader</code></a> Process HTML &amp; CSS with preprocessor of choice and <code>require()</code> Web Components like first-class modules</li>
+<li><a href="https://github.com/TheLarkInn/angular2-template-loader"><code>angular2-template-loader</code></a> Loads and compiles <a href="https://angular.io/">Angular</a> Components</li>
 </ul>
 <p><img src="../assets/awesome-badge.svg" alt="Awesome">
 For more third-party loaders, see the list from <a href="https://github.com/webpack-contrib/awesome-webpack#loaders">awesome-webpack</a>.</p>
-</div><div><hr><h3>Contributors</h3><div class="contributors"><div class="contributors__list"><a class="contributor" href="https://github.com/EugeneHlushko"><img alt="EugeneHlushko" src="https://github.com/EugeneHlushko.png?size=90"><span class="contributor__name"> EugeneHlushko</span></a><a class="contributor" href="https://github.com/bajras"><img alt="bajras" src="https://github.com/bajras.png?size=90"><span class="contributor__name"> bajras</span></a><a class="contributor" href="https://github.com/rhys-vdw"><img alt="rhys-vdw" src="https://github.com/rhys-vdw.png?size=90"><span class="contributor__name"> rhys-vdw</span></a><a class="contributor" href="https://github.com/simon04"><img alt="simon04" src="https://github.com/simon04.png?size=90"><span class="contributor__name"> simon04</span></a></div></div></div><div class="interactive" id="src/components/Gitter/Gitter.jsx" data-props="{}"><span class="gitter"><div class="gitter__button js-gitter-toggle-chat-button" style="margin-bottom:0"><i class="gitter__icon icon-gitter"></i></div></span></div></section></div><footer class="footer"><div class="container footer__inner"><section class="footer__left"><a href="/guides/getting-started/" class="footer__link">Get Started</a><a href="/organization/" class="footer__link">Organization</a><a href="/starter-kits/" class="footer__link">Starter Kits</a><a href="/comparison/" class="footer__link">Comparison</a></section><section class="footer__middle"><a href="/" class="footer__icon"><img src="/d19378a95ebe6b15d5ddea281138dcf4.svg" alt="webpack icon"></a></section><section class="footer__right"><a href="/glossary/" class="footer__link">Glossary</a><a href="/branding/" class="footer__link">Branding</a><a href="https://gitter.im/webpack/webpack" target="_blank" class="footer__link">Gitter</a><a href="https://github.com/webpack/webpack/releases" target="_blank" class="footer__link">Changelog</a><a href="/license" class="footer__link footer__license"><img alt="Creative Commons License" src="/7052446b5e67df4434f4031afd2f1497.svg"><img alt="Creative Commons License" src="/7ebb1b3901ce119694f65e04f6347ef5.svg"></a></section></div></footer><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-46921629-2', 'auto');ga('send', 'pageview');</script></div></body></html>
+</div><div><hr><h3>Contributors</h3><div class="contributors"><div class="contributors__list"><a class="contributor" href="https://github.com/EugeneHlushko"><img alt="EugeneHlushko" src="https://github.com/EugeneHlushko.png?size=90"><span class="contributor__name"> EugeneHlushko</span></a><a class="contributor" href="https://github.com/bajras"><img alt="bajras" src="https://github.com/bajras.png?size=90"><span class="contributor__name"> bajras</span></a><a class="contributor" href="https://github.com/hemal7735"><img alt="hemal7735" src="https://github.com/hemal7735.png?size=90"><span class="contributor__name"> hemal7735</span></a><a class="contributor" href="https://github.com/rhys-vdw"><img alt="rhys-vdw" src="https://github.com/rhys-vdw.png?size=90"><span class="contributor__name"> rhys-vdw</span></a><a class="contributor" href="https://github.com/simon04"><img alt="simon04" src="https://github.com/simon04.png?size=90"><span class="contributor__name"> simon04</span></a></div></div></div><div class="interactive" id="src/components/Gitter/Gitter.jsx" data-props="{}"><span class="gitter"><div class="gitter__button js-gitter-toggle-chat-button" style="margin-bottom:0"><i class="gitter__icon icon-gitter"></i></div></span></div></section></div><footer class="footer"><div class="container footer__inner"><section class="footer__left"><a href="/guides/getting-started/" class="footer__link">Get Started</a><a href="/organization/" class="footer__link">Organization</a><a href="/starter-kits/" class="footer__link">Starter Kits</a><a href="/comparison/" class="footer__link">Comparison</a></section><section class="footer__middle"><a href="/" class="footer__icon"><img src="/d19378a95ebe6b15d5ddea281138dcf4.svg" alt="webpack icon"></a></section><section class="footer__right"><a href="/glossary/" class="footer__link">Glossary</a><a href="/branding/" class="footer__link">Branding</a><a href="https://gitter.im/webpack/webpack" target="_blank" class="footer__link">Gitter</a><a href="https://github.com/webpack/webpack/releases" target="_blank" class="footer__link">Changelog</a><a href="/license" class="footer__link footer__license"><img alt="Creative Commons License" src="/7052446b5e67df4434f4031afd2f1497.svg"><img alt="Creative Commons License" src="/7ebb1b3901ce119694f65e04f6347ef5.svg"></a></section></div></footer><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-46921629-2', 'auto');ga('send', 'pageview');</script></div></body></html>
 
     
       <script src="/2184d0aca24d8f3d105248c74c2d273a.js"></script>
