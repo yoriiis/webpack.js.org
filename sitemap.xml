@@ -25,10 +25,10 @@
         <loc>https://webpack.js.org/development/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/get-started/index.html</loc>
+        <loc>https://webpack.js.org/glossary/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/glossary/index.html</loc>
+        <loc>https://webpack.js.org/get-started/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/guides/index.html</loc>
@@ -40,10 +40,10 @@
         <loc>https://webpack.js.org/loaders/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/migrate/index.html</loc>
+        <loc>https://webpack.js.org/migrating/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/migrating/index.html</loc>
+        <loc>https://webpack.js.org/migrate/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/organization/index.html</loc>
@@ -178,10 +178,10 @@
         <loc>https://webpack.js.org/configuration/output/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/configuration/performance/index.html</loc>
+        <loc>https://webpack.js.org/configuration/plugins/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/configuration/plugins/index.html</loc>
+        <loc>https://webpack.js.org/configuration/performance/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/configuration/resolve/index.html</loc>
@@ -205,10 +205,10 @@
         <loc>https://webpack.js.org/contribute/release-process/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/contribute/writing-a-loader/index.html</loc>
+        <loc>https://webpack.js.org/contribute/writers-guide/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/contribute/writers-guide/index.html</loc>
+        <loc>https://webpack.js.org/contribute/writing-a-loader/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/contribute/writing-a-plugin/index.html</loc>
@@ -233,6 +233,9 @@
     </url>
     <url>
         <loc>https://webpack.js.org/guides/asset-management/index.html</loc>
+    </url>
+    <url>
+        <loc>https://webpack.js.org/guides/author-libraries/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/guides/build-performance/index.html</loc>
@@ -314,9 +317,6 @@
     </url>
     <url>
         <loc>https://webpack.js.org/guides/why-webpack/index.html</loc>
-    </url>
-    <url>
-        <loc>https://webpack.js.org/guides/author-libraries/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/loaders/babel-loader/index.html</loc>
