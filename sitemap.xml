@@ -106,10 +106,10 @@
         <loc>https://webpack.js.org/api/stats/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/concepts/dependency-graph/index.html</loc>
+        <loc>https://webpack.js.org/concepts/configuration/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/concepts/configuration/index.html</loc>
+        <loc>https://webpack.js.org/concepts/dependency-graph/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/concepts/entry-points/index.html</loc>
@@ -190,13 +190,13 @@
         <loc>https://webpack.js.org/configuration/stats/index.html</loc>
     </url>
     <url>
+        <loc>https://webpack.js.org/configuration/target/index.html</loc>
+    </url>
+    <url>
         <loc>https://webpack.js.org/configuration/watch/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/contribute/debugging/index.html</loc>
-    </url>
-    <url>
-        <loc>https://webpack.js.org/configuration/target/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/contribute/plugin-patterns/index.html</loc>
