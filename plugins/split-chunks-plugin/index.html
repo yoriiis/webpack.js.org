@@ -12,7 +12,7 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css" />
     
-      <link href="/c763b42d3ec0c0e86330.css" rel="stylesheet">
+      <link href="/8a26faf7a088b1ceb7aa.css" rel="stylesheet">
     
 
     <script src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
@@ -158,7 +158,7 @@ The algorithm is deterministic and changes to the modules will only have local i
       </h3>
 <p><code>boolean: true | function (module) | string</code></p>
 <p>The name of the split chunk. Providing <code>true</code> will automatically generate a name based on chunks and cache group key. Providing a string or function will allow you to use a custom name. If the name matches an entry point name, the entry point will be removed.</p>
-<p><strong>webpack.config.js</strong></p>
+<blockquote class="tip"><div class="tip-content"> It is recommended to set <code>splitChunks.name</code> to <code>false</code> for production builds so that it doesn&apos;t change names unnecessarily. </div></blockquote><p><strong>webpack.config.js</strong></p>
 <pre><code class="lang-js">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
   <span class="token comment">//...</span>
   optimization<span class="token punctuation">:</span> <span class="token punctuation">{</span>

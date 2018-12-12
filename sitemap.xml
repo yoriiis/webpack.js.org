@@ -67,9 +67,6 @@
         <loc>https://webpack.js.org/writers-guide/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/api/cli/index.html</loc>
-    </url>
-    <url>
         <loc>https://webpack.js.org/api/compilation-hooks/index.html</loc>
     </url>
     <url>
@@ -77,6 +74,9 @@
     </url>
     <url>
         <loc>https://webpack.js.org/api/hot-module-replacement/index.html</loc>
+    </url>
+    <url>
+        <loc>https://webpack.js.org/api/cli/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/api/loaders/index.html</loc>
@@ -253,10 +253,10 @@
         <loc>https://webpack.js.org/guides/code-splitting-css/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/guides/code-splitting-import/index.html</loc>
+        <loc>https://webpack.js.org/guides/code-splitting-libraries/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/guides/code-splitting-libraries/index.html</loc>
+        <loc>https://webpack.js.org/guides/code-splitting-import/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/guides/code-splitting-require/index.html</loc>
@@ -317,9 +317,6 @@
     </url>
     <url>
         <loc>https://webpack.js.org/guides/why-webpack/index.html</loc>
-    </url>
-    <url>
-        <loc>https://webpack.js.org/loaders/babel-loader/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/loaders/bundle-loader/index.html</loc>
@@ -430,10 +427,10 @@
         <loc>https://webpack.js.org/loaders/thread-loader/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/loaders/transform-loader/index.html</loc>
+        <loc>https://webpack.js.org/loaders/url-loader/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/loaders/url-loader/index.html</loc>
+        <loc>https://webpack.js.org/loaders/transform-loader/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/loaders/val-loader/index.html</loc>
@@ -572,6 +569,9 @@
     </url>
     <url>
         <loc>https://webpack.js.org/pluginsapi/template/index.html</loc>
+    </url>
+    <url>
+        <loc>https://webpack.js.org/loaders/babel-loader/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/api/plugins/compilation/index.html</loc>
