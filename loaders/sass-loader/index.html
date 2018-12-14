@@ -12,7 +12,7 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css" />
     
-      <link href="/6d2e26615b26b1ca461b.css" rel="stylesheet">
+      <link href="/09af16bce891dc52ac2d.css" rel="stylesheet">
     
 
     <script src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
@@ -78,6 +78,30 @@ module<span class="token punctuation">.</span>exports <span class="token operato
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
 </code></pre>
 <p>See <a href="https://github.com/sass/node-sass/blob/master/README.md#options">the Node Sass documentation</a> for all available Sass options.</p>
+<p>By default the loader resolve the implementation based on your dependencies.
+Just add required implementation to <code>package.json</code> 
+(<code>node-sass</code> or <code>sass</code> package) and install dependencies. </p>
+<p>Example where the <code>sass-loader</code> loader uses the <code>sass</code> (<code>dart-sass</code>) implementation:</p>
+<p><strong>package.json</strong></p>
+<pre><code class="lang-json"><span class="token punctuation">{</span>
+   <span class="token property">&quot;devDependencies&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token property">&quot;sass-loader&quot;</span><span class="token operator">:</span> <span class="token string">&quot;*&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;sass&quot;</span><span class="token operator">:</span> <span class="token string">&quot;*&quot;</span>
+   <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>Example where the <code>sass-loader</code> loader uses the <code>node-sass</code> implementation:</p>
+<p><strong>package.json</strong></p>
+<pre><code class="lang-json"><span class="token punctuation">{</span>
+   <span class="token property">&quot;devDependencies&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token property">&quot;sass-loader&quot;</span><span class="token operator">:</span> <span class="token string">&quot;*&quot;</span><span class="token punctuation">,</span>
+      <span class="token property">&quot;node-sass&quot;</span><span class="token operator">:</span> <span class="token string">&quot;*&quot;</span>
+   <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>Beware the situation 
+when <code>node-sass</code> and <code>sass</code> was installed, by default the <code>sass-loader</code> 
+prefers <code>node-sass</code>, to avoid this situation use the <code>implementation</code> option. </p>
 <p>The special <code>implementation</code> option determines which implementation of Sass to
 use. It takes either a [Node Sass][] or a [Dart Sass][] module. For example, to
 use Dart Sass, you&apos;d pass:</p>
@@ -224,6 +248,24 @@ module<span class="token punctuation">.</span>exports <span class="token operato
     loader<span class="token punctuation">:</span> <span class="token string">&quot;sass-loader&quot;</span><span class="token punctuation">,</span>
     options<span class="token punctuation">:</span> <span class="token punctuation">{</span>
         data<span class="token punctuation">:</span> <span class="token string">&quot;$env: &quot;</span> <span class="token operator">+</span> process<span class="token punctuation">.</span>env<span class="token punctuation">.</span>NODE_ENV <span class="token operator">+</span> <span class="token string">&quot;;&quot;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>The <code>data</code> option supports <code>Function</code> notation:</p>
+<pre><code class="lang-javascript"><span class="token punctuation">{</span>
+    loader<span class="token punctuation">:</span> <span class="token string">&quot;sass-loader&quot;</span><span class="token punctuation">,</span>
+    options<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        data<span class="token punctuation">:</span> <span class="token punctuation">(</span>loaderContext<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token punctuation">{</span>
+          <span class="token comment">// More information about avalaible options https://webpack.js.org/api/loaders/</span>
+          <span class="token keyword">const</span> <span class="token punctuation">{</span> resourcePath<span class="token punctuation">,</span> rootContext <span class="token punctuation">}</span> <span class="token operator">=</span> loaderContext<span class="token punctuation">;</span>
+          <span class="token keyword">const</span> relativePath <span class="token operator">=</span> path<span class="token punctuation">.</span><span class="token function">relative</span><span class="token punctuation">(</span>rootContext<span class="token punctuation">,</span>resourcePath<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+          <span class="token keyword">if</span> <span class="token punctuation">(</span>relativePath <span class="token operator">===</span> <span class="token string">&quot;styles/foo.scss&quot;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+             <span class="token keyword">return</span> <span class="token string">&quot;$value: 100px;&quot;</span>
+          <span class="token punctuation">}</span>
+
+          <span class="token keyword">return</span> <span class="token string">&quot;$value: 200px;&quot;</span>
+        <span class="token punctuation">}</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 </code></pre>
