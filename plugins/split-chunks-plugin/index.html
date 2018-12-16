@@ -12,7 +12,7 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css" />
     
-      <link href="/88d4488cb90527714111.css" rel="stylesheet">
+      <link href="/b29551e953f7d3348440.css" rel="stylesheet">
     
 
     <script src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
@@ -156,14 +156,14 @@ The algorithm is deterministic and changes to the modules will only have local i
         <span class="text"><code>splitChunks.name</code></span>
         <a aria-label="&lt;code&gt;splitChunks.name&lt;/code&gt;" class="icon-link" href="#splitchunks-name"></a>
       </h3>
-<p><code>boolean: true | function (module) | string</code></p>
+<p><code>boolean: true | function (module, chunks, cacheGroupKey) | string</code></p>
 <p>The name of the split chunk. Providing <code>true</code> will automatically generate a name based on chunks and cache group key. Providing a string or function will allow you to use a custom name. If the name matches an entry point name, the entry point will be removed.</p>
 <blockquote class="tip"><div class="tip-content"> It is recommended to set <code>splitChunks.name</code> to <code>false</code> for production builds so that it doesn&apos;t change names unnecessarily. </div></blockquote><p><strong>webpack.config.js</strong></p>
 <pre><code class="lang-js">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
   <span class="token comment">//...</span>
   optimization<span class="token punctuation">:</span> <span class="token punctuation">{</span>
     splitChunks<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-      name <span class="token punctuation">(</span>module<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      name <span class="token punctuation">(</span>module<span class="token punctuation">,</span> chunks<span class="token punctuation">,</span> cacheGroupKey<span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token comment">// generate a chunk name...</span>
         <span class="token keyword">return</span><span class="token punctuation">;</span> <span class="token comment">//...</span>
       <span class="token punctuation">}</span>
