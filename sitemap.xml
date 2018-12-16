@@ -451,10 +451,10 @@
         <loc>https://webpack.js.org/migrate/4/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/plugins/aggressive-splitting-plugin/index.html</loc>
+        <loc>https://webpack.js.org/plugins/automatic-prefetch-plugin/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/plugins/automatic-prefetch-plugin/index.html</loc>
+        <loc>https://webpack.js.org/plugins/aggressive-splitting-plugin/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/plugins/babel-minify-webpack-plugin/index.html</loc>
@@ -511,19 +511,19 @@
         <loc>https://webpack.js.org/plugins/internal-plugins/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/plugins/limit-chunk-count-plugin/index.html</loc>
+        <loc>https://webpack.js.org/plugins/loader-options-plugin/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/plugins/loader-options-plugin/index.html</loc>
+        <loc>https://webpack.js.org/plugins/limit-chunk-count-plugin/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/plugins/min-chunk-size-plugin/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/plugins/mini-css-extract-plugin/index.html</loc>
+        <loc>https://webpack.js.org/plugins/module-concatenation-plugin/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/plugins/module-concatenation-plugin/index.html</loc>
+        <loc>https://webpack.js.org/plugins/mini-css-extract-plugin/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/plugins/no-emit-on-errors-plugin/index.html</loc>
@@ -535,19 +535,19 @@
         <loc>https://webpack.js.org/plugins/npm-install-webpack-plugin/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/plugins/prefetch-plugin/index.html</loc>
+        <loc>https://webpack.js.org/plugins/profiling-plugin/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/plugins/profiling-plugin/index.html</loc>
+        <loc>https://webpack.js.org/plugins/prefetch-plugin/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/plugins/progress-plugin/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/plugins/provide-plugin/index.html</loc>
+        <loc>https://webpack.js.org/plugins/source-map-dev-tool-plugin/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/plugins/source-map-dev-tool-plugin/index.html</loc>
+        <loc>https://webpack.js.org/plugins/provide-plugin/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/plugins/split-chunks-plugin/index.html</loc>
@@ -574,10 +574,10 @@
         <loc>https://webpack.js.org/pluginsapi/template/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/api/plugins/compilation/index.html</loc>
+        <loc>https://webpack.js.org/api/plugins/compiler/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/api/plugins/compiler/index.html</loc>
+        <loc>https://webpack.js.org/api/plugins/compilation/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/api/plugins/module-factories/index.html</loc>

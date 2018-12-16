@@ -12,7 +12,7 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css" />
     
-      <link href="/1fb9cf8308b78cc5c89a.css" rel="stylesheet">
+      <link href="/08062e4a46b7d85897eb.css" rel="stylesheet">
     
 
     <script src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
@@ -96,7 +96,7 @@ module<span class="token punctuation">.</span>exports <span class="token operato
 <blockquote>
 <p>&quot;Hey webpack compiler, when you come across a path that resolves to a &apos;.txt&apos; file inside of a <code>require()</code>/<code>import</code> statement, <strong>use</strong> the <code>raw-loader</code> to transform it before you add it to the bundle.&quot;</p>
 </blockquote>
-<blockquote class="warning"><div class="tip-content"> It is important to remember that when defining rules in your webpack config, you are defining them under <code>module.rules</code> and not <code>rules</code>. For your benefit, webpack will warn you if this is done incorrectly. </div></blockquote><p>You can check further customization when including loaders in the <a href="/concepts/loaders">loaders section</a>.</p>
+<blockquote class="warning"><div class="tip-content"> It is important to remember that when defining rules in your webpack config, you are defining them under <code>module.rules</code> and not <code>rules</code>. For your benefit, webpack will warn you if this is done incorrectly. </div></blockquote><blockquote class="warning"><div class="tip-content"> Keep in mind that when using regex to match files, you may not quote it. i.e <code>/\.txt$/</code> is not the same as <code>&apos;/\.txt$/&apos;</code>/ <code>&quot;/\.txt$/&quot;</code>. The former instructs webpack to match any file that ends with .txt and the later instructs webpack to match a single file with an absolute path &apos;.txt&apos;; this is likely not your intention. </div></blockquote><p>You can check further customization when including loaders in the <a href="/concepts/loaders">loaders section</a>.</p>
 <h2 class="header">
         <a class="anchor" aria-hidden="true" href="#plugins" id="plugins"></a>
         <span class="text">Plugins</span>
