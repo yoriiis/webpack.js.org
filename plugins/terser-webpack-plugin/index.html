@@ -12,7 +12,7 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css" />
     
-      <link href="/24dd8c1b4fba2ef35c00.css" rel="stylesheet">
+      <link href="/7148e70dcf9dece1ef93.css" rel="stylesheet">
     
 
     <script src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
@@ -134,7 +134,7 @@ Return <code>true</code> to uglify the chunk, <code>false</code> otherwise.</p>
           <span class="token punctuation">}</span>
 
           <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
       <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
     <span class="token punctuation">]</span><span class="token punctuation">,</span>
   <span class="token punctuation">}</span><span class="token punctuation">,</span>
@@ -309,7 +309,7 @@ Useful for using and testing unpublished versions or forks.</p>
   optimization<span class="token punctuation">:</span> <span class="token punctuation">{</span>
     minimizer<span class="token punctuation">:</span> <span class="token punctuation">[</span>
       <span class="token keyword">new</span> <span class="token class-name">TerserPlugin</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
-        <span class="token function">minify</span><span class="token punctuation">(</span>file<span class="token punctuation">,</span> sourceMap<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        minify<span class="token punctuation">:</span> <span class="token punctuation">(</span>file<span class="token punctuation">,</span> sourceMap<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token punctuation">{</span>
           <span class="token keyword">const</span> extractedComments <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
 
           <span class="token comment">// Custom logic for extract comments</span>
@@ -432,7 +432,7 @@ The <code>terserOptions.output.comments</code> option specifies whether the comm
   optimization<span class="token punctuation">:</span> <span class="token punctuation">{</span>
     minimizer<span class="token punctuation">:</span> <span class="token punctuation">[</span>
       <span class="token keyword">new</span> <span class="token class-name">TerserPlugin</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
-        extractComments<span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span>astNode<span class="token punctuation">,</span> comment<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        extractComments<span class="token punctuation">:</span> <span class="token punctuation">(</span>astNode<span class="token punctuation">,</span> comment<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token punctuation">{</span>
           <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token regex">/@extract/i</span><span class="token punctuation">.</span><span class="token function">test</span><span class="token punctuation">(</span>comment<span class="token punctuation">.</span>value<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
             <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
           <span class="token punctuation">}</span>
@@ -457,10 +457,10 @@ The <code>terserOptions.output.comments</code> option specifies whether the comm
       <span class="token keyword">new</span> <span class="token class-name">TerserPlugin</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
         extractComments<span class="token punctuation">:</span> <span class="token punctuation">{</span>
           condition<span class="token punctuation">:</span> <span class="token regex">/^\**!|@preserve|@license|@cc_on/i</span><span class="token punctuation">,</span>
-          <span class="token function">filename</span><span class="token punctuation">(</span>file<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          filename<span class="token punctuation">:</span> <span class="token punctuation">(</span>file<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token punctuation">{</span>
             <span class="token keyword">return</span> <span class="token template-string"><span class="token string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>file<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">.LICENSE`</span></span><span class="token punctuation">;</span>
           <span class="token punctuation">}</span><span class="token punctuation">,</span>
-          <span class="token function">banner</span><span class="token punctuation">(</span>licenseFile<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          banner<span class="token punctuation">:</span> <span class="token punctuation">(</span>licenseFile<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token punctuation">{</span>
             <span class="token keyword">return</span> <span class="token template-string"><span class="token string">`License information can be found in </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>licenseFile<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">`</span></span><span class="token punctuation">;</span>
           <span class="token punctuation">}</span><span class="token punctuation">,</span>
         <span class="token punctuation">}</span><span class="token punctuation">,</span>
@@ -483,10 +483,10 @@ The <code>terserOptions.output.comments</code> option specifies whether the comm
       <span class="token keyword">new</span> <span class="token class-name">TerserPlugin</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
         extractComments<span class="token punctuation">:</span> <span class="token punctuation">{</span>
           condition<span class="token punctuation">:</span> <span class="token string">&apos;some&apos;</span><span class="token punctuation">,</span>
-          <span class="token function">filename</span><span class="token punctuation">(</span>file<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          filename<span class="token punctuation">:</span> <span class="token punctuation">(</span>file<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token punctuation">{</span>
             <span class="token keyword">return</span> <span class="token template-string"><span class="token string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>file<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">.LICENSE`</span></span><span class="token punctuation">;</span>
           <span class="token punctuation">}</span><span class="token punctuation">,</span>
-          <span class="token function">banner</span><span class="token punctuation">(</span>licenseFile<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          banner<span class="token punctuation">:</span> <span class="token punctuation">(</span>licenseFile<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token punctuation">{</span>
             <span class="token keyword">return</span> <span class="token template-string"><span class="token string">`License information can be found in </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>licenseFile<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">`</span></span><span class="token punctuation">;</span>
           <span class="token punctuation">}</span><span class="token punctuation">,</span>
         <span class="token punctuation">}</span><span class="token punctuation">,</span>
@@ -512,7 +512,7 @@ Default is to append the suffix <code>.LICENSE</code> to the original filename.<
         extractComments<span class="token punctuation">:</span> <span class="token punctuation">{</span>
           condition<span class="token punctuation">:</span> <span class="token regex">/^\**!|@preserve|@license|@cc_on/i</span><span class="token punctuation">,</span>
           filename<span class="token punctuation">:</span> <span class="token string">&apos;extracted-comments.js&apos;</span><span class="token punctuation">,</span>
-          <span class="token function">banner</span><span class="token punctuation">(</span>licenseFile<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          banner<span class="token punctuation">:</span> <span class="token punctuation">(</span>licenseFile<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token punctuation">{</span>
             <span class="token keyword">return</span> <span class="token template-string"><span class="token string">`License information can be found in </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>licenseFile<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">`</span></span><span class="token punctuation">;</span>
           <span class="token punctuation">}</span><span class="token punctuation">,</span>
         <span class="token punctuation">}</span><span class="token punctuation">,</span>
@@ -538,10 +538,10 @@ Will be wrapped into comment.</p>
       <span class="token keyword">new</span> <span class="token class-name">TerserPlugin</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
         extractComments<span class="token punctuation">:</span> <span class="token punctuation">{</span>
           condition<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
-          <span class="token function">filename</span><span class="token punctuation">(</span>file<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          filename<span class="token punctuation">:</span> <span class="token punctuation">(</span>file<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token punctuation">{</span>
             <span class="token keyword">return</span> <span class="token template-string"><span class="token string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>file<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">.LICENSE`</span></span><span class="token punctuation">;</span>
           <span class="token punctuation">}</span><span class="token punctuation">,</span>
-          <span class="token function">banner</span><span class="token punctuation">(</span>commentsFile<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          banner<span class="token punctuation">:</span> <span class="token punctuation">(</span>commentsFile<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token punctuation">{</span>
             <span class="token keyword">return</span> <span class="token template-string"><span class="token string">`My custom banner about license information </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>commentsFile<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">`</span></span><span class="token punctuation">;</span>
           <span class="token punctuation">}</span><span class="token punctuation">,</span>
         <span class="token punctuation">}</span><span class="token punctuation">,</span>
@@ -659,7 +659,7 @@ Return <code>true</code> to keep the warning, <code>false</code> otherwise.</p>
       <span class="token keyword">new</span> <span class="token class-name">TerserPlugin</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
         <span class="token comment">// Uncomment lines below for cache invalidation correctly</span>
         <span class="token comment">// cache: true,</span>
-        <span class="token comment">// cacheKeys(defaultCacheKeys) {</span>
+        <span class="token comment">// cacheKeys: (defaultCacheKeys) =&gt; {</span>
         <span class="token comment">//   delete defaultCacheKeys.terser;</span>
         <span class="token comment">//</span>
         <span class="token comment">//   return Object.assign(</span>
@@ -668,7 +668,7 @@ Return <code>true</code> to keep the warning, <code>false</code> otherwise.</p>
         <span class="token comment">//     { &apos;uglify-js&apos;: require(&apos;uglify-js/package.json&apos;).version },</span>
         <span class="token comment">//   );</span>
         <span class="token comment">// },</span>
-        <span class="token function">minify</span><span class="token punctuation">(</span>file<span class="token punctuation">,</span> sourceMap<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        minify<span class="token punctuation">:</span> <span class="token punctuation">(</span>file<span class="token punctuation">,</span> sourceMap<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token punctuation">{</span>
           <span class="token comment">// https://github.com/mishoo/UglifyJS2#minify-options</span>
           <span class="token keyword">const</span> uglifyJsOptions <span class="token operator">=</span> <span class="token punctuation">{</span>
             <span class="token comment">/* your `uglify-js` package options */</span>
