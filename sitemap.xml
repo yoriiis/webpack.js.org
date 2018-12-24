@@ -58,10 +58,10 @@
         <loc>https://webpack.js.org/starter-kits/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/vote/index.html</loc>
+        <loc>https://webpack.js.org/support/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/support/index.html</loc>
+        <loc>https://webpack.js.org/vote/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/writers-guide/index.html</loc>
@@ -70,13 +70,13 @@
         <loc>https://webpack.js.org/api/compilation-hooks/index.html</loc>
     </url>
     <url>
+        <loc>https://webpack.js.org/api/cli/index.html</loc>
+    </url>
+    <url>
         <loc>https://webpack.js.org/api/compiler-hooks/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/api/hot-module-replacement/index.html</loc>
-    </url>
-    <url>
-        <loc>https://webpack.js.org/api/cli/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/api/loaders/index.html</loc>
@@ -556,10 +556,10 @@
         <loc>https://webpack.js.org/plugins/stylelint-webpack-plugin/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/plugins/terser-webpack-plugin/index.html</loc>
+        <loc>https://webpack.js.org/plugins/uglifyjs-webpack-plugin/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/plugins/uglifyjs-webpack-plugin/index.html</loc>
+        <loc>https://webpack.js.org/plugins/terser-webpack-plugin/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/plugins/watch-ignore-plugin/index.html</loc>
@@ -580,9 +580,6 @@
         <loc>https://webpack.js.org/api/plugins/compiler/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/api/plugins/module-factories/index.html</loc>
-    </url>
-    <url>
         <loc>https://webpack.js.org/api/plugins/parser/index.html</loc>
     </url>
     <url>
@@ -590,6 +587,9 @@
     </url>
     <url>
         <loc>https://webpack.js.org/api/plugins/tapable/index.html</loc>
+    </url>
+    <url>
+        <loc>https://webpack.js.org/api/plugins/module-factories/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/api/plugins/template/index.html</loc>

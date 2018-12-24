@@ -12,7 +12,7 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css" />
     
-      <link href="/035a272e537baa07775c.css" rel="stylesheet">
+      <link href="/415b926fde138f580c49.css" rel="stylesheet">
     
 
     <script src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
@@ -25,12 +25,12 @@
         <a aria-label="Using regular expressions" class="icon-link" href="#using-regular-expressions"></a>
       </h2>
 <ul>
-<li><code>requestRegExp</code>: A RegExp to test the request against.</li>
+<li><code>resourceRegExp</code>: A RegExp to test the resource against.</li>
 <li><code>contextRegExp</code>: (optional) A RegExp to test the context (directory) against.</li>
 </ul>
-<pre><code class="lang-javascript"><span class="token keyword">new</span> <span class="token class-name">webpack<span class="token punctuation">.</span>IgnorePlugin</span><span class="token punctuation">(</span><span class="token punctuation">{</span>requestRegExp<span class="token punctuation">,</span> contextRegExp<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre><code class="lang-javascript"><span class="token keyword">new</span> <span class="token class-name">webpack<span class="token punctuation">.</span>IgnorePlugin</span><span class="token punctuation">(</span><span class="token punctuation">{</span>resourceRegExp<span class="token punctuation">,</span> contextRegExp<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token comment">// old way, deprecated in webpack v5</span>
-<span class="token keyword">new</span> <span class="token class-name">webpack<span class="token punctuation">.</span>IgnorePlugin</span><span class="token punctuation">(</span>requestRegExp<span class="token punctuation">,</span> <span class="token punctuation">[</span>contextRegExp<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">new</span> <span class="token class-name">webpack<span class="token punctuation">.</span>IgnorePlugin</span><span class="token punctuation">(</span>resourceRegExp<span class="token punctuation">,</span> <span class="token punctuation">[</span>contextRegExp<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <h2 class="header">
         <a class="anchor" aria-hidden="true" href="#using-filter-functions" id="using-filter-functions"></a>
@@ -58,7 +58,7 @@
         <a aria-label="Example of ignoring Moment Locales" class="icon-link" href="#example-of-ignoring-moment-locales"></a>
       </h2>
 <p>As of <a href="https://momentjs.com/">moment</a> 2.18, all locales are bundled together with the core library (see <a href="https://github.com/moment/moment/issues/2373">this GitHub issue</a>). </p>
-<p>The <code>requestRegExp</code> parameter passed to <code>IgnorePlugin</code> is not tested against the resolved file names or absolute module names being imported or required, but rather against the <em>string</em> passed to <code>require</code> or <code>import</code> <em>within the source code where the import is taking place</em>. For example, if you&apos;re trying to exclude <code>node_modules/moment/locale/*.js</code>, this won&apos;t work:</p>
+<p>The <code>resourceRegExp</code> parameter passed to <code>IgnorePlugin</code> is not tested against the resolved file names or absolute module names being imported or required, but rather against the <em>string</em> passed to <code>require</code> or <code>import</code> <em>within the source code where the import is taking place</em>. For example, if you&apos;re trying to exclude <code>node_modules/moment/locale/*.js</code>, this won&apos;t work:</p>
 <pre><code class="lang-diff"><span class="token deleted">-new webpack.IgnorePlugin(/moment\/locale\//);</span>
 </code></pre>
 <p>Rather, because <code>moment</code> imports with this code:</p>
@@ -66,7 +66,7 @@
 </code></pre>
 <p>...your first regexp must match that <code>&apos;./locale/&apos;</code> string. The second <code>contextRegExp</code> parameter is then used to select specific directories from where the import took place. The following will cause those locale files to be ignored:</p>
 <pre><code class="lang-javascript"><span class="token keyword">new</span> <span class="token class-name">webpack<span class="token punctuation">.</span>IgnorePlugin</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
-  requestRegExp<span class="token punctuation">:</span> <span class="token regex">/^\.\/locale$/</span><span class="token punctuation">,</span>
+  resourceRegExp<span class="token punctuation">:</span> <span class="token regex">/^\.\/locale$/</span><span class="token punctuation">,</span>
   contextRegExp<span class="token punctuation">:</span> <span class="token regex">/moment$/</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
