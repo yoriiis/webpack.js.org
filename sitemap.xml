@@ -139,10 +139,10 @@
         <loc>https://webpack.js.org/concepts/plugins/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/concepts/why-webpack/index.html</loc>
+        <loc>https://webpack.js.org/concepts/targets/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/concepts/targets/index.html</loc>
+        <loc>https://webpack.js.org/concepts/why-webpack/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/configuration/configuration-languages/index.html</loc>
@@ -190,10 +190,10 @@
         <loc>https://webpack.js.org/configuration/stats/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/configuration/target/index.html</loc>
+        <loc>https://webpack.js.org/configuration/watch/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/configuration/watch/index.html</loc>
+        <loc>https://webpack.js.org/configuration/target/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/contribute/debugging/index.html</loc>
@@ -502,6 +502,9 @@
         <loc>https://webpack.js.org/plugins/html-webpack-plugin/index.html</loc>
     </url>
     <url>
+        <loc>https://webpack.js.org/plugins/i18n-webpack-plugin/index.html</loc>
+    </url>
+    <url>
         <loc>https://webpack.js.org/plugins/ignore-plugin/index.html</loc>
     </url>
     <url>
@@ -532,13 +535,16 @@
         <loc>https://webpack.js.org/plugins/npm-install-webpack-plugin/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/plugins/prefetch-plugin/index.html</loc>
-    </url>
-    <url>
         <loc>https://webpack.js.org/plugins/profiling-plugin/index.html</loc>
     </url>
     <url>
+        <loc>https://webpack.js.org/plugins/prefetch-plugin/index.html</loc>
+    </url>
+    <url>
         <loc>https://webpack.js.org/plugins/progress-plugin/index.html</loc>
+    </url>
+    <url>
+        <loc>https://webpack.js.org/plugins/provide-plugin/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/plugins/source-map-dev-tool-plugin/index.html</loc>
@@ -548,9 +554,6 @@
     </url>
     <url>
         <loc>https://webpack.js.org/plugins/stylelint-webpack-plugin/index.html</loc>
-    </url>
-    <url>
-        <loc>https://webpack.js.org/plugins/i18n-webpack-plugin/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/plugins/terser-webpack-plugin/index.html</loc>
@@ -569,9 +572,6 @@
     </url>
     <url>
         <loc>https://webpack.js.org/pluginsapi/template/index.html</loc>
-    </url>
-    <url>
-        <loc>https://webpack.js.org/plugins/provide-plugin/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/api/plugins/compilation/index.html</loc>
