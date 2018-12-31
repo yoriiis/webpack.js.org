@@ -12,7 +12,7 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css" />
     
-      <link href="/479e0954109c9583f867.css" rel="stylesheet">
+      <link href="/18f03490c2920bc9c504.css" rel="stylesheet">
     
 
     <script src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
@@ -40,17 +40,35 @@
         <span class="text"><code>optimization.minimizer</code></span>
         <a aria-label="&lt;code&gt;optimization.minimizer&lt;/code&gt;" class="icon-link" href="#optimization-minimizer"></a>
       </h2>
-<p><code>[TerserPlugin]</code></p>
+<p><code>[&lt;plugin&gt;]</code> and or <code>[function (compiler)]</code></p>
 <p>Allows you to override the default minimizer by providing a different one or more customized <a href="/plugins/terser-webpack-plugin/">TerserPlugin</a> instances.</p>
 <p><strong>webpack.config.js</strong></p>
 <pre><code class="lang-js"><span class="token keyword">const</span> TerserPlugin <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&apos;terser-webpack-plugin&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
-  <span class="token comment">//...</span>
   optimization<span class="token punctuation">:</span> <span class="token punctuation">{</span>
     minimizer<span class="token punctuation">:</span> <span class="token punctuation">[</span>
-      <span class="token keyword">new</span> <span class="token class-name">TerserPlugin</span><span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token comment">/* your config */</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
-    <span class="token punctuation">]</span>
+      <span class="token keyword">new</span> <span class="token class-name">TerserPlugin</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        cache<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+        parallel<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+        sourceMap<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token comment">// Must be set to true if using source-maps in production</span>
+        terserOptions<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+          <span class="token comment">// https://github.com/webpack-contrib/terser-webpack-plugin#terseroptions</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<p>Or, as function:</p>
+<pre><code class="lang-js">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  optimization<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    minimizer<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">(</span>compiler<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token punctuation">{</span>
+        <span class="token keyword">const</span> TerserPlugin <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&apos;terser-webpack-plugin&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">new</span> <span class="token class-name">TerserPlugin</span><span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token comment">/* your config */</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span>compiler<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
 </code></pre>

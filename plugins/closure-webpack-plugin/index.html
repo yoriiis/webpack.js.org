@@ -12,7 +12,7 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css" />
     
-      <link href="/479e0954109c9583f867.css" rel="stylesheet">
+      <link href="/18f03490c2920bc9c504.css" rel="stylesheet">
     
 
     <script src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
@@ -115,7 +115,9 @@ for details.</li>
 </code></pre>
 <p>Aggressive Bundle Mode utilizes a custom runtime in which modules within a chunk file are all included in the same scope.
 This avoids <a href="https://nolanlawson.com/2016/08/15/the-cost-of-small-modules/">the cost of small modules</a>.</p>
-<p>In Aggressive Bundle Mode, a file can only appear in a single output chunk. Use the <a href="https://webpack.js.org/plugins/split-chunks-plugin/">Split Chunks Plugin</a> to split duplicated files into a single output chunk.</p>
+<p>In Aggressive Bundle Mode, a file can only appear in a single output chunk. Use the <a href="https://webpack.js.org/plugins/split-chunks-plugin/">Split Chunks Plugin</a>
+to split duplicated files into a single output chunk. If a module is utilized by more than one chunk, the
+plugin will move it up to the first common parent to prevent code duplication.</p>
 <p>The <a href="https://webpack.js.org/configuration/optimization/#optimization-concatenatemodules">concatenatedModules optimization</a>
 is not compatible with this mode since Closure-Compiler performs an equivalent optimization).
 The plugin will emit a warning if this optimization is not disabled.</p>
@@ -139,7 +141,7 @@ for an example.</p>
 <ul>
 <li>Don&apos;t use babel at the same time - closure-compiler is also a transpiler.
 If you need <a href="https://github.com/google/closure-compiler/wiki/ECMAScript6">features not yet supported</a> by closure-compiler, have babel
-only target those features. </li>
+only target those features. Closure Compiler can transpile async/await - you don&apos;t need babel for that functionality either.</li>
 </ul>
 <h1 class="header">
         <a class="anchor" aria-hidden="true" href="#closure-library-plugin" id="closure-library-plugin"></a>
@@ -168,7 +170,8 @@ module<span class="token punctuation">.</span>exports <span class="token operato
 This is typically used during development mode. When the webpack mode is <code>production</code>,
 only dependency information is provided to webpack as Closure Compiler will natively recognize
 the Closure Library primitives.</p>
-<p>The Closure Library Plugin is only compatible with the <code>AGGRESSIVE_BUNDLE</code> mode of the Closure-Compiler webpack plugin.</p>
+<p>The Closure Library Plugin is only compatible with the <code>AGGRESSIVE_BUNDLE</code> mode of the Closure-Compiler
+webpack plugin.</p>
 <h2 class="header">
         <a class="anchor" aria-hidden="true" href="#options" id="options"></a>
         <span class="text">Options</span>
