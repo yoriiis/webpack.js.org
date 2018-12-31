@@ -12,7 +12,7 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css" />
     
-      <link href="/18f03490c2920bc9c504.css" rel="stylesheet">
+      <link href="/ecc24a2b45c69a46673c.css" rel="stylesheet">
     
 
     <script src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
@@ -288,9 +288,19 @@
         <span class="text"><code>Rule.use</code></span>
         <a aria-label="&lt;code&gt;Rule.use&lt;/code&gt;" class="icon-link" href="#rule-use"></a>
       </h2>
-<p>A list of <a href="#useentry">UseEntries</a> which are applied to modules. Each entry specifies a loader to be used.</p>
+<p><code>[UseEntry] | function</code></p>
+<p><code>Rule.use</code> can be an array of <a href="#useentry">UseEntry</a> which are applied to modules. Each entry specifies a loader to be used.</p>
 <p>Passing a string (i.e. <code>use: [ &apos;style-loader&apos; ]</code>) is a shortcut to the loader property (i.e. <code>use: [ { loader: &apos;style-loader &apos;} ]</code>).</p>
 <p>Loaders can be chained by passing multiple loaders, which will be applied from right to left (last to first configured).</p>
+<p><code>Rule.use</code> can be a function which receives the object argument describing the module being loaded, and must return an array of <code>UseEntry</code>.</p>
+<p>The object parameter has the following fields:</p>
+<ul>
+<li><code>compiler</code>: The current webpack compiler (can be undefined)</li>
+<li><code>issuer</code>: The path to the module that is importing the module being loaded</li>
+<li><code>realResource</code>: Always the path to the module being loaded</li>
+<li><code>resource</code>: The path to the module being loaded, it is usually equal to <code>realResource</code> except when the resource name is overwritten via <code>!=!</code> in request string</li>
+</ul>
+<p>The same shortcut as an array can be used for the return value (i.e. <code>use: [ &apos;style-loader&apos; ]</code>).</p>
 <p><strong>webpack.config.js</strong></p>
 <pre><code class="lang-javascript">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
   <span class="token comment">//...</span>
