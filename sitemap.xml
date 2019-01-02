@@ -157,19 +157,19 @@
         <loc>https://webpack.js.org/configuration/devtool/index.html</loc>
     </url>
     <url>
+        <loc>https://webpack.js.org/configuration/externals/index.html</loc>
+    </url>
+    <url>
         <loc>https://webpack.js.org/configuration/entry-context/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/configuration/externals/index.html</loc>
+        <loc>https://webpack.js.org/configuration/module/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/configuration/node/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/configuration/optimization/index.html</loc>
-    </url>
-    <url>
-        <loc>https://webpack.js.org/configuration/module/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/configuration/other-options/index.html</loc>
@@ -275,6 +275,9 @@
     </url>
     <url>
         <loc>https://webpack.js.org/guides/environment-variables/index.html</loc>
+    </url>
+    <url>
+        <loc>https://webpack.js.org/guides/getting-started/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/guides/hot-module-replacement/index.html</loc>
@@ -515,9 +518,6 @@
     </url>
     <url>
         <loc>https://webpack.js.org/plugins/min-chunk-size-plugin/index.html</loc>
-    </url>
-    <url>
-        <loc>https://webpack.js.org/guides/getting-started/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/plugins/mini-css-extract-plugin/index.html</loc>
