@@ -12,7 +12,7 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css" />
     
-      <link href="/32d5f431221627edae8d.css" rel="stylesheet">
+      <link href="/fb73bfef23de849683f3.css" rel="stylesheet">
     
 
     <script src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
@@ -503,7 +503,7 @@
 <p><code>transformed code</code> - You see each module separated from each other, annotated with module names. You see the code before webpack transforms it, but after Loaders transpile it. Example: Instead of <code>import {test} from &quot;module&quot;; class A extends test {}</code> you see something like <code>import {test} from &quot;module&quot;; var A = function(_test) { ... }(test);</code></p>
 <p><code>original source</code> - You see each module separated from each other, annotated with module names. You see the code before transpilation, as you authored it. This depends on Loader support.</p>
 <p><code>without source content</code> - Contents for the sources are not included in the Source Maps. Browsers usually try to load the source from the webserver or filesystem. You have to make sure to set <a href="/configuration/output/#output-devtoolmodulefilenametemplate"><code>output.devtoolModuleFilenameTemplate</code></a> correctly to match source urls.</p>
-<p><code>(lines only)</code> - Source Maps are simplified to a single mapping per line. This usually means a single mapping per statement (assuming you author is this way). This prevents you from debugging execution on statement level and from settings breakpoints on columns of a line. Combining with minimizing is not possible as minimizers usually only emit a single line.</p>
+<p><code>(lines only)</code> - Source Maps are simplified to a single mapping per line. This usually means a single mapping per statement (assuming you author it this way). This prevents you from debugging execution on statement level and from settings breakpoints on columns of a line. Combining with minimizing is not possible as minimizers usually only emit a single line.</p>
 <h3 class="header">
         <a class="anchor" aria-hidden="true" href="#development" id="development"></a>
         <span class="text">Development</span>
