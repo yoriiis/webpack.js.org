@@ -232,10 +232,10 @@
         <loc>https://webpack.js.org/get-started/why-webpack/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/guides/asset-management/index.html</loc>
+        <loc>https://webpack.js.org/guides/author-libraries/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/guides/author-libraries/index.html</loc>
+        <loc>https://webpack.js.org/guides/asset-management/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/guides/build-performance/index.html</loc>
@@ -307,6 +307,9 @@
         <loc>https://webpack.js.org/guides/public-path/index.html</loc>
     </url>
     <url>
+        <loc>https://webpack.js.org/guides/shimming/index.html</loc>
+    </url>
+    <url>
         <loc>https://webpack.js.org/guides/tree-shaking/index.html</loc>
     </url>
     <url>
@@ -314,9 +317,6 @@
     </url>
     <url>
         <loc>https://webpack.js.org/guides/why-webpack/index.html</loc>
-    </url>
-    <url>
-        <loc>https://webpack.js.org/guides/shimming/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/loaders/babel-loader/index.html</loc>
@@ -400,9 +400,6 @@
         <loc>https://webpack.js.org/loaders/polymer-webpack-loader/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/loaders/postcss-loader/index.html</loc>
-    </url>
-    <url>
         <loc>https://webpack.js.org/loaders/raw-loader/index.html</loc>
     </url>
     <url>
@@ -431,6 +428,9 @@
     </url>
     <url>
         <loc>https://webpack.js.org/loaders/transform-loader/index.html</loc>
+    </url>
+    <url>
+        <loc>https://webpack.js.org/loaders/postcss-loader/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/loaders/url-loader/index.html</loc>
