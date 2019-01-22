@@ -12,7 +12,7 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css" />
     
-      <link href="/6b876a4144e399f54a7d.css" rel="stylesheet">
+      <link href="/1ce0d7480f9055dda1b3.css" rel="stylesheet">
     
 
     <script src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
@@ -24,21 +24,23 @@
         <span class="text"><code>watch</code></span>
         <a aria-label="&lt;code&gt;watch&lt;/code&gt;" class="icon-link" href="#watch"></a>
       </h2>
-<p><code>boolean</code></p>
-<p>Turn on watch mode. This means that after the initial build, webpack will continue to watch for changes in any of the resolved files. Watch mode is turned off by default:</p>
-<pre><code class="lang-js">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+<p><code>boolean: false</code></p>
+<p>Turn on watch mode. This means that after the initial build, webpack will continue to watch for changes in any of the resolved files.</p>
+<p><strong>webpack.config.js</strong></p>
+<pre><code class="lang-javascript">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
   <span class="token comment">//...</span>
-  watch<span class="token punctuation">:</span> <span class="token boolean">false</span>
+  watch<span class="token punctuation">:</span> <span class="token boolean">true</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
 </code></pre>
-<blockquote class="tip"><div class="tip-content"> In webpack-dev-server and webpack-dev-middleware watch mode is enabled by default. </div></blockquote><h2 class="header">
+<blockquote class="tip"><div class="tip-content"> In <a href="https://github.com/webpack/webpack-dev-server">webpack-dev-server</a> and <a href="https://github.com/webpack/webpack-dev-middleware">webpack-dev-middleware</a> watch mode is enabled by default. </div></blockquote><h2 class="header">
         <a class="anchor" aria-hidden="true" href="#watchoptions" id="watchoptions"></a>
         <span class="text"><code>watchOptions</code></span>
         <a aria-label="&lt;code&gt;watchOptions&lt;/code&gt;" class="icon-link" href="#watchoptions"></a>
       </h2>
 <p><code>object</code></p>
 <p>A set of options used to customize watch mode:</p>
-<pre><code class="lang-js">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+<p><strong>webpack.config.js</strong></p>
+<pre><code class="lang-javascript">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
   <span class="token comment">//...</span>
   watchOptions<span class="token punctuation">:</span> <span class="token punctuation">{</span>
     aggregateTimeout<span class="token punctuation">:</span> <span class="token number">300</span><span class="token punctuation">,</span>
@@ -51,12 +53,12 @@
         <span class="text"><code>watchOptions.aggregateTimeout</code></span>
         <a aria-label="&lt;code&gt;watchOptions.aggregateTimeout&lt;/code&gt;" class="icon-link" href="#watchoptions-aggregatetimeout"></a>
       </h2>
-<p><code>number</code></p>
+<p><code>number: 300</code></p>
 <p>Add a delay before rebuilding once the first file changed. This allows webpack to aggregate any other changes made during this time period into one rebuild. Pass a value in milliseconds:</p>
-<pre><code class="lang-js">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+<pre><code class="lang-javascript">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
   <span class="token comment">//...</span>
   watchOptions<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-    aggregateTimeout<span class="token punctuation">:</span> <span class="token number">300</span> <span class="token comment">// The default</span>
+    aggregateTimeout<span class="token punctuation">:</span> <span class="token number">600</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
 </code></pre>
@@ -65,8 +67,10 @@
         <span class="text"><code>watchOptions.ignored</code></span>
         <a aria-label="&lt;code&gt;watchOptions.ignored&lt;/code&gt;" class="icon-link" href="#watchoptions-ignored"></a>
       </h2>
+<p><code>RegExp</code> <a href="https://github.com/micromatch/anymatch"><code>anymatch</code></a></p>
 <p>For some systems, watching many file systems can result in a lot of CPU or memory usage. It is possible to exclude a huge folder like <code>node_modules</code>:</p>
-<pre><code class="lang-js">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+<p><strong>webpack.config.js</strong></p>
+<pre><code class="lang-javascript">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
   <span class="token comment">//...</span>
   watchOptions<span class="token punctuation">:</span> <span class="token punctuation">{</span>
     ignored<span class="token punctuation">:</span> <span class="token regex">/node_modules/</span>
@@ -74,7 +78,8 @@
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
 </code></pre>
 <p>It is also possible to have and use multiple <a href="https://github.com/micromatch/anymatch">anymatch</a> patterns:</p>
-<pre><code class="lang-js">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+<p><strong>webpack.config.js</strong></p>
+<pre><code class="lang-javascript">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
   <span class="token comment">//...</span>
   watchOptions<span class="token punctuation">:</span> <span class="token punctuation">{</span>
     ignored<span class="token punctuation">:</span> <span class="token punctuation">[</span>&apos;files<span class="token comment">/**/</span><span class="token operator">*</span><span class="token punctuation">.</span>js<span class="token string">&apos;, &apos;</span>node_modules&apos;<span class="token punctuation">]</span>
@@ -86,9 +91,10 @@
         <span class="text"><code>watchOptions.poll</code></span>
         <a aria-label="&lt;code&gt;watchOptions.poll&lt;/code&gt;" class="icon-link" href="#watchoptions-poll"></a>
       </h2>
-<p><code>boolean</code> <code>number</code></p>
+<p><code>boolean: false</code> <code>number</code></p>
 <p>Turn on <a href="https://whatis.techtarget.com/definition/polling">polling</a> by passing <code>true</code>, or specifying a poll interval in milliseconds:</p>
-<pre><code class="lang-js">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+<p><strong>webpack.config.js</strong></p>
+<pre><code class="lang-javascript">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
   <span class="token comment">//...</span>
   watchOptions<span class="token punctuation">:</span> <span class="token punctuation">{</span>
     poll<span class="token punctuation">:</span> <span class="token number">1000</span> <span class="token comment">// Check for changes every second</span>
@@ -100,7 +106,7 @@
         <span class="text"><code>info-verbosity</code></span>
         <a aria-label="&lt;code&gt;info-verbosity&lt;/code&gt;" class="icon-link" href="#info-verbosity"></a>
       </h2>
-<p><code>string</code>: <code>none</code> <code>info</code> <code>verbose</code></p>
+<p><code>string: &apos;none&apos;, &apos;info&apos;, &apos;verbose&apos;</code></p>
 <p>Controls verbosity of the lifecycle messaging, e.g. the <code>Started watching files...</code> log. Setting <code>info-verbosity</code> to <code>verbose</code> will also message to console at the beginning and the end of incremental build. <code>info-verbosity</code> is set to <code>info</code> by default.</p>
 <pre><code class="lang-bash">webpack --watch --info-verbosity verbose
 </code></pre>
@@ -138,8 +144,8 @@
         <span class="text">Windows Paths</span>
         <a aria-label="Windows Paths" class="icon-link" href="#windows-paths"></a>
       </h3>
-<p>Because webpack expects absolute paths for many config options such as <code>__dirname + &quot;/app/folder&quot;</code> the Windows <code>\</code> path separator can break some functionality.</p>
-<p>Use the correct separators. I.e. <code>path.resolve(__dirname, &quot;app/folder&quot;)</code> or <code>path.join(__dirname, &quot;app&quot;, &quot;folder&quot;)</code>.</p>
+<p>Because webpack expects absolute paths for many config options such as <code>__dirname + &apos;/app/folder&apos;</code> the Windows <code>\</code> path separator can break some functionality.</p>
+<p>Use the correct separators. I.e. <code>path.resolve(__dirname, &apos;app/folder&apos;)</code> or <code>path.join(__dirname, &apos;app&apos;, &apos;folder&apos;)</code>.</p>
 <h3 class="header">
         <a class="anchor" aria-hidden="true" href="#vim" id="vim"></a>
         <span class="text">Vim</span>

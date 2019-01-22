@@ -67,6 +67,9 @@
         <loc>https://webpack.js.org/writers-guide/index.html</loc>
     </url>
     <url>
+        <loc>https://webpack.js.org/api/cli/index.html</loc>
+    </url>
+    <url>
         <loc>https://webpack.js.org/api/compilation-hooks/index.html</loc>
     </url>
     <url>
@@ -74,9 +77,6 @@
     </url>
     <url>
         <loc>https://webpack.js.org/api/hot-module-replacement/index.html</loc>
-    </url>
-    <url>
-        <loc>https://webpack.js.org/api/cli/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/api/loaders/index.html</loc>
@@ -199,10 +199,10 @@
         <loc>https://webpack.js.org/contribute/debugging/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/contribute/release-process/index.html</loc>
+        <loc>https://webpack.js.org/contribute/plugin-patterns/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/contribute/plugin-patterns/index.html</loc>
+        <loc>https://webpack.js.org/contribute/release-process/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/contribute/writers-guide/index.html</loc>
