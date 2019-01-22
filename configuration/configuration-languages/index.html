@@ -12,7 +12,7 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css" />
     
-      <link href="/1ce0d7480f9055dda1b3.css" rel="stylesheet">
+      <link href="/e30f8ad8b489b32416c0.css" rel="stylesheet">
     
 
     <script src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
@@ -70,11 +70,11 @@ npm <span class="token function">install</span> --save-dev @types/webpack-dev-se
 <p><strong>package.json</strong></p>
 <pre><code class="lang-json"><span class="token punctuation">{</span>
   <span class="token property">&quot;scripts&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
-    <span class="token property">&quot;build&quot;</span><span class="token operator">:</span> <span class="token string">&quot;TS_NODE_PROJECT=\&quot;</span>tsconfig-for-webpack-config.json\<span class="token string">&quot; webpack&quot;</span>
+    <span class="token property">&quot;build&quot;</span><span class="token operator">:</span> <span class="token string">&quot;cross-env TS_NODE_PROJECT=\&quot;</span>tsconfig-for-webpack-config.json\<span class="token string">&quot; webpack&quot;</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<h2 class="header">
+<blockquote class="warning"><div class="tip-content"> We had been getting reports that <code>TS_NODE_PROJECT</code> might not work with <code>&quot;TS_NODE_PROJECT&quot; unrecognized command</code> error. Therefore running it with <code>cross-env</code> seems to fix the issue, for more info <a href="https://github.com/webpack/webpack.js.org/issues/2733">see this issue</a>. </div></blockquote><h2 class="header">
         <a class="anchor" aria-hidden="true" href="#coffeescript" id="coffeescript"></a>
         <span class="text">CoffeeScript</span>
         <a aria-label="CoffeeScript" class="icon-link" href="#coffeescript"></a>
