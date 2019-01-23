@@ -12,7 +12,7 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css" />
     
-      <link href="/e979a8e3cc7e8dd7d6f1.css" rel="stylesheet">
+      <link href="/bf3cf7794d465209e0f9.css" rel="stylesheet">
     
 
     <script src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
@@ -25,7 +25,15 @@
         <a aria-label="&lt;code&gt;resolve&lt;/code&gt;" class="icon-link" href="#resolve"></a>
       </h2>
 <p><code>object</code></p>
-<p>Configure how modules are resolved. For example, when calling <code>import &quot;lodash&quot;</code> in ES2015, the <code>resolve</code> options can change where webpack goes to look for <code>&quot;lodash&quot;</code> (see <a href="#resolve-modules"><code>modules</code></a>).</p>
+<p>Configure how modules are resolved. For example, when calling <code>import &apos;lodash&apos;</code> in ES2015, the <code>resolve</code> options can change where webpack goes to look for <code>&apos;lodash&apos;</code> (see <a href="#resolve-modules"><code>modules</code></a>).</p>
+<p><strong>webpack.config.js</strong></p>
+<pre><code class="lang-js">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token comment">//...</span>
+  resolve<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token comment">// configuration options</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
 <h3 class="header">
         <a class="anchor" aria-hidden="true" href="#resolve-alias" id="resolve-alias"></a>
         <span class="text"><code>resolve.alias</code></span>
@@ -33,6 +41,7 @@
       </h3>
 <p><code>object</code></p>
 <p>Create aliases to <code>import</code> or <code>require</code> certain modules more easily. For example, to alias a bunch of commonly used <code>src/</code> folders:</p>
+<p><strong>webpack.config.js</strong></p>
 <pre><code class="lang-js">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
   <span class="token comment">//...</span>
   resolve<span class="token punctuation">:</span> <span class="token punctuation">{</span>
@@ -50,6 +59,7 @@
 <pre><code class="lang-js"><span class="token keyword">import</span> Utility <span class="token keyword">from</span> <span class="token string">&apos;Utilities/utility&apos;</span><span class="token punctuation">;</span>
 </code></pre>
 <p>A trailing <code>$</code> can also be added to the given object&apos;s keys to signify an exact match:</p>
+<p><strong>webpack.config.js</strong></p>
 <pre><code class="lang-js">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
   <span class="token comment">//...</span>
   resolve<span class="token punctuation">:</span> <span class="token punctuation">{</span>
@@ -68,7 +78,7 @@
     <div class="table">
         <div class="table-wrap">
           <div class="table-header">
-              <div class="table-tr"><div class="table-th"><code>alias:</code></div><div class="table-th"><code>import &quot;xyz&quot;</code></div><div class="table-th"><code>import &quot;xyz/file.js&quot;</code></div></div>
+              <div class="table-tr"><div class="table-th"><code>alias:</code></div><div class="table-th"><code>import &apos;xyz&apos;</code></div><div class="table-th"><code>import &apos;xyz/file.js&apos;</code></div></div>
           </div>
           <div class="table-body">
               <div class="table-tr"><div class="table-td">
@@ -80,14 +90,14 @@
     </div>
   </div><div class="table-td">
     <div class="table-td-title">
-        <code>import &quot;xyz&quot;</code>
+        <code>import &apos;xyz&apos;</code>
     </div>
     <div class="table-td-content">
         <code>/abc/node_modules/xyz/index.js</code>
     </div>
   </div><div class="table-td">
     <div class="table-td-title">
-        <code>import &quot;xyz/file.js&quot;</code>
+        <code>import &apos;xyz/file.js&apos;</code>
     </div>
     <div class="table-td-content">
         <code>/abc/node_modules/xyz/file.js</code>
@@ -97,18 +107,18 @@
         <code>alias:</code>
     </div>
     <div class="table-td-content">
-        <code>{ xyz: &quot;/abs/path/to/file.js&quot; }</code>
+        <code>{ xyz: &apos;/abs/path/to/file.js&apos; }</code>
     </div>
   </div><div class="table-td">
     <div class="table-td-title">
-        <code>import &quot;xyz&quot;</code>
+        <code>import &apos;xyz&apos;</code>
     </div>
     <div class="table-td-content">
         <code>/abs/path/to/file.js</code>
     </div>
   </div><div class="table-td">
     <div class="table-td-title">
-        <code>import &quot;xyz/file.js&quot;</code>
+        <code>import &apos;xyz/file.js&apos;</code>
     </div>
     <div class="table-td-content">
         error
@@ -118,18 +128,18 @@
         <code>alias:</code>
     </div>
     <div class="table-td-content">
-        <code>{ xyz$: &quot;/abs/path/to/file.js&quot; }</code>
+        <code>{ xyz$: &apos;/abs/path/to/file.js&apos; }</code>
     </div>
   </div><div class="table-td">
     <div class="table-td-title">
-        <code>import &quot;xyz&quot;</code>
+        <code>import &apos;xyz&apos;</code>
     </div>
     <div class="table-td-content">
         <code>/abs/path/to/file.js</code>
     </div>
   </div><div class="table-td">
     <div class="table-td-title">
-        <code>import &quot;xyz/file.js&quot;</code>
+        <code>import &apos;xyz/file.js&apos;</code>
     </div>
     <div class="table-td-content">
         <code>/abc/node_modules/xyz/file.js</code>
@@ -139,18 +149,18 @@
         <code>alias:</code>
     </div>
     <div class="table-td-content">
-        <code>{ xyz: &quot;./dir/file.js&quot; }</code>
+        <code>{ xyz: &apos;./dir/file.js&apos; }</code>
     </div>
   </div><div class="table-td">
     <div class="table-td-title">
-        <code>import &quot;xyz&quot;</code>
+        <code>import &apos;xyz&apos;</code>
     </div>
     <div class="table-td-content">
         <code>/abc/dir/file.js</code>
     </div>
   </div><div class="table-td">
     <div class="table-td-title">
-        <code>import &quot;xyz/file.js&quot;</code>
+        <code>import &apos;xyz/file.js&apos;</code>
     </div>
     <div class="table-td-content">
         error
@@ -160,18 +170,18 @@
         <code>alias:</code>
     </div>
     <div class="table-td-content">
-        <code>{ xyz$: &quot;./dir/file.js&quot; }</code>
+        <code>{ xyz$: &apos;./dir/file.js&apos; }</code>
     </div>
   </div><div class="table-td">
     <div class="table-td-title">
-        <code>import &quot;xyz&quot;</code>
+        <code>import &apos;xyz&apos;</code>
     </div>
     <div class="table-td-content">
         <code>/abc/dir/file.js</code>
     </div>
   </div><div class="table-td">
     <div class="table-td-title">
-        <code>import &quot;xyz/file.js&quot;</code>
+        <code>import &apos;xyz/file.js&apos;</code>
     </div>
     <div class="table-td-content">
         <code>/abc/node_modules/xyz/file.js</code>
@@ -181,18 +191,18 @@
         <code>alias:</code>
     </div>
     <div class="table-td-content">
-        <code>{ xyz: &quot;/some/dir&quot; }</code>
+        <code>{ xyz: &apos;/some/dir&apos; }</code>
     </div>
   </div><div class="table-td">
     <div class="table-td-title">
-        <code>import &quot;xyz&quot;</code>
+        <code>import &apos;xyz&apos;</code>
     </div>
     <div class="table-td-content">
         <code>/some/dir/index.js</code>
     </div>
   </div><div class="table-td">
     <div class="table-td-title">
-        <code>import &quot;xyz/file.js&quot;</code>
+        <code>import &apos;xyz/file.js&apos;</code>
     </div>
     <div class="table-td-content">
         <code>/some/dir/file.js</code>
@@ -202,18 +212,18 @@
         <code>alias:</code>
     </div>
     <div class="table-td-content">
-        <code>{ xyz$: &quot;/some/dir&quot; }</code>
+        <code>{ xyz$: &apos;/some/dir&apos; }</code>
     </div>
   </div><div class="table-td">
     <div class="table-td-title">
-        <code>import &quot;xyz&quot;</code>
+        <code>import &apos;xyz&apos;</code>
     </div>
     <div class="table-td-content">
         <code>/some/dir/index.js</code>
     </div>
   </div><div class="table-td">
     <div class="table-td-title">
-        <code>import &quot;xyz/file.js&quot;</code>
+        <code>import &apos;xyz/file.js&apos;</code>
     </div>
     <div class="table-td-content">
         <code>/abc/node_modules/xyz/file.js</code>
@@ -223,18 +233,18 @@
         <code>alias:</code>
     </div>
     <div class="table-td-content">
-        <code>{ xyz: &quot;./dir&quot; }</code>
+        <code>{ xyz: &apos;./dir&apos; }</code>
     </div>
   </div><div class="table-td">
     <div class="table-td-title">
-        <code>import &quot;xyz&quot;</code>
+        <code>import &apos;xyz&apos;</code>
     </div>
     <div class="table-td-content">
         <code>/abc/dir/index.js</code>
     </div>
   </div><div class="table-td">
     <div class="table-td-title">
-        <code>import &quot;xyz/file.js&quot;</code>
+        <code>import &apos;xyz/file.js&apos;</code>
     </div>
     <div class="table-td-content">
         <code>/abc/dir/file.js</code>
@@ -244,18 +254,18 @@
         <code>alias:</code>
     </div>
     <div class="table-td-content">
-        <code>{ xyz: &quot;modu&quot; }</code>
+        <code>{ xyz: &apos;modu&apos; }</code>
     </div>
   </div><div class="table-td">
     <div class="table-td-title">
-        <code>import &quot;xyz&quot;</code>
+        <code>import &apos;xyz&apos;</code>
     </div>
     <div class="table-td-content">
         <code>/abc/node_modules/modu/index.js</code>
     </div>
   </div><div class="table-td">
     <div class="table-td-title">
-        <code>import &quot;xyz/file.js&quot;</code>
+        <code>import &apos;xyz/file.js&apos;</code>
     </div>
     <div class="table-td-content">
         <code>/abc/node_modules/modu/file.js</code>
@@ -265,18 +275,18 @@
         <code>alias:</code>
     </div>
     <div class="table-td-content">
-        <code>{ xyz$: &quot;modu&quot; }</code>
+        <code>{ xyz$: &apos;modu&apos; }</code>
     </div>
   </div><div class="table-td">
     <div class="table-td-title">
-        <code>import &quot;xyz&quot;</code>
+        <code>import &apos;xyz&apos;</code>
     </div>
     <div class="table-td-content">
         <code>/abc/node_modules/modu/index.js</code>
     </div>
   </div><div class="table-td">
     <div class="table-td-title">
-        <code>import &quot;xyz/file.js&quot;</code>
+        <code>import &apos;xyz/file.js&apos;</code>
     </div>
     <div class="table-td-content">
         <code>/abc/node_modules/xyz/file.js</code>
@@ -286,18 +296,18 @@
         <code>alias:</code>
     </div>
     <div class="table-td-content">
-        <code>{ xyz: &quot;modu/some/file.js&quot; }</code>
+        <code>{ xyz: &apos;modu/some/file.js&apos; }</code>
     </div>
   </div><div class="table-td">
     <div class="table-td-title">
-        <code>import &quot;xyz&quot;</code>
+        <code>import &apos;xyz&apos;</code>
     </div>
     <div class="table-td-content">
         <code>/abc/node_modules/modu/some/file.js</code>
     </div>
   </div><div class="table-td">
     <div class="table-td-title">
-        <code>import &quot;xyz/file.js&quot;</code>
+        <code>import &apos;xyz/file.js&apos;</code>
     </div>
     <div class="table-td-content">
         error
@@ -307,18 +317,18 @@
         <code>alias:</code>
     </div>
     <div class="table-td-content">
-        <code>{ xyz: &quot;modu/dir&quot; }</code>
+        <code>{ xyz: &apos;modu/dir&apos; }</code>
     </div>
   </div><div class="table-td">
     <div class="table-td-title">
-        <code>import &quot;xyz&quot;</code>
+        <code>import &apos;xyz&apos;</code>
     </div>
     <div class="table-td-content">
         <code>/abc/node_modules/modu/dir/index.js</code>
     </div>
   </div><div class="table-td">
     <div class="table-td-title">
-        <code>import &quot;xyz/file.js&quot;</code>
+        <code>import &apos;xyz/file.js&apos;</code>
     </div>
     <div class="table-td-content">
         <code>/abc/node_modules/dir/file.js</code>
@@ -328,18 +338,18 @@
         <code>alias:</code>
     </div>
     <div class="table-td-content">
-        <code>{ xyz: &quot;xyz/dir&quot; }</code>
+        <code>{ xyz: &apos;xyz/dir&apos; }</code>
     </div>
   </div><div class="table-td">
     <div class="table-td-title">
-        <code>import &quot;xyz&quot;</code>
+        <code>import &apos;xyz&apos;</code>
     </div>
     <div class="table-td-content">
         <code>/abc/node_modules/xyz/dir/index.js</code>
     </div>
   </div><div class="table-td">
     <div class="table-td-title">
-        <code>import &quot;xyz/file.js&quot;</code>
+        <code>import &apos;xyz/file.js&apos;</code>
     </div>
     <div class="table-td-content">
         <code>/abc/node_modules/xyz/dir/file.js</code>
@@ -349,18 +359,18 @@
         <code>alias:</code>
     </div>
     <div class="table-td-content">
-        <code>{ xyz$: &quot;xyz/dir&quot; }</code>
+        <code>{ xyz$: &apos;xyz/dir&apos; }</code>
     </div>
   </div><div class="table-td">
     <div class="table-td-title">
-        <code>import &quot;xyz&quot;</code>
+        <code>import &apos;xyz&apos;</code>
     </div>
     <div class="table-td-content">
         <code>/abc/node_modules/xyz/dir/index.js</code>
     </div>
   </div><div class="table-td">
     <div class="table-td-title">
-        <code>import &quot;xyz/file.js&quot;</code>
+        <code>import &apos;xyz/file.js&apos;</code>
     </div>
     <div class="table-td-content">
         <code>/abc/node_modules/xyz/file.js</code>
@@ -375,8 +385,9 @@
         <span class="text"><code>resolve.aliasFields</code></span>
         <a aria-label="&lt;code&gt;resolve.aliasFields&lt;/code&gt;" class="icon-link" href="#resolve-aliasfields"></a>
       </h3>
-<p><code>array</code></p>
-<p>Specify a field, such as <code>browser</code>, to be parsed according to <a href="https://github.com/defunctzombie/package-browser-field-spec">this specification</a>. Default:</p>
+<p><code>[string]: [&apos;browser&apos;]</code></p>
+<p>Specify a field, such as <code>browser</code>, to be parsed according to <a href="https://github.com/defunctzombie/package-browser-field-spec">this specification</a>.</p>
+<p><strong>webpack.config.js</strong></p>
 <pre><code class="lang-js">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
   <span class="token comment">//...</span>
   resolve<span class="token punctuation">:</span> <span class="token punctuation">{</span>
@@ -396,8 +407,9 @@
         <span class="text"><code>resolve.descriptionFiles</code></span>
         <a aria-label="&lt;code&gt;resolve.descriptionFiles&lt;/code&gt;" class="icon-link" href="#resolve-descriptionfiles"></a>
       </h3>
-<p><code>array</code></p>
-<p>The JSON files to use for descriptions. Default:</p>
+<p><code>[string]: [&apos;package.json&apos;]</code></p>
+<p>The JSON files to use for descriptions.</p>
+<p><strong>webpack.config.js</strong></p>
 <pre><code class="lang-js">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
   <span class="token comment">//...</span>
   resolve<span class="token punctuation">:</span> <span class="token punctuation">{</span>
@@ -410,8 +422,9 @@
         <span class="text"><code>resolve.enforceExtension</code></span>
         <a aria-label="&lt;code&gt;resolve.enforceExtension&lt;/code&gt;" class="icon-link" href="#resolve-enforceextension"></a>
       </h3>
-<p><code>boolean</code></p>
-<p>If <code>true</code>, it will not allow extension-less files. So by default <code>require(&apos;./foo&apos;)</code> works if <code>./foo</code> has a <code>.js</code> extension, but with this enabled only <code>require(&apos;./foo.js&apos;)</code> will work. Default:</p>
+<p><code>boolean: false</code></p>
+<p>If <code>true</code>, it will not allow extension-less files. So by default <code>require(&apos;./foo&apos;)</code> works if <code>./foo</code> has a <code>.js</code> extension, but with this enabled only <code>require(&apos;./foo.js&apos;)</code> will work.</p>
+<p><strong>webpack.config.js</strong></p>
 <pre><code class="lang-js">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
   <span class="token comment">//...</span>
   resolve<span class="token punctuation">:</span> <span class="token punctuation">{</span>
@@ -424,8 +437,9 @@
         <span class="text"><code>resolve.enforceModuleExtension</code></span>
         <a aria-label="&lt;code&gt;resolve.enforceModuleExtension&lt;/code&gt;" class="icon-link" href="#resolve-enforcemoduleextension"></a>
       </h3>
-<p><code>boolean</code></p>
-<p>Whether to require to use an extension for modules (e.g. loaders). Default:</p>
+<p><code>boolean: false</code></p>
+<p>Tells webpack whether to require to use an extension for modules (e.g. loaders).</p>
+<p><strong>webpack.config.js</strong></p>
 <pre><code class="lang-js">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
   <span class="token comment">//...</span>
   resolve<span class="token punctuation">:</span> <span class="token punctuation">{</span>
@@ -438,8 +452,9 @@
         <span class="text"><code>resolve.extensions</code></span>
         <a aria-label="&lt;code&gt;resolve.extensions&lt;/code&gt;" class="icon-link" href="#resolve-extensions"></a>
       </h3>
-<p><code>array</code></p>
-<p>Automatically resolve certain extensions. This defaults to:</p>
+<p><code>[string]: [&apos;.wasm&apos;, &apos;.mjs&apos;, &apos;.js&apos;, &apos;.json&apos;]</code></p>
+<p>Automatically resolve certain extensions.</p>
+<p><strong>webpack.config.js</strong></p>
 <pre><code class="lang-js">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
   <span class="token comment">//...</span>
   resolve<span class="token punctuation">:</span> <span class="token punctuation">{</span>
@@ -450,14 +465,15 @@
 <p>which is what enables users to leave off the extension when importing:</p>
 <pre><code class="lang-js"><span class="token keyword">import</span> File <span class="token keyword">from</span> <span class="token string">&apos;../path/to/file&apos;</span><span class="token punctuation">;</span>
 </code></pre>
-<blockquote class="warning"><div class="tip-content"> Using this will <strong>override the default array</strong>, meaning that webpack will no longer try to resolve modules using the default extensions. For modules that are imported with their extension, e.g. <code>import SomeFile from &quot;./somefile.ext&quot;</code>, to be properly resolved, a string containing &quot;*&quot; must be included in the array. </div></blockquote><h3 class="header">
+<blockquote class="warning"><div class="tip-content"> Using this will <strong>override the default array</strong>, meaning that webpack will no longer try to resolve modules using the default extensions. For modules that are imported with their extension, e.g. <code>import SomeFile from &apos;./somefile.ext&apos;</code>, to be properly resolved, a string containing &quot;*&quot; must be included in the array. </div></blockquote><h3 class="header">
         <a class="anchor" aria-hidden="true" href="#resolve-mainfields" id="resolve-mainfields"></a>
         <span class="text"><code>resolve.mainFields</code></span>
         <a aria-label="&lt;code&gt;resolve.mainFields&lt;/code&gt;" class="icon-link" href="#resolve-mainfields"></a>
       </h3>
-<p><code>array</code></p>
-<p>When importing from an npm package, e.g. <code>import * as D3 from &quot;d3&quot;</code>, this option will determine which fields in its <code>package.json</code> are checked. The default values will vary based upon the <a href="/concepts/targets"><code>target</code></a> specified in your webpack configuration.</p>
+<p><code>[string]</code></p>
+<p>When importing from an npm package, e.g. <code>import * as D3 from &apos;d3&apos;</code>, this option will determine which fields in its <code>package.json</code> are checked. The default values will vary based upon the <a href="/concepts/targets"><code>target</code></a> specified in your webpack configuration.</p>
 <p>When the <code>target</code> property is set to <code>webworker</code>, <code>web</code>, or left unspecified:</p>
+<p><strong>webpack.config.js</strong></p>
 <pre><code class="lang-js">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
   <span class="token comment">//...</span>
   resolve<span class="token punctuation">:</span> <span class="token punctuation">{</span>
@@ -466,6 +482,7 @@
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
 </code></pre>
 <p>For any other target (including <code>node</code>):</p>
+<p><strong>webpack.config.js</strong></p>
 <pre><code class="lang-js">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
   <span class="token comment">//...</span>
   resolve<span class="token punctuation">:</span> <span class="token punctuation">{</span>
@@ -479,14 +496,15 @@
   <span class="token property">&quot;module&quot;</span><span class="token operator">:</span> <span class="token string">&quot;index&quot;</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<p>When we <code>import * as Upstream from &quot;upstream&quot;</code> this will actually resolve to the file in the <code>browser</code> property. The <code>browser</code> property takes precedence because it&apos;s the first item in <code>mainFields</code>. Meanwhile, a Node.js application bundled by webpack will first try to resolve using the file in the <code>module</code> field.</p>
+<p>When we <code>import * as Upstream from &apos;upstream&apos;</code> this will actually resolve to the file in the <code>browser</code> property. The <code>browser</code> property takes precedence because it&apos;s the first item in <code>mainFields</code>. Meanwhile, a Node.js application bundled by webpack will first try to resolve using the file in the <code>module</code> field.</p>
 <h3 class="header">
         <a class="anchor" aria-hidden="true" href="#resolve-mainfiles" id="resolve-mainfiles"></a>
         <span class="text"><code>resolve.mainFiles</code></span>
         <a aria-label="&lt;code&gt;resolve.mainFiles&lt;/code&gt;" class="icon-link" href="#resolve-mainfiles"></a>
       </h3>
-<p><code>array</code></p>
-<p>The filename to be used while resolving directories. Default:</p>
+<p><code>[string]: [&apos;index&apos;]</code></p>
+<p>The filename to be used while resolving directories.</p>
+<p><strong>webpack.config.js</strong></p>
 <pre><code class="lang-js">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
   <span class="token comment">//...</span>
   resolve<span class="token punctuation">:</span> <span class="token punctuation">{</span>
@@ -499,12 +517,12 @@
         <span class="text"><code>resolve.modules</code></span>
         <a aria-label="&lt;code&gt;resolve.modules&lt;/code&gt;" class="icon-link" href="#resolve-modules"></a>
       </h3>
-<p><code>array</code></p>
+<p><code>[string]: [&apos;node_modules&apos;]</code></p>
 <p>Tell webpack what directories should be searched when resolving modules.</p>
 <p>Absolute and relative paths can both be used, but be aware that they will behave a bit differently.</p>
 <p>A relative path will be scanned similarly to how Node scans for <code>node_modules</code>, by looking through the current directory as well as its ancestors (i.e. <code>./node_modules</code>, <code>../node_modules</code>, and on).</p>
 <p>With an absolute path, it will only search in the given directory.</p>
-<p><code>resolve.modules</code> defaults to:</p>
+<p><strong>webpack.config.js</strong></p>
 <pre><code class="lang-js">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
   <span class="token comment">//...</span>
   resolve<span class="token punctuation">:</span> <span class="token punctuation">{</span>
@@ -513,6 +531,7 @@
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
 </code></pre>
 <p>If you want to add a directory to search in that takes precedence over <code>node_modules/</code>:</p>
+<p><strong>webpack.config.js</strong></p>
 <pre><code class="lang-js">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
   <span class="token comment">//...</span>
   resolve<span class="token punctuation">:</span> <span class="token punctuation">{</span>
@@ -525,8 +544,9 @@
         <span class="text"><code>resolve.unsafeCache</code></span>
         <a aria-label="&lt;code&gt;resolve.unsafeCache&lt;/code&gt;" class="icon-link" href="#resolve-unsafecache"></a>
       </h3>
-<p><code>regex</code> <code>array</code> <code>boolean</code></p>
-<p>Enable aggressive, but <strong>unsafe</strong>, caching of modules. Passing <code>true</code> will cache everything. Default:</p>
+<p><code>regex</code> <code>array</code> <code>boolean: true</code></p>
+<p>Enable aggressive, but <strong>unsafe</strong>, caching of modules. Passing <code>true</code> will cache everything.</p>
+<p><strong>webpack.config.js</strong></p>
 <pre><code class="lang-js">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
   <span class="token comment">//...</span>
   resolve<span class="token punctuation">:</span> <span class="token punctuation">{</span>
@@ -535,6 +555,7 @@
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
 </code></pre>
 <p>A regular expression, or an array of regular expressions, can be used to test file paths and only cache certain modules. For example, to only cache utilities:</p>
+<p><strong>webpack.config.js</strong></p>
 <pre><code class="lang-js">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
   <span class="token comment">//...</span>
   resolve<span class="token punctuation">:</span> <span class="token punctuation">{</span>
@@ -547,7 +568,9 @@
         <span class="text"><code>resolve.plugins</code></span>
         <a aria-label="&lt;code&gt;resolve.plugins&lt;/code&gt;" class="icon-link" href="#resolve-plugins"></a>
       </h3>
+<p><a href="/plugins/"><code>[Plugin]</code></a></p>
 <p>A list of additional resolve plugins which should be applied. It allows plugins such as <a href="https://www.npmjs.com/package/directory-named-webpack-plugin"><code>DirectoryNamedWebpackPlugin</code></a>.</p>
+<p><strong>webpack.config.js</strong></p>
 <pre><code class="lang-js">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
   <span class="token comment">//...</span>
   resolve<span class="token punctuation">:</span> <span class="token punctuation">{</span>
@@ -562,10 +585,10 @@
         <span class="text"><code>resolve.symlinks</code></span>
         <a aria-label="&lt;code&gt;resolve.symlinks&lt;/code&gt;" class="icon-link" href="#resolve-symlinks"></a>
       </h3>
-<p><code>boolean</code></p>
+<p><code>boolean: true</code></p>
 <p>Whether to resolve symlinks to their symlinked location.</p>
 <p>When enabled, symlinked resources are resolved to their <em>real</em> path, not their symlinked location. Note that this may cause module resolution to fail when using tools that symlink packages (like <code>npm link</code>).</p>
-<p><code>resolve.symlinks</code> defaults to:</p>
+<p><strong>webpack.config.js</strong></p>
 <pre><code class="lang-js">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
   <span class="token comment">//...</span>
   resolve<span class="token punctuation">:</span> <span class="token punctuation">{</span>
@@ -578,12 +601,16 @@
         <span class="text"><code>resolve.cachePredicate</code></span>
         <a aria-label="&lt;code&gt;resolve.cachePredicate&lt;/code&gt;" class="icon-link" href="#resolve-cachepredicate"></a>
       </h3>
-<p><code>function</code></p>
-<p>A function which decides whether a request should be cached or not. An object is passed to the function with <code>path</code> and <code>request</code> properties. Default:</p>
+<p><code>function: function (module) { return true; }</code></p>
+<p>A function which decides whether a request should be cached or not. An object is passed to the function with <code>path</code> and <code>request</code> properties. It must return a boolean.</p>
+<p><strong>webpack.config.js</strong></p>
 <pre><code class="lang-js">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
   <span class="token comment">//...</span>
   resolve<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-    cachePredicate<span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+    cachePredicate<span class="token punctuation">:</span> <span class="token punctuation">(</span>module<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token punctuation">{</span>
+      <span class="token comment">// additional logic</span>
+      <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
 </code></pre>
@@ -594,12 +621,13 @@
       </h2>
 <p><code>object</code></p>
 <p>This set of options is identical to the <code>resolve</code> property set above, but is used only to resolve webpack&apos;s <a href="/concepts/loaders">loader</a> packages. Default:</p>
+<p><strong>webpack.config.js</strong></p>
 <pre><code class="lang-js">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
   <span class="token comment">//...</span>
   resolveLoader<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-    modules<span class="token punctuation">:</span> <span class="token punctuation">[</span> <span class="token string">&apos;node_modules&apos;</span> <span class="token punctuation">]</span><span class="token punctuation">,</span>
-    extensions<span class="token punctuation">:</span> <span class="token punctuation">[</span> <span class="token string">&apos;.js&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;.json&apos;</span> <span class="token punctuation">]</span><span class="token punctuation">,</span>
-    mainFields<span class="token punctuation">:</span> <span class="token punctuation">[</span> <span class="token string">&apos;loader&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;main&apos;</span> <span class="token punctuation">]</span>
+    modules<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">&apos;node_modules&apos;</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    extensions<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">&apos;.js&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;.json&apos;</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    mainFields<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">&apos;loader&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;main&apos;</span><span class="token punctuation">]</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
 </code></pre>
@@ -608,16 +636,17 @@
         <span class="text"><code>resolveLoader.moduleExtensions</code></span>
         <a aria-label="&lt;code&gt;resolveLoader.moduleExtensions&lt;/code&gt;" class="icon-link" href="#resolveloader-moduleextensions"></a>
       </h3>
-<p><code>array</code></p>
+<p><code>[string]</code></p>
 <p>The extensions/suffixes that are used when resolving loaders. Since version two, we <a href="/migrate/3/#automatic-loader-module-name-extension-removed">strongly recommend</a> using the full name, e.g. <code>example-loader</code>, as much as possible for clarity. However, if you really wanted to exclude the <code>-loader</code> bit, i.e. just use <code>example</code>, you can use this option to do so:</p>
+<p><strong>webpack.config.js</strong></p>
 <pre><code class="lang-js">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
   <span class="token comment">//...</span>
   resolveLoader<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-    moduleExtensions<span class="token punctuation">:</span> <span class="token punctuation">[</span> <span class="token string">&apos;-loader&apos;</span> <span class="token punctuation">]</span>
+    moduleExtensions<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">&apos;-loader&apos;</span><span class="token punctuation">]</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
 </code></pre>
-</div><div><hr><h3>Contributors</h3><div class="contributors"><div class="contributors__list"><a class="contributor" href="https://github.com/SpaceK33z"><img alt="SpaceK33z" src="https://github.com/SpaceK33z.png?size=90"><span class="contributor__name"> SpaceK33z</span></a><a class="contributor" href="https://github.com/byzyk"><img alt="byzyk" src="https://github.com/byzyk.png?size=90"><span class="contributor__name"> byzyk</span></a><a class="contributor" href="https://github.com/jgravois"><img alt="jgravois" src="https://github.com/jgravois.png?size=90"><span class="contributor__name"> jgravois</span></a><a class="contributor" href="https://github.com/numb86"><img alt="numb86" src="https://github.com/numb86.png?size=90"><span class="contributor__name"> numb86</span></a><a class="contributor" href="https://github.com/pksjce"><img alt="pksjce" src="https://github.com/pksjce.png?size=90"><span class="contributor__name"> pksjce</span></a><a class="contributor" href="https://github.com/sebastiandeutsch"><img alt="sebastiandeutsch" src="https://github.com/sebastiandeutsch.png?size=90"><span class="contributor__name"> sebastiandeutsch</span></a><a class="contributor" href="https://github.com/skipjack"><img alt="skipjack" src="https://github.com/skipjack.png?size=90"><span class="contributor__name"> skipjack</span></a><a class="contributor" href="https://github.com/sokra"><img alt="sokra" src="https://github.com/sokra.png?size=90"><span class="contributor__name"> sokra</span></a><a class="contributor" href="https://github.com/tbroadley"><img alt="tbroadley" src="https://github.com/tbroadley.png?size=90"><span class="contributor__name"> tbroadley</span></a></div></div></div><div class="interactive" id="src/components/Gitter/Gitter.jsx" data-props="{}"><span class="gitter"><div class="gitter__button js-gitter-toggle-chat-button" style="margin-bottom:0"><i class="gitter__icon icon-gitter"></i></div></span></div></section></div><footer class="footer"><div class="container footer__inner"><section class="footer__left"><a href="/guides/getting-started/" class="footer__link">Get Started</a><a href="/organization/" class="footer__link">Organization</a><a href="/starter-kits/" class="footer__link">Starter Kits</a><a href="/comparison/" class="footer__link">Comparison</a></section><section class="footer__middle"><a href="/" class="footer__icon"><img src="/d19378a95ebe6b15d5ddea281138dcf4.svg" alt="webpack icon"></a></section><section class="footer__right"><a href="/glossary/" class="footer__link">Glossary</a><a href="/branding/" class="footer__link">Branding</a><a href="https://gitter.im/webpack/webpack" target="_blank" class="footer__link">Gitter</a><a href="https://github.com/webpack/webpack/releases" target="_blank" class="footer__link">Changelog</a><a href="/license" class="footer__link footer__license"><img alt="Creative Commons License" src="/7052446b5e67df4434f4031afd2f1497.svg"><img alt="Creative Commons License" src="/7ebb1b3901ce119694f65e04f6347ef5.svg"></a></section></div></footer><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-46921629-2', 'auto');ga('send', 'pageview');</script></div></body></html>
+</div><div><hr><h3>Contributors</h3><div class="contributors"><div class="contributors__list"><a class="contributor" href="https://github.com/EugeneHlushko"><img alt="EugeneHlushko" src="https://github.com/EugeneHlushko.png?size=90"><span class="contributor__name"> EugeneHlushko</span></a><a class="contributor" href="https://github.com/SpaceK33z"><img alt="SpaceK33z" src="https://github.com/SpaceK33z.png?size=90"><span class="contributor__name"> SpaceK33z</span></a><a class="contributor" href="https://github.com/byzyk"><img alt="byzyk" src="https://github.com/byzyk.png?size=90"><span class="contributor__name"> byzyk</span></a><a class="contributor" href="https://github.com/jgravois"><img alt="jgravois" src="https://github.com/jgravois.png?size=90"><span class="contributor__name"> jgravois</span></a><a class="contributor" href="https://github.com/numb86"><img alt="numb86" src="https://github.com/numb86.png?size=90"><span class="contributor__name"> numb86</span></a><a class="contributor" href="https://github.com/pksjce"><img alt="pksjce" src="https://github.com/pksjce.png?size=90"><span class="contributor__name"> pksjce</span></a><a class="contributor" href="https://github.com/sebastiandeutsch"><img alt="sebastiandeutsch" src="https://github.com/sebastiandeutsch.png?size=90"><span class="contributor__name"> sebastiandeutsch</span></a><a class="contributor" href="https://github.com/skipjack"><img alt="skipjack" src="https://github.com/skipjack.png?size=90"><span class="contributor__name"> skipjack</span></a><a class="contributor" href="https://github.com/sokra"><img alt="sokra" src="https://github.com/sokra.png?size=90"><span class="contributor__name"> sokra</span></a><a class="contributor" href="https://github.com/tbroadley"><img alt="tbroadley" src="https://github.com/tbroadley.png?size=90"><span class="contributor__name"> tbroadley</span></a></div></div></div><div class="interactive" id="src/components/Gitter/Gitter.jsx" data-props="{}"><span class="gitter"><div class="gitter__button js-gitter-toggle-chat-button" style="margin-bottom:0"><i class="gitter__icon icon-gitter"></i></div></span></div></section></div><footer class="footer"><div class="container footer__inner"><section class="footer__left"><a href="/guides/getting-started/" class="footer__link">Get Started</a><a href="/organization/" class="footer__link">Organization</a><a href="/starter-kits/" class="footer__link">Starter Kits</a><a href="/comparison/" class="footer__link">Comparison</a></section><section class="footer__middle"><a href="/" class="footer__icon"><img src="/d19378a95ebe6b15d5ddea281138dcf4.svg" alt="webpack icon"></a></section><section class="footer__right"><a href="/glossary/" class="footer__link">Glossary</a><a href="/branding/" class="footer__link">Branding</a><a href="https://gitter.im/webpack/webpack" target="_blank" class="footer__link">Gitter</a><a href="https://github.com/webpack/webpack/releases" target="_blank" class="footer__link">Changelog</a><a href="/license" class="footer__link footer__license"><img alt="Creative Commons License" src="/7052446b5e67df4434f4031afd2f1497.svg"><img alt="Creative Commons License" src="/7ebb1b3901ce119694f65e04f6347ef5.svg"></a></section></div></footer><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-46921629-2', 'auto');ga('send', 'pageview');</script></div></body></html>
 
     
       <script src="/2550abd30860f53e0ce0686fde932db7.js"></script>
