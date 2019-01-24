@@ -12,7 +12,7 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css" />
     
-      <link href="/bf3cf7794d465209e0f9.css" rel="stylesheet">
+      <link href="/d0c91b8b83fd43526b73.css" rel="stylesheet">
     
 
     <script src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
@@ -24,7 +24,7 @@
         <span class="text"><code>module.noParse</code></span>
         <a aria-label="&lt;code&gt;module.noParse&lt;/code&gt;" class="icon-link" href="#module-noparse"></a>
       </h2>
-<p><code>RegExp | [RegExp] | function | string | [string]</code></p>
+<p><code>RegExp</code> <code>[RegExp]</code> <code>function(resource)</code> <code>string</code> <code>[string]</code></p>
 <p>Prevent webpack from parsing any files matching the given regular expression(s). Ignored files <strong>should not</strong> have calls to <code>import</code>, <code>require</code>, <code>define</code> or any other importing mechanism. This can boost build performance when ignoring large libraries.</p>
 <p><strong>webpack.config.js</strong></p>
 <pre><code class="lang-javascript">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
@@ -288,19 +288,11 @@
         <span class="text"><code>Rule.use</code></span>
         <a aria-label="&lt;code&gt;Rule.use&lt;/code&gt;" class="icon-link" href="#rule-use"></a>
       </h2>
-<p><code>[UseEntry] | function</code></p>
+<p><code>[UseEntry]</code> <code>function(info)</code></p>
+<p><strong><code>[UseEntry]</code></strong></p>
 <p><code>Rule.use</code> can be an array of <a href="#useentry">UseEntry</a> which are applied to modules. Each entry specifies a loader to be used.</p>
 <p>Passing a string (i.e. <code>use: [ &apos;style-loader&apos; ]</code>) is a shortcut to the loader property (i.e. <code>use: [ { loader: &apos;style-loader &apos;} ]</code>).</p>
 <p>Loaders can be chained by passing multiple loaders, which will be applied from right to left (last to first configured).</p>
-<p><code>Rule.use</code> can be a function which receives the object argument describing the module being loaded, and must return an array of <code>UseEntry</code>.</p>
-<p>The object parameter has the following fields:</p>
-<ul>
-<li><code>compiler</code>: The current webpack compiler (can be undefined)</li>
-<li><code>issuer</code>: The path to the module that is importing the module being loaded</li>
-<li><code>realResource</code>: Always the path to the module being loaded</li>
-<li><code>resource</code>: The path to the module being loaded, it is usually equal to <code>realResource</code> except when the resource name is overwritten via <code>!=!</code> in request string</li>
-</ul>
-<p>The same shortcut as an array can be used for the return value (i.e. <code>use: [ &apos;style-loader&apos; ]</code>).</p>
 <p><strong>webpack.config.js</strong></p>
 <pre><code class="lang-javascript">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
   <span class="token comment">//...</span>
@@ -323,6 +315,40 @@
             <span class="token punctuation">}</span>
           <span class="token punctuation">}</span>
         <span class="token punctuation">]</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<p><strong><code>function(info)</code></strong></p>
+<p><code>Rule.use</code> can also be a function which receives the object argument describing the module being loaded, and must return an array of <code>UseEntry</code> items.</p>
+<p>The <code>info</code> object parameter has the following fields:</p>
+<ul>
+<li><code>compiler</code>: The current webpack compiler (can be undefined)</li>
+<li><code>issuer</code>: The path to the module that is importing the module being loaded</li>
+<li><code>realResource</code>: Always the path to the module being loaded</li>
+<li><code>resource</code>: The path to the module being loaded, it is usually equal to <code>realResource</code> except when the resource name is overwritten via <code>!=!</code> in request string</li>
+</ul>
+<p>The same shortcut as an array can be used for the return value (i.e. <code>use: [ &apos;style-loader&apos; ]</code>).</p>
+<p><strong>webpack.config.js</strong></p>
+<pre><code class="lang-javascript">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token comment">//...</span>
+  module<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    rules<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span>
+        use<span class="token punctuation">:</span> <span class="token punctuation">(</span>info<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token punctuation">(</span><span class="token punctuation">[</span>
+          <span class="token punctuation">{</span>
+            loader<span class="token punctuation">:</span> <span class="token string">&apos;custom-svg-loader&apos;</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          <span class="token punctuation">{</span>
+            loader<span class="token punctuation">:</span> <span class="token string">&apos;svgo-loader&apos;</span><span class="token punctuation">,</span>
+            options<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+              plugins<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+                cleanupIDs<span class="token punctuation">:</span> <span class="token punctuation">{</span> prefix<span class="token punctuation">:</span> <span class="token function">basename</span><span class="token punctuation">(</span>info<span class="token punctuation">.</span>resource<span class="token punctuation">)</span> <span class="token punctuation">}</span>
+              <span class="token punctuation">}</span><span class="token punctuation">]</span>
+            <span class="token punctuation">}</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">]</span><span class="token punctuation">)</span>
       <span class="token punctuation">}</span>
     <span class="token punctuation">]</span>
   <span class="token punctuation">}</span>
@@ -369,10 +395,13 @@
         <span class="text"><code>UseEntry</code></span>
         <a aria-label="&lt;code&gt;UseEntry&lt;/code&gt;" class="icon-link" href="#useentry"></a>
       </h2>
-<p><code>object</code></p>
+<p><code>object</code> <code>function(info)</code></p>
+<p><strong><code>object</code></strong></p>
 <p>It must have a <code>loader</code> property being a string. It is resolved relative to the configuration <a href="/configuration/entry-context#context"><code>context</code></a> with the loader resolving options (<a href="/configuration/resolve#resolveloader">resolveLoader</a>).</p>
 <p>It can have an <code>options</code> property being a string or object. This value is passed to the loader, which should interpret it as loader options.</p>
 <p>For compatibility a <code>query</code> property is also possible, which is an alias for the <code>options</code> property. Use the <code>options</code> property instead.</p>
+<p>Note that webpack needs to generate a unique module identifier from the resource and all loaders including options. It tries to do this with a <code>JSON.stringify</code> of the options object. This is fine in 99.9% of cases, but may be not unique if you apply the same loaders with different options to the resource and the options have some stringified values.</p>
+<p>It also breaks if the options object cannot be stringified (i.e. circular JSON). Because of this you can have a <code>ident</code> property in the options object which is used as unique identifier.</p>
 <p><strong>webpack.config.js</strong></p>
 <pre><code class="lang-javascript">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
   <span class="token comment">//...</span>
@@ -388,8 +417,38 @@
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
 </code></pre>
-<p>Note that webpack needs to generate a unique module identifier from the resource and all loaders including options. It tries to do this with a <code>JSON.stringify</code> of the options object. This is fine in 99.9% of cases, but may be not unique if you apply the same loaders with different options to the resource and the options have some stringified values.</p>
-<p>It also breaks if the options object cannot be stringified (i.e. circular JSON). Because of this you can have a <code>ident</code> property in the options object which is used as unique identifier.</p>
+<p><strong><code>function(info)</code></strong></p>
+<p>A <code>UseEntry</code> can also be a function which receives the object argument describing the module being loaded, and must return an options object. This can be used to vary the loader options on a per-module basis.</p>
+<p>The <code>info</code> object parameter has the following fields:</p>
+<ul>
+<li><code>compiler</code>: The current webpack compiler (can be undefined)</li>
+<li><code>issuer</code>: The path to the module that is importing the module being loaded</li>
+<li><code>realResource</code>: Always the path to the module being loaded</li>
+<li><code>resource</code>: The path to the module being loaded, it is usually equal to <code>realResource</code> except when the resource name is overwritten via <code>!=!</code> in request string</li>
+</ul>
+<p><strong>webpack.config.js</strong></p>
+<pre><code class="lang-javascript">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token comment">//...</span>
+  module<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    rules<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span>
+        loader<span class="token punctuation">:</span> <span class="token string">&apos;file-loader&apos;</span><span class="token punctuation">,</span>
+        options<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+          outputPath<span class="token punctuation">:</span> <span class="token string">&apos;svgs&apos;</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">(</span>info<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
+        loader<span class="token punctuation">:</span> <span class="token string">&apos;svgo-loader&apos;</span><span class="token punctuation">,</span>
+        options<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+          plugins<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+            cleanupIDs<span class="token punctuation">:</span> <span class="token punctuation">{</span> prefix<span class="token punctuation">:</span> <span class="token function">basename</span><span class="token punctuation">(</span>info<span class="token punctuation">.</span>resource<span class="token punctuation">)</span> <span class="token punctuation">}</span>
+          <span class="token punctuation">}</span><span class="token punctuation">]</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">]</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
 <h2 class="header">
         <a class="anchor" aria-hidden="true" href="#module-contexts" id="module-contexts"></a>
         <span class="text">Module Contexts</span>
