@@ -12,7 +12,7 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css" />
     
-      <link href="/05656b34515a3467d4ff.css" rel="stylesheet">
+      <link href="/ef8961ffd4a6fa1f4cc7.css" rel="stylesheet">
     
 
     <script src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
@@ -48,11 +48,11 @@
         options<span class="token punctuation">:</span> <span class="token punctuation">{</span>
           <span class="token comment">// eslint options (if necessary)</span>
         <span class="token punctuation">}</span>
-      <span class="token punctuation">}</span><span class="token punctuation">,</span>
-    <span class="token punctuation">]</span><span class="token punctuation">,</span>
-  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+  <span class="token punctuation">}</span>
   <span class="token comment">// ...</span>
-<span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
 </code></pre>
 <p>When using with transpiling loaders (like <code>babel-loader</code>), make sure they are in correct order
 (bottom to top). Otherwise files will be checked after being processed by <code>babel-loader</code></p>
@@ -63,15 +63,12 @@
       <span class="token punctuation">{</span>
         test<span class="token punctuation">:</span> <span class="token regex">/\.js$/</span><span class="token punctuation">,</span>
         exclude<span class="token punctuation">:</span> <span class="token regex">/node_modules/</span><span class="token punctuation">,</span>
-        use<span class="token punctuation">:</span> <span class="token punctuation">[</span>
-          <span class="token string">&quot;babel-loader&quot;</span><span class="token punctuation">,</span>
-          <span class="token string">&quot;eslint-loader&quot;</span><span class="token punctuation">,</span>
-        <span class="token punctuation">]</span><span class="token punctuation">,</span>
-      <span class="token punctuation">}</span><span class="token punctuation">,</span>
-    <span class="token punctuation">]</span><span class="token punctuation">,</span>
-  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        use<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">&quot;babel-loader&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;eslint-loader&quot;</span><span class="token punctuation">]</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+  <span class="token punctuation">}</span>
   <span class="token comment">// ...</span>
-<span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
 </code></pre>
 <p>To be safe, you can use <code>enforce: &quot;pre&quot;</code> section to check source files, not modified
 by other loaders (like <code>babel-loader</code>)</p>
@@ -83,17 +80,17 @@ by other loaders (like <code>babel-loader</code>)</p>
         enforce<span class="token punctuation">:</span> <span class="token string">&quot;pre&quot;</span><span class="token punctuation">,</span>
         test<span class="token punctuation">:</span> <span class="token regex">/\.js$/</span><span class="token punctuation">,</span>
         exclude<span class="token punctuation">:</span> <span class="token regex">/node_modules/</span><span class="token punctuation">,</span>
-        loader<span class="token punctuation">:</span> <span class="token string">&quot;eslint-loader&quot;</span><span class="token punctuation">,</span>
+        loader<span class="token punctuation">:</span> <span class="token string">&quot;eslint-loader&quot;</span>
       <span class="token punctuation">}</span><span class="token punctuation">,</span>
       <span class="token punctuation">{</span>
         test<span class="token punctuation">:</span> <span class="token regex">/\.js$/</span><span class="token punctuation">,</span>
         exclude<span class="token punctuation">:</span> <span class="token regex">/node_modules/</span><span class="token punctuation">,</span>
-        loader<span class="token punctuation">:</span> <span class="token string">&quot;babel-loader&quot;</span><span class="token punctuation">,</span>
-      <span class="token punctuation">}</span><span class="token punctuation">,</span>
-    <span class="token punctuation">]</span><span class="token punctuation">,</span>
-  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        loader<span class="token punctuation">:</span> <span class="token string">&quot;babel-loader&quot;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+  <span class="token punctuation">}</span>
   <span class="token comment">// ...</span>
-<span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
 </code></pre>
 <h3 class="header">
         <a class="anchor" aria-hidden="true" href="#options" id="options"></a>
@@ -155,20 +152,20 @@ You can use official eslint formatters.</p>
 
             <span class="token comment">// you should return a string</span>
             <span class="token comment">// DO NOT USE console.*() directly !</span>
-            <span class="token keyword">return</span> <span class="token string">&quot;OUTPUT&quot;</span>
+            <span class="token keyword">return</span> <span class="token string">&quot;OUTPUT&quot;</span><span class="token punctuation">;</span>
           <span class="token punctuation">}</span>
         <span class="token punctuation">}</span>
-      <span class="token punctuation">}</span><span class="token punctuation">,</span>
-    <span class="token punctuation">]</span><span class="token punctuation">,</span>
-  <span class="token punctuation">}</span><span class="token punctuation">,</span>
-<span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
 </code></pre>
 <h4 class="header">
         <a class="anchor" aria-hidden="true" href="#eslintpath-default-eslint-" id="eslintpath-default-eslint-"></a>
         <span class="text"><code>eslintPath</code> (default: &quot;eslint&quot;)</span>
         <a aria-label="&lt;code&gt;eslintPath&lt;/code&gt; (default: &quot;eslint&quot;)" class="icon-link" href="#eslintpath-default-eslint-"></a>
       </h4>
-<p>Path to <code>eslint</code> instance that will be used for linting.<br>If the <code>eslintPath</code> is a folder like a official eslint, or specify a <code>formatter</code> option. now you dont have to install <code>eslint</code> . </p>
+<p>Path to <code>eslint</code> instance that will be used for linting.<br>If the <code>eslintPath</code> is a folder like a official eslint, or specify a <code>formatter</code> option. now you dont have to install <code>eslint</code> .</p>
 <pre><code class="lang-js">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
   entry<span class="token punctuation">:</span> <span class="token string">&quot;...&quot;</span><span class="token punctuation">,</span>
   module<span class="token punctuation">:</span> <span class="token punctuation">{</span>
@@ -178,12 +175,12 @@ You can use official eslint formatters.</p>
         exclude<span class="token punctuation">:</span> <span class="token regex">/node_modules/</span><span class="token punctuation">,</span>
         loader<span class="token punctuation">:</span> <span class="token string">&quot;eslint-loader&quot;</span><span class="token punctuation">,</span>
         options<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-          eslintPath<span class="token punctuation">:</span> path<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">&quot;reusable-eslint&quot;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+          eslintPath<span class="token punctuation">:</span> path<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">&quot;reusable-eslint&quot;</span><span class="token punctuation">)</span>
         <span class="token punctuation">}</span>
-      <span class="token punctuation">}</span><span class="token punctuation">,</span>
-    <span class="token punctuation">]</span><span class="token punctuation">,</span>
-  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
   <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
 </code></pre>
 <h4 class="header">
         <a class="anchor" aria-hidden="true" href="#errors-and-warning" id="errors-and-warning"></a>
@@ -208,12 +205,12 @@ You can still force this behavior by using <code>emitError</code> <strong>or</st
         exclude<span class="token punctuation">:</span> <span class="token regex">/node_modules/</span><span class="token punctuation">,</span>
         loader<span class="token punctuation">:</span> <span class="token string">&quot;eslint-loader&quot;</span><span class="token punctuation">,</span>
         options<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-          emitError<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+          emitError<span class="token punctuation">:</span> <span class="token boolean">true</span>
         <span class="token punctuation">}</span>
-      <span class="token punctuation">}</span><span class="token punctuation">,</span>
-    <span class="token punctuation">]</span><span class="token punctuation">,</span>
-  <span class="token punctuation">}</span><span class="token punctuation">,</span>
-<span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
 </code></pre>
 <h5 class="header">
         <a class="anchor" aria-hidden="true" href="#emitwarning-default-false-" id="emitwarning-default-false-"></a>
@@ -236,12 +233,12 @@ You can still force this behavior by using <code>emitError</code> <strong>or</st
         exclude<span class="token punctuation">:</span> <span class="token regex">/node_modules/</span><span class="token punctuation">,</span>
         loader<span class="token punctuation">:</span> <span class="token string">&quot;eslint-loader&quot;</span><span class="token punctuation">,</span>
         options<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-          quiet<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+          quiet<span class="token punctuation">:</span> <span class="token boolean">true</span>
         <span class="token punctuation">}</span>
-      <span class="token punctuation">}</span><span class="token punctuation">,</span>
-    <span class="token punctuation">]</span><span class="token punctuation">,</span>
-  <span class="token punctuation">}</span><span class="token punctuation">,</span>
-<span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
 </code></pre>
 <h5 class="header">
         <a class="anchor" aria-hidden="true" href="#failonwarning-default-false-" id="failonwarning-default-false-"></a>
@@ -258,12 +255,12 @@ You can still force this behavior by using <code>emitError</code> <strong>or</st
         exclude<span class="token punctuation">:</span> <span class="token regex">/node_modules/</span><span class="token punctuation">,</span>
         loader<span class="token punctuation">:</span> <span class="token string">&quot;eslint-loader&quot;</span><span class="token punctuation">,</span>
         options<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-          failOnWarning<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+          failOnWarning<span class="token punctuation">:</span> <span class="token boolean">true</span>
         <span class="token punctuation">}</span>
-      <span class="token punctuation">}</span><span class="token punctuation">,</span>
-    <span class="token punctuation">]</span><span class="token punctuation">,</span>
-  <span class="token punctuation">}</span><span class="token punctuation">,</span>
-<span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
 </code></pre>
 <h5 class="header">
         <a class="anchor" aria-hidden="true" href="#failonerror-default-false-" id="failonerror-default-false-"></a>
@@ -280,12 +277,12 @@ You can still force this behavior by using <code>emitError</code> <strong>or</st
         exclude<span class="token punctuation">:</span> <span class="token regex">/node_modules/</span><span class="token punctuation">,</span>
         loader<span class="token punctuation">:</span> <span class="token string">&quot;eslint-loader&quot;</span><span class="token punctuation">,</span>
         options<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-          failOnError<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+          failOnError<span class="token punctuation">:</span> <span class="token boolean">true</span>
         <span class="token punctuation">}</span>
-      <span class="token punctuation">}</span><span class="token punctuation">,</span>
-    <span class="token punctuation">]</span><span class="token punctuation">,</span>
-  <span class="token punctuation">}</span><span class="token punctuation">,</span>
-<span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
 </code></pre>
 <h5 class="header">
         <a class="anchor" aria-hidden="true" href="#outputreport-default-false-" id="outputreport-default-false-"></a>
@@ -305,14 +302,14 @@ You can pass in a different formatter for the output file, if none is passed in 
         loader<span class="token punctuation">:</span> <span class="token string">&quot;eslint-loader&quot;</span><span class="token punctuation">,</span>
         options<span class="token punctuation">:</span> <span class="token punctuation">{</span>
           outputReport<span class="token punctuation">:</span> <span class="token punctuation">{</span>
-            filePath<span class="token punctuation">:</span> <span class="token string">&apos;checkstyle.xml&apos;</span><span class="token punctuation">,</span>
-            formatter<span class="token punctuation">:</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&apos;eslint/lib/formatters/checkstyle&apos;</span><span class="token punctuation">)</span>
+            filePath<span class="token punctuation">:</span> <span class="token string">&quot;checkstyle.xml&quot;</span><span class="token punctuation">,</span>
+            formatter<span class="token punctuation">:</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;eslint/lib/formatters/checkstyle&quot;</span><span class="token punctuation">)</span>
           <span class="token punctuation">}</span>
         <span class="token punctuation">}</span>
-      <span class="token punctuation">}</span><span class="token punctuation">,</span>
-    <span class="token punctuation">]</span><span class="token punctuation">,</span>
-  <span class="token punctuation">}</span><span class="token punctuation">,</span>
-<span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
 </code></pre>
 <h2 class="header">
         <a class="anchor" aria-hidden="true" href="#gotchas" id="gotchas"></a>

@@ -12,7 +12,7 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css" />
     
-      <link href="/05656b34515a3467d4ff.css" rel="stylesheet">
+      <link href="/ef8961ffd4a6fa1f4cc7.css" rel="stylesheet">
     
 
     <script src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
@@ -235,8 +235,11 @@ bundle.js  544 kB       0  <span class="token punctuation">[</span>emitted<span 
 
   document.body.appendChild(component());
 </code></pre>
-<blockquote class="tip"><div class="tip-content"> Note that we aren&apos;t binding the <code>import</code> to a variable. This is because polyfills simply run on their own, prior to the rest of the code base, allowing us to then assume certain native functionality exists. </div></blockquote><p>Now while this is one approach, <strong>including polyfills in the main bundle is not recommended</strong> because this penalizes modern browsers users by making them download a bigger file with unneeded scripts.</p>
-<p>Let&apos;s move our <code>import</code> to a new file and add the <a href="https://github.com/github/fetch"><code>whatwg-fetch</code></a> polyfill:</p>
+<blockquote class="tip"><div class="tip-content"> Note that we aren&apos;t binding the <code>import</code> to a variable. This is because polyfills simply run on their own, prior to the rest of the code base, allowing us to then assume certain native functionality exists. </div></blockquote><p>Note that this approach prioritizes correctness over bundle size. To be safe and robust, polyfills/shims must run <strong>before all other code</strong>, and thus either need to load synchronously, or, all app code needs to load after all polyfills/shims load.
+There are many misconceptions in the community, as well, that modern browsers &quot;don&apos;t need&quot; polyfills, or that polyfills/shims merely serve to add missing features - in fact, they often <em>repair broken implementations</em>, even in the most modern of browsers.
+The best practice thus remains to unconditionally and synchronously load all polyfills/shims, despite the bundle size cost this incurs.</p>
+<p>If you feel that you have mitigated these concerns and wish to incur the risk of brokenness, here&apos;s one way you might do it:
+Let&apos;s move our <code>import</code> to a new file and add the <a href="https://github.com/github/fetch"><code>whatwg-fetch</code></a> polyfill:</p>
 <pre><code class="lang-bash">npm <span class="token function">install</span> --save whatwg-fetch
 </code></pre>
 <p><strong>src/index.js</strong></p>
