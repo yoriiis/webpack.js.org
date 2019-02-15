@@ -67,9 +67,6 @@
         <loc>https://webpack.js.org/writers-guide/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/api/cli/index.html</loc>
-    </url>
-    <url>
         <loc>https://webpack.js.org/api/compilation-hooks/index.html</loc>
     </url>
     <url>
@@ -77,6 +74,9 @@
     </url>
     <url>
         <loc>https://webpack.js.org/api/hot-module-replacement/index.html</loc>
+    </url>
+    <url>
+        <loc>https://webpack.js.org/api/cli/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/api/loaders/index.html</loc>
@@ -397,9 +397,6 @@
         <loc>https://webpack.js.org/loaders/null-loader/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/loaders/polymer-webpack-loader/index.html</loc>
-    </url>
-    <url>
         <loc>https://webpack.js.org/loaders/postcss-loader/index.html</loc>
     </url>
     <url>
@@ -427,10 +424,10 @@
         <loc>https://webpack.js.org/loaders/svg-inline-loader/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/loaders/transform-loader/index.html</loc>
+        <loc>https://webpack.js.org/loaders/thread-loader/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/loaders/thread-loader/index.html</loc>
+        <loc>https://webpack.js.org/loaders/transform-loader/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/loaders/url-loader/index.html</loc>
@@ -574,10 +571,13 @@
         <loc>https://webpack.js.org/pluginsapi/template/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/api/plugins/compilation/index.html</loc>
+        <loc>https://webpack.js.org/loaders/polymer-webpack-loader/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/api/plugins/compiler/index.html</loc>
+    </url>
+    <url>
+        <loc>https://webpack.js.org/api/plugins/compilation/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/api/plugins/module-factories/index.html</loc>
