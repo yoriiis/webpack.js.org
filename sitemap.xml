@@ -184,6 +184,9 @@
         <loc>https://webpack.js.org/configuration/plugins/index.html</loc>
     </url>
     <url>
+        <loc>https://webpack.js.org/configuration/resolve/index.html</loc>
+    </url>
+    <url>
         <loc>https://webpack.js.org/configuration/stats/index.html</loc>
     </url>
     <url>
@@ -569,9 +572,6 @@
     </url>
     <url>
         <loc>https://webpack.js.org/pluginsapi/template/index.html</loc>
-    </url>
-    <url>
-        <loc>https://webpack.js.org/configuration/resolve/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/api/plugins/compilation/index.html</loc>
