@@ -136,10 +136,10 @@
         <loc>https://webpack.js.org/concepts/output/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/concepts/targets/index.html</loc>
+        <loc>https://webpack.js.org/concepts/plugins/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/concepts/plugins/index.html</loc>
+        <loc>https://webpack.js.org/concepts/targets/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/concepts/why-webpack/index.html</loc>
