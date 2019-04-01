@@ -28,9 +28,6 @@
         <loc>https://webpack.js.org/get-started/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/glossary/index.html</loc>
-    </url>
-    <url>
         <loc>https://webpack.js.org/guides/index.html</loc>
     </url>
     <url>
@@ -53,6 +50,9 @@
     </url>
     <url>
         <loc>https://webpack.js.org/pluginsapi/index.html</loc>
+    </url>
+    <url>
+        <loc>https://webpack.js.org/glossary/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/starter-kits/index.html</loc>
@@ -331,9 +331,6 @@
         <loc>https://webpack.js.org/loaders/babel-loader/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/loaders/bundle-loader/index.html</loc>
-    </url>
-    <url>
         <loc>https://webpack.js.org/loaders/cache-loader/index.html</loc>
     </url>
     <url>
@@ -344,6 +341,9 @@
     </url>
     <url>
         <loc>https://webpack.js.org/loaders/config-loader/index.html</loc>
+    </url>
+    <url>
+        <loc>https://webpack.js.org/loaders/bundle-loader/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/loaders/coverjs-loader/index.html</loc>
@@ -419,9 +419,6 @@
     </url>
     <url>
         <loc>https://webpack.js.org/loaders/restyle-loader/index.html</loc>
-    </url>
-    <url>
-        <loc>https://webpack.js.org/loaders/sass-loader/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/loaders/script-loader/index.html</loc>
@@ -581,6 +578,9 @@
     </url>
     <url>
         <loc>https://webpack.js.org/pluginsapi/template/index.html</loc>
+    </url>
+    <url>
+        <loc>https://webpack.js.org/loaders/sass-loader/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/api/plugins/compilation/index.html</loc>
