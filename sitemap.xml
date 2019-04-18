@@ -436,6 +436,9 @@
         <loc>https://webpack.js.org/loaders/svg-inline-loader/index.html</loc>
     </url>
     <url>
+        <loc>https://webpack.js.org/loaders/thread-loader/index.html</loc>
+    </url>
+    <url>
         <loc>https://webpack.js.org/loaders/transform-loader/index.html</loc>
     </url>
     <url>
@@ -455,9 +458,6 @@
     </url>
     <url>
         <loc>https://webpack.js.org/migrate/4/index.html</loc>
-    </url>
-    <url>
-        <loc>https://webpack.js.org/loaders/thread-loader/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/plugins/automatic-prefetch-plugin/index.html</loc>
