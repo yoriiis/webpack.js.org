@@ -1,1 +1,1 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[129],{423:function(n,o,i){"use strict";i.r(o),o.default="<p>This section contains information about migrating from older versions of webpack to newer ones.</p>\n"}}]);
+(window.webpackJsonp=window.webpackJsonp||[]).push([[129],{425:function(n,o,i){"use strict";i.r(o),o.default="<p>This section contains information about migrating from older versions of webpack to newer ones.</p>\n"}}]);
