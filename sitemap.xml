@@ -352,6 +352,9 @@
         <loc>https://webpack.js.org/loaders/eslint-loader/index.html</loc>
     </url>
     <url>
+        <loc>https://webpack.js.org/loaders/exports-loader/index.html</loc>
+    </url>
+    <url>
         <loc>https://webpack.js.org/loaders/expose-loader/index.html</loc>
     </url>
     <url>
@@ -577,19 +580,16 @@
         <loc>https://webpack.js.org/pluginsapi/template/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/loaders/exports-loader/index.html</loc>
-    </url>
-    <url>
         <loc>https://webpack.js.org/api/plugins/compilation/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/api/plugins/compiler/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/api/plugins/parser/index.html</loc>
+        <loc>https://webpack.js.org/api/plugins/module-factories/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/api/plugins/module-factories/index.html</loc>
+        <loc>https://webpack.js.org/api/plugins/parser/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/api/plugins/resolver/index.html</loc>
