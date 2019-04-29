@@ -1,4 +1,4 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[7],{285:function(t,e,r){
+(window.webpackJsonp=window.webpackJsonp||[]).push([[7],{284:function(t,e,r){
 /*!
  * Gitter Sidecar v1.4.2
  * https://sidecar.gitter.im/

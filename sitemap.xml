@@ -7,10 +7,10 @@
         <loc>https://webpack.js.org/api/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/branding/index.html</loc>
+        <loc>https://webpack.js.org/comparison/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/comparison/index.html</loc>
+        <loc>https://webpack.js.org/branding/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/concepts/index.html</loc>
@@ -25,10 +25,10 @@
         <loc>https://webpack.js.org/development/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/get-started/index.html</loc>
+        <loc>https://webpack.js.org/glossary/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/glossary/index.html</loc>
+        <loc>https://webpack.js.org/get-started/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/guides/index.html</loc>
@@ -37,10 +37,10 @@
         <loc>https://webpack.js.org/license/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/loaders/index.html</loc>
+        <loc>https://webpack.js.org/migrate/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/migrate/index.html</loc>
+        <loc>https://webpack.js.org/loaders/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/migrating/index.html</loc>
@@ -67,6 +67,9 @@
         <loc>https://webpack.js.org/writers-guide/index.html</loc>
     </url>
     <url>
+        <loc>https://webpack.js.org/api/cli/index.html</loc>
+    </url>
+    <url>
         <loc>https://webpack.js.org/api/compilation-hooks/index.html</loc>
     </url>
     <url>
@@ -74,9 +77,6 @@
     </url>
     <url>
         <loc>https://webpack.js.org/api/hot-module-replacement/index.html</loc>
-    </url>
-    <url>
-        <loc>https://webpack.js.org/api/cli/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/api/loaders/index.html</loc>
@@ -328,6 +328,12 @@
         <loc>https://webpack.js.org/guides/why-webpack/index.html</loc>
     </url>
     <url>
+        <loc>https://webpack.js.org/migrate/3/index.html</loc>
+    </url>
+    <url>
+        <loc>https://webpack.js.org/migrate/4/index.html</loc>
+    </url>
+    <url>
         <loc>https://webpack.js.org/loaders/babel-loader/index.html</loc>
     </url>
     <url>
@@ -451,12 +457,6 @@
         <loc>https://webpack.js.org/loaders/yaml-frontmatter-loader/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/migrate/3/index.html</loc>
-    </url>
-    <url>
-        <loc>https://webpack.js.org/migrate/4/index.html</loc>
-    </url>
-    <url>
         <loc>https://webpack.js.org/plugins/automatic-prefetch-plugin/index.html</loc>
     </url>
     <url>
@@ -508,13 +508,13 @@
         <loc>https://webpack.js.org/plugins/html-webpack-plugin/index.html</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/plugins/i18n-webpack-plugin/index.html</loc>
-    </url>
-    <url>
         <loc>https://webpack.js.org/plugins/ignore-plugin/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/plugins/internal-plugins/index.html</loc>
+    </url>
+    <url>
+        <loc>https://webpack.js.org/plugins/i18n-webpack-plugin/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/plugins/limit-chunk-count-plugin/index.html</loc>
