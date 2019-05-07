@@ -283,6 +283,9 @@
         <loc>https://webpack.js.org/guides/environment-variables/index.html</loc>
     </url>
     <url>
+        <loc>https://webpack.js.org/guides/getting-started/index.html</loc>
+    </url>
+    <url>
         <loc>https://webpack.js.org/guides/hot-module-replacement/index.html</loc>
     </url>
     <url>
@@ -323,9 +326,6 @@
     </url>
     <url>
         <loc>https://webpack.js.org/guides/why-webpack/index.html</loc>
-    </url>
-    <url>
-        <loc>https://webpack.js.org/guides/getting-started/index.html</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/loaders/babel-loader/index.html</loc>
