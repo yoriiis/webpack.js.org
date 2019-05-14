@@ -4,13 +4,13 @@
         <loc>https://webpack.js.org/</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/appcache/manifest</loc>
-    </url>
-    <url>
         <loc>https://webpack.js.org/app-shell</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/api</loc>
+    </url>
+    <url>
+        <loc>https://webpack.js.org/appcache/manifest</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/branding</loc>
@@ -319,9 +319,6 @@
         <loc>https://webpack.js.org/guides/public-path</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/guides/scaffolding</loc>
-    </url>
-    <url>
         <loc>https://webpack.js.org/guides/shimming</loc>
     </url>
     <url>
@@ -329,6 +326,9 @@
     </url>
     <url>
         <loc>https://webpack.js.org/guides/typescript</loc>
+    </url>
+    <url>
+        <loc>https://webpack.js.org/guides/scaffolding</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/guides/why-webpack</loc>
