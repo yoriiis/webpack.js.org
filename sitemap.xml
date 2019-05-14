@@ -319,6 +319,9 @@
         <loc>https://webpack.js.org/guides/public-path</loc>
     </url>
     <url>
+        <loc>https://webpack.js.org/guides/scaffolding</loc>
+    </url>
+    <url>
         <loc>https://webpack.js.org/guides/shimming</loc>
     </url>
     <url>
@@ -326,9 +329,6 @@
     </url>
     <url>
         <loc>https://webpack.js.org/guides/typescript</loc>
-    </url>
-    <url>
-        <loc>https://webpack.js.org/guides/scaffolding</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/guides/why-webpack</loc>
