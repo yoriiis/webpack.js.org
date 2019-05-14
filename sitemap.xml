@@ -4,13 +4,13 @@
         <loc>https://webpack.js.org/</loc>
     </url>
     <url>
+        <loc>https://webpack.js.org/appcache/manifest</loc>
+    </url>
+    <url>
         <loc>https://webpack.js.org/app-shell</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/api</loc>
-    </url>
-    <url>
-        <loc>https://webpack.js.org/appcache/manifest</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/branding</loc>
@@ -55,10 +55,10 @@
         <loc>https://webpack.js.org/organization</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/pluginsapi</loc>
+        <loc>https://webpack.js.org/plugins</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/plugins</loc>
+        <loc>https://webpack.js.org/pluginsapi</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/starter-kits</loc>
@@ -463,12 +463,6 @@
         <loc>https://webpack.js.org/migrate/4</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/pluginsapi/compiler</loc>
-    </url>
-    <url>
-        <loc>https://webpack.js.org/pluginsapi/template</loc>
-    </url>
-    <url>
         <loc>https://webpack.js.org/plugins/automatic-prefetch-plugin</loc>
     </url>
     <url>
@@ -584,6 +578,12 @@
     </url>
     <url>
         <loc>https://webpack.js.org/plugins/zopfli-webpack-plugin</loc>
+    </url>
+    <url>
+        <loc>https://webpack.js.org/pluginsapi/compiler</loc>
+    </url>
+    <url>
+        <loc>https://webpack.js.org/pluginsapi/template</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/api/plugins/compilation</loc>
