@@ -4,10 +4,10 @@
         <loc>https://webpack.js.org/</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/app-shell</loc>
+        <loc>https://webpack.js.org/api</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/api</loc>
+        <loc>https://webpack.js.org/app-shell</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/appcache/manifest</loc>
