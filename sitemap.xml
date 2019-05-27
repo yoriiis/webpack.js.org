@@ -4,13 +4,13 @@
         <loc>https://webpack.js.org/</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/appcache/manifest</loc>
-    </url>
-    <url>
         <loc>https://webpack.js.org/api</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/app-shell</loc>
+    </url>
+    <url>
+        <loc>https://webpack.js.org/appcache/manifest</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/branding</loc>
@@ -151,9 +151,6 @@
         <loc>https://webpack.js.org/concepts/why-webpack</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/configuration/configuration-languages</loc>
-    </url>
-    <url>
         <loc>https://webpack.js.org/configuration/configuration-types</loc>
     </url>
     <url>
@@ -167,6 +164,9 @@
     </url>
     <url>
         <loc>https://webpack.js.org/configuration/externals</loc>
+    </url>
+    <url>
+        <loc>https://webpack.js.org/configuration/configuration-languages</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/configuration/mode</loc>
@@ -232,10 +232,10 @@
         <loc>https://webpack.js.org/development/how-to-write-a-plugin</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/development/plugin-patterns</loc>
+        <loc>https://webpack.js.org/development/release-process</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/development/release-process</loc>
+        <loc>https://webpack.js.org/development/plugin-patterns</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/get-started/install-webpack</loc>
@@ -457,10 +457,10 @@
         <loc>https://webpack.js.org/loaders/yaml-frontmatter-loader</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/migrate/3</loc>
+        <loc>https://webpack.js.org/migrate/4</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/migrate/4</loc>
+        <loc>https://webpack.js.org/migrate/3</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/plugins/automatic-prefetch-plugin</loc>
@@ -478,9 +478,6 @@
         <loc>https://webpack.js.org/plugins/commons-chunk-plugin</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/plugins/component-webpack-plugin</loc>
-    </url>
-    <url>
         <loc>https://webpack.js.org/plugins/compression-webpack-plugin</loc>
     </url>
     <url>
@@ -491,6 +488,9 @@
     </url>
     <url>
         <loc>https://webpack.js.org/plugins/define-plugin</loc>
+    </url>
+    <url>
+        <loc>https://webpack.js.org/plugins/component-webpack-plugin</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/plugins/dll-plugin</loc>
@@ -529,13 +529,13 @@
         <loc>https://webpack.js.org/plugins/loader-options-plugin</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/plugins/min-chunk-size-plugin</loc>
-    </url>
-    <url>
         <loc>https://webpack.js.org/plugins/mini-css-extract-plugin</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/plugins/module-concatenation-plugin</loc>
+    </url>
+    <url>
+        <loc>https://webpack.js.org/plugins/min-chunk-size-plugin</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/plugins/no-emit-on-errors-plugin</loc>
