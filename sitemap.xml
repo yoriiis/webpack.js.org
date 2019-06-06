@@ -13,6 +13,9 @@
         <loc>https://webpack.js.org/appcache/manifest</loc>
     </url>
     <url>
+        <loc>https://webpack.js.org/branding</loc>
+    </url>
+    <url>
         <loc>https://webpack.js.org/comparison</loc>
     </url>
     <url>
@@ -23,9 +26,6 @@
     </url>
     <url>
         <loc>https://webpack.js.org/contribute</loc>
-    </url>
-    <url>
-        <loc>https://webpack.js.org/branding</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/development</loc>
@@ -157,6 +157,9 @@
         <loc>https://webpack.js.org/configuration/configuration-types</loc>
     </url>
     <url>
+        <loc>https://webpack.js.org/configuration/dev-server</loc>
+    </url>
+    <url>
         <loc>https://webpack.js.org/configuration/devtool</loc>
     </url>
     <url>
@@ -164,9 +167,6 @@
     </url>
     <url>
         <loc>https://webpack.js.org/configuration/externals</loc>
-    </url>
-    <url>
-        <loc>https://webpack.js.org/configuration/dev-server</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/configuration/mode</loc>
@@ -307,10 +307,13 @@
         <loc>https://webpack.js.org/guides/output-management</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/guides/production-build</loc>
+        <loc>https://webpack.js.org/guides/production</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/guides/progressive-web-application</loc>
+    </url>
+    <url>
+        <loc>https://webpack.js.org/guides/production-build</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/guides/public-path</loc>
@@ -320,9 +323,6 @@
     </url>
     <url>
         <loc>https://webpack.js.org/guides/shimming</loc>
-    </url>
-    <url>
-        <loc>https://webpack.js.org/guides/production</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/guides/tree-shaking</loc>
@@ -370,13 +370,13 @@
         <loc>https://webpack.js.org/loaders/file-loader</loc>
     </url>
     <url>
+        <loc>https://webpack.js.org/loaders/gzip-loader</loc>
+    </url>
+    <url>
         <loc>https://webpack.js.org/loaders/html-loader</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/loaders/i18n-loader</loc>
-    </url>
-    <url>
-        <loc>https://webpack.js.org/loaders/gzip-loader</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/loaders/imports-loader</loc>
@@ -553,10 +553,10 @@
         <loc>https://webpack.js.org/plugins/progress-plugin</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/plugins/source-map-dev-tool-plugin</loc>
+        <loc>https://webpack.js.org/plugins/provide-plugin</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/plugins/provide-plugin</loc>
+        <loc>https://webpack.js.org/plugins/source-map-dev-tool-plugin</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/plugins/split-chunks-plugin</loc>
@@ -574,10 +574,10 @@
         <loc>https://webpack.js.org/plugins/watch-ignore-plugin</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/pluginsapi/compiler</loc>
+        <loc>https://webpack.js.org/plugins/zopfli-webpack-plugin</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/plugins/zopfli-webpack-plugin</loc>
+        <loc>https://webpack.js.org/pluginsapi/compiler</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/pluginsapi/template</loc>
