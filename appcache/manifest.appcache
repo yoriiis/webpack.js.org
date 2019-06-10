@@ -1,5 +1,5 @@
 CACHE MANIFEST
-#ver:2019-6-10 14:03:44
+#ver:2019-6-10 14:13:32
 #plugin:5.0.7
 
 CACHE:
@@ -14,7 +14,7 @@ CACHE:
 /1ebd0482aadade65f20ec178219fe012.woff2
 /314bbcd238d458622bbf32427346774f.woff
 /92e7246d53b5483113e2d66d4ac750b4.png
-/5fe9cfdc598e04cb7bbb.css
+/d6911aa487ce00fc7941.css
 /index.bundle.js
 /vendor.bundle.js
 /2.6a0d6c6d0c7babee29ef.chunk.js
@@ -190,7 +190,7 @@ CACHE:
 /app-shell/
 /
 /manifest.json
-/40fc4c85eca0a733b2c6.css
+/47607da24cb338aa6df6.css
 /57c717e75066b659cfe19dc2a643153c.svg
 /59b05b40eec28c794442.css
 /7052446b5e67df4434f4031afd2f1497.svg
