@@ -37,31 +37,31 @@
         <loc>https://webpack.js.org/license</loc>
     </url>
     <url>
+        <loc>https://webpack.js.org/loaders</loc>
+    </url>
+    <url>
         <loc>https://webpack.js.org/migrate</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/migrating</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/loaders</loc>
-    </url>
-    <url>
         <loc>https://webpack.js.org/organization</loc>
-    </url>
-    <url>
-        <loc>https://webpack.js.org/pluginsapi</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/plugins</loc>
     </url>
     <url>
+        <loc>https://webpack.js.org/pluginsapi</loc>
+    </url>
+    <url>
         <loc>https://webpack.js.org/printable</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/support</loc>
+        <loc>https://webpack.js.org/starter-kits</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/starter-kits</loc>
+        <loc>https://webpack.js.org/support</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/vote</loc>
@@ -148,9 +148,6 @@
         <loc>https://webpack.js.org/concepts/printable</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/concepts/targets</loc>
-    </url>
-    <url>
         <loc>https://webpack.js.org/concepts/why-webpack</loc>
     </url>
     <url>
@@ -170,6 +167,9 @@
     </url>
     <url>
         <loc>https://webpack.js.org/configuration/externals</loc>
+    </url>
+    <url>
+        <loc>https://webpack.js.org/concepts/targets</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/configuration/mode</loc>
@@ -220,10 +220,10 @@
         <loc>https://webpack.js.org/contribute/printable</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/contribute/release-process</loc>
+        <loc>https://webpack.js.org/contribute/writers-guide</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/contribute/writers-guide</loc>
+        <loc>https://webpack.js.org/contribute/release-process</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/contribute/writing-a-loader</loc>
@@ -265,13 +265,13 @@
         <loc>https://webpack.js.org/guides/caching</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/guides/code-splitting</loc>
-    </url>
-    <url>
         <loc>https://webpack.js.org/guides/code-splitting-async</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/guides/code-splitting-css</loc>
+    </url>
+    <url>
+        <loc>https://webpack.js.org/guides/code-splitting</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/guides/code-splitting-import</loc>
@@ -334,9 +334,6 @@
         <loc>https://webpack.js.org/guides/scaffolding</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/guides/shimming</loc>
-    </url>
-    <url>
         <loc>https://webpack.js.org/guides/tree-shaking</loc>
     </url>
     <url>
@@ -346,13 +343,7 @@
         <loc>https://webpack.js.org/guides/why-webpack</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/migrate/3</loc>
-    </url>
-    <url>
-        <loc>https://webpack.js.org/migrate/4</loc>
-    </url>
-    <url>
-        <loc>https://webpack.js.org/migrate/printable</loc>
+        <loc>https://webpack.js.org/guides/shimming</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/loaders/babel-loader</loc>
@@ -481,10 +472,13 @@
         <loc>https://webpack.js.org/loaders/yaml-frontmatter-loader</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/pluginsapi/compiler</loc>
+        <loc>https://webpack.js.org/migrate/3</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/pluginsapi/template</loc>
+        <loc>https://webpack.js.org/migrate/4</loc>
+    </url>
+    <url>
+        <loc>https://webpack.js.org/migrate/printable</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/plugins/automatic-prefetch-plugin</loc>
@@ -565,10 +559,10 @@
         <loc>https://webpack.js.org/plugins/normal-module-replacement-plugin</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/plugins/npm-install-webpack-plugin</loc>
+        <loc>https://webpack.js.org/plugins/prefetch-plugin</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/plugins/prefetch-plugin</loc>
+        <loc>https://webpack.js.org/plugins/npm-install-webpack-plugin</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/plugins/printable</loc>
@@ -592,9 +586,6 @@
         <loc>https://webpack.js.org/plugins/stylelint-webpack-plugin</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/plugins/terser-webpack-plugin</loc>
-    </url>
-    <url>
         <loc>https://webpack.js.org/plugins/uglifyjs-webpack-plugin</loc>
     </url>
     <url>
@@ -602,6 +593,15 @@
     </url>
     <url>
         <loc>https://webpack.js.org/plugins/zopfli-webpack-plugin</loc>
+    </url>
+    <url>
+        <loc>https://webpack.js.org/plugins/terser-webpack-plugin</loc>
+    </url>
+    <url>
+        <loc>https://webpack.js.org/pluginsapi/compiler</loc>
+    </url>
+    <url>
+        <loc>https://webpack.js.org/pluginsapi/template</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/api/plugins/compilation</loc>
