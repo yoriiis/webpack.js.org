@@ -37,10 +37,10 @@
         <loc>https://webpack.js.org/license</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/migrate</loc>
+        <loc>https://webpack.js.org/loaders</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/loaders</loc>
+        <loc>https://webpack.js.org/migrate</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/migrating</loc>
@@ -127,9 +127,6 @@
         <loc>https://webpack.js.org/concepts/loaders</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/concepts/manifest</loc>
-    </url>
-    <url>
         <loc>https://webpack.js.org/concepts/mode</loc>
     </url>
     <url>
@@ -172,6 +169,9 @@
         <loc>https://webpack.js.org/configuration/externals</loc>
     </url>
     <url>
+        <loc>https://webpack.js.org/concepts/manifest</loc>
+    </url>
+    <url>
         <loc>https://webpack.js.org/configuration/mode</loc>
     </url>
     <url>
@@ -196,10 +196,10 @@
         <loc>https://webpack.js.org/configuration/plugins</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/configuration/resolve</loc>
+        <loc>https://webpack.js.org/configuration/printable</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/configuration/printable</loc>
+        <loc>https://webpack.js.org/configuration/resolve</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/configuration/stats</loc>
@@ -235,10 +235,10 @@
         <loc>https://webpack.js.org/contribute/writing-a-scaffold</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/development/how-to-write-a-loader</loc>
+        <loc>https://webpack.js.org/development/how-to-write-a-plugin</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/development/how-to-write-a-plugin</loc>
+        <loc>https://webpack.js.org/development/how-to-write-a-loader</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/development/plugin-patterns</loc>
@@ -349,15 +349,6 @@
         <loc>https://webpack.js.org/guides/why-webpack</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/migrate/3</loc>
-    </url>
-    <url>
-        <loc>https://webpack.js.org/migrate/4</loc>
-    </url>
-    <url>
-        <loc>https://webpack.js.org/migrate/printable</loc>
-    </url>
-    <url>
         <loc>https://webpack.js.org/loaders/babel-loader</loc>
     </url>
     <url>
@@ -397,28 +388,28 @@
         <loc>https://webpack.js.org/loaders/gzip-loader</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/loaders/html-loader</loc>
-    </url>
-    <url>
         <loc>https://webpack.js.org/loaders/i18n-loader</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/loaders/imports-loader</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/loaders/jshint-loader</loc>
+        <loc>https://webpack.js.org/loaders/html-loader</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/loaders/istanbul-instrumenter-loader</loc>
     </url>
     <url>
+        <loc>https://webpack.js.org/loaders/jshint-loader</loc>
+    </url>
+    <url>
         <loc>https://webpack.js.org/loaders/json-loader</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/loaders/json5-loader</loc>
+        <loc>https://webpack.js.org/loaders/less-loader</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/loaders/less-loader</loc>
+        <loc>https://webpack.js.org/loaders/json5-loader</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/loaders/mocha-loader</loc>
@@ -469,13 +460,13 @@
         <loc>https://webpack.js.org/loaders/thread-loader</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/loaders/transform-loader</loc>
-    </url>
-    <url>
         <loc>https://webpack.js.org/loaders/url-loader</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/loaders/val-loader</loc>
+    </url>
+    <url>
+        <loc>https://webpack.js.org/loaders/transform-loader</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/loaders/worker-loader</loc>
@@ -484,10 +475,19 @@
         <loc>https://webpack.js.org/loaders/yaml-frontmatter-loader</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/plugins/babel-minify-webpack-plugin</loc>
+        <loc>https://webpack.js.org/migrate/3</loc>
+    </url>
+    <url>
+        <loc>https://webpack.js.org/migrate/4</loc>
+    </url>
+    <url>
+        <loc>https://webpack.js.org/migrate/printable</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/plugins/automatic-prefetch-plugin</loc>
+    </url>
+    <url>
+        <loc>https://webpack.js.org/plugins/babel-minify-webpack-plugin</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/plugins/banner-plugin</loc>
@@ -568,6 +568,9 @@
         <loc>https://webpack.js.org/plugins/prefetch-plugin</loc>
     </url>
     <url>
+        <loc>https://webpack.js.org/plugins/printable</loc>
+    </url>
+    <url>
         <loc>https://webpack.js.org/plugins/profiling-plugin</loc>
     </url>
     <url>
@@ -601,9 +604,6 @@
         <loc>https://webpack.js.org/pluginsapi/compiler</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/plugins/printable</loc>
-    </url>
-    <url>
         <loc>https://webpack.js.org/pluginsapi/template</loc>
     </url>
     <url>
@@ -611,9 +611,6 @@
     </url>
     <url>
         <loc>https://webpack.js.org/api/plugins/compiler</loc>
-    </url>
-    <url>
-        <loc>https://webpack.js.org/api/plugins/module-factories</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/api/plugins/parser</loc>
@@ -626,5 +623,8 @@
     </url>
     <url>
         <loc>https://webpack.js.org/api/plugins/template</loc>
+    </url>
+    <url>
+        <loc>https://webpack.js.org/api/plugins/module-factories</loc>
     </url>
 </urlset>
