@@ -1,5 +1,5 @@
 CACHE MANIFEST
-#ver:2019-7-24 14:38:29
+#ver:2019-7-24 20:05:06
 #plugin:5.0.7
 
 CACHE:
@@ -14,7 +14,7 @@ CACHE:
 /1ebd0482aadade65f20ec178219fe012.woff2
 /314bbcd238d458622bbf32427346774f.woff
 /92e7246d53b5483113e2d66d4ac750b4.png
-/45a6732fee4cc6bb2612.css
+/d7caa9fc2bc3cf027704.css
 /index.bundle.js
 /vendor.bundle.js
 /2.68ad114f47c41e59dd02.chunk.js
@@ -28,7 +28,7 @@ CACHE:
 /9.8741df53e84664ee3cb0.chunk.js
 /10.7479cd60e6f6f9d0a7cd.chunk.js
 /11.4757dfcbc560384b31eb.chunk.js
-/12.e70091d54d5db9769eb1.chunk.js
+/12.528a757914434aa59814.chunk.js
 /13.c20377d2596cda6ea672.chunk.js
 /14.ed0e6a5dbdb44d0147d8.chunk.js
 /15.e471bc4140cb759e5a29.chunk.js
@@ -197,11 +197,11 @@ CACHE:
 /7ebb1b3901ce119694f65e04f6347ef5.svg
 /96ccbfac58b65e83657a220603e00abe.svg
 /99dc7326dd30c5baa8df.css
+/a70344acd011e3194684.css
 /aad9d51e01a0dcc2caf5bee43dc8e647.svg
 /bc3effb418df77da9e04825c48a58a49.ico
 /d19378a95ebe6b15d5ddea281138dcf4.svg
 /e0b5805d423a4ec9473ee315250968b2.svg
-/e2b36e1e0dc47ee83d33.css
 
 NETWORK:
 *
