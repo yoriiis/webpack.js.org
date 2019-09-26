@@ -409,10 +409,10 @@
         <loc>https://webpack.js.org/loaders/jshint-loader</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/loaders/json5-loader</loc>
+        <loc>https://webpack.js.org/loaders/json-loader</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/loaders/json-loader</loc>
+        <loc>https://webpack.js.org/loaders/json5-loader</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/loaders/less-loader</loc>
