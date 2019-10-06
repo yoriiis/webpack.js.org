@@ -28,10 +28,10 @@
         <loc>https://webpack.js.org/get-started</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/guides</loc>
+        <loc>https://webpack.js.org/glossary</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/glossary</loc>
+        <loc>https://webpack.js.org/guides</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/license</loc>
@@ -253,6 +253,9 @@
         <loc>https://webpack.js.org/development/release-process</loc>
     </url>
     <url>
+        <loc>https://webpack.js.org/get-started/install-webpack</loc>
+    </url>
+    <url>
         <loc>https://webpack.js.org/get-started/why-webpack</loc>
     </url>
     <url>
@@ -308,9 +311,6 @@
     </url>
     <url>
         <loc>https://webpack.js.org/guides/hot-module-replacement</loc>
-    </url>
-    <url>
-        <loc>https://webpack.js.org/get-started/install-webpack</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/guides/installation</loc>
@@ -490,10 +490,10 @@
         <loc>https://webpack.js.org/migrate/printable</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/plugins/automatic-prefetch-plugin</loc>
+        <loc>https://webpack.js.org/plugins/babel-minify-webpack-plugin</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/plugins/babel-minify-webpack-plugin</loc>
+        <loc>https://webpack.js.org/plugins/automatic-prefetch-plugin</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/plugins/banner-plugin</loc>
