@@ -301,10 +301,10 @@
         <loc>https://webpack.js.org/guides/development-vagrant</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/guides/environment-variables</loc>
+        <loc>https://webpack.js.org/guides/entry-advanced</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/guides/entry-advanced</loc>
+        <loc>https://webpack.js.org/guides/environment-variables</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/guides/getting-started</loc>
@@ -418,9 +418,6 @@
         <loc>https://webpack.js.org/loaders/less-loader</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/loaders/mocha-loader</loc>
-    </url>
-    <url>
         <loc>https://webpack.js.org/loaders/multi-loader</loc>
     </url>
     <url>
@@ -460,10 +457,10 @@
         <loc>https://webpack.js.org/loaders/style-loader</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/loaders/svg-inline-loader</loc>
+        <loc>https://webpack.js.org/loaders/thread-loader</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/loaders/thread-loader</loc>
+        <loc>https://webpack.js.org/loaders/svg-inline-loader</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/loaders/transform-loader</loc>
@@ -485,6 +482,9 @@
     </url>
     <url>
         <loc>https://webpack.js.org/migrate/4</loc>
+    </url>
+    <url>
+        <loc>https://webpack.js.org/loaders/mocha-loader</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/migrate/printable</loc>
