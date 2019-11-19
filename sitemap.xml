@@ -220,10 +220,10 @@
         <loc>https://webpack.js.org/contribute/writers-guide</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/contribute/writing-a-plugin</loc>
+        <loc>https://webpack.js.org/contribute/writing-a-loader</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/contribute/writing-a-loader</loc>
+        <loc>https://webpack.js.org/contribute/writing-a-plugin</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/contribute/writing-a-scaffold</loc>
@@ -256,6 +256,9 @@
         <loc>https://webpack.js.org/guides/build-performance</loc>
     </url>
     <url>
+        <loc>https://webpack.js.org/guides/caching</loc>
+    </url>
+    <url>
         <loc>https://webpack.js.org/guides/code-splitting</loc>
     </url>
     <url>
@@ -263,9 +266,6 @@
     </url>
     <url>
         <loc>https://webpack.js.org/guides/code-splitting-css</loc>
-    </url>
-    <url>
-        <loc>https://webpack.js.org/guides/caching</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/guides/code-splitting-import</loc>
@@ -310,9 +310,6 @@
         <loc>https://webpack.js.org/guides/lazy-loading</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/guides/output-management</loc>
-    </url>
-    <url>
         <loc>https://webpack.js.org/guides/production</loc>
     </url>
     <url>
@@ -338,6 +335,9 @@
     </url>
     <url>
         <loc>https://webpack.js.org/guides/why-webpack</loc>
+    </url>
+    <url>
+        <loc>https://webpack.js.org/guides/output-management</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/loaders/babel-loader</loc>
