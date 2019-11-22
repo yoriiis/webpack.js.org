@@ -178,10 +178,10 @@
         <loc>https://webpack.js.org/configuration/module</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/configuration/node</loc>
+        <loc>https://webpack.js.org/configuration/optimization</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/configuration/optimization</loc>
+        <loc>https://webpack.js.org/configuration/node</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/configuration/other-options</loc>
@@ -241,10 +241,10 @@
         <loc>https://webpack.js.org/development/release-process</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/get-started/install-webpack</loc>
+        <loc>https://webpack.js.org/get-started/why-webpack</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/get-started/why-webpack</loc>
+        <loc>https://webpack.js.org/get-started/install-webpack</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/guides/asset-management</loc>
@@ -298,13 +298,13 @@
         <loc>https://webpack.js.org/guides/getting-started</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/guides/hot-module-replacement</loc>
-    </url>
-    <url>
         <loc>https://webpack.js.org/guides/installation</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/guides/integrations</loc>
+    </url>
+    <url>
+        <loc>https://webpack.js.org/guides/hot-module-replacement</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/guides/lazy-loading</loc>
@@ -475,10 +475,10 @@
         <loc>https://webpack.js.org/plugins/automatic-prefetch-plugin</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/plugins/banner-plugin</loc>
+        <loc>https://webpack.js.org/plugins/babel-minify-webpack-plugin</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/plugins/babel-minify-webpack-plugin</loc>
+        <loc>https://webpack.js.org/plugins/banner-plugin</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/plugins/closure-webpack-plugin</loc>
