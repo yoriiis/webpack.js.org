@@ -40,6 +40,9 @@
         <loc>https://webpack.js.org/loaders</loc>
     </url>
     <url>
+        <loc>https://webpack.js.org/migrate</loc>
+    </url>
+    <url>
         <loc>https://webpack.js.org/migrating</loc>
     </url>
     <url>
@@ -62,9 +65,6 @@
     </url>
     <url>
         <loc>https://webpack.js.org/writers-guide</loc>
-    </url>
-    <url>
-        <loc>https://webpack.js.org/migrate</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/api/cli</loc>
@@ -241,10 +241,10 @@
         <loc>https://webpack.js.org/development/release-process</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/get-started/why-webpack</loc>
+        <loc>https://webpack.js.org/get-started/install-webpack</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/get-started/install-webpack</loc>
+        <loc>https://webpack.js.org/get-started/why-webpack</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/guides/asset-management</loc>
@@ -331,10 +331,10 @@
         <loc>https://webpack.js.org/guides/scaffolding</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/guides/tree-shaking</loc>
+        <loc>https://webpack.js.org/guides/shimming</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/guides/shimming</loc>
+        <loc>https://webpack.js.org/guides/tree-shaking</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/guides/typescript</loc>
@@ -466,6 +466,15 @@
         <loc>https://webpack.js.org/loaders/yaml-frontmatter-loader</loc>
     </url>
     <url>
+        <loc>https://webpack.js.org/migrate/3</loc>
+    </url>
+    <url>
+        <loc>https://webpack.js.org/migrate/4</loc>
+    </url>
+    <url>
+        <loc>https://webpack.js.org/migrate/5</loc>
+    </url>
+    <url>
         <loc>https://webpack.js.org/plugins/automatic-prefetch-plugin</loc>
     </url>
     <url>
@@ -523,6 +532,9 @@
         <loc>https://webpack.js.org/plugins/ignore-plugin</loc>
     </url>
     <url>
+        <loc>https://webpack.js.org/plugins/internal-plugins</loc>
+    </url>
+    <url>
         <loc>https://webpack.js.org/plugins/limit-chunk-count-plugin</loc>
     </url>
     <url>
@@ -548,9 +560,6 @@
     </url>
     <url>
         <loc>https://webpack.js.org/plugins/prefetch-plugin</loc>
-    </url>
-    <url>
-        <loc>https://webpack.js.org/plugins/internal-plugins</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/plugins/profiling-plugin</loc>
@@ -589,19 +598,10 @@
         <loc>https://webpack.js.org/pluginsapi/template</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/migrate/4</loc>
-    </url>
-    <url>
-        <loc>https://webpack.js.org/migrate/5</loc>
-    </url>
-    <url>
-        <loc>https://webpack.js.org/migrate/3</loc>
+        <loc>https://webpack.js.org/api/plugins/compilation</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/api/plugins/compiler</loc>
-    </url>
-    <url>
-        <loc>https://webpack.js.org/api/plugins/compilation</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/api/plugins/module-factories</loc>
