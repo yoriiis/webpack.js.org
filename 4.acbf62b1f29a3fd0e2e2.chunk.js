@@ -1,4 +1,4 @@
-exports.ids=[4],exports.modules={499:function(t,e,r){
+exports.ids=[4],exports.modules={498:function(t,e,r){
 /*!
  * Gitter Sidecar v1.4.2
  * https://sidecar.gitter.im/
