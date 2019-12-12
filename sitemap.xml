@@ -214,9 +214,6 @@
         <loc>https://webpack.js.org/contribute/plugin-patterns</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/contribute/release-process</loc>
-    </url>
-    <url>
         <loc>https://webpack.js.org/contribute/writers-guide</loc>
     </url>
     <url>
@@ -227,6 +224,9 @@
     </url>
     <url>
         <loc>https://webpack.js.org/contribute/writing-a-scaffold</loc>
+    </url>
+    <url>
+        <loc>https://webpack.js.org/contribute/release-process</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/development/how-to-write-a-loader</loc>
@@ -250,6 +250,9 @@
         <loc>https://webpack.js.org/guides/asset-management</loc>
     </url>
     <url>
+        <loc>https://webpack.js.org/guides/asset-modules</loc>
+    </url>
+    <url>
         <loc>https://webpack.js.org/guides/author-libraries</loc>
     </url>
     <url>
@@ -269,9 +272,6 @@
     </url>
     <url>
         <loc>https://webpack.js.org/guides/code-splitting-import</loc>
-    </url>
-    <url>
-        <loc>https://webpack.js.org/guides/asset-modules</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/guides/code-splitting-libraries</loc>
@@ -415,13 +415,13 @@
         <loc>https://webpack.js.org/loaders/node-loader</loc>
     </url>
     <url>
+        <loc>https://webpack.js.org/loaders/null-loader</loc>
+    </url>
+    <url>
         <loc>https://webpack.js.org/loaders/polymer-webpack-loader</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/loaders/postcss-loader</loc>
-    </url>
-    <url>
-        <loc>https://webpack.js.org/loaders/null-loader</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/loaders/raw-loader</loc>
@@ -559,19 +559,16 @@
         <loc>https://webpack.js.org/plugins/prefetch-plugin</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/plugins/profiling-plugin</loc>
+        <loc>https://webpack.js.org/plugins/progress-plugin</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/plugins/progress-plugin</loc>
+        <loc>https://webpack.js.org/plugins/profiling-plugin</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/plugins/provide-plugin</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/plugins/source-map-dev-tool-plugin</loc>
-    </url>
-    <url>
-        <loc>https://webpack.js.org/plugins/split-chunks-plugin</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/plugins/stylelint-webpack-plugin</loc>
@@ -592,6 +589,9 @@
         <loc>https://webpack.js.org/pluginsapi/compiler</loc>
     </url>
     <url>
+        <loc>https://webpack.js.org/plugins/split-chunks-plugin</loc>
+    </url>
+    <url>
         <loc>https://webpack.js.org/pluginsapi/template</loc>
     </url>
     <url>
@@ -607,12 +607,12 @@
         <loc>https://webpack.js.org/api/plugins/parser</loc>
     </url>
     <url>
+        <loc>https://webpack.js.org/api/plugins/resolver</loc>
+    </url>
+    <url>
         <loc>https://webpack.js.org/api/plugins/tapable</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/api/plugins/template</loc>
-    </url>
-    <url>
-        <loc>https://webpack.js.org/api/plugins/resolver</loc>
     </url>
 </urlset>
