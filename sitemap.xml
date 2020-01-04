@@ -10,10 +10,10 @@
         <loc>https://webpack.js.org/branding</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/comparison</loc>
+        <loc>https://webpack.js.org/concepts</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/concepts</loc>
+        <loc>https://webpack.js.org/comparison</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/configuration</loc>
@@ -94,10 +94,10 @@
         <loc>https://webpack.js.org/api/module-variables</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/api/parser</loc>
+        <loc>https://webpack.js.org/api/node</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/api/node</loc>
+        <loc>https://webpack.js.org/api/parser</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/api/passing-a-config</loc>
@@ -484,6 +484,9 @@
         <loc>https://webpack.js.org/plugins/banner-plugin</loc>
     </url>
     <url>
+        <loc>https://webpack.js.org/plugins/closure-webpack-plugin</loc>
+    </url>
+    <url>
         <loc>https://webpack.js.org/plugins/commons-chunk-plugin</loc>
     </url>
     <url>
@@ -491,9 +494,6 @@
     </url>
     <url>
         <loc>https://webpack.js.org/plugins/context-replacement-plugin</loc>
-    </url>
-    <url>
-        <loc>https://webpack.js.org/plugins/closure-webpack-plugin</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/plugins/copy-webpack-plugin</loc>
@@ -574,10 +574,10 @@
         <loc>https://webpack.js.org/plugins/split-chunks-plugin</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/plugins/terser-webpack-plugin</loc>
+        <loc>https://webpack.js.org/plugins/stylelint-webpack-plugin</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/plugins/stylelint-webpack-plugin</loc>
+        <loc>https://webpack.js.org/plugins/terser-webpack-plugin</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/plugins/uglifyjs-webpack-plugin</loc>
