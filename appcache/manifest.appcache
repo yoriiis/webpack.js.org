@@ -1,5 +1,5 @@
 CACHE MANIFEST
-#ver:1/15/2020, 9:07:32 AM
+#ver:1/16/2020, 2:37:56 PM
 #plugin:5.0.7
 
 CACHE:
@@ -14,7 +14,7 @@ CACHE:
 /1ebd0482aadade65f20ec178219fe012.woff2
 /314bbcd238d458622bbf32427346774f.woff
 /92e7246d53b5483113e2d66d4ac750b4.png
-/33fcfe026312bd3dcbf5.css
+/bf54b5b1dc9defa56703.css
 /index.bundle.js
 /vendor.bundle.js
 /2.352d538ec97b80e3c103.chunk.js
@@ -22,8 +22,8 @@ CACHE:
 /4.794c1ef4a502cde03967.chunk.js
 /5.c5442f9417910a408f58.chunk.js
 /6.9a0f73bbecdcaee909ba.chunk.js
-/2937bdf60434a180cec3.css
-/7.2937bdf60434a180cec3.chunk.js
+/bd5e27a037d67fc2f588.css
+/7.bd5e27a037d67fc2f588.chunk.js
 /8.7d91b84060d0f2e4b5f4.chunk.js
 /9.4e2d0bca1b4e7b8f5a19.chunk.js
 /10.7f883dd3758eed0e697a.chunk.js
@@ -37,7 +37,7 @@ CACHE:
 /18.26428826fc38137cc660.chunk.js
 /19.1f0f6f2258239ddb532b.chunk.js
 /20.7c164947fc5b46854eb5.chunk.js
-/21.761049bd241a9769d765.chunk.js
+/21.b13e66148d5dc20432e9.chunk.js
 /22.1028e8fdbb86c783f83f.chunk.js
 /23.3615d4fc9e44ad702cc5.chunk.js
 /24.9a43dfd3ddc0e75d29b1.chunk.js
@@ -196,16 +196,16 @@ CACHE:
 /app-shell/
 /
 /manifest.json
+/384cbb3d55e1573224ca.css
 /57c717e75066b659cfe19dc2a643153c.svg
 /7052446b5e67df4434f4031afd2f1497.svg
 /7ebb1b3901ce119694f65e04f6347ef5.svg
 /96ccbfac58b65e83657a220603e00abe.svg
 /aad9d51e01a0dcc2caf5bee43dc8e647.svg
+/aceef954642679d0e9a9.css
 /bc3effb418df77da9e04825c48a58a49.ico
 /d19378a95ebe6b15d5ddea281138dcf4.svg
-/d95919a95b230febd178.css
 /e0b5805d423a4ec9473ee315250968b2.svg
-/eb8f7014cb38e6d3229f.css
 
 NETWORK:
 *
