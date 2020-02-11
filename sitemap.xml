@@ -67,6 +67,9 @@
         <loc>https://webpack.js.org/writers-guide</loc>
     </url>
     <url>
+        <loc>https://webpack.js.org/api/cli</loc>
+    </url>
+    <url>
         <loc>https://webpack.js.org/api/compilation-hooks</loc>
     </url>
     <url>
@@ -77,9 +80,6 @@
     </url>
     <url>
         <loc>https://webpack.js.org/api/hot-module-replacement</loc>
-    </url>
-    <url>
-        <loc>https://webpack.js.org/api/cli</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/api/loaders</loc>
@@ -103,13 +103,13 @@
         <loc>https://webpack.js.org/api/passing-a-config</loc>
     </url>
     <url>
+        <loc>https://webpack.js.org/api/plugins</loc>
+    </url>
+    <url>
         <loc>https://webpack.js.org/api/resolvers</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/api/stats</loc>
-    </url>
-    <url>
-        <loc>https://webpack.js.org/api/plugins</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/concepts/configuration</loc>
@@ -154,9 +154,6 @@
         <loc>https://webpack.js.org/configuration/configuration-languages</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/configuration/configuration-types</loc>
-    </url>
-    <url>
         <loc>https://webpack.js.org/configuration/dev-server</loc>
     </url>
     <url>
@@ -170,6 +167,9 @@
     </url>
     <url>
         <loc>https://webpack.js.org/configuration/externals</loc>
+    </url>
+    <url>
+        <loc>https://webpack.js.org/configuration/configuration-types</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/configuration/mode</loc>
@@ -391,10 +391,10 @@
         <loc>https://webpack.js.org/loaders/imports-loader</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/loaders/istanbul-instrumenter-loader</loc>
+        <loc>https://webpack.js.org/loaders/jshint-loader</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/loaders/jshint-loader</loc>
+        <loc>https://webpack.js.org/loaders/istanbul-instrumenter-loader</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/loaders/json-loader</loc>
@@ -505,10 +505,10 @@
         <loc>https://webpack.js.org/plugins/dll-plugin</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/plugins/eval-source-map-dev-tool-plugin</loc>
+        <loc>https://webpack.js.org/plugins/environment-plugin</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/plugins/environment-plugin</loc>
+        <loc>https://webpack.js.org/plugins/eval-source-map-dev-tool-plugin</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/plugins/extended-api-plugin</loc>
@@ -595,10 +595,10 @@
         <loc>https://webpack.js.org/pluginsapi/template</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/api/plugins/compiler</loc>
+        <loc>https://webpack.js.org/api/plugins/compilation</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/api/plugins/compilation</loc>
+        <loc>https://webpack.js.org/api/plugins/compiler</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/api/plugins/module-factories</loc>
