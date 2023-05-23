@@ -37,7 +37,7 @@ __webpack_require__.r(__webpack_exports__);
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "Workbox": () => (/* reexport */ Workbox)
+  Workbox: () => (/* reexport */ Workbox)
 });
 
 // EXTERNAL MODULE: ../node_modules/workbox-core/_version.js
