@@ -69,7 +69,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   stripBasename: () => (/* binding */ stripBasename)
 /* harmony export */ });
 /**
- * @remix-run/router v1.6.2
+ * @remix-run/router v1.6.3
  *
  * Copyright (c) Remix Software Inc.
  *
@@ -82,14 +82,12 @@ function _extends() {
   _extends = Object.assign ? Object.assign.bind() : function (target) {
     for (var i = 1; i < arguments.length; i++) {
       var source = arguments[i];
-
       for (var key in source) {
         if (Object.prototype.hasOwnProperty.call(source, key)) {
           target[key] = source[key];
         }
       }
     }
-
     return target;
   };
   return _extends.apply(this, arguments);
@@ -98,12 +96,10 @@ function _extends() {
 ////////////////////////////////////////////////////////////////////////////////
 //#region Types and Constants
 ////////////////////////////////////////////////////////////////////////////////
-
 /**
  * Actions represent the type of change to a location value.
  */
 var Action;
-
 (function (Action) {
   /**
    * A POP indicates a change to an arbitrary index in the history stack, such
@@ -118,80 +114,63 @@ var Action;
    * a link is clicked and a new page loads. When this happens, all subsequent
    * entries in the stack are lost.
    */
-
   Action["Push"] = "PUSH";
   /**
    * A REPLACE indicates the entry at the current index in the history stack
    * being replaced by a new one.
    */
-
   Action["Replace"] = "REPLACE";
 })(Action || (Action = {}));
-
 const PopStateEventType = "popstate";
 /**
  * Memory history stores the current location in memory. It is designed for use
  * in stateful non-browser environments like tests and React Native.
  */
-
 function createMemoryHistory(options) {
   if (options === void 0) {
     options = {};
   }
-
   let {
     initialEntries = ["/"],
     initialIndex,
     v5Compat = false
   } = options;
   let entries; // Declare so we can access from createMemoryLocation
-
   entries = initialEntries.map((entry, index) => createMemoryLocation(entry, typeof entry === "string" ? null : entry.state, index === 0 ? "default" : undefined));
   let index = clampIndex(initialIndex == null ? entries.length - 1 : initialIndex);
   let action = Action.Pop;
   let listener = null;
-
   function clampIndex(n) {
     return Math.min(Math.max(n, 0), entries.length - 1);
   }
-
   function getCurrentLocation() {
     return entries[index];
   }
-
   function createMemoryLocation(to, state, key) {
     if (state === void 0) {
       state = null;
     }
-
     let location = createLocation(entries ? getCurrentLocation().pathname : "/", to, state, key);
     warning(location.pathname.charAt(0) === "/", "relative pathnames are not supported in memory history: " + JSON.stringify(to));
     return location;
   }
-
   function createHref(to) {
     return typeof to === "string" ? to : createPath(to);
   }
-
   let history = {
     get index() {
       return index;
     },
-
     get action() {
       return action;
     },
-
     get location() {
       return getCurrentLocation();
     },
-
     createHref,
-
     createURL(to) {
       return new URL(createHref(to), "http://localhost");
     },
-
     encodeLocation(to) {
       let path = typeof to === "string" ? parsePath(to) : to;
       return {
@@ -200,13 +179,11 @@ function createMemoryHistory(options) {
         hash: path.hash || ""
       };
     },
-
     push(to, state) {
       action = Action.Push;
       let nextLocation = createMemoryLocation(to, state);
       index += 1;
       entries.splice(index, entries.length, nextLocation);
-
       if (v5Compat && listener) {
         listener({
           action,
@@ -215,12 +192,10 @@ function createMemoryHistory(options) {
         });
       }
     },
-
     replace(to, state) {
       action = Action.Replace;
       let nextLocation = createMemoryLocation(to, state);
       entries[index] = nextLocation;
-
       if (v5Compat && listener) {
         listener({
           action,
@@ -229,13 +204,11 @@ function createMemoryHistory(options) {
         });
       }
     },
-
     go(delta) {
       action = Action.Pop;
       let nextIndex = clampIndex(index + delta);
       let nextLocation = entries[nextIndex];
       index = nextIndex;
-
       if (listener) {
         listener({
           action,
@@ -244,14 +217,12 @@ function createMemoryHistory(options) {
         });
       }
     },
-
     listen(fn) {
       listener = fn;
       return () => {
         listener = null;
       };
     }
-
   };
   return history;
 }
@@ -262,12 +233,10 @@ function createMemoryHistory(options) {
  *
  * @see https://github.com/remix-run/history/tree/main/docs/api-reference.md#createbrowserhistory
  */
-
 function createBrowserHistory(options) {
   if (options === void 0) {
     options = {};
   }
-
   function createBrowserLocation(window, globalHistory) {
     let {
       pathname,
@@ -278,14 +247,13 @@ function createBrowserHistory(options) {
       pathname,
       search,
       hash
-    }, // state defaults to `null` because `window.history.state` does
+    },
+    // state defaults to `null` because `window.history.state` does
     globalHistory.state && globalHistory.state.usr || null, globalHistory.state && globalHistory.state.key || "default");
   }
-
   function createBrowserHref(window, to) {
     return typeof to === "string" ? to : createPath(to);
   }
-
   return getUrlBasedHistory(createBrowserLocation, createBrowserHref, null, options);
 }
 /**
@@ -296,12 +264,10 @@ function createBrowserHistory(options) {
  *
  * @see https://github.com/remix-run/history/tree/main/docs/api-reference.md#createhashhistory
  */
-
 function createHashHistory(options) {
   if (options === void 0) {
     options = {};
   }
-
   function createHashLocation(window, globalHistory) {
     let {
       pathname = "/",
@@ -312,27 +278,23 @@ function createHashHistory(options) {
       pathname,
       search,
       hash
-    }, // state defaults to `null` because `window.history.state` does
+    },
+    // state defaults to `null` because `window.history.state` does
     globalHistory.state && globalHistory.state.usr || null, globalHistory.state && globalHistory.state.key || "default");
   }
-
   function createHashHref(window, to) {
     let base = window.document.querySelector("base");
     let href = "";
-
     if (base && base.getAttribute("href")) {
       let url = window.location.href;
       let hashIndex = url.indexOf("#");
       href = hashIndex === -1 ? url : url.slice(0, hashIndex);
     }
-
     return href + "#" + (typeof to === "string" ? to : createPath(to));
   }
-
   function validateHashLocation(location, to) {
     warning(location.pathname.charAt(0) === "/", "relative pathnames are not supported in hash history.push(" + JSON.stringify(to) + ")");
   }
-
   return getUrlBasedHistory(createHashLocation, createHashHref, validateHashLocation, options);
 }
 function invariant(value, message) {
@@ -344,26 +306,23 @@ function warning(cond, message) {
   if (!cond) {
     // eslint-disable-next-line no-console
     if (typeof console !== "undefined") console.warn(message);
-
     try {
       // Welcome to debugging history!
       //
       // This error is thrown as a convenience so you can more easily
       // find the source for a warning that appears in the console by
       // enabling "pause on exceptions" in your JavaScript debugger.
-      throw new Error(message); // eslint-disable-next-line no-empty
+      throw new Error(message);
+      // eslint-disable-next-line no-empty
     } catch (e) {}
   }
 }
-
 function createKey() {
   return Math.random().toString(36).substr(2, 8);
 }
 /**
  * For browser-based histories, we combine the state and key into an object
  */
-
-
 function getHistoryState(location, index) {
   return {
     usr: location.state,
@@ -374,13 +333,10 @@ function getHistoryState(location, index) {
 /**
  * Creates a Location object with a unique key from the given Path
  */
-
-
 function createLocation(current, to, state, key) {
   if (state === void 0) {
     state = null;
   }
-
   let location = _extends({
     pathname: typeof current === "string" ? current : current.pathname,
     search: "",
@@ -393,13 +349,11 @@ function createLocation(current, to, state, key) {
     // keep as is for the time being and just let any incoming keys take precedence
     key: to && to.key || key || createKey()
   });
-
   return location;
 }
 /**
  * Creates a string URL path from the given pathname, search, and hash components.
  */
-
 function createPath(_ref) {
   let {
     pathname = "/",
@@ -413,38 +367,29 @@ function createPath(_ref) {
 /**
  * Parses a string URL path into its separate pathname, search, and hash components.
  */
-
 function parsePath(path) {
   let parsedPath = {};
-
   if (path) {
     let hashIndex = path.indexOf("#");
-
     if (hashIndex >= 0) {
       parsedPath.hash = path.substr(hashIndex);
       path = path.substr(0, hashIndex);
     }
-
     let searchIndex = path.indexOf("?");
-
     if (searchIndex >= 0) {
       parsedPath.search = path.substr(searchIndex);
       path = path.substr(0, searchIndex);
     }
-
     if (path) {
       parsedPath.pathname = path;
     }
   }
-
   return parsedPath;
 }
-
 function getUrlBasedHistory(getLocation, createHref, validateLocation, options) {
   if (options === void 0) {
     options = {};
   }
-
   let {
     window = document.defaultView,
     v5Compat = false
@@ -452,30 +397,27 @@ function getUrlBasedHistory(getLocation, createHref, validateLocation, options) 
   let globalHistory = window.history;
   let action = Action.Pop;
   let listener = null;
-  let index = getIndex(); // Index should only be null when we initialize. If not, it's because the
+  let index = getIndex();
+  // Index should only be null when we initialize. If not, it's because the
   // user called history.pushState or history.replaceState directly, in which
   // case we should log a warning as it will result in bugs.
-
   if (index == null) {
     index = 0;
     globalHistory.replaceState(_extends({}, globalHistory.state, {
       idx: index
     }), "");
   }
-
   function getIndex() {
     let state = globalHistory.state || {
       idx: null
     };
     return state.idx;
   }
-
   function handlePop() {
     action = Action.Pop;
     let nextIndex = getIndex();
     let delta = nextIndex == null ? null : nextIndex - index;
     index = nextIndex;
-
     if (listener) {
       listener({
         action,
@@ -484,23 +426,28 @@ function getUrlBasedHistory(getLocation, createHref, validateLocation, options) 
       });
     }
   }
-
   function push(to, state) {
     action = Action.Push;
     let location = createLocation(history.location, to, state);
     if (validateLocation) validateLocation(location, to);
     index = getIndex() + 1;
     let historyState = getHistoryState(location, index);
-    let url = history.createHref(location); // try...catch because iOS limits us to 100 pushState calls :/
-
+    let url = history.createHref(location);
+    // try...catch because iOS limits us to 100 pushState calls :/
     try {
       globalHistory.pushState(historyState, "", url);
     } catch (error) {
+      // If the exception is because `state` can't be serialized, let that throw
+      // outwards just like a replace call would so the dev knows the cause
+      // https://html.spec.whatwg.org/multipage/nav-history-apis.html#shared-history-push/replace-state-steps
+      // https://html.spec.whatwg.org/multipage/structured-data.html#structuredserializeinternal
+      if (error instanceof DOMException && error.name === "DataCloneError") {
+        throw error;
+      }
       // They are going to lose state here, but there is no real
       // way to warn them about it since the page will refresh...
       window.location.assign(url);
     }
-
     if (v5Compat && listener) {
       listener({
         action,
@@ -509,7 +456,6 @@ function getUrlBasedHistory(getLocation, createHref, validateLocation, options) 
       });
     }
   }
-
   function replace(to, state) {
     action = Action.Replace;
     let location = createLocation(history.location, to, state);
@@ -518,7 +464,6 @@ function getUrlBasedHistory(getLocation, createHref, validateLocation, options) 
     let historyState = getHistoryState(location, index);
     let url = history.createHref(location);
     globalHistory.replaceState(historyState, "", url);
-
     if (v5Compat && listener) {
       listener({
         action,
@@ -527,7 +472,6 @@ function getUrlBasedHistory(getLocation, createHref, validateLocation, options) 
       });
     }
   }
-
   function createURL(to) {
     // window.location.origin is "null" (the literal string value) in Firefox
     // under certain conditions, notably when serving from a local HTML file
@@ -537,21 +481,17 @@ function getUrlBasedHistory(getLocation, createHref, validateLocation, options) 
     invariant(base, "No window.location.(origin|href) available to create URL for href: " + href);
     return new URL(href, base);
   }
-
   let history = {
     get action() {
       return action;
     },
-
     get location() {
       return getLocation(window, globalHistory);
     },
-
     listen(fn) {
       if (listener) {
         throw new Error("A history only accepts one active listener");
       }
-
       window.addEventListener(PopStateEventType, handlePop);
       listener = fn;
       return () => {
@@ -559,13 +499,10 @@ function getUrlBasedHistory(getLocation, createHref, validateLocation, options) 
         listener = null;
       };
     },
-
     createHref(to) {
       return createHref(window, to);
     },
-
     createURL,
-
     encodeLocation(to) {
       // Encode a Location the same way window.location would
       let url = createURL(to);
@@ -575,55 +512,45 @@ function getUrlBasedHistory(getLocation, createHref, validateLocation, options) 
         hash: url.hash
       };
     },
-
     push,
     replace,
-
     go(n) {
       return globalHistory.go(n);
     }
-
   };
   return history;
-} //#endregion
+}
+//#endregion
 
 var ResultType;
-
 (function (ResultType) {
   ResultType["data"] = "data";
   ResultType["deferred"] = "deferred";
   ResultType["redirect"] = "redirect";
   ResultType["error"] = "error";
 })(ResultType || (ResultType = {}));
-
 const immutableRouteKeys = new Set(["lazy", "caseSensitive", "path", "id", "index", "children"]);
-
 function isIndexRoute(route) {
   return route.index === true;
-} // Walk the route tree generating unique IDs where necessary so we are working
+}
+// Walk the route tree generating unique IDs where necessary so we are working
 // solely with AgnosticDataRouteObject's within the Router
-
-
 function convertRoutesToDataRoutes(routes, mapRouteProperties, parentPath, manifest) {
   if (parentPath === void 0) {
     parentPath = [];
   }
-
   if (manifest === void 0) {
     manifest = {};
   }
-
   return routes.map((route, index) => {
     let treePath = [...parentPath, index];
     let id = typeof route.id === "string" ? route.id : treePath.join("-");
     invariant(route.index !== true || !route.children, "Cannot specify children on an index route");
     invariant(!manifest[id], "Found a route id collision on id \"" + id + "\".  Route " + "id's must be globally unique within Data Router usages");
-
     if (isIndexRoute(route)) {
       let indexRoute = _extends({}, route, mapRouteProperties(route), {
         id
       });
-
       manifest[id] = indexRoute;
       return indexRoute;
     } else {
@@ -631,13 +558,10 @@ function convertRoutesToDataRoutes(routes, mapRouteProperties, parentPath, manif
         id,
         children: undefined
       });
-
       manifest[id] = pathOrLayoutRoute;
-
       if (route.children) {
         pathOrLayoutRoute.children = convertRoutesToDataRoutes(route.children, mapRouteProperties, treePath, manifest);
       }
-
       return pathOrLayoutRoute;
     }
   });
@@ -647,25 +571,21 @@ function convertRoutesToDataRoutes(routes, mapRouteProperties, parentPath, manif
  *
  * @see https://reactrouter.com/utils/match-routes
  */
-
 function matchRoutes(routes, locationArg, basename) {
   if (basename === void 0) {
     basename = "/";
   }
-
   let location = typeof locationArg === "string" ? parsePath(locationArg) : locationArg;
   let pathname = stripBasename(location.pathname || "/", basename);
-
   if (pathname == null) {
     return null;
   }
-
   let branches = flattenRoutes(routes);
   rankRouteBranches(branches);
   let matches = null;
-
   for (let i = 0; matches == null && i < branches.length; ++i) {
-    matches = matchRouteBranch(branches[i], // Incoming pathnames are generally encoded from either window.location
+    matches = matchRouteBranch(branches[i],
+    // Incoming pathnames are generally encoded from either window.location
     // or from router.navigate, but we want to match against the unencoded
     // paths in the route definitions.  Memory router locations won't be
     // encoded here but there also shouldn't be anything to decode so this
@@ -673,23 +593,18 @@ function matchRoutes(routes, locationArg, basename) {
     // history-aware.
     safelyDecodeURI(pathname));
   }
-
   return matches;
 }
-
 function flattenRoutes(routes, branches, parentsMeta, parentPath) {
   if (branches === void 0) {
     branches = [];
   }
-
   if (parentsMeta === void 0) {
     parentsMeta = [];
   }
-
   if (parentPath === void 0) {
     parentPath = "";
   }
-
   let flattenRoute = (route, index, relativePath) => {
     let meta = {
       relativePath: relativePath === undefined ? route.path || "" : relativePath,
@@ -697,40 +612,35 @@ function flattenRoutes(routes, branches, parentsMeta, parentPath) {
       childrenIndex: index,
       route
     };
-
     if (meta.relativePath.startsWith("/")) {
       invariant(meta.relativePath.startsWith(parentPath), "Absolute route path \"" + meta.relativePath + "\" nested under path " + ("\"" + parentPath + "\" is not valid. An absolute child route path ") + "must start with the combined path of all its parent routes.");
       meta.relativePath = meta.relativePath.slice(parentPath.length);
     }
-
     let path = joinPaths([parentPath, meta.relativePath]);
-    let routesMeta = parentsMeta.concat(meta); // Add the children before adding this route to the array so we traverse the
+    let routesMeta = parentsMeta.concat(meta);
+    // Add the children before adding this route to the array so we traverse the
     // route tree depth-first and child routes appear before their parents in
     // the "flattened" version.
-
     if (route.children && route.children.length > 0) {
-      invariant( // Our types know better, but runtime JS may not!
+      invariant(
+      // Our types know better, but runtime JS may not!
       // @ts-expect-error
       route.index !== true, "Index routes must not have child routes. Please remove " + ("all child routes from route path \"" + path + "\"."));
       flattenRoutes(route.children, branches, routesMeta, path);
-    } // Routes without a path shouldn't ever match by themselves unless they are
+    }
+    // Routes without a path shouldn't ever match by themselves unless they are
     // index routes, so don't add them to the list of possible branches.
-
-
     if (route.path == null && !route.index) {
       return;
     }
-
     branches.push({
       path,
       score: computeScore(path, route.index),
       routesMeta
     });
   };
-
   routes.forEach((route, index) => {
     var _route$path;
-
     // coarse-grain check for optional params
     if (route.path === "" || !((_route$path = route.path) != null && _route$path.includes("?"))) {
       flattenRoute(route, index);
@@ -756,82 +666,70 @@ function flattenRoutes(routes, branches, parentsMeta, parentPath) {
  * - `/one/three/:four/:five`
  * - `/one/:two/three/:four/:five`
  */
-
-
 function explodeOptionalSegments(path) {
   let segments = path.split("/");
   if (segments.length === 0) return [];
-  let [first, ...rest] = segments; // Optional path segments are denoted by a trailing `?`
-
-  let isOptional = first.endsWith("?"); // Compute the corresponding required segment: `foo?` -> `foo`
-
+  let [first, ...rest] = segments;
+  // Optional path segments are denoted by a trailing `?`
+  let isOptional = first.endsWith("?");
+  // Compute the corresponding required segment: `foo?` -> `foo`
   let required = first.replace(/\?$/, "");
-
   if (rest.length === 0) {
     // Intepret empty string as omitting an optional segment
     // `["one", "", "three"]` corresponds to omitting `:two` from `/one/:two?/three` -> `/one/three`
     return isOptional ? [required, ""] : [required];
   }
-
   let restExploded = explodeOptionalSegments(rest.join("/"));
-  let result = []; // All child paths with the prefix.  Do this for all children before the
+  let result = [];
+  // All child paths with the prefix.  Do this for all children before the
   // optional version for all children so we get consistent ordering where the
   // parent optional aspect is preferred as required.  Otherwise, we can get
   // child sections interspersed where deeper optional segments are higher than
   // parent optional segments, where for example, /:two would explodes _earlier_
   // then /:one.  By always including the parent as required _for all children_
   // first, we avoid this issue
-
-  result.push(...restExploded.map(subpath => subpath === "" ? required : [required, subpath].join("/"))); // Then if this is an optional value, add all child versions without
-
+  result.push(...restExploded.map(subpath => subpath === "" ? required : [required, subpath].join("/")));
+  // Then if this is an optional value, add all child versions without
   if (isOptional) {
     result.push(...restExploded);
-  } // for absolute paths, ensure `/` instead of empty segment
-
-
+  }
+  // for absolute paths, ensure `/` instead of empty segment
   return result.map(exploded => path.startsWith("/") && exploded === "" ? "/" : exploded);
 }
-
 function rankRouteBranches(branches) {
   branches.sort((a, b) => a.score !== b.score ? b.score - a.score // Higher score first
   : compareIndexes(a.routesMeta.map(meta => meta.childrenIndex), b.routesMeta.map(meta => meta.childrenIndex)));
 }
-
 const paramRe = /^:\w+$/;
 const dynamicSegmentValue = 3;
 const indexRouteValue = 2;
 const emptySegmentValue = 1;
 const staticSegmentValue = 10;
 const splatPenalty = -2;
-
 const isSplat = s => s === "*";
-
 function computeScore(path, index) {
   let segments = path.split("/");
   let initialScore = segments.length;
-
   if (segments.some(isSplat)) {
     initialScore += splatPenalty;
   }
-
   if (index) {
     initialScore += indexRouteValue;
   }
-
   return segments.filter(s => !isSplat(s)).reduce((score, segment) => score + (paramRe.test(segment) ? dynamicSegmentValue : segment === "" ? emptySegmentValue : staticSegmentValue), initialScore);
 }
-
 function compareIndexes(a, b) {
   let siblings = a.length === b.length && a.slice(0, -1).every((n, i) => n === b[i]);
-  return siblings ? // If two routes are siblings, we should try to match the earlier sibling
+  return siblings ?
+  // If two routes are siblings, we should try to match the earlier sibling
   // first. This allows people to have fine-grained control over the matching
   // behavior by simply putting routes with identical paths in the order they
   // want them tried.
-  a[a.length - 1] - b[b.length - 1] : // Otherwise, it doesn't really make sense to rank non-siblings by index,
+  a[a.length - 1] - b[b.length - 1] :
+  // Otherwise, it doesn't really make sense to rank non-siblings by index,
   // so they sort equally.
   0;
 }
-
 function matchRouteBranch(branch, pathname) {
   let {
     routesMeta
@@ -839,7 +737,6 @@ function matchRouteBranch(branch, pathname) {
   let matchedParams = {};
   let matchedPathname = "/";
   let matches = [];
-
   for (let i = 0; i < routesMeta.length; ++i) {
     let meta = routesMeta[i];
     let end = i === routesMeta.length - 1;
@@ -859,12 +756,10 @@ function matchRouteBranch(branch, pathname) {
       pathnameBase: normalizePathname(joinPaths([matchedPathname, match.pathnameBase])),
       route
     });
-
     if (match.pathnameBase !== "/") {
       matchedPathname = joinPaths([matchedPathname, match.pathnameBase]);
     }
   }
-
   return matches;
 }
 /**
@@ -872,52 +767,42 @@ function matchRouteBranch(branch, pathname) {
  *
  * @see https://reactrouter.com/utils/generate-path
  */
-
-
 function generatePath(originalPath, params) {
   if (params === void 0) {
     params = {};
   }
-
   let path = originalPath;
-
   if (path.endsWith("*") && path !== "*" && !path.endsWith("/*")) {
     warning(false, "Route path \"" + path + "\" will be treated as if it were " + ("\"" + path.replace(/\*$/, "/*") + "\" because the `*` character must ") + "always follow a `/` in the pattern. To get rid of this warning, " + ("please change the route path to \"" + path.replace(/\*$/, "/*") + "\"."));
     path = path.replace(/\*$/, "/*");
-  } // ensure `/` is added at the beginning if the path is absolute
-
-
+  }
+  // ensure `/` is added at the beginning if the path is absolute
   const prefix = path.startsWith("/") ? "/" : "";
   const segments = path.split(/\/+/).map((segment, index, array) => {
-    const isLastSegment = index === array.length - 1; // only apply the splat if it's the last segment
-
+    const isLastSegment = index === array.length - 1;
+    // only apply the splat if it's the last segment
     if (isLastSegment && segment === "*") {
       const star = "*";
-      const starParam = params[star]; // Apply the splat
-
+      const starParam = params[star];
+      // Apply the splat
       return starParam;
     }
-
     const keyMatch = segment.match(/^:(\w+)(\??)$/);
-
     if (keyMatch) {
       const [, key, optional] = keyMatch;
       let param = params[key];
-
       if (optional === "?") {
         return param == null ? "" : param;
       }
-
       if (param == null) {
         invariant(false, "Missing \":" + key + "\" param");
       }
-
       return param;
-    } // Remove any optional markers from optional static segments
-
-
+    }
+    // Remove any optional markers from optional static segments
     return segment.replace(/\?$/g, "");
-  }) // Remove empty segments
+  })
+  // Remove empty segments
   .filter(segment => !!segment);
   return prefix + segments.join("/");
 }
@@ -927,7 +812,6 @@ function generatePath(originalPath, params) {
  *
  * @see https://reactrouter.com/utils/match-path
  */
-
 function matchPath(pattern, pathname) {
   if (typeof pattern === "string") {
     pattern = {
@@ -936,7 +820,6 @@ function matchPath(pattern, pathname) {
       end: true
     };
   }
-
   let [matcher, paramNames] = compilePath(pattern.path, pattern.caseSensitive, pattern.end);
   let match = pathname.match(matcher);
   if (!match) return null;
@@ -950,7 +833,6 @@ function matchPath(pattern, pathname) {
       let splatValue = captureGroups[index] || "";
       pathnameBase = matchedPathname.slice(0, matchedPathname.length - splatValue.length).replace(/(.)\/+$/, "$1");
     }
-
     memo[paramName] = safelyDecodeURIComponent(captureGroups[index] || "", paramName);
     return memo;
   }, {});
@@ -961,16 +843,13 @@ function matchPath(pattern, pathname) {
     pattern
   };
 }
-
 function compilePath(path, caseSensitive, end) {
   if (caseSensitive === void 0) {
     caseSensitive = false;
   }
-
   if (end === void 0) {
     end = true;
   }
-
   warning(path === "*" || !path.endsWith("*") || path.endsWith("/*"), "Route path \"" + path + "\" will be treated as if it were " + ("\"" + path.replace(/\*$/, "/*") + "\" because the `*` character must ") + "always follow a `/` in the pattern. To get rid of this warning, " + ("please change the route path to \"" + path.replace(/\*$/, "/*") + "\"."));
   let paramNames = [];
   let regexpSource = "^" + path.replace(/\/*\*?$/, "") // Ignore trailing / and /*, we'll handle it below
@@ -980,7 +859,6 @@ function compilePath(path, caseSensitive, end) {
     paramNames.push(paramName);
     return "/([^\\/]+)";
   });
-
   if (path.endsWith("*")) {
     paramNames.push("*");
     regexpSource += path === "*" || path === "/*" ? "(.*)$" // Already matched the initial /, just match the rest
@@ -998,11 +876,9 @@ function compilePath(path, caseSensitive, end) {
     // /user-preferences since `-` counts as a word boundary.
     regexpSource += "(?:(?=\\/|$))";
   } else ;
-
   let matcher = new RegExp(regexpSource, caseSensitive ? undefined : "i");
   return [matcher, paramNames];
 }
-
 function safelyDecodeURI(value) {
   try {
     return decodeURI(value);
@@ -1011,7 +887,6 @@ function safelyDecodeURI(value) {
     return value;
   }
 }
-
 function safelyDecodeURIComponent(value, paramName) {
   try {
     return decodeURIComponent(value);
@@ -1023,25 +898,19 @@ function safelyDecodeURIComponent(value, paramName) {
 /**
  * @private
  */
-
-
 function stripBasename(pathname, basename) {
   if (basename === "/") return pathname;
-
   if (!pathname.toLowerCase().startsWith(basename.toLowerCase())) {
     return null;
-  } // We want to leave trailing slash behavior in the user's control, so if they
+  }
+  // We want to leave trailing slash behavior in the user's control, so if they
   // specify a basename with a trailing slash, we should support it
-
-
   let startIndex = basename.endsWith("/") ? basename.length - 1 : basename.length;
   let nextChar = pathname.charAt(startIndex);
-
   if (nextChar && nextChar !== "/") {
     // pathname does not start with basename/
     return null;
   }
-
   return pathname.slice(startIndex) || "/";
 }
 /**
@@ -1049,12 +918,10 @@ function stripBasename(pathname, basename) {
  *
  * @see https://reactrouter.com/utils/resolve-path
  */
-
 function resolvePath(to, fromPathname) {
   if (fromPathname === void 0) {
     fromPathname = "/";
   }
-
   let {
     pathname: toPathname,
     search = "",
@@ -1067,7 +934,6 @@ function resolvePath(to, fromPathname) {
     hash: normalizeHash(hash)
   };
 }
-
 function resolvePathname(relativePath, fromPathname) {
   let segments = fromPathname.replace(/\/+$/, "").split("/");
   let relativeSegments = relativePath.split("/");
@@ -1081,7 +947,6 @@ function resolvePathname(relativePath, fromPathname) {
   });
   return segments.length > 1 ? segments.join("/") : "/";
 }
-
 function getInvalidPathError(char, field, dest, path) {
   return "Cannot include a '" + char + "' character in a manually specified " + ("`to." + field + "` field [" + JSON.stringify(path) + "].  Please separate it out to the ") + ("`to." + dest + "` field. Alternatively you may provide the full path as ") + "a string in <Link to=\"...\"> and the router will parse it for you.";
 }
@@ -1108,22 +973,17 @@ function getInvalidPathError(char, field, dest, path) {
  *     </Route>
  *   </Route>
  */
-
-
 function getPathContributingMatches(matches) {
   return matches.filter((match, index) => index === 0 || match.route.path && match.route.path.length > 0);
 }
 /**
  * @private
  */
-
 function resolveTo(toArg, routePathnames, locationPathname, isPathRelative) {
   if (isPathRelative === void 0) {
     isPathRelative = false;
   }
-
   let to;
-
   if (typeof toArg === "string") {
     to = parsePath(toArg);
   } else {
@@ -1132,10 +992,10 @@ function resolveTo(toArg, routePathnames, locationPathname, isPathRelative) {
     invariant(!to.pathname || !to.pathname.includes("#"), getInvalidPathError("#", "pathname", "hash", to));
     invariant(!to.search || !to.search.includes("#"), getInvalidPathError("#", "search", "hash", to));
   }
-
   let isEmptyPath = toArg === "" || to.pathname === "";
   let toPathname = isEmptyPath ? "/" : to.pathname;
-  let from; // Routing is relative to the current pathname if explicitly requested.
+  let from;
+  // Routing is relative to the current pathname if explicitly requested.
   //
   // If a pathname is explicitly provided in `to`, it should be relative to the
   // route context. This is explained in `Note on `<Link to>` values` in our
@@ -1144,46 +1004,38 @@ function resolveTo(toArg, routePathnames, locationPathname, isPathRelative) {
   // `to` values that do not provide a pathname. `to` can simply be a search or
   // hash string, in which case we should assume that the navigation is relative
   // to the current location's pathname and *not* the route pathname.
-
   if (isPathRelative || toPathname == null) {
     from = locationPathname;
   } else {
     let routePathnameIndex = routePathnames.length - 1;
-
     if (toPathname.startsWith("..")) {
-      let toSegments = toPathname.split("/"); // Each leading .. segment means "go up one route" instead of "go up one
+      let toSegments = toPathname.split("/");
+      // Each leading .. segment means "go up one route" instead of "go up one
       // URL segment".  This is a key difference from how <a href> works and a
       // major reason we call this a "to" value instead of a "href".
-
       while (toSegments[0] === "..") {
         toSegments.shift();
         routePathnameIndex -= 1;
       }
-
       to.pathname = toSegments.join("/");
-    } // If there are more ".." segments than parent routes, resolve relative to
+    }
+    // If there are more ".." segments than parent routes, resolve relative to
     // the root / URL.
-
-
     from = routePathnameIndex >= 0 ? routePathnames[routePathnameIndex] : "/";
   }
-
-  let path = resolvePath(to, from); // Ensure the pathname has a trailing slash if the original "to" had one
-
-  let hasExplicitTrailingSlash = toPathname && toPathname !== "/" && toPathname.endsWith("/"); // Or if this was a link to the current path which has a trailing slash
-
+  let path = resolvePath(to, from);
+  // Ensure the pathname has a trailing slash if the original "to" had one
+  let hasExplicitTrailingSlash = toPathname && toPathname !== "/" && toPathname.endsWith("/");
+  // Or if this was a link to the current path which has a trailing slash
   let hasCurrentTrailingSlash = (isEmptyPath || toPathname === ".") && locationPathname.endsWith("/");
-
   if (!path.pathname.endsWith("/") && (hasExplicitTrailingSlash || hasCurrentTrailingSlash)) {
     path.pathname += "/";
   }
-
   return path;
 }
 /**
  * @private
  */
-
 function getToPathname(to) {
   // Empty strings should be treated the same as / paths
   return to === "" || to.pathname === "" ? "/" : typeof to === "string" ? parsePath(to).pathname : to.pathname;
@@ -1191,42 +1043,34 @@ function getToPathname(to) {
 /**
  * @private
  */
-
 const joinPaths = paths => paths.join("/").replace(/\/\/+/g, "/");
 /**
  * @private
  */
-
 const normalizePathname = pathname => pathname.replace(/\/+$/, "").replace(/^\/*/, "/");
 /**
  * @private
  */
-
 const normalizeSearch = search => !search || search === "?" ? "" : search.startsWith("?") ? search : "?" + search;
 /**
  * @private
  */
-
 const normalizeHash = hash => !hash || hash === "#" ? "" : hash.startsWith("#") ? hash : "#" + hash;
 /**
  * This is a shortcut for creating `application/json` responses. Converts `data`
  * to JSON and sets the `Content-Type` header.
  */
-
 const json = function json(data, init) {
   if (init === void 0) {
     init = {};
   }
-
   let responseInit = typeof init === "number" ? {
     status: init
   } : init;
   let headers = new Headers(responseInit.headers);
-
   if (!headers.has("Content-Type")) {
     headers.set("Content-Type", "application/json; charset=utf-8");
   }
-
   return new Response(JSON.stringify(data), _extends({}, responseInit, {
     headers
   }));
@@ -1237,17 +1081,14 @@ class DeferredData {
     this.pendingKeysSet = new Set();
     this.subscribers = new Set();
     this.deferredKeys = [];
-    invariant(data && typeof data === "object" && !Array.isArray(data), "defer() only accepts plain objects"); // Set up an AbortController + Promise we can race against to exit early
+    invariant(data && typeof data === "object" && !Array.isArray(data), "defer() only accepts plain objects");
+    // Set up an AbortController + Promise we can race against to exit early
     // cancellation
-
     let reject;
     this.abortPromise = new Promise((_, r) => reject = r);
     this.controller = new AbortController();
-
     let onAbort = () => reject(new AbortedDeferredError("Deferred data aborted"));
-
     this.unlistenAbortSignal = () => this.controller.signal.removeEventListener("abort", onAbort);
-
     this.controller.signal.addEventListener("abort", onAbort);
     this.data = Object.entries(data).reduce((acc, _ref) => {
       let [key, value] = _ref;
@@ -1255,34 +1096,29 @@ class DeferredData {
         [key]: this.trackPromise(key, value)
       });
     }, {});
-
     if (this.done) {
       // All incoming values were resolved
       this.unlistenAbortSignal();
     }
-
     this.init = responseInit;
   }
-
   trackPromise(key, value) {
     if (!(value instanceof Promise)) {
       return value;
     }
-
     this.deferredKeys.push(key);
-    this.pendingKeysSet.add(key); // We store a little wrapper promise that will be extended with
+    this.pendingKeysSet.add(key);
+    // We store a little wrapper promise that will be extended with
     // _data/_error props upon resolve/reject
-
-    let promise = Promise.race([value, this.abortPromise]).then(data => this.onSettle(promise, key, null, data), error => this.onSettle(promise, key, error)); // Register rejection listeners to avoid uncaught promise rejections on
+    let promise = Promise.race([value, this.abortPromise]).then(data => this.onSettle(promise, key, null, data), error => this.onSettle(promise, key, error));
+    // Register rejection listeners to avoid uncaught promise rejections on
     // errors or aborted deferred values
-
     promise.catch(() => {});
     Object.defineProperty(promise, "_tracked", {
       get: () => true
     });
     return promise;
   }
-
   onSettle(promise, key, error, data) {
     if (this.controller.signal.aborted && error instanceof AbortedDeferredError) {
       this.unlistenAbortSignal();
@@ -1291,14 +1127,11 @@ class DeferredData {
       });
       return Promise.reject(error);
     }
-
     this.pendingKeysSet.delete(key);
-
     if (this.done) {
       // Nothing left to abort!
       this.unlistenAbortSignal();
     }
-
     if (error) {
       Object.defineProperty(promise, "_error", {
         get: () => error
@@ -1306,54 +1139,43 @@ class DeferredData {
       this.emit(false, key);
       return Promise.reject(error);
     }
-
     Object.defineProperty(promise, "_data", {
       get: () => data
     });
     this.emit(false, key);
     return data;
   }
-
   emit(aborted, settledKey) {
     this.subscribers.forEach(subscriber => subscriber(aborted, settledKey));
   }
-
   subscribe(fn) {
     this.subscribers.add(fn);
     return () => this.subscribers.delete(fn);
   }
-
   cancel() {
     this.controller.abort();
     this.pendingKeysSet.forEach((v, k) => this.pendingKeysSet.delete(k));
     this.emit(true);
   }
-
   async resolveData(signal) {
     let aborted = false;
-
     if (!this.done) {
       let onAbort = () => this.cancel();
-
       signal.addEventListener("abort", onAbort);
       aborted = await new Promise(resolve => {
         this.subscribe(aborted => {
           signal.removeEventListener("abort", onAbort);
-
           if (aborted || this.done) {
             resolve(aborted);
           }
         });
       });
     }
-
     return aborted;
   }
-
   get done() {
     return this.pendingKeysSet.size === 0;
   }
-
   get unwrappedData() {
     invariant(this.data !== null && this.done, "Can only unwrap data on initialized and settled deferreds");
     return Object.entries(this.data).reduce((acc, _ref2) => {
@@ -1363,34 +1185,26 @@ class DeferredData {
       });
     }, {});
   }
-
   get pendingKeys() {
     return Array.from(this.pendingKeysSet);
   }
-
 }
-
 function isTrackedPromise(value) {
   return value instanceof Promise && value._tracked === true;
 }
-
 function unwrapTrackedPromise(value) {
   if (!isTrackedPromise(value)) {
     return value;
   }
-
   if (value._error) {
     throw value._error;
   }
-
   return value._data;
 }
-
 const defer = function defer(data, init) {
   if (init === void 0) {
     init = {};
   }
-
   let responseInit = typeof init === "number" ? {
     status: init
   } : init;
@@ -1400,14 +1214,11 @@ const defer = function defer(data, init) {
  * A redirect response. Sets the status code and the `Location` header.
  * Defaults to "302 Found".
  */
-
 const redirect = function redirect(url, init) {
   if (init === void 0) {
     init = 302;
   }
-
   let responseInit = init;
-
   if (typeof responseInit === "number") {
     responseInit = {
       status: responseInit
@@ -1415,7 +1226,6 @@ const redirect = function redirect(url, init) {
   } else if (typeof responseInit.status === "undefined") {
     responseInit.status = 302;
   }
-
   let headers = new Headers(responseInit.headers);
   headers.set("Location", url);
   return new Response(null, _extends({}, responseInit, {
@@ -1426,17 +1236,14 @@ const redirect = function redirect(url, init) {
  * @private
  * Utility class we use to hold auto-unwrapped 4xx/5xx Response bodies
  */
-
 class ErrorResponse {
   constructor(status, statusText, data, internal) {
     if (internal === void 0) {
       internal = false;
     }
-
     this.status = status;
     this.statusText = statusText || "";
     this.internal = internal;
-
     if (data instanceof Error) {
       this.data = data.toString();
       this.error = data;
@@ -1444,13 +1251,11 @@ class ErrorResponse {
       this.data = data;
     }
   }
-
 }
 /**
  * Check if the given error is an ErrorResponse generated from a 4xx/5xx
  * Response thrown from an action/loader
  */
-
 function isRouteErrorResponse(error) {
   return error != null && typeof error.status === "number" && typeof error.statusText === "string" && typeof error.internal === "boolean" && "data" in error;
 }
@@ -1484,70 +1289,63 @@ const IDLE_BLOCKER = {
   location: undefined
 };
 const ABSOLUTE_URL_REGEX = /^(?:[a-z][a-z0-9+.-]*:|\/\/)/i;
-const isBrowser = typeof window !== "undefined" && typeof window.document !== "undefined" && typeof window.document.createElement !== "undefined";
-const isServer = !isBrowser;
-
 const defaultMapRouteProperties = route => ({
   hasErrorBoundary: Boolean(route.hasErrorBoundary)
-}); //#endregion
+});
+//#endregion
 ////////////////////////////////////////////////////////////////////////////////
 //#region createRouter
 ////////////////////////////////////////////////////////////////////////////////
-
 /**
  * Create a router and listen to history POP navigations
  */
-
-
 function createRouter(init) {
+  const routerWindow = init.window ? init.window : typeof window !== "undefined" ? window : undefined;
+  const isBrowser = typeof routerWindow !== "undefined" && typeof routerWindow.document !== "undefined" && typeof routerWindow.document.createElement !== "undefined";
+  const isServer = !isBrowser;
   invariant(init.routes.length > 0, "You must provide a non-empty routes array to createRouter");
   let mapRouteProperties;
-
   if (init.mapRouteProperties) {
     mapRouteProperties = init.mapRouteProperties;
   } else if (init.detectErrorBoundary) {
     // If they are still using the deprecated version, wrap it with the new API
     let detectErrorBoundary = init.detectErrorBoundary;
-
     mapRouteProperties = route => ({
       hasErrorBoundary: detectErrorBoundary(route)
     });
   } else {
     mapRouteProperties = defaultMapRouteProperties;
-  } // Routes keyed by ID
-
-
-  let manifest = {}; // Routes in tree format for matching
-
+  }
+  // Routes keyed by ID
+  let manifest = {};
+  // Routes in tree format for matching
   let dataRoutes = convertRoutesToDataRoutes(init.routes, mapRouteProperties, undefined, manifest);
   let inFlightDataRoutes;
-  let basename = init.basename || "/"; // Config driven behavior flags
-
+  let basename = init.basename || "/";
+  // Config driven behavior flags
   let future = _extends({
     v7_normalizeFormMethod: false,
     v7_prependBasename: false
-  }, init.future); // Cleanup function for history
-
-
-  let unlistenHistory = null; // Externally-provided functions to call on all state changes
-
-  let subscribers = new Set(); // Externally-provided object to hold scroll restoration locations during routing
-
-  let savedScrollPositions = null; // Externally-provided function to get scroll restoration keys
-
-  let getScrollRestorationKey = null; // Externally-provided function to get current scroll position
-
-  let getScrollPosition = null; // One-time flag to control the initial hydration scroll restoration.  Because
+  }, init.future);
+  // Cleanup function for history
+  let unlistenHistory = null;
+  // Externally-provided functions to call on all state changes
+  let subscribers = new Set();
+  // Externally-provided object to hold scroll restoration locations during routing
+  let savedScrollPositions = null;
+  // Externally-provided function to get scroll restoration keys
+  let getScrollRestorationKey = null;
+  // Externally-provided function to get current scroll position
+  let getScrollPosition = null;
+  // One-time flag to control the initial hydration scroll restoration.  Because
   // we don't get the saved positions from <ScrollRestoration /> until _after_
   // the initial render, we need to manually trigger a separate updateState to
   // send along the restoreScrollPosition
   // Set to true if we have `hydrationData` since we assume we were SSR'd and that
   // SSR did the initial scroll restoration.
-
   let initialScrollRestored = init.hydrationData != null;
   let initialMatches = matchRoutes(dataRoutes, init.history.location, basename);
   let initialErrors = null;
-
   if (initialMatches == null) {
     // If we do not match a user-provided-route, fall back to the root
     // to allow the error boundary to take over
@@ -1563,10 +1361,11 @@ function createRouter(init) {
       [route.id]: error
     };
   }
-
-  let initialized = // All initialMatches need to be loaded before we're ready.  If we have lazy
+  let initialized =
+  // All initialMatches need to be loaded before we're ready.  If we have lazy
   // functions around still then we'll need to run them in initialize()
-  !initialMatches.some(m => m.route.lazy) && ( // And we have to either have no loaders or have been provided hydrationData
+  !initialMatches.some(m => m.route.lazy) && (
+  // And we have to either have no loaders or have been provided hydrationData
   !initialMatches.some(m => m.route.loader) || init.hydrationData != null);
   let router;
   let state = {
@@ -1584,57 +1383,57 @@ function createRouter(init) {
     errors: init.hydrationData && init.hydrationData.errors || initialErrors,
     fetchers: new Map(),
     blockers: new Map()
-  }; // -- Stateful internal variables to manage navigations --
+  };
+  // -- Stateful internal variables to manage navigations --
   // Current navigation in progress (to be committed in completeNavigation)
-
-  let pendingAction = Action.Pop; // Should the current navigation prevent the scroll reset if scroll cannot
+  let pendingAction = Action.Pop;
+  // Should the current navigation prevent the scroll reset if scroll cannot
   // be restored?
-
-  let pendingPreventScrollReset = false; // AbortController for the active navigation
-
-  let pendingNavigationController; // We use this to avoid touching history in completeNavigation if a
+  let pendingPreventScrollReset = false;
+  // AbortController for the active navigation
+  let pendingNavigationController;
+  // We use this to avoid touching history in completeNavigation if a
   // revalidation is entirely uninterrupted
-
-  let isUninterruptedRevalidation = false; // Use this internal flag to force revalidation of all loaders:
+  let isUninterruptedRevalidation = false;
+  // Use this internal flag to force revalidation of all loaders:
   //  - submissions (completed or interrupted)
   //  - useRevalidator()
   //  - X-Remix-Revalidate (from redirect)
-
-  let isRevalidationRequired = false; // Use this internal array to capture routes that require revalidation due
+  let isRevalidationRequired = false;
+  // Use this internal array to capture routes that require revalidation due
   // to a cancelled deferred on action submission
-
-  let cancelledDeferredRoutes = []; // Use this internal array to capture fetcher loads that were cancelled by an
+  let cancelledDeferredRoutes = [];
+  // Use this internal array to capture fetcher loads that were cancelled by an
   // action navigation and require revalidation
-
-  let cancelledFetcherLoads = []; // AbortControllers for any in-flight fetchers
-
-  let fetchControllers = new Map(); // Track loads based on the order in which they started
-
-  let incrementingLoadId = 0; // Track the outstanding pending navigation data load to be compared against
+  let cancelledFetcherLoads = [];
+  // AbortControllers for any in-flight fetchers
+  let fetchControllers = new Map();
+  // Track loads based on the order in which they started
+  let incrementingLoadId = 0;
+  // Track the outstanding pending navigation data load to be compared against
   // the globally incrementing load when a fetcher load lands after a completed
   // navigation
-
-  let pendingNavigationLoadId = -1; // Fetchers that triggered data reloads as a result of their actions
-
-  let fetchReloadIds = new Map(); // Fetchers that triggered redirect navigations
-
-  let fetchRedirectIds = new Set(); // Most recent href/match for fetcher.load calls for fetchers
-
-  let fetchLoadMatches = new Map(); // Store DeferredData instances for active route matches.  When a
+  let pendingNavigationLoadId = -1;
+  // Fetchers that triggered data reloads as a result of their actions
+  let fetchReloadIds = new Map();
+  // Fetchers that triggered redirect navigations
+  let fetchRedirectIds = new Set();
+  // Most recent href/match for fetcher.load calls for fetchers
+  let fetchLoadMatches = new Map();
+  // Store DeferredData instances for active route matches.  When a
   // route loader returns defer() we stick one in here.  Then, when a nested
   // promise resolves we update loaderData.  If a new navigation starts we
   // cancel active deferreds for eliminated routes.
-
-  let activeDeferreds = new Map(); // Store blocker functions in a separate Map outside of router state since
+  let activeDeferreds = new Map();
+  // Store blocker functions in a separate Map outside of router state since
   // we don't need to update UI state if they change
-
-  let blockerFunctions = new Map(); // Flag to ignore the next history update, so we can revert the URL change on
+  let blockerFunctions = new Map();
+  // Flag to ignore the next history update, so we can revert the URL change on
   // a POP navigation that was blocked by the user without touching router state
-
-  let ignoreNextHistoryUpdate = false; // Initialize the router, all side effects should be kicked off from here.
+  let ignoreNextHistoryUpdate = false;
+  // Initialize the router, all side effects should be kicked off from here.
   // Implemented as a Fluent API for ease of:
   //   let router = createRouter(init).initialize();
-
   function initialize() {
     // If history informs us of a POP navigation, start the navigation but do not update
     // state.  We'll update our own state once the navigation completes
@@ -1644,98 +1443,84 @@ function createRouter(init) {
         location,
         delta
       } = _ref;
-
       // Ignore this event if it was just us resetting the URL from a
       // blocked POP navigation
       if (ignoreNextHistoryUpdate) {
         ignoreNextHistoryUpdate = false;
         return;
       }
-
       warning(blockerFunctions.size === 0 || delta != null, "You are trying to use a blocker on a POP navigation to a location " + "that was not created by @remix-run/router. This will fail silently in " + "production. This can happen if you are navigating outside the router " + "via `window.history.pushState`/`window.location.hash` instead of using " + "router navigation APIs.  This can also happen if you are using " + "createHashRouter and the user manually changes the URL.");
       let blockerKey = shouldBlockNavigation({
         currentLocation: state.location,
         nextLocation: location,
         historyAction
       });
-
       if (blockerKey && delta != null) {
         // Restore the URL to match the current UI, but don't update router state
         ignoreNextHistoryUpdate = true;
-        init.history.go(delta * -1); // Put the blocker into a blocked state
-
+        init.history.go(delta * -1);
+        // Put the blocker into a blocked state
         updateBlocker(blockerKey, {
           state: "blocked",
           location,
-
           proceed() {
             updateBlocker(blockerKey, {
               state: "proceeding",
               proceed: undefined,
               reset: undefined,
               location
-            }); // Re-do the same POP navigation we just blocked
-
+            });
+            // Re-do the same POP navigation we just blocked
             init.history.go(delta);
           },
-
           reset() {
             deleteBlocker(blockerKey);
             updateState({
               blockers: new Map(router.state.blockers)
             });
           }
-
         });
         return;
       }
-
       return startNavigation(historyAction, location);
-    }); // Kick off initial data load if needed.  Use Pop to avoid modifying history
+    });
+    // Kick off initial data load if needed.  Use Pop to avoid modifying history
     // Note we don't do any handling of lazy here.  For SPA's it'll get handled
     // in the normal navigation flow.  For SSR it's expected that lazy modules are
     // resolved prior to router creation since we can't go into a fallbackElement
     // UI for SSR'd apps
-
     if (!state.initialized) {
       startNavigation(Action.Pop, state.location);
     }
-
     return router;
-  } // Clean up a router and it's side effects
-
-
+  }
+  // Clean up a router and it's side effects
   function dispose() {
     if (unlistenHistory) {
       unlistenHistory();
     }
-
     subscribers.clear();
     pendingNavigationController && pendingNavigationController.abort();
     state.fetchers.forEach((_, key) => deleteFetcher(key));
     state.blockers.forEach((_, key) => deleteBlocker(key));
-  } // Subscribe to state updates for the router
-
-
+  }
+  // Subscribe to state updates for the router
   function subscribe(fn) {
     subscribers.add(fn);
     return () => subscribers.delete(fn);
-  } // Update our state and notify the calling context of the change
-
-
+  }
+  // Update our state and notify the calling context of the change
   function updateState(newState) {
     state = _extends({}, state, newState);
     subscribers.forEach(subscriber => subscriber(state));
-  } // Complete a navigation returning the state.navigation back to the IDLE_NAVIGATION
+  }
+  // Complete a navigation returning the state.navigation back to the IDLE_NAVIGATION
   // and setting state.[historyAction/location/matches] to the new route.
   // - Location is a required param
   // - Navigation will always be set to IDLE_NAVIGATION
   // - Can pass any other state in newState
-
-
   function completeNavigation(location, newState) {
     var _location$state, _location$state2;
-
     // Deduce if we're in a loading/actionReload state:
     // - We have committed actionData in the store
     // - The current navigation was a mutation submission
@@ -1743,7 +1528,6 @@ function createRouter(init) {
     // - The location being loaded is not the result of a redirect
     let isActionReload = state.actionData != null && state.navigation.formMethod != null && isMutationMethod(state.navigation.formMethod) && state.navigation.state === "loading" && ((_location$state = location.state) == null ? void 0 : _location$state._isRedirect) !== true;
     let actionData;
-
     if (newState.actionData) {
       if (Object.keys(newState.actionData).length > 0) {
         actionData = newState.actionData;
@@ -1757,25 +1541,21 @@ function createRouter(init) {
     } else {
       // Clear actionData on any other completed navigations
       actionData = null;
-    } // Always preserve any existing loaderData from re-used routes
-
-
-    let loaderData = newState.loaderData ? mergeLoaderData(state.loaderData, newState.loaderData, newState.matches || [], newState.errors) : state.loaderData; // On a successful navigation we can assume we got through all blockers
+    }
+    // Always preserve any existing loaderData from re-used routes
+    let loaderData = newState.loaderData ? mergeLoaderData(state.loaderData, newState.loaderData, newState.matches || [], newState.errors) : state.loaderData;
+    // On a successful navigation we can assume we got through all blockers
     // so we can start fresh
-
     for (let [key] of blockerFunctions) {
       deleteBlocker(key);
-    } // Always respect the user flag.  Otherwise don't reset on mutation
+    }
+    // Always respect the user flag.  Otherwise don't reset on mutation
     // submission navigations unless they redirect
-
-
     let preventScrollReset = pendingPreventScrollReset === true || state.navigation.formMethod != null && isMutationMethod(state.navigation.formMethod) && ((_location$state2 = location.state) == null ? void 0 : _location$state2._isRedirect) !== true;
-
     if (inFlightDataRoutes) {
       dataRoutes = inFlightDataRoutes;
       inFlightDataRoutes = undefined;
     }
-
     updateState(_extends({}, newState, {
       actionData,
       loaderData,
@@ -1788,30 +1568,26 @@ function createRouter(init) {
       preventScrollReset,
       blockers: new Map(state.blockers)
     }));
-
     if (isUninterruptedRevalidation) ; else if (pendingAction === Action.Pop) ; else if (pendingAction === Action.Push) {
       init.history.push(location, location.state);
     } else if (pendingAction === Action.Replace) {
       init.history.replace(location, location.state);
-    } // Reset stateful navigation vars
-
-
+    }
+    // Reset stateful navigation vars
     pendingAction = Action.Pop;
     pendingPreventScrollReset = false;
     isUninterruptedRevalidation = false;
     isRevalidationRequired = false;
     cancelledDeferredRoutes = [];
     cancelledFetcherLoads = [];
-  } // Trigger a navigation event, which can either be a numerical POP or a PUSH
+  }
+  // Trigger a navigation event, which can either be a numerical POP or a PUSH
   // replace with an optional submission
-
-
   async function navigate(to, opts) {
     if (typeof to === "number") {
       init.history.go(to);
       return;
     }
-
     let normalizedPath = normalizeTo(state.location, state.matches, basename, future.v7_prependBasename, to, opts == null ? void 0 : opts.fromRouteId, opts == null ? void 0 : opts.relative);
     let {
       path,
@@ -1819,16 +1595,15 @@ function createRouter(init) {
       error
     } = normalizeNavigateOptions(future.v7_normalizeFormMethod, false, normalizedPath, opts);
     let currentLocation = state.location;
-    let nextLocation = createLocation(state.location, path, opts && opts.state); // When using navigate as a PUSH/REPLACE we aren't reading an already-encoded
+    let nextLocation = createLocation(state.location, path, opts && opts.state);
+    // When using navigate as a PUSH/REPLACE we aren't reading an already-encoded
     // URL from window.location, so we need to encode it here so the behavior
     // remains the same as POP and non-data-router usages.  new URL() does all
     // the same encoding we'd get from a history.pushState/window.location read
     // without having to touch history
-
     nextLocation = _extends({}, nextLocation, init.history.encodeLocation(nextLocation));
     let userReplace = opts && opts.replace != null ? opts.replace : undefined;
     let historyAction = Action.Push;
-
     if (userReplace === true) {
       historyAction = Action.Replace;
     } else if (userReplace === false) ; else if (submission != null && isMutationMethod(submission.formMethod) && submission.formAction === state.location.pathname + state.location.search) {
@@ -1838,42 +1613,36 @@ function createRouter(init) {
       // action/loader this will be ignored and the redirect will be a PUSH
       historyAction = Action.Replace;
     }
-
     let preventScrollReset = opts && "preventScrollReset" in opts ? opts.preventScrollReset === true : undefined;
     let blockerKey = shouldBlockNavigation({
       currentLocation,
       nextLocation,
       historyAction
     });
-
     if (blockerKey) {
       // Put the blocker into a blocked state
       updateBlocker(blockerKey, {
         state: "blocked",
         location: nextLocation,
-
         proceed() {
           updateBlocker(blockerKey, {
             state: "proceeding",
             proceed: undefined,
             reset: undefined,
             location: nextLocation
-          }); // Send the same navigation through
-
+          });
+          // Send the same navigation through
           navigate(to, opts);
         },
-
         reset() {
           deleteBlocker(blockerKey);
           updateState({
             blockers: new Map(state.blockers)
           });
         }
-
       });
       return;
     }
-
     return await startNavigation(historyAction, nextLocation, {
       submission,
       // Send through the formData serialization error if we have one so we can
@@ -1882,43 +1651,39 @@ function createRouter(init) {
       preventScrollReset,
       replace: opts && opts.replace
     });
-  } // Revalidate all current loaders.  If a navigation is in progress or if this
+  }
+  // Revalidate all current loaders.  If a navigation is in progress or if this
   // is interrupted by a navigation, allow this to "succeed" by calling all
   // loaders during the next loader round
-
-
   function revalidate() {
     interruptActiveLoads();
     updateState({
       revalidation: "loading"
-    }); // If we're currently submitting an action, we don't need to start a new
+    });
+    // If we're currently submitting an action, we don't need to start a new
     // navigation, we'll just let the follow up loader execution call all loaders
-
     if (state.navigation.state === "submitting") {
       return;
-    } // If we're currently in an idle state, start a new navigation for the current
+    }
+    // If we're currently in an idle state, start a new navigation for the current
     // action/location and mark it as uninterrupted, which will skip the history
     // update in completeNavigation
-
-
     if (state.navigation.state === "idle") {
       startNavigation(state.historyAction, state.location, {
         startUninterruptedRevalidation: true
       });
       return;
-    } // Otherwise, if we're currently in a loading state, just start a new
+    }
+    // Otherwise, if we're currently in a loading state, just start a new
     // navigation to the navigation.location but do not trigger an uninterrupted
     // revalidation so that history correctly updates once the navigation completes
-
-
     startNavigation(pendingAction || state.historyAction, state.navigation.location, {
       overrideNavigation: state.navigation
     });
-  } // Start a navigation to the given action/location.  Can optionally provide a
+  }
+  // Start a navigation to the given action/location.  Can optionally provide a
   // overrideNavigation which will override the normalLoad in the case of a redirect
   // navigation
-
-
   async function startNavigation(historyAction, location, opts) {
     // Abort any in-progress navigations and start a new one. Unset any ongoing
     // uninterrupted revalidations unless told otherwise, since we want this
@@ -1926,15 +1691,15 @@ function createRouter(init) {
     pendingNavigationController && pendingNavigationController.abort();
     pendingNavigationController = null;
     pendingAction = historyAction;
-    isUninterruptedRevalidation = (opts && opts.startUninterruptedRevalidation) === true; // Save the current scroll position every time we start a new navigation,
+    isUninterruptedRevalidation = (opts && opts.startUninterruptedRevalidation) === true;
+    // Save the current scroll position every time we start a new navigation,
     // and track whether we should reset scroll on completion
-
     saveScrollPosition(state.location, state.matches);
     pendingPreventScrollReset = (opts && opts.preventScrollReset) === true;
     let routesToUse = inFlightDataRoutes || dataRoutes;
     let loadingNavigation = opts && opts.overrideNavigation;
-    let matches = matchRoutes(routesToUse, location, basename); // Short circuit with a 404 on the root error boundary if we match nothing
-
+    let matches = matchRoutes(routesToUse, location, basename);
+    // Short circuit with a 404 on the root error boundary if we match nothing
     if (!matches) {
       let error = getInternalRouterError(404, {
         pathname: location.pathname
@@ -1942,8 +1707,8 @@ function createRouter(init) {
       let {
         matches: notFoundMatches,
         route
-      } = getShortCircuitMatches(routesToUse); // Cancel all pending deferred on 404s since we don't keep any routes
-
+      } = getShortCircuitMatches(routesToUse);
+      // Cancel all pending deferred on 404s since we don't keep any routes
       cancelActiveDeferreds();
       completeNavigation(location, {
         matches: notFoundMatches,
@@ -1953,26 +1718,24 @@ function createRouter(init) {
         }
       });
       return;
-    } // Short circuit if it's only a hash change and not a mutation submission.
+    }
+    // Short circuit if it's only a hash change and not a revalidation or
+    // mutation submission.
+    //
     // Ignore on initial page loads because since the initial load will always
-    // be "same hash".
-    // For example, on /page#hash and submit a <Form method="post"> which will
-    // default to a navigation to /page
-
-
-    if (state.initialized && isHashChangeOnly(state.location, location) && !(opts && opts.submission && isMutationMethod(opts.submission.formMethod))) {
+    // be "same hash".  For example, on /page#hash and submit a <Form method="post">
+    // which will default to a navigation to /page
+    if (state.initialized && !isRevalidationRequired && isHashChangeOnly(state.location, location) && !(opts && opts.submission && isMutationMethod(opts.submission.formMethod))) {
       completeNavigation(location, {
         matches
       });
       return;
-    } // Create a controller/Request for this navigation
-
-
+    }
+    // Create a controller/Request for this navigation
     pendingNavigationController = new AbortController();
     let request = createClientSideRequest(init.history, location, pendingNavigationController.signal, opts && opts.submission);
     let pendingActionData;
     let pendingError;
-
     if (opts && opts.pendingError) {
       // If we have a pendingError, it means the user attempted a GET submission
       // with binary FormData so assign here and skip to handleLoaders.  That
@@ -1986,40 +1749,33 @@ function createRouter(init) {
       let actionOutput = await handleAction(request, location, opts.submission, matches, {
         replace: opts.replace
       });
-
       if (actionOutput.shortCircuited) {
         return;
       }
-
       pendingActionData = actionOutput.pendingActionData;
       pendingError = actionOutput.pendingActionError;
-
       let navigation = _extends({
         state: "loading",
         location
       }, opts.submission);
-
-      loadingNavigation = navigation; // Create a GET request for the loaders
-
+      loadingNavigation = navigation;
+      // Create a GET request for the loaders
       request = new Request(request.url, {
         signal: request.signal
       });
-    } // Call loaders
-
-
+    }
+    // Call loaders
     let {
       shortCircuited,
       loaderData,
       errors
     } = await handleLoaders(request, location, matches, loadingNavigation, opts && opts.submission, opts && opts.fetcherSubmission, opts && opts.replace, pendingActionData, pendingError);
-
     if (shortCircuited) {
       return;
-    } // Clean up now that the action/loaders have completed.  Don't clean up if
+    }
+    // Clean up now that the action/loaders have completed.  Don't clean up if
     // we short circuited because pendingNavigationController will have already
     // been assigned to a new controller for the next navigation
-
-
     pendingNavigationController = null;
     completeNavigation(location, _extends({
       matches
@@ -2029,25 +1785,22 @@ function createRouter(init) {
       loaderData,
       errors
     }));
-  } // Call the action matched by the leaf route for this navigation and handle
+  }
+  // Call the action matched by the leaf route for this navigation and handle
   // redirects/errors
-
-
   async function handleAction(request, location, submission, matches, opts) {
-    interruptActiveLoads(); // Put us in a submitting state
-
+    interruptActiveLoads();
+    // Put us in a submitting state
     let navigation = _extends({
       state: "submitting",
       location
     }, submission);
-
     updateState({
       navigation
-    }); // Call our action and get the result
-
+    });
+    // Call our action and get the result
     let result;
     let actionMatch = getTargetMatch(matches, location);
-
     if (!actionMatch.route.action && !actionMatch.route.lazy) {
       result = {
         type: ResultType.error,
@@ -2059,17 +1812,14 @@ function createRouter(init) {
       };
     } else {
       result = await callLoaderOrAction("action", request, actionMatch, matches, manifest, mapRouteProperties, basename);
-
       if (request.signal.aborted) {
         return {
           shortCircuited: true
         };
       }
     }
-
     if (isRedirectResult(result)) {
       let replace;
-
       if (opts && opts.replace != null) {
         replace = opts.replace;
       } else {
@@ -2078,7 +1828,6 @@ function createRouter(init) {
         // double back-buttons
         replace = result.location === state.location.pathname + state.location.search;
       }
-
       await startRedirectNavigation(state, result, {
         submission,
         replace
@@ -2087,19 +1836,17 @@ function createRouter(init) {
         shortCircuited: true
       };
     }
-
     if (isErrorResult(result)) {
       // Store off the pending error - we use it to determine which loaders
       // to call and will commit it when we complete the navigation
-      let boundaryMatch = findNearestBoundary(matches, actionMatch.route.id); // By default, all submissions are REPLACE navigations, but if the
+      let boundaryMatch = findNearestBoundary(matches, actionMatch.route.id);
+      // By default, all submissions are REPLACE navigations, but if the
       // action threw an error that'll be rendered in an errorElement, we fall
       // back to PUSH so that the user can use the back button to get back to
       // the pre-submission form location to try again
-
       if ((opts && opts.replace) !== true) {
         pendingAction = Action.Push;
       }
-
       return {
         // Send back an empty object we can use to clear out any prior actionData
         pendingActionData: {},
@@ -2108,26 +1855,22 @@ function createRouter(init) {
         }
       };
     }
-
     if (isDeferredResult(result)) {
       throw getInternalRouterError(400, {
         type: "defer-action"
       });
     }
-
     return {
       pendingActionData: {
         [actionMatch.route.id]: result.data
       }
     };
-  } // Call all applicable loaders for the given matches, handling redirects,
+  }
+  // Call all applicable loaders for the given matches, handling redirects,
   // errors, etc.
-
-
   async function handleLoaders(request, location, matches, overrideNavigation, submission, fetcherSubmission, replace, pendingActionData, pendingError) {
     // Figure out the right navigation we want to use for data loading
     let loadingNavigation = overrideNavigation;
-
     if (!loadingNavigation) {
       let navigation = _extends({
         state: "loading",
@@ -2137,12 +1880,10 @@ function createRouter(init) {
         formEncType: undefined,
         formData: undefined
       }, submission);
-
       loadingNavigation = navigation;
-    } // If this was a redirect from an action we don't have a "submission" but
+    }
+    // If this was a redirect from an action we don't have a "submission" but
     // we have it on the loading navigation so use that if available
-
-
     let activeSubmission = submission || fetcherSubmission ? submission || fetcherSubmission : loadingNavigation.formMethod && loadingNavigation.formAction && loadingNavigation.formData && loadingNavigation.formEncType ? {
       formMethod: loadingNavigation.formMethod,
       formAction: loadingNavigation.formAction,
@@ -2150,12 +1891,12 @@ function createRouter(init) {
       formEncType: loadingNavigation.formEncType
     } : undefined;
     let routesToUse = inFlightDataRoutes || dataRoutes;
-    let [matchesToLoad, revalidatingFetchers] = getMatchesToLoad(init.history, state, matches, activeSubmission, location, isRevalidationRequired, cancelledDeferredRoutes, cancelledFetcherLoads, fetchLoadMatches, routesToUse, basename, pendingActionData, pendingError); // Cancel pending deferreds for no-longer-matched routes or routes we're
+    let [matchesToLoad, revalidatingFetchers] = getMatchesToLoad(init.history, state, matches, activeSubmission, location, isRevalidationRequired, cancelledDeferredRoutes, cancelledFetcherLoads, fetchLoadMatches, routesToUse, basename, pendingActionData, pendingError);
+    // Cancel pending deferreds for no-longer-matched routes or routes we're
     // about to reload.  Note that if this is an action reload we would have
     // already cancelled all pending deferreds so this would be a no-op
-
-    cancelActiveDeferreds(routeId => !(matches && matches.some(m => m.route.id === routeId)) || matchesToLoad && matchesToLoad.some(m => m.route.id === routeId)); // Short circuit if we have no loaders to run
-
+    cancelActiveDeferreds(routeId => !(matches && matches.some(m => m.route.id === routeId)) || matchesToLoad && matchesToLoad.some(m => m.route.id === routeId));
+    // Short circuit if we have no loaders to run
     if (matchesToLoad.length === 0 && revalidatingFetchers.length === 0) {
       let updatedFetchers = markFetchRedirectsDone();
       completeNavigation(location, _extends({
@@ -2171,12 +1912,11 @@ function createRouter(init) {
       return {
         shortCircuited: true
       };
-    } // If this is an uninterrupted revalidation, we remain in our current idle
+    }
+    // If this is an uninterrupted revalidation, we remain in our current idle
     // state.  If not, we need to switch to our loading state and load data,
     // preserving any new action data or existing action data (in the case of
     // a revalidation interrupting an actionReload)
-
-
     if (!isUninterruptedRevalidation) {
       revalidatingFetchers.forEach(rf => {
         let fetcher = state.fetchers.get(rf.key);
@@ -2202,7 +1942,6 @@ function createRouter(init) {
         fetchers: new Map(state.fetchers)
       } : {}));
     }
-
     pendingNavigationLoadId = ++incrementingLoadId;
     revalidatingFetchers.forEach(rf => {
       if (rf.controller) {
@@ -2211,37 +1950,31 @@ function createRouter(init) {
         // triggered the revalidation
         fetchControllers.set(rf.key, rf.controller);
       }
-    }); // Proxy navigation abort through to revalidation fetchers
-
+    });
+    // Proxy navigation abort through to revalidation fetchers
     let abortPendingFetchRevalidations = () => revalidatingFetchers.forEach(f => abortFetcher(f.key));
-
     if (pendingNavigationController) {
       pendingNavigationController.signal.addEventListener("abort", abortPendingFetchRevalidations);
     }
-
     let {
       results,
       loaderResults,
       fetcherResults
     } = await callLoadersAndMaybeResolveData(state.matches, matches, matchesToLoad, revalidatingFetchers, request);
-
     if (request.signal.aborted) {
       return {
         shortCircuited: true
       };
-    } // Clean up _after_ loaders have completed.  Don't clean up if we short
+    }
+    // Clean up _after_ loaders have completed.  Don't clean up if we short
     // circuited because fetchControllers would have been aborted and
     // reassigned to new controllers for the next navigation
-
-
     if (pendingNavigationController) {
       pendingNavigationController.signal.removeEventListener("abort", abortPendingFetchRevalidations);
     }
-
-    revalidatingFetchers.forEach(rf => fetchControllers.delete(rf.key)); // If any loaders returned a redirect Response, start a new REPLACE navigation
-
+    revalidatingFetchers.forEach(rf => fetchControllers.delete(rf.key));
+    // If any loaders returned a redirect Response, start a new REPLACE navigation
     let redirect = findRedirect(results);
-
     if (redirect) {
       await startRedirectNavigation(state, redirect, {
         replace
@@ -2249,14 +1982,13 @@ function createRouter(init) {
       return {
         shortCircuited: true
       };
-    } // Process and commit output from loaders
-
-
+    }
+    // Process and commit output from loaders
     let {
       loaderData,
       errors
-    } = processLoaderData(state, matches, matchesToLoad, loaderResults, pendingError, revalidatingFetchers, fetcherResults, activeDeferreds); // Wire up subscribers to update loaderData as promises settle
-
+    } = processLoaderData(state, matches, matchesToLoad, loaderResults, pendingError, revalidatingFetchers, fetcherResults, activeDeferreds);
+    // Wire up subscribers to update loaderData as promises settle
     activeDeferreds.forEach((deferredData, routeId) => {
       deferredData.subscribe(aborted => {
         // Note: No need to updateState here since the TrackedPromise on
@@ -2277,56 +2009,47 @@ function createRouter(init) {
       fetchers: new Map(state.fetchers)
     } : {});
   }
-
   function getFetcher(key) {
     return state.fetchers.get(key) || IDLE_FETCHER;
-  } // Trigger a fetcher load/submit for the given fetcher key
-
-
+  }
+  // Trigger a fetcher load/submit for the given fetcher key
   function fetch(key, routeId, href, opts) {
     if (isServer) {
       throw new Error("router.fetch() was called during the server render, but it shouldn't be. " + "You are likely calling a useFetcher() method in the body of your component. " + "Try moving it to a useEffect or a callback.");
     }
-
     if (fetchControllers.has(key)) abortFetcher(key);
     let routesToUse = inFlightDataRoutes || dataRoutes;
     let normalizedPath = normalizeTo(state.location, state.matches, basename, future.v7_prependBasename, href, routeId, opts == null ? void 0 : opts.relative);
     let matches = matchRoutes(routesToUse, normalizedPath, basename);
-
     if (!matches) {
       setFetcherError(key, routeId, getInternalRouterError(404, {
         pathname: normalizedPath
       }));
       return;
     }
-
     let {
       path,
       submission
     } = normalizeNavigateOptions(future.v7_normalizeFormMethod, true, normalizedPath, opts);
     let match = getTargetMatch(matches, path);
     pendingPreventScrollReset = (opts && opts.preventScrollReset) === true;
-
     if (submission && isMutationMethod(submission.formMethod)) {
       handleFetcherAction(key, routeId, path, match, matches, submission);
       return;
-    } // Store off the match so we can call it's shouldRevalidate on subsequent
+    }
+    // Store off the match so we can call it's shouldRevalidate on subsequent
     // revalidations
-
-
     fetchLoadMatches.set(key, {
       routeId,
       path
     });
     handleFetcherLoader(key, routeId, path, match, matches, submission);
-  } // Call the action for the matched fetcher.submit(), and then handle redirects,
+  }
+  // Call the action for the matched fetcher.submit(), and then handle redirects,
   // errors, and revalidation
-
-
   async function handleFetcherAction(key, routeId, path, match, requestMatches, submission) {
     interruptActiveLoads();
     fetchLoadMatches.delete(key);
-
     if (!match.route.action && !match.route.lazy) {
       let error = getInternalRouterError(405, {
         method: submission.formMethod,
@@ -2335,49 +2058,41 @@ function createRouter(init) {
       });
       setFetcherError(key, routeId, error);
       return;
-    } // Put this fetcher into it's submitting state
-
-
+    }
+    // Put this fetcher into it's submitting state
     let existingFetcher = state.fetchers.get(key);
-
     let fetcher = _extends({
       state: "submitting"
     }, submission, {
       data: existingFetcher && existingFetcher.data,
       " _hasFetcherDoneAnything ": true
     });
-
     state.fetchers.set(key, fetcher);
     updateState({
       fetchers: new Map(state.fetchers)
-    }); // Call the action for the fetcher
-
+    });
+    // Call the action for the fetcher
     let abortController = new AbortController();
     let fetchRequest = createClientSideRequest(init.history, path, abortController.signal, submission);
     fetchControllers.set(key, abortController);
     let actionResult = await callLoaderOrAction("action", fetchRequest, match, requestMatches, manifest, mapRouteProperties, basename);
-
     if (fetchRequest.signal.aborted) {
       // We can delete this so long as we weren't aborted by ou our own fetcher
       // re-submit which would have put _new_ controller is in fetchControllers
       if (fetchControllers.get(key) === abortController) {
         fetchControllers.delete(key);
       }
-
       return;
     }
-
     if (isRedirectResult(actionResult)) {
       fetchControllers.delete(key);
       fetchRedirectIds.add(key);
-
       let loadingFetcher = _extends({
         state: "loading"
       }, submission, {
         data: undefined,
         " _hasFetcherDoneAnything ": true
       });
-
       state.fetchers.set(key, loadingFetcher);
       updateState({
         fetchers: new Map(state.fetchers)
@@ -2386,22 +2101,19 @@ function createRouter(init) {
         submission,
         isFetchActionRedirect: true
       });
-    } // Process any non-redirect errors thrown
-
-
+    }
+    // Process any non-redirect errors thrown
     if (isErrorResult(actionResult)) {
       setFetcherError(key, routeId, actionResult.error);
       return;
     }
-
     if (isDeferredResult(actionResult)) {
       throw getInternalRouterError(400, {
         type: "defer-action"
       });
-    } // Start the data load for current matches, or the next location if we're
+    }
+    // Start the data load for current matches, or the next location if we're
     // in the middle of a navigation
-
-
     let nextLocation = state.navigation.location || state.location;
     let revalidationRequest = createClientSideRequest(init.history, nextLocation, abortController.signal);
     let routesToUse = inFlightDataRoutes || dataRoutes;
@@ -2409,22 +2121,20 @@ function createRouter(init) {
     invariant(matches, "Didn't find any matches after fetcher action");
     let loadId = ++incrementingLoadId;
     fetchReloadIds.set(key, loadId);
-
     let loadFetcher = _extends({
       state: "loading",
       data: actionResult.data
     }, submission, {
       " _hasFetcherDoneAnything ": true
     });
-
     state.fetchers.set(key, loadFetcher);
     let [matchesToLoad, revalidatingFetchers] = getMatchesToLoad(init.history, state, matches, submission, nextLocation, isRevalidationRequired, cancelledDeferredRoutes, cancelledFetcherLoads, fetchLoadMatches, routesToUse, basename, {
       [match.route.id]: actionResult.data
     }, undefined // No need to send through errors since we short circuit above
-    ); // Put all revalidating fetchers into the loading state, except for the
+    );
+    // Put all revalidating fetchers into the loading state, except for the
     // current fetcher which we want to keep in it's current loading state which
     // contains it's action submission info + action data
-
     revalidatingFetchers.filter(rf => rf.key !== key).forEach(rf => {
       let staleKey = rf.key;
       let existingFetcher = state.fetchers.get(staleKey);
@@ -2438,7 +2148,6 @@ function createRouter(init) {
         " _hasFetcherDoneAnything ": true
       };
       state.fetchers.set(staleKey, revalidatingFetcher);
-
       if (rf.controller) {
         fetchControllers.set(staleKey, rf.controller);
       }
@@ -2446,49 +2155,47 @@ function createRouter(init) {
     updateState({
       fetchers: new Map(state.fetchers)
     });
-
     let abortPendingFetchRevalidations = () => revalidatingFetchers.forEach(rf => abortFetcher(rf.key));
-
     abortController.signal.addEventListener("abort", abortPendingFetchRevalidations);
     let {
       results,
       loaderResults,
       fetcherResults
     } = await callLoadersAndMaybeResolveData(state.matches, matches, matchesToLoad, revalidatingFetchers, revalidationRequest);
-
     if (abortController.signal.aborted) {
       return;
     }
-
     abortController.signal.removeEventListener("abort", abortPendingFetchRevalidations);
     fetchReloadIds.delete(key);
     fetchControllers.delete(key);
     revalidatingFetchers.forEach(r => fetchControllers.delete(r.key));
     let redirect = findRedirect(results);
-
     if (redirect) {
       return startRedirectNavigation(state, redirect);
-    } // Process and commit output from loaders
-
-
+    }
+    // Process and commit output from loaders
     let {
       loaderData,
       errors
     } = processLoaderData(state, state.matches, matchesToLoad, loaderResults, undefined, revalidatingFetchers, fetcherResults, activeDeferreds);
-    let doneFetcher = {
-      state: "idle",
-      data: actionResult.data,
-      formMethod: undefined,
-      formAction: undefined,
-      formEncType: undefined,
-      formData: undefined,
-      " _hasFetcherDoneAnything ": true
-    };
-    state.fetchers.set(key, doneFetcher);
-    let didAbortFetchLoads = abortStaleFetchLoads(loadId); // If we are currently in a navigation loading state and this fetcher is
+    // Since we let revalidations complete even if the submitting fetcher was
+    // deleted, only put it back to idle if it hasn't been deleted
+    if (state.fetchers.has(key)) {
+      let doneFetcher = {
+        state: "idle",
+        data: actionResult.data,
+        formMethod: undefined,
+        formAction: undefined,
+        formEncType: undefined,
+        formData: undefined,
+        " _hasFetcherDoneAnything ": true
+      };
+      state.fetchers.set(key, doneFetcher);
+    }
+    let didAbortFetchLoads = abortStaleFetchLoads(loadId);
+    // If we are currently in a navigation loading state and this fetcher is
     // more recent than the navigation, we want the newer data so abort the
     // navigation and complete it with the fetcher data
-
     if (state.navigation.state === "loading" && loadId > pendingNavigationLoadId) {
       invariant(pendingAction, "Expected pending action");
       pendingNavigationController && pendingNavigationController.abort();
@@ -2505,17 +2212,16 @@ function createRouter(init) {
       updateState(_extends({
         errors,
         loaderData: mergeLoaderData(state.loaderData, loaderData, matches, errors)
-      }, didAbortFetchLoads ? {
+      }, didAbortFetchLoads || revalidatingFetchers.length > 0 ? {
         fetchers: new Map(state.fetchers)
       } : {}));
       isRevalidationRequired = false;
     }
-  } // Call the matched loader for fetcher.load(), handling redirects, errors, etc.
-
-
+  }
+  // Call the matched loader for fetcher.load(), handling redirects, errors, etc.
   async function handleFetcherLoader(key, routeId, path, match, matches, submission) {
-    let existingFetcher = state.fetchers.get(key); // Put this fetcher into it's loading state
-
+    let existingFetcher = state.fetchers.get(key);
+    // Put this fetcher into it's loading state
     let loadingFetcher = _extends({
       state: "loading",
       formMethod: undefined,
@@ -2526,48 +2232,43 @@ function createRouter(init) {
       data: existingFetcher && existingFetcher.data,
       " _hasFetcherDoneAnything ": true
     });
-
     state.fetchers.set(key, loadingFetcher);
     updateState({
       fetchers: new Map(state.fetchers)
-    }); // Call the loader for this fetcher route match
-
+    });
+    // Call the loader for this fetcher route match
     let abortController = new AbortController();
     let fetchRequest = createClientSideRequest(init.history, path, abortController.signal);
     fetchControllers.set(key, abortController);
-    let result = await callLoaderOrAction("loader", fetchRequest, match, matches, manifest, mapRouteProperties, basename); // Deferred isn't supported for fetcher loads, await everything and treat it
+    let result = await callLoaderOrAction("loader", fetchRequest, match, matches, manifest, mapRouteProperties, basename);
+    // Deferred isn't supported for fetcher loads, await everything and treat it
     // as a normal load.  resolveDeferredData will return undefined if this
     // fetcher gets aborted, so we just leave result untouched and short circuit
     // below if that happens
-
     if (isDeferredResult(result)) {
       result = (await resolveDeferredData(result, fetchRequest.signal, true)) || result;
-    } // We can delete this so long as we weren't aborted by our our own fetcher
+    }
+    // We can delete this so long as we weren't aborted by our our own fetcher
     // re-load which would have put _new_ controller is in fetchControllers
-
-
     if (fetchControllers.get(key) === abortController) {
       fetchControllers.delete(key);
     }
-
     if (fetchRequest.signal.aborted) {
       return;
-    } // If the loader threw a redirect Response, start a new REPLACE navigation
-
-
+    }
+    // If the loader threw a redirect Response, start a new REPLACE navigation
     if (isRedirectResult(result)) {
       fetchRedirectIds.add(key);
       await startRedirectNavigation(state, result);
       return;
-    } // Process any non-redirect errors thrown
-
-
+    }
+    // Process any non-redirect errors thrown
     if (isErrorResult(result)) {
       let boundaryMatch = findNearestBoundary(state.matches, routeId);
-      state.fetchers.delete(key); // TODO: In remix, this would reset to IDLE_NAVIGATION if it was a catch -
+      state.fetchers.delete(key);
+      // TODO: In remix, this would reset to IDLE_NAVIGATION if it was a catch -
       // do we need to behave any differently with our non-redirect errors?
       // What if it was a non-redirect Response?
-
       updateState({
         fetchers: new Map(state.fetchers),
         errors: {
@@ -2576,9 +2277,8 @@ function createRouter(init) {
       });
       return;
     }
-
-    invariant(!isDeferredResult(result), "Unhandled fetcher deferred data"); // Put the fetcher back into an idle state
-
+    invariant(!isDeferredResult(result), "Unhandled fetcher deferred data");
+    // Put the fetcher back into an idle state
     let doneFetcher = {
       state: "idle",
       data: result.data,
@@ -2612,57 +2312,47 @@ function createRouter(init) {
    * actually touch history until we've processed redirects, so we just use
    * the history action from the original navigation (PUSH or REPLACE).
    */
-
-
   async function startRedirectNavigation(state, redirect, _temp) {
-    var _window;
-
     let {
       submission,
       replace,
       isFetchActionRedirect
     } = _temp === void 0 ? {} : _temp;
-
     if (redirect.revalidate) {
       isRevalidationRequired = true;
     }
-
     let redirectLocation = createLocation(state.location, redirect.location, // TODO: This can be removed once we get rid of useTransition in Remix v2
     _extends({
       _isRedirect: true
     }, isFetchActionRedirect ? {
       _isFetchActionRedirect: true
     } : {}));
-    invariant(redirectLocation, "Expected a location on the redirect navigation"); // Check if this an absolute external redirect that goes to a new origin
-
-    if (ABSOLUTE_URL_REGEX.test(redirect.location) && isBrowser && typeof ((_window = window) == null ? void 0 : _window.location) !== "undefined") {
+    invariant(redirectLocation, "Expected a location on the redirect navigation");
+    // Check if this an absolute external redirect that goes to a new origin
+    if (ABSOLUTE_URL_REGEX.test(redirect.location) && isBrowser) {
       let url = init.history.createURL(redirect.location);
       let isDifferentBasename = stripBasename(url.pathname, basename) == null;
-
-      if (window.location.origin !== url.origin || isDifferentBasename) {
+      if (routerWindow.location.origin !== url.origin || isDifferentBasename) {
         if (replace) {
-          window.location.replace(redirect.location);
+          routerWindow.location.replace(redirect.location);
         } else {
-          window.location.assign(redirect.location);
+          routerWindow.location.assign(redirect.location);
         }
-
         return;
       }
-    } // There's no need to abort on redirects, since we don't detect the
+    }
+    // There's no need to abort on redirects, since we don't detect the
     // redirect until the action/loaders have settled
-
-
     pendingNavigationController = null;
-    let redirectHistoryAction = replace === true ? Action.Replace : Action.Push; // Use the incoming submission if provided, fallback on the active one in
+    let redirectHistoryAction = replace === true ? Action.Replace : Action.Push;
+    // Use the incoming submission if provided, fallback on the active one in
     // state.navigation
-
     let {
       formMethod,
       formAction,
       formEncType,
       formData
     } = state.navigation;
-
     if (!submission && formMethod && formAction && formData && formEncType) {
       submission = {
         formMethod,
@@ -2670,11 +2360,10 @@ function createRouter(init) {
         formEncType,
         formData
       };
-    } // If this was a 307/308 submission we want to preserve the HTTP method and
+    }
+    // If this was a 307/308 submission we want to preserve the HTTP method and
     // re-submit the GET/POST/PUT/PATCH/DELETE as a submission navigation to the
     // redirected location
-
-
     if (redirectPreserveMethodStatusCodes.has(redirect.status) && submission && isMutationMethod(submission.formMethod)) {
       await startNavigation(redirectHistoryAction, redirectLocation, {
         submission: _extends({}, submission, {
@@ -2716,7 +2405,6 @@ function createRouter(init) {
       });
     }
   }
-
   async function callLoadersAndMaybeResolveData(currentMatches, matches, matchesToLoad, fetchersToLoad, request) {
     // Call all navigation loaders and revalidating fetcher loaders in parallel,
     // then slice off the results into separate arrays so we can handle them
@@ -2743,14 +2431,13 @@ function createRouter(init) {
       fetcherResults
     };
   }
-
   function interruptActiveLoads() {
     // Every interruption triggers a revalidation
-    isRevalidationRequired = true; // Cancel pending route-level deferreds and mark cancelled routes for
+    isRevalidationRequired = true;
+    // Cancel pending route-level deferreds and mark cancelled routes for
     // revalidation
-
-    cancelledDeferredRoutes.push(...cancelActiveDeferreds()); // Abort in-flight fetcher loads
-
+    cancelledDeferredRoutes.push(...cancelActiveDeferreds());
+    // Abort in-flight fetcher loads
     fetchLoadMatches.forEach((_, key) => {
       if (fetchControllers.has(key)) {
         cancelledFetcherLoads.push(key);
@@ -2758,7 +2445,6 @@ function createRouter(init) {
       }
     });
   }
-
   function setFetcherError(key, routeId, error) {
     let boundaryMatch = findNearestBoundary(state.matches, routeId);
     deleteFetcher(key);
@@ -2769,22 +2455,25 @@ function createRouter(init) {
       fetchers: new Map(state.fetchers)
     });
   }
-
   function deleteFetcher(key) {
-    if (fetchControllers.has(key)) abortFetcher(key);
+    let fetcher = state.fetchers.get(key);
+    // Don't abort the controller if this is a deletion of a fetcher.submit()
+    // in it's loading phase since - we don't want to abort the corresponding
+    // revalidation and want them to complete and land
+    if (fetchControllers.has(key) && !(fetcher && fetcher.state === "loading" && fetchReloadIds.has(key))) {
+      abortFetcher(key);
+    }
     fetchLoadMatches.delete(key);
     fetchReloadIds.delete(key);
     fetchRedirectIds.delete(key);
     state.fetchers.delete(key);
   }
-
   function abortFetcher(key) {
     let controller = fetchControllers.get(key);
     invariant(controller, "Expected fetch controller: " + key);
     controller.abort();
     fetchControllers.delete(key);
   }
-
   function markFetchersDone(keys) {
     for (let key of keys) {
       let fetcher = getFetcher(key);
@@ -2800,34 +2489,27 @@ function createRouter(init) {
       state.fetchers.set(key, doneFetcher);
     }
   }
-
   function markFetchRedirectsDone() {
     let doneKeys = [];
     let updatedFetchers = false;
-
     for (let key of fetchRedirectIds) {
       let fetcher = state.fetchers.get(key);
       invariant(fetcher, "Expected fetcher: " + key);
-
       if (fetcher.state === "loading") {
         fetchRedirectIds.delete(key);
         doneKeys.push(key);
         updatedFetchers = true;
       }
     }
-
     markFetchersDone(doneKeys);
     return updatedFetchers;
   }
-
   function abortStaleFetchLoads(landedId) {
     let yeetedKeys = [];
-
     for (let [key, id] of fetchReloadIds) {
       if (id < landedId) {
         let fetcher = state.fetchers.get(key);
         invariant(fetcher, "Expected fetcher: " + key);
-
         if (fetcher.state === "loading") {
           abortFetcher(key);
           fetchReloadIds.delete(key);
@@ -2835,67 +2517,55 @@ function createRouter(init) {
         }
       }
     }
-
     markFetchersDone(yeetedKeys);
     return yeetedKeys.length > 0;
   }
-
   function getBlocker(key, fn) {
     let blocker = state.blockers.get(key) || IDLE_BLOCKER;
-
     if (blockerFunctions.get(key) !== fn) {
       blockerFunctions.set(key, fn);
     }
-
     return blocker;
   }
-
   function deleteBlocker(key) {
     state.blockers.delete(key);
     blockerFunctions.delete(key);
-  } // Utility function to update blockers, ensuring valid state transitions
-
-
+  }
+  // Utility function to update blockers, ensuring valid state transitions
   function updateBlocker(key, newBlocker) {
-    let blocker = state.blockers.get(key) || IDLE_BLOCKER; // Poor mans state machine :)
+    let blocker = state.blockers.get(key) || IDLE_BLOCKER;
+    // Poor mans state machine :)
     // https://mermaid.live/edit#pako:eNqVkc9OwzAMxl8l8nnjAYrEtDIOHEBIgwvKJTReGy3_lDpIqO27k6awMG0XcrLlnz87nwdonESogKXXBuE79rq75XZO3-yHds0RJVuv70YrPlUrCEe2HfrORS3rubqZfuhtpg5C9wk5tZ4VKcRUq88q9Z8RS0-48cE1iHJkL0ugbHuFLus9L6spZy8nX9MP2CNdomVaposqu3fGayT8T8-jJQwhepo_UtpgBQaDEUom04dZhAN1aJBDlUKJBxE1ceB2Smj0Mln-IBW5AFU2dwUiktt_2Qaq2dBfaKdEup85UV7Yd-dKjlnkabl2Pvr0DTkTreM
-
     invariant(blocker.state === "unblocked" && newBlocker.state === "blocked" || blocker.state === "blocked" && newBlocker.state === "blocked" || blocker.state === "blocked" && newBlocker.state === "proceeding" || blocker.state === "blocked" && newBlocker.state === "unblocked" || blocker.state === "proceeding" && newBlocker.state === "unblocked", "Invalid blocker state transition: " + blocker.state + " -> " + newBlocker.state);
     state.blockers.set(key, newBlocker);
     updateState({
       blockers: new Map(state.blockers)
     });
   }
-
   function shouldBlockNavigation(_ref2) {
     let {
       currentLocation,
       nextLocation,
       historyAction
     } = _ref2;
-
     if (blockerFunctions.size === 0) {
       return;
-    } // We ony support a single active blocker at the moment since we don't have
+    }
+    // We ony support a single active blocker at the moment since we don't have
     // any compelling use cases for multi-blocker yet
-
-
     if (blockerFunctions.size > 1) {
       warning(false, "A router only supports one blocker at a time");
     }
-
     let entries = Array.from(blockerFunctions.entries());
     let [blockerKey, blockerFunction] = entries[entries.length - 1];
     let blocker = state.blockers.get(blockerKey);
-
     if (blocker && blocker.state === "proceeding") {
       // If the blocker is currently proceeding, we don't need to re-check
       // it and can let this navigation continue
       return;
-    } // At this point, we know we're unblocked/blocked so we need to check the
+    }
+    // At this point, we know we're unblocked/blocked so we need to check the
     // user-provided blocker function
-
-
     if (blockerFunction({
       currentLocation,
       nextLocation,
@@ -2904,7 +2574,6 @@ function createRouter(init) {
       return blockerKey;
     }
   }
-
   function cancelActiveDeferreds(predicate) {
     let cancelledRouteIds = [];
     activeDeferreds.forEach((dfd, routeId) => {
@@ -2918,37 +2587,31 @@ function createRouter(init) {
       }
     });
     return cancelledRouteIds;
-  } // Opt in to capturing and reporting scroll positions during navigations,
+  }
+  // Opt in to capturing and reporting scroll positions during navigations,
   // used by the <ScrollRestoration> component
-
-
   function enableScrollRestoration(positions, getPosition, getKey) {
     savedScrollPositions = positions;
     getScrollPosition = getPosition;
-
-    getScrollRestorationKey = getKey || (location => location.key); // Perform initial hydration scroll restoration, since we miss the boat on
+    getScrollRestorationKey = getKey || (location => location.key);
+    // Perform initial hydration scroll restoration, since we miss the boat on
     // the initial updateState() because we've not yet rendered <ScrollRestoration/>
     // and therefore have no savedScrollPositions available
-
-
     if (!initialScrollRestored && state.navigation === IDLE_NAVIGATION) {
       initialScrollRestored = true;
       let y = getSavedScrollPosition(state.location, state.matches);
-
       if (y != null) {
         updateState({
           restoreScrollPosition: y
         });
       }
     }
-
     return () => {
       savedScrollPositions = null;
       getScrollPosition = null;
       getScrollRestorationKey = null;
     };
   }
-
   function saveScrollPosition(location, matches) {
     if (savedScrollPositions && getScrollRestorationKey && getScrollPosition) {
       let userMatches = matches.map(m => createUseMatchesMatch(m, state.loaderData));
@@ -2956,39 +2619,31 @@ function createRouter(init) {
       savedScrollPositions[key] = getScrollPosition();
     }
   }
-
   function getSavedScrollPosition(location, matches) {
     if (savedScrollPositions && getScrollRestorationKey && getScrollPosition) {
       let userMatches = matches.map(m => createUseMatchesMatch(m, state.loaderData));
       let key = getScrollRestorationKey(location, userMatches) || location.key;
       let y = savedScrollPositions[key];
-
       if (typeof y === "number") {
         return y;
       }
     }
-
     return null;
   }
-
   function _internalSetRoutes(newRoutes) {
     manifest = {};
     inFlightDataRoutes = convertRoutesToDataRoutes(newRoutes, mapRouteProperties, undefined, manifest);
   }
-
   router = {
     get basename() {
       return basename;
     },
-
     get state() {
       return state;
     },
-
     get routes() {
       return dataRoutes;
     },
-
     initialize,
     subscribe,
     enableScrollRestoration,
@@ -3011,31 +2666,28 @@ function createRouter(init) {
     _internalSetRoutes
   };
   return router;
-} //#endregion
+}
+//#endregion
 ////////////////////////////////////////////////////////////////////////////////
 //#region createStaticHandler
 ////////////////////////////////////////////////////////////////////////////////
-
 const UNSAFE_DEFERRED_SYMBOL = Symbol("deferred");
 function createStaticHandler(routes, opts) {
   invariant(routes.length > 0, "You must provide a non-empty routes array to createStaticHandler");
   let manifest = {};
   let basename = (opts ? opts.basename : null) || "/";
   let mapRouteProperties;
-
   if (opts != null && opts.mapRouteProperties) {
     mapRouteProperties = opts.mapRouteProperties;
   } else if (opts != null && opts.detectErrorBoundary) {
     // If they are still using the deprecated version, wrap it with the new API
     let detectErrorBoundary = opts.detectErrorBoundary;
-
     mapRouteProperties = route => ({
       hasErrorBoundary: detectErrorBoundary(route)
     });
   } else {
     mapRouteProperties = defaultMapRouteProperties;
   }
-
   let dataRoutes = convertRoutesToDataRoutes(routes, mapRouteProperties, undefined, manifest);
   /**
    * The query() method is intended for document requests, in which we want to
@@ -3056,7 +2708,6 @@ function createStaticHandler(routes, opts) {
    * propagate that out and return the raw Response so the HTTP server can
    * return it directly.
    */
-
   async function query(request, _temp2) {
     let {
       requestContext
@@ -3064,8 +2715,8 @@ function createStaticHandler(routes, opts) {
     let url = new URL(request.url);
     let method = request.method;
     let location = createLocation("", createPath(url), null, "default");
-    let matches = matchRoutes(dataRoutes, location, basename); // SSR supports HEAD requests while SPA doesn't
-
+    let matches = matchRoutes(dataRoutes, location, basename);
+    // SSR supports HEAD requests while SPA doesn't
     if (!isValidMethod(method) && method !== "HEAD") {
       let error = getInternalRouterError(405, {
         method
@@ -3111,16 +2762,13 @@ function createStaticHandler(routes, opts) {
         activeDeferreds: null
       };
     }
-
     let result = await queryImpl(request, location, matches, requestContext);
-
     if (isResponse(result)) {
       return result;
-    } // When returning StaticHandlerContext, we patch back in the location here
+    }
+    // When returning StaticHandlerContext, we patch back in the location here
     // since we need it for React Context.  But this helps keep our submit and
     // loadRouteData operating on a Request instead of a Location
-
-
     return _extends({
       location,
       basename
@@ -3146,8 +2794,6 @@ function createStaticHandler(routes, opts) {
    * code.  Examples here are 404 and 405 errors that occur prior to reaching
    * any user-defined loaders.
    */
-
-
   async function queryRoute(request, _temp3) {
     let {
       routeId,
@@ -3156,8 +2802,8 @@ function createStaticHandler(routes, opts) {
     let url = new URL(request.url);
     let method = request.method;
     let location = createLocation("", createPath(url), null, "default");
-    let matches = matchRoutes(dataRoutes, location, basename); // SSR supports HEAD requests while SPA doesn't
-
+    let matches = matchRoutes(dataRoutes, location, basename);
+    // SSR supports HEAD requests while SPA doesn't
     if (!isValidMethod(method) && method !== "HEAD" && method !== "OPTIONS") {
       throw getInternalRouterError(405, {
         method
@@ -3167,9 +2813,7 @@ function createStaticHandler(routes, opts) {
         pathname: location.pathname
       });
     }
-
     let match = routeId ? matches.find(m => m.route.id === routeId) : getTargetMatch(matches, location);
-
     if (routeId && !match) {
       throw getInternalRouterError(403, {
         pathname: location.pathname,
@@ -3181,52 +2825,39 @@ function createStaticHandler(routes, opts) {
         pathname: location.pathname
       });
     }
-
     let result = await queryImpl(request, location, matches, requestContext, match);
-
     if (isResponse(result)) {
       return result;
     }
-
     let error = result.errors ? Object.values(result.errors)[0] : undefined;
-
     if (error !== undefined) {
       // If we got back result.errors, that means the loader/action threw
       // _something_ that wasn't a Response, but it's not guaranteed/required
       // to be an `instanceof Error` either, so we have to use throw here to
       // preserve the "error" state outside of queryImpl.
       throw error;
-    } // Pick off the right state value to return
-
-
+    }
+    // Pick off the right state value to return
     if (result.actionData) {
       return Object.values(result.actionData)[0];
     }
-
     if (result.loaderData) {
       var _result$activeDeferre;
-
       let data = Object.values(result.loaderData)[0];
-
       if ((_result$activeDeferre = result.activeDeferreds) != null && _result$activeDeferre[match.route.id]) {
         data[UNSAFE_DEFERRED_SYMBOL] = result.activeDeferreds[match.route.id];
       }
-
       return data;
     }
-
     return undefined;
   }
-
   async function queryImpl(request, location, matches, requestContext, routeMatch) {
     invariant(request.signal, "query()/queryRoute() requests must contain an AbortController signal");
-
     try {
       if (isMutationMethod(request.method.toLowerCase())) {
         let result = await submit(request, matches, routeMatch || getTargetMatch(matches, location), requestContext, routeMatch != null);
         return result;
       }
-
       let result = await loadRouteData(request, matches, requestContext, routeMatch);
       return isResponse(result) ? result : _extends({}, result, {
         actionData: null,
@@ -3240,47 +2871,38 @@ function createStaticHandler(routes, opts) {
         if (e.type === ResultType.error && !isRedirectResponse(e.response)) {
           throw e.response;
         }
-
         return e.response;
-      } // Redirects are always returned since they don't propagate to catch
+      }
+      // Redirects are always returned since they don't propagate to catch
       // boundaries
-
-
       if (isRedirectResponse(e)) {
         return e;
       }
-
       throw e;
     }
   }
-
   async function submit(request, matches, actionMatch, requestContext, isRouteRequest) {
     let result;
-
     if (!actionMatch.route.action && !actionMatch.route.lazy) {
       let error = getInternalRouterError(405, {
         method: request.method,
         pathname: new URL(request.url).pathname,
         routeId: actionMatch.route.id
       });
-
       if (isRouteRequest) {
         throw error;
       }
-
       result = {
         type: ResultType.error,
         error
       };
     } else {
       result = await callLoaderOrAction("action", request, actionMatch, matches, manifest, mapRouteProperties, basename, true, isRouteRequest, requestContext);
-
       if (request.signal.aborted) {
         let method = isRouteRequest ? "queryRoute" : "query";
         throw new Error(method + "() call aborted");
       }
     }
-
     if (isRedirectResult(result)) {
       // Uhhhh - this should never happen, we should always throw these from
       // callLoaderOrAction, but the type narrowing here keeps TS happy and we
@@ -3293,29 +2915,24 @@ function createStaticHandler(routes, opts) {
         }
       });
     }
-
     if (isDeferredResult(result)) {
       let error = getInternalRouterError(400, {
         type: "defer-action"
       });
-
       if (isRouteRequest) {
         throw error;
       }
-
       result = {
         type: ResultType.error,
         error
       };
     }
-
     if (isRouteRequest) {
       // Note: This should only be non-Response values if we get here, since
       // isRouteRequest should throw any Response received in callLoaderOrAction
       if (isErrorResult(result)) {
         throw result.error;
       }
-
       return {
         matches: [actionMatch],
         loaderData: {},
@@ -3331,15 +2948,14 @@ function createStaticHandler(routes, opts) {
         activeDeferreds: null
       };
     }
-
     if (isErrorResult(result)) {
       // Store off the pending error - we use it to determine which loaders
       // to call and will commit it when we complete the navigation
       let boundaryMatch = findNearestBoundary(matches, actionMatch.route.id);
       let context = await loadRouteData(request, matches, requestContext, undefined, {
         [boundaryMatch.route.id]: result.error
-      }); // action status codes take precedence over loader status codes
-
+      });
+      // action status codes take precedence over loader status codes
       return _extends({}, context, {
         statusCode: isRouteErrorResponse(result.error) ? result.error.status : 500,
         actionData: null,
@@ -3347,9 +2963,8 @@ function createStaticHandler(routes, opts) {
           [actionMatch.route.id]: result.headers
         } : {})
       });
-    } // Create a GET request for the loaders
-
-
+    }
+    // Create a GET request for the loaders
     let loaderRequest = new Request(request.url, {
       headers: request.headers,
       redirect: request.redirect,
@@ -3367,10 +2982,9 @@ function createStaticHandler(routes, opts) {
       } : {})
     });
   }
-
   async function loadRouteData(request, matches, requestContext, routeMatch, pendingActionError) {
-    let isRouteRequest = routeMatch != null; // Short circuit if we have no loaders to run (queryRoute())
-
+    let isRouteRequest = routeMatch != null;
+    // Short circuit if we have no loaders to run (queryRoute())
     if (isRouteRequest && !(routeMatch != null && routeMatch.route.loader) && !(routeMatch != null && routeMatch.route.lazy)) {
       throw getInternalRouterError(400, {
         method: request.method,
@@ -3378,10 +2992,9 @@ function createStaticHandler(routes, opts) {
         routeId: routeMatch == null ? void 0 : routeMatch.route.id
       });
     }
-
     let requestMatches = routeMatch ? [routeMatch] : getLoaderMatchesUntilBoundary(matches, Object.keys(pendingActionError || {})[0]);
-    let matchesToLoad = requestMatches.filter(m => m.route.loader || m.route.lazy); // Short circuit if we have no loaders to run (query())
-
+    let matchesToLoad = requestMatches.filter(m => m.route.loader || m.route.lazy);
+    // Short circuit if we have no loaders to run (query())
     if (matchesToLoad.length === 0) {
       return {
         matches,
@@ -3395,18 +3008,15 @@ function createStaticHandler(routes, opts) {
         activeDeferreds: null
       };
     }
-
     let results = await Promise.all([...matchesToLoad.map(match => callLoaderOrAction("loader", request, match, matches, manifest, mapRouteProperties, basename, true, isRouteRequest, requestContext))]);
-
     if (request.signal.aborted) {
       let method = isRouteRequest ? "queryRoute" : "query";
       throw new Error(method + "() call aborted");
-    } // Process and commit output from loaders
-
-
+    }
+    // Process and commit output from loaders
     let activeDeferreds = new Map();
-    let context = processRouteLoaderData(matches, matchesToLoad, results, pendingActionError, activeDeferreds); // Add a null for any non-loader matches for proper revalidation on the client
-
+    let context = processRouteLoaderData(matches, matchesToLoad, results, pendingActionError, activeDeferreds);
+    // Add a null for any non-loader matches for proper revalidation on the client
     let executedLoaders = new Set(matchesToLoad.map(match => match.route.id));
     matches.forEach(match => {
       if (!executedLoaders.has(match.route.id)) {
@@ -3418,22 +3028,20 @@ function createStaticHandler(routes, opts) {
       activeDeferreds: activeDeferreds.size > 0 ? Object.fromEntries(activeDeferreds.entries()) : null
     });
   }
-
   return {
     dataRoutes,
     query,
     queryRoute
   };
-} //#endregion
+}
+//#endregion
 ////////////////////////////////////////////////////////////////////////////////
 //#region Helpers
 ////////////////////////////////////////////////////////////////////////////////
-
 /**
  * Given an existing StaticHandlerContext and an error thrown at render time,
  * provide an updated StaticHandlerContext suitable for a second SSR render
  */
-
 function getStaticContextFromError(routes, context, error) {
   let newContext = _extends({}, context, {
     statusCode: 500,
@@ -3441,28 +3049,22 @@ function getStaticContextFromError(routes, context, error) {
       [context._deepestRenderedBoundaryId || routes[0].id]: error
     }
   });
-
   return newContext;
 }
-
 function isSubmissionNavigation(opts) {
   return opts != null && "formData" in opts;
 }
-
 function normalizeTo(location, matches, basename, prependBasename, to, fromRouteId, relative) {
   let contextualMatches;
   let activeRouteMatch;
-
   if (fromRouteId != null && relative !== "path") {
     // Grab matches up to the calling route so our route-relative logic is
     // relative to the correct source route.  When using relative:path,
     // fromRouteId is ignored since that is always relative to the current
     // location path
     contextualMatches = [];
-
     for (let match of matches) {
       contextualMatches.push(match);
-
       if (match.route.id === fromRouteId) {
         activeRouteMatch = match;
         break;
@@ -3471,36 +3073,31 @@ function normalizeTo(location, matches, basename, prependBasename, to, fromRoute
   } else {
     contextualMatches = matches;
     activeRouteMatch = matches[matches.length - 1];
-  } // Resolve the relative path
-
-
-  let path = resolveTo(to ? to : ".", getPathContributingMatches(contextualMatches).map(m => m.pathnameBase), stripBasename(location.pathname, basename) || location.pathname, relative === "path"); // When `to` is not specified we inherit search/hash from the current
+  }
+  // Resolve the relative path
+  let path = resolveTo(to ? to : ".", getPathContributingMatches(contextualMatches).map(m => m.pathnameBase), stripBasename(location.pathname, basename) || location.pathname, relative === "path");
+  // When `to` is not specified we inherit search/hash from the current
   // location, unlike when to="." and we just inherit the path.
   // See https://github.com/remix-run/remix/issues/927
-
   if (to == null) {
     path.search = location.search;
     path.hash = location.hash;
-  } // Add an ?index param for matched index routes if we don't already have one
-
-
+  }
+  // Add an ?index param for matched index routes if we don't already have one
   if ((to == null || to === "" || to === ".") && activeRouteMatch && activeRouteMatch.route.index && !hasNakedIndexQuery(path.search)) {
     path.search = path.search ? path.search.replace(/^\?/, "?index&") : "?index";
-  } // If we're operating within a basename, prepend it to the pathname.  If
+  }
+  // If we're operating within a basename, prepend it to the pathname.  If
   // this is a root navigation, then just use the raw basename which allows
   // the basename to have full control over the presence of a trailing slash
   // on root actions
-
-
   if (prependBasename && basename !== "/") {
     path.pathname = path.pathname === "/" ? basename : joinPaths([basename, path.pathname]);
   }
-
   return createPath(path);
-} // Normalize navigation options by converting formMethod=GET formData objects to
+}
+// Normalize navigation options by converting formMethod=GET formData objects to
 // URLSearchParams so they behave identically to links with query params
-
-
 function normalizeNavigateOptions(normalizeFormMethod, isFetcher, path, opts) {
   // Return location verbatim on non-submission navigations
   if (!opts || !isSubmissionNavigation(opts)) {
@@ -3508,7 +3105,6 @@ function normalizeNavigateOptions(normalizeFormMethod, isFetcher, path, opts) {
       path
     };
   }
-
   if (opts.formMethod && !isValidMethod(opts.formMethod)) {
     return {
       path,
@@ -3516,11 +3112,9 @@ function normalizeNavigateOptions(normalizeFormMethod, isFetcher, path, opts) {
         method: opts.formMethod
       })
     };
-  } // Create a Submission on non-GET navigations
-
-
+  }
+  // Create a Submission on non-GET navigations
   let submission;
-
   if (opts.formData) {
     let formMethod = opts.formMethod || "get";
     submission = {
@@ -3529,53 +3123,45 @@ function normalizeNavigateOptions(normalizeFormMethod, isFetcher, path, opts) {
       formEncType: opts && opts.formEncType || "application/x-www-form-urlencoded",
       formData: opts.formData
     };
-
     if (isMutationMethod(submission.formMethod)) {
       return {
         path,
         submission
       };
     }
-  } // Flatten submission onto URLSearchParams for GET submissions
-
-
+  }
+  // Flatten submission onto URLSearchParams for GET submissions
   let parsedPath = parsePath(path);
-  let searchParams = convertFormDataToSearchParams(opts.formData); // On GET navigation submissions we can drop the ?index param from the
+  let searchParams = convertFormDataToSearchParams(opts.formData);
+  // On GET navigation submissions we can drop the ?index param from the
   // resulting location since all loaders will run.  But fetcher GET submissions
   // only run a single loader so we need to preserve any incoming ?index params
-
   if (isFetcher && parsedPath.search && hasNakedIndexQuery(parsedPath.search)) {
     searchParams.append("index", "");
   }
-
   parsedPath.search = "?" + searchParams;
   return {
     path: createPath(parsedPath),
     submission
   };
-} // Filter out all routes below any caught error as they aren't going to
+}
+// Filter out all routes below any caught error as they aren't going to
 // render so we don't need to load them
-
-
 function getLoaderMatchesUntilBoundary(matches, boundaryId) {
   let boundaryMatches = matches;
-
   if (boundaryId) {
     let index = matches.findIndex(m => m.route.id === boundaryId);
-
     if (index >= 0) {
       boundaryMatches = matches.slice(0, index);
     }
   }
-
   return boundaryMatches;
 }
-
 function getMatchesToLoad(history, state, matches, submission, location, isRevalidationRequired, cancelledDeferredRoutes, cancelledFetcherLoads, fetchLoadMatches, routesToUse, basename, pendingActionData, pendingError) {
   let actionResult = pendingError ? Object.values(pendingError)[0] : pendingActionData ? Object.values(pendingActionData)[0] : undefined;
   let currentUrl = history.createURL(state.location);
-  let nextUrl = history.createURL(location); // Pick navigation matches that are net-new or qualify for revalidation
-
+  let nextUrl = history.createURL(location);
+  // Pick navigation matches that are net-new or qualify for revalidation
   let boundaryId = pendingError ? Object.keys(pendingError)[0] : undefined;
   let boundaryMatches = getLoaderMatchesUntilBoundary(matches, boundaryId);
   let navigationMatches = boundaryMatches.filter((match, index) => {
@@ -3583,20 +3169,17 @@ function getMatchesToLoad(history, state, matches, submission, location, isReval
       // We haven't loaded this route yet so we don't know if it's got a loader!
       return true;
     }
-
     if (match.route.loader == null) {
       return false;
-    } // Always call the loader on new route instances and pending defer cancellations
-
-
+    }
+    // Always call the loader on new route instances and pending defer cancellations
     if (isNewLoader(state.loaderData, state.matches[index], match) || cancelledDeferredRoutes.some(id => id === match.route.id)) {
       return true;
-    } // This is the default implementation for when we revalidate.  If the route
+    }
+    // This is the default implementation for when we revalidate.  If the route
     // provides it's own implementation, then we give them full control but
     // provide this value so they can leverage it if needed after they check
     // their own specific use cases
-
-
     let currentRouteMatch = state.matches[index];
     let nextRouteMatch = match;
     return shouldRevalidateLoader(match, _extends({
@@ -3606,23 +3189,25 @@ function getMatchesToLoad(history, state, matches, submission, location, isReval
       nextParams: nextRouteMatch.params
     }, submission, {
       actionResult,
-      defaultShouldRevalidate: // Forced revalidation due to submission, useRevalidator, or X-Remix-Revalidate
-      isRevalidationRequired || // Clicked the same link, resubmitted a GET form
-      currentUrl.pathname + currentUrl.search === nextUrl.pathname + nextUrl.search || // Search params affect all loaders
+      defaultShouldRevalidate:
+      // Forced revalidation due to submission, useRevalidator, or X-Remix-Revalidate
+      isRevalidationRequired ||
+      // Clicked the same link, resubmitted a GET form
+      currentUrl.pathname + currentUrl.search === nextUrl.pathname + nextUrl.search ||
+      // Search params affect all loaders
       currentUrl.search !== nextUrl.search || isNewRouteInstance(currentRouteMatch, nextRouteMatch)
     }));
-  }); // Pick fetcher.loads that need to be revalidated
-
+  });
+  // Pick fetcher.loads that need to be revalidated
   let revalidatingFetchers = [];
   fetchLoadMatches.forEach((f, key) => {
     // Don't revalidate if fetcher won't be present in the subsequent render
     if (!matches.some(m => m.route.id === f.routeId)) {
       return;
     }
-
-    let fetcherMatches = matchRoutes(routesToUse, f.path, basename); // If the fetcher path no longer matches, push it in with null matches so
+    let fetcherMatches = matchRoutes(routesToUse, f.path, basename);
+    // If the fetcher path no longer matches, push it in with null matches so
     // we can trigger a 404 in callLoadersAndMaybeResolveData
-
     if (!fetcherMatches) {
       revalidatingFetchers.push({
         key,
@@ -3634,9 +3219,7 @@ function getMatchesToLoad(history, state, matches, submission, location, isReval
       });
       return;
     }
-
     let fetcherMatch = getTargetMatch(fetcherMatches, f.path);
-
     if (cancelledFetcherLoads.includes(key)) {
       revalidatingFetchers.push({
         key,
@@ -3647,12 +3230,11 @@ function getMatchesToLoad(history, state, matches, submission, location, isReval
         controller: new AbortController()
       });
       return;
-    } // Revalidating fetchers are decoupled from the route matches since they
+    }
+    // Revalidating fetchers are decoupled from the route matches since they
     // hit a static href, so they _always_ check shouldRevalidate and the
     // default is strictly if a revalidation is explicitly required (action
     // submissions, useRevalidator, X-Remix-Revalidate).
-
-
     let shouldRevalidate = shouldRevalidateLoader(fetcherMatch, _extends({
       currentUrl,
       currentParams: state.matches[state.matches.length - 1].params,
@@ -3663,7 +3245,6 @@ function getMatchesToLoad(history, state, matches, submission, location, isReval
       // Forced revalidation due to submission, useRevalidator, or X-Remix-Revalidate
       defaultShouldRevalidate: isRevalidationRequired
     }));
-
     if (shouldRevalidate) {
       revalidatingFetchers.push({
         key,
@@ -3677,36 +3258,35 @@ function getMatchesToLoad(history, state, matches, submission, location, isReval
   });
   return [navigationMatches, revalidatingFetchers];
 }
-
 function isNewLoader(currentLoaderData, currentMatch, match) {
-  let isNew = // [a] -> [a, b]
-  !currentMatch || // [a, b] -> [a, c]
-  match.route.id !== currentMatch.route.id; // Handle the case that we don't have data for a re-used route, potentially
+  let isNew =
+  // [a] -> [a, b]
+  !currentMatch ||
+  // [a, b] -> [a, c]
+  match.route.id !== currentMatch.route.id;
+  // Handle the case that we don't have data for a re-used route, potentially
   // from a prior error or from a cancelled pending deferred
-
-  let isMissingData = currentLoaderData[match.route.id] === undefined; // Always load if this is a net-new route or we don't yet have data
-
+  let isMissingData = currentLoaderData[match.route.id] === undefined;
+  // Always load if this is a net-new route or we don't yet have data
   return isNew || isMissingData;
 }
-
 function isNewRouteInstance(currentMatch, match) {
   let currentPath = currentMatch.route.path;
-  return (// param change for this match, /users/123 -> /users/456
-    currentMatch.pathname !== match.pathname || // splat param changed, which is not present in match.path
+  return (
+    // param change for this match, /users/123 -> /users/456
+    currentMatch.pathname !== match.pathname ||
+    // splat param changed, which is not present in match.path
     // e.g. /files/images/avatar.jpg -> files/finances.xls
     currentPath != null && currentPath.endsWith("*") && currentMatch.params["*"] !== match.params["*"]
   );
 }
-
 function shouldRevalidateLoader(loaderMatch, arg) {
   if (loaderMatch.route.shouldRevalidate) {
     let routeChoice = loaderMatch.route.shouldRevalidate(arg);
-
     if (typeof routeChoice === "boolean") {
       return routeChoice;
     }
   }
-
   return arg.defaultShouldRevalidate;
 }
 /**
@@ -3714,23 +3294,20 @@ function shouldRevalidateLoader(loaderMatch, arg) {
  * shouldRevalidate) and update the routeManifest in place which shares objects
  * with dataRoutes so those get updated as well.
  */
-
-
 async function loadLazyRouteModule(route, mapRouteProperties, manifest) {
   if (!route.lazy) {
     return;
   }
-
-  let lazyRoute = await route.lazy(); // If the lazy route function was executed and removed by another parallel
+  let lazyRoute = await route.lazy();
+  // If the lazy route function was executed and removed by another parallel
   // call then we can return - first lazy() to finish wins because the return
   // value of lazy is expected to be static
-
   if (!route.lazy) {
     return;
   }
-
   let routeToUpdate = manifest[route.id];
-  invariant(routeToUpdate, "No route found in manifest"); // Update the route in place.  This should be safe because there's no way
+  invariant(routeToUpdate, "No route found in manifest");
+  // Update the route in place.  This should be safe because there's no way
   // we could yet be sitting on this route as we can't get there without
   // resolving lazy() first.
   //
@@ -3738,52 +3315,43 @@ async function loadLazyRouteModule(route, mapRouteProperties, manifest) {
   // on the route being updated.  The main concern boils down to "does this
   // mutation affect any ongoing navigations or any current state.matches
   // values?".  If not, it should be safe to update in place.
-
   let routeUpdates = {};
-
   for (let lazyRouteProperty in lazyRoute) {
     let staticRouteValue = routeToUpdate[lazyRouteProperty];
-    let isPropertyStaticallyDefined = staticRouteValue !== undefined && // This property isn't static since it should always be updated based
+    let isPropertyStaticallyDefined = staticRouteValue !== undefined &&
+    // This property isn't static since it should always be updated based
     // on the route updates
     lazyRouteProperty !== "hasErrorBoundary";
     warning(!isPropertyStaticallyDefined, "Route \"" + routeToUpdate.id + "\" has a static property \"" + lazyRouteProperty + "\" " + "defined but its lazy function is also returning a value for this property. " + ("The lazy route property \"" + lazyRouteProperty + "\" will be ignored."));
-
     if (!isPropertyStaticallyDefined && !immutableRouteKeys.has(lazyRouteProperty)) {
       routeUpdates[lazyRouteProperty] = lazyRoute[lazyRouteProperty];
     }
-  } // Mutate the route with the provided updates.  Do this first so we pass
+  }
+  // Mutate the route with the provided updates.  Do this first so we pass
   // the updated version to mapRouteProperties
-
-
-  Object.assign(routeToUpdate, routeUpdates); // Mutate the `hasErrorBoundary` property on the route based on the route
+  Object.assign(routeToUpdate, routeUpdates);
+  // Mutate the `hasErrorBoundary` property on the route based on the route
   // updates and remove the `lazy` function so we don't resolve the lazy
   // route again.
-
   Object.assign(routeToUpdate, _extends({}, mapRouteProperties(routeToUpdate), {
     lazy: undefined
   }));
 }
-
 async function callLoaderOrAction(type, request, match, matches, manifest, mapRouteProperties, basename, isStaticRequest, isRouteRequest, requestContext) {
   if (isStaticRequest === void 0) {
     isStaticRequest = false;
   }
-
   if (isRouteRequest === void 0) {
     isRouteRequest = false;
   }
-
   let resultType;
   let result;
   let onReject;
-
   let runHandler = handler => {
     // Setup a promise we can race against so that abort signals short circuit
     let reject;
     let abortPromise = new Promise((_, r) => reject = r);
-
     onReject = () => reject();
-
     request.signal.addEventListener("abort", onReject);
     return Promise.race([handler({
       request,
@@ -3791,10 +3359,8 @@ async function callLoaderOrAction(type, request, match, matches, manifest, mapRo
       context: requestContext
     }), abortPromise]);
   };
-
   try {
     let handler = match.route[type];
-
     if (match.route.lazy) {
       if (handler) {
         // Run statically defined handler in parallel with lazy()
@@ -3804,7 +3370,6 @@ async function callLoaderOrAction(type, request, match, matches, manifest, mapRo
         // Load lazy route module, then run any returned handler
         await loadLazyRouteModule(match.route, mapRouteProperties, manifest);
         handler = match.route[type];
-
         if (handler) {
           // Handler still run even if we got interrupted to maintain consistency
           // with un-abortable behavior of handler execution on non-lazy or
@@ -3836,7 +3401,6 @@ async function callLoaderOrAction(type, request, match, matches, manifest, mapRo
     } else {
       result = await runHandler(handler);
     }
-
     invariant(result !== undefined, "You defined " + (type === "action" ? "an action" : "a loader") + " for route " + ("\"" + match.route.id + "\" but didn't return anything from your `" + type + "` ") + "function. Please return a value or `null`.");
   } catch (e) {
     resultType = ResultType.error;
@@ -3846,14 +3410,13 @@ async function callLoaderOrAction(type, request, match, matches, manifest, mapRo
       request.signal.removeEventListener("abort", onReject);
     }
   }
-
   if (isResponse(result)) {
-    let status = result.status; // Process redirects
-
+    let status = result.status;
+    // Process redirects
     if (redirectStatusCodes.has(status)) {
       let location = result.headers.get("Location");
-      invariant(location, "Redirects returned/thrown from loaders/actions must have a Location header"); // Support relative routing in internal redirects
-
+      invariant(location, "Redirects returned/thrown from loaders/actions must have a Location header");
+      // Support relative routing in internal redirects
       if (!ABSOLUTE_URL_REGEX.test(location)) {
         location = normalizeTo(new URL(request.url), matches.slice(0, matches.indexOf(match) + 1), basename, true, location);
       } else if (!isStaticRequest) {
@@ -3863,32 +3426,28 @@ async function callLoaderOrAction(type, request, match, matches, manifest, mapRo
         let currentUrl = new URL(request.url);
         let url = location.startsWith("//") ? new URL(currentUrl.protocol + location) : new URL(location);
         let isSameBasename = stripBasename(url.pathname, basename) != null;
-
         if (url.origin === currentUrl.origin && isSameBasename) {
           location = url.pathname + url.search + url.hash;
         }
-      } // Don't process redirects in the router during static requests requests.
+      }
+      // Don't process redirects in the router during static requests requests.
       // Instead, throw the Response and let the server handle it with an HTTP
       // redirect.  We also update the Location header in place in this flow so
       // basename and relative routing is taken into account
-
-
       if (isStaticRequest) {
         result.headers.set("Location", location);
         throw result;
       }
-
       return {
         type: ResultType.redirect,
         status,
         location,
         revalidate: result.headers.get("X-Remix-Revalidate") !== null
       };
-    } // For SSR single-route requests, we want to hand Responses back directly
+    }
+    // For SSR single-route requests, we want to hand Responses back directly
     // without unwrapping.  We do this with the QueryRouteResponse wrapper
     // interface so we can know whether it was returned or thrown
-
-
     if (isRouteRequest) {
       // eslint-disable-next-line no-throw-literal
       throw {
@@ -3896,17 +3455,15 @@ async function callLoaderOrAction(type, request, match, matches, manifest, mapRo
         response: result
       };
     }
-
     let data;
-    let contentType = result.headers.get("Content-Type"); // Check between word boundaries instead of startsWith() due to the last
+    let contentType = result.headers.get("Content-Type");
+    // Check between word boundaries instead of startsWith() due to the last
     // paragraph of https://httpwg.org/specs/rfc9110.html#field.content-type
-
     if (contentType && /\bapplication\/json\b/.test(contentType)) {
       data = await result.json();
     } else {
       data = await result.text();
     }
-
     if (resultType === ResultType.error) {
       return {
         type: resultType,
@@ -3914,7 +3471,6 @@ async function callLoaderOrAction(type, request, match, matches, manifest, mapRo
         headers: result.headers
       };
     }
-
     return {
       type: ResultType.data,
       data,
@@ -3922,17 +3478,14 @@ async function callLoaderOrAction(type, request, match, matches, manifest, mapRo
       headers: result.headers
     };
   }
-
   if (resultType === ResultType.error) {
     return {
       type: resultType,
       error: result
     };
   }
-
   if (isDeferredData(result)) {
     var _result$init, _result$init2;
-
     return {
       type: ResultType.deferred,
       deferredData: result,
@@ -3940,90 +3493,78 @@ async function callLoaderOrAction(type, request, match, matches, manifest, mapRo
       headers: ((_result$init2 = result.init) == null ? void 0 : _result$init2.headers) && new Headers(result.init.headers)
     };
   }
-
   return {
     type: ResultType.data,
     data: result
   };
-} // Utility method for creating the Request instances for loaders/actions during
+}
+// Utility method for creating the Request instances for loaders/actions during
 // client-side navigations and fetches.  During SSR we will always have a
 // Request instance from the static handler (query/queryRoute)
-
-
 function createClientSideRequest(history, location, signal, submission) {
   let url = history.createURL(stripHashFromPath(location)).toString();
   let init = {
     signal
   };
-
   if (submission && isMutationMethod(submission.formMethod)) {
     let {
       formMethod,
       formEncType,
       formData
-    } = submission; // Didn't think we needed this but it turns out unlike other methods, patch
+    } = submission;
+    // Didn't think we needed this but it turns out unlike other methods, patch
     // won't be properly normalized to uppercase and results in a 405 error.
     // See: https://fetch.spec.whatwg.org/#concept-method
-
     init.method = formMethod.toUpperCase();
     init.body = formEncType === "application/x-www-form-urlencoded" ? convertFormDataToSearchParams(formData) : formData;
-  } // Content-Type is inferred (https://fetch.spec.whatwg.org/#dom-request)
-
-
+  }
+  // Content-Type is inferred (https://fetch.spec.whatwg.org/#dom-request)
   return new Request(url, init);
 }
-
 function convertFormDataToSearchParams(formData) {
   let searchParams = new URLSearchParams();
-
   for (let [key, value] of formData.entries()) {
     // https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#converting-an-entry-list-to-a-list-of-name-value-pairs
     searchParams.append(key, value instanceof File ? value.name : value);
   }
-
   return searchParams;
 }
-
 function processRouteLoaderData(matches, matchesToLoad, results, pendingError, activeDeferreds) {
   // Fill in loaderData/errors from our loaders
   let loaderData = {};
   let errors = null;
   let statusCode;
   let foundError = false;
-  let loaderHeaders = {}; // Process loader results into state.loaderData/state.errors
-
+  let loaderHeaders = {};
+  // Process loader results into state.loaderData/state.errors
   results.forEach((result, index) => {
     let id = matchesToLoad[index].route.id;
     invariant(!isRedirectResult(result), "Cannot handle redirect results in processLoaderData");
-
     if (isErrorResult(result)) {
       // Look upwards from the matched route for the closest ancestor
       // error boundary, defaulting to the root match
       let boundaryMatch = findNearestBoundary(matches, id);
-      let error = result.error; // If we have a pending action error, we report it at the highest-route
+      let error = result.error;
+      // If we have a pending action error, we report it at the highest-route
       // that throws a loader error, and then clear it out to indicate that
       // it was consumed
-
       if (pendingError) {
         error = Object.values(pendingError)[0];
         pendingError = undefined;
       }
-
-      errors = errors || {}; // Prefer higher error values if lower errors bubble to the same boundary
-
+      errors = errors || {};
+      // Prefer higher error values if lower errors bubble to the same boundary
       if (errors[boundaryMatch.route.id] == null) {
         errors[boundaryMatch.route.id] = error;
-      } // Clear our any prior loaderData for the throwing route
-
-
-      loaderData[id] = undefined; // Once we find our first (highest) error, we set the status code and
+      }
+      // Clear our any prior loaderData for the throwing route
+      loaderData[id] = undefined;
+      // Once we find our first (highest) error, we set the status code and
       // prevent deeper status codes from overriding
-
       if (!foundError) {
         foundError = true;
         statusCode = isRouteErrorResponse(result.error) ? result.error.status : 500;
       }
-
       if (result.headers) {
         loaderHeaders[id] = result.headers;
       }
@@ -4033,27 +3574,24 @@ function processRouteLoaderData(matches, matchesToLoad, results, pendingError, a
         loaderData[id] = result.deferredData.data;
       } else {
         loaderData[id] = result.data;
-      } // Error status codes always override success status codes, but if all
+      }
+      // Error status codes always override success status codes, but if all
       // loaders are successful we take the deepest status code.
-
-
       if (result.statusCode != null && result.statusCode !== 200 && !foundError) {
         statusCode = result.statusCode;
       }
-
       if (result.headers) {
         loaderHeaders[id] = result.headers;
       }
     }
-  }); // If we didn't consume the pending action error (i.e., all loaders
+  });
+  // If we didn't consume the pending action error (i.e., all loaders
   // resolved), then consume it here.  Also clear out any loaderData for the
   // throwing route
-
   if (pendingError) {
     errors = pendingError;
     loaderData[Object.keys(pendingError)[0]] = undefined;
   }
-
   return {
     loaderData,
     errors,
@@ -4061,13 +3599,12 @@ function processRouteLoaderData(matches, matchesToLoad, results, pendingError, a
     loaderHeaders
   };
 }
-
 function processLoaderData(state, matches, matchesToLoad, results, pendingError, revalidatingFetchers, fetcherResults, activeDeferreds) {
   let {
     loaderData,
     errors
-  } = processRouteLoaderData(matches, matchesToLoad, results, pendingError, activeDeferreds); // Process results from our revalidating fetchers
-
+  } = processRouteLoaderData(matches, matchesToLoad, results, pendingError, activeDeferreds);
+  // Process results from our revalidating fetchers
   for (let index = 0; index < revalidatingFetchers.length; index++) {
     let {
       key,
@@ -4075,20 +3612,18 @@ function processLoaderData(state, matches, matchesToLoad, results, pendingError,
       controller
     } = revalidatingFetchers[index];
     invariant(fetcherResults !== undefined && fetcherResults[index] !== undefined, "Did not find corresponding fetcher result");
-    let result = fetcherResults[index]; // Process fetcher non-redirect errors
-
+    let result = fetcherResults[index];
+    // Process fetcher non-redirect errors
     if (controller && controller.signal.aborted) {
       // Nothing to do for aborted fetchers
       continue;
     } else if (isErrorResult(result)) {
       let boundaryMatch = findNearestBoundary(state.matches, match == null ? void 0 : match.route.id);
-
       if (!(errors && errors[boundaryMatch.route.id])) {
         errors = _extends({}, errors, {
           [boundaryMatch.route.id]: result.error
         });
       }
-
       state.fetchers.delete(key);
     } else if (isRedirectResult(result)) {
       // Should never get here, redirects should get processed above, but we
@@ -4111,19 +3646,15 @@ function processLoaderData(state, matches, matchesToLoad, results, pendingError,
       state.fetchers.set(key, doneFetcher);
     }
   }
-
   return {
     loaderData,
     errors
   };
 }
-
 function mergeLoaderData(loaderData, newLoaderData, matches, errors) {
   let mergedLoaderData = _extends({}, newLoaderData);
-
   for (let match of matches) {
     let id = match.route.id;
-
     if (newLoaderData.hasOwnProperty(id)) {
       if (newLoaderData[id] !== undefined) {
         mergedLoaderData[id] = newLoaderData[id];
@@ -4133,24 +3664,20 @@ function mergeLoaderData(loaderData, newLoaderData, matches, errors) {
       // wasn't removed by HMR
       mergedLoaderData[id] = loaderData[id];
     }
-
     if (errors && errors.hasOwnProperty(id)) {
       // Don't keep any loader data below the boundary
       break;
     }
   }
-
   return mergedLoaderData;
-} // Find the nearest error boundary, looking upwards from the leaf route (or the
+}
+// Find the nearest error boundary, looking upwards from the leaf route (or the
 // route specified by routeId) for the closest ancestor error boundary,
 // defaulting to the root match
-
-
 function findNearestBoundary(matches, routeId) {
   let eligibleMatches = routeId ? matches.slice(0, matches.findIndex(m => m.route.id === routeId) + 1) : [...matches];
   return eligibleMatches.reverse().find(m => m.route.hasErrorBoundary === true) || matches[0];
 }
-
 function getShortCircuitMatches(routes) {
   // Prefer a root layout route if present, otherwise shim in a route object
   let route = routes.find(r => r.index || !r.path || r.path === "/") || {
@@ -4166,7 +3693,6 @@ function getShortCircuitMatches(routes) {
     route
   };
 }
-
 function getInternalRouterError(status, _temp4) {
   let {
     pathname,
@@ -4176,10 +3702,8 @@ function getInternalRouterError(status, _temp4) {
   } = _temp4 === void 0 ? {} : _temp4;
   let statusText = "Unknown Server Error";
   let errorMessage = "Unknown @remix-run/router error";
-
   if (status === 400) {
     statusText = "Bad Request";
-
     if (method && pathname && routeId) {
       errorMessage = "You made a " + method + " request to \"" + pathname + "\" but " + ("did not provide a `loader` for route \"" + routeId + "\", ") + "so there is no way to handle the request.";
     } else if (type === "defer-action") {
@@ -4193,40 +3717,33 @@ function getInternalRouterError(status, _temp4) {
     errorMessage = "No route matches URL \"" + pathname + "\"";
   } else if (status === 405) {
     statusText = "Method Not Allowed";
-
     if (method && pathname && routeId) {
       errorMessage = "You made a " + method.toUpperCase() + " request to \"" + pathname + "\" but " + ("did not provide an `action` for route \"" + routeId + "\", ") + "so there is no way to handle the request.";
     } else if (method) {
       errorMessage = "Invalid request method \"" + method.toUpperCase() + "\"";
     }
   }
-
   return new ErrorResponse(status || 500, statusText, new Error(errorMessage), true);
-} // Find any returned redirect errors, starting from the lowest match
-
-
+}
+// Find any returned redirect errors, starting from the lowest match
 function findRedirect(results) {
   for (let i = results.length - 1; i >= 0; i--) {
     let result = results[i];
-
     if (isRedirectResult(result)) {
       return result;
     }
   }
 }
-
 function stripHashFromPath(path) {
   let parsedPath = typeof path === "string" ? parsePath(path) : path;
   return createPath(_extends({}, parsedPath, {
     hash: ""
   }));
 }
-
 function isHashChangeOnly(a, b) {
   if (a.pathname !== b.pathname || a.search !== b.search) {
     return false;
   }
-
   if (a.hash === "") {
     // /page -> /page#hash
     return b.hash !== "";
@@ -4236,70 +3753,56 @@ function isHashChangeOnly(a, b) {
   } else if (b.hash !== "") {
     // /page#hash -> /page#other
     return true;
-  } // If the hash is removed the browser will re-perform a request to the server
+  }
+  // If the hash is removed the browser will re-perform a request to the server
   // /page#hash -> /page
-
-
   return false;
 }
-
 function isDeferredResult(result) {
   return result.type === ResultType.deferred;
 }
-
 function isErrorResult(result) {
   return result.type === ResultType.error;
 }
-
 function isRedirectResult(result) {
   return (result && result.type) === ResultType.redirect;
 }
-
 function isDeferredData(value) {
   let deferred = value;
   return deferred && typeof deferred === "object" && typeof deferred.data === "object" && typeof deferred.subscribe === "function" && typeof deferred.cancel === "function" && typeof deferred.resolveData === "function";
 }
-
 function isResponse(value) {
   return value != null && typeof value.status === "number" && typeof value.statusText === "string" && typeof value.headers === "object" && typeof value.body !== "undefined";
 }
-
 function isRedirectResponse(result) {
   if (!isResponse(result)) {
     return false;
   }
-
   let status = result.status;
   let location = result.headers.get("Location");
   return status >= 300 && status <= 399 && location != null;
 }
-
 function isQueryRouteResponse(obj) {
   return obj && isResponse(obj.response) && (obj.type === ResultType.data || ResultType.error);
 }
-
 function isValidMethod(method) {
   return validRequestMethods.has(method.toLowerCase());
 }
-
 function isMutationMethod(method) {
   return validMutationMethods.has(method.toLowerCase());
 }
-
 async function resolveDeferredResults(currentMatches, matchesToLoad, results, signals, isFetcher, currentLoaderData) {
   for (let index = 0; index < results.length; index++) {
     let result = results[index];
-    let match = matchesToLoad[index]; // If we don't have a match, then we can have a deferred result to do
+    let match = matchesToLoad[index];
+    // If we don't have a match, then we can have a deferred result to do
     // anything with.  This is for revalidating fetchers where the route was
     // removed during HMR
-
     if (!match) {
       continue;
     }
-
     let currentMatch = currentMatches.find(m => m.route.id === match.route.id);
     let isRevalidatingLoader = currentMatch != null && !isNewRouteInstance(currentMatch, match) && (currentLoaderData && currentLoaderData[match.route.id]) !== undefined;
-
     if (isDeferredResult(result) && (isFetcher || isRevalidatingLoader)) {
       // Note: we do not have to touch activeDeferreds here since we race them
       // against the signal in resolveDeferredData and they'll get aborted
@@ -4314,18 +3817,14 @@ async function resolveDeferredResults(currentMatches, matchesToLoad, results, si
     }
   }
 }
-
 async function resolveDeferredData(result, signal, unwrap) {
   if (unwrap === void 0) {
     unwrap = false;
   }
-
   let aborted = await result.deferredData.resolveData(signal);
-
   if (aborted) {
     return;
   }
-
   if (unwrap) {
     try {
       return {
@@ -4340,19 +3839,16 @@ async function resolveDeferredData(result, signal, unwrap) {
       };
     }
   }
-
   return {
     type: ResultType.data,
     data: result.deferredData.data
   };
 }
-
 function hasNakedIndexQuery(search) {
   return new URLSearchParams(search).getAll("index").some(v => v === "");
-} // Note: This should match the format exported by useMatches, so if you change
+}
+// Note: This should match the format exported by useMatches, so if you change
 // this please also change that :)  Eventually we'll DRY this up
-
-
 function createUseMatchesMatch(match, loaderData) {
   let {
     route,
@@ -4367,20 +3863,18 @@ function createUseMatchesMatch(match, loaderData) {
     handle: route.handle
   };
 }
-
 function getTargetMatch(matches, location) {
   let search = typeof location === "string" ? parsePath(location).search : location.search;
-
   if (matches[matches.length - 1].route.index && hasNakedIndexQuery(search || "")) {
     // Return the leaf index route when index is present
     return matches[matches.length - 1];
-  } // Otherwise grab the deepest "path contributing" match (ignoring index and
+  }
+  // Otherwise grab the deepest "path contributing" match (ignoring index and
   // pathless layout routes)
-
-
   let pathMatches = getPathContributingMatches(matches);
   return pathMatches[pathMatches.length - 1];
-} //#endregion
+}
+//#endregion
 
 
 //# sourceMappingURL=router.js.map
@@ -4428,7 +3922,7 @@ function _extends() { _extends = Object.assign ? Object.assign.bind() : function
 /* @jsxFrag mdx.Fragment */
 const makeShortcode = name => props => {
   console.warn("Component `%s` was not imported, exported, or provided by MDXProvider as global scope", name);
-  return (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx.Fragment */ .kt.Fragment, null, props.children);
+  return (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt.Fragment, null, props.children);
 };
 const Badge = makeShortcode("Badge");
 const MDXLayout = "wrapper";
@@ -7449,7 +6943,7 @@ function _extends() { _extends = Object.assign ? Object.assign.bind() : function
 /* @jsxFrag mdx.Fragment */
 const makeShortcode = name => props => {
   console.warn("Component `%s` was not imported, exported, or provided by MDXProvider as global scope", name);
-  return (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx.Fragment */ .kt.Fragment, null, props.children);
+  return (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt.Fragment, null, props.children);
 };
 const Badge = makeShortcode("Badge");
 const MDXLayout = "wrapper";
@@ -14294,7 +13788,7 @@ function _extends() { _extends = Object.assign ? Object.assign.bind() : function
 /* @jsxFrag mdx.Fragment */
 const makeShortcode = name => props => {
   console.warn("Component `%s` was not imported, exported, or provided by MDXProvider as global scope", name);
-  return (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx.Fragment */ .kt.Fragment, null, props.children);
+  return (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt.Fragment, null, props.children);
 };
 const Badge = makeShortcode("Badge");
 const MDXLayout = "wrapper";
@@ -16024,6 +15518,188 @@ function MDXContent(_ref) {
     href: "/configuration/stats/#stats-presets",
     parentName: "p"
   }, "stats presets configuration"), ".")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    id: "thisenvironment",
+    parentName: "h3"
+  }), "this.environment", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+    href: "#thisenvironment",
+    "aria-hidden": "true",
+    tabIndex: "-1",
+    parentName: "h3"
+  }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "header-link",
+    parentName: "a"
+  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Check what kind of ES-features may be used in the generated runtime-code."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "E.g.,"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
+    className: "hljs language-json",
+    parentName: "pre"
+  }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token punctuation",
+    parentName: "code"
+  }, "{"), "\n  ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token comment",
+    parentName: "code"
+  }, "// The environment supports arrow functions ('() => { ... }')."), "\n  ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token property",
+    parentName: "code"
+  }, "\"arrowFunction\""), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token operator",
+    parentName: "code"
+  }, ":"), " ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token boolean",
+    parentName: "code"
+  }, "true"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token punctuation",
+    parentName: "code"
+  }, ","), "\n  ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token comment",
+    parentName: "code"
+  }, "// The environment supports BigInt as literal (123n)."), "\n  ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token property",
+    parentName: "code"
+  }, "\"bigIntLiteral\""), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token operator",
+    parentName: "code"
+  }, ":"), " ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token boolean",
+    parentName: "code"
+  }, "false"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token punctuation",
+    parentName: "code"
+  }, ","), "\n  ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token comment",
+    parentName: "code"
+  }, "// The environment supports const and let for variable declarations."), "\n  ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token property",
+    parentName: "code"
+  }, "\"const\""), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token operator",
+    parentName: "code"
+  }, ":"), " ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token boolean",
+    parentName: "code"
+  }, "true"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token punctuation",
+    parentName: "code"
+  }, ","), "\n  ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token comment",
+    parentName: "code"
+  }, "// The environment supports destructuring ('{ a, b } = obj')."), "\n  ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token property",
+    parentName: "code"
+  }, "\"destructuring\""), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token operator",
+    parentName: "code"
+  }, ":"), " ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token boolean",
+    parentName: "code"
+  }, "true"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token punctuation",
+    parentName: "code"
+  }, ","), "\n  ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token comment",
+    parentName: "code"
+  }, "// The environment supports an async import() function to import EcmaScript modules."), "\n  ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token property",
+    parentName: "code"
+  }, "\"dynamicImport\""), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token operator",
+    parentName: "code"
+  }, ":"), " ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token boolean",
+    parentName: "code"
+  }, "false"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token punctuation",
+    parentName: "code"
+  }, ","), "\n  ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token comment",
+    parentName: "code"
+  }, "// The environment supports an async import() when creating a worker, only for web targets at the moment."), "\n  ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token property",
+    parentName: "code"
+  }, "\"dynamicImportInWorker\""), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token operator",
+    parentName: "code"
+  }, ":"), " ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token boolean",
+    parentName: "code"
+  }, "false"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token punctuation",
+    parentName: "code"
+  }, ","), "\n  ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token comment",
+    parentName: "code"
+  }, "// The environment supports 'for of' iteration ('for (const x of array) { ... }')."), "\n  ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token property",
+    parentName: "code"
+  }, "\"forOf\""), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token operator",
+    parentName: "code"
+  }, ":"), " ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token boolean",
+    parentName: "code"
+  }, "true"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token punctuation",
+    parentName: "code"
+  }, ","), "\n  ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token comment",
+    parentName: "code"
+  }, "// The environment supports 'globalThis'."), "\n  ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token property",
+    parentName: "code"
+  }, "\"globalThis\""), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token operator",
+    parentName: "code"
+  }, ":"), " ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token boolean",
+    parentName: "code"
+  }, "true"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token punctuation",
+    parentName: "code"
+  }, ","), "\n  ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token comment",
+    parentName: "code"
+  }, "// The environment supports ECMAScript Module syntax to import ECMAScript modules (import ... from '...')."), "\n  ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token property",
+    parentName: "code"
+  }, "\"module\""), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token operator",
+    parentName: "code"
+  }, ":"), " ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token boolean",
+    parentName: "code"
+  }, "false"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token punctuation",
+    parentName: "code"
+  }, ","), "\n  ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token comment",
+    parentName: "code"
+  }, "// The environment supports optional chaining ('obj?.a' or 'obj?.()')."), "\n  ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token property",
+    parentName: "code"
+  }, "\"optionalChaining\""), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token operator",
+    parentName: "code"
+  }, ":"), " ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token boolean",
+    parentName: "code"
+  }, "true"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token punctuation",
+    parentName: "code"
+  }, ","), "\n  ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token comment",
+    parentName: "code"
+  }, "// The environment supports template literals."), "\n  ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token property",
+    parentName: "code"
+  }, "\"templateLiteral\""), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token operator",
+    parentName: "code"
+  }, ":"), " ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token boolean",
+    parentName: "code"
+  }, "true"), "\n", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token punctuation",
+    parentName: "code"
+  }, "}"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     id: "thisfs",
     parentName: "h3"
   }), "this.fs", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
@@ -21613,7 +21289,7 @@ function _extends() { _extends = Object.assign ? Object.assign.bind() : function
 /* @jsxFrag mdx.Fragment */
 const makeShortcode = name => props => {
   console.warn("Component `%s` was not imported, exported, or provided by MDXProvider as global scope", name);
-  return (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx.Fragment */ .kt.Fragment, null, props.children);
+  return (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt.Fragment, null, props.children);
 };
 const Badge = makeShortcode("Badge");
 const MDXLayout = "wrapper";
@@ -25019,7 +24695,7 @@ function _extends() { _extends = Object.assign ? Object.assign.bind() : function
 /* @jsxFrag mdx.Fragment */
 const makeShortcode = name => props => {
   console.warn("Component `%s` was not imported, exported, or provided by MDXProvider as global scope", name);
-  return (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx.Fragment */ .kt.Fragment, null, props.children);
+  return (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt.Fragment, null, props.children);
 };
 const Badge = makeShortcode("Badge");
 const MDXLayout = "wrapper";
@@ -46302,7 +45978,7 @@ function _extends() { _extends = Object.assign ? Object.assign.bind() : function
 /* @jsxFrag mdx.Fragment */
 const makeShortcode = name => props => {
   console.warn("Component `%s` was not imported, exported, or provided by MDXProvider as global scope", name);
-  return (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx.Fragment */ .kt.Fragment, null, props.children);
+  return (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt.Fragment, null, props.children);
 };
 const StackBlitzPreview = makeShortcode("StackBlitzPreview");
 const MDXLayout = "wrapper";
@@ -50476,7 +50152,7 @@ function _extends() { _extends = Object.assign ? Object.assign.bind() : function
 /* @jsxFrag mdx.Fragment */
 const makeShortcode = name => props => {
   console.warn("Component `%s` was not imported, exported, or provided by MDXProvider as global scope", name);
-  return (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx.Fragment */ .kt.Fragment, null, props.children);
+  return (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt.Fragment, null, props.children);
 };
 const Badge = makeShortcode("Badge");
 const MDXLayout = "wrapper";
@@ -53896,7 +53572,7 @@ function _extends() { _extends = Object.assign ? Object.assign.bind() : function
 /* @jsxFrag mdx.Fragment */
 const makeShortcode = name => props => {
   console.warn("Component `%s` was not imported, exported, or provided by MDXProvider as global scope", name);
-  return (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx.Fragment */ .kt.Fragment, null, props.children);
+  return (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt.Fragment, null, props.children);
 };
 const Badge = makeShortcode("Badge");
 const MDXLayout = "wrapper";
@@ -65002,7 +64678,7 @@ function _extends() { _extends = Object.assign ? Object.assign.bind() : function
 /* @jsxFrag mdx.Fragment */
 const makeShortcode = name => props => {
   console.warn("Component `%s` was not imported, exported, or provided by MDXProvider as global scope", name);
-  return (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx.Fragment */ .kt.Fragment, null, props.children);
+  return (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt.Fragment, null, props.children);
 };
 const Badge = makeShortcode("Badge");
 const MDXLayout = "wrapper";
@@ -66552,7 +66228,7 @@ function _extends() { _extends = Object.assign ? Object.assign.bind() : function
 /* @jsxFrag mdx.Fragment */
 const makeShortcode = name => props => {
   console.warn("Component `%s` was not imported, exported, or provided by MDXProvider as global scope", name);
-  return (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx.Fragment */ .kt.Fragment, null, props.children);
+  return (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt.Fragment, null, props.children);
 };
 const Badge = makeShortcode("Badge");
 const MDXLayout = "wrapper";
@@ -67504,7 +67180,7 @@ function _extends() { _extends = Object.assign ? Object.assign.bind() : function
 /* @jsxFrag mdx.Fragment */
 const makeShortcode = name => props => {
   console.warn("Component `%s` was not imported, exported, or provided by MDXProvider as global scope", name);
-  return (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx.Fragment */ .kt.Fragment, null, props.children);
+  return (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt.Fragment, null, props.children);
 };
 const Badge = makeShortcode("Badge");
 const MDXLayout = "wrapper";
@@ -72654,7 +72330,7 @@ function _extends() { _extends = Object.assign ? Object.assign.bind() : function
 /* @jsxFrag mdx.Fragment */
 const makeShortcode = name => props => {
   console.warn("Component `%s` was not imported, exported, or provided by MDXProvider as global scope", name);
-  return (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx.Fragment */ .kt.Fragment, null, props.children);
+  return (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt.Fragment, null, props.children);
 };
 const Badge = makeShortcode("Badge");
 const MDXLayout = "wrapper";
@@ -81872,7 +81548,7 @@ function _extends() { _extends = Object.assign ? Object.assign.bind() : function
 /* @jsxFrag mdx.Fragment */
 const makeShortcode = name => props => {
   console.warn("Component `%s` was not imported, exported, or provided by MDXProvider as global scope", name);
-  return (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx.Fragment */ .kt.Fragment, null, props.children);
+  return (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt.Fragment, null, props.children);
 };
 const Badge = makeShortcode("Badge");
 const MDXLayout = "wrapper";
@@ -83864,7 +83540,7 @@ function _extends() { _extends = Object.assign ? Object.assign.bind() : function
 /* @jsxFrag mdx.Fragment */
 const makeShortcode = name => props => {
   console.warn("Component `%s` was not imported, exported, or provided by MDXProvider as global scope", name);
-  return (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx.Fragment */ .kt.Fragment, null, props.children);
+  return (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt.Fragment, null, props.children);
 };
 const Badge = makeShortcode("Badge");
 const MDXLayout = "wrapper";
@@ -86063,7 +85739,31 @@ function MDXContent(_ref) {
   }, ","), "\n      ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token comment",
     parentName: "code"
+  }, "// The environment supports an async import() when creating a worker, only for web targets at the moment."), "\n      dynamicImportInWorker", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token operator",
+    parentName: "code"
+  }, ":"), " ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token boolean",
+    parentName: "code"
+  }, "false"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token punctuation",
+    parentName: "code"
+  }, ","), "\n      ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token comment",
+    parentName: "code"
   }, "// The environment supports 'for of' iteration ('for (const x of array) { ... }')."), "\n      forOf", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token operator",
+    parentName: "code"
+  }, ":"), " ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token boolean",
+    parentName: "code"
+  }, "true"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token punctuation",
+    parentName: "code"
+  }, ","), "\n      ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token comment",
+    parentName: "code"
+  }, "// The environment supports 'globalThis'."), "\n      globalThis", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token operator",
     parentName: "code"
   }, ":"), " ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
@@ -97753,7 +97453,7 @@ function _extends() { _extends = Object.assign ? Object.assign.bind() : function
 /* @jsxFrag mdx.Fragment */
 const makeShortcode = name => props => {
   console.warn("Component `%s` was not imported, exported, or provided by MDXProvider as global scope", name);
-  return (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx.Fragment */ .kt.Fragment, null, props.children);
+  return (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt.Fragment, null, props.children);
 };
 const Badge = makeShortcode("Badge");
 const MDXLayout = "wrapper";
@@ -101732,7 +101432,7 @@ function _extends() { _extends = Object.assign ? Object.assign.bind() : function
 /* @jsxFrag mdx.Fragment */
 const makeShortcode = name => props => {
   console.warn("Component `%s` was not imported, exported, or provided by MDXProvider as global scope", name);
-  return (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx.Fragment */ .kt.Fragment, null, props.children);
+  return (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt.Fragment, null, props.children);
 };
 const Badge = makeShortcode("Badge");
 const MDXLayout = "wrapper";
@@ -120191,7 +119891,7 @@ function MDXContent(_ref) {
   } = _ref;
   return (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(MDXLayout, _extends({
     components: components
-  }, props), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Asset Modules is a type of module that allows one to use asset files (fonts, icons, etc) without configuring additional loaders."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Prior to webpack 5 it was common to use:"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+  }, props), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Asset Modules allow one to use asset files (fonts, icons, etc) without configuring additional loaders."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Prior to webpack 5 it was common to use:"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
     parentName: "ul"
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "https://v4.webpack.js.org/loaders/raw-loader/",
@@ -120212,7 +119912,7 @@ function MDXContent(_ref) {
     parentName: "li"
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "a"
-  }, "file-loader")), " to emit a file into the output directory")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Asset Modules type replaces all of these loaders by adding 4 new module types:"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+  }, "file-loader")), " to emit a file into the output directory")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Asset Modules types replace all of these loaders by adding 4 new module types:"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
     parentName: "ul"
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "li"
@@ -120242,7 +119942,7 @@ function MDXContent(_ref) {
     parentName: "p"
   }, "url-loader"), "/", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "raw-loader"), ") along with Asset Module in webpack 5, you might want to stop Asset Module from processing your assets again as that would result in asset duplication. This can be done by setting asset's module type to ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "raw-loader"), ") along with Asset Modules in webpack 5, you might want to stop Asset Modules from processing your assets again as that would result in asset duplication. This can be done by setting the asset's module type to ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "'javascript/auto'"), "."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
@@ -133391,7 +133091,7 @@ function _extends() { _extends = Object.assign ? Object.assign.bind() : function
 /* @jsxFrag mdx.Fragment */
 const makeShortcode = name => props => {
   console.warn("Component `%s` was not imported, exported, or provided by MDXProvider as global scope", name);
-  return (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx.Fragment */ .kt.Fragment, null, props.children);
+  return (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt.Fragment, null, props.children);
 };
 const StackBlitzPreview = makeShortcode("StackBlitzPreview");
 const MDXLayout = "wrapper";
@@ -232925,7 +232625,14 @@ function MDXContent(_ref) {
     src: "https://packagephobia.now.sh/badge?p=html-minimizer-webpack-plugin",
     alt: "size",
     parentName: "a"
-  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "This plugin can use 2 tools to optimize and minify your HTML:"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "This plugin can use 3 tools to optimize and minify your HTML:"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+    parentName: "ul"
+  }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+    href: "https://github.com/swc-project/swc",
+    parentName: "li"
+  }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    parentName: "a"
+  }, "swc")), " - very fast Rust-based platform for the Web."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
     parentName: "ul"
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "https://github.com/terser/html-minifier-terser",
@@ -232935,11 +232642,11 @@ function MDXContent(_ref) {
   }, "html-minifier-terser")), " (by default) - JavaScript-based HTML minifier."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
     parentName: "ul"
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-    href: "https://github.com/swc-project/swc",
+    href: "https://github.com/wilsonzlin/minify-html",
     parentName: "li"
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "a"
-  }, "swc")), " - very fast Rust-based platform for the Web.")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+  }, "@minify-html/node")), " - A Rust HTML minifier meticulously optimised for speed and effectiveness, with bindings for other languages.")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     id: "getting-started",
     parentName: "h2"
   }), "Getting Started", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
@@ -232974,7 +232681,20 @@ function MDXContent(_ref) {
   }, "yarn add -D @swc/html\n")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "or"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
     className: "hljs language-console",
     parentName: "pre"
-  }, "pnpm add -D @swc/html\n")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Then add the plugin to your ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "pnpm add -D @swc/html\n")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+    parentName: "p"
+  }, "Additional step"), ": If you want to use ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    parentName: "p"
+  }, "@minify-html/node"), " you need to install it:"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
+    className: "hljs language-console",
+    parentName: "pre"
+  }, "npm install @minify-html/node --save-dev\n")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "or"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
+    className: "hljs language-console",
+    parentName: "pre"
+  }, "yarn add -D @minify-html/node\n")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "or"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
+    className: "hljs language-console",
+    parentName: "pre"
+  }, "pnpm add -D @minify-html/node\n")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Then add the plugin to your ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "webpack"), " configuration. For example:"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
@@ -233317,15 +233037,6 @@ function MDXContent(_ref) {
     parentName: "ul"
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "li"
-  }, "html-minifier-terser"), " - always collapse multiple whitespaces to 1 space (never remove it entirely), but you can change it using ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-    href: "https://github.com/terser/html-minifier-terser#options-quick-reference",
-    parentName: "li"
-  }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-    parentName: "a"
-  }, "options"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-    parentName: "ul"
-  }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-    parentName: "li"
   }, "@swc/html"), " - remove and collapse whitespaces only in safe places (for example - around ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "li"
   }, "html"), " and ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
@@ -233338,7 +233049,23 @@ function MDXContent(_ref) {
     parentName: "li"
   }, "script"), "/", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "li"
-  }, "link"), "/etc.)"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+  }, "link"), "/etc.)"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+    parentName: "ul"
+  }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    parentName: "li"
+  }, "html-minifier-terser"), " - always collapse multiple whitespaces to 1 space (never remove it entirely), but you can change it using ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+    href: "https://github.com/terser/html-minifier-terser#options-quick-reference",
+    parentName: "li"
+  }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    parentName: "a"
+  }, "options"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+    parentName: "ul"
+  }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    parentName: "li"
+  }, "@minify-html/node"), " - please read documentation ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+    href: "https://github.com/wilsonzlin/minify-html#whitespace",
+    parentName: "li"
+  }, "https://github.com/wilsonzlin/minify-html#whitespace")))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     id: "options",
     parentName: "h2"
   }), "Options", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
@@ -234384,10 +234111,6 @@ function MDXContent(_ref) {
     parentName: "ul"
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "li"
-  }, "HtmlMinimizerPlugin.htmlMinifierTerser")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
-    parentName: "ul"
-  }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-    parentName: "li"
   }, "HtmlMinimizerPlugin.swcMinify"), " (used to compress HTML documents, i.e. with HTML doctype and ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "li"
   }, "<html>"), "/", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
@@ -234398,7 +234121,15 @@ function MDXContent(_ref) {
     parentName: "ul"
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "li"
-  }, "HtmlMinimizerPlugin.swcMinifyFragment"), " (used to compress HTML fragments, i.e. when you have part of HTML which will be inserted into another HTML parts)")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+  }, "HtmlMinimizerPlugin.swcMinifyFragment"), " (used to compress HTML fragments, i.e. when you have part of HTML which will be inserted into another HTML parts)"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+    parentName: "ul"
+  }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    parentName: "li"
+  }, "HtmlMinimizerPlugin.htmlMinifierTerser")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+    parentName: "ul"
+  }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    parentName: "li"
+  }, "HtmlMinimizerPlugin.minifyHtmlNode"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
     parentName: "blockquote"
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
@@ -235748,7 +235479,7 @@ function MDXContent(_ref) {
   }, "}"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token punctuation",
     parentName: "code"
-  }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "HTML Framgents:"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
+  }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "HTML Fragments:"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
     className: "hljs language-js",
     parentName: "pre"
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
@@ -236004,6 +235735,303 @@ function MDXContent(_ref) {
     className: "token comment",
     parentName: "code"
   }, "// Options - https://github.com/swc-project/bindings/blob/main/packages/html/index.ts#L38"), "\n        ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token punctuation",
+    parentName: "code"
+  }, "}"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token punctuation",
+    parentName: "code"
+  }, ","), "\n      ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token punctuation",
+    parentName: "code"
+  }, "}"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token punctuation",
+    parentName: "code"
+  }, ")"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token punctuation",
+    parentName: "code"
+  }, ","), "\n    ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token punctuation",
+    parentName: "code"
+  }, "]"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token punctuation",
+    parentName: "code"
+  }, ","), "\n  ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token punctuation",
+    parentName: "code"
+  }, "}"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token punctuation",
+    parentName: "code"
+  }, ","), "\n", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token punctuation",
+    parentName: "code"
+  }, "}"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token punctuation",
+    parentName: "code"
+  }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    id: "minify-htmlnode",
+    parentName: "h3"
+  }), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    parentName: "h3"
+  }, "@minify-html/node"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+    href: "#minify-htmlnode",
+    "aria-hidden": "true",
+    tabIndex: "-1",
+    parentName: "h3"
+  }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "header-link",
+    parentName: "a"
+  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Available ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+    href: "https://github.com/wilsonzlin/minify-html#minification",
+    parentName: "p"
+  }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    parentName: "a"
+  }, "options")), "."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "HTML Documents:"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
+    className: "hljs language-js",
+    parentName: "pre"
+  }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token keyword",
+    parentName: "code"
+  }, "const"), " HtmlMinimizerPlugin ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token operator",
+    parentName: "code"
+  }, "="), " ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token function",
+    parentName: "code"
+  }, "require"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token punctuation",
+    parentName: "code"
+  }, "("), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token string",
+    parentName: "code"
+  }, "\"html-minimizer-webpack-plugin\""), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token punctuation",
+    parentName: "code"
+  }, ")"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token punctuation",
+    parentName: "code"
+  }, ";"), "\n", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token keyword",
+    parentName: "code"
+  }, "const"), " CopyPlugin ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token operator",
+    parentName: "code"
+  }, "="), " ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token function",
+    parentName: "code"
+  }, "require"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token punctuation",
+    parentName: "code"
+  }, "("), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token string",
+    parentName: "code"
+  }, "\"copy-webpack-plugin\""), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token punctuation",
+    parentName: "code"
+  }, ")"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token punctuation",
+    parentName: "code"
+  }, ";"), "\n\nmodule", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token punctuation",
+    parentName: "code"
+  }, "."), "exports ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token operator",
+    parentName: "code"
+  }, "="), " ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token punctuation",
+    parentName: "code"
+  }, "{"), "\n  module", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token operator",
+    parentName: "code"
+  }, ":"), " ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token punctuation",
+    parentName: "code"
+  }, "{"), "\n    rules", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token operator",
+    parentName: "code"
+  }, ":"), " ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token punctuation",
+    parentName: "code"
+  }, "["), "\n      ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token punctuation",
+    parentName: "code"
+  }, "{"), "\n        test", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token operator",
+    parentName: "code"
+  }, ":"), " ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token regex",
+    parentName: "code"
+  }, "/\\.html$/i"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token punctuation",
+    parentName: "code"
+  }, ","), "\n        type", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token operator",
+    parentName: "code"
+  }, ":"), " ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token string",
+    parentName: "code"
+  }, "\"asset/resource\""), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token punctuation",
+    parentName: "code"
+  }, ","), "\n      ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token punctuation",
+    parentName: "code"
+  }, "}"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token punctuation",
+    parentName: "code"
+  }, ","), "\n    ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token punctuation",
+    parentName: "code"
+  }, "]"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token punctuation",
+    parentName: "code"
+  }, ","), "\n  ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token punctuation",
+    parentName: "code"
+  }, "}"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token punctuation",
+    parentName: "code"
+  }, ","), "\n  plugins", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token operator",
+    parentName: "code"
+  }, ":"), " ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token punctuation",
+    parentName: "code"
+  }, "["), "\n    ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token keyword",
+    parentName: "code"
+  }, "new"), " ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token class-name",
+    parentName: "code"
+  }, "CopyPlugin"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token punctuation",
+    parentName: "code"
+  }, "("), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token punctuation",
+    parentName: "code"
+  }, "{"), "\n      patterns", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token operator",
+    parentName: "code"
+  }, ":"), " ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token punctuation",
+    parentName: "code"
+  }, "["), "\n        ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token punctuation",
+    parentName: "code"
+  }, "{"), "\n          context", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token operator",
+    parentName: "code"
+  }, ":"), " path", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token punctuation",
+    parentName: "code"
+  }, "."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token function",
+    parentName: "code"
+  }, "resolve"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token punctuation",
+    parentName: "code"
+  }, "("), "__dirname", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token punctuation",
+    parentName: "code"
+  }, ","), " ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token string",
+    parentName: "code"
+  }, "\"dist\""), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token punctuation",
+    parentName: "code"
+  }, ")"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token punctuation",
+    parentName: "code"
+  }, ","), "\n          ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token keyword",
+    parentName: "code"
+  }, "from"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token operator",
+    parentName: "code"
+  }, ":"), " ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token string",
+    parentName: "code"
+  }, "\"./src/*.html\""), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token punctuation",
+    parentName: "code"
+  }, ","), "\n        ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token punctuation",
+    parentName: "code"
+  }, "}"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token punctuation",
+    parentName: "code"
+  }, ","), "\n      ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token punctuation",
+    parentName: "code"
+  }, "]"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token punctuation",
+    parentName: "code"
+  }, ","), "\n    ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token punctuation",
+    parentName: "code"
+  }, "}"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token punctuation",
+    parentName: "code"
+  }, ")"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token punctuation",
+    parentName: "code"
+  }, ","), "\n  ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token punctuation",
+    parentName: "code"
+  }, "]"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token punctuation",
+    parentName: "code"
+  }, ","), "\n  optimization", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token operator",
+    parentName: "code"
+  }, ":"), " ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token punctuation",
+    parentName: "code"
+  }, "{"), "\n    minimize", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token operator",
+    parentName: "code"
+  }, ":"), " ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token boolean",
+    parentName: "code"
+  }, "true"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token punctuation",
+    parentName: "code"
+  }, ","), "\n    minimizer", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token operator",
+    parentName: "code"
+  }, ":"), " ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token punctuation",
+    parentName: "code"
+  }, "["), "\n      ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token keyword",
+    parentName: "code"
+  }, "new"), " ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token class-name",
+    parentName: "code"
+  }, "HtmlMinimizerPlugin"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token punctuation",
+    parentName: "code"
+  }, "("), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token punctuation",
+    parentName: "code"
+  }, "{"), "\n        minify", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token operator",
+    parentName: "code"
+  }, ":"), " HtmlMinimizerPlugin", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token punctuation",
+    parentName: "code"
+  }, "."), "minifyHtmlNode", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token punctuation",
+    parentName: "code"
+  }, ","), "\n        minimizerOptions", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token operator",
+    parentName: "code"
+  }, ":"), " ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token punctuation",
+    parentName: "code"
+  }, "{"), "\n          ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token comment",
+    parentName: "code"
+  }, "// Options - https://github.com/wilsonzlin/minify-html#minification"), "\n        ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token punctuation",
     parentName: "code"
   }, "}"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
@@ -277193,7 +277221,7 @@ function _extends() { _extends = Object.assign ? Object.assign.bind() : function
 /* @jsxFrag mdx.Fragment */
 const makeShortcode = name => props => {
   console.warn("Component `%s` was not imported, exported, or provided by MDXProvider as global scope", name);
-  return (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx.Fragment */ .kt.Fragment, null, props.children);
+  return (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt.Fragment, null, props.children);
 };
 const Badge = makeShortcode("Badge");
 const MDXLayout = "wrapper";
@@ -279341,7 +279369,7 @@ function _extends() { _extends = Object.assign ? Object.assign.bind() : function
 /* @jsxFrag mdx.Fragment */
 const makeShortcode = name => props => {
   console.warn("Component `%s` was not imported, exported, or provided by MDXProvider as global scope", name);
-  return (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx.Fragment */ .kt.Fragment, null, props.children);
+  return (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)(_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt.Fragment, null, props.children);
 };
 const StackBlitzPreview = makeShortcode("StackBlitzPreview");
 const MDXLayout = "wrapper";
@@ -281973,7 +282001,9 @@ function MDXContent(_ref) {
     parentName: "a"
   }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Create an instance of ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "ProgressPlugin"), " and provide one of the allowed params."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+  }, "ProgressPlugin"), " and provide one of the allowed params, besides, there's a static method ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    parentName: "p"
+  }, "createDefaultHandler"), " which can be used to customize the default handler."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     id: "providing-function",
     parentName: "h3"
   }), "Providing ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
@@ -282297,6 +282327,114 @@ function MDXContent(_ref) {
     className: "token punctuation",
     parentName: "code"
   }, ")"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token punctuation",
+    parentName: "code"
+  }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    id: "webpackprogressplugincreatedefaulthandler",
+    parentName: "h3"
+  }), "webpack.ProgressPlugin.createDefaultHandler", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+    href: "#webpackprogressplugincreatedefaulthandler",
+    "aria-hidden": "true",
+    tabIndex: "-1",
+    parentName: "h3"
+  }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "header-link",
+    parentName: "a"
+  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "If the default handler of ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    parentName: "p"
+  }, "ProgressPlugin"), " does not meet your requirements, you can customize it using the static ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    parentName: "p"
+  }, "ProgressPlugin.createDefaultHandler"), " method."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
+    className: "hljs language-ts",
+    parentName: "pre"
+  }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token keyword",
+    parentName: "code"
+  }, "static"), " ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token function-variable function",
+    parentName: "code"
+  }, "createDefaultHandler"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token operator",
+    parentName: "code"
+  }, ":"), " ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token punctuation",
+    parentName: "code"
+  }, "("), "\n  profile", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token operator",
+    parentName: "code"
+  }, ":"), " ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token keyword",
+    parentName: "code"
+  }, "undefined"), " ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token operator",
+    parentName: "code"
+  }, "|"), " ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token keyword",
+    parentName: "code"
+  }, "null"), " ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token operator",
+    parentName: "code"
+  }, "|"), " ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token builtin",
+    parentName: "code"
+  }, "boolean"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token punctuation",
+    parentName: "code"
+  }, ","), "\n  logger", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token operator",
+    parentName: "code"
+  }, ":"), " WebpackLogger\n", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token punctuation",
+    parentName: "code"
+  }, ")"), " ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token operator",
+    parentName: "code"
+  }, "=>"), " ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token punctuation",
+    parentName: "code"
+  }, "("), "percentage", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token operator",
+    parentName: "code"
+  }, ":"), " ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token builtin",
+    parentName: "code"
+  }, "number"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token punctuation",
+    parentName: "code"
+  }, ","), " msg", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token operator",
+    parentName: "code"
+  }, ":"), " ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token builtin",
+    parentName: "code"
+  }, "string"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token punctuation",
+    parentName: "code"
+  }, ","), " ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token operator",
+    parentName: "code"
+  }, "..."), "args", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token operator",
+    parentName: "code"
+  }, ":"), " ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token builtin",
+    parentName: "code"
+  }, "string"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token punctuation",
+    parentName: "code"
+  }, "["), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token punctuation",
+    parentName: "code"
+  }, "]"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token punctuation",
+    parentName: "code"
+  }, ")"), " ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token operator",
+    parentName: "code"
+  }, "=>"), " ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token keyword",
+    parentName: "code"
+  }, "void"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token punctuation",
     parentName: "code"
   }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
@@ -283858,7 +283996,9 @@ function MDXContent(_ref) {
     parentName: "p"
   }, "string = 'async'"), " ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "function (chunk)")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "This indicates which chunks will be selected for optimization. When a string is provided, valid values are ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "function (chunk)"), " ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    parentName: "p"
+  }, "RegExp")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "This indicates which chunks will be selected for optimization. When a string is provided, valid values are ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "all"), ", ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
@@ -283991,6 +284131,60 @@ function MDXContent(_ref) {
     className: "token punctuation",
     parentName: "code"
   }, "}"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token punctuation",
+    parentName: "code"
+  }, ","), "\n    ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token punctuation",
+    parentName: "code"
+  }, "}"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token punctuation",
+    parentName: "code"
+  }, ","), "\n  ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token punctuation",
+    parentName: "code"
+  }, "}"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token punctuation",
+    parentName: "code"
+  }, ","), "\n", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token punctuation",
+    parentName: "code"
+  }, "}"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token punctuation",
+    parentName: "code"
+  }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "If you are using webpack version 5.86.0 or later, you can also pass a regular expression:"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
+    className: "hljs language-js",
+    parentName: "pre"
+  }, "module", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token punctuation",
+    parentName: "code"
+  }, "."), "exports ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token operator",
+    parentName: "code"
+  }, "="), " ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token punctuation",
+    parentName: "code"
+  }, "{"), "\n  ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token comment",
+    parentName: "code"
+  }, "//..."), "\n  optimization", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token operator",
+    parentName: "code"
+  }, ":"), " ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token punctuation",
+    parentName: "code"
+  }, "{"), "\n    splitChunks", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token operator",
+    parentName: "code"
+  }, ":"), " ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token punctuation",
+    parentName: "code"
+  }, "{"), "\n      chunks", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token operator",
+    parentName: "code"
+  }, ":"), " ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token regex",
+    parentName: "code"
+  }, "/foo/"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token punctuation",
     parentName: "code"
   }, ","), "\n    ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
@@ -287984,6 +288178,7 @@ module.exports = function isEqual(a, b) {
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
+var react__WEBPACK_IMPORTED_MODULE_0___namespace_cache;
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   AbortedDeferredError: () => (/* reexport safe */ react_router__WEBPACK_IMPORTED_MODULE_1__.AbortedDeferredError),
@@ -288061,7 +288256,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(4935);
 /* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(6403);
 /**
- * React Router DOM v6.11.2
+ * React Router DOM v6.12.1
  *
  * Copyright (c) Remix Software Inc.
  *
@@ -288079,31 +288274,26 @@ function _extends() {
   _extends = Object.assign ? Object.assign.bind() : function (target) {
     for (var i = 1; i < arguments.length; i++) {
       var source = arguments[i];
-
       for (var key in source) {
         if (Object.prototype.hasOwnProperty.call(source, key)) {
           target[key] = source[key];
         }
       }
     }
-
     return target;
   };
   return _extends.apply(this, arguments);
 }
-
 function _objectWithoutPropertiesLoose(source, excluded) {
   if (source == null) return {};
   var target = {};
   var sourceKeys = Object.keys(source);
   var key, i;
-
   for (i = 0; i < sourceKeys.length; i++) {
     key = sourceKeys[i];
     if (excluded.indexOf(key) >= 0) continue;
     target[key] = source[key];
   }
-
   return target;
 }
 
@@ -288121,14 +288311,14 @@ function isFormElement(object) {
 function isInputElement(object) {
   return isHtmlElement(object) && object.tagName.toLowerCase() === "input";
 }
-
 function isModifiedEvent(event) {
   return !!(event.metaKey || event.altKey || event.ctrlKey || event.shiftKey);
 }
-
 function shouldProcessLinkClick(event, target) {
-  return event.button === 0 && ( // Ignore everything but left clicks
-  !target || target === "_self") && // Let browser handle "target=_blank" etc.
+  return event.button === 0 && (
+  // Ignore everything but left clicks
+  !target || target === "_self") &&
+  // Let browser handle "target=_blank" etc.
   !isModifiedEvent(event) // Ignore clicks with modifier keys
   ;
 }
@@ -288153,12 +288343,10 @@ function shouldProcessLinkClick(event, target) {
  *     sort: ['name', 'price']
  *   });
  */
-
 function createSearchParams(init) {
   if (init === void 0) {
     init = "";
   }
-
   return new URLSearchParams(typeof init === "string" || Array.isArray(init) || init instanceof URLSearchParams ? init : Object.keys(init).reduce((memo, key) => {
     let value = init[key];
     return memo.concat(Array.isArray(value) ? value.map(v => [key, v]) : [[key, value]]);
@@ -288166,7 +288354,6 @@ function createSearchParams(init) {
 }
 function getSearchParamsForLocation(locationSearch, defaultSearchParams) {
   let searchParams = createSearchParams(locationSearch);
-
   if (defaultSearchParams) {
     for (let key of defaultSearchParams.keys()) {
       if (!searchParams.has(key)) {
@@ -288176,7 +288363,6 @@ function getSearchParamsForLocation(locationSearch, defaultSearchParams) {
       }
     }
   }
-
   return searchParams;
 }
 function getFormSubmissionInfo(target, options, basename) {
@@ -288184,10 +288370,8 @@ function getFormSubmissionInfo(target, options, basename) {
   let action = null;
   let encType;
   let formData;
-
   if (isFormElement(target)) {
     let submissionTrigger = options.submissionTrigger;
-
     if (options.action) {
       action = options.action;
     } else {
@@ -288197,22 +288381,18 @@ function getFormSubmissionInfo(target, options, basename) {
       let attr = target.getAttribute("action");
       action = attr ? (0,react_router__WEBPACK_IMPORTED_MODULE_1__.stripBasename)(attr, basename) : null;
     }
-
     method = options.method || target.getAttribute("method") || defaultMethod;
     encType = options.encType || target.getAttribute("enctype") || defaultEncType;
     formData = new FormData(target);
-
     if (submissionTrigger && submissionTrigger.name) {
       formData.append(submissionTrigger.name, submissionTrigger.value);
     }
   } else if (isButtonElement(target) || isInputElement(target) && (target.type === "submit" || target.type === "image")) {
     let form = target.form;
-
     if (form == null) {
       throw new Error("Cannot submit a <button> or <input type=\"submit\"> without a <form>");
-    } // <button>/<input type="submit"> may override attributes of <form>
-
-
+    }
+    // <button>/<input type="submit"> may override attributes of <form>
     if (options.action) {
       action = options.action;
     } else {
@@ -288222,12 +288402,11 @@ function getFormSubmissionInfo(target, options, basename) {
       let attr = target.getAttribute("formaction") || form.getAttribute("action");
       action = attr ? (0,react_router__WEBPACK_IMPORTED_MODULE_1__.stripBasename)(attr, basename) : null;
     }
-
     method = options.method || target.getAttribute("formmethod") || form.getAttribute("method") || defaultMethod;
     encType = options.encType || target.getAttribute("formenctype") || form.getAttribute("enctype") || defaultEncType;
-    formData = new FormData(form); // Include name + value from a <button>, appending in case the button name
+    formData = new FormData(form);
+    // Include name + value from a <button>, appending in case the button name
     // matches an existing input name
-
     if (target.name) {
       formData.append(target.name, target.value);
     }
@@ -288237,12 +288416,10 @@ function getFormSubmissionInfo(target, options, basename) {
     method = options.method || defaultMethod;
     action = options.action || null;
     encType = options.encType || defaultEncType;
-
     if (target instanceof FormData) {
       formData = target;
     } else {
       formData = new FormData();
-
       if (target instanceof URLSearchParams) {
         for (let [name, value] of target) {
           formData.append(name, value);
@@ -288254,7 +288431,6 @@ function getFormSubmissionInfo(target, options, basename) {
       }
     }
   }
-
   return {
     action,
     method: method.toLowerCase(),
@@ -288264,8 +288440,8 @@ function getFormSubmissionInfo(target, options, basename) {
 }
 
 const _excluded = ["onClick", "relative", "reloadDocument", "replace", "state", "target", "to", "preventScrollReset"],
-      _excluded2 = ["aria-current", "caseSensitive", "className", "end", "style", "to", "children"],
-      _excluded3 = ["reloadDocument", "replace", "method", "action", "onSubmit", "fetcherKey", "routeId", "relative", "preventScrollReset"];
+  _excluded2 = ["aria-current", "caseSensitive", "className", "end", "style", "to", "children"],
+  _excluded3 = ["reloadDocument", "replace", "method", "action", "onSubmit", "fetcherKey", "routeId", "relative", "preventScrollReset"];
 function createBrowserRouter(routes, opts) {
   return (0,react_router__WEBPACK_IMPORTED_MODULE_1__.createRouter)({
     basename: opts == null ? void 0 : opts.basename,
@@ -288294,49 +288470,44 @@ function createHashRouter(routes, opts) {
     mapRouteProperties: react_router__WEBPACK_IMPORTED_MODULE_2__.UNSAFE_mapRouteProperties
   }).initialize();
 }
-
 function parseHydrationData() {
   var _window;
-
   let state = (_window = window) == null ? void 0 : _window.__staticRouterHydrationData;
-
   if (state && state.errors) {
     state = _extends({}, state, {
       errors: deserializeErrors(state.errors)
     });
   }
-
   return state;
 }
-
 function deserializeErrors(errors) {
   if (!errors) return null;
   let entries = Object.entries(errors);
   let serialized = {};
-
   for (let [key, val] of entries) {
     // Hey you!  If you change this, please change the corresponding logic in
     // serializeErrors in react-router-dom/server.tsx :)
     if (val && val.__type === "RouteErrorResponse") {
       serialized[key] = new react_router__WEBPACK_IMPORTED_MODULE_1__.ErrorResponse(val.status, val.statusText, val.data, val.internal === true);
     } else if (val && val.__type === "Error") {
-      let error = new Error(val.message); // Wipe away the client-side stack trace.  Nothing to fill it in with
+      let error = new Error(val.message);
+      // Wipe away the client-side stack trace.  Nothing to fill it in with
       // because we don't serialize SSR stack traces for security reasons
-
       error.stack = "";
       serialized[key] = error;
     } else {
       serialized[key] = val;
     }
   }
-
   return serialized;
 }
+// Webpack + React 17 fails to compile on the usage of `React.startTransition` or
+// `React["startTransition"]` even if it's behind a feature detection of
+// `"startTransition" in React`. Moving this to a constant avoids the issue :/
+const START_TRANSITION = "startTransition";
 /**
  * A `<Router>` for use in web browsers. Provides the cleanest URLs.
  */
-
-
 function BrowserRouter(_ref) {
   let {
     basename,
@@ -288344,20 +288515,21 @@ function BrowserRouter(_ref) {
     window
   } = _ref;
   let historyRef = react__WEBPACK_IMPORTED_MODULE_0__.useRef();
-
   if (historyRef.current == null) {
     historyRef.current = (0,react_router__WEBPACK_IMPORTED_MODULE_1__.createBrowserHistory)({
       window,
       v5Compat: true
     });
   }
-
   let history = historyRef.current;
-  let [state, setState] = react__WEBPACK_IMPORTED_MODULE_0__.useState({
+  let [state, setStateImpl] = react__WEBPACK_IMPORTED_MODULE_0__.useState({
     action: history.action,
     location: history.location
   });
-  react__WEBPACK_IMPORTED_MODULE_0__.useLayoutEffect(() => history.listen(setState), [history]);
+  let setState = react__WEBPACK_IMPORTED_MODULE_0__.useCallback(newState => {
+    START_TRANSITION in /*#__PURE__*/ (react__WEBPACK_IMPORTED_MODULE_0___namespace_cache || (react__WEBPACK_IMPORTED_MODULE_0___namespace_cache = __webpack_require__.t(react__WEBPACK_IMPORTED_MODULE_0__, 2))) ? /*#__PURE__*/ (react__WEBPACK_IMPORTED_MODULE_0___namespace_cache || (react__WEBPACK_IMPORTED_MODULE_0___namespace_cache = __webpack_require__.t(react__WEBPACK_IMPORTED_MODULE_0__, 2)))[START_TRANSITION](() => setStateImpl(newState)) : setStateImpl(newState);
+  }, [setStateImpl]);
+  react__WEBPACK_IMPORTED_MODULE_0__.useLayoutEffect(() => history.listen(setState), [history, setState]);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router__WEBPACK_IMPORTED_MODULE_2__.Router, {
     basename: basename,
     children: children,
@@ -288370,7 +288542,6 @@ function BrowserRouter(_ref) {
  * A `<Router>` for use in web browsers. Stores the location in the hash
  * portion of the URL so it is not sent to the server.
  */
-
 function HashRouter(_ref2) {
   let {
     basename,
@@ -288378,20 +288549,21 @@ function HashRouter(_ref2) {
     window
   } = _ref2;
   let historyRef = react__WEBPACK_IMPORTED_MODULE_0__.useRef();
-
   if (historyRef.current == null) {
     historyRef.current = (0,react_router__WEBPACK_IMPORTED_MODULE_1__.createHashHistory)({
       window,
       v5Compat: true
     });
   }
-
   let history = historyRef.current;
-  let [state, setState] = react__WEBPACK_IMPORTED_MODULE_0__.useState({
+  let [state, setStateImpl] = react__WEBPACK_IMPORTED_MODULE_0__.useState({
     action: history.action,
     location: history.location
   });
-  react__WEBPACK_IMPORTED_MODULE_0__.useLayoutEffect(() => history.listen(setState), [history]);
+  let setState = react__WEBPACK_IMPORTED_MODULE_0__.useCallback(newState => {
+    START_TRANSITION in /*#__PURE__*/ (react__WEBPACK_IMPORTED_MODULE_0___namespace_cache || (react__WEBPACK_IMPORTED_MODULE_0___namespace_cache = __webpack_require__.t(react__WEBPACK_IMPORTED_MODULE_0__, 2))) ? /*#__PURE__*/ (react__WEBPACK_IMPORTED_MODULE_0___namespace_cache || (react__WEBPACK_IMPORTED_MODULE_0___namespace_cache = __webpack_require__.t(react__WEBPACK_IMPORTED_MODULE_0__, 2)))[START_TRANSITION](() => setStateImpl(newState)) : setStateImpl(newState);
+  }, [setStateImpl]);
+  react__WEBPACK_IMPORTED_MODULE_0__.useLayoutEffect(() => history.listen(setState), [history, setState]);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router__WEBPACK_IMPORTED_MODULE_2__.Router, {
     basename: basename,
     children: children,
@@ -288406,18 +288578,20 @@ function HashRouter(_ref2) {
  * two versions of the history library to your bundles unless you use the same
  * version of the history library that React Router uses internally.
  */
-
 function HistoryRouter(_ref3) {
   let {
     basename,
     children,
     history
   } = _ref3;
-  const [state, setState] = react__WEBPACK_IMPORTED_MODULE_0__.useState({
+  let [state, setStateImpl] = react__WEBPACK_IMPORTED_MODULE_0__.useState({
     action: history.action,
     location: history.location
   });
-  react__WEBPACK_IMPORTED_MODULE_0__.useLayoutEffect(() => history.listen(setState), [history]);
+  let setState = react__WEBPACK_IMPORTED_MODULE_0__.useCallback(newState => {
+    START_TRANSITION in /*#__PURE__*/ (react__WEBPACK_IMPORTED_MODULE_0___namespace_cache || (react__WEBPACK_IMPORTED_MODULE_0___namespace_cache = __webpack_require__.t(react__WEBPACK_IMPORTED_MODULE_0__, 2))) ? /*#__PURE__*/ (react__WEBPACK_IMPORTED_MODULE_0___namespace_cache || (react__WEBPACK_IMPORTED_MODULE_0___namespace_cache = __webpack_require__.t(react__WEBPACK_IMPORTED_MODULE_0__, 2)))[START_TRANSITION](() => setStateImpl(newState)) : setStateImpl(newState);
+  }, [setStateImpl]);
+  react__WEBPACK_IMPORTED_MODULE_0__.useLayoutEffect(() => history.listen(setState), [history, setState]);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router__WEBPACK_IMPORTED_MODULE_2__.Router, {
     basename: basename,
     children: children,
@@ -288426,44 +288600,39 @@ function HistoryRouter(_ref3) {
     navigator: history
   });
 }
-
 if (false) {}
 const isBrowser = typeof window !== "undefined" && typeof window.document !== "undefined" && typeof window.document.createElement !== "undefined";
 const ABSOLUTE_URL_REGEX = /^(?:[a-z][a-z0-9+.-]*:|\/\/)/i;
 /**
  * The public API for rendering a history-aware <a>.
  */
-
 const Link = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.forwardRef(function LinkWithRef(_ref4, ref) {
   let {
-    onClick,
-    relative,
-    reloadDocument,
-    replace,
-    state,
-    target,
-    to,
-    preventScrollReset
-  } = _ref4,
-      rest = _objectWithoutPropertiesLoose(_ref4, _excluded);
-
+      onClick,
+      relative,
+      reloadDocument,
+      replace,
+      state,
+      target,
+      to,
+      preventScrollReset
+    } = _ref4,
+    rest = _objectWithoutPropertiesLoose(_ref4, _excluded);
   let {
     basename
-  } = react__WEBPACK_IMPORTED_MODULE_0__.useContext(react_router__WEBPACK_IMPORTED_MODULE_2__.UNSAFE_NavigationContext); // Rendered into <a href> for absolute URLs
-
+  } = react__WEBPACK_IMPORTED_MODULE_0__.useContext(react_router__WEBPACK_IMPORTED_MODULE_2__.UNSAFE_NavigationContext);
+  // Rendered into <a href> for absolute URLs
   let absoluteHref;
   let isExternal = false;
-
   if (typeof to === "string" && ABSOLUTE_URL_REGEX.test(to)) {
     // Render the absolute href server- and client-side
-    absoluteHref = to; // Only check for external origins client-side
-
+    absoluteHref = to;
+    // Only check for external origins client-side
     if (isBrowser) {
       try {
         let currentUrl = new URL(window.location.href);
         let targetUrl = to.startsWith("//") ? new URL(currentUrl.protocol + to) : new URL(to);
         let path = (0,react_router__WEBPACK_IMPORTED_MODULE_1__.stripBasename)(targetUrl.pathname, basename);
-
         if (targetUrl.origin === currentUrl.origin && path != null) {
           // Strip the protocol/origin/basename for same-origin absolute URLs
           to = path + targetUrl.search + targetUrl.hash;
@@ -288475,9 +288644,8 @@ const Link = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.forwardRef(function
          false ? 0 : void 0;
       }
     }
-  } // Rendered into <a href> for relative URLs
-
-
+  }
+  // Rendered into <a href> for relative URLs
   let href = (0,react_router__WEBPACK_IMPORTED_MODULE_2__.useHref)(to, {
     relative
   });
@@ -288488,15 +288656,12 @@ const Link = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.forwardRef(function
     preventScrollReset,
     relative
   });
-
   function handleClick(event) {
     if (onClick) onClick(event);
-
     if (!event.defaultPrevented) {
       internalOnClick(event);
     }
   }
-
   return (
     /*#__PURE__*/
     // eslint-disable-next-line jsx-a11y/anchor-has-content
@@ -288508,25 +288673,21 @@ const Link = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.forwardRef(function
     }))
   );
 });
-
 if (false) {}
 /**
  * A <Link> wrapper that knows if it's "active" or not.
  */
-
-
 const NavLink = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.forwardRef(function NavLinkWithRef(_ref5, ref) {
   let {
-    "aria-current": ariaCurrentProp = "page",
-    caseSensitive = false,
-    className: classNameProp = "",
-    end = false,
-    style: styleProp,
-    to,
-    children
-  } = _ref5,
-      rest = _objectWithoutPropertiesLoose(_ref5, _excluded2);
-
+      "aria-current": ariaCurrentProp = "page",
+      caseSensitive = false,
+      className: classNameProp = "",
+      end = false,
+      style: styleProp,
+      to,
+      children
+    } = _ref5,
+    rest = _objectWithoutPropertiesLoose(_ref5, _excluded2);
   let path = (0,react_router__WEBPACK_IMPORTED_MODULE_2__.useResolvedPath)(to, {
     relative: rest.relative
   });
@@ -288538,18 +288699,15 @@ const NavLink = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.forwardRef(funct
   let toPathname = navigator.encodeLocation ? navigator.encodeLocation(path).pathname : path.pathname;
   let locationPathname = location.pathname;
   let nextLocationPathname = routerState && routerState.navigation && routerState.navigation.location ? routerState.navigation.location.pathname : null;
-
   if (!caseSensitive) {
     locationPathname = locationPathname.toLowerCase();
     nextLocationPathname = nextLocationPathname ? nextLocationPathname.toLowerCase() : null;
     toPathname = toPathname.toLowerCase();
   }
-
   let isActive = locationPathname === toPathname || !end && locationPathname.startsWith(toPathname) && locationPathname.charAt(toPathname.length) === "/";
   let isPending = nextLocationPathname != null && (nextLocationPathname === toPathname || !end && nextLocationPathname.startsWith(toPathname) && nextLocationPathname.charAt(toPathname.length) === "/");
   let ariaCurrent = isActive ? ariaCurrentProp : undefined;
   let className;
-
   if (typeof classNameProp === "function") {
     className = classNameProp({
       isActive,
@@ -288563,7 +288721,6 @@ const NavLink = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.forwardRef(funct
     // simple styling rules working as they currently do.
     className = [classNameProp, isActive ? "active" : null, isPending ? "pending" : null].filter(Boolean).join(" ");
   }
-
   let style = typeof styleProp === "function" ? styleProp({
     isActive,
     isPending
@@ -288579,7 +288736,6 @@ const NavLink = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.forwardRef(funct
     isPending
   }) : children);
 });
-
 if (false) {}
 /**
  * A `@remix-run/router`-aware `<form>`. It behaves like a normal form except
@@ -288587,36 +288743,30 @@ if (false) {}
  * requests, allowing components to add nicer UX to the page as the form is
  * submitted and returns with data.
  */
-
-
 const Form = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.forwardRef((props, ref) => {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(FormImpl, _extends({}, props, {
     ref: ref
   }));
 });
-
 if (false) {}
-
 const FormImpl = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.forwardRef((_ref6, forwardedRef) => {
   let {
-    reloadDocument,
-    replace,
-    method = defaultMethod,
-    action,
-    onSubmit,
-    fetcherKey,
-    routeId,
-    relative,
-    preventScrollReset
-  } = _ref6,
-      props = _objectWithoutPropertiesLoose(_ref6, _excluded3);
-
+      reloadDocument,
+      replace,
+      method = defaultMethod,
+      action,
+      onSubmit,
+      fetcherKey,
+      routeId,
+      relative,
+      preventScrollReset
+    } = _ref6,
+    props = _objectWithoutPropertiesLoose(_ref6, _excluded3);
   let submit = useSubmitImpl(fetcherKey, routeId);
   let formMethod = method.toLowerCase() === "get" ? "get" : "post";
   let formAction = useFormAction(action, {
     relative
   });
-
   let submitHandler = event => {
     onSubmit && onSubmit(event);
     if (event.defaultPrevented) return;
@@ -288630,7 +288780,6 @@ const FormImpl = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.forwardRef((_re
       preventScrollReset
     });
   };
-
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("form", _extends({
     ref: forwardedRef,
     method: formMethod,
@@ -288638,14 +288787,11 @@ const FormImpl = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.forwardRef((_re
     onSubmit: reloadDocument ? onSubmit : submitHandler
   }, props));
 });
-
 if (false) {}
 /**
  * This component will emulate the browser's scroll restoration on location
  * changes.
  */
-
-
 function ScrollRestoration(_ref7) {
   let {
     getKey,
@@ -288657,38 +288803,30 @@ function ScrollRestoration(_ref7) {
   });
   return null;
 }
-
-if (false) {} //#endregion
+if (false) {}
+//#endregion
 ////////////////////////////////////////////////////////////////////////////////
 //#region Hooks
 ////////////////////////////////////////////////////////////////////////////////
-
-
 var DataRouterHook;
-
 (function (DataRouterHook) {
   DataRouterHook["UseScrollRestoration"] = "useScrollRestoration";
   DataRouterHook["UseSubmitImpl"] = "useSubmitImpl";
   DataRouterHook["UseFetcher"] = "useFetcher";
 })(DataRouterHook || (DataRouterHook = {}));
-
 var DataRouterStateHook;
-
 (function (DataRouterStateHook) {
   DataRouterStateHook["UseFetchers"] = "useFetchers";
   DataRouterStateHook["UseScrollRestoration"] = "useScrollRestoration";
 })(DataRouterStateHook || (DataRouterStateHook = {}));
-
 function getDataRouterConsoleError(hookName) {
   return hookName + " must be used within a data router.  See https://reactrouter.com/routers/picking-a-router.";
 }
-
 function useDataRouterContext(hookName) {
   let ctx = react__WEBPACK_IMPORTED_MODULE_0__.useContext(react_router__WEBPACK_IMPORTED_MODULE_2__.UNSAFE_DataRouterContext);
   !ctx ?  false ? 0 : (0,react_router__WEBPACK_IMPORTED_MODULE_1__.UNSAFE_invariant)(false) : void 0;
   return ctx;
 }
-
 function useDataRouterState(hookName) {
   let state = react__WEBPACK_IMPORTED_MODULE_0__.useContext(react_router__WEBPACK_IMPORTED_MODULE_2__.UNSAFE_DataRouterStateContext);
   !state ?  false ? 0 : (0,react_router__WEBPACK_IMPORTED_MODULE_1__.UNSAFE_invariant)(false) : void 0;
@@ -288699,8 +288837,6 @@ function useDataRouterState(hookName) {
  * you need to create custom `<Link>` components with the same click behavior we
  * use in our exported `<Link>`.
  */
-
-
 function useLinkClickHandler(to, _temp) {
   let {
     target,
@@ -288716,9 +288852,9 @@ function useLinkClickHandler(to, _temp) {
   });
   return react__WEBPACK_IMPORTED_MODULE_0__.useCallback(event => {
     if (shouldProcessLinkClick(event, target)) {
-      event.preventDefault(); // If the URL hasn't changed, a regular <a> will do a replace instead of
+      event.preventDefault();
+      // If the URL hasn't changed, a regular <a> will do a replace instead of
       // a push, so do the same here unless the replace prop is explicitly set
-
       let replace = replaceProp !== undefined ? replaceProp : (0,react_router__WEBPACK_IMPORTED_MODULE_1__.createPath)(location) === (0,react_router__WEBPACK_IMPORTED_MODULE_1__.createPath)(path);
       navigate(to, {
         replace,
@@ -288733,13 +288869,13 @@ function useLinkClickHandler(to, _temp) {
  * A convenient wrapper for reading and writing search parameters via the
  * URLSearchParams interface.
  */
-
 function useSearchParams(defaultInit) {
    false ? 0 : void 0;
   let defaultSearchParamsRef = react__WEBPACK_IMPORTED_MODULE_0__.useRef(createSearchParams(defaultInit));
   let hasSetSearchParamsRef = react__WEBPACK_IMPORTED_MODULE_0__.useRef(false);
   let location = (0,react_router__WEBPACK_IMPORTED_MODULE_2__.useLocation)();
-  let searchParams = react__WEBPACK_IMPORTED_MODULE_0__.useMemo(() => // Only merge in the defaults if we haven't yet called setSearchParams.
+  let searchParams = react__WEBPACK_IMPORTED_MODULE_0__.useMemo(() =>
+  // Only merge in the defaults if we haven't yet called setSearchParams.
   // Once we call that we want those to take precedence, otherwise you can't
   // remove a param with setSearchParams({}) if it has an initial value
   getSearchParamsForLocation(location.search, hasSetSearchParamsRef.current ? null : defaultSearchParamsRef.current), [location.search]);
@@ -288755,11 +288891,9 @@ function useSearchParams(defaultInit) {
  * Returns a function that may be used to programmatically submit a form (or
  * some arbitrary data) to the server.
  */
-
 function useSubmit() {
   return useSubmitImpl();
 }
-
 function useSubmitImpl(fetcherKey, fetcherRouteId) {
   let {
     router
@@ -288772,25 +288906,22 @@ function useSubmitImpl(fetcherKey, fetcherRouteId) {
     if (options === void 0) {
       options = {};
     }
-
     if (typeof document === "undefined") {
       throw new Error("You are calling submit during the server render. " + "Try calling submit within a `useEffect` or callback instead.");
     }
-
     let {
       action,
       method,
       encType,
       formData
-    } = getFormSubmissionInfo(target, options, basename); // Base options shared between fetch() and navigate()
-
+    } = getFormSubmissionInfo(target, options, basename);
+    // Base options shared between fetch() and navigate()
     let opts = {
       preventScrollReset: options.preventScrollReset,
       formData,
       formMethod: method,
       formEncType: encType
     };
-
     if (fetcherKey) {
       !(fetcherRouteId != null) ?  false ? 0 : (0,react_router__WEBPACK_IMPORTED_MODULE_1__.UNSAFE_invariant)(false) : void 0;
       router.fetch(fetcherKey, fetcherRouteId, action, opts);
@@ -288801,10 +288932,9 @@ function useSubmitImpl(fetcherKey, fetcherRouteId) {
       }));
     }
   }, [router, basename, fetcherKey, fetcherRouteId, currentRouteId]);
-} // v7: Eventually we should deprecate this entirely in favor of using the
+}
+// v7: Eventually we should deprecate this entirely in favor of using the
 // router method directly?
-
-
 function useFormAction(action, _temp2) {
   let {
     relative
@@ -288814,51 +288944,45 @@ function useFormAction(action, _temp2) {
   } = react__WEBPACK_IMPORTED_MODULE_0__.useContext(react_router__WEBPACK_IMPORTED_MODULE_2__.UNSAFE_NavigationContext);
   let routeContext = react__WEBPACK_IMPORTED_MODULE_0__.useContext(react_router__WEBPACK_IMPORTED_MODULE_2__.UNSAFE_RouteContext);
   !routeContext ?  false ? 0 : (0,react_router__WEBPACK_IMPORTED_MODULE_1__.UNSAFE_invariant)(false) : void 0;
-  let [match] = routeContext.matches.slice(-1); // Shallow clone path so we can modify it below, otherwise we modify the
+  let [match] = routeContext.matches.slice(-1);
+  // Shallow clone path so we can modify it below, otherwise we modify the
   // object referenced by useMemo inside useResolvedPath
-
   let path = _extends({}, (0,react_router__WEBPACK_IMPORTED_MODULE_2__.useResolvedPath)(action ? action : ".", {
     relative
-  })); // Previously we set the default action to ".". The problem with this is that
+  }));
+  // Previously we set the default action to ".". The problem with this is that
   // `useResolvedPath(".")` excludes search params and the hash of the resolved
   // URL. This is the intended behavior of when "." is specifically provided as
   // the form action, but inconsistent w/ browsers when the action is omitted.
   // https://github.com/remix-run/remix/issues/927
-
-
   let location = (0,react_router__WEBPACK_IMPORTED_MODULE_2__.useLocation)();
-
   if (action == null) {
     // Safe to write to these directly here since if action was undefined, we
     // would have called useResolvedPath(".") which will never include a search
     // or hash
     path.search = location.search;
-    path.hash = location.hash; // When grabbing search params from the URL, remove the automatically
+    path.hash = location.hash;
+    // When grabbing search params from the URL, remove the automatically
     // inserted ?index param so we match the useResolvedPath search behavior
     // which would not include ?index
-
     if (match.route.index) {
       let params = new URLSearchParams(path.search);
       params.delete("index");
       path.search = params.toString() ? "?" + params.toString() : "";
     }
   }
-
   if ((!action || action === ".") && match.route.index) {
     path.search = path.search ? path.search.replace(/^\?/, "?index&") : "?index";
-  } // If we're operating within a basename, prepend it to the pathname prior
+  }
+  // If we're operating within a basename, prepend it to the pathname prior
   // to creating the form action.  If this is a root navigation, then just use
   // the raw basename which allows the basename to have full control over the
   // presence of a trailing slash on root actions
-
-
   if (basename !== "/") {
     path.pathname = path.pathname === "/" ? basename : (0,react_router__WEBPACK_IMPORTED_MODULE_1__.joinPaths)([basename, path.pathname]);
   }
-
   return (0,react_router__WEBPACK_IMPORTED_MODULE_1__.createPath)(path);
 }
-
 function createFetcherForm(fetcherKey, routeId) {
   let FetcherForm = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.forwardRef((props, ref) => {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(FormImpl, _extends({}, props, {
@@ -288867,21 +288991,16 @@ function createFetcherForm(fetcherKey, routeId) {
       routeId: routeId
     }));
   });
-
   if (false) {}
-
   return FetcherForm;
 }
-
 let fetcherId = 0;
 /**
  * Interacts with route loaders and actions without causing a navigation. Great
  * for any interaction that stays on the same page.
  */
-
 function useFetcher() {
   var _route$matches;
-
   let {
     router
   } = useDataRouterContext(DataRouterHook.UseFetcher);
@@ -288915,7 +289034,6 @@ function useFetcher() {
         console.warn("No router available to clean up from useFetcher()");
         return;
       }
-
       router.deleteFetcher(fetcherKey);
     };
   }, [router, fetcherKey]);
@@ -288925,7 +289043,6 @@ function useFetcher() {
  * Provides all fetchers currently on the page. Useful for layouts and parent
  * routes that need to provide pending/optimistic UI regarding the fetch.
  */
-
 function useFetchers() {
   let state = useDataRouterState(DataRouterStateHook.UseFetchers);
   return [...state.fetchers.values()];
@@ -288935,7 +289052,6 @@ let savedScrollPositions = {};
 /**
  * When rendered inside a RouterProvider, will restore scroll positions on navigations
  */
-
 function useScrollRestoration(_temp3) {
   let {
     getKey,
@@ -288950,73 +289066,67 @@ function useScrollRestoration(_temp3) {
   } = useDataRouterState(DataRouterStateHook.UseScrollRestoration);
   let location = (0,react_router__WEBPACK_IMPORTED_MODULE_2__.useLocation)();
   let matches = (0,react_router__WEBPACK_IMPORTED_MODULE_2__.useMatches)();
-  let navigation = (0,react_router__WEBPACK_IMPORTED_MODULE_2__.useNavigation)(); // Trigger manual scroll restoration while we're active
-
+  let navigation = (0,react_router__WEBPACK_IMPORTED_MODULE_2__.useNavigation)();
+  // Trigger manual scroll restoration while we're active
   react__WEBPACK_IMPORTED_MODULE_0__.useEffect(() => {
     window.history.scrollRestoration = "manual";
     return () => {
       window.history.scrollRestoration = "auto";
     };
-  }, []); // Save positions on pagehide
-
+  }, []);
+  // Save positions on pagehide
   usePageHide(react__WEBPACK_IMPORTED_MODULE_0__.useCallback(() => {
     if (navigation.state === "idle") {
       let key = (getKey ? getKey(location, matches) : null) || location.key;
       savedScrollPositions[key] = window.scrollY;
     }
-
     sessionStorage.setItem(storageKey || SCROLL_RESTORATION_STORAGE_KEY, JSON.stringify(savedScrollPositions));
     window.history.scrollRestoration = "auto";
-  }, [storageKey, getKey, navigation.state, location, matches])); // Read in any saved scroll locations
-
+  }, [storageKey, getKey, navigation.state, location, matches]));
+  // Read in any saved scroll locations
   if (typeof document !== "undefined") {
     // eslint-disable-next-line react-hooks/rules-of-hooks
     react__WEBPACK_IMPORTED_MODULE_0__.useLayoutEffect(() => {
       try {
         let sessionPositions = sessionStorage.getItem(storageKey || SCROLL_RESTORATION_STORAGE_KEY);
-
         if (sessionPositions) {
           savedScrollPositions = JSON.parse(sessionPositions);
         }
-      } catch (e) {// no-op, use default empty object
+      } catch (e) {
+        // no-op, use default empty object
       }
-    }, [storageKey]); // Enable scroll restoration in the router
+    }, [storageKey]);
+    // Enable scroll restoration in the router
     // eslint-disable-next-line react-hooks/rules-of-hooks
-
     react__WEBPACK_IMPORTED_MODULE_0__.useLayoutEffect(() => {
       let disableScrollRestoration = router == null ? void 0 : router.enableScrollRestoration(savedScrollPositions, () => window.scrollY, getKey);
       return () => disableScrollRestoration && disableScrollRestoration();
-    }, [router, getKey]); // Restore scrolling when state.restoreScrollPosition changes
+    }, [router, getKey]);
+    // Restore scrolling when state.restoreScrollPosition changes
     // eslint-disable-next-line react-hooks/rules-of-hooks
-
     react__WEBPACK_IMPORTED_MODULE_0__.useLayoutEffect(() => {
       // Explicit false means don't do anything (used for submissions)
       if (restoreScrollPosition === false) {
         return;
-      } // been here before, scroll to it
-
-
+      }
+      // been here before, scroll to it
       if (typeof restoreScrollPosition === "number") {
         window.scrollTo(0, restoreScrollPosition);
         return;
-      } // try to scroll to the hash
-
-
+      }
+      // try to scroll to the hash
       if (location.hash) {
         let el = document.getElementById(location.hash.slice(1));
-
         if (el) {
           el.scrollIntoView();
           return;
         }
-      } // Don't reset if this navigation opted out
-
-
+      }
+      // Don't reset if this navigation opted out
       if (preventScrollReset === true) {
         return;
-      } // otherwise go to the top on new locations
-
-
+      }
+      // otherwise go to the top on new locations
       window.scrollTo(0, 0);
     }, [location, restoreScrollPosition, preventScrollReset]);
   }
@@ -289029,7 +289139,6 @@ function useScrollRestoration(_temp3) {
  * Note: The `callback` argument should be a function created with
  * `React.useCallback()`.
  */
-
 function useBeforeUnload(callback, options) {
   let {
     capture
@@ -289052,7 +289161,6 @@ function useBeforeUnload(callback, options) {
  * Note: The `callback` argument should be a function created with
  * `React.useCallback()`.
  */
-
 function usePageHide(callback, options) {
   let {
     capture
@@ -289075,8 +289183,6 @@ function usePageHide(callback, options) {
  * very incorrectly in some cases) across browsers if user click addition
  * back/forward navigations while the confirm is open.  Use at your own risk.
  */
-
-
 function usePrompt(_ref8) {
   let {
     when,
@@ -289091,7 +289197,6 @@ function usePrompt(_ref8) {
   react__WEBPACK_IMPORTED_MODULE_0__.useEffect(() => {
     if (blocker.state === "blocked") {
       let proceed = window.confirm(message);
-
       if (proceed) {
         setTimeout(blocker.proceed, 0);
       } else {
@@ -289100,7 +289205,7 @@ function usePrompt(_ref8) {
     }
   }, [blocker, message]);
 }
- //#endregion
+//#endregion
 
 
 //# sourceMappingURL=index.js.map
@@ -289146,7 +289251,6 @@ var React__namespace = /*#__PURE__*/_interopNamespace(React);
  * A <Router> that may not navigate to any other location. This is useful
  * on the server where there is no stateful UI.
  */
-
 function StaticRouter({
   basename,
   children,
@@ -289155,7 +289259,6 @@ function StaticRouter({
   if (typeof locationProp === "string") {
     locationProp = reactRouterDom.parsePath(locationProp);
   }
-
   let action = router.Action.Pop;
   let location = {
     pathname: locationProp.pathname || "/",
@@ -289178,7 +289281,6 @@ function StaticRouter({
  * A Data Router that may not navigate to any other location. This is useful
  * on the server where there is no stateful UI.
  */
-
 function StaticRouterProvider({
   context,
   router: router$1,
@@ -289194,21 +289296,19 @@ function StaticRouterProvider({
     basename: context.basename || "/"
   };
   let hydrateScript = "";
-
   if (hydrate !== false) {
     let data = {
       loaderData: context.loaderData,
       actionData: context.actionData,
       errors: serializeErrors(context.errors)
-    }; // Use JSON.parse here instead of embedding a raw JS object here to speed
+    };
+    // Use JSON.parse here instead of embedding a raw JS object here to speed
     // up parsing on the client.  Dual-stringify is needed to ensure all quotes
     // are properly escaped in the resulting string.  See:
     //   https://v8.dev/blog/cost-of-javascript-2019#json
-
     let json = htmlEscape(JSON.stringify(JSON.stringify(data)));
     hydrateScript = `window.__staticRouterHydrationData = JSON.parse(${json});`;
   }
-
   let {
     state
   } = dataRouterContext.router;
@@ -289233,24 +289333,22 @@ function StaticRouterProvider({
     }
   }) : null);
 }
-
 function DataRoutes({
   routes,
   state
 }) {
   return reactRouter.UNSAFE_useRoutesImpl(routes, undefined, state);
 }
-
 function serializeErrors(errors) {
   if (!errors) return null;
   let entries = Object.entries(errors);
   let serialized = {};
-
   for (let [key, val] of entries) {
     // Hey you!  If you change this, please change the corresponding logic in
     // deserializeErrors in react-router-dom/index.tsx :)
     if (router.isRouteErrorResponse(val)) {
-      serialized[key] = { ...val,
+      serialized[key] = {
+        ...val,
         __type: "RouteErrorResponse"
       };
     } else if (val instanceof Error) {
@@ -289263,63 +289361,53 @@ function serializeErrors(errors) {
       serialized[key] = val;
     }
   }
-
   return serialized;
 }
-
 function getStatelessNavigator() {
   return {
     createHref,
     encodeLocation,
-
     push(to) {
       throw new Error(`You cannot use navigator.push() on the server because it is a stateless ` + `environment. This error was probably triggered when you did a ` + `\`navigate(${JSON.stringify(to)})\` somewhere in your app.`);
     },
-
     replace(to) {
       throw new Error(`You cannot use navigator.replace() on the server because it is a stateless ` + `environment. This error was probably triggered when you did a ` + `\`navigate(${JSON.stringify(to)}, { replace: true })\` somewhere ` + `in your app.`);
     },
-
     go(delta) {
       throw new Error(`You cannot use navigator.go() on the server because it is a stateless ` + `environment. This error was probably triggered when you did a ` + `\`navigate(${delta})\` somewhere in your app.`);
     },
-
     back() {
       throw new Error(`You cannot use navigator.back() on the server because it is a stateless ` + `environment.`);
     },
-
     forward() {
       throw new Error(`You cannot use navigator.forward() on the server because it is a stateless ` + `environment.`);
     }
-
   };
 }
-
 function createStaticHandler(routes, opts) {
-  return router.createStaticHandler(routes, { ...opts,
+  return router.createStaticHandler(routes, {
+    ...opts,
     mapRouteProperties: reactRouter.UNSAFE_mapRouteProperties
   });
 }
 function createStaticRouter(routes, context) {
   let manifest = {};
-  let dataRoutes = router.UNSAFE_convertRoutesToDataRoutes(routes, reactRouter.UNSAFE_mapRouteProperties, undefined, manifest); // Because our context matches may be from a framework-agnostic set of
+  let dataRoutes = router.UNSAFE_convertRoutesToDataRoutes(routes, reactRouter.UNSAFE_mapRouteProperties, undefined, manifest);
+  // Because our context matches may be from a framework-agnostic set of
   // routes passed to createStaticHandler(), we update them here with our
   // newly created/enhanced data routes
-
   let matches = context.matches.map(match => {
     let route = manifest[match.route.id] || match.route;
-    return { ...match,
+    return {
+      ...match,
       route
     };
   });
-
   let msg = method => `You cannot use router.${method}() on the server because it is a stateless environment`;
-
   return {
     get basename() {
       return context.basename;
     },
-
     get state() {
       return {
         historyAction: router.Action.Pop,
@@ -289337,72 +289425,54 @@ function createStaticRouter(routes, context) {
         blockers: new Map()
       };
     },
-
     get routes() {
       return dataRoutes;
     },
-
     initialize() {
       throw msg("initialize");
     },
-
     subscribe() {
       throw msg("subscribe");
     },
-
     enableScrollRestoration() {
       throw msg("enableScrollRestoration");
     },
-
     navigate() {
       throw msg("navigate");
     },
-
     fetch() {
       throw msg("fetch");
     },
-
     revalidate() {
       throw msg("revalidate");
     },
-
     createHref,
     encodeLocation,
-
     getFetcher() {
       return router.IDLE_FETCHER;
     },
-
     deleteFetcher() {
       throw msg("deleteFetcher");
     },
-
     dispose() {
       throw msg("dispose");
     },
-
     getBlocker() {
       return router.IDLE_BLOCKER;
     },
-
     deleteBlocker() {
       throw msg("deleteBlocker");
     },
-
     _internalFetchControllers: new Map(),
     _internalActiveDeferreds: new Map(),
-
     _internalSetRoutes() {
       throw msg("_internalSetRoutes");
     }
-
   };
 }
-
 function createHref(to) {
   return typeof to === "string" ? to : reactRouterDom.createPath(to);
 }
-
 function encodeLocation(to) {
   // Locations should already be encoded on the server, so just return as-is
   let path = typeof to === "string" ? reactRouterDom.parsePath(to) : to;
@@ -289411,10 +289481,9 @@ function encodeLocation(to) {
     search: path.search || "",
     hash: path.hash || ""
   };
-} // This utility is based on https://github.com/zertosh/htmlescape
+}
+// This utility is based on https://github.com/zertosh/htmlescape
 // License: https://github.com/zertosh/htmlescape/blob/0527ca7156a524d256101bb310a9f970f63078ad/LICENSE
-
-
 const ESCAPE_LOOKUP = {
   "&": "\\u0026",
   ">": "\\u003e",
@@ -289423,7 +289492,6 @@ const ESCAPE_LOOKUP = {
   "\u2029": "\\u2029"
 };
 const ESCAPE_REGEX = /[&><\u2028\u2029]/g;
-
 function htmlEscape(str) {
   return str.replace(ESCAPE_REGEX, match => ESCAPE_LOOKUP[match]);
 }
@@ -289440,6 +289508,7 @@ __webpack_unused_export__ = createStaticRouter;
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
+var react__WEBPACK_IMPORTED_MODULE_0___namespace_cache;
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   AbortedDeferredError: () => (/* reexport safe */ _remix_run_router__WEBPACK_IMPORTED_MODULE_1__.AbortedDeferredError),
@@ -289499,7 +289568,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7378);
 /* harmony import */ var _remix_run_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(6403);
 /**
- * React Router v6.11.2
+ * React Router v6.12.1
  *
  * Copyright (c) Remix Software Inc.
  *
@@ -289516,49 +289585,47 @@ function _extends() {
   _extends = Object.assign ? Object.assign.bind() : function (target) {
     for (var i = 1; i < arguments.length; i++) {
       var source = arguments[i];
-
       for (var key in source) {
         if (Object.prototype.hasOwnProperty.call(source, key)) {
           target[key] = source[key];
         }
       }
     }
-
     return target;
   };
   return _extends.apply(this, arguments);
 }
 
+// Create react-specific types from the agnostic types in @remix-run/router to
+// export from react-router
 const DataRouterContext = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createContext(null);
-
 if (false) {}
-
 const DataRouterStateContext = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createContext(null);
-
 if (false) {}
-
 const AwaitContext = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createContext(null);
-
 if (false) {}
+
+/**
+ * A Navigator is a "location changer"; it's how you get to different locations.
+ *
+ * Every history instance conforms to the Navigator interface, but the
+ * distinction is useful primarily when it comes to the low-level <Router> API
+ * where both the location and a navigator must be provided separately in order
+ * to avoid "tearing" that may occur in a suspense-enabled app if the action
+ * and/or location were to be read directly from the history instance.
+ */
 
 const NavigationContext = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createContext(null);
-
 if (false) {}
-
 const LocationContext = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createContext(null);
-
 if (false) {}
-
 const RouteContext = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createContext({
   outlet: null,
   matches: [],
   isDataRoute: false
 });
-
 if (false) {}
-
 const RouteErrorContext = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createContext(null);
-
 if (false) {}
 
 /**
@@ -289567,7 +289634,6 @@ if (false) {}
  *
  * @see https://reactrouter.com/hooks/use-href
  */
-
 function useHref(to, _temp) {
   let {
     relative
@@ -289584,30 +289650,31 @@ function useHref(to, _temp) {
   } = useResolvedPath(to, {
     relative
   });
-  let joinedPathname = pathname; // If we're operating within a basename, prepend it to the pathname prior
+  let joinedPathname = pathname;
+
+  // If we're operating within a basename, prepend it to the pathname prior
   // to creating the href.  If this is a root navigation, then just use the raw
   // basename which allows the basename to have full control over the presence
   // of a trailing slash on root links
-
   if (basename !== "/") {
     joinedPathname = pathname === "/" ? basename : (0,_remix_run_router__WEBPACK_IMPORTED_MODULE_1__.joinPaths)([basename, pathname]);
   }
-
   return navigator.createHref({
     pathname: joinedPathname,
     search,
     hash
   });
 }
+
 /**
  * Returns true if this component is a descendant of a <Router>.
  *
  * @see https://reactrouter.com/hooks/use-in-router-context
  */
-
 function useInRouterContext() {
   return react__WEBPACK_IMPORTED_MODULE_0__.useContext(LocationContext) != null;
 }
+
 /**
  * Returns the current location object, which represents the current URL in web
  * browsers.
@@ -289618,21 +289685,21 @@ function useInRouterContext() {
  *
  * @see https://reactrouter.com/hooks/use-location
  */
-
 function useLocation() {
   !useInRouterContext() ?  false ? 0 : (0,_remix_run_router__WEBPACK_IMPORTED_MODULE_1__.UNSAFE_invariant)(false) : void 0;
   return react__WEBPACK_IMPORTED_MODULE_0__.useContext(LocationContext).location;
 }
+
 /**
  * Returns the current navigation action which describes how the router came to
  * the current location, either by a pop, push, or replace on the history stack.
  *
  * @see https://reactrouter.com/hooks/use-navigation-type
  */
-
 function useNavigationType() {
   return react__WEBPACK_IMPORTED_MODULE_0__.useContext(LocationContext).navigationType;
 }
+
 /**
  * Returns a PathMatch object if the given pattern matches the current URL.
  * This is useful for components that need to know "active" state, e.g.
@@ -289640,7 +289707,6 @@ function useNavigationType() {
  *
  * @see https://reactrouter.com/hooks/use-match
  */
-
 function useMatch(pattern) {
   !useInRouterContext() ?  false ? 0 : (0,_remix_run_router__WEBPACK_IMPORTED_MODULE_1__.UNSAFE_invariant)(false) : void 0;
   let {
@@ -289648,15 +289714,16 @@ function useMatch(pattern) {
   } = useLocation();
   return react__WEBPACK_IMPORTED_MODULE_0__.useMemo(() => (0,_remix_run_router__WEBPACK_IMPORTED_MODULE_1__.matchPath)(pattern, pathname), [pathname, pattern]);
 }
+
 /**
  * The interface for the navigate() function returned from useNavigate().
  */
 
-const navigateEffectWarning = (/* unused pure expression or super */ null && ("You should call navigate() in a React.useEffect(), not when " + "your component is first rendered.")); // Mute warnings for calls to useNavigate in SSR environments
+const navigateEffectWarning = (/* unused pure expression or super */ null && ("You should call navigate() in a React.useEffect(), not when " + "your component is first rendered."));
 
+// Mute warnings for calls to useNavigate in SSR environments
 function useIsomorphicLayoutEffect(cb) {
   let isStatic = react__WEBPACK_IMPORTED_MODULE_0__.useContext(NavigationContext).static;
-
   if (!isStatic) {
     // We should be able to get rid of this once react 18.3 is released
     // See: https://github.com/facebook/react/pull/26395
@@ -289664,23 +289731,21 @@ function useIsomorphicLayoutEffect(cb) {
     react__WEBPACK_IMPORTED_MODULE_0__.useLayoutEffect(cb);
   }
 }
+
 /**
  * Returns an imperative method for changing the location. Used by <Link>s, but
  * may also be used by other elements to change the location.
  *
  * @see https://reactrouter.com/hooks/use-navigate
  */
-
-
 function useNavigate() {
   let {
     isDataRoute
-  } = react__WEBPACK_IMPORTED_MODULE_0__.useContext(RouteContext); // Conditional usage is OK here because the usage of a data router is static
+  } = react__WEBPACK_IMPORTED_MODULE_0__.useContext(RouteContext);
+  // Conditional usage is OK here because the usage of a data router is static
   // eslint-disable-next-line react-hooks/rules-of-hooks
-
   return isDataRoute ? useNavigateStable() : useNavigateUnstable();
 }
-
 function useNavigateUnstable() {
   !useInRouterContext() ?  false ? 0 : (0,_remix_run_router__WEBPACK_IMPORTED_MODULE_1__.UNSAFE_invariant)(false) : void 0;
   let dataRouterContext = react__WEBPACK_IMPORTED_MODULE_0__.useContext(DataRouterContext);
@@ -289703,68 +289768,63 @@ function useNavigateUnstable() {
     if (options === void 0) {
       options = {};
     }
+     false ? 0 : void 0;
 
-     false ? 0 : void 0; // Short circuit here since if this happens on first render the navigate
+    // Short circuit here since if this happens on first render the navigate
     // is useless because we haven't wired up our history listener yet
-
     if (!activeRef.current) return;
-
     if (typeof to === "number") {
       navigator.go(to);
       return;
     }
+    let path = (0,_remix_run_router__WEBPACK_IMPORTED_MODULE_1__.resolveTo)(to, JSON.parse(routePathnamesJson), locationPathname, options.relative === "path");
 
-    let path = (0,_remix_run_router__WEBPACK_IMPORTED_MODULE_1__.resolveTo)(to, JSON.parse(routePathnamesJson), locationPathname, options.relative === "path"); // If we're operating within a basename, prepend it to the pathname prior
+    // If we're operating within a basename, prepend it to the pathname prior
     // to handing off to history (but only if we're not in a data router,
     // otherwise it'll prepend the basename inside of the router).
     // If this is a root navigation, then we navigate to the raw basename
     // which allows the basename to have full control over the presence of a
     // trailing slash on root links
-
     if (dataRouterContext == null && basename !== "/") {
       path.pathname = path.pathname === "/" ? basename : (0,_remix_run_router__WEBPACK_IMPORTED_MODULE_1__.joinPaths)([basename, path.pathname]);
     }
-
     (!!options.replace ? navigator.replace : navigator.push)(path, options.state, options);
   }, [basename, navigator, routePathnamesJson, locationPathname, dataRouterContext]);
   return navigate;
 }
-
 const OutletContext = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createContext(null);
+
 /**
  * Returns the context (if provided) for the child route at this level of the route
  * hierarchy.
  * @see https://reactrouter.com/hooks/use-outlet-context
  */
-
 function useOutletContext() {
   return react__WEBPACK_IMPORTED_MODULE_0__.useContext(OutletContext);
 }
+
 /**
  * Returns the element for the child route at this level of the route
  * hierarchy. Used internally by <Outlet> to render child routes.
  *
  * @see https://reactrouter.com/hooks/use-outlet
  */
-
 function useOutlet(context) {
   let outlet = react__WEBPACK_IMPORTED_MODULE_0__.useContext(RouteContext).outlet;
-
   if (outlet) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(OutletContext.Provider, {
       value: context
     }, outlet);
   }
-
   return outlet;
 }
+
 /**
  * Returns an object of key/value pairs of the dynamic params from the current
  * URL that were matched by the route path.
  *
  * @see https://reactrouter.com/hooks/use-params
  */
-
 function useParams() {
   let {
     matches
@@ -289772,12 +289832,12 @@ function useParams() {
   let routeMatch = matches[matches.length - 1];
   return routeMatch ? routeMatch.params : {};
 }
+
 /**
  * Resolves the pathname of the given `to` value against the current location.
  *
  * @see https://reactrouter.com/hooks/use-resolved-path
  */
-
 function useResolvedPath(to, _temp2) {
   let {
     relative
@@ -289791,6 +289851,7 @@ function useResolvedPath(to, _temp2) {
   let routePathnamesJson = JSON.stringify((0,_remix_run_router__WEBPACK_IMPORTED_MODULE_1__.UNSAFE_getPathContributingMatches)(matches).map(match => match.pathnameBase));
   return react__WEBPACK_IMPORTED_MODULE_0__.useMemo(() => (0,_remix_run_router__WEBPACK_IMPORTED_MODULE_1__.resolveTo)(to, JSON.parse(routePathnamesJson), locationPathname, relative === "path"), [to, routePathnamesJson, locationPathname, relative]);
 }
+
 /**
  * Returns the element of the route that matched the current location, prepared
  * with the correct context to render the remainder of the route tree. Route
@@ -289799,11 +289860,11 @@ function useResolvedPath(to, _temp2) {
  *
  * @see https://reactrouter.com/hooks/use-routes
  */
-
 function useRoutes(routes, locationArg) {
   return useRoutesImpl(routes, locationArg);
-} // Internal implementation with accept optional param for RouterProvider usage
+}
 
+// Internal implementation with accept optional param for RouterProvider usage
 function useRoutesImpl(routes, locationArg, dataRouterState) {
   !useInRouterContext() ?  false ? 0 : (0,_remix_run_router__WEBPACK_IMPORTED_MODULE_1__.UNSAFE_invariant)(false) : void 0;
   let {
@@ -289817,41 +289878,36 @@ function useRoutesImpl(routes, locationArg, dataRouterState) {
   let parentPathname = routeMatch ? routeMatch.pathname : "/";
   let parentPathnameBase = routeMatch ? routeMatch.pathnameBase : "/";
   let parentRoute = routeMatch && routeMatch.route;
-
   if (false) {}
-
   let locationFromContext = useLocation();
   let location;
-
   if (locationArg) {
     var _parsedLocationArg$pa;
-
     let parsedLocationArg = typeof locationArg === "string" ? (0,_remix_run_router__WEBPACK_IMPORTED_MODULE_1__.parsePath)(locationArg) : locationArg;
     !(parentPathnameBase === "/" || ((_parsedLocationArg$pa = parsedLocationArg.pathname) == null ? void 0 : _parsedLocationArg$pa.startsWith(parentPathnameBase))) ?  false ? 0 : (0,_remix_run_router__WEBPACK_IMPORTED_MODULE_1__.UNSAFE_invariant)(false) : void 0;
     location = parsedLocationArg;
   } else {
     location = locationFromContext;
   }
-
   let pathname = location.pathname || "/";
   let remainingPathname = parentPathnameBase === "/" ? pathname : pathname.slice(parentPathnameBase.length) || "/";
   let matches = (0,_remix_run_router__WEBPACK_IMPORTED_MODULE_1__.matchRoutes)(routes, {
     pathname: remainingPathname
   });
-
   if (false) {}
-
   let renderedMatches = _renderMatches(matches && matches.map(match => Object.assign({}, match, {
     params: Object.assign({}, parentParams, match.params),
-    pathname: (0,_remix_run_router__WEBPACK_IMPORTED_MODULE_1__.joinPaths)([parentPathnameBase, // Re-encode pathnames that were decoded inside matchRoutes
+    pathname: (0,_remix_run_router__WEBPACK_IMPORTED_MODULE_1__.joinPaths)([parentPathnameBase,
+    // Re-encode pathnames that were decoded inside matchRoutes
     navigator.encodeLocation ? navigator.encodeLocation(match.pathname).pathname : match.pathname]),
-    pathnameBase: match.pathnameBase === "/" ? parentPathnameBase : (0,_remix_run_router__WEBPACK_IMPORTED_MODULE_1__.joinPaths)([parentPathnameBase, // Re-encode pathnames that were decoded inside matchRoutes
+    pathnameBase: match.pathnameBase === "/" ? parentPathnameBase : (0,_remix_run_router__WEBPACK_IMPORTED_MODULE_1__.joinPaths)([parentPathnameBase,
+    // Re-encode pathnames that were decoded inside matchRoutes
     navigator.encodeLocation ? navigator.encodeLocation(match.pathnameBase).pathname : match.pathnameBase])
-  })), parentMatches, dataRouterState); // When a user passes in a `locationArg`, the associated routes need to
+  })), parentMatches, dataRouterState);
+
+  // When a user passes in a `locationArg`, the associated routes need to
   // be wrapped in a new `LocationContext.Provider` in order for `useLocation`
   // to use the scoped location instead of the global location.
-
-
   if (locationArg && renderedMatches) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(LocationContext.Provider, {
       value: {
@@ -289866,10 +289922,8 @@ function useRoutesImpl(routes, locationArg, dataRouterState) {
       }
     }, renderedMatches);
   }
-
   return renderedMatches;
 }
-
 function DefaultErrorComponent() {
   let error = useRouteError();
   let message = (0,_remix_run_router__WEBPACK_IMPORTED_MODULE_1__.isRouteErrorResponse)(error) ? error.status + " " + error.statusText : error instanceof Error ? error.message : JSON.stringify(error);
@@ -289884,9 +289938,7 @@ function DefaultErrorComponent() {
     backgroundColor: lightgrey
   };
   let devInfo = null;
-
   if (false) {}
-
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", null, "Unexpected Application Error!"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", {
     style: {
       fontStyle: "italic"
@@ -289895,7 +289947,6 @@ function DefaultErrorComponent() {
     style: preStyles
   }, stack) : null, devInfo);
 }
-
 const defaultErrorElement = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(DefaultErrorComponent, null);
 class RenderErrorBoundary extends react__WEBPACK_IMPORTED_MODULE_0__.Component {
   constructor(props) {
@@ -289906,13 +289957,11 @@ class RenderErrorBoundary extends react__WEBPACK_IMPORTED_MODULE_0__.Component {
       error: props.error
     };
   }
-
   static getDerivedStateFromError(error) {
     return {
       error: error
     };
   }
-
   static getDerivedStateFromProps(props, state) {
     // When we get into an error state, the user will likely click "back" to the
     // previous page that didn't have an error. Because this wraps the entire
@@ -289928,23 +289977,21 @@ class RenderErrorBoundary extends react__WEBPACK_IMPORTED_MODULE_0__.Component {
         location: props.location,
         revalidation: props.revalidation
       };
-    } // If we're not changing locations, preserve the location but still surface
+    }
+
+    // If we're not changing locations, preserve the location but still surface
     // any new errors that may come through. We retain the existing error, we do
     // this because the error provided from the app state may be cleared without
     // the location changing.
-
-
     return {
       error: props.error || state.error,
       location: state.location,
       revalidation: props.revalidation || state.revalidation
     };
   }
-
   componentDidCatch(error, errorInfo) {
     console.error("React Router caught the following error during render", error, errorInfo);
   }
-
   render() {
     return this.state.error ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(RouteContext.Provider, {
       value: this.props.routeContext
@@ -289953,41 +290000,34 @@ class RenderErrorBoundary extends react__WEBPACK_IMPORTED_MODULE_0__.Component {
       children: this.props.component
     })) : this.props.children;
   }
-
 }
-
 function RenderedRoute(_ref) {
   let {
     routeContext,
     match,
     children
   } = _ref;
-  let dataRouterContext = react__WEBPACK_IMPORTED_MODULE_0__.useContext(DataRouterContext); // Track how deep we got in our render pass to emulate SSR componentDidCatch
-  // in a DataStaticRouter
+  let dataRouterContext = react__WEBPACK_IMPORTED_MODULE_0__.useContext(DataRouterContext);
 
+  // Track how deep we got in our render pass to emulate SSR componentDidCatch
+  // in a DataStaticRouter
   if (dataRouterContext && dataRouterContext.static && dataRouterContext.staticContext && (match.route.errorElement || match.route.ErrorBoundary)) {
     dataRouterContext.staticContext._deepestRenderedBoundaryId = match.route.id;
   }
-
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(RouteContext.Provider, {
     value: routeContext
   }, children);
 }
-
 function _renderMatches(matches, parentMatches, dataRouterState) {
   var _dataRouterState2;
-
   if (parentMatches === void 0) {
     parentMatches = [];
   }
-
   if (dataRouterState === void 0) {
     dataRouterState = null;
   }
-
   if (matches == null) {
     var _dataRouterState;
-
     if ((_dataRouterState = dataRouterState) != null && _dataRouterState.errors) {
       // Don't bail if we have data router errors so we can render them in the
       // boundary.  Use the pre-matched (or shimmed) matches
@@ -289996,31 +290036,25 @@ function _renderMatches(matches, parentMatches, dataRouterState) {
       return null;
     }
   }
+  let renderedMatches = matches;
 
-  let renderedMatches = matches; // If we have data errors, trim matches to the highest error boundary
-
+  // If we have data errors, trim matches to the highest error boundary
   let errors = (_dataRouterState2 = dataRouterState) == null ? void 0 : _dataRouterState2.errors;
-
   if (errors != null) {
     let errorIndex = renderedMatches.findIndex(m => m.route.id && (errors == null ? void 0 : errors[m.route.id]));
     !(errorIndex >= 0) ?  false ? 0 : (0,_remix_run_router__WEBPACK_IMPORTED_MODULE_1__.UNSAFE_invariant)(false) : void 0;
     renderedMatches = renderedMatches.slice(0, Math.min(renderedMatches.length, errorIndex + 1));
   }
-
   return renderedMatches.reduceRight((outlet, match, index) => {
-    let error = match.route.id ? errors == null ? void 0 : errors[match.route.id] : null; // Only data routers handle errors
-
+    let error = match.route.id ? errors == null ? void 0 : errors[match.route.id] : null;
+    // Only data routers handle errors
     let errorElement = null;
-
     if (dataRouterState) {
       errorElement = match.route.errorElement || defaultErrorElement;
     }
-
     let matches = parentMatches.concat(renderedMatches.slice(0, index + 1));
-
     let getChildren = () => {
       let children;
-
       if (error) {
         children = errorElement;
       } else if (match.route.Component) {
@@ -290036,7 +290070,6 @@ function _renderMatches(matches, parentMatches, dataRouterState) {
       } else {
         children = outlet;
       }
-
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(RenderedRoute, {
         match: match,
         routeContext: {
@@ -290046,11 +290079,10 @@ function _renderMatches(matches, parentMatches, dataRouterState) {
         },
         children: children
       });
-    }; // Only wrap in an error boundary within data router usages when we have an
+    };
+    // Only wrap in an error boundary within data router usages when we have an
     // ErrorBoundary/errorElement on this route.  Otherwise let it bubble up to
     // an ancestor ErrorBoundary/errorElement
-
-
     return dataRouterState && (match.route.ErrorBoundary || match.route.errorElement || index === 0) ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(RenderErrorBoundary, {
       location: dataRouterState.location,
       revalidation: dataRouterState.revalidation,
@@ -290066,15 +290098,12 @@ function _renderMatches(matches, parentMatches, dataRouterState) {
   }, null);
 }
 var DataRouterHook;
-
 (function (DataRouterHook) {
   DataRouterHook["UseBlocker"] = "useBlocker";
   DataRouterHook["UseRevalidator"] = "useRevalidator";
   DataRouterHook["UseNavigateStable"] = "useNavigate";
 })(DataRouterHook || (DataRouterHook = {}));
-
 var DataRouterStateHook;
-
 (function (DataRouterStateHook) {
   DataRouterStateHook["UseBlocker"] = "useBlocker";
   DataRouterStateHook["UseLoaderData"] = "useLoaderData";
@@ -290087,58 +290116,53 @@ var DataRouterStateHook;
   DataRouterStateHook["UseNavigateStable"] = "useNavigate";
   DataRouterStateHook["UseRouteId"] = "useRouteId";
 })(DataRouterStateHook || (DataRouterStateHook = {}));
-
 function getDataRouterConsoleError(hookName) {
   return hookName + " must be used within a data router.  See https://reactrouter.com/routers/picking-a-router.";
 }
-
 function useDataRouterContext(hookName) {
   let ctx = react__WEBPACK_IMPORTED_MODULE_0__.useContext(DataRouterContext);
   !ctx ?  false ? 0 : (0,_remix_run_router__WEBPACK_IMPORTED_MODULE_1__.UNSAFE_invariant)(false) : void 0;
   return ctx;
 }
-
 function useDataRouterState(hookName) {
   let state = react__WEBPACK_IMPORTED_MODULE_0__.useContext(DataRouterStateContext);
   !state ?  false ? 0 : (0,_remix_run_router__WEBPACK_IMPORTED_MODULE_1__.UNSAFE_invariant)(false) : void 0;
   return state;
 }
-
 function useRouteContext(hookName) {
   let route = react__WEBPACK_IMPORTED_MODULE_0__.useContext(RouteContext);
   !route ?  false ? 0 : (0,_remix_run_router__WEBPACK_IMPORTED_MODULE_1__.UNSAFE_invariant)(false) : void 0;
   return route;
-} // Internal version with hookName-aware debugging
+}
 
-
+// Internal version with hookName-aware debugging
 function useCurrentRouteId(hookName) {
   let route = useRouteContext(hookName);
   let thisRoute = route.matches[route.matches.length - 1];
   !thisRoute.route.id ?  false ? 0 : (0,_remix_run_router__WEBPACK_IMPORTED_MODULE_1__.UNSAFE_invariant)(false) : void 0;
   return thisRoute.route.id;
 }
+
 /**
  * Returns the ID for the nearest contextual route
  */
-
-
 function useRouteId() {
   return useCurrentRouteId(DataRouterStateHook.UseRouteId);
 }
+
 /**
  * Returns the current navigation, defaulting to an "idle" navigation when
  * no navigation is in progress
  */
-
 function useNavigation() {
   let state = useDataRouterState(DataRouterStateHook.UseNavigation);
   return state.navigation;
 }
+
 /**
  * Returns a revalidate function for manually triggering revalidation, as well
  * as the current state of any manual revalidations
  */
-
 function useRevalidator() {
   let dataRouterContext = useDataRouterContext(DataRouterHook.UseRevalidator);
   let state = useDataRouterState(DataRouterStateHook.UseRevalidator);
@@ -290147,11 +290171,11 @@ function useRevalidator() {
     state: state.revalidation
   };
 }
+
 /**
  * Returns the active route matches, useful for accessing loaderData for
  * parent/child routes or the route "handle" property
  */
-
 function useMatches() {
   let {
     matches,
@@ -290161,10 +290185,10 @@ function useMatches() {
     let {
       pathname,
       params
-    } = match; // Note: This structure matches that created by createUseMatchesMatch
+    } = match;
+    // Note: This structure matches that created by createUseMatchesMatch
     // in the @remix-run/router , so if you change this please also change
     // that :)  Eventually we'll DRY this up
-
     return {
       id: match.route.id,
       pathname,
@@ -290174,84 +290198,82 @@ function useMatches() {
     };
   }), [matches, loaderData]);
 }
+
 /**
  * Returns the loader data for the nearest ancestor Route loader
  */
-
 function useLoaderData() {
   let state = useDataRouterState(DataRouterStateHook.UseLoaderData);
   let routeId = useCurrentRouteId(DataRouterStateHook.UseLoaderData);
-
   if (state.errors && state.errors[routeId] != null) {
     console.error("You cannot `useLoaderData` in an errorElement (routeId: " + routeId + ")");
     return undefined;
   }
-
   return state.loaderData[routeId];
 }
+
 /**
  * Returns the loaderData for the given routeId
  */
-
 function useRouteLoaderData(routeId) {
   let state = useDataRouterState(DataRouterStateHook.UseRouteLoaderData);
   return state.loaderData[routeId];
 }
+
 /**
  * Returns the action data for the nearest ancestor Route action
  */
-
 function useActionData() {
   let state = useDataRouterState(DataRouterStateHook.UseActionData);
   let route = react__WEBPACK_IMPORTED_MODULE_0__.useContext(RouteContext);
   !route ?  false ? 0 : (0,_remix_run_router__WEBPACK_IMPORTED_MODULE_1__.UNSAFE_invariant)(false) : void 0;
   return Object.values((state == null ? void 0 : state.actionData) || {})[0];
 }
+
 /**
  * Returns the nearest ancestor Route error, which could be a loader/action
  * error or a render error.  This is intended to be called from your
  * ErrorBoundary/errorElement to display a proper error message.
  */
-
 function useRouteError() {
   var _state$errors;
-
   let error = react__WEBPACK_IMPORTED_MODULE_0__.useContext(RouteErrorContext);
   let state = useDataRouterState(DataRouterStateHook.UseRouteError);
-  let routeId = useCurrentRouteId(DataRouterStateHook.UseRouteError); // If this was a render error, we put it in a RouteError context inside
-  // of RenderErrorBoundary
+  let routeId = useCurrentRouteId(DataRouterStateHook.UseRouteError);
 
+  // If this was a render error, we put it in a RouteError context inside
+  // of RenderErrorBoundary
   if (error) {
     return error;
-  } // Otherwise look for errors from our data router state
+  }
 
-
+  // Otherwise look for errors from our data router state
   return (_state$errors = state.errors) == null ? void 0 : _state$errors[routeId];
 }
+
 /**
  * Returns the happy-path data from the nearest ancestor <Await /> value
  */
-
 function useAsyncValue() {
   let value = react__WEBPACK_IMPORTED_MODULE_0__.useContext(AwaitContext);
   return value == null ? void 0 : value._data;
 }
+
 /**
  * Returns the error from the nearest ancestor <Await /> value
  */
-
 function useAsyncError() {
   let value = react__WEBPACK_IMPORTED_MODULE_0__.useContext(AwaitContext);
   return value == null ? void 0 : value._error;
 }
 let blockerId = 0;
+
 /**
  * Allow the application to block navigations within the SPA and present the
  * user a confirmation dialog to confirm the navigation.  Mostly used to avoid
  * using half-filled form data.  This does not handle hard-reloads or
  * cross-origin navigations.
  */
-
 function useBlocker(shouldBlock) {
   let {
     router
@@ -290261,18 +290283,20 @@ function useBlocker(shouldBlock) {
   let blockerFunction = react__WEBPACK_IMPORTED_MODULE_0__.useCallback(args => {
     return typeof shouldBlock === "function" ? !!shouldBlock(args) : !!shouldBlock;
   }, [shouldBlock]);
-  let blocker = router.getBlocker(blockerKey, blockerFunction); // Cleanup on unmount
+  let blocker = router.getBlocker(blockerKey, blockerFunction);
 
-  react__WEBPACK_IMPORTED_MODULE_0__.useEffect(() => () => router.deleteBlocker(blockerKey), [router, blockerKey]); // Prefer the blocker from state since DataRouterContext is memoized so this
+  // Cleanup on unmount
+  react__WEBPACK_IMPORTED_MODULE_0__.useEffect(() => () => router.deleteBlocker(blockerKey), [router, blockerKey]);
+
+  // Prefer the blocker from state since DataRouterContext is memoized so this
   // ensures we update on blocker state updates
-
   return state.blockers.get(blockerKey) || blocker;
 }
+
 /**
  * Stable version of useNavigate that is used when we are in the context of
  * a RouterProvider.
  */
-
 function useNavigateStable() {
   let {
     router
@@ -290286,12 +290310,11 @@ function useNavigateStable() {
     if (options === void 0) {
       options = {};
     }
+     false ? 0 : void 0;
 
-     false ? 0 : void 0; // Short circuit here since if this happens on first render the navigate
+    // Short circuit here since if this happens on first render the navigate
     // is useless because we haven't wired up our router subscriber yet
-
     if (!activeRef.current) return;
-
     if (typeof to === "number") {
       router.navigate(to);
     } else {
@@ -290302,15 +290325,18 @@ function useNavigateStable() {
   }, [router, id]);
   return navigate;
 }
-
 const alreadyWarned = {};
-
 function warningOnce(key, cond, message) {
   if (!cond && !alreadyWarned[key]) {
     alreadyWarned[key] = true;
      false ? 0 : void 0;
   }
 }
+
+// Webpack + React 17 fails to compile on the usage of `React.startTransition` or
+// `React["startTransition"]` even if it's behind a feature detection of
+// `"startTransition" in React`. Moving this to a constant avoids the issue :/
+const START_TRANSITION = "startTransition";
 
 /**
  * Given a Remix Router instance, render the appropriate UI
@@ -290322,7 +290348,10 @@ function RouterProvider(_ref) {
   } = _ref;
   // Need to use a layout effect here so we are subscribed early enough to
   // pick up on any render-driven redirects/navigations (useEffect/<Navigate>)
-  let [state, setState] = react__WEBPACK_IMPORTED_MODULE_0__.useState(router.state);
+  let [state, setStateImpl] = react__WEBPACK_IMPORTED_MODULE_0__.useState(router.state);
+  let setState = react__WEBPACK_IMPORTED_MODULE_0__.useCallback(newState => {
+    START_TRANSITION in /*#__PURE__*/ (react__WEBPACK_IMPORTED_MODULE_0___namespace_cache || (react__WEBPACK_IMPORTED_MODULE_0___namespace_cache = __webpack_require__.t(react__WEBPACK_IMPORTED_MODULE_0__, 2))) ? /*#__PURE__*/ (react__WEBPACK_IMPORTED_MODULE_0___namespace_cache || (react__WEBPACK_IMPORTED_MODULE_0___namespace_cache = __webpack_require__.t(react__WEBPACK_IMPORTED_MODULE_0__, 2)))[START_TRANSITION](() => setStateImpl(newState)) : setStateImpl(newState);
+  }, [setStateImpl]);
   react__WEBPACK_IMPORTED_MODULE_0__.useLayoutEffect(() => router.subscribe(setState), [router, setState]);
   let navigator = react__WEBPACK_IMPORTED_MODULE_0__.useMemo(() => {
     return {
@@ -290346,28 +290375,28 @@ function RouterProvider(_ref) {
     navigator,
     static: false,
     basename
-  }), [router, navigator, basename]); // The fragment and {null} here are important!  We need them to keep React 18's
+  }), [router, navigator, basename]);
+
+  // The fragment and {null} here are important!  We need them to keep React 18's
   // useId happy when we are server-rendering since we may have a <script> here
   // containing the hydrated server-side staticContext (from StaticRouterProvider).
   // useId relies on the component tree structure to generate deterministic id's
   // so we need to ensure it remains the same on the client even though
   // we don't need the <script> tag
-
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(DataRouterContext.Provider, {
     value: dataRouterContext
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(DataRouterStateContext.Provider, {
     value: state
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(Router, {
-    basename: router.basename,
-    location: router.state.location,
-    navigationType: router.state.historyAction,
+    basename: basename,
+    location: state.location,
+    navigationType: state.historyAction,
     navigator: navigator
-  }, router.state.initialized ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(DataRoutes, {
+  }, state.initialized ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(DataRoutes, {
     routes: router.routes,
     state: state
   }) : fallbackElement))), null);
 }
-
 function DataRoutes(_ref2) {
   let {
     routes,
@@ -290375,7 +290404,6 @@ function DataRoutes(_ref2) {
   } = _ref2;
   return useRoutesImpl(routes, undefined, state);
 }
-
 /**
  * A <Router> that stores all entries in memory.
  *
@@ -290389,7 +290417,6 @@ function MemoryRouter(_ref3) {
     initialIndex
   } = _ref3;
   let historyRef = react__WEBPACK_IMPORTED_MODULE_0__.useRef();
-
   if (historyRef.current == null) {
     historyRef.current = (0,_remix_run_router__WEBPACK_IMPORTED_MODULE_1__.createMemoryHistory)({
       initialEntries,
@@ -290397,13 +290424,15 @@ function MemoryRouter(_ref3) {
       v5Compat: true
     });
   }
-
   let history = historyRef.current;
-  let [state, setState] = react__WEBPACK_IMPORTED_MODULE_0__.useState({
+  let [state, setStateImpl] = react__WEBPACK_IMPORTED_MODULE_0__.useState({
     action: history.action,
     location: history.location
   });
-  react__WEBPACK_IMPORTED_MODULE_0__.useLayoutEffect(() => history.listen(setState), [history]);
+  let setState = react__WEBPACK_IMPORTED_MODULE_0__.useCallback(newState => {
+    START_TRANSITION in /*#__PURE__*/ (react__WEBPACK_IMPORTED_MODULE_0___namespace_cache || (react__WEBPACK_IMPORTED_MODULE_0___namespace_cache = __webpack_require__.t(react__WEBPACK_IMPORTED_MODULE_0__, 2))) ? /*#__PURE__*/ (react__WEBPACK_IMPORTED_MODULE_0___namespace_cache || (react__WEBPACK_IMPORTED_MODULE_0___namespace_cache = __webpack_require__.t(react__WEBPACK_IMPORTED_MODULE_0__, 2)))[START_TRANSITION](() => setStateImpl(newState)) : setStateImpl(newState);
+  }, [setStateImpl]);
+  react__WEBPACK_IMPORTED_MODULE_0__.useLayoutEffect(() => history.listen(setState), [history, setState]);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(Router, {
     basename: basename,
     children: children,
@@ -290412,7 +290441,6 @@ function MemoryRouter(_ref3) {
     navigator: history
   });
 }
-
 /**
  * Changes the current location.
  *
@@ -290437,9 +290465,10 @@ function Navigate(_ref4) {
   let {
     pathname: locationPathname
   } = useLocation();
-  let navigate = useNavigate(); // Resolve the path outside of the effect so that when effects run twice in
-  // StrictMode they navigate to the same place
+  let navigate = useNavigate();
 
+  // Resolve the path outside of the effect so that when effects run twice in
+  // StrictMode they navigate to the same place
   let path = (0,_remix_run_router__WEBPACK_IMPORTED_MODULE_1__.resolveTo)(to, (0,_remix_run_router__WEBPACK_IMPORTED_MODULE_1__.UNSAFE_getPathContributingMatches)(matches).map(match => match.pathnameBase), locationPathname, relative === "path");
   let jsonPath = JSON.stringify(path);
   react__WEBPACK_IMPORTED_MODULE_0__.useEffect(() => navigate(JSON.parse(jsonPath), {
@@ -290449,7 +290478,6 @@ function Navigate(_ref4) {
   }), [navigate, jsonPath, relative, replace, state]);
   return null;
 }
-
 /**
  * Renders the child route's element, if there is one.
  *
@@ -290458,7 +290486,6 @@ function Navigate(_ref4) {
 function Outlet(props) {
   return useOutlet(props.context);
 }
-
 /**
  * Declares an element that should be rendered at a certain URL path.
  *
@@ -290467,7 +290494,6 @@ function Outlet(props) {
 function Route(_props) {
    false ? 0 : (0,_remix_run_router__WEBPACK_IMPORTED_MODULE_1__.UNSAFE_invariant)(false) ;
 }
-
 /**
  * Provides location context for the rest of the app.
  *
@@ -290486,20 +290512,19 @@ function Router(_ref5) {
     navigator,
     static: staticProp = false
   } = _ref5;
-  !!useInRouterContext() ?  false ? 0 : (0,_remix_run_router__WEBPACK_IMPORTED_MODULE_1__.UNSAFE_invariant)(false) : void 0; // Preserve trailing slashes on basename, so we can let the user control
-  // the enforcement of trailing slashes throughout the app
+  !!useInRouterContext() ?  false ? 0 : (0,_remix_run_router__WEBPACK_IMPORTED_MODULE_1__.UNSAFE_invariant)(false) : void 0;
 
+  // Preserve trailing slashes on basename, so we can let the user control
+  // the enforcement of trailing slashes throughout the app
   let basename = basenameProp.replace(/^\/*/, "/");
   let navigationContext = react__WEBPACK_IMPORTED_MODULE_0__.useMemo(() => ({
     basename,
     navigator,
     static: staticProp
   }), [basename, navigator, staticProp]);
-
   if (typeof locationProp === "string") {
     locationProp = (0,_remix_run_router__WEBPACK_IMPORTED_MODULE_1__.parsePath)(locationProp);
   }
-
   let {
     pathname = "/",
     search = "",
@@ -290509,11 +290534,9 @@ function Router(_ref5) {
   } = locationProp;
   let locationContext = react__WEBPACK_IMPORTED_MODULE_0__.useMemo(() => {
     let trailingPathname = (0,_remix_run_router__WEBPACK_IMPORTED_MODULE_1__.stripBasename)(pathname, basename);
-
     if (trailingPathname == null) {
       return null;
     }
-
     return {
       location: {
         pathname: trailingPathname,
@@ -290526,11 +290549,9 @@ function Router(_ref5) {
     };
   }, [basename, pathname, search, hash, state, key, navigationType]);
    false ? 0 : void 0;
-
   if (locationContext == null) {
     return null;
   }
-
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(NavigationContext.Provider, {
     value: navigationContext
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(LocationContext.Provider, {
@@ -290538,7 +290559,6 @@ function Router(_ref5) {
     value: locationContext
   }));
 }
-
 /**
  * A container for a nested tree of <Route> elements that renders the branch
  * that best matches the current location.
@@ -290552,7 +290572,6 @@ function Routes(_ref6) {
   } = _ref6;
   return useRoutes(createRoutesFromChildren(children), location);
 }
-
 /**
  * Component to use for rendering lazily loaded data from returning defer()
  * in a loader function
@@ -290569,15 +290588,12 @@ function Await(_ref7) {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(ResolveAwait, null, children));
 }
 var AwaitRenderStatus;
-
 (function (AwaitRenderStatus) {
   AwaitRenderStatus[AwaitRenderStatus["pending"] = 0] = "pending";
   AwaitRenderStatus[AwaitRenderStatus["success"] = 1] = "success";
   AwaitRenderStatus[AwaitRenderStatus["error"] = 2] = "error";
 })(AwaitRenderStatus || (AwaitRenderStatus = {}));
-
 const neverSettledPromise = new Promise(() => {});
-
 class AwaitErrorBoundary extends react__WEBPACK_IMPORTED_MODULE_0__.Component {
   constructor(props) {
     super(props);
@@ -290585,17 +290601,14 @@ class AwaitErrorBoundary extends react__WEBPACK_IMPORTED_MODULE_0__.Component {
       error: null
     };
   }
-
   static getDerivedStateFromError(error) {
     return {
       error
     };
   }
-
   componentDidCatch(error, errorInfo) {
     console.error("<Await> caught the following error during render", error, errorInfo);
   }
-
   render() {
     let {
       children,
@@ -290604,7 +290617,6 @@ class AwaitErrorBoundary extends react__WEBPACK_IMPORTED_MODULE_0__.Component {
     } = this.props;
     let promise = null;
     let status = AwaitRenderStatus.pending;
-
     if (!(resolve instanceof Promise)) {
       // Didn't get a promise - provide as a resolved promise
       status = AwaitRenderStatus.success;
@@ -290620,7 +290632,6 @@ class AwaitErrorBoundary extends react__WEBPACK_IMPORTED_MODULE_0__.Component {
       status = AwaitRenderStatus.error;
       let renderError = this.state.error;
       promise = Promise.reject().catch(() => {}); // Avoid unhandled rejection warnings
-
       Object.defineProperty(promise, "_tracked", {
         get: () => true
       });
@@ -290643,17 +290654,14 @@ class AwaitErrorBoundary extends react__WEBPACK_IMPORTED_MODULE_0__.Component {
         get: () => error
       }));
     }
-
     if (status === AwaitRenderStatus.error && promise._error instanceof _remix_run_router__WEBPACK_IMPORTED_MODULE_1__.AbortedDeferredError) {
       // Freeze the UI by throwing a never resolved promise
       throw neverSettledPromise;
     }
-
     if (status === AwaitRenderStatus.error && !errorElement) {
       // No errorElement, throw to the nearest route-level error boundary
       throw promise._error;
     }
-
     if (status === AwaitRenderStatus.error) {
       // Render via our errorElement
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(AwaitContext.Provider, {
@@ -290661,26 +290669,23 @@ class AwaitErrorBoundary extends react__WEBPACK_IMPORTED_MODULE_0__.Component {
         children: errorElement
       });
     }
-
     if (status === AwaitRenderStatus.success) {
       // Render children with resolved value
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(AwaitContext.Provider, {
         value: promise,
         children: children
       });
-    } // Throw to the suspense boundary
+    }
 
-
+    // Throw to the suspense boundary
     throw promise;
   }
-
 }
+
 /**
  * @private
  * Indirection to leverage useAsyncValue for a render-prop API on <Await>
  */
-
-
 function ResolveAwait(_ref8) {
   let {
     children
@@ -290688,7 +290693,9 @@ function ResolveAwait(_ref8) {
   let data = useAsyncValue();
   let toRender = typeof children === "function" ? children(data) : children;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, toRender);
-} ///////////////////////////////////////////////////////////////////////////////
+}
+
+///////////////////////////////////////////////////////////////////////////////
 // UTILS
 ///////////////////////////////////////////////////////////////////////////////
 
@@ -290699,13 +290706,10 @@ function ResolveAwait(_ref8) {
  *
  * @see https://reactrouter.com/utils/create-routes-from-children
  */
-
-
 function createRoutesFromChildren(children, parentPath) {
   if (parentPath === void 0) {
     parentPath = [];
   }
-
   let routes = [];
   react__WEBPACK_IMPORTED_MODULE_0__.Children.forEach(children, (element, index) => {
     if (! /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.isValidElement(element)) {
@@ -290713,15 +290717,12 @@ function createRoutesFromChildren(children, parentPath) {
       // conditionals in their route config.
       return;
     }
-
     let treePath = [...parentPath, index];
-
     if (element.type === react__WEBPACK_IMPORTED_MODULE_0__.Fragment) {
       // Transparently support React.Fragment and its children.
       routes.push.apply(routes, createRoutesFromChildren(element.props.children, treePath));
       return;
     }
-
     !(element.type === Route) ?  false ? 0 : (0,_remix_run_router__WEBPACK_IMPORTED_MODULE_1__.UNSAFE_invariant)(false) : void 0;
     !(!element.props.index || !element.props.children) ?  false ? 0 : (0,_remix_run_router__WEBPACK_IMPORTED_MODULE_1__.UNSAFE_invariant)(false) : void 0;
     let route = {
@@ -290740,19 +290741,17 @@ function createRoutesFromChildren(children, parentPath) {
       handle: element.props.handle,
       lazy: element.props.lazy
     };
-
     if (element.props.children) {
       route.children = createRoutesFromChildren(element.props.children, treePath);
     }
-
     routes.push(route);
   });
   return routes;
 }
+
 /**
  * Renders the result of `matchRoutes()` into a React element.
  */
-
 function renderMatches(matches) {
   return _renderMatches(matches);
 }
@@ -290763,28 +290762,22 @@ function mapRouteProperties(route) {
     // there if you change this -- please and thank you!
     hasErrorBoundary: route.ErrorBoundary != null || route.errorElement != null
   };
-
   if (route.Component) {
     if (false) {}
-
     Object.assign(updates, {
       element: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(route.Component),
       Component: undefined
     });
   }
-
   if (route.ErrorBoundary) {
     if (false) {}
-
     Object.assign(updates, {
       errorElement: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(route.ErrorBoundary),
       ErrorBoundary: undefined
     });
   }
-
   return updates;
 }
-
 function createMemoryRouter(routes, opts) {
   return (0,_remix_run_router__WEBPACK_IMPORTED_MODULE_1__.createRouter)({
     basename: opts == null ? void 0 : opts.basename,
@@ -290799,7 +290792,7 @@ function createMemoryRouter(routes, opts) {
     routes,
     mapRouteProperties
   }).initialize();
-} ///////////////////////////////////////////////////////////////////////////////
+}
 
 
 //# sourceMappingURL=index.js.map
@@ -291829,6 +291822,36 @@ module.exports = require("stream");
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/create fake namespace object */
+/******/ 	(() => {
+/******/ 		var getProto = Object.getPrototypeOf ? (obj) => (Object.getPrototypeOf(obj)) : (obj) => (obj.__proto__);
+/******/ 		var leafPrototypes;
+/******/ 		// create a fake namespace object
+/******/ 		// mode & 1: value is a module id, require it
+/******/ 		// mode & 2: merge all properties of value into the ns
+/******/ 		// mode & 4: return value when already ns object
+/******/ 		// mode & 16: return value when it's Promise-like
+/******/ 		// mode & 8|1: behave like require
+/******/ 		__webpack_require__.t = function(value, mode) {
+/******/ 			if(mode & 1) value = this(value);
+/******/ 			if(mode & 8) return value;
+/******/ 			if(typeof value === 'object' && value) {
+/******/ 				if((mode & 4) && value.__esModule) return value;
+/******/ 				if((mode & 16) && typeof value.then === 'function') return value;
+/******/ 			}
+/******/ 			var ns = Object.create(null);
+/******/ 			__webpack_require__.r(ns);
+/******/ 			var def = {};
+/******/ 			leafPrototypes = leafPrototypes || [null, getProto({}), getProto([]), getProto(getProto)];
+/******/ 			for(var current = mode & 2 && value; typeof current == 'object' && !~leafPrototypes.indexOf(current); current = getProto(current)) {
+/******/ 				Object.getOwnPropertyNames(current).forEach((key) => (def[key] = () => (value[key])));
+/******/ 			}
+/******/ 			def['default'] = () => (value);
+/******/ 			__webpack_require__.d(ns, def);
+/******/ 			return ns;
+/******/ 		};
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/define property getters */
 /******/ 	(() => {
 /******/ 		// define getter functions for harmony exports
@@ -291859,7 +291882,7 @@ module.exports = require("stream");
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames based on template
-/******/ 			return ".server/" + chunkId + "." + {"16":"1cd4a5bb8672dcad","514":"92157fe60cf3d3b8","759":"68b1495f19afff4c","790":"8676397d88ef3dd8"}[chunkId] + ".js";
+/******/ 			return ".server/" + chunkId + "." + {"16":"1cd4a5bb8672dcad","514":"2983269236f22b2e","759":"a30a769aa41233f2","790":"537e190e82c6c4d0"}[chunkId] + ".js";
 /******/ 		};
 /******/ 	})();
 /******/ 	
@@ -291868,7 +291891,7 @@ module.exports = require("stream");
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.miniCssF = (chunkId) => {
 /******/ 			// return url for filenames based on template
-/******/ 			return "" + chunkId + "." + "ca26710cf156ced4" + ".css";
+/******/ 			return "" + chunkId + "." + "aa5e42b4ace15744" + ".css";
 /******/ 		};
 /******/ 	})();
 /******/ 	
@@ -298725,7 +298748,7 @@ const logo_on_white_bg_namespaceObject = __webpack_require__.p + "logo-on-white-
 ;// CONCATENATED MODULE: ./assets/icon-pwa-512x512.png
 const icon_pwa_512x512_namespaceObject = __webpack_require__.p + "icon-pwa-512x512.934507c816afbcdb.png";
 ;// CONCATENATED MODULE: ./_content.json
-const _content_namespaceObject = JSON.parse('{"path":"./src/content","name":"content","children":[{"path":"src/content/api","name":"api","children":[{"path":"src/content/api/index.mdx","name":"index.mdx","size":1888,"type":"file","extension":".mdx","url":"/api/","anchors":[{"title":"CLI","id":"cli","level":2},{"title":"Module","id":"module","level":2},{"title":"Node","id":"node","level":2},{"title":"Loaders","id":"loaders","level":2},{"title":"Plugins","id":"plugins","level":2}],"title":"Introduction","sort":-1,"contributors":["tbroadley"]},{"path":"src/content/api/cli.mdx","name":"cli.mdx","size":25994,"type":"file","extension":".mdx","url":"/api/cli/","anchors":[{"title":"Commands","id":"commands","level":2},{"title":"Build","id":"build","level":3},{"title":"Init","id":"init","level":3},{"title":"Loader","id":"loader","level":3},{"title":"Plugin","id":"plugin","level":3},{"title":"Info","id":"info","level":3},{"title":"Configtest","id":"configtest","level":3},{"title":"Serve","id":"serve","level":3},{"title":"Watch","id":"watch","level":3},{"title":"Flags","id":"flags","level":2},{"title":"Negated Flags","id":"negated-flags","level":3},{"title":"Core Flags","id":"core-flags","level":3},{"title":"Usage","id":"usage","level":2},{"title":"With configuration file","id":"with-configuration-file","level":3},{"title":"Without configuration file","id":"without-configuration-file","level":3},{"title":"Default Configurations","id":"default-configurations","level":2},{"title":"Common Options","id":"common-options","level":2},{"title":"help","id":"help","level":3},{"title":"version","id":"version","level":3},{"title":"config","id":"config","level":3},{"title":"config-name","id":"config-name","level":3},{"title":"merge","id":"merge","level":3},{"title":"extends","id":"extends","level":3},{"title":"json","id":"json","level":3},{"title":"Environment Options","id":"environment-options","level":2},{"title":"env","id":"env","level":3},{"title":"node-env","id":"node-env","level":3},{"title":"define-process-env-node-env","id":"define-process-env-node-env","level":3},{"title":"Configuration Options","id":"configuration-options","level":2},{"title":"Analyzing Bundle","id":"analyzing-bundle","level":2},{"title":"Progress","id":"progress","level":2},{"title":"Pass CLI arguments to Node.js","id":"pass-cli-arguments-to-nodejs","level":2},{"title":"Exit codes and their meanings","id":"exit-codes-and-their-meanings","level":2},{"title":"CLI Environment Variables","id":"cli-environment-variables","level":2},{"title":"WEBPACK_PACKAGE","id":"webpack_package","level":3},{"title":"Troubleshooting","id":"troubleshooting","level":2},{"title":"TypeError [ERR_UNKNOWN_FILE_EXTENSION]: Unknown file extension \\".ts\\" for ./webpack.config.ts","id":"typeerror-err_unknown_file_extension-unknown-file-extension-ts-for-webpackconfigts","level":3}],"title":"Command Line Interface","sort":1,"contributors":["anshumanv","rishabh3112","snitin315","evenstensberg","simon04","tbroadley","chenxsan","rencire","madhavarshney","EugeneHlushko","byzyk","wizardofhogwarts","EslamHiko","smelukov","anikethsaha","jamesgeorge007","burhanuday"],"related":[{"title":"Analyzing Build Statistics","url":"https://survivejs.com/webpack/optimizing-build/analyzing-build-statistics/"},{"title":"Three simple ways to inspect a webpack bundle","url":"https://medium.com/@joeclever/three-simple-ways-to-inspect-a-webpack-bundle-7f6a8fe7195d#.7d2i06mjx"},{"title":"Optimising your application bundle size with webpack","url":"https://hackernoon.com/optimising-your-application-bundle-size-with-webpack-e85b00bab579#.5w5ko08pq"},{"title":"Analysing and minimising the size of client-side bundle with webpack and source-map-explorer","url":"https://medium.com/@nimgrg/analysing-and-minimising-the-size-of-client-side-bundle-with-webpack-and-source-map-explorer-41096559beca#.c3t2srr8x"}]},{"path":"src/content/api/node.mdx","name":"node.mdx","size":9916,"type":"file","extension":".mdx","url":"/api/node/","anchors":[{"title":"Installation","id":"installation","level":2},{"title":"webpack()","id":"webpack","level":2},{"title":"Compiler Instance","id":"compiler-instance","level":2},{"title":"Run","id":"run","level":2},{"title":"Watching","id":"watching","level":2},{"title":"Close Watching","id":"close-watching","level":3},{"title":"Invalidate Watching","id":"invalidate-watching","level":3},{"title":"Stats Object","id":"stats-object","level":2},{"title":"stats.hasErrors()","id":"statshaserrors","level":3},{"title":"stats.hasWarnings()","id":"statshaswarnings","level":3},{"title":"stats.toJson(options)","id":"statstojsonoptions","level":3},{"title":"stats.toString(options)","id":"statstostringoptions","level":3},{"title":"MultiCompiler","id":"multicompiler","level":2},{"title":"Error Handling","id":"error-handling","level":2},{"title":"Custom File Systems","id":"custom-file-systems","level":2}],"title":"Node Interface","sort":2,"contributors":["sallar","rynclark","byzyk","wizardofhogwarts","EugeneHlushko","lukasgeiter","toshihidetagami","chenxsan","jamesgeorge007","textbook"]},{"path":"src/content/api/stats.mdx","name":"stats.mdx","size":11861,"type":"file","extension":".mdx","url":"/api/stats/","anchors":[{"title":"Structure","id":"structure","level":2},{"title":"Asset Objects","id":"asset-objects","level":3},{"title":"Chunk Objects","id":"chunk-objects","level":3},{"title":"Module Objects","id":"module-objects","level":3},{"title":"Entry Objects","id":"entry-objects","level":3},{"title":"Errors and Warnings","id":"errors-and-warnings","level":3}],"title":"Stats Data","sort":3,"contributors":["skipjack","franjohn21","byzyk","EugeneHlushko","superburrito","chenxsan","rahul3v","snitin315"]},{"path":"src/content/api/webpack-dev-server.mdx","name":"webpack-dev-server.mdx","size":4181,"type":"file","extension":".mdx","url":"/api/webpack-dev-server/","anchors":[{"title":"Installation","id":"installation","level":2},{"title":"start","id":"start","level":2},{"title":"startCallback(callback)","id":"startcallbackcallback","level":2},{"title":"stop","id":"stop","level":2},{"title":"stopCallback(callback)","id":"stopcallbackcallback","level":2},{"title":"internalIP(family: \\"v4\\" | \\"v6\\")","id":"internalipfamily-v4--v6","level":2},{"title":"internalIPSync(family: \\"v4\\" | \\"v6\\")","id":"internalipsyncfamily-v4--v6","level":2}],"title":"webpack-dev-server API","sort":3,"contributors":["snitin315"]},{"path":"src/content/api/hot-module-replacement.mdx","name":"hot-module-replacement.mdx","size":12482,"type":"file","extension":".mdx","url":"/api/hot-module-replacement/","anchors":[{"title":"Module API","id":"module-api","level":2},{"title":"accept","id":"accept","level":3},{"title":"accept (self)","id":"accept-self","level":3},{"title":"decline","id":"decline","level":3},{"title":"decline (self)","id":"decline-self","level":3},{"title":"dispose (or addDisposeHandler)","id":"dispose-or-adddisposehandler","level":3},{"title":"invalidate","id":"invalidate","level":3},{"title":"removeDisposeHandler","id":"removedisposehandler","level":3},{"title":"Management API","id":"management-api","level":2},{"title":"status","id":"status","level":3},{"title":"check","id":"check","level":3},{"title":"apply","id":"apply","level":3},{"title":"addStatusHandler","id":"addstatushandler","level":3},{"title":"removeStatusHandler","id":"removestatushandler","level":3}],"title":"Hot Module Replacement","sort":4,"contributors":["sokra","skipjack","tbroadley","byzyk","wizardofhogwarts","snitin315"],"related":[{"title":"Concepts - Hot Module Replacement","url":"/concepts/hot-module-replacement"},{"title":"Guides - Hot Module Replacement","url":"/guides/hot-module-replacement"}]},{"path":"src/content/api/loaders.mdx","name":"loaders.mdx","size":25587,"type":"file","extension":".mdx","url":"/api/loaders/","anchors":[{"title":"Examples","id":"examples","level":2},{"title":"Synchronous Loaders","id":"synchronous-loaders","level":3},{"title":"Asynchronous Loaders","id":"asynchronous-loaders","level":3},{"title":"\\"Raw\\" Loader","id":"raw-loader","level":3},{"title":"Pitching Loader","id":"pitching-loader","level":3},{"title":"The Loader Context","id":"the-loader-context","level":2},{"title":"Example for the loader context","id":"example-for-the-loader-context","level":3},{"title":"this.addContextDependency","id":"thisaddcontextdependency","level":3},{"title":"this.addDependency","id":"thisadddependency","level":3},{"title":"this.addMissingDependency","id":"thisaddmissingdependency","level":3},{"title":"this.async","id":"thisasync","level":3},{"title":"this.cacheable","id":"thiscacheable","level":3},{"title":"this.callback","id":"thiscallback","level":3},{"title":"this.clearDependencies","id":"thiscleardependencies","level":3},{"title":"this.context","id":"thiscontext","level":3},{"title":"this.data","id":"thisdata","level":3},{"title":"this.emitError","id":"thisemiterror","level":3},{"title":"this.emitFile","id":"thisemitfile","level":3},{"title":"this.emitWarning","id":"thisemitwarning","level":3},{"title":"this.fs","id":"thisfs","level":3},{"title":"this.getOptions(schema)","id":"thisgetoptionsschema","level":3},{"title":"this.getResolve","id":"thisgetresolve","level":3},{"title":"this.hot","id":"thishot","level":3},{"title":"this.importModule","id":"thisimportmodule","level":3},{"title":"this.loaderIndex","id":"thisloaderindex","level":3},{"title":"this.loadModule","id":"thisloadmodule","level":3},{"title":"this.loaders","id":"thisloaders","level":3},{"title":"this.mode","id":"thismode","level":3},{"title":"this.query","id":"thisquery","level":3},{"title":"this.request","id":"thisrequest","level":3},{"title":"this.resolve","id":"thisresolve","level":3},{"title":"this.resource","id":"thisresource","level":3},{"title":"this.resourcePath","id":"thisresourcepath","level":3},{"title":"this.resourceQuery","id":"thisresourcequery","level":3},{"title":"this.rootContext","id":"thisrootcontext","level":3},{"title":"this.sourceMap","id":"thissourcemap","level":3},{"title":"this.target","id":"thistarget","level":3},{"title":"this.utils","id":"thisutils","level":3},{"title":"this.version","id":"thisversion","level":3},{"title":"this.webpack","id":"thiswebpack","level":3},{"title":"Webpack specific properties","id":"webpack-specific-properties","level":2},{"title":"this._compilation","id":"this_compilation","level":3},{"title":"this._compiler","id":"this_compiler","level":3},{"title":"Deprecated context properties","id":"deprecated-context-properties","level":2},{"title":"this.debug","id":"thisdebug","level":3},{"title":"this.inputValue","id":"thisinputvalue","level":3},{"title":"this.minimize","id":"thisminimize","level":3},{"title":"this.value","id":"thisvalue","level":3},{"title":"this._module","id":"this_module","level":3},{"title":"Error Reporting","id":"error-reporting","level":2},{"title":"Inline matchResource","id":"inline-matchresource","level":2},{"title":"Logging","id":"logging","level":2}],"title":"Loader Interface","sort":5,"contributors":["TheLarkInn","jhnns","tbroadley","byzyk","sokra","EugeneHlushko","jantimon","superburrito","wizardofhogwarts","snitin315","chenxsan","jamesgeorge007"]},{"path":"src/content/api/logging.mdx","name":"logging.mdx","size":4597,"type":"file","extension":".mdx","url":"/api/logging/","anchors":[{"title":"Examples of how to get and use webpack logger in loaders and plugins","id":"examples-of-how-to-get-and-use-webpack-logger-in-loaders-and-plugins","level":2},{"title":"Logger methods","id":"logger-methods","level":2},{"title":"Runtime Logger API","id":"runtime-logger-api","level":2}],"title":"Logger Interface","sort":6,"contributors":["EugeneHlushko","wizardofhogwarts","chenxsan","snitin315"]},{"path":"src/content/api/printable.mdx","name":"printable.mdx","size":1666,"type":"file","extension":".mdx","url":"/api/printable/","anchors":[{"title":"Introduction","id":"introduction","level":1},{"title":"Command Line Interface","id":"command-line-interface","level":1},{"title":"Node Interface","id":"node-interface","level":1},{"title":"Stats Data","id":"stats-data","level":1},{"title":"webpack-dev-server API","id":"webpack-dev-server-api","level":1},{"title":"Hot Module Replacement","id":"hot-module-replacement","level":1},{"title":"Loader Interface","id":"loader-interface","level":1},{"title":"Logger Interface","id":"logger-interface","level":1},{"title":"Module Methods","id":"module-methods","level":1},{"title":"Module Variables","id":"module-variables","level":1},{"title":"Compiler Hooks","id":"compiler-hooks","level":1},{"title":"Compilation Hooks","id":"compilation-hooks","level":1},{"title":"ContextModuleFactory Hooks","id":"contextmodulefactory-hooks","level":1},{"title":"JavascriptParser Hooks","id":"javascriptparser-hooks","level":1},{"title":"NormalModuleFactory Hooks","id":"normalmodulefactory-hooks","level":1},{"title":"Compilation Object","id":"compilation-object","level":1},{"title":"Plugin API","id":"plugin-api","level":1},{"title":"Resolvers","id":"resolvers","level":1}],"title":"Printable","sort":999,"contributors":["webpack"]},{"path":"src/content/api/module-methods.mdx","name":"module-methods.mdx","size":19723,"type":"file","extension":".mdx","url":"/api/module-methods/","anchors":[{"title":"ES6 (Recommended)","id":"es6-recommended","level":2},{"title":"import","id":"import","level":3},{"title":"export","id":"export","level":3},{"title":"import()","id":"import-1","level":3},{"title":"Dynamic expressions in import()","id":"dynamic-expressions-in-import","level":3},{"title":"CommonJS","id":"commonjs","level":2},{"title":"require","id":"require","level":3},{"title":"require.resolve","id":"requireresolve","level":3},{"title":"require.cache","id":"requirecache","level":3},{"title":"require.ensure","id":"requireensure","level":3},{"title":"AMD","id":"amd","level":2},{"title":"define (with factory)","id":"define-with-factory","level":3},{"title":"define (with value)","id":"define-with-value","level":3},{"title":"require (amd-version)","id":"require-amd-version","level":3},{"title":"Labeled Modules","id":"labeled-modules","level":2},{"title":"export label","id":"export-label","level":3},{"title":"require label","id":"require-label","level":3},{"title":"Webpack","id":"webpack","level":2},{"title":"require.context","id":"requirecontext","level":3},{"title":"require.include","id":"requireinclude","level":3},{"title":"require.resolveWeak","id":"requireresolveweak","level":3},{"title":"warning","id":"warning","level":3}],"title":"Module Methods","group":"Modules","sort":7,"contributors":["skipjack","sokra","fadysamirsadek","byzyk","debs-obrien","wizardofhogwarts","EugeneHlushko","chenxsan","jamesgeorge007","WofWca"],"related":[{"title":"CommonJS Wikipedia","url":"https://en.wikipedia.org/wiki/CommonJS"},{"title":"Asynchronous Module Definition","url":"https://en.wikipedia.org/wiki/Asynchronous_module_definition"}]},{"path":"src/content/api/module-variables.mdx","name":"module-variables.mdx","size":8539,"type":"file","extension":".mdx","url":"/api/module-variables/","anchors":[{"title":"module.loaded (NodeJS)","id":"moduleloaded-nodejs","level":2},{"title":"module.hot (webpack-specific)","id":"modulehot-webpack-specific","level":2},{"title":"module.id (CommonJS)","id":"moduleid-commonjs","level":2},{"title":"module.exports (CommonJS)","id":"moduleexports-commonjs","level":2},{"title":"exports (CommonJS)","id":"exports-commonjs","level":2},{"title":"global (NodeJS)","id":"global-nodejs","level":2},{"title":"__dirname (NodeJS)","id":"__dirname-nodejs","level":2},{"title":"import.meta","id":"importmeta","level":2},{"title":"import.meta.url","id":"importmetaurl","level":3},{"title":"import.meta.webpack","id":"importmetawebpack","level":3},{"title":"import.meta.webpackHot","id":"importmetawebpackhot","level":3},{"title":"import.meta.webpackContext","id":"importmetawebpackcontext","level":3},{"title":"__filename (NodeJS)","id":"__filename-nodejs","level":2},{"title":"__resourceQuery (webpack-specific)","id":"__resourcequery-webpack-specific","level":2},{"title":"__webpack_public_path__ (webpack-specific)","id":"__webpack_public_path__-webpack-specific","level":2},{"title":"__webpack_require__ (webpack-specific)","id":"__webpack_require__-webpack-specific","level":2},{"title":"__webpack_chunk_load__ (webpack-specific)","id":"__webpack_chunk_load__-webpack-specific","level":2},{"title":"__webpack_module__ (webpack-specific)","id":"__webpack_module__-webpack-specific","level":2},{"title":"__webpack_module__.id (webpack-specific)","id":"__webpack_module__id-webpack-specific","level":2},{"title":"__webpack_modules__ (webpack-specific)","id":"__webpack_modules__-webpack-specific","level":2},{"title":"__webpack_hash__ (webpack-specific)","id":"__webpack_hash__-webpack-specific","level":2},{"title":"__webpack_get_script_filename__ (webpack-specific)","id":"__webpack_get_script_filename__-webpack-specific","level":2},{"title":"__non_webpack_require__ (webpack-specific)","id":"__non_webpack_require__-webpack-specific","level":2},{"title":"__webpack_exports_info__ (webpack-specific)","id":"__webpack_exports_info__-webpack-specific","level":2},{"title":"__webpack_is_included__ (webpack-specific)","id":"__webpack_is_included__-webpack-specific","level":2},{"title":"__webpack_base_uri__ (webpack-specific)","id":"__webpack_base_uri__-webpack-specific","level":2},{"title":"__webpack_runtime_id__","id":"__webpack_runtime_id__","level":2},{"title":"DEBUG (webpack-specific)","id":"debug-webpack-specific","level":2}],"title":"Module Variables","group":"Modules","sort":8,"contributors":["skipjack","sokra","ahmehri","tbroadley","byzyk","EugeneHlushko","wizardofhogwarts","anikethsaha","chenxsan","jamesgeorge007","snitin315"],"related":[{"title":"CommonJS","url":"https://en.wikipedia.org/wiki/CommonJS"},{"title":"Asynchronous Module Definition","url":"https://en.wikipedia.org/wiki/Asynchronous_module_definition"}]},{"path":"src/content/api/compilation-object.mdx","name":"compilation-object.mdx","size":7134,"type":"file","extension":".mdx","url":"/api/compilation-object/","anchors":[{"title":"compilation object methods","id":"compilation-object-methods","level":2},{"title":"getStats","id":"getstats","level":3},{"title":"addModule","id":"addmodule","level":3},{"title":"getModule","id":"getmodule","level":3},{"title":"findModule","id":"findmodule","level":3},{"title":"buildModule","id":"buildmodule","level":3},{"title":"processModuleDependencies","id":"processmoduledependencies","level":3},{"title":"addEntry","id":"addentry","level":3},{"title":"rebuildModule","id":"rebuildmodule","level":3},{"title":"finish","id":"finish","level":3},{"title":"seal","id":"seal","level":3},{"title":"unseal","id":"unseal","level":3},{"title":"reportDependencyErrorsAndWarnings","id":"reportdependencyerrorsandwarnings","level":3},{"title":"addChunkInGroup","id":"addchunkingroup","level":3},{"title":"addChunk","id":"addchunk","level":3},{"title":"assignDepth","id":"assigndepth","level":3},{"title":"getDependencyReference","id":"getdependencyreference","level":3},{"title":"processDependenciesBlocksForChunkGroups","id":"processdependenciesblocksforchunkgroups","level":3},{"title":"removeReasonsOfDependencyBlock","id":"removereasonsofdependencyblock","level":3},{"title":"patchChunksAfterReasonRemoval","id":"patchchunksafterreasonremoval","level":3},{"title":"removeChunkFromDependencies","id":"removechunkfromdependencies","level":3},{"title":"sortItemsWithChunkIds","id":"sortitemswithchunkids","level":3},{"title":"summarizeDependencies","id":"summarizedependencies","level":3},{"title":"createHash","id":"createhash","level":3},{"title":"createModuleAssets","id":"createmoduleassets","level":3},{"title":"createChunkAssets","id":"createchunkassets","level":3},{"title":"getPath","id":"getpath","level":3},{"title":"getPathWithInfo","id":"getpathwithinfo","level":3},{"title":"createChildCompiler","id":"createchildcompiler","level":3},{"title":"checkConstraints","id":"checkconstraints","level":3},{"title":"emitAsset","id":"emitasset","level":3},{"title":"updateAsset","id":"updateasset","level":3},{"title":"deleteAsset","id":"deleteasset","level":3},{"title":"getAssets","id":"getassets","level":3},{"title":"getAsset","id":"getasset","level":3}],"title":"Compilation Object","group":"Objects","sort":14,"contributors":["EugeneHlushko","wizardofhogwarts","jamesgeorge007","snitin315"]},{"path":"src/content/api/compiler-hooks.mdx","name":"compiler-hooks.mdx","size":6946,"type":"file","extension":".mdx","url":"/api/compiler-hooks/","anchors":[{"title":"Watching","id":"watching","level":2},{"title":"Hooks","id":"hooks","level":2},{"title":"environment","id":"environment","level":3},{"title":"afterEnvironment","id":"afterenvironment","level":3},{"title":"entryOption","id":"entryoption","level":3},{"title":"afterPlugins","id":"afterplugins","level":3},{"title":"afterResolvers","id":"afterresolvers","level":3},{"title":"initialize","id":"initialize","level":3},{"title":"beforeRun","id":"beforerun","level":3},{"title":"run","id":"run","level":3},{"title":"watchRun","id":"watchrun","level":3},{"title":"normalModuleFactory","id":"normalmodulefactory","level":3},{"title":"contextModuleFactory","id":"contextmodulefactory","level":3},{"title":"beforeCompile","id":"beforecompile","level":3},{"title":"compile","id":"compile","level":3},{"title":"thisCompilation","id":"thiscompilation","level":3},{"title":"compilation","id":"compilation","level":3},{"title":"make","id":"make","level":3},{"title":"afterCompile","id":"aftercompile","level":3},{"title":"shouldEmit","id":"shouldemit","level":3},{"title":"emit","id":"emit","level":3},{"title":"afterEmit","id":"afteremit","level":3},{"title":"assetEmitted","id":"assetemitted","level":3},{"title":"done","id":"done","level":3},{"title":"additionalPass","id":"additionalpass","level":3},{"title":"failed","id":"failed","level":3},{"title":"invalid","id":"invalid","level":3},{"title":"watchClose","id":"watchclose","level":3},{"title":"shutdown","id":"shutdown","level":3},{"title":"infrastructureLog","id":"infrastructurelog","level":3},{"title":"log","id":"log","level":3}],"title":"Compiler Hooks","group":"Plugins","sort":9,"contributors":["rishantagarwal","byzyk","madhavarshney","misterdev","EugeneHlushko","superburrito","chenxsan"]},{"path":"src/content/api/compilation-hooks.mdx","name":"compilation-hooks.mdx","size":15807,"type":"file","extension":".mdx","url":"/api/compilation-hooks/","anchors":[{"title":"buildModule","id":"buildmodule","level":3},{"title":"rebuildModule","id":"rebuildmodule","level":3},{"title":"failedModule","id":"failedmodule","level":3},{"title":"succeedModule","id":"succeedmodule","level":3},{"title":"finishModules","id":"finishmodules","level":3},{"title":"finishRebuildingModule","id":"finishrebuildingmodule","level":3},{"title":"seal","id":"seal","level":3},{"title":"unseal","id":"unseal","level":3},{"title":"optimizeDependencies","id":"optimizedependencies","level":3},{"title":"afterOptimizeDependencies","id":"afteroptimizedependencies","level":3},{"title":"afterChunks","id":"afterchunks","level":3},{"title":"optimize","id":"optimize","level":3},{"title":"optimizeModules","id":"optimizemodules","level":3},{"title":"afterOptimizeModules","id":"afteroptimizemodules","level":3},{"title":"optimizeChunks","id":"optimizechunks","level":3},{"title":"afterOptimizeChunks","id":"afteroptimizechunks","level":3},{"title":"optimizeTree","id":"optimizetree","level":3},{"title":"afterOptimizeTree","id":"afteroptimizetree","level":3},{"title":"optimizeChunkModules","id":"optimizechunkmodules","level":3},{"title":"afterOptimizeChunkModules","id":"afteroptimizechunkmodules","level":3},{"title":"shouldRecord","id":"shouldrecord","level":3},{"title":"reviveModules","id":"revivemodules","level":3},{"title":"beforeModuleIds","id":"beforemoduleids","level":3},{"title":"moduleIds","id":"moduleids","level":3},{"title":"optimizeModuleIds","id":"optimizemoduleids","level":3},{"title":"afterOptimizeModuleIds","id":"afteroptimizemoduleids","level":3},{"title":"reviveChunks","id":"revivechunks","level":3},{"title":"beforeChunkIds","id":"beforechunkids","level":3},{"title":"chunkIds","id":"chunkids","level":3},{"title":"optimizeChunkIds","id":"optimizechunkids","level":3},{"title":"afterOptimizeChunkIds","id":"afteroptimizechunkids","level":3},{"title":"recordModules","id":"recordmodules","level":3},{"title":"recordChunks","id":"recordchunks","level":3},{"title":"beforeModuleHash","id":"beforemodulehash","level":3},{"title":"afterModuleHash","id":"aftermodulehash","level":3},{"title":"beforeHash","id":"beforehash","level":3},{"title":"afterHash","id":"afterhash","level":3},{"title":"recordHash","id":"recordhash","level":3},{"title":"record","id":"record","level":3},{"title":"beforeModuleAssets","id":"beforemoduleassets","level":3},{"title":"additionalChunkAssets","id":"additionalchunkassets","level":3},{"title":"shouldGenerateChunkAssets","id":"shouldgeneratechunkassets","level":3},{"title":"beforeChunkAssets","id":"beforechunkassets","level":3},{"title":"additionalAssets","id":"additionalassets","level":3},{"title":"optimizeChunkAssets","id":"optimizechunkassets","level":3},{"title":"afterOptimizeChunkAssets","id":"afteroptimizechunkassets","level":3},{"title":"optimizeAssets","id":"optimizeassets","level":3},{"title":"afterOptimizeAssets","id":"afteroptimizeassets","level":3},{"title":"processAssets","id":"processassets","level":3},{"title":"afterProcessAssets","id":"afterprocessassets","level":3},{"title":"needAdditionalSeal","id":"needadditionalseal","level":3},{"title":"afterSeal","id":"afterseal","level":3},{"title":"chunkHash","id":"chunkhash","level":3},{"title":"moduleAsset","id":"moduleasset","level":3},{"title":"chunkAsset","id":"chunkasset","level":3},{"title":"assetPath","id":"assetpath","level":3},{"title":"needAdditionalPass","id":"needadditionalpass","level":3},{"title":"childCompiler","id":"childcompiler","level":3},{"title":"normalModuleLoader","id":"normalmoduleloader","level":3}],"title":"Compilation Hooks","group":"Plugins","sort":10,"contributors":["slavafomin","byzyk","madhavarshney","misterdev","wizardofhogwarts","EugeneHlushko","chenxsan","jamesgeorge007"]},{"path":"src/content/api/contextmodulefactory-hooks.mdx","name":"contextmodulefactory-hooks.mdx","size":1531,"type":"file","extension":".mdx","url":"/api/contextmodulefactory-hooks/","anchors":[{"title":"beforeResolve","id":"beforeresolve","level":3},{"title":"afterResolve","id":"afterresolve","level":3},{"title":"contextModuleFiles","id":"contextmodulefiles","level":3},{"title":"alternativeRequests","id":"alternativerequests","level":3}],"title":"ContextModuleFactory Hooks","group":"Plugins","sort":11,"contributors":["iguessitsokay"]},{"path":"src/content/api/parser.mdx","name":"parser.mdx","size":9932,"type":"file","extension":".mdx","url":"/api/parser/","anchors":[{"title":"Hooks","id":"hooks","level":2},{"title":"evaluateTypeof","id":"evaluatetypeof","level":3},{"title":"evaluate","id":"evaluate","level":3},{"title":"evaluateIdentifier","id":"evaluateidentifier","level":3},{"title":"evaluateDefinedIdentifier","id":"evaluatedefinedidentifier","level":3},{"title":"evaluateCallExpressionMember","id":"evaluatecallexpressionmember","level":3},{"title":"statement","id":"statement","level":3},{"title":"statementIf","id":"statementif","level":3},{"title":"label","id":"label","level":3},{"title":"import","id":"import","level":3},{"title":"importSpecifier","id":"importspecifier","level":3},{"title":"export","id":"export","level":3},{"title":"exportImport","id":"exportimport","level":3},{"title":"exportDeclaration","id":"exportdeclaration","level":3},{"title":"exportExpression","id":"exportexpression","level":3},{"title":"exportSpecifier","id":"exportspecifier","level":3},{"title":"exportImportSpecifier","id":"exportimportspecifier","level":3},{"title":"varDeclaration","id":"vardeclaration","level":3},{"title":"varDeclarationLet","id":"vardeclarationlet","level":3},{"title":"varDeclarationConst","id":"vardeclarationconst","level":3},{"title":"varDeclarationVar","id":"vardeclarationvar","level":3},{"title":"canRename","id":"canrename","level":3},{"title":"rename","id":"rename","level":3},{"title":"assigned","id":"assigned","level":3},{"title":"assign","id":"assign","level":3},{"title":"typeof","id":"typeof","level":3},{"title":"call","id":"call","level":3},{"title":"callMemberChain","id":"callmemberchain","level":3},{"title":"new","id":"new","level":3},{"title":"expression","id":"expression","level":3},{"title":"expressionConditionalOperator","id":"expressionconditionaloperator","level":3},{"title":"program","id":"program","level":3}],"title":"JavascriptParser Hooks","group":"Plugins","sort":12,"contributors":["byzyk","DeTeam","misterdev","EugeneHlushko","chenxsan"]},{"path":"src/content/api/normalmodulefactory-hooks.mdx","name":"normalmodulefactory-hooks.mdx","size":3784,"type":"file","extension":".mdx","url":"/api/normalmodulefactory-hooks/","anchors":[{"title":"beforeResolve","id":"beforeresolve","level":3},{"title":"factorize","id":"factorize","level":3},{"title":"resolve","id":"resolve","level":3},{"title":"resolveForScheme","id":"resolveforscheme","level":3},{"title":"afterResolve","id":"afterresolve","level":3},{"title":"createModule","id":"createmodule","level":3},{"title":"createModuleClass","id":"createmoduleclass","level":3},{"title":"module","id":"module","level":3},{"title":"createParser","id":"createparser","level":3},{"title":"parser","id":"parser","level":3},{"title":"createGenerator","id":"creategenerator","level":3},{"title":"generator","id":"generator","level":3}],"title":"NormalModuleFactory Hooks","group":"Plugins","sort":13,"contributors":["iguessitsokay","chenxsan"]},{"path":"src/content/api/plugins.mdx","name":"plugins.mdx","size":6988,"type":"file","extension":".mdx","url":"/api/plugins/","anchors":[{"title":"Tapable","id":"tapable","level":2},{"title":"Plugin Types","id":"plugin-types","level":2},{"title":"Custom Hooks","id":"custom-hooks","level":2},{"title":"Reporting Progress","id":"reporting-progress","level":2},{"title":"Logging","id":"logging","level":2},{"title":"Next Steps","id":"next-steps","level":2}],"title":"Plugin API","group":"Plugins","sort":14,"contributors":["thelarkinn","pksjce","e-cloud","byzyk","EugeneHlushko","wizardofhogwarts","snitin315"]},{"path":"src/content/api/resolvers.mdx","name":"resolvers.mdx","size":2183,"type":"file","extension":".mdx","url":"/api/resolvers/","anchors":[{"title":"Types","id":"types","level":2},{"title":"Configuration Options","id":"configuration-options","level":2}],"title":"Resolvers","group":"Plugins","sort":15,"contributors":["EugeneHlushko","chenxsan"]}],"size":180739,"type":"directory","url":"/api/"},{"path":"src/content/blog","name":"blog","children":[{"path":"src/content/blog/2020-12-08-roadmap-2021.mdx","name":"2020-12-08-roadmap-2021.mdx","size":16371,"type":"file","extension":".mdx","url":"/blog/2020-12-08-roadmap-2021/","anchors":[{"title":"What happened so far?","id":"what-happened-so-far","level":2},{"title":"Roadmap 2021","id":"roadmap-2021","level":2},{"title":"Further stabilizing","id":"further-stabilizing","level":3},{"title":"EcmaScript Modules","id":"ecmascript-modules","level":3},{"title":"More first-class citizen","id":"more-first-class-citizen","level":3},{"title":"SourceMap performance","id":"sourcemap-performance","level":3},{"title":"exports/imports package.json field","id":"exportsimports-packagejson-field","level":3},{"title":"Improve CommonJS analysis","id":"improve-commonjs-analysis","level":3},{"title":"Hot Module Replacement for Module Federation","id":"hot-module-replacement-for-module-federation","level":3},{"title":"Hinting system","id":"hinting-system","level":3},{"title":"Multi-Threading","id":"multi-threading","level":3},{"title":"WebAssembly","id":"webassembly","level":3},{"title":"Disclaimer","id":"disclaimer","level":2}],"title":"Roadmap 2021 (2020-12-08)","sort":-202012080,"contributors":["sokra"]},{"path":"src/content/blog/2020-10-10-webpack-5-release.mdx","name":"2020-10-10-webpack-5-release.mdx","size":71620,"type":"file","extension":".mdx","url":"/blog/2020-10-10-webpack-5-release/","anchors":[{"title":"Common Questions","id":"common-questions","level":2},{"title":"So what does the release mean?","id":"so-what-does-the-release-mean","level":3},{"title":"So when is the time to upgrade?","id":"so-when-is-the-time-to-upgrade","level":3},{"title":"Sponsoring Update","id":"sponsoring-update","level":2},{"title":"General direction","id":"general-direction","level":2},{"title":"Migration Guide","id":"migration-guide","level":2},{"title":"Major Changes: Removals","id":"major-changes-removals","level":2},{"title":"Removed Deprecated Items","id":"removed-deprecated-items","level":3},{"title":"Deprecation codes","id":"deprecation-codes","level":3},{"title":"Syntax deprecated","id":"syntax-deprecated","level":3},{"title":"Automatic Node.js Polyfills Removed","id":"automatic-nodejs-polyfills-removed","level":3},{"title":"Major Changes: Long Term Caching","id":"major-changes-long-term-caching","level":2},{"title":"Deterministic Chunk, Module IDs and Export names","id":"deterministic-chunk-module-ids-and-export-names","level":3},{"title":"Real Content Hash","id":"real-content-hash","level":3},{"title":"Major Changes: Development Support","id":"major-changes-development-support","level":2},{"title":"Named Chunk IDs","id":"named-chunk-ids","level":3},{"title":"Module Federation","id":"module-federation","level":3},{"title":"Major Changes: New Web Platform Features","id":"major-changes-new-web-platform-features","level":2},{"title":"JSON modules","id":"json-modules","level":3},{"title":"import.meta","id":"importmeta","level":3},{"title":"Asset modules","id":"asset-modules","level":3},{"title":"Native Worker support","id":"native-worker-support","level":3},{"title":"URIs","id":"uris","level":3},{"title":"Async modules","id":"async-modules","level":3},{"title":"Externals","id":"externals","level":3},{"title":"Major Changes: New Node.js Ecosystem Features","id":"major-changes-new-nodejs-ecosystem-features","level":2},{"title":"Resolving","id":"resolving","level":3},{"title":"Major Changes: Development Experience","id":"major-changes-development-experience","level":2},{"title":"Improved target","id":"improved-target","level":3},{"title":"Stats","id":"stats","level":3},{"title":"Progress","id":"progress","level":3},{"title":"Automatic unique naming","id":"automatic-unique-naming","level":3},{"title":"Automatic public path","id":"automatic-public-path","level":3},{"title":"Typescript typings","id":"typescript-typings","level":3},{"title":"Major Changes: Optimization","id":"major-changes-optimization","level":2},{"title":"Nested tree-shaking","id":"nested-tree-shaking","level":3},{"title":"Inner-module tree-shaking","id":"inner-module-tree-shaking","level":3},{"title":"CommonJs Tree Shaking","id":"commonjs-tree-shaking","level":3},{"title":"Side-Effect analysis","id":"side-effect-analysis","level":3},{"title":"Optimization per runtime","id":"optimization-per-runtime","level":3},{"title":"Module Concatenation","id":"module-concatenation","level":3},{"title":"General Tree Shaking improvements","id":"general-tree-shaking-improvements","level":3},{"title":"Development Production Similarity","id":"development-production-similarity","level":3},{"title":"Improved Code Generation","id":"improved-code-generation","level":3},{"title":"Improved target option","id":"improved-target-option","level":3},{"title":"SplitChunks and Module Sizes","id":"splitchunks-and-module-sizes","level":3},{"title":"Major Changes: Performance","id":"major-changes-performance","level":2},{"title":"Persistent Caching","id":"persistent-caching","level":3},{"title":"File Emitting","id":"file-emitting","level":3},{"title":"Major Changes: Long outstanding problems","id":"major-changes-long-outstanding-problems","level":2},{"title":"Code Splitting for single-file-targets","id":"code-splitting-for-single-file-targets","level":3},{"title":"Updated Resolver","id":"updated-resolver","level":3},{"title":"Chunks without JS","id":"chunks-without-js","level":3},{"title":"Major Changes: Future","id":"major-changes-future","level":2},{"title":"Experiments","id":"experiments","level":3},{"title":"Minimum Node.js Version","id":"minimum-nodejs-version","level":3},{"title":"Changes to the Configuration","id":"changes-to-the-configuration","level":2},{"title":"Changes to the Structure","id":"changes-to-the-structure","level":3},{"title":"Changes to the Defaults","id":"changes-to-the-defaults","level":3},{"title":"Loader related Changes","id":"loader-related-changes","level":2},{"title":"this.getOptions","id":"thisgetoptions","level":3},{"title":"this.exec","id":"thisexec","level":3},{"title":"this.getResolve","id":"thisgetresolve","level":3},{"title":"Major Internal Changes","id":"major-internal-changes","level":2},{"title":"New plugin order","id":"new-plugin-order","level":3},{"title":"Runtime Modules","id":"runtime-modules","level":3},{"title":"Serialization","id":"serialization","level":3},{"title":"Plugins for Caching","id":"plugins-for-caching","level":3},{"title":"Hook Object Frozen","id":"hook-object-frozen","level":3},{"title":"Tapable Upgrade","id":"tapable-upgrade","level":3},{"title":"Staged Hooks","id":"staged-hooks","level":3},{"title":"Main/Chunk/ModuleTemplate deprecation","id":"mainchunkmoduletemplate-deprecation","level":3},{"title":"Entry point descriptor","id":"entry-point-descriptor","level":3},{"title":"Order and IDs","id":"order-and-ids","level":3},{"title":"Arrays to Sets","id":"arrays-to-sets","level":3},{"title":"Compilation.fileSystemInfo","id":"compilationfilesysteminfo","level":3},{"title":"Filesystems","id":"filesystems","level":3},{"title":"Hot Module Replacement","id":"hot-module-replacement","level":3},{"title":"Work Queues","id":"work-queues","level":3},{"title":"Logging","id":"logging","level":3},{"title":"Module and Chunk Graph","id":"module-and-chunk-graph","level":3},{"title":"Init Fragments","id":"init-fragments","level":3},{"title":"Module Source Types","id":"module-source-types","level":3},{"title":"Plugins for Stats","id":"plugins-for-stats","level":3},{"title":"New Watching","id":"new-watching","level":3},{"title":"SizeOnlySource after emit","id":"sizeonlysource-after-emit","level":3},{"title":"Emitting assets multiple times","id":"emitting-assets-multiple-times","level":3},{"title":"ExportsInfo","id":"exportsinfo","level":3},{"title":"Code Generation Phase","id":"code-generation-phase","level":3},{"title":"DependencyReference","id":"dependencyreference","level":3},{"title":"Presentational Dependencies","id":"presentational-dependencies","level":3},{"title":"Deprecated loaders","id":"deprecated-loaders","level":3},{"title":"Minor Changes","id":"minor-changes","level":2},{"title":"Other Minor Changes","id":"other-minor-changes","level":2}],"title":"Webpack 5 release (2020-10-10)","sort":-202010100,"contributors":["sokra","chenxsan"]},{"path":"src/content/blog/index.mdx","name":"index.mdx","size":214,"type":"file","extension":".mdx","url":"/blog/","anchors":[{"title":"Popular posts","id":"popular-posts","level":2}],"title":"Blog","sort":-1,"contributors":["sokra"]},{"path":"src/content/blog/printable.mdx","name":"printable.mdx","size":383,"type":"file","extension":".mdx","url":"/blog/printable/","anchors":[{"title":"Roadmap 2021 (2020-12-08)","id":"roadmap-2021-2020-12-08","level":1},{"title":"Webpack 5 release (2020-10-10)","id":"webpack-5-release-2020-10-10","level":1},{"title":"Blog","id":"blog","level":1}],"title":"Printable","sort":999,"contributors":["webpack"]}],"size":88588,"type":"directory","url":"/blog/"},{"path":"src/content/concepts","name":"concepts","children":[{"path":"src/content/concepts/index.mdx","name":"index.mdx","size":7732,"type":"file","extension":".mdx","url":"/concepts/","anchors":[{"title":"Entry","id":"entry","level":2},{"title":"Output","id":"output","level":2},{"title":"Loaders","id":"loaders","level":2},{"title":"Plugins","id":"plugins","level":2},{"title":"Mode","id":"mode","level":2},{"title":"Browser Compatibility","id":"browser-compatibility","level":2},{"title":"Environment","id":"environment","level":2}],"title":"Concepts","sort":-1,"contributors":["TheLarkInn","jhnns","grgur","johnstew","jimrfenner","TheDutchCoder","adambraimbridge","EugeneHlushko","jeremenichelli","arjunsajeev","byzyk","yairhaimo","farskid","LukeMwila","Jalitha","muhmushtaha","chenxsan","RyanGreyling2"]},{"path":"src/content/concepts/entry-points.mdx","name":"entry-points.mdx","size":6616,"type":"file","extension":".mdx","url":"/concepts/entry-points/","anchors":[{"title":"Single Entry (Shorthand) Syntax","id":"single-entry-shorthand-syntax","level":2},{"title":"Object Syntax","id":"object-syntax","level":2},{"title":"EntryDescription object","id":"entrydescription-object","level":3},{"title":"Scenarios","id":"scenarios","level":2},{"title":"Separate App and Vendor Entries","id":"separate-app-and-vendor-entries","level":3},{"title":"Multi-Page Application","id":"multi-page-application","level":3}],"title":"Entry Points","sort":1,"contributors":["TheLarkInn","chrisVillanueva","byzyk","sokra","EugeneHlushko","Zearin","chenxsan","adyjs","anshumanv","ritikbanger"]},{"path":"src/content/concepts/output.mdx","name":"output.mdx","size":1840,"type":"file","extension":".mdx","url":"/concepts/output/","anchors":[{"title":"Usage","id":"usage","level":2},{"title":"Multiple Entry Points","id":"multiple-entry-points","level":2},{"title":"Advanced","id":"advanced","level":2}],"title":"Output","sort":2,"contributors":["TheLarkInn","chyipin","rouzbeh84","byzyk","EugeneHlushko"]},{"path":"src/content/concepts/loaders.mdx","name":"loaders.mdx","size":5546,"type":"file","extension":".mdx","url":"/concepts/loaders/","anchors":[{"title":"Example","id":"example","level":2},{"title":"Using Loaders","id":"using-loaders","level":2},{"title":"Configuration","id":"configuration","level":3},{"title":"Inline","id":"inline","level":3},{"title":"Loader Features","id":"loader-features","level":2},{"title":"Resolving Loaders","id":"resolving-loaders","level":2}],"title":"Loaders","sort":3,"contributors":["manekinekko","evenstensberg","SpaceK33z","gangachris","TheLarkInn","simon04","jhnns","byzyk","debs-obrien","EugeneHlushko","wizardofhogwarts","lukasgeiter","furkle","jamesgeorge007","textbook"]},{"path":"src/content/concepts/plugins.mdx","name":"plugins.mdx","size":3373,"type":"file","extension":".mdx","url":"/concepts/plugins/","anchors":[{"title":"Anatomy","id":"anatomy","level":2},{"title":"Usage","id":"usage","level":2},{"title":"Configuration","id":"configuration","level":3},{"title":"Node API","id":"node-api","level":3}],"title":"Plugins","sort":4,"contributors":["TheLarkInn","jhnns","rouzbeh84","johnstew","MisterDev","byzyk","chenxsan"]},{"path":"src/content/concepts/configuration.mdx","name":"configuration.mdx","size":2448,"type":"file","extension":".mdx","url":"/concepts/configuration/","anchors":[{"title":"Introductory Configuration","id":"introductory-configuration","level":2},{"title":"Multiple Targets","id":"multiple-targets","level":2},{"title":"Using other Configuration Languages","id":"using-other-configuration-languages","level":2}],"title":"Configuration","sort":5,"contributors":["TheLarkInn","simon04","EugeneHlushko","byzyk"]},{"path":"src/content/concepts/modules.mdx","name":"modules.mdx","size":2898,"type":"file","extension":".mdx","url":"/concepts/modules/","anchors":[{"title":"What is a webpack Module","id":"what-is-a-webpack-module","level":2},{"title":"Supported Module Types","id":"supported-module-types","level":2}],"title":"Modules","sort":6,"contributors":["TheLarkInn","simon04","rouzbeh84","EugeneHlushko","byzyk"],"related":[{"title":"JavaScript Module Systems Showdown","url":"https://auth0.com/blog/javascript-module-systems-showdown/"}]},{"path":"src/content/concepts/module-resolution.mdx","name":"module-resolution.mdx","size":4080,"type":"file","extension":".mdx","url":"/concepts/module-resolution/","anchors":[{"title":"Resolving rules in webpack","id":"resolving-rules-in-webpack","level":2},{"title":"Absolute paths","id":"absolute-paths","level":3},{"title":"Relative paths","id":"relative-paths","level":3},{"title":"Module paths","id":"module-paths","level":3},{"title":"Resolving Loaders","id":"resolving-loaders","level":2},{"title":"Caching","id":"caching","level":2}],"title":"Module Resolution","sort":7,"contributors":["pksjce","pastelsky","byzyk","EugeneHlushko","wizardofhogwarts"]},{"path":"src/content/concepts/module-federation.mdx","name":"module-federation.mdx","size":14602,"type":"file","extension":".mdx","url":"/concepts/module-federation/","anchors":[{"title":"Motivation","id":"motivation","level":2},{"title":"Low-level concepts","id":"low-level-concepts","level":2},{"title":"High-level concepts","id":"high-level-concepts","level":2},{"title":"Building blocks","id":"building-blocks","level":2},{"title":"ContainerPlugin (low level)","id":"containerplugin-low-level","level":3},{"title":"ContainerReferencePlugin (low level)","id":"containerreferenceplugin-low-level","level":3},{"title":"ModuleFederationPlugin (high level)","id":"modulefederationplugin-high-level","level":3},{"title":"Concept goals","id":"concept-goals","level":2},{"title":"Use cases","id":"use-cases","level":2},{"title":"Separate builds per page","id":"separate-builds-per-page","level":3},{"title":"Components library as container","id":"components-library-as-container","level":3},{"title":"Dynamic Remote Containers","id":"dynamic-remote-containers","level":2},{"title":"Promise Based Dynamic Remotes","id":"promise-based-dynamic-remotes","level":2},{"title":"Dynamic Public Path","id":"dynamic-public-path","level":2},{"title":"Offer a host API to set the publicPath","id":"offer-a-host-api-to-set-the-publicpath","level":3},{"title":"Infer publicPath from script","id":"infer-publicpath-from-script","level":3},{"title":"Troubleshooting","id":"troubleshooting","level":2},{"title":"Uncaught Error: Shared module is not available for eager consumption","id":"uncaught-error-shared-module-is-not-available-for-eager-consumption","level":3},{"title":"Uncaught Error: Module \\"./Button\\" does not exist in container.","id":"uncaught-error-module-button-does-not-exist-in-container","level":3},{"title":"Uncaught TypeError: fn is not a function","id":"uncaught-typeerror-fn-is-not-a-function","level":3},{"title":"Collision between modules from different remotes","id":"collision-between-modules-from-different-remotes","level":3}],"title":"Module Federation","sort":8,"contributors":["sokra","chenxsan","EugeneHlushko","jamesgeorge007","ScriptedAlchemy","snitin315","XiaofengXie16","KyleBastien","Alevale","burhanuday"],"related":[{"title":"Webpack 5 Module Federation: A game-changer in JavaScript architecture","url":"https://medium.com/swlh/webpack-5-module-federation-a-game-changer-to-javascript-architecture-bcdd30e02669"},{"title":"Explanations and Examples","url":"https://github.com/module-federation/module-federation-examples"},{"title":"Module Federation YouTube Playlist","url":"https://www.youtube.com/playlist?list=PLWSiF9YHHK-DqsFHGYbeAMwbd9xcZbEWJ"}]},{"path":"src/content/concepts/dependency-graph.mdx","name":"dependency-graph.mdx","size":1223,"type":"file","extension":".mdx","url":"/concepts/dependency-graph/","anchors":[],"title":"Dependency Graph","sort":9,"contributors":["TheLarkInn","EugeneHlushko"],"related":[{"title":"HTTP2 Aggressive Splitting Example","url":"https://github.com/webpack/webpack/tree/master/examples/http2-aggressive-splitting"},{"title":"webpack & HTTP/2","url":"https://medium.com/webpack/webpack-http-2-7083ec3f3ce6"}]},{"path":"src/content/concepts/targets.mdx","name":"targets.mdx","size":2462,"type":"file","extension":".mdx","url":"/concepts/targets/","anchors":[{"title":"Usage","id":"usage","level":2},{"title":"Multiple Targets","id":"multiple-targets","level":2},{"title":"Resources","id":"resources","level":2}],"title":"Targets","sort":10,"contributors":["TheLarkInn","rouzbeh84","johnstew","srilman","byzyk","EugeneHlushko"]},{"path":"src/content/concepts/manifest.mdx","name":"manifest.mdx","size":3393,"type":"file","extension":".mdx","url":"/concepts/manifest/","anchors":[{"title":"Runtime","id":"runtime","level":2},{"title":"Manifest","id":"manifest","level":2},{"title":"The Problem","id":"the-problem","level":2}],"title":"The Manifest","sort":11,"contributors":["skipjack","EugeneHlushko"],"related":[{"title":"Separating a Manifest","url":"https://survivejs.com/webpack/optimizing/separating-manifest/"},{"title":"Predictable Long Term Caching with webpack","url":"https://medium.com/webpack/predictable-long-term-caching-with-webpack-d3eee1d3fa31"},{"title":"Caching","url":"/guides/caching/"}]},{"path":"src/content/concepts/hot-module-replacement.mdx","name":"hot-module-replacement.mdx","size":4931,"type":"file","extension":".mdx","url":"/concepts/hot-module-replacement/","anchors":[{"title":"How It Works","id":"how-it-works","level":2},{"title":"In the Application","id":"in-the-application","level":3},{"title":"In the Compiler","id":"in-the-compiler","level":3},{"title":"In a Module","id":"in-a-module","level":3},{"title":"In the Runtime","id":"in-the-runtime","level":3},{"title":"Get Started","id":"get-started","level":2}],"title":"Hot Module Replacement","sort":12,"contributors":["kryptokinght","SpaceK33z","sokra","GRardB","rouzbeh84","skipjack"]},{"path":"src/content/concepts/why-webpack.mdx","name":"why-webpack.mdx","size":4124,"type":"file","extension":".mdx","url":"/concepts/why-webpack/","anchors":[{"title":"IIFEs - Immediately invoked function expressions","id":"iifes---immediately-invoked-function-expressions","level":2},{"title":"Birth of JavaScript Modules happened thanks to Node.js","id":"birth-of-javascript-modules-happened-thanks-to-nodejs","level":2},{"title":"npm + Node.js + modules – mass distribution","id":"npm--nodejs--modules--mass-distribution","level":2},{"title":"ESM - ECMAScript Modules","id":"esm---ecmascript-modules","level":2},{"title":"Automatic Dependency Collection","id":"automatic-dependency-collection","level":2},{"title":"Wouldn\'t it be nice…","id":"wouldnt-it-be-nice","level":2}],"title":"Why webpack","sort":13,"contributors":["debs-obrien","montogeek","jeremenichelli","EugeneHlushko"]},{"path":"src/content/concepts/under-the-hood.mdx","name":"under-the-hood.mdx","size":3980,"type":"file","extension":".mdx","url":"/concepts/under-the-hood/","anchors":[{"title":"The main parts","id":"the-main-parts","level":2},{"title":"Chunks","id":"chunks","level":2},{"title":"Output","id":"output","level":2}],"title":"Under The Hood","sort":14,"contributors":["smelukov","EugeneHlushko","chenxsan","amirsaeed671"]},{"path":"src/content/concepts/printable.mdx","name":"printable.mdx","size":1271,"type":"file","extension":".mdx","url":"/concepts/printable/","anchors":[{"title":"Concepts","id":"concepts","level":1},{"title":"Entry Points","id":"entry-points","level":1},{"title":"Output","id":"output","level":1},{"title":"Loaders","id":"loaders","level":1},{"title":"Plugins","id":"plugins","level":1},{"title":"Configuration","id":"configuration","level":1},{"title":"Modules","id":"modules","level":1},{"title":"Module Resolution","id":"module-resolution","level":1},{"title":"Module Federation","id":"module-federation","level":1},{"title":"Dependency Graph","id":"dependency-graph","level":1},{"title":"Targets","id":"targets","level":1},{"title":"The Manifest","id":"the-manifest","level":1},{"title":"Hot Module Replacement","id":"hot-module-replacement","level":1},{"title":"Why webpack","id":"why-webpack","level":1},{"title":"Under The Hood","id":"under-the-hood","level":1}],"title":"Printable","sort":999,"contributors":["webpack"]}],"size":70519,"type":"directory","url":"/concepts/"},{"path":"src/content/configuration","name":"configuration","children":[{"path":"src/content/configuration/index.mdx","name":"index.mdx","size":3489,"type":"file","extension":".mdx","url":"/configuration/","anchors":[{"title":"Use a different configuration file","id":"use-a-different-configuration-file","level":2},{"title":"Set up a new webpack project","id":"set-up-a-new-webpack-project","level":2}],"title":"Configuration","sort":1,"contributors":["sokra","skipjack","grgur","bondz","sricc","terinjokes","mattce","kbariotis","sterlingvix","jeremenichelli","dasarianudeep","lukasgeiter","EugeneHlushko","bigdawggi","anshumanv","textbook","coly010","chenxsan"]},{"path":"src/content/configuration/configuration-languages.mdx","name":"configuration-languages.mdx","size":5621,"type":"file","extension":".mdx","url":"/configuration/configuration-languages/","anchors":[{"title":"TypeScript","id":"typescript","level":2},{"title":"CoffeeScript","id":"coffeescript","level":2},{"title":"Babel and JSX","id":"babel-and-jsx","level":2}],"title":"Configuration Languages","sort":2,"contributors":["sokra","skipjack","tarang9211","simon04","peterblazejewicz","youta1119","byzyk","Nek-","liyiming22","daimalou","ChocolateLoverRaj","snitin315"]},{"path":"src/content/configuration/configuration-types.mdx","name":"configuration-types.mdx","size":3714,"type":"file","extension":".mdx","url":"/configuration/configuration-types/","anchors":[{"title":"Exporting a Function","id":"exporting-a-function","level":2},{"title":"Exporting a Promise","id":"exporting-a-promise","level":2},{"title":"Exporting multiple configurations","id":"exporting-multiple-configurations","level":2},{"title":"dependencies","id":"dependencies","level":3},{"title":"parallelism","id":"parallelism","level":3}],"title":"Configuration Types","sort":3,"contributors":["sokra","skipjack","kbariotis","simon04","fadysamirsadek","byzyk","EugeneHlushko","dhurlburtusa","anshumanv","thorn0"]},{"path":"src/content/configuration/entry-context.mdx","name":"entry-context.mdx","size":5075,"type":"file","extension":".mdx","url":"/configuration/entry-context/","anchors":[{"title":"context","id":"context","level":2},{"title":"entry","id":"entry","level":2},{"title":"Naming","id":"naming","level":3},{"title":"Entry descriptor","id":"entry-descriptor","level":3},{"title":"Output filename","id":"output-filename","level":3},{"title":"Dependencies","id":"dependencies","level":3},{"title":"Dynamic entry","id":"dynamic-entry","level":3}],"title":"Entry and Context","sort":4,"contributors":["sokra","skipjack","tarang9211","byzyk","madhavarshney","EugeneHlushko","smelukov","anshumanv","snitin315"]},{"path":"src/content/configuration/mode.mdx","name":"mode.mdx","size":2960,"type":"file","extension":".mdx","url":"/configuration/mode/","anchors":[{"title":"Usage","id":"usage","level":2},{"title":"Mode: development","id":"mode-development","level":3},{"title":"Mode: production","id":"mode-production","level":3},{"title":"Mode: none","id":"mode-none","level":3}],"title":"Mode","sort":5,"contributors":["EugeneHlushko","byzyk","mrichmond","Fental","snitin315","chenxsan"],"related":[{"title":"webpack default options (source code)","url":"https://github.com/webpack/webpack/blob/main/lib/config/defaults.js"}]},{"path":"src/content/configuration/output.mdx","name":"output.mdx","size":70199,"type":"file","extension":".mdx","url":"/configuration/output/","anchors":[{"title":"output.assetModuleFilename","id":"outputassetmodulefilename","level":2},{"title":"output.asyncChunks","id":"outputasyncchunks","level":2},{"title":"output.auxiliaryComment","id":"outputauxiliarycomment","level":2},{"title":"output.charset","id":"outputcharset","level":2},{"title":"output.chunkFilename","id":"outputchunkfilename","level":2},{"title":"output.chunkFormat","id":"outputchunkformat","level":2},{"title":"output.chunkLoadTimeout","id":"outputchunkloadtimeout","level":2},{"title":"output.chunkLoadingGlobal","id":"outputchunkloadingglobal","level":2},{"title":"output.chunkLoading","id":"outputchunkloading","level":2},{"title":"output.clean","id":"outputclean","level":2},{"title":"output.compareBeforeEmit","id":"outputcomparebeforeemit","level":2},{"title":"output.crossOriginLoading","id":"outputcrossoriginloading","level":2},{"title":"output.devtoolFallbackModuleFilenameTemplate","id":"outputdevtoolfallbackmodulefilenametemplate","level":2},{"title":"output.devtoolModuleFilenameTemplate","id":"outputdevtoolmodulefilenametemplate","level":2},{"title":"output.devtoolNamespace","id":"outputdevtoolnamespace","level":2},{"title":"output.enabledChunkLoadingTypes","id":"outputenabledchunkloadingtypes","level":2},{"title":"output.enabledLibraryTypes","id":"outputenabledlibrarytypes","level":2},{"title":"output.enabledWasmLoadingTypes","id":"outputenabledwasmloadingtypes","level":2},{"title":"output.environment","id":"outputenvironment","level":2},{"title":"output.filename","id":"outputfilename","level":2},{"title":"Template strings","id":"template-strings","level":3},{"title":"output.globalObject","id":"outputglobalobject","level":2},{"title":"output.hashDigest","id":"outputhashdigest","level":2},{"title":"output.hashDigestLength","id":"outputhashdigestlength","level":2},{"title":"output.hashFunction","id":"outputhashfunction","level":2},{"title":"output.hashSalt","id":"outputhashsalt","level":2},{"title":"output.hotUpdateChunkFilename","id":"outputhotupdatechunkfilename","level":2},{"title":"output.hotUpdateGlobal","id":"outputhotupdateglobal","level":2},{"title":"output.hotUpdateMainFilename","id":"outputhotupdatemainfilename","level":2},{"title":"output.iife","id":"outputiife","level":2},{"title":"output.ignoreBrowserWarnings","id":"outputignorebrowserwarnings","level":2},{"title":"output.importFunctionName","id":"outputimportfunctionname","level":2},{"title":"output.library","id":"outputlibrary","level":2},{"title":"output.library.amdContainer","id":"outputlibraryamdcontainer","level":3},{"title":"output.library.name","id":"outputlibraryname","level":3},{"title":"output.library.type","id":"outputlibrarytype","level":3},{"title":"output.library.export","id":"outputlibraryexport","level":3},{"title":"output.library.auxiliaryComment","id":"outputlibraryauxiliarycomment","level":3},{"title":"output.library.umdNamedDefine","id":"outputlibraryumdnameddefine","level":3},{"title":"output.libraryExport","id":"outputlibraryexport-1","level":2},{"title":"output.libraryTarget","id":"outputlibrarytarget","level":2},{"title":"Expose a Variable","id":"expose-a-variable-1","level":3},{"title":"Expose Via Object Assignment","id":"expose-via-object-assignment-1","level":3},{"title":"Module Definition Systems","id":"module-definition-systems-1","level":3},{"title":"Other Targets","id":"other-targets","level":3},{"title":"output.module","id":"outputmodule","level":2},{"title":"output.path","id":"outputpath","level":2},{"title":"output.pathinfo","id":"outputpathinfo","level":2},{"title":"output.publicPath","id":"outputpublicpath","level":2},{"title":"output.scriptType","id":"outputscripttype","level":2},{"title":"output.sourceMapFilename","id":"outputsourcemapfilename","level":2},{"title":"output.sourcePrefix","id":"outputsourceprefix","level":2},{"title":"output.strictModuleErrorHandling","id":"outputstrictmoduleerrorhandling","level":2},{"title":"output.strictModuleExceptionHandling","id":"outputstrictmoduleexceptionhandling","level":2},{"title":"output.trustedTypes","id":"outputtrustedtypes","level":2},{"title":"output.trustedTypes.onPolicyCreationFailure","id":"outputtrustedtypesonpolicycreationfailure","level":3},{"title":"output.umdNamedDefine","id":"outputumdnameddefine","level":2},{"title":"output.uniqueName","id":"outputuniquename","level":2},{"title":"output.wasmLoading","id":"outputwasmloading","level":2},{"title":"output.workerChunkLoading","id":"outputworkerchunkloading","level":2},{"title":"output.workerPublicPath","id":"outputworkerpublicpath","level":2}],"title":"Output","sort":6,"contributors":["sokra","skipjack","tomasAlabes","mattce","irth","fvgs","dhurlburtusa","MagicDuck","fadysamirsadek","byzyk","madhavarshney","harshwardhansingh","eemeli","EugeneHlushko","g-plane","smelukov","Neob91","anikethsaha","jamesgeorge007","hiroppy","chenxsan","snitin315","QC-L","anshumanv","mrzalyaul","JakobJingleheimer","long76"]},{"path":"src/content/configuration/module.mdx","name":"module.mdx","size":35011,"type":"file","extension":".mdx","url":"/configuration/module/","anchors":[{"title":"module.generator","id":"modulegenerator","level":2},{"title":"module.parser","id":"moduleparser","level":2},{"title":"module.parser.javascript","id":"moduleparserjavascript","level":3},{"title":"module.noParse","id":"modulenoparse","level":2},{"title":"module.unsafeCache","id":"moduleunsafecache","level":2},{"title":"module.rules","id":"modulerules","level":2},{"title":"Rule","id":"rule","level":2},{"title":"Rule Conditions","id":"rule-conditions","level":3},{"title":"Rule results","id":"rule-results","level":3},{"title":"Nested rules","id":"nested-rules","level":2},{"title":"Rule.enforce","id":"ruleenforce","level":2},{"title":"Rule.exclude","id":"ruleexclude","level":2},{"title":"Rule.include","id":"ruleinclude","level":2},{"title":"Rule.issuer","id":"ruleissuer","level":2},{"title":"Rule.issuerLayer","id":"ruleissuerlayer","level":2},{"title":"Rule.layer","id":"rulelayer","level":2},{"title":"Rule.loader","id":"ruleloader","level":2},{"title":"Rule.loaders","id":"ruleloaders","level":2},{"title":"Rule.mimetype","id":"rulemimetype","level":2},{"title":"Rule.oneOf","id":"ruleoneof","level":2},{"title":"Rule.options / Rule.query","id":"ruleoptions--rulequery","level":2},{"title":"Rule.parser","id":"ruleparser","level":2},{"title":"Rule.parser.dataUrlCondition","id":"ruleparserdataurlcondition","level":2},{"title":"Rule.generator","id":"rulegenerator","level":2},{"title":"Rule.generator.dataUrl","id":"rulegeneratordataurl","level":3},{"title":"Rule.generator.emit","id":"rulegeneratoremit","level":3},{"title":"Rule.generator.filename","id":"rulegeneratorfilename","level":3},{"title":"Rule.generator.publicPath","id":"rulegeneratorpublicpath","level":3},{"title":"Rule.generator.outputPath","id":"rulegeneratoroutputpath","level":3},{"title":"Rule.resource","id":"ruleresource","level":2},{"title":"Rule.resourceQuery","id":"ruleresourcequery","level":2},{"title":"Rule.parser.parse","id":"ruleparserparse","level":2},{"title":"Rule.rules","id":"rulerules","level":2},{"title":"Rule.scheme","id":"rulescheme","level":2},{"title":"Rule.sideEffects","id":"rulesideeffects","level":2},{"title":"Rule.test","id":"ruletest","level":2},{"title":"Rule.type","id":"ruletype","level":2},{"title":"Rule.use","id":"ruleuse","level":2},{"title":"Rule.resolve","id":"ruleresolve","level":2},{"title":"resolve.fullySpecified","id":"resolvefullyspecified","level":3},{"title":"Condition","id":"condition","level":2},{"title":"UseEntry","id":"useentry","level":2},{"title":"Module Contexts","id":"module-contexts","level":2}],"title":"Module","sort":7,"contributors":["sokra","skipjack","jouni-kantola","jhnns","dylanonelson","byzyk","pnevares","fadysamirsadek","nerdkid93","EugeneHlushko","superburrito","lukasgeiter","skovy","smelukov","opl-","Mistyyyy","anshumanv","chenxsan","snitin315","vabushkevich"]},{"path":"src/content/configuration/resolve.mdx","name":"resolve.mdx","size":17803,"type":"file","extension":".mdx","url":"/configuration/resolve/","anchors":[{"title":"resolve","id":"resolve","level":2},{"title":"resolve.alias","id":"resolvealias","level":3},{"title":"resolve.aliasFields","id":"resolvealiasfields","level":3},{"title":"resolve.cacheWithContext","id":"resolvecachewithcontext","level":3},{"title":"resolve.conditionNames","id":"resolveconditionnames","level":3},{"title":"resolve.descriptionFiles","id":"resolvedescriptionfiles","level":3},{"title":"resolve.enforceExtension","id":"resolveenforceextension","level":3},{"title":"resolve.extensionAlias","id":"resolveextensionalias","level":3},{"title":"resolve.extensions","id":"resolveextensions","level":3},{"title":"resolve.fallback","id":"resolvefallback","level":3},{"title":"resolve.mainFields","id":"resolvemainfields","level":3},{"title":"resolve.mainFiles","id":"resolvemainfiles","level":3},{"title":"resolve.exportsFields","id":"resolveexportsfields","level":3},{"title":"resolve.modules","id":"resolvemodules","level":3},{"title":"resolve.unsafeCache","id":"resolveunsafecache","level":3},{"title":"resolve.useSyncFileSystemCalls","id":"resolveusesyncfilesystemcalls","level":3},{"title":"resolve.plugins","id":"resolveplugins","level":3},{"title":"resolve.preferRelative","id":"resolvepreferrelative","level":3},{"title":"resolve.preferAbsolute","id":"resolvepreferabsolute","level":3},{"title":"resolve.symlinks","id":"resolvesymlinks","level":3},{"title":"resolve.cachePredicate","id":"resolvecachepredicate","level":3},{"title":"resolve.restrictions","id":"resolverestrictions","level":3},{"title":"resolve.roots","id":"resolveroots","level":3},{"title":"resolve.importsFields","id":"resolveimportsfields","level":3},{"title":"resolve.byDependency","id":"resolvebydependency","level":3},{"title":"resolveLoader","id":"resolveloader","level":2}],"title":"Resolve","sort":8,"contributors":["sokra","skipjack","SpaceK33z","pksjce","sebastiandeutsch","tbroadley","byzyk","numb86","jgravois","EugeneHlushko","Aghassi","myshov","anikethsaha","chenxsan","jamesgeorge007","snitin315"]},{"path":"src/content/configuration/optimization.mdx","name":"optimization.mdx","size":17521,"type":"file","extension":".mdx","url":"/configuration/optimization/","anchors":[{"title":"optimization.chunkIds","id":"optimizationchunkids","level":2},{"title":"optimization.concatenateModules","id":"optimizationconcatenatemodules","level":2},{"title":"optimization.emitOnErrors","id":"optimizationemitonerrors","level":2},{"title":"optimization.flagIncludedChunks","id":"optimizationflagincludedchunks","level":2},{"title":"optimization.innerGraph","id":"optimizationinnergraph","level":2},{"title":"optimization.mangleExports","id":"optimizationmangleexports","level":2},{"title":"optimization.mangleWasmImports","id":"optimizationmanglewasmimports","level":2},{"title":"optimization.mergeDuplicateChunks","id":"optimizationmergeduplicatechunks","level":2},{"title":"optimization.minimize","id":"optimizationminimize","level":2},{"title":"optimization.minimizer","id":"optimizationminimizer","level":2},{"title":"optimization.moduleIds","id":"optimizationmoduleids","level":2},{"title":"optimization.nodeEnv","id":"optimizationnodeenv","level":2},{"title":"optimization.portableRecords","id":"optimizationportablerecords","level":2},{"title":"optimization.providedExports","id":"optimizationprovidedexports","level":2},{"title":"optimization.realContentHash","id":"optimizationrealcontenthash","level":2},{"title":"optimization.removeAvailableModules","id":"optimizationremoveavailablemodules","level":2},{"title":"optimization.removeEmptyChunks","id":"optimizationremoveemptychunks","level":2},{"title":"optimization.runtimeChunk","id":"optimizationruntimechunk","level":2},{"title":"optimization.sideEffects","id":"optimizationsideeffects","level":2},{"title":"optimization.splitChunks","id":"optimizationsplitchunks","level":2},{"title":"optimization.usedExports","id":"optimizationusedexports","level":2}],"title":"Optimization","sort":9,"contributors":["EugeneHlushko","jeremenichelli","simon04","byzyk","madhavarshney","dhurlburtusa","jamesgeorge007","anikethsaha","snitin315","pixel-ray","chenxsan","Roberto14"],"related":[{"title":"webpack 4: Code Splitting, chunk graph and the splitChunks optimization","url":"https://medium.com/webpack/webpack-4-code-splitting-chunk-graph-and-the-splitchunks-optimization-be739a861366"}]},{"path":"src/content/configuration/plugins.mdx","name":"plugins.mdx","size":1683,"type":"file","extension":".mdx","url":"/configuration/plugins/","anchors":[{"title":"plugins","id":"plugins","level":2}],"title":"Plugins","sort":10,"contributors":["sokra","skipjack","yatharthk","byzyk","EugeneHlushko","snitin315"]},{"path":"src/content/configuration/dev-server.mdx","name":"dev-server.mdx","size":42513,"type":"file","extension":".mdx","url":"/configuration/dev-server/","anchors":[{"title":"devServer","id":"devserver","level":2},{"title":"Usage via CLI","id":"usage-via-cli","level":3},{"title":"Usage via API","id":"usage-via-api","level":3},{"title":"devServer.allowedHosts","id":"devserverallowedhosts","level":2},{"title":"devServer.bonjour","id":"devserverbonjour","level":2},{"title":"devServer.client","id":"devserverclient","level":2},{"title":"logging","id":"logging","level":3},{"title":"overlay","id":"overlay","level":3},{"title":"progress","id":"progress","level":3},{"title":"reconnect","id":"reconnect","level":3},{"title":"webSocketTransport","id":"websockettransport","level":3},{"title":"webSocketURL","id":"websocketurl","level":3},{"title":"devServer.compress","id":"devservercompress","level":2},{"title":"devServer.devMiddleware","id":"devserverdevmiddleware","level":2},{"title":"devServer.http2","id":"devserverhttp2","level":2},{"title":"devServer.https","id":"devserverhttps","level":2},{"title":"devServer.headers","id":"devserverheaders","level":2},{"title":"devServer.historyApiFallback","id":"devserverhistoryapifallback","level":2},{"title":"devServer.host","id":"devserverhost","level":2},{"title":"local-ip","id":"local-ip","level":3},{"title":"local-ipv4","id":"local-ipv4","level":3},{"title":"local-ipv6","id":"local-ipv6","level":3},{"title":"devServer.hot","id":"devserverhot","level":2},{"title":"devServer.ipc","id":"devserveripc","level":2},{"title":"devServer.liveReload","id":"devserverlivereload","level":2},{"title":"devServer.magicHtml","id":"devservermagichtml","level":2},{"title":"devServer.onAfterSetupMiddleware","id":"devserveronaftersetupmiddleware","level":2},{"title":"devServer.onBeforeSetupMiddleware","id":"devserveronbeforesetupmiddleware","level":2},{"title":"devserver.onListening","id":"devserveronlistening","level":2},{"title":"devServer.open","id":"devserveropen","level":2},{"title":"devServer.port","id":"devserverport","level":2},{"title":"devServer.proxy","id":"devserverproxy","level":2},{"title":"devServer.server","id":"devserverserver","level":2},{"title":"devServer.setupExitSignals","id":"devserversetupexitsignals","level":2},{"title":"devServer.setupMiddlewares","id":"devserversetupmiddlewares","level":2},{"title":"devServer.static","id":"devserverstatic","level":2},{"title":"directory","id":"directory","level":3},{"title":"staticOptions","id":"staticoptions","level":3},{"title":"publicPath","id":"publicpath","level":3},{"title":"serveIndex","id":"serveindex","level":3},{"title":"watch","id":"watch","level":3},{"title":"devServer.watchFiles","id":"devserverwatchfiles","level":2},{"title":"devServer.webSocketServer","id":"devserverwebsocketserver","level":2}],"title":"DevServer","sort":11,"contributors":["sokra","skipjack","spacek33z","charlespwd","orteth01","byzyk","EugeneHlushko","Yiidiir","Loonride","dmohns","EslamHiko","digitaljohn","bhavya9107","wizardofhogwarts","jamesgeorge007","g100g","anikethsaha","snitin315","Biki-das","SaulSilver","malcolm-kee"]},{"path":"src/content/configuration/cache.mdx","name":"cache.mdx","size":11657,"type":"file","extension":".mdx","url":"/configuration/cache/","anchors":[{"title":"cache","id":"cache","level":2},{"title":"cache.allowCollectingMemory","id":"cacheallowcollectingmemory","level":3},{"title":"cache.buildDependencies","id":"cachebuilddependencies","level":3},{"title":"cache.cacheDirectory","id":"cachecachedirectory","level":3},{"title":"cache.cacheLocation","id":"cachecachelocation","level":3},{"title":"cache.cacheUnaffected","id":"cachecacheunaffected","level":3},{"title":"cache.compression","id":"cachecompression","level":3},{"title":"cache.hashAlgorithm","id":"cachehashalgorithm","level":3},{"title":"cache.idleTimeout","id":"cacheidletimeout","level":3},{"title":"cache.idleTimeoutAfterLargeChanges","id":"cacheidletimeoutafterlargechanges","level":3},{"title":"cache.idleTimeoutForInitialStore","id":"cacheidletimeoutforinitialstore","level":3},{"title":"cache.managedPaths","id":"cachemanagedpaths","level":3},{"title":"cache.maxAge","id":"cachemaxage","level":3},{"title":"cache.maxGenerations","id":"cachemaxgenerations","level":3},{"title":"cache.maxMemoryGenerations","id":"cachemaxmemorygenerations","level":3},{"title":"cache.memoryCacheUnaffected","id":"cachememorycacheunaffected","level":3},{"title":"cache.name","id":"cachename","level":3},{"title":"cache.profile","id":"cacheprofile","level":3},{"title":"cache.store","id":"cachestore","level":3},{"title":"cache.type","id":"cachetype","level":3},{"title":"cache.version","id":"cacheversion","level":3},{"title":"Setup cache in CI/CD system","id":"setup-cache-in-cicd-system","level":2},{"title":"GitLab CI/CD","id":"gitlab-cicd","level":3},{"title":"Github actions","id":"github-actions","level":3}],"title":"Cache","sort":12,"contributors":["snitin315","chenxsan"]},{"path":"src/content/configuration/devtool.mdx","name":"devtool.mdx","size":17292,"type":"file","extension":".mdx","url":"/configuration/devtool/","anchors":[{"title":"devtool","id":"devtool","level":2},{"title":"Qualities","id":"qualities","level":3},{"title":"Development","id":"development","level":3},{"title":"Special cases","id":"special-cases","level":3},{"title":"Production","id":"production","level":3}],"title":"Devtool","sort":12,"contributors":["sokra","skipjack","SpaceK33z","lricoy","madhavarshney","wizardofhogwarts","anikethsaha","snitin315"],"related":[{"title":"Enabling Source Maps","url":"https://survivejs.com/webpack/developing-with-webpack/enabling-sourcemaps/"},{"title":"webpack\'s Devtool Source Map","url":"http://cheng.logdown.com/posts/2016/03/25/679045"}]},{"path":"src/content/configuration/extending-configurations.mdx","name":"extending-configurations.mdx","size":3419,"type":"file","extension":".mdx","url":"/configuration/extending-configurations/","anchors":[{"title":"extends","id":"extends","level":2},{"title":"Extending multiple configurations","id":"extending-multiple-configurations","level":2},{"title":"Overridding Configurations","id":"overridding-configurations","level":2},{"title":"Loading configuration from external packages","id":"loading-configuration-from-external-packages","level":2}],"title":"Extends","sort":12,"contributors":["burhanuday"]},{"path":"src/content/configuration/target.mdx","name":"target.mdx","size":7857,"type":"file","extension":".mdx","url":"/configuration/target/","anchors":[{"title":"target","id":"target","level":2},{"title":"string","id":"string","level":3},{"title":"[string]","id":"string-1","level":3},{"title":"false","id":"false","level":3}],"title":"Target","sort":13,"contributors":["juangl","sokra","skipjack","SpaceK33z","pastelsky","tbroadley","byzyk","EugeneHlushko","smelukov","chenxsan"]},{"path":"src/content/configuration/watch.mdx","name":"watch.mdx","size":6463,"type":"file","extension":".mdx","url":"/configuration/watch/","anchors":[{"title":"watch","id":"watch","level":2},{"title":"watchOptions","id":"watchoptions","level":2},{"title":"watchOptions.aggregateTimeout","id":"watchoptionsaggregatetimeout","level":3},{"title":"watchOptions.ignored","id":"watchoptionsignored","level":3},{"title":"watchOptions.poll","id":"watchoptionspoll","level":3},{"title":"watchOptions.followSymlinks","id":"watchoptionsfollowsymlinks","level":3},{"title":"watchOptions.stdin","id":"watchoptionsstdin","level":3},{"title":"Troubleshooting","id":"troubleshooting","level":2},{"title":"Changes Seen But Not Processed","id":"changes-seen-but-not-processed","level":3},{"title":"Not Enough Watchers","id":"not-enough-watchers","level":3},{"title":"macOS fsevents Bug","id":"macos-fsevents-bug","level":3},{"title":"Windows Paths","id":"windows-paths","level":3},{"title":"Vim","id":"vim","level":3},{"title":"Saving in WebStorm","id":"saving-in-webstorm","level":3}],"title":"Watch and WatchOptions","sort":14,"contributors":["sokra","skipjack","SpaceK33z","EugeneHlushko","byzyk","spicalous","Neob91","Loonride","snitin315","chenxsan"]},{"path":"src/content/configuration/externals.mdx","name":"externals.mdx","size":21244,"type":"file","extension":".mdx","url":"/configuration/externals/","anchors":[{"title":"externals","id":"externals","level":2},{"title":"string","id":"string","level":3},{"title":"[string]","id":"string-1","level":3},{"title":"object","id":"object","level":3},{"title":"function","id":"function","level":3},{"title":"RegExp","id":"regexp","level":3},{"title":"Combining syntaxes","id":"combining-syntaxes","level":3},{"title":"byLayer","id":"bylayer","level":3},{"title":"externalsType","id":"externalstype","level":2},{"title":"externalsType.commonjs","id":"externalstypecommonjs","level":3},{"title":"externalsType.global","id":"externalstypeglobal","level":3},{"title":"externalsType.module","id":"externalstypemodule","level":3},{"title":"externalsType.node-commonjs","id":"externalstypenode-commonjs","level":3},{"title":"externalsType.promise","id":"externalstypepromise","level":3},{"title":"externalsType.self","id":"externalstypeself","level":3},{"title":"externalsType.script","id":"externalstypescript","level":3},{"title":"externalsType.this","id":"externalstypethis","level":3},{"title":"externalsType.var","id":"externalstypevar","level":3},{"title":"externalsType.window","id":"externalstypewindow","level":3},{"title":"externalsPresets","id":"externalspresets","level":2}],"title":"Externals","sort":15,"contributors":["sokra","skipjack","pksjce","fadysamirsadek","byzyk","zefman","Mistyyyy","jamesgeorge007","tanhauhau","snitin315","beejunk","EugeneHlushko","chenxsan","pranshuchittora","kinetifex","anshumanv","SaulSilver"]},{"path":"src/content/configuration/performance.mdx","name":"performance.mdx","size":2639,"type":"file","extension":".mdx","url":"/configuration/performance/","anchors":[{"title":"performance","id":"performance","level":2},{"title":"performance.assetFilter","id":"performanceassetfilter","level":3},{"title":"performance.hints","id":"performancehints","level":3},{"title":"performance.maxAssetSize","id":"performancemaxassetsize","level":3},{"title":"performance.maxEntrypointSize","id":"performancemaxentrypointsize","level":3}],"title":"Performance","sort":16,"contributors":["thelarkinn","tbroadley","byzyk","madhavarshney","EugeneHlushko"]},{"path":"src/content/configuration/node.mdx","name":"node.mdx","size":2484,"type":"file","extension":".mdx","url":"/configuration/node/","anchors":[{"title":"node","id":"node","level":2},{"title":"node.global","id":"nodeglobal","level":2},{"title":"node.__filename","id":"node__filename","level":2},{"title":"node.__dirname","id":"node__dirname","level":2}],"title":"Node","sort":17,"contributors":["sokra","skipjack","oneforwonder","Rob--W","byzyk","EugeneHlushko","anikethsaha","chenxsan"]},{"path":"src/content/configuration/stats.mdx","name":"stats.mdx","size":23173,"type":"file","extension":".mdx","url":"/configuration/stats/","anchors":[{"title":"Stats Presets","id":"stats-presets","level":2},{"title":"Stats Options","id":"stats-options","level":2},{"title":"stats.all","id":"statsall","level":3},{"title":"stats.assets","id":"statsassets","level":3},{"title":"stats.assetsSort","id":"statsassetssort","level":3},{"title":"stats.builtAt","id":"statsbuiltat","level":3},{"title":"stats.moduleAssets","id":"statsmoduleassets","level":3},{"title":"stats.assetsSpace","id":"statsassetsspace","level":3},{"title":"stats.modulesSpace","id":"statsmodulesspace","level":3},{"title":"stats.chunkModulesSpace","id":"statschunkmodulesspace","level":3},{"title":"stats.nestedModules","id":"statsnestedmodules","level":3},{"title":"stats.nestedModulesSpace","id":"statsnestedmodulesspace","level":3},{"title":"stats.cached","id":"statscached","level":3},{"title":"stats.cachedModules","id":"statscachedmodules","level":3},{"title":"stats.runtimeModules","id":"statsruntimemodules","level":3},{"title":"stats.dependentModules","id":"statsdependentmodules","level":3},{"title":"stats.groupAssetsByChunk","id":"statsgroupassetsbychunk","level":3},{"title":"stats.groupAssetsByEmitStatus","id":"statsgroupassetsbyemitstatus","level":3},{"title":"stats.groupAssetsByExtension","id":"statsgroupassetsbyextension","level":3},{"title":"stats.groupAssetsByInfo","id":"statsgroupassetsbyinfo","level":3},{"title":"stats.groupAssetsByPath","id":"statsgroupassetsbypath","level":3},{"title":"stats.groupModulesByAttributes","id":"statsgroupmodulesbyattributes","level":3},{"title":"stats.groupModulesByCacheStatus","id":"statsgroupmodulesbycachestatus","level":3},{"title":"stats.groupModulesByExtension","id":"statsgroupmodulesbyextension","level":3},{"title":"stats.groupModulesByLayer","id":"statsgroupmodulesbylayer","level":3},{"title":"stats.groupModulesByPath","id":"statsgroupmodulesbypath","level":3},{"title":"stats.groupModulesByType","id":"statsgroupmodulesbytype","level":3},{"title":"stats.groupReasonsByOrigin","id":"statsgroupreasonsbyorigin","level":3},{"title":"stats.cachedAssets","id":"statscachedassets","level":3},{"title":"stats.children","id":"statschildren","level":3},{"title":"stats.chunks","id":"statschunks","level":3},{"title":"stats.chunkGroups","id":"statschunkgroups","level":3},{"title":"stats.chunkModules","id":"statschunkmodules","level":3},{"title":"stats.chunkOrigins","id":"statschunkorigins","level":3},{"title":"stats.chunksSort","id":"statschunkssort","level":3},{"title":"stats.context","id":"statscontext","level":3},{"title":"stats.colors","id":"statscolors","level":3},{"title":"stats.depth","id":"statsdepth","level":3},{"title":"stats.entrypoints","id":"statsentrypoints","level":3},{"title":"stats.env","id":"statsenv","level":3},{"title":"stats.orphanModules","id":"statsorphanmodules","level":3},{"title":"stats.errors","id":"statserrors","level":3},{"title":"stats.errorDetails","id":"statserrordetails","level":3},{"title":"stats.errorStack","id":"statserrorstack","level":3},{"title":"stats.errorsSpace","id":"statserrorsspace","level":3},{"title":"stats.excludeAssets","id":"statsexcludeassets","level":3},{"title":"stats.excludeModules","id":"statsexcludemodules","level":3},{"title":"stats.exclude","id":"statsexclude","level":3},{"title":"stats.hash","id":"statshash","level":3},{"title":"stats.logging","id":"statslogging","level":3},{"title":"stats.loggingDebug","id":"statsloggingdebug","level":3},{"title":"stats.loggingTrace","id":"statsloggingtrace","level":3},{"title":"stats.modules","id":"statsmodules","level":3},{"title":"stats.modulesSort","id":"statsmodulessort","level":3},{"title":"stats.moduleTrace","id":"statsmoduletrace","level":3},{"title":"stats.optimizationBailout","id":"statsoptimizationbailout","level":3},{"title":"stats.outputPath","id":"statsoutputpath","level":3},{"title":"stats.performance","id":"statsperformance","level":3},{"title":"stats.preset","id":"statspreset","level":3},{"title":"stats.providedExports","id":"statsprovidedexports","level":3},{"title":"stats.errorsCount","id":"statserrorscount","level":3},{"title":"stats.warningsCount","id":"statswarningscount","level":3},{"title":"stats.publicPath","id":"statspublicpath","level":3},{"title":"stats.reasons","id":"statsreasons","level":3},{"title":"stats.reasonsSpace","id":"statsreasonsspace","level":3},{"title":"stats.relatedAssets","id":"statsrelatedassets","level":3},{"title":"stats.source","id":"statssource","level":3},{"title":"stats.timings","id":"statstimings","level":3},{"title":"stats.ids","id":"statsids","level":3},{"title":"stats.usedExports","id":"statsusedexports","level":3},{"title":"stats.version","id":"statsversion","level":3},{"title":"stats.chunkGroupAuxiliary","id":"statschunkgroupauxiliary","level":3},{"title":"stats.chunkGroupChildren","id":"statschunkgroupchildren","level":3},{"title":"stats.chunkGroupMaxAssets","id":"statschunkgroupmaxassets","level":3},{"title":"stats.warnings","id":"statswarnings","level":3},{"title":"stats.warningsSpace","id":"statswarningsspace","level":3},{"title":"stats.warningsFilter","id":"statswarningsfilter","level":3},{"title":"stats.chunkRelations","id":"statschunkrelations","level":3},{"title":"Sorting fields","id":"sorting-fields","level":3},{"title":"Extending stats behaviours","id":"extending-stats-behaviours","level":3}],"title":"Stats","sort":18,"contributors":["SpaceK33z","sallar","jungomi","ldrick","jasonblanchard","byzyk","renjithspace","Raiondesu","EugeneHlushko","grgur","anshumanv","pixel-ray","snitin315","u01jmg3","grrizzly"]},{"path":"src/content/configuration/experiments.mdx","name":"experiments.mdx","size":8093,"type":"file","extension":".mdx","url":"/configuration/experiments/","anchors":[{"title":"experiments","id":"experiments","level":2},{"title":"experiments.backCompat","id":"experimentsbackcompat","level":3},{"title":"experiments.buildHttp","id":"experimentsbuildhttp","level":3},{"title":"experiments.css","id":"experimentscss","level":3},{"title":"experiments.cacheUnaffected","id":"experimentscacheunaffected","level":3},{"title":"experiments.futureDefaults","id":"experimentsfuturedefaults","level":3},{"title":"experiments.lazyCompilation","id":"experimentslazycompilation","level":3},{"title":"experiments.outputModule","id":"experimentsoutputmodule","level":3},{"title":"experiments.topLevelAwait","id":"experimentstoplevelawait","level":3}],"title":"Experiments","sort":19,"contributors":["EugeneHlushko","wizardofhogwarts","chenxsan","anshumanv","snitin315"]},{"path":"src/content/configuration/other-options.mdx","name":"other-options.mdx","size":13286,"type":"file","extension":".mdx","url":"/configuration/other-options/","anchors":[{"title":"amd","id":"amd","level":2},{"title":"bail","id":"bail","level":2},{"title":"dependencies","id":"dependencies","level":2},{"title":"ignoreWarnings","id":"ignorewarnings","level":2},{"title":"infrastructureLogging","id":"infrastructurelogging","level":2},{"title":"appendOnly","id":"appendonly","level":3},{"title":"colors","id":"colors","level":3},{"title":"console","id":"console","level":3},{"title":"debug","id":"debug","level":3},{"title":"level","id":"level","level":3},{"title":"stream","id":"stream","level":3},{"title":"loader","id":"loader","level":2},{"title":"name","id":"name","level":2},{"title":"parallelism","id":"parallelism","level":2},{"title":"profile","id":"profile","level":2},{"title":"recordsInputPath","id":"recordsinputpath","level":2},{"title":"recordsOutputPath","id":"recordsoutputpath","level":2},{"title":"recordsPath","id":"recordspath","level":2},{"title":"snapshot","id":"snapshot","level":2},{"title":"buildDependencies","id":"builddependencies","level":3},{"title":"immutablePaths","id":"immutablepaths","level":3},{"title":"managedPaths","id":"managedpaths","level":3},{"title":"module","id":"module","level":3},{"title":"resolve","id":"resolve","level":3},{"title":"resolveBuildDependencies","id":"resolvebuilddependencies","level":3}],"title":"Other Options","sort":20,"contributors":["sokra","skipjack","terinjokes","byzyk","liorgreenb","vansosnin","EugeneHlushko","skovy","rishabh3112","niravasher","Neob91","chenxsan","u01jmg3","jamesgeorge007","snitin315"],"related":[{"title":"Using Records","url":"https://survivejs.com/webpack/optimizing/separating-manifest/#using-records"}]},{"path":"src/content/configuration/printable.mdx","name":"printable.mdx","size":1705,"type":"file","extension":".mdx","url":"/configuration/printable/","anchors":[{"title":"Configuration","id":"configuration","level":1},{"title":"Configuration Languages","id":"configuration-languages","level":1},{"title":"Configuration Types","id":"configuration-types","level":1},{"title":"Entry and Context","id":"entry-and-context","level":1},{"title":"Mode","id":"mode","level":1},{"title":"Output","id":"output","level":1},{"title":"Module","id":"module","level":1},{"title":"Resolve","id":"resolve","level":1},{"title":"Optimization","id":"optimization","level":1},{"title":"Plugins","id":"plugins","level":1},{"title":"DevServer","id":"devserver","level":1},{"title":"Cache","id":"cache","level":1},{"title":"Devtool","id":"devtool","level":1},{"title":"Extends","id":"extends","level":1},{"title":"Target","id":"target","level":1},{"title":"Watch and WatchOptions","id":"watch-and-watchoptions","level":1},{"title":"Externals","id":"externals","level":1},{"title":"Performance","id":"performance","level":1},{"title":"Node","id":"node","level":1},{"title":"Stats","id":"stats","level":1},{"title":"Experiments","id":"experiments","level":1},{"title":"Other Options","id":"other-options","level":1}],"title":"Printable","sort":999,"contributors":["webpack"]}],"size":324901,"type":"directory","url":"/configuration/"},{"path":"src/content/contribute","name":"contribute","children":[{"path":"src/content/contribute/index.mdx","name":"index.mdx","size":4759,"type":"file","extension":".mdx","url":"/contribute/","anchors":[{"title":"Developers","id":"developers","level":2},{"title":"How Can I Help?","id":"how-can-i-help","level":3},{"title":"Encouraging Employers","id":"encouraging-employers","level":3},{"title":"Your Contributions","id":"your-contributions","level":3},{"title":"Executives","id":"executives","level":2},{"title":"Sponsorship","id":"sponsorship","level":3},{"title":"Anyone Else","id":"anyone-else","level":3},{"title":"Pull requests","id":"pull-requests","level":2}],"title":"Contribute","sort":-1,"contributors":["rouzbeh84","scottdj92","harrynewsome","dhedgecock","tbroadley","EugeneHlushko"]},{"path":"src/content/contribute/writers-guide.mdx","name":"writers-guide.mdx","size":6883,"type":"file","extension":".mdx","url":"/contribute/writers-guide/","anchors":[{"title":"Process","id":"process","level":2},{"title":"YAML Frontmatter","id":"yaml-frontmatter","level":2},{"title":"Article Structure","id":"article-structure","level":2},{"title":"Typesetting","id":"typesetting","level":2},{"title":"Formatting","id":"formatting","level":2},{"title":"Code","id":"code","level":3},{"title":"Lists","id":"lists","level":3},{"title":"Tables","id":"tables","level":3},{"title":"Configuration Properties","id":"configuration-properties","level":3},{"title":"Quotes","id":"quotes","level":3},{"title":"Assumptions and simplicity","id":"assumptions-and-simplicity","level":3},{"title":"Configuration defaults and types","id":"configuration-defaults-and-types","level":3},{"title":"Options shortlists and their typing","id":"options-shortlists-and-their-typing","level":3},{"title":"Adding links","id":"adding-links","level":3}],"title":"Writer\'s Guide","sort":1,"contributors":["pranshuchittora","EugeneHlushko"]},{"path":"src/content/contribute/writing-a-loader.mdx","name":"writing-a-loader.mdx","size":13545,"type":"file","extension":".mdx","url":"/contribute/writing-a-loader/","anchors":[{"title":"Setup","id":"setup","level":2},{"title":"Simple Usage","id":"simple-usage","level":2},{"title":"Complex Usage","id":"complex-usage","level":2},{"title":"Guidelines","id":"guidelines","level":2},{"title":"Simple","id":"simple","level":3},{"title":"Chaining","id":"chaining","level":3},{"title":"Modular","id":"modular","level":3},{"title":"Stateless","id":"stateless","level":3},{"title":"Loader Utilities","id":"loader-utilities","level":3},{"title":"Loader Dependencies","id":"loader-dependencies","level":3},{"title":"Module Dependencies","id":"module-dependencies","level":3},{"title":"Common Code","id":"common-code","level":3},{"title":"Absolute Paths","id":"absolute-paths","level":3},{"title":"Peer Dependencies","id":"peer-dependencies","level":3},{"title":"Testing","id":"testing","level":2}],"title":"Writing a Loader","sort":2,"contributors":["asulaiman","michael-ciniawsky","byzyk","anikethsaha","jamesgeorge007","chenxsan","dev-itsheng"]},{"path":"src/content/contribute/writing-a-plugin.mdx","name":"writing-a-plugin.mdx","size":13637,"type":"file","extension":".mdx","url":"/contribute/writing-a-plugin/","anchors":[{"title":"Creating a Plugin","id":"creating-a-plugin","level":2},{"title":"Basic plugin architecture","id":"basic-plugin-architecture","level":2},{"title":"Compiler and Compilation","id":"compiler-and-compilation","level":2},{"title":"Async event hooks","id":"async-event-hooks","level":2},{"title":"tapAsync","id":"tapasync","level":3},{"title":"Example","id":"example","level":2},{"title":"Different Plugin Shapes","id":"different-plugin-shapes","level":2},{"title":"Synchronous Hooks","id":"synchronous-hooks","level":3},{"title":"Asynchronous Hooks","id":"asynchronous-hooks","level":3},{"title":"Configuration defaults","id":"configuration-defaults","level":3}],"title":"Writing a Plugin","sort":3,"contributors":["slavafomin","tbroadley","nveenjain","iamakulov","byzyk","franjohn21","EugeneHlushko","snitin315","rahul3v","jamesgeorge007"]},{"path":"src/content/contribute/plugin-patterns.mdx","name":"plugin-patterns.mdx","size":4742,"type":"file","extension":".mdx","url":"/contribute/plugin-patterns/","anchors":[{"title":"Exploring assets, chunks, modules, and dependencies","id":"exploring-assets-chunks-modules-and-dependencies","level":2},{"title":"Monitoring the watch graph","id":"monitoring-the-watch-graph","level":3},{"title":"Changed chunks","id":"changed-chunks","level":2}],"title":"Plugin Patterns","sort":5,"contributors":["nveenjain","EugeneHlushko","benglynn"]},{"path":"src/content/contribute/release-process.mdx","name":"release-process.mdx","size":831,"type":"file","extension":".mdx","url":"/contribute/release-process/","anchors":[{"title":"Pull Requests","id":"pull-requests","level":2},{"title":"Releasing","id":"releasing","level":2}],"title":"Release Process","sort":6,"contributors":["d3viant0ne","sokra","byzyk","chenxsan"]},{"path":"src/content/contribute/debugging.mdx","name":"debugging.mdx","size":4340,"type":"file","extension":".mdx","url":"/contribute/debugging/","anchors":[{"title":"Stats","id":"stats","level":2},{"title":"DevTools","id":"devtools","level":2}],"title":"Debugging","sort":7,"contributors":["skipjack","tbroadley","madhavarshney","bhavya9107","akaustav"],"related":[{"title":"Learn and Debug webpack with Chrome DevTools!","url":"https://medium.com/webpack/webpack-bits-learn-and-debug-webpack-with-chrome-dev-tools-da1c5b19554"},{"title":"Debugging Guide | Node","url":"https://nodejs.org/en/docs/guides/debugging-getting-started/"},{"title":"Debugging Node.js with Chrome DevTools","url":"https://medium.com/@paul_irish/debugging-node-js-nightlies-with-chrome-devtools-7c4a1b95ae27"}]},{"path":"src/content/contribute/printable.mdx","name":"printable.mdx","size":666,"type":"file","extension":".mdx","url":"/contribute/printable/","anchors":[{"title":"Contribute","id":"contribute","level":1},{"title":"Writer\'s Guide","id":"writers-guide","level":1},{"title":"Writing a Loader","id":"writing-a-loader","level":1},{"title":"Writing a Plugin","id":"writing-a-plugin","level":1},{"title":"Plugin Patterns","id":"plugin-patterns","level":1},{"title":"Release Process","id":"release-process","level":1},{"title":"Debugging","id":"debugging","level":1}],"title":"Printable","sort":999,"contributors":["webpack"]}],"size":49403,"type":"directory","url":"/contribute/"},{"path":"src/content/guides","name":"guides","children":[{"path":"src/content/guides/index.mdx","name":"index.mdx","size":924,"type":"file","extension":".mdx","url":"/guides/","anchors":[],"title":"Guides","sort":-1,"contributors":["skipjack","EugeneHlushko","benschac"]},{"path":"src/content/guides/getting-started.mdx","name":"getting-started.mdx","size":12838,"type":"file","extension":".mdx","url":"/guides/getting-started/","anchors":[{"title":"Basic Setup","id":"basic-setup","level":2},{"title":"Creating a Bundle","id":"creating-a-bundle","level":2},{"title":"Modules","id":"modules","level":2},{"title":"Using a Configuration","id":"using-a-configuration","level":2},{"title":"NPM Scripts","id":"npm-scripts","level":2},{"title":"Conclusion","id":"conclusion","level":2}],"title":"Getting Started","description":"Learn how to bundle a JavaScript application with webpack 5.","sort":1,"contributors":["bebraw","varunjayaraman","cntanglijun","chrisVillanueva","johnstew","simon04","aaronang","TheDutchCoder","sudarsangp","Vanguard90","chenxsan","EugeneHlushko","ATGardner","ayvarot","bjarki","ztomasze","Spiral90210","byzyk","wizardofhogwarts","myshov","anshumanv","d3lm","snitin315","Etheryen"]},{"path":"src/content/guides/asset-management.mdx","name":"asset-management.mdx","size":24303,"type":"file","extension":".mdx","url":"/guides/asset-management/","anchors":[{"title":"Setup","id":"setup","level":2},{"title":"Loading CSS","id":"loading-css","level":2},{"title":"Loading Images","id":"loading-images","level":2},{"title":"Loading Fonts","id":"loading-fonts","level":2},{"title":"Loading Data","id":"loading-data","level":2},{"title":"Customize parser of JSON modules","id":"customize-parser-of-json-modules","level":3},{"title":"Global Assets","id":"global-assets","level":2},{"title":"Wrapping up","id":"wrapping-up","level":2},{"title":"Next guide","id":"next-guide","level":2},{"title":"Further Reading","id":"further-reading","level":2}],"title":"Asset Management","sort":2,"contributors":["skipjack","michael-ciniawsky","TheDutchCoder","sudarsangp","chenxsan","EugeneHlushko","AnayaDesign","wizardofhogwarts","astonizer","snitin315"]},{"path":"src/content/guides/output-management.mdx","name":"output-management.mdx","size":7573,"type":"file","extension":".mdx","url":"/guides/output-management/","anchors":[{"title":"Preparation","id":"preparation","level":2},{"title":"Setting up HtmlWebpackPlugin","id":"setting-up-htmlwebpackplugin","level":2},{"title":"Cleaning up the /dist folder","id":"cleaning-up-the-dist-folder","level":2},{"title":"The Manifest","id":"the-manifest","level":2},{"title":"Conclusion","id":"conclusion","level":2}],"title":"Output Management","sort":3,"contributors":["skipjack","TheDutchCoder","sudarsangp","JGJP","EugeneHlushko","AnayaDesign","chenxsan","snitin315"]},{"path":"src/content/guides/development.mdx","name":"development.mdx","size":14559,"type":"file","extension":".mdx","url":"/guides/development/","anchors":[{"title":"Using source maps","id":"using-source-maps","level":2},{"title":"Choosing a Development Tool","id":"choosing-a-development-tool","level":2},{"title":"Using Watch Mode","id":"using-watch-mode","level":3},{"title":"Using webpack-dev-server","id":"using-webpack-dev-server","level":3},{"title":"Using webpack-dev-middleware","id":"using-webpack-dev-middleware","level":3},{"title":"Adjusting Your Text Editor","id":"adjusting-your-text-editor","level":2},{"title":"Conclusion","id":"conclusion","level":2}],"title":"Development","sort":4,"contributors":["SpaceK33z","rafde","fvgs","TheDutchCoder","WojciechKo","Calinou","GAumala","EugeneHlushko","byzyk","trivikr","aholzner","chenxsan","maxloh","snitin315","f3ndot"]},{"path":"src/content/guides/code-splitting.mdx","name":"code-splitting.mdx","size":18088,"type":"file","extension":".mdx","url":"/guides/code-splitting/","anchors":[{"title":"Entry Points","id":"entry-points","level":2},{"title":"Prevent Duplication","id":"prevent-duplication","level":2},{"title":"Entry dependencies","id":"entry-dependencies","level":3},{"title":"SplitChunksPlugin","id":"splitchunksplugin","level":3},{"title":"Dynamic Imports","id":"dynamic-imports","level":2},{"title":"Prefetching/Preloading modules","id":"prefetchingpreloading-modules","level":2},{"title":"Bundle Analysis","id":"bundle-analysis","level":2},{"title":"Next Steps","id":"next-steps","level":2}],"title":"Code Splitting","sort":5,"contributors":["pksjce","pastelsky","simon04","jonwheeler","johnstew","shinxi","tomtasche","levy9527","rahulcs","chrisVillanueva","rafde","bartushek","shaunwallace","skipjack","jakearchibald","TheDutchCoder","rouzbeh84","shaodahong","sudarsangp","kcolton","efreitasn","EugeneHlushko","Tiendo1011","byzyk","AnayaDesign","wizardofhogwarts","maximilianschmelzer","smelukov","chenxsan","Adarah","atesgoral","snitin315","artem-malko"],"related":[{"title":"<link rel=\\"prefetch/preload\\" /> in webpack","url":"https://medium.com/webpack/link-rel-prefetch-preload-in-webpack-51a52358f84c"},{"title":"Preload, Prefetch And Priorities in Chrome","url":"https://medium.com/reloading/preload-prefetch-and-priorities-in-chrome-776165961bbf"},{"title":"Preloading content with <link rel=\\"preload\\" />","url":"https://developer.mozilla.org/en-US/docs/Web/HTML/Preloading_content"}]},{"path":"src/content/guides/caching.mdx","name":"caching.mdx","size":11422,"type":"file","extension":".mdx","url":"/guides/caching/","anchors":[{"title":"Output Filenames","id":"output-filenames","level":2},{"title":"Extracting Boilerplate","id":"extracting-boilerplate","level":2},{"title":"Module Identifiers","id":"module-identifiers","level":2},{"title":"Conclusion","id":"conclusion","level":2}],"title":"Caching","sort":6,"contributors":["okonet","jouni-kantola","skipjack","dannycjones","fadysamirsadek","afontcu","rosavage","saiprasad2595","EugeneHlushko","AnayaDesign","aholzner","snitin315"],"related":[{"title":"Issue 652","url":"https://github.com/webpack/webpack.js.org/issues/652"}]},{"path":"src/content/guides/author-libraries.mdx","name":"author-libraries.mdx","size":8163,"type":"file","extension":".mdx","url":"/guides/author-libraries/","anchors":[{"title":"Authoring a Library","id":"authoring-a-library","level":2},{"title":"Webpack Configuration","id":"webpack-configuration","level":2},{"title":"Expose the Library","id":"expose-the-library","level":2},{"title":"Externalize Lodash","id":"externalize-lodash","level":2},{"title":"External Limitations","id":"external-limitations","level":3},{"title":"Final Steps","id":"final-steps","level":2}],"title":"Authoring Libraries","sort":7,"contributors":["pksjce","johnstew","simon04","5angel","marioacc","byzyk","EugeneHlushko","AnayaDesign","chenxsan","wizardofhogwarts"]},{"path":"src/content/guides/environment-variables.mdx","name":"environment-variables.mdx","size":1845,"type":"file","extension":".mdx","url":"/guides/environment-variables/","anchors":[],"title":"Environment Variables","sort":8,"contributors":["simon04","grisanu","tbroadley","legalcodes","byzyk","jceipek","snitin315"]},{"path":"src/content/guides/build-performance.mdx","name":"build-performance.mdx","size":8685,"type":"file","extension":".mdx","url":"/guides/build-performance/","anchors":[{"title":"General","id":"general","level":2},{"title":"Stay Up to Date","id":"stay-up-to-date","level":3},{"title":"Loaders","id":"loaders","level":3},{"title":"Bootstrap","id":"bootstrap","level":3},{"title":"Resolving","id":"resolving","level":3},{"title":"Dlls","id":"dlls","level":3},{"title":"Smaller = Faster","id":"smaller--faster","level":3},{"title":"Worker Pool","id":"worker-pool","level":3},{"title":"Persistent cache","id":"persistent-cache","level":3},{"title":"Custom plugins/loaders","id":"custom-pluginsloaders","level":3},{"title":"Progress plugin","id":"progress-plugin","level":3},{"title":"Development","id":"development","level":2},{"title":"Incremental Builds","id":"incremental-builds","level":3},{"title":"Compile in Memory","id":"compile-in-memory","level":3},{"title":"stats.toJson speed","id":"statstojson-speed","level":3},{"title":"Devtool","id":"devtool","level":3},{"title":"Avoid Production Specific Tooling","id":"avoid-production-specific-tooling","level":3},{"title":"Minimal Entry Chunk","id":"minimal-entry-chunk","level":3},{"title":"Avoid Extra Optimization Steps","id":"avoid-extra-optimization-steps","level":3},{"title":"Output Without Path Info","id":"output-without-path-info","level":3},{"title":"Node.js Versions 8.9.10-9.11.1","id":"nodejs-versions-8910-9111","level":3},{"title":"TypeScript Loader","id":"typescript-loader","level":3},{"title":"Production","id":"production","level":2},{"title":"Source Maps","id":"source-maps","level":3},{"title":"Specific Tooling Issues","id":"specific-tooling-issues","level":2},{"title":"Babel","id":"babel","level":3},{"title":"TypeScript","id":"typescript","level":3},{"title":"Sass","id":"sass","level":3}],"title":"Build Performance","sort":9,"contributors":["sokra","tbroadley","byzyk","madhavarshney","wizardofhogwarts","anikethsaha"]},{"path":"src/content/guides/csp.mdx","name":"csp.mdx","size":2291,"type":"file","extension":".mdx","url":"/guides/csp/","anchors":[{"title":"Examples","id":"examples","level":2},{"title":"Enabling CSP","id":"enabling-csp","level":2},{"title":"Trusted Types","id":"trusted-types","level":2}],"title":"Content Security Policies","sort":10,"contributors":["EugeneHlushko","probablyup","wizardofhogwarts","koto"],"related":[{"title":"Nonce purpose explained","url":"https://stackoverflow.com/questions/42922784/what-s-the-purpose-of-the-html-nonce-attribute-for-script-and-style-elements"},{"title":"On the Insecurity of Whitelists and the Future of Content Security Policy","url":"https://ai.google/research/pubs/pub45542"},{"title":"Locking Down Your Website Scripts with CSP, Hashes, Nonces and Report URI","url":"https://www.troyhunt.com/locking-down-your-website-scripts-with-csp-hashes-nonces-and-report-uri/"},{"title":"CSP on MDN","url":"https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP"},{"title":"Trusted Types","url":"https://web.dev/trusted-types"}]},{"path":"src/content/guides/development-vagrant.mdx","name":"development-vagrant.mdx","size":3484,"type":"file","extension":".mdx","url":"/guides/development-vagrant/","anchors":[{"title":"Configuring the Project","id":"configuring-the-project","level":2},{"title":"Running the Server","id":"running-the-server","level":2},{"title":"Advanced Usage with nginx","id":"advanced-usage-with-nginx","level":2},{"title":"Conclusion","id":"conclusion","level":2}],"title":"Development - Vagrant","sort":11,"contributors":["SpaceK33z","chrisVillanueva","byzyk","wizardofhogwarts"]},{"path":"src/content/guides/dependency-management.mdx","name":"dependency-management.mdx","size":3159,"type":"file","extension":".mdx","url":"/guides/dependency-management/","anchors":[{"title":"require with expression","id":"require-with-expression","level":2},{"title":"require.context","id":"requirecontext","level":2},{"title":"context module API","id":"context-module-api","level":3}],"title":"Dependency Management","sort":12,"contributors":["ndelangen","chrisVillanueva","sokra","byzyk","AnayaDesign"]},{"path":"src/content/guides/installation.mdx","name":"installation.mdx","size":2799,"type":"file","extension":".mdx","url":"/guides/installation/","anchors":[{"title":"Prerequisites","id":"prerequisites","level":2},{"title":"Local Installation","id":"local-installation","level":2},{"title":"Global Installation","id":"global-installation","level":2},{"title":"Bleeding Edge","id":"bleeding-edge","level":2}],"title":"Installation","sort":13,"contributors":["pksjce","bebraw","simon04","EugeneHlushko","sibiraj-s","chenxsan"]},{"path":"src/content/guides/hot-module-replacement.mdx","name":"hot-module-replacement.mdx","size":12146,"type":"file","extension":".mdx","url":"/guides/hot-module-replacement/","anchors":[{"title":"Enabling HMR","id":"enabling-hmr","level":2},{"title":"Via the Node.js API","id":"via-the-nodejs-api","level":2},{"title":"Gotchas","id":"gotchas","level":2},{"title":"HMR with Stylesheets","id":"hmr-with-stylesheets","level":2},{"title":"Other Code and Frameworks","id":"other-code-and-frameworks","level":2}],"title":"Hot Module Replacement","sort":15,"contributors":["jmreidy","jhnns","sararubin","rohannair","joshsantos","drpicox","skipjack","sbaidon","gdi2290","bdwain","caryli","xgirma","EugeneHlushko","AnayaDesign","aviyacohen","dhruvdutt","wizardofhogwarts","aholzner","snitin315"],"related":[{"title":"Concepts - Hot Module Replacement","url":"/concepts/hot-module-replacement"},{"title":"API - Hot Module Replacement","url":"/api/hot-module-replacement"}]},{"path":"src/content/guides/tree-shaking.mdx","name":"tree-shaking.mdx","size":15044,"type":"file","extension":".mdx","url":"/guides/tree-shaking/","anchors":[{"title":"Add a Utility","id":"add-a-utility","level":2},{"title":"Mark the file as side-effect-free","id":"mark-the-file-as-side-effect-free","level":2},{"title":"Clarifying tree shaking and sideEffects","id":"clarifying-tree-shaking-and-sideeffects","level":2},{"title":"Mark a function call as side-effect-free","id":"mark-a-function-call-as-side-effect-free","level":2},{"title":"Minify the Output","id":"minify-the-output","level":2},{"title":"Conclusion","id":"conclusion","level":2}],"title":"Tree Shaking","sort":16,"contributors":["simon04","zacanger","alexjoverm","avant1","MijaelWatts","dmitriid","probablyup","gish","lumo10","byzyk","pnevares","EugeneHlushko","AnayaDesign","torifat","rahul3v","snitin315"],"related":[{"title":"Debugging Optimization Bailouts","url":"https://webpack.js.org/plugins/module-concatenation-plugin/#debugging-optimization-bailouts"},{"title":"Issue 6074 - Add support for more complex selectors for sideEffects","url":"https://github.com/webpack/webpack/issues/6074"}]},{"path":"src/content/guides/production.mdx","name":"production.mdx","size":9195,"type":"file","extension":".mdx","url":"/guides/production/","anchors":[{"title":"Setup","id":"setup","level":2},{"title":"NPM Scripts","id":"npm-scripts","level":2},{"title":"Specify the Mode","id":"specify-the-mode","level":2},{"title":"Minification","id":"minification","level":2},{"title":"Source Mapping","id":"source-mapping","level":2},{"title":"Minimize CSS","id":"minimize-css","level":2},{"title":"CLI Alternatives","id":"cli-alternatives","level":2}],"title":"Production","sort":17,"contributors":["henriquea","rajagopal4890","makuzaverite","markerikson","simon04","kisnows","chrisVillanueva","swapnilmishra","bring2dip","redian","skipjack","xgqfrms","kelset","xgirma","mehrdaad","SevenOutman","AnayaDesign","wizardofhogwarts","aholzner","EugeneHlushko","snitin315"]},{"path":"src/content/guides/lazy-loading.mdx","name":"lazy-loading.mdx","size":4299,"type":"file","extension":".mdx","url":"/guides/lazy-loading/","anchors":[{"title":"Example","id":"example","level":2},{"title":"Frameworks","id":"frameworks","level":2}],"title":"Lazy Loading","sort":18,"contributors":["iammerrick","chrisVillanueva","skipjack","byzyk","EugeneHlushko","AnayaDesign","tapanprakasht","snitin315"],"related":[{"title":"Lazy Loading ES2015 Modules in the Browser","url":"https://dzone.com/articles/lazy-loading-es2015-modules-in-the-browser"},{"title":"Asynchronous vs Deferred JavaScript","url":"https://bitsofco.de/async-vs-defer/"}]},{"path":"src/content/guides/ecma-script-modules.mdx","name":"ecma-script-modules.mdx","size":3017,"type":"file","extension":".mdx","url":"/guides/ecma-script-modules/","anchors":[{"title":"Exporting","id":"exporting","level":2},{"title":"Importing","id":"importing","level":2},{"title":"Flagging modules as ESM","id":"flagging-modules-as-esm","level":2}],"title":"ECMAScript Modules","sort":19,"contributors":["sokra"],"related":[{"title":"ECMAScript Modules in Node.js","url":"https://nodejs.org/api/esm.html"}]},{"path":"src/content/guides/shimming.mdx","name":"shimming.mdx","size":14898,"type":"file","extension":".mdx","url":"/guides/shimming/","anchors":[{"title":"Shimming Globals","id":"shimming-globals","level":2},{"title":"Granular Shimming","id":"granular-shimming","level":2},{"title":"Global Exports","id":"global-exports","level":2},{"title":"Loading Polyfills","id":"loading-polyfills","level":2},{"title":"Further Optimizations","id":"further-optimizations","level":2},{"title":"Node Built-Ins","id":"node-built-ins","level":2},{"title":"Other Utilities","id":"other-utilities","level":2}],"title":"Shimming","sort":20,"contributors":["pksjce","jhnns","simon04","jeremenichelli","svyandun","byzyk","EugeneHlushko","AnayaDesign","dhurlburtusa","plr108","NicolasLetellier","wizardofhogwarts","snitin315","chenxsan"],"related":[{"title":"Reward modern browser users script","url":"https://medium.com/hackernoon/10-things-i-learned-making-the-fastest-site-in-the-world-18a0e1cdf4a7"},{"title":"useBuiltIns in babel-preset-env","url":"https://babeljs.io/docs/en/babel-preset-env#usebuiltins"}]},{"path":"src/content/guides/typescript.mdx","name":"typescript.mdx","size":6829,"type":"file","extension":".mdx","url":"/guides/typescript/","anchors":[{"title":"Basic Setup","id":"basic-setup","level":2},{"title":"Loader","id":"loader","level":2},{"title":"Source Maps","id":"source-maps","level":2},{"title":"Client types","id":"client-types","level":2},{"title":"Using Third Party Libraries","id":"using-third-party-libraries","level":2},{"title":"Importing Other Assets","id":"importing-other-assets","level":2},{"title":"Build Performance","id":"build-performance","level":2}],"title":"TypeScript","sort":21,"contributors":["morsdyce","kkamali","mtrivera","byzyk","EugeneHlushko","chenxsan","snitin315"]},{"path":"src/content/guides/web-workers.mdx","name":"web-workers.mdx","size":2026,"type":"file","extension":".mdx","url":"/guides/web-workers/","anchors":[{"title":"Syntax","id":"syntax","level":2},{"title":"Example","id":"example","level":2},{"title":"Node.js","id":"nodejs","level":2}],"title":"Web Workers","sort":21,"contributors":["chenxsan"]},{"path":"src/content/guides/progressive-web-application.mdx","name":"progressive-web-application.mdx","size":6018,"type":"file","extension":".mdx","url":"/guides/progressive-web-application/","anchors":[{"title":"We Don\'t Work Offline Now","id":"we-dont-work-offline-now","level":2},{"title":"Adding Workbox","id":"adding-workbox","level":2},{"title":"Registering Our Service Worker","id":"registering-our-service-worker","level":2},{"title":"Conclusion","id":"conclusion","level":2}],"title":"Progressive Web Application","sort":22,"contributors":["johnnyreilly","chenxsan","EugeneHlushko","benschac","aholzner"]},{"path":"src/content/guides/public-path.mdx","name":"public-path.mdx","size":3070,"type":"file","extension":".mdx","url":"/guides/public-path/","anchors":[{"title":"Use Cases","id":"use-cases","level":2},{"title":"Environment Based","id":"environment-based","level":3},{"title":"On The Fly","id":"on-the-fly","level":3},{"title":"Automatic publicPath","id":"automatic-publicpath","level":3}],"title":"Public Path","sort":23,"contributors":["rafaelrinaldi","chrisVillanueva","gonzoyumo","chenxsan"]},{"path":"src/content/guides/integrations.mdx","name":"integrations.mdx","size":5414,"type":"file","extension":".mdx","url":"/guides/integrations/","anchors":[{"title":"NPM Scripts","id":"npm-scripts","level":2},{"title":"Grunt","id":"grunt","level":2},{"title":"Gulp","id":"gulp","level":2},{"title":"Mocha","id":"mocha","level":2},{"title":"Karma","id":"karma","level":2}],"title":"Integrations","sort":24,"contributors":["pksjce","bebraw","tashian","skipjack","AnayaDesign"]},{"path":"src/content/guides/asset-modules.mdx","name":"asset-modules.mdx","size":11527,"type":"file","extension":".mdx","url":"/guides/asset-modules/","anchors":[{"title":"Resource assets","id":"resource-assets","level":2},{"title":"Custom output filename","id":"custom-output-filename","level":3},{"title":"Inlining assets","id":"inlining-assets","level":2},{"title":"Custom data URI generator","id":"custom-data-uri-generator","level":3},{"title":"Source assets","id":"source-assets","level":2},{"title":"URL assets","id":"url-assets","level":2},{"title":"General asset type","id":"general-asset-type","level":2},{"title":"Replacing Inline Loader Syntax","id":"replacing-inline-loader-syntax","level":2},{"title":"Disable emitting assets","id":"disable-emitting-assets","level":2}],"title":"Asset Modules","sort":25,"contributors":["smelukov","EugeneHlushko","chenxsan","anshumanv","spence-s"],"related":[{"title":"webpack 5 - Asset Modules","url":"https://dev.to/smelukov/webpack-5-asset-modules-2o3h"}]},{"path":"src/content/guides/entry-advanced.mdx","name":"entry-advanced.mdx","size":2072,"type":"file","extension":".mdx","url":"/guides/entry-advanced/","anchors":[{"title":"Multiple file types per entry","id":"multiple-file-types-per-entry","level":2}],"title":"Advanced entry","sort":25,"contributors":["EugeneHlushko"]},{"path":"src/content/guides/package-exports.mdx","name":"package-exports.mdx","size":24715,"type":"file","extension":".mdx","url":"/guides/package-exports/","anchors":[{"title":"General syntax","id":"general-syntax","level":2},{"title":"Alternatives","id":"alternatives","level":2},{"title":"Conditional syntax","id":"conditional-syntax","level":2},{"title":"Abbreviation","id":"abbreviation","level":2},{"title":"Notes about ordering","id":"notes-about-ordering","level":2},{"title":"Support","id":"support","level":2},{"title":"Conditions","id":"conditions","level":2},{"title":"Reference syntax","id":"reference-syntax","level":3},{"title":"Optimizations","id":"optimizations","level":3},{"title":"Target environment","id":"target-environment","level":3},{"title":"Conditions: Preprocessor and runtimes","id":"conditions-preprocessor-and-runtimes","level":3},{"title":"Conditions: Custom","id":"conditions-custom","level":3},{"title":"Common patterns","id":"common-patterns","level":2},{"title":"Target environment independent packages","id":"target-environment-independent-packages","level":3},{"title":"Providing devtools or production optimizations","id":"providing-devtools-or-production-optimizations","level":3},{"title":"Providing different versions depending on target environment","id":"providing-different-versions-depending-on-target-environment","level":3},{"title":"Combining patterns","id":"combining-patterns","level":3},{"title":"Guidelines","id":"guidelines","level":2}],"title":"Package exports","sort":25,"contributors":["sokra"],"related":[{"title":"Package entry points in Node.js","url":"https://nodejs.org/api/packages.html#packages_package_entry_points"}]},{"path":"src/content/guides/printable.mdx","name":"printable.mdx","size":2617,"type":"file","extension":".mdx","url":"/guides/printable/","anchors":[{"title":"Guides","id":"guides","level":1},{"title":"Getting Started","id":"getting-started","level":1},{"title":"Asset Management","id":"asset-management","level":1},{"title":"Output Management","id":"output-management","level":1},{"title":"Development","id":"development","level":1},{"title":"Code Splitting","id":"code-splitting","level":1},{"title":"Caching","id":"caching","level":1},{"title":"Authoring Libraries","id":"authoring-libraries","level":1},{"title":"Environment Variables","id":"environment-variables","level":1},{"title":"Build Performance","id":"build-performance","level":1},{"title":"Content Security Policies","id":"content-security-policies","level":1},{"title":"Development - Vagrant","id":"development---vagrant","level":1},{"title":"Dependency Management","id":"dependency-management","level":1},{"title":"Installation","id":"installation","level":1},{"title":"Hot Module Replacement","id":"hot-module-replacement","level":1},{"title":"Tree Shaking","id":"tree-shaking","level":1},{"title":"Production","id":"production","level":1},{"title":"Lazy Loading","id":"lazy-loading","level":1},{"title":"ECMAScript Modules","id":"ecmascript-modules","level":1},{"title":"Shimming","id":"shimming","level":1},{"title":"TypeScript","id":"typescript","level":1},{"title":"Web Workers","id":"web-workers","level":1},{"title":"Progressive Web Application","id":"progressive-web-application","level":1},{"title":"Public Path","id":"public-path","level":1},{"title":"Integrations","id":"integrations","level":1},{"title":"Advanced entry","id":"advanced-entry","level":1},{"title":"Asset Modules","id":"asset-modules","level":1},{"title":"Package exports","id":"package-exports","level":1}],"title":"Printable","sort":999,"contributors":["webpack"]}],"size":243020,"type":"directory","url":"/guides/"},{"path":"src/content/loaders","name":"loaders","children":[{"path":"src/content/loaders/_babel-loader.mdx","name":"babel-loader.mdx","size":13793,"type":"file","extension":".mdx","url":"/loaders/babel-loader/","anchors":[{"title":"Install","id":"install","level":2},{"title":"Usage","id":"usage","level":2},{"title":"Options","id":"options","level":3},{"title":"Troubleshooting","id":"troubleshooting","level":2},{"title":"babel-loader is slow!","id":"babel-loader-is-slow","level":3},{"title":"Some files in my node_modules are not transpiled for IE 11","id":"some-files-in-my-node_modules-are-not-transpiled-for-ie-11","level":3},{"title":"Babel is injecting helpers into each file and bloating my code!","id":"babel-is-injecting-helpers-into-each-file-and-bloating-my-code","level":3},{"title":"The Node.js API for babel has been moved to babel-core.","id":"the-nodejs-api-for-babel-has-been-moved-to-babel-core","level":3},{"title":"Exclude libraries that should not be transpiled","id":"exclude-libraries-that-should-not-be-transpiled","level":3},{"title":"Top level function (IIFE) is still arrow (on Webpack 5)","id":"top-level-function-iife-is-still-arrow-on-webpack-5","level":3},{"title":"Customize config based on webpack target","id":"customize-config-based-on-webpack-target","level":2},{"title":"Customized Loader","id":"customized-loader","level":2},{"title":"Example","id":"example","level":3},{"title":"customOptions(options: Object): { custom: Object, loader: Object }","id":"customoptionsoptions-object--custom-object-loader-object-","level":3},{"title":"config(cfg: PartialConfig, options: { source, customOptions }): Object","id":"configcfg-partialconfig-options--source-customoptions--object","level":3},{"title":"result(result: Result): Result","id":"resultresult-result-result","level":3},{"title":"License","id":"license","level":2}],"title":"babel-loader","source":"https://raw.githubusercontent.com/babel/babel-loader/main/README.md","edit":"https://github.com/babel/babel-loader/edit/main/README.md","repo":"https://github.com/babel/babel-loader","thirdParty":true},{"path":"src/content/loaders/_coffee-loader.mdx","name":"coffee-loader.mdx","size":5019,"type":"file","extension":".mdx","url":"/loaders/coffee-loader/","anchors":[{"title":"Getting Started","id":"getting-started","level":2},{"title":"Options","id":"options","level":2},{"title":"Examples","id":"examples","level":2},{"title":"CoffeeScript and Babel","id":"coffeescript-and-babel","level":3},{"title":"Literate CoffeeScript","id":"literate-coffeescript","level":3},{"title":"Contributing","id":"contributing","level":2},{"title":"License","id":"license","level":2}],"title":"coffee-loader","source":"https://raw.githubusercontent.com/webpack-contrib/coffee-loader/master/README.md","edit":"https://github.com/webpack-contrib/coffee-loader/edit/master/README.md","repo":"https://github.com/webpack-contrib/coffee-loader","thirdParty":true},{"path":"src/content/loaders/_exports-loader.mdx","name":"exports-loader.mdx","size":13582,"type":"file","extension":".mdx","url":"/loaders/exports-loader/","anchors":[{"title":"Getting Started","id":"getting-started","level":2},{"title":"Inline","id":"inline","level":3},{"title":"Using Configuration","id":"using-configuration","level":3},{"title":"Options","id":"options","level":2},{"title":"type","id":"type","level":3},{"title":"exports","id":"exports","level":3},{"title":"Contributing","id":"contributing","level":2},{"title":"License","id":"license","level":2}],"title":"exports-loader","source":"https://raw.githubusercontent.com/webpack-contrib/exports-loader/master/README.md","edit":"https://github.com/webpack-contrib/exports-loader/edit/master/README.md","repo":"https://github.com/webpack-contrib/exports-loader","thirdParty":true},{"path":"src/content/loaders/_expose-loader.mdx","name":"expose-loader.mdx","size":9862,"type":"file","extension":".mdx","url":"/loaders/expose-loader/","anchors":[{"title":"Getting Started","id":"getting-started","level":2},{"title":"Inline","id":"inline","level":2},{"title":"Using Configuration","id":"using-configuration","level":2},{"title":"Options","id":"options","level":2},{"title":"exposes","id":"exposes","level":3},{"title":"globalObject","id":"globalobject","level":3},{"title":"Contributing","id":"contributing","level":2},{"title":"License","id":"license","level":2}],"title":"expose-loader","source":"https://raw.githubusercontent.com/webpack-contrib/expose-loader/master/README.md","edit":"https://github.com/webpack-contrib/expose-loader/edit/master/README.md","repo":"https://github.com/webpack-contrib/expose-loader","thirdParty":true},{"path":"src/content/loaders/_html-loader.mdx","name":"html-loader.mdx","size":24363,"type":"file","extension":".mdx","url":"/loaders/html-loader/","anchors":[{"title":"Getting Started","id":"getting-started","level":2},{"title":"Options","id":"options","level":2},{"title":"sources","id":"sources","level":3},{"title":"preprocessor","id":"preprocessor","level":3},{"title":"minimize","id":"minimize","level":3},{"title":"esModule","id":"esmodule","level":3},{"title":"Examples","id":"examples","level":2},{"title":"Disable url resolving using the `` comment","id":"disable-url-resolving-using-the--comment","level":3},{"title":"roots","id":"roots","level":3},{"title":"CDN","id":"cdn","level":3},{"title":"Process script and link tags","id":"process-script-and-link-tags","level":3},{"title":"Templating","id":"templating","level":3},{"title":"PostHTML","id":"posthtml","level":3},{"title":"Export into HTML files","id":"export-into-html-files","level":3},{"title":"Contributing","id":"contributing","level":2},{"title":"License","id":"license","level":2}],"title":"html-loader","source":"https://raw.githubusercontent.com/webpack-contrib/html-loader/master/README.md","edit":"https://github.com/webpack-contrib/html-loader/edit/master/README.md","repo":"https://github.com/webpack-contrib/html-loader","thirdParty":true},{"path":"src/content/loaders/_imports-loader.mdx","name":"imports-loader.mdx","size":17274,"type":"file","extension":".mdx","url":"/loaders/imports-loader/","anchors":[{"title":"Getting Started","id":"getting-started","level":2},{"title":"Inline","id":"inline","level":3},{"title":"Using Configuration","id":"using-configuration","level":3},{"title":"Options","id":"options","level":2},{"title":"type","id":"type","level":3},{"title":"imports","id":"imports","level":3},{"title":"wrapper","id":"wrapper","level":3},{"title":"additionalCode","id":"additionalcode","level":3},{"title":"Contributing","id":"contributing","level":2},{"title":"License","id":"license","level":2}],"title":"imports-loader","source":"https://raw.githubusercontent.com/webpack-contrib/imports-loader/master/README.md","edit":"https://github.com/webpack-contrib/imports-loader/edit/master/README.md","repo":"https://github.com/webpack-contrib/imports-loader","thirdParty":true},{"path":"src/content/loaders/index.mdx","name":"index.mdx","size":4115,"type":"file","extension":".mdx","url":"/loaders/","anchors":[{"title":"Files","id":"files","level":2},{"title":"JSON","id":"json","level":2},{"title":"Transpiling","id":"transpiling","level":2},{"title":"Templating","id":"templating","level":2},{"title":"Styling","id":"styling","level":2},{"title":"Frameworks","id":"frameworks","level":2},{"title":"Awesome","id":"awesome","level":2}],"title":"Loaders","sort":-1,"contributors":["simon04","bajras","rhys-vdw","EugeneHlushko","hemal7735","snitin315","anshumanv","jamesgeorge007","chenxsan"]},{"path":"src/content/loaders/_node-loader.mdx","name":"node-loader.mdx","size":5276,"type":"file","extension":".mdx","url":"/loaders/node-loader/","anchors":[{"title":"Getting Started","id":"getting-started","level":2},{"title":"Inline","id":"inline","level":3},{"title":"Configuration","id":"configuration","level":3},{"title":"Options","id":"options","level":2},{"title":"flags","id":"flags","level":3},{"title":"name","id":"name","level":3},{"title":"Contributing","id":"contributing","level":2},{"title":"License","id":"license","level":2}],"title":"node-loader","source":"https://raw.githubusercontent.com/webpack-contrib/node-loader/master/README.md","edit":"https://github.com/webpack-contrib/node-loader/edit/master/README.md","repo":"https://github.com/webpack-contrib/node-loader","thirdParty":true},{"path":"src/content/loaders/printable.mdx","name":"printable.mdx","size":1599,"type":"file","extension":".mdx","url":"/loaders/printable/","anchors":[{"title":"babel-loader","id":"babel-loader","level":1},{"title":"coffee-loader","id":"coffee-loader","level":1},{"title":"css-loader","id":"css-loader","level":1},{"title":"exports-loader","id":"exports-loader","level":1},{"title":"expose-loader","id":"expose-loader","level":1},{"title":"html-loader","id":"html-loader","level":1},{"title":"imports-loader","id":"imports-loader","level":1},{"title":"less-loader","id":"less-loader","level":1},{"title":"node-loader","id":"node-loader","level":1},{"title":"postcss-loader","id":"postcss-loader","level":1},{"title":"remark-loader","id":"remark-loader","level":1},{"title":"sass-loader","id":"sass-loader","level":1},{"title":"source-map-loader","id":"source-map-loader","level":1},{"title":"style-loader","id":"style-loader","level":1},{"title":"stylus-loader","id":"stylus-loader","level":1},{"title":"thread-loader","id":"thread-loader","level":1},{"title":"val-loader","id":"val-loader","level":1},{"title":"Loaders","id":"loaders","level":1}],"title":"Printable","sort":999,"contributors":["webpack"]},{"path":"src/content/loaders/_remark-loader.mdx","name":"remark-loader.mdx","size":8153,"type":"file","extension":".mdx","url":"/loaders/remark-loader/","anchors":[{"title":"Usage","id":"usage","level":2},{"title":"Options","id":"options","level":2},{"title":"remarkOptions","id":"remarkoptions","level":3},{"title":"removeFrontMatter","id":"removefrontmatter","level":3},{"title":"Inspiration","id":"inspiration","level":2},{"title":"Examples","id":"examples","level":2},{"title":"Markdown to HTML","id":"markdown-to-html","level":3},{"title":"Markdown to Markdown","id":"markdown-to-markdown","level":3},{"title":"Contributing","id":"contributing","level":2},{"title":"License","id":"license","level":2}],"title":"remark-loader","source":"https://raw.githubusercontent.com/webpack-contrib/remark-loader/master/README.md","edit":"https://github.com/webpack-contrib/remark-loader/edit/master/README.md","repo":"https://github.com/webpack-contrib/remark-loader","thirdParty":true},{"path":"src/content/loaders/_source-map-loader.mdx","name":"source-map-loader.mdx","size":5406,"type":"file","extension":".mdx","url":"/loaders/source-map-loader/","anchors":[{"title":"Getting Started","id":"getting-started","level":2},{"title":"Options","id":"options","level":2},{"title":"filterSourceMappingUrl","id":"filtersourcemappingurl","level":3},{"title":"Examples","id":"examples","level":2},{"title":"Ignoring Warnings","id":"ignoring-warnings","level":3},{"title":"Contributing","id":"contributing","level":2},{"title":"License","id":"license","level":2}],"title":"source-map-loader","source":"https://raw.githubusercontent.com/webpack-contrib/source-map-loader/master/README.md","edit":"https://github.com/webpack-contrib/source-map-loader/edit/master/README.md","repo":"https://github.com/webpack-contrib/source-map-loader","thirdParty":true},{"path":"src/content/loaders/_thread-loader.mdx","name":"thread-loader.mdx","size":4455,"type":"file","extension":".mdx","url":"/loaders/thread-loader/","anchors":[{"title":"Getting Started","id":"getting-started","level":2},{"title":"Examples","id":"examples","level":3},{"title":"Contributing","id":"contributing","level":2},{"title":"License","id":"license","level":2}],"title":"thread-loader","source":"https://raw.githubusercontent.com/webpack-contrib/thread-loader/master/README.md","edit":"https://github.com/webpack-contrib/thread-loader/edit/master/README.md","repo":"https://github.com/webpack-contrib/thread-loader","thirdParty":true},{"path":"src/content/loaders/_val-loader.mdx","name":"val-loader.mdx","size":10033,"type":"file","extension":".mdx","url":"/loaders/val-loader/","anchors":[{"title":"Getting Started","id":"getting-started","level":2},{"title":"Options","id":"options","level":2},{"title":"executableFile","id":"executablefile","level":3},{"title":"Return Object Properties","id":"return-object-properties","level":2},{"title":"code","id":"code","level":3},{"title":"sourceMap","id":"sourcemap","level":3},{"title":"ast","id":"ast","level":3},{"title":"dependencies","id":"dependencies","level":3},{"title":"contextDependencies","id":"contextdependencies","level":3},{"title":"buildDependencies","id":"builddependencies","level":3},{"title":"cacheable","id":"cacheable","level":3},{"title":"Examples","id":"examples","level":2},{"title":"Simple","id":"simple","level":3},{"title":"Modernizr","id":"modernizr","level":3},{"title":"Figlet","id":"figlet","level":3},{"title":"Contributing","id":"contributing","level":2},{"title":"License","id":"license","level":2}],"title":"val-loader","source":"https://raw.githubusercontent.com/webpack-contrib/val-loader/master/README.md","edit":"https://github.com/webpack-contrib/val-loader/edit/master/README.md","repo":"https://github.com/webpack-contrib/val-loader","thirdParty":true},{"path":"src/content/loaders/_css-loader.mdx","name":"css-loader.mdx","size":45786,"type":"file","extension":".mdx","url":"/loaders/css-loader/","anchors":[{"title":"Getting Started","id":"getting-started","level":2},{"title":"Options","id":"options","level":2},{"title":"url","id":"url","level":3},{"title":"import","id":"import","level":3},{"title":"modules","id":"modules","level":3},{"title":"importLoaders","id":"importloaders","level":3},{"title":"sourceMap","id":"sourcemap","level":3},{"title":"esModule","id":"esmodule","level":3},{"title":"exportType","id":"exporttype","level":3},{"title":"Examples","id":"examples","level":2},{"title":"Recommend","id":"recommend","level":3},{"title":"Disable url resolving using the /* webpackIgnore: true */ comment","id":"disable-url-resolving-using-the--webpackignore-true--comment","level":3},{"title":"Assets","id":"assets","level":3},{"title":"Extract","id":"extract","level":3},{"title":"Pure CSS, CSS modules and PostCSS","id":"pure-css-css-modules-and-postcss","level":3},{"title":"Resolve unresolved URLs using an alias","id":"resolve-unresolved-urls-using-an-alias","level":3},{"title":"Named export with custom export names","id":"named-export-with-custom-export-names","level":3},{"title":"Separating Interoperable CSS-only and CSS Module features","id":"separating-interoperable-css-only-and-css-module-features","level":3},{"title":"Contributing","id":"contributing","level":2},{"title":"License","id":"license","level":2}],"title":"css-loader","source":"https://raw.githubusercontent.com/webpack-contrib/css-loader/master/README.md","edit":"https://github.com/webpack-contrib/css-loader/edit/master/README.md","repo":"https://github.com/webpack-contrib/css-loader","thirdParty":true,"group":"CSS"},{"path":"src/content/loaders/_less-loader.mdx","name":"less-loader.mdx","size":15774,"type":"file","extension":".mdx","url":"/loaders/less-loader/","anchors":[{"title":"Getting Started","id":"getting-started","level":2},{"title":"Options","id":"options","level":2},{"title":"lessOptions","id":"lessoptions","level":3},{"title":"additionalData","id":"additionaldata","level":3},{"title":"sourceMap","id":"sourcemap","level":3},{"title":"webpackImporter","id":"webpackimporter","level":3},{"title":"implementation","id":"implementation","level":3},{"title":"Examples","id":"examples","level":2},{"title":"Normal usage","id":"normal-usage","level":3},{"title":"Source maps","id":"source-maps","level":3},{"title":"In production","id":"in-production","level":3},{"title":"Imports","id":"imports","level":3},{"title":"Plugins","id":"plugins","level":3},{"title":"Extracting style sheets","id":"extracting-style-sheets","level":3},{"title":"CSS modules gotcha","id":"css-modules-gotcha","level":3},{"title":"Contributing","id":"contributing","level":2},{"title":"License","id":"license","level":2}],"title":"less-loader","source":"https://raw.githubusercontent.com/webpack-contrib/less-loader/master/README.md","edit":"https://github.com/webpack-contrib/less-loader/edit/master/README.md","repo":"https://github.com/webpack-contrib/less-loader","thirdParty":true,"group":"CSS"},{"path":"src/content/loaders/_postcss-loader.mdx","name":"postcss-loader.mdx","size":25177,"type":"file","extension":".mdx","url":"/loaders/postcss-loader/","anchors":[{"title":"Getting Started","id":"getting-started","level":2},{"title":"Options","id":"options","level":2},{"title":"execute","id":"execute","level":3},{"title":"postcssOptions","id":"postcssoptions","level":3},{"title":"sourceMap","id":"sourcemap","level":3},{"title":"implementation","id":"implementation","level":3},{"title":"Examples","id":"examples","level":2},{"title":"SugarSS","id":"sugarss","level":3},{"title":"Autoprefixer","id":"autoprefixer","level":3},{"title":"PostCSS Preset Env","id":"postcss-preset-env","level":3},{"title":"CSS Modules","id":"css-modules","level":3},{"title":"Extract CSS","id":"extract-css","level":3},{"title":"Emit assets","id":"emit-assets","level":3},{"title":"Add dependencies, contextDependencies, buildDependencies, missingDependencies","id":"add-dependencies-contextdependencies-builddependencies-missingdependencies","level":3},{"title":"Contributing","id":"contributing","level":2},{"title":"License","id":"license","level":2}],"title":"postcss-loader","source":"https://raw.githubusercontent.com/webpack-contrib/postcss-loader/master/README.md","edit":"https://github.com/webpack-contrib/postcss-loader/edit/master/README.md","repo":"https://github.com/webpack-contrib/postcss-loader","thirdParty":true,"group":"CSS"},{"path":"src/content/loaders/_sass-loader.mdx","name":"sass-loader.mdx","size":24121,"type":"file","extension":".mdx","url":"/loaders/sass-loader/","anchors":[{"title":"Getting Started","id":"getting-started","level":2},{"title":"The outputStyle (old API) and style (new API) options in production mode","id":"the-outputstyle-old-api-and-style-new-api-options-in-production-mode","level":3},{"title":"Resolving import at-rules","id":"resolving-import-at-rules","level":3},{"title":"Problems with url(...)","id":"problems-with-url","level":3},{"title":"Options","id":"options","level":2},{"title":"implementation","id":"implementation","level":3},{"title":"sassOptions","id":"sassoptions","level":3},{"title":"sourceMap","id":"sourcemap","level":3},{"title":"additionalData","id":"additionaldata","level":3},{"title":"webpackImporter","id":"webpackimporter","level":3},{"title":"warnRuleAsWarning","id":"warnruleaswarning","level":3},{"title":"api","id":"api","level":3},{"title":"How to enable @debug output","id":"how-to-enable-debug-output","level":2},{"title":"Examples","id":"examples","level":2},{"title":"Extracts CSS into separate files","id":"extracts-css-into-separate-files","level":3},{"title":"Source maps","id":"source-maps","level":3},{"title":"Contributing","id":"contributing","level":2},{"title":"License","id":"license","level":2}],"title":"sass-loader","source":"https://raw.githubusercontent.com/webpack-contrib/sass-loader/master/README.md","edit":"https://github.com/webpack-contrib/sass-loader/edit/master/README.md","repo":"https://github.com/webpack-contrib/sass-loader","thirdParty":true,"group":"CSS"},{"path":"src/content/loaders/_style-loader.mdx","name":"style-loader.mdx","size":27281,"type":"file","extension":".mdx","url":"/loaders/style-loader/","anchors":[{"title":"Getting Started","id":"getting-started","level":2},{"title":"Options","id":"options","level":2},{"title":"injectType","id":"injecttype","level":3},{"title":"attributes","id":"attributes","level":3},{"title":"insert","id":"insert","level":3},{"title":"styleTagTransform","id":"styletagtransform","level":3},{"title":"base","id":"base","level":3},{"title":"esModule","id":"esmodule","level":3},{"title":"Examples","id":"examples","level":2},{"title":"Recommend","id":"recommend","level":3},{"title":"Named export for CSS Modules","id":"named-export-for-css-modules","level":3},{"title":"Source maps","id":"source-maps","level":3},{"title":"Nonce","id":"nonce","level":3},{"title":"Contributing","id":"contributing","level":2},{"title":"License","id":"license","level":2}],"title":"style-loader","source":"https://raw.githubusercontent.com/webpack-contrib/style-loader/master/README.md","edit":"https://github.com/webpack-contrib/style-loader/edit/master/README.md","repo":"https://github.com/webpack-contrib/style-loader","thirdParty":true,"group":"CSS"},{"path":"src/content/loaders/_stylus-loader.mdx","name":"stylus-loader.mdx","size":18226,"type":"file","extension":".mdx","url":"/loaders/stylus-loader/","anchors":[{"title":"Getting Started","id":"getting-started","level":2},{"title":"Options","id":"options","level":2},{"title":"stylusOptions","id":"stylusoptions","level":3},{"title":"sourceMap","id":"sourcemap","level":3},{"title":"webpackImporter","id":"webpackimporter","level":3},{"title":"additionalData","id":"additionaldata","level":3},{"title":"implementation","id":"implementation","level":3},{"title":"Examples","id":"examples","level":2},{"title":"Normal usage","id":"normal-usage","level":3},{"title":"Source maps","id":"source-maps","level":3},{"title":"Using nib with stylus","id":"using-nib-with-stylus","level":3},{"title":"Import JSON files","id":"import-json-files","level":3},{"title":"In production","id":"in-production","level":3},{"title":"webpack resolver","id":"webpack-resolver","level":3},{"title":"Stylus resolver","id":"stylus-resolver","level":3},{"title":"Extracting style sheets","id":"extracting-style-sheets","level":3},{"title":"Contributing","id":"contributing","level":2},{"title":"License","id":"license","level":2}],"title":"stylus-loader","source":"https://raw.githubusercontent.com/webpack-contrib/stylus-loader/master/README.md","edit":"https://github.com/webpack-contrib/stylus-loader/edit/master/README.md","repo":"https://github.com/webpack-contrib/stylus-loader","thirdParty":true,"group":"CSS"}],"size":279295,"type":"directory","url":"/loaders/"},{"path":"src/content/migrate","name":"migrate","children":[{"path":"src/content/migrate/index.mdx","name":"index.mdx","size":161,"type":"file","extension":".mdx","url":"/migrate/","anchors":[],"title":"Migrate","sort":-1,"contributors":["EugeneHlushko"]},{"path":"src/content/migrate/5.mdx","name":"5.mdx","size":15701,"type":"file","extension":".mdx","url":"/migrate/5/","anchors":[{"title":"Preparations","id":"preparations","level":2},{"title":"Upgrade webpack 4 and its plugins/loaders","id":"upgrade-webpack-4-and-its-pluginsloaders","level":2},{"title":"Make sure your build has no errors or warnings","id":"make-sure-your-build-has-no-errors-or-warnings","level":3},{"title":"Make sure to use mode","id":"make-sure-to-use-mode","level":3},{"title":"Update outdated options","id":"update-outdated-options","level":3},{"title":"Test webpack 5 compatibility","id":"test-webpack-5-compatibility","level":3},{"title":"Upgrade webpack to 5","id":"upgrade-webpack-to-5","level":2},{"title":"Clean up configuration","id":"clean-up-configuration","level":3},{"title":"Need to support an older browser like IE 11?","id":"need-to-support-an-older-browser-like-ie-11","level":3},{"title":"Cleanup the code","id":"cleanup-the-code","level":3},{"title":"Run a single build and follow advice","id":"run-a-single-build-and-follow-advice","level":3},{"title":"Everything works?","id":"everything-works","level":2},{"title":"It is not working?","id":"it-is-not-working","level":2},{"title":"Something missing in this guide?","id":"something-missing-in-this-guide","level":2},{"title":"Changes to internals","id":"changes-to-internals","level":2},{"title":"getOptions method for Loaders","id":"getoptions-method-for-loaders","level":3}],"title":"To v5 from v4","sort":1,"contributors":["sokra","salemhilal","keichinger","EugeneHlushko","MattGoldwater","rramaa","chenxsan","jamesgeorge007","getsnoopy","yevhen-logosha"]},{"path":"src/content/migrate/4.mdx","name":"4.mdx","size":4115,"type":"file","extension":".mdx","url":"/migrate/4/","anchors":[{"title":"Node.js v4","id":"nodejs-v4","level":2},{"title":"CLI","id":"cli","level":2},{"title":"Update plugins","id":"update-plugins","level":2},{"title":"mode","id":"mode","level":2},{"title":"Deprecated/Removed plugins","id":"deprecatedremoved-plugins","level":2},{"title":"CommonsChunkPlugin","id":"commonschunkplugin","level":2},{"title":"import() and CommonJS","id":"import-and-commonjs","level":2},{"title":"json and loaders","id":"json-and-loaders","level":2},{"title":"module.loaders","id":"moduleloaders","level":2}],"title":"To v4 from v3","sort":2,"contributors":["sokra","EugeneHlushko","Kolhar730"],"related":[{"title":"To v2 or v3 from v1","url":"https://webpack.js.org/migrate/3/"},{"title":"RIP CommonChunkPlugin","url":"https://gist.github.com/sokra/1522d586b8e5c0f5072d7565c2bee693"},{"title":"webpack 4: migration guide for plugins/loaders","url":"https://medium.com/webpack/webpack-4-migration-guide-for-plugins-loaders-20a79b927202"}]},{"path":"src/content/migrate/3.mdx","name":"3.mdx","size":16052,"type":"file","extension":".mdx","url":"/migrate/3/","anchors":[{"title":"resolve.root, resolve.fallback, resolve.modulesDirectories","id":"resolveroot-resolvefallback-resolvemodulesdirectories","level":2},{"title":"resolve.extensions","id":"resolveextensions","level":2},{"title":"resolve.*","id":"resolve","level":2},{"title":"module.loaders is now module.rules","id":"moduleloaders-is-now-modulerules","level":2},{"title":"Chaining loaders","id":"chaining-loaders","level":2},{"title":"Automatic -loader module name extension removed","id":"automatic--loader-module-name-extension-removed","level":2},{"title":"json-loader is not required anymore","id":"json-loader-is-not-required-anymore","level":2},{"title":"Loaders in configuration resolve relative to context","id":"loaders-in-configuration-resolve-relative-to-context","level":2},{"title":"module.preLoaders and module.postLoaders were removed:","id":"modulepreloaders-and-modulepostloaders-were-removed","level":2},{"title":"UglifyJsPlugin sourceMap","id":"uglifyjsplugin-sourcemap","level":2},{"title":"UglifyJsPlugin warnings","id":"uglifyjsplugin-warnings","level":2},{"title":"UglifyJsPlugin minimize loaders","id":"uglifyjsplugin-minimize-loaders","level":2},{"title":"DedupePlugin has been removed","id":"dedupeplugin-has-been-removed","level":2},{"title":"BannerPlugin - breaking change","id":"bannerplugin---breaking-change","level":2},{"title":"OccurrenceOrderPlugin is now on by default","id":"occurrenceorderplugin-is-now-on-by-default","level":2},{"title":"ExtractTextWebpackPlugin - breaking change","id":"extracttextwebpackplugin---breaking-change","level":2},{"title":"ExtractTextPlugin.extract","id":"extracttextpluginextract","level":3},{"title":"new ExtractTextPlugin({options})","id":"new-extracttextpluginoptions","level":3},{"title":"Full dynamic requires now fail by default","id":"full-dynamic-requires-now-fail-by-default","level":2},{"title":"Using custom arguments in CLI and configuration","id":"using-custom-arguments-in-cli-and-configuration","level":3},{"title":"require.ensure and AMD require are asynchronous","id":"requireensure-and-amd-require-are-asynchronous","level":2},{"title":"Loader configuration is through options","id":"loader-configuration-is-through-options","level":2},{"title":"What are options?","id":"what-are-options","level":3},{"title":"LoaderOptionsPlugin context","id":"loaderoptionsplugin-context","level":2},{"title":"debug","id":"debug","level":2},{"title":"Code Splitting with ES2015","id":"code-splitting-with-es2015","level":2},{"title":"Dynamic expressions","id":"dynamic-expressions","level":2},{"title":"Mixing ES2015 with AMD and CommonJS","id":"mixing-es2015-with-amd-and-commonjs","level":2},{"title":"Hints","id":"hints","level":2},{"title":"Template strings","id":"template-strings","level":3},{"title":"Configuration Promise","id":"configuration-promise","level":3},{"title":"Advanced loader matching","id":"advanced-loader-matching","level":3},{"title":"More CLI options","id":"more-cli-options","level":3},{"title":"Loader changes","id":"loader-changes","level":2},{"title":"Cacheable","id":"cacheable","level":3},{"title":"Complex options","id":"complex-options","level":3}],"title":"To v2 or v3 from v1","sort":3,"contributors":["sokra","jhnns","grgur","domfarolino","johnnyreilly","jouni-kantola","frederikprijck","chrisVillanueva","bebraw","howdy39","selbekk","ndelangen","EugeneHlushko","byzyk"]},{"path":"src/content/migrate/printable.mdx","name":"printable.mdx","size":286,"type":"file","extension":".mdx","url":"/migrate/printable/","anchors":[{"title":"Migrate","id":"migrate","level":1},{"title":"To v5 from v4","id":"to-v5-from-v4","level":1},{"title":"To v4 from v3","id":"to-v4-from-v3","level":1},{"title":"To v2 or v3 from v1","id":"to-v2-or-v3-from-v1","level":1}],"title":"Printable","sort":999,"contributors":["webpack"]}],"size":36315,"type":"directory","url":"/migrate/"},{"path":"src/content/plugins","name":"plugins","children":[{"path":"src/content/plugins/index.mdx","name":"index.mdx","size":4929,"type":"file","extension":".mdx","url":"/plugins/","anchors":[],"title":"Plugins","sort":-1,"contributors":["simon04","gonzoyumo","rouzbeh84","aretecode","eko3alpha","refactorized","byzyk","EugeneHlushko","snitin315","chenxsan"]},{"path":"src/content/plugins/printable.mdx","name":"printable.mdx","size":4723,"type":"file","extension":".mdx","url":"/plugins/printable/","anchors":[{"title":"AutomaticPrefetchPlugin","id":"automaticprefetchplugin","level":1},{"title":"BannerPlugin","id":"bannerplugin","level":1},{"title":"CommonsChunkPlugin","id":"commonschunkplugin","level":1},{"title":"CompressionWebpackPlugin","id":"compressionwebpackplugin","level":1},{"title":"ContextExclusionPlugin","id":"contextexclusionplugin","level":1},{"title":"ContextReplacementPlugin","id":"contextreplacementplugin","level":1},{"title":"CopyWebpackPlugin","id":"copywebpackplugin","level":1},{"title":"CssMinimizerWebpackPlugin","id":"cssminimizerwebpackplugin","level":1},{"title":"DefinePlugin","id":"defineplugin","level":1},{"title":"DllPlugin","id":"dllplugin","level":1},{"title":"EnvironmentPlugin","id":"environmentplugin","level":1},{"title":"EslintWebpackPlugin","id":"eslintwebpackplugin","level":1},{"title":"EvalSourceMapDevToolPlugin","id":"evalsourcemapdevtoolplugin","level":1},{"title":"HashedModuleIdsPlugin","id":"hashedmoduleidsplugin","level":1},{"title":"HotModuleReplacementPlugin","id":"hotmodulereplacementplugin","level":1},{"title":"HtmlMinimizerWebpackPlugin","id":"htmlminimizerwebpackplugin","level":1},{"title":"HtmlWebpackPlugin","id":"htmlwebpackplugin","level":1},{"title":"IgnorePlugin","id":"ignoreplugin","level":1},{"title":"ImageMinimizerWebpackPlugin","id":"imageminimizerwebpackplugin","level":1},{"title":"InstallWebpackPlugin","id":"installwebpackplugin","level":1},{"title":"Internal webpack plugins","id":"internal-webpack-plugins","level":1},{"title":"JsonMinimizerWebpackPlugin","id":"jsonminimizerwebpackplugin","level":1},{"title":"LimitChunkCountPlugin","id":"limitchunkcountplugin","level":1},{"title":"MinChunkSizePlugin","id":"minchunksizeplugin","level":1},{"title":"MiniCssExtractPlugin","id":"minicssextractplugin","level":1},{"title":"ModuleConcatenationPlugin","id":"moduleconcatenationplugin","level":1},{"title":"Plugins","id":"plugins","level":1},{"title":"ModuleFederationPlugin","id":"modulefederationplugin","level":1},{"title":"NoEmitOnErrorsPlugin","id":"noemitonerrorsplugin","level":1},{"title":"NormalModuleReplacementPlugin","id":"normalmodulereplacementplugin","level":1},{"title":"PrefetchPlugin","id":"prefetchplugin","level":1},{"title":"ProfilingPlugin","id":"profilingplugin","level":1},{"title":"ProgressPlugin","id":"progressplugin","level":1},{"title":"ProvidePlugin","id":"provideplugin","level":1},{"title":"SourceMapDevToolPlugin","id":"sourcemapdevtoolplugin","level":1},{"title":"SplitChunksPlugin","id":"splitchunksplugin","level":1},{"title":"StylelintWebpackPlugin","id":"stylelintwebpackplugin","level":1},{"title":"SvgChunkWebpackPlugin","id":"svgchunkwebpackplugin","level":1},{"title":"TerserWebpackPlugin","id":"terserwebpackplugin","level":1},{"title":"WatchIgnorePlugin","id":"watchignoreplugin","level":1}],"title":"Printable","sort":999,"contributors":["webpack"]},{"path":"src/content/plugins/html-webpack-plugin.mdx","name":"html-webpack-plugin.mdx","size":2010,"type":"file","extension":".mdx","url":"/plugins/html-webpack-plugin/","anchors":[{"title":"Installation","id":"installation","level":2},{"title":"Basic Usage","id":"basic-usage","level":2},{"title":"Configuration","id":"configuration","level":2},{"title":"Third party addons","id":"third-party-addons","level":2}],"title":"HtmlWebpackPlugin","group":"Community","contributors":["ampedandwired","simon04","Sibiraj-S","EugeneHlushko"]},{"path":"src/content/plugins/_svg-chunk-webpack-plugin.mdx","name":"svg-chunk-webpack-plugin.mdx","size":8936,"type":"file","extension":".mdx","url":"/plugins/svg-chunk-webpack-plugin/","anchors":[{"title":"When to use this plugin","id":"when-to-use-this-plugin","level":2},{"title":"Zero config","id":"zero-config","level":2},{"title":"Installation","id":"installation","level":2},{"title":"Environment","id":"environment","level":2},{"title":"Example","id":"example","level":2},{"title":"Basic usage","id":"basic-usage","level":2},{"title":"Using a configuration","id":"using-a-configuration","level":2},{"title":"Loader","id":"loader","level":3},{"title":"Plugin","id":"plugin","level":3},{"title":"filename","id":"filename","level":3},{"title":"svgstoreConfig","id":"svgstoreconfig","level":3},{"title":"generateSpritesManifest","id":"generatespritesmanifest","level":3},{"title":"generateSpritesPreview","id":"generatespritespreview","level":3},{"title":"Caching","id":"caching","level":2},{"title":"[contenthash]","id":"contenthash","level":3},{"title":"[fullhash]","id":"fullhash","level":3},{"title":"License","id":"license","level":2}],"title":"SvgChunkWebpackPlugin","group":"Community","contributors":["yoriiis","alexander-akait"],"source":"https://raw.githubusercontent.com/yoriiis/svg-chunk-webpack-plugin/main/README.md","edit":"https://github.com/yoriiis/svg-chunk-webpack-plugin/edit/main/README.md","repo":"https://github.com/yoriiis/svg-chunk-webpack-plugin","thirdParty":true},{"path":"src/content/plugins/automatic-prefetch-plugin.mdx","name":"automatic-prefetch-plugin.mdx","size":591,"type":"file","extension":".mdx","url":"/plugins/automatic-prefetch-plugin/","anchors":[],"title":"AutomaticPrefetchPlugin","group":"webpack","contributors":["sokra","EugeneHlushko"]},{"path":"src/content/plugins/banner-plugin.mdx","name":"banner-plugin.mdx","size":1652,"type":"file","extension":".mdx","url":"/plugins/banner-plugin/","anchors":[{"title":"Options","id":"options","level":2},{"title":"Usage","id":"usage","level":2},{"title":"Placeholders","id":"placeholders","level":2}],"title":"BannerPlugin","group":"webpack","contributors":["simon04","byzyk","chenxsan"],"related":[{"title":"banner-plugin-hashing test","url":"https://github.com/webpack/webpack/blob/master/test/configCases/plugins/banner-plugin-hashing/webpack.config.js"}]},{"path":"src/content/plugins/commons-chunk-plugin.mdx","name":"commons-chunk-plugin.mdx","size":9405,"type":"file","extension":".mdx","url":"/plugins/commons-chunk-plugin/","anchors":[{"title":"Options","id":"options","level":2},{"title":"Examples","id":"examples","level":2},{"title":"Commons chunk for entries","id":"commons-chunk-for-entries","level":3},{"title":"Explicit vendor chunk","id":"explicit-vendor-chunk","level":3},{"title":"Move common modules into the parent chunk","id":"move-common-modules-into-the-parent-chunk","level":3},{"title":"Extra async commons chunk","id":"extra-async-commons-chunk","level":3},{"title":"Passing the minChunks property a function","id":"passing-the-minchunks-property-a-function","level":3},{"title":"Manifest file","id":"manifest-file","level":2},{"title":"Combining implicit common vendor chunks and manifest file","id":"combining-implicit-common-vendor-chunks-and-manifest-file","level":2},{"title":"More Examples","id":"more-examples","level":2}],"title":"CommonsChunkPlugin","group":"webpack","contributors":["bebraw","simon04","christopher4lis","kevinzwhuang","jdbevan","jeremenichelli","byzyk","madhavarshney","snitin315"]},{"path":"src/content/plugins/context-exclusion-plugin.mdx","name":"context-exclusion-plugin.mdx","size":516,"type":"file","extension":".mdx","url":"/plugins/context-exclusion-plugin/","anchors":[],"title":"ContextExclusionPlugin","group":"webpack","contributors":["jeffin"]},{"path":"src/content/plugins/context-replacement-plugin.mdx","name":"context-replacement-plugin.mdx","size":3107,"type":"file","extension":".mdx","url":"/plugins/context-replacement-plugin/","anchors":[{"title":"Usage","id":"usage","level":2},{"title":"Content Callback","id":"content-callback","level":2},{"title":"Other Options","id":"other-options","level":2}],"title":"ContextReplacementPlugin","group":"webpack","contributors":["simon04","byzyk","masives","chenxsan"],"related":[{"title":"Issue 2783 - ContextReplacementPlugin Description","url":"https://github.com/webpack/webpack/issues/2783#issuecomment-234137265"},{"title":"Using context replacement module for date-fns","url":"https://github.com/date-fns/date-fns/blob/master/docs/webpack.md"}]},{"path":"src/content/plugins/define-plugin.mdx","name":"define-plugin.mdx","size":4474,"type":"file","extension":".mdx","url":"/plugins/define-plugin/","anchors":[{"title":"Usage","id":"usage","level":2},{"title":"Feature Flags","id":"feature-flags","level":2},{"title":"Service URLs","id":"service-urls","level":2},{"title":"Runtime values via runtimeValue","id":"runtime-values-via-runtimevalue","level":2}],"title":"DefinePlugin","group":"webpack","contributors":["simon04","rouzbeh84","byzyk","EugeneHlushko","smonusbonus","chenxsan"]},{"path":"src/content/plugins/dll-plugin.mdx","name":"dll-plugin.mdx","size":5604,"type":"file","extension":".mdx","url":"/plugins/dll-plugin/","anchors":[{"title":"DllPlugin","id":"dllplugin","level":2},{"title":"DllReferencePlugin","id":"dllreferenceplugin","level":2},{"title":"Modes","id":"modes","level":3},{"title":"Usage","id":"usage","level":2},{"title":"Examples","id":"examples","level":2},{"title":"References","id":"references","level":2},{"title":"Source","id":"source","level":3},{"title":"Tests","id":"tests","level":3}],"title":"DllPlugin","group":"webpack","contributors":["aretecode","sokra","opiepj","simon04","skipjack","byzyk","EugeneHlushko","EslamHiko","snitin315"],"related":[{"title":"Code Splitting Example","url":"https://github.com/webpack/webpack/blob/master/examples/explicit-vendor-chunk/README.md"}]},{"path":"src/content/plugins/environment-plugin.mdx","name":"environment-plugin.mdx","size":3629,"type":"file","extension":".mdx","url":"/plugins/environment-plugin/","anchors":[{"title":"Usage","id":"usage","level":2},{"title":"Usage with default values","id":"usage-with-default-values","level":2},{"title":"Use Case: Git Version","id":"use-case-git-version","level":2},{"title":"DotenvPlugin","id":"dotenvplugin","level":2}],"title":"EnvironmentPlugin","group":"webpack","contributors":["simon04","einarlove","rouzbeh84","byzyk"]},{"path":"src/content/plugins/eval-source-map-dev-tool-plugin.mdx","name":"eval-source-map-dev-tool-plugin.mdx","size":2528,"type":"file","extension":".mdx","url":"/plugins/eval-source-map-dev-tool-plugin/","anchors":[{"title":"Options","id":"options","level":2},{"title":"Examples","id":"examples","level":2},{"title":"Basic Use Case","id":"basic-use-case","level":3},{"title":"Exclude Vendor Maps","id":"exclude-vendor-maps","level":3}],"title":"EvalSourceMapDevToolPlugin","group":"webpack","contributors":["johnnyreilly","simon04","kinseyost","byzyk","madhavarshney","koke","jamesgeorge007","anshumanv","EugeneHlushko"],"related":[{"title":"Building Eval Source Maps","url":"https://survivejs.com/webpack/building/source-maps/#sourcemapdevtoolplugin-and-evalsourcemapdevtoolplugin"}]},{"path":"src/content/plugins/hashed-module-ids-plugin.mdx","name":"hashed-module-ids-plugin.mdx","size":1288,"type":"file","extension":".mdx","url":"/plugins/hashed-module-ids-plugin/","anchors":[{"title":"Options","id":"options","level":2},{"title":"Usage","id":"usage","level":2}],"title":"HashedModuleIdsPlugin","group":"webpack","contributors":["shaodahong","byzyk","EslamHiko"]},{"path":"src/content/plugins/hot-module-replacement-plugin.mdx","name":"hot-module-replacement-plugin.mdx","size":608,"type":"file","extension":".mdx","url":"/plugins/hot-module-replacement-plugin/","anchors":[{"title":"Basic Usage","id":"basic-usage","level":2}],"title":"HotModuleReplacementPlugin","group":"webpack","contributors":["skipjack","byzyk","chenxsan","snitin315"],"related":[{"title":"Concepts - Hot Module Replacement","url":"/concepts/hot-module-replacement"},{"title":"API - Hot Module Replacement","url":"/api/hot-module-replacement"}]},{"path":"src/content/plugins/ignore-plugin.mdx","name":"ignore-plugin.mdx","size":2077,"type":"file","extension":".mdx","url":"/plugins/ignore-plugin/","anchors":[{"title":"Using regular expressions","id":"using-regular-expressions","level":2},{"title":"Using filter functions","id":"using-filter-functions","level":2},{"title":"Example of ignoring Moment Locales","id":"example-of-ignoring-moment-locales","level":2}],"title":"IgnorePlugin","group":"webpack","contributors":["simon04","byzyk","DullReferenceException","EugeneHlushko","FadySamirSadek","iamakulov","chenxsan"]},{"path":"src/content/plugins/internal-plugins.mdx","name":"internal-plugins.mdx","size":9140,"type":"file","extension":".mdx","url":"/plugins/internal-plugins/","anchors":[{"title":"environment","id":"environment","level":2},{"title":"NodeEnvironmentPlugin","id":"nodeenvironmentplugin","level":3},{"title":"compiler","id":"compiler","level":2},{"title":"MemoryCachePlugin","id":"memorycacheplugin","level":3},{"title":"ProgressPlugin","id":"progressplugin","level":3},{"title":"RecordIdsPlugin","id":"recordidsplugin","level":3},{"title":"entry","id":"entry","level":2},{"title":"EntryPlugin","id":"entryplugin","level":3},{"title":"PrefetchPlugin","id":"prefetchplugin","level":3},{"title":"output","id":"output","level":2},{"title":"JsonpTemplatePlugin","id":"jsonptemplateplugin","level":3},{"title":"NodeTemplatePlugin","id":"nodetemplateplugin","level":3},{"title":"LibraryTemplatePlugin","id":"librarytemplateplugin","level":3},{"title":"WebWorkerTemplatePlugin","id":"webworkertemplateplugin","level":3},{"title":"EvalDevToolModulePlugin","id":"evaldevtoolmoduleplugin","level":3},{"title":"SourceMapDevToolPlugin","id":"sourcemapdevtoolplugin","level":3},{"title":"HotModuleReplacementPlugin","id":"hotmodulereplacementplugin","level":3},{"title":"source","id":"source","level":2},{"title":"APIPlugin","id":"apiplugin","level":3},{"title":"CompatibilityPlugin","id":"compatibilityplugin","level":3},{"title":"ConstPlugin","id":"constplugin","level":3},{"title":"ProvidePlugin","id":"provideplugin","level":3},{"title":"NodeStuffPlugin","id":"nodestuffplugin","level":3},{"title":"RequireJsStuffPlugin","id":"requirejsstuffplugin","level":3},{"title":"NodeSourcePlugin","id":"nodesourceplugin","level":3},{"title":"NodeTargetPlugin","id":"nodetargetplugin","level":3},{"title":"AMDPlugin","id":"amdplugin","level":3},{"title":"CommonJsPlugin","id":"commonjsplugin","level":3},{"title":"RequireContextPlugin","id":"requirecontextplugin","level":3},{"title":"RequireEnsurePlugin","id":"requireensureplugin","level":3},{"title":"RequireIncludePlugin","id":"requireincludeplugin","level":3},{"title":"DefinePlugin","id":"defineplugin","level":3},{"title":"optimize","id":"optimize","level":2},{"title":"LimitChunkCountPlugin","id":"limitchunkcountplugin","level":3},{"title":"MergeDuplicateChunksPlugin","id":"mergeduplicatechunksplugin","level":3},{"title":"RemoveEmptyChunksPlugin","id":"removeemptychunksplugin","level":3},{"title":"MinChunkSizePlugin","id":"minchunksizeplugin","level":3},{"title":"ModuleConcatenationPlugin","id":"moduleconcatenationplugin","level":3},{"title":"FlagIncludedChunksPlugin","id":"flagincludedchunksplugin","level":3},{"title":"RealContentHashPlugin","id":"realcontenthashplugin","level":3}],"title":"Internal webpack plugins","group":"webpack","contributors":["iAziz786","EugeneHlushko","ooflorent","Legends","chenxsan"]},{"path":"src/content/plugins/limit-chunk-count-plugin.mdx","name":"limit-chunk-count-plugin.mdx","size":1278,"type":"file","extension":".mdx","url":"/plugins/limit-chunk-count-plugin/","anchors":[{"title":"Options","id":"options","level":2},{"title":"maxChunks","id":"maxchunks","level":3},{"title":"minChunkSize","id":"minchunksize","level":3},{"title":"Usage via CLI","id":"usage-via-cli","level":2}],"title":"LimitChunkCountPlugin","group":"webpack","contributors":["rouzbeh84","skipjack","tbroadley","byzyk","EugeneHlushko","erykpiast"]},{"path":"src/content/plugins/min-chunk-size-plugin.mdx","name":"min-chunk-size-plugin.mdx","size":449,"type":"file","extension":".mdx","url":"/plugins/min-chunk-size-plugin/","anchors":[{"title":"Usage via CLI","id":"usage-via-cli","level":2}],"title":"MinChunkSizePlugin","group":"webpack","contributors":["byzyk","erykpiast"]},{"path":"src/content/plugins/module-concatenation-plugin.mdx","name":"module-concatenation-plugin.mdx","size":4259,"type":"file","extension":".mdx","url":"/plugins/module-concatenation-plugin/","anchors":[{"title":"Optimization Bailouts","id":"optimization-bailouts","level":2},{"title":"Module Grouping Algorithm","id":"module-grouping-algorithm","level":3},{"title":"Debugging Optimization Bailouts","id":"debugging-optimization-bailouts","level":3}],"title":"ModuleConcatenationPlugin","group":"webpack","contributors":["skipjack","TheLarkInn","byzyk"]},{"path":"src/content/plugins/module-federation-plugin.mdx","name":"module-federation-plugin.mdx","size":6999,"type":"file","extension":".mdx","url":"/plugins/module-federation-plugin/","anchors":[{"title":"Options","id":"options","level":2},{"title":"runtime","id":"runtime","level":3},{"title":"Specify package versions","id":"specify-package-versions","level":3},{"title":"Sharing hints","id":"sharing-hints","level":3}],"title":"ModuleFederationPlugin","group":"webpack","contributors":["XiaofengXie16","chenxsan","burhanuday"],"related":[{"title":"Module Federation","url":"/concepts/module-federation/"}]},{"path":"src/content/plugins/NoEmitOnErrorsPlugin.mdx","name":"NoEmitOnErrorsPlugin.mdx","size":434,"type":"file","extension":".mdx","url":"/plugins/NoEmitOnErrorsPlugin/","anchors":[],"title":"NoEmitOnErrorsPlugin","group":"webpack","contributors":["jeffin","chenxsan","snitin315"]},{"path":"src/content/plugins/normal-module-replacement-plugin.mdx","name":"normal-module-replacement-plugin.mdx","size":2476,"type":"file","extension":".mdx","url":"/plugins/normal-module-replacement-plugin/","anchors":[{"title":"Basic Example","id":"basic-example","level":2},{"title":"Advanced Example","id":"advanced-example","level":2}],"title":"NormalModuleReplacementPlugin","group":"webpack","contributors":["gonzoyumo","byzyk","chenxsan"]},{"path":"src/content/plugins/prefetch-plugin.mdx","name":"prefetch-plugin.mdx","size":503,"type":"file","extension":".mdx","url":"/plugins/prefetch-plugin/","anchors":[{"title":"Options","id":"options","level":2}],"title":"PrefetchPlugin","group":"webpack","contributors":["skipjack","byzyk"]},{"path":"src/content/plugins/profiling-plugin.mdx","name":"profiling-plugin.mdx","size":937,"type":"file","extension":".mdx","url":"/plugins/profiling-plugin/","anchors":[{"title":"Options","id":"options","level":2},{"title":"Usage: default","id":"usage-default","level":2},{"title":"Usage: custom outputPath","id":"usage-custom-outputpath","level":2}],"title":"ProfilingPlugin","group":"webpack","contributors":["EugeneHlushko","byzyk","akgupta0777"]},{"path":"src/content/plugins/progress-plugin.mdx","name":"progress-plugin.mdx","size":4483,"type":"file","extension":".mdx","url":"/plugins/progress-plugin/","anchors":[{"title":"Usage","id":"usage","level":2},{"title":"Providing function","id":"providing-function","level":3},{"title":"Providing object","id":"providing-object","level":3},{"title":"Percentage calculation","id":"percentage-calculation","level":2},{"title":"Supported Hooks","id":"supported-hooks","level":2},{"title":"Source","id":"source","level":2}],"title":"ProgressPlugin","group":"webpack","contributors":["elliottsj","EugeneHlushko","byzyk","smelukov"]},{"path":"src/content/plugins/provide-plugin.mdx","name":"provide-plugin.mdx","size":1893,"type":"file","extension":".mdx","url":"/plugins/provide-plugin/","anchors":[{"title":"Usage: jQuery","id":"usage-jquery","level":2},{"title":"Usage: jQuery with Angular 1","id":"usage-jquery-with-angular-1","level":2},{"title":"Usage: Lodash Map","id":"usage-lodash-map","level":2},{"title":"Usage: Vue.js","id":"usage-vuejs","level":3}],"title":"ProvidePlugin","group":"webpack","contributors":["sokra","simon04","re-fort","byzyk","seckin92"]},{"path":"src/content/plugins/source-map-dev-tool-plugin.mdx","name":"source-map-dev-tool-plugin.mdx","size":4335,"type":"file","extension":".mdx","url":"/plugins/source-map-dev-tool-plugin/","anchors":[{"title":"Options","id":"options","level":2},{"title":"Examples","id":"examples","level":2},{"title":"Basic Use Case","id":"basic-use-case","level":3},{"title":"Exclude Vendor Maps","id":"exclude-vendor-maps","level":3},{"title":"Host Source Maps Externally","id":"host-source-maps-externally","level":3}],"title":"SourceMapDevToolPlugin","group":"webpack","contributors":["johnnyreilly","simon04","neilkennedy","byzyk","EugeneHlushko","chenxsan"],"related":[{"title":"Building Source Maps","url":"https://survivejs.com/webpack/building/source-maps/#-sourcemapdevtoolplugin-and-evalsourcemapdevtoolplugin-"}]},{"path":"src/content/plugins/split-chunks-plugin.mdx","name":"split-chunks-plugin.mdx","size":21200,"type":"file","extension":".mdx","url":"/plugins/split-chunks-plugin/","anchors":[{"title":"Defaults","id":"defaults","level":2},{"title":"Configuration","id":"configuration","level":2},{"title":"optimization.splitChunks","id":"optimizationsplitchunks","level":2},{"title":"splitChunks.automaticNameDelimiter","id":"splitchunksautomaticnamedelimiter","level":3},{"title":"splitChunks.chunks","id":"splitchunkschunks","level":3},{"title":"splitChunks.maxAsyncRequests","id":"splitchunksmaxasyncrequests","level":3},{"title":"splitChunks.maxInitialRequests","id":"splitchunksmaxinitialrequests","level":3},{"title":"splitChunks.defaultSizeTypes","id":"splitchunksdefaultsizetypes","level":3},{"title":"splitChunks.minChunks","id":"splitchunksminchunks","level":3},{"title":"splitChunks.hidePathInfo","id":"splitchunkshidepathinfo","level":3},{"title":"splitChunks.minSize","id":"splitchunksminsize","level":3},{"title":"splitChunks.minSizeReduction","id":"splitchunksminsizereduction","level":3},{"title":"splitChunks.enforceSizeThreshold","id":"splitchunksenforcesizethreshold","level":3},{"title":"splitChunks.minRemainingSize","id":"splitchunksminremainingsize","level":3},{"title":"splitChunks.layer","id":"splitchunkslayer","level":3},{"title":"splitChunks.maxSize","id":"splitchunksmaxsize","level":3},{"title":"splitChunks.maxAsyncSize","id":"splitchunksmaxasyncsize","level":3},{"title":"splitChunks.maxInitialSize","id":"splitchunksmaxinitialsize","level":3},{"title":"splitChunks.name","id":"splitchunksname","level":3},{"title":"splitChunks.usedExports","id":"splitchunksusedexports","level":3},{"title":"splitChunks.cacheGroups","id":"splitchunkscachegroups","level":3},{"title":"Examples","id":"examples","level":2},{"title":"Defaults: Example 1","id":"defaults-example-1","level":3},{"title":"Defaults: Example 2","id":"defaults-example-2","level":3},{"title":"Split Chunks: Example 1","id":"split-chunks-example-1","level":3},{"title":"Split Chunks: Example 2","id":"split-chunks-example-2","level":3},{"title":"Split Chunks: Example 3","id":"split-chunks-example-3","level":3}],"title":"SplitChunksPlugin","group":"webpack","contributors":["sokra","jeremenichelli","Priestch","chrisdothtml","EugeneHlushko","byzyk","jacobangel","madhavarshney","sakhisheikh","superburrito","ryandrew14","snitin315","chenxsan","rohrlaf","jamesgeorge007","anshumanv","snitin315"],"related":[{"title":"webpack\'s automatic deduplication algorithm example","url":"https://github.com/webpack/webpack/blob/master/examples/many-pages/README.md"},{"title":"webpack 4: Code Splitting, chunk graph and the splitChunks optimization","url":"https://medium.com/webpack/webpack-4-code-splitting-chunk-graph-and-the-splitchunks-optimization-be739a861366"}]},{"path":"src/content/plugins/watch-ignore-plugin.mdx","name":"watch-ignore-plugin.mdx","size":552,"type":"file","extension":".mdx","url":"/plugins/watch-ignore-plugin/","anchors":[{"title":"Options","id":"options","level":2}],"title":"WatchIgnorePlugin","group":"webpack","contributors":["skipjack","byzyk","EugeneHlushko"]},{"path":"src/content/plugins/_compression-webpack-plugin.mdx","name":"compression-webpack-plugin.mdx","size":11805,"type":"file","extension":".mdx","url":"/plugins/compression-webpack-plugin/","anchors":[{"title":"Getting Started","id":"getting-started","level":2},{"title":"Options","id":"options","level":2},{"title":"test","id":"test","level":3},{"title":"include","id":"include","level":3},{"title":"exclude","id":"exclude","level":3},{"title":"algorithm","id":"algorithm","level":3},{"title":"compressionOptions","id":"compressionoptions","level":3},{"title":"threshold","id":"threshold","level":3},{"title":"minRatio","id":"minratio","level":3},{"title":"filename","id":"filename","level":3},{"title":"deleteOriginalAssets","id":"deleteoriginalassets","level":3},{"title":"Examples","id":"examples","level":2},{"title":"Using Zopfli","id":"using-zopfli","level":3},{"title":"Using Brotli","id":"using-brotli","level":3},{"title":"Multiple compressed versions of assets for different algorithm","id":"multiple-compressed-versions-of-assets-for-different-algorithm","level":3},{"title":"Contributing","id":"contributing","level":2},{"title":"License","id":"license","level":2}],"title":"CompressionWebpackPlugin","group":"webpack contrib","source":"https://raw.githubusercontent.com/webpack-contrib/compression-webpack-plugin/master/README.md","edit":"https://github.com/webpack-contrib/compression-webpack-plugin/edit/master/README.md","repo":"https://github.com/webpack-contrib/compression-webpack-plugin","thirdParty":true},{"path":"src/content/plugins/_copy-webpack-plugin.mdx","name":"copy-webpack-plugin.mdx","size":27639,"type":"file","extension":".mdx","url":"/plugins/copy-webpack-plugin/","anchors":[{"title":"Getting Started","id":"getting-started","level":2},{"title":"Options","id":"options","level":2},{"title":"Patterns","id":"patterns","level":3},{"title":"noErrorOnMissing","id":"noerroronmissing","level":3},{"title":"Options","id":"options-1","level":3},{"title":"Examples","id":"examples","level":3},{"title":"Contributing","id":"contributing","level":2},{"title":"License","id":"license","level":2}],"title":"CopyWebpackPlugin","group":"webpack contrib","source":"https://raw.githubusercontent.com/webpack-contrib/copy-webpack-plugin/master/README.md","edit":"https://github.com/webpack-contrib/copy-webpack-plugin/edit/master/README.md","repo":"https://github.com/webpack-contrib/copy-webpack-plugin","thirdParty":true},{"path":"src/content/plugins/_css-minimizer-webpack-plugin.mdx","name":"css-minimizer-webpack-plugin.mdx","size":16599,"type":"file","extension":".mdx","url":"/plugins/css-minimizer-webpack-plugin/","anchors":[{"title":"Getting Started","id":"getting-started","level":2},{"title":"Note about source maps","id":"note-about-source-maps","level":2},{"title":"Options","id":"options","level":2},{"title":"test","id":"test","level":3},{"title":"include","id":"include","level":3},{"title":"exclude","id":"exclude","level":3},{"title":"parallel","id":"parallel","level":3},{"title":"minify","id":"minify","level":3},{"title":"minimizerOptions","id":"minimizeroptions","level":3},{"title":"warningsFilter","id":"warningsfilter","level":3},{"title":"Examples","id":"examples","level":2},{"title":"Use sourcemaps","id":"use-sourcemaps","level":3},{"title":"Remove all comments","id":"remove-all-comments","level":3},{"title":"Contributing","id":"contributing","level":2},{"title":"License","id":"license","level":2}],"title":"CssMinimizerWebpackPlugin","group":"webpack contrib","source":"https://raw.githubusercontent.com/webpack-contrib/css-minimizer-webpack-plugin/master/README.md","edit":"https://github.com/webpack-contrib/css-minimizer-webpack-plugin/edit/master/README.md","repo":"https://github.com/webpack-contrib/css-minimizer-webpack-plugin","thirdParty":true},{"path":"src/content/plugins/_eslint-webpack-plugin.mdx","name":"eslint-webpack-plugin.mdx","size":7727,"type":"file","extension":".mdx","url":"/plugins/eslint-webpack-plugin/","anchors":[{"title":"Getting Started","id":"getting-started","level":2},{"title":"Options","id":"options","level":2},{"title":"cache","id":"cache","level":3},{"title":"cacheLocation","id":"cachelocation","level":3},{"title":"context","id":"context","level":3},{"title":"eslintPath","id":"eslintpath","level":3},{"title":"extensions","id":"extensions","level":3},{"title":"exclude","id":"exclude","level":3},{"title":"resourceQueryExclude","id":"resourcequeryexclude","level":3},{"title":"files","id":"files","level":3},{"title":"fix","id":"fix","level":3},{"title":"formatter","id":"formatter","level":3},{"title":"lintDirtyModulesOnly","id":"lintdirtymodulesonly","level":3},{"title":"threads","id":"threads","level":3},{"title":"Errors and Warning","id":"errors-and-warning","level":3},{"title":"Changelog","id":"changelog","level":2},{"title":"License","id":"license","level":2}],"title":"EslintWebpackPlugin","group":"webpack contrib","source":"https://raw.githubusercontent.com/webpack-contrib/eslint-webpack-plugin/master/README.md","edit":"https://github.com/webpack-contrib/eslint-webpack-plugin/edit/master/README.md","repo":"https://github.com/webpack-contrib/eslint-webpack-plugin","thirdParty":true},{"path":"src/content/plugins/_html-minimizer-webpack-plugin.mdx","name":"html-minimizer-webpack-plugin.mdx","size":13824,"type":"file","extension":".mdx","url":"/plugins/html-minimizer-webpack-plugin/","anchors":[{"title":"Getting Started","id":"getting-started","level":2},{"title":"Options","id":"options","level":2},{"title":"test","id":"test","level":3},{"title":"include","id":"include","level":3},{"title":"exclude","id":"exclude","level":3},{"title":"parallel","id":"parallel","level":3},{"title":"minify","id":"minify","level":3},{"title":"minimizerOptions","id":"minimizeroptions","level":3},{"title":"Examples","id":"examples","level":2},{"title":"swc/html","id":"swchtml","level":3},{"title":"Contributing","id":"contributing","level":2},{"title":"License","id":"license","level":2}],"title":"HtmlMinimizerWebpackPlugin","group":"webpack contrib","source":"https://raw.githubusercontent.com/webpack-contrib/html-minimizer-webpack-plugin/master/README.md","edit":"https://github.com/webpack-contrib/html-minimizer-webpack-plugin/edit/master/README.md","repo":"https://github.com/webpack-contrib/html-minimizer-webpack-plugin","thirdParty":true},{"path":"src/content/plugins/_image-minimizer-webpack-plugin.mdx","name":"image-minimizer-webpack-plugin.mdx","size":63294,"type":"file","extension":".mdx","url":"/plugins/image-minimizer-webpack-plugin/","anchors":[{"title":"Getting Started","id":"getting-started","level":2},{"title":"Install optimize/generate tool","id":"install-optimizegenerate-tool","level":3},{"title":"Advanced setup","id":"advanced-setup","level":3},{"title":"Plugin Options","id":"plugin-options","level":2},{"title":"test","id":"test","level":3},{"title":"include","id":"include","level":3},{"title":"exclude","id":"exclude","level":3},{"title":"minimizer","id":"minimizer","level":3},{"title":"generator","id":"generator","level":3},{"title":"severityError","id":"severityerror","level":3},{"title":"loader","id":"loader","level":3},{"title":"concurrency","id":"concurrency","level":3},{"title":"deleteOriginalAssets","id":"deleteoriginalassets","level":3},{"title":"Loader Options","id":"loader-options","level":2},{"title":"minimizer","id":"minimizer-1","level":3},{"title":"generator","id":"generator-1","level":3},{"title":"severityError","id":"severityerror-1","level":3},{"title":"Additional API","id":"additional-api","level":2},{"title":"imageminNormalizeConfig(config)","id":"imageminnormalizeconfigconfig","level":3},{"title":"Examples","id":"examples","level":2},{"title":"Optimize images based on size","id":"optimize-images-based-on-size","level":3},{"title":"Optimize and generate webp images","id":"optimize-and-generate-webp-images","level":3},{"title":"Generate webp images from copied assets","id":"generate-webp-images-from-copied-assets","level":3},{"title":"Contributing","id":"contributing","level":2},{"title":"License","id":"license","level":2}],"title":"ImageMinimizerWebpackPlugin","group":"webpack contrib","source":"https://raw.githubusercontent.com/webpack-contrib/image-minimizer-webpack-plugin/master/README.md","edit":"https://github.com/webpack-contrib/image-minimizer-webpack-plugin/edit/master/README.md","repo":"https://github.com/webpack-contrib/image-minimizer-webpack-plugin","thirdParty":true},{"path":"src/content/plugins/_install-webpack-plugin.mdx","name":"install-webpack-plugin.mdx","size":5303,"type":"file","extension":".mdx","url":"/plugins/install-webpack-plugin/","anchors":[{"title":"Usage","id":"usage","level":1},{"title":"Options","id":"options","level":1},{"title":"dependencies","id":"dependencies","level":2},{"title":"peer","id":"peer","level":3},{"title":"packageManager","id":"packagemanager","level":2},{"title":"type","id":"type","level":3},{"title":"options","id":"options-1","level":3},{"title":"arguments","id":"arguments","level":3},{"title":"dev","id":"dev","level":3},{"title":"quiet","id":"quiet","level":3},{"title":"prompt","id":"prompt","level":2},{"title":"Demo","id":"demo","level":1},{"title":"Features","id":"features","level":1},{"title":"Contributing","id":"contributing","level":2}],"title":"InstallWebpackPlugin","group":"webpack contrib","source":"https://raw.githubusercontent.com/webpack-contrib/install-webpack-plugin/master/README.md","edit":"https://github.com/webpack-contrib/install-webpack-plugin/edit/master/README.md","repo":"https://github.com/webpack-contrib/install-webpack-plugin","thirdParty":true},{"path":"src/content/plugins/_json-minimizer-webpack-plugin.mdx","name":"json-minimizer-webpack-plugin.mdx","size":4876,"type":"file","extension":".mdx","url":"/plugins/json-minimizer-webpack-plugin/","anchors":[{"title":"Getting Started","id":"getting-started","level":2},{"title":"Options","id":"options","level":2},{"title":"test","id":"test","level":3},{"title":"include","id":"include","level":3},{"title":"exclude","id":"exclude","level":3},{"title":"minimizerOptions","id":"minimizeroptions","level":3},{"title":"Contributing","id":"contributing","level":2},{"title":"License","id":"license","level":2}],"title":"JsonMinimizerWebpackPlugin","group":"webpack contrib","source":"https://raw.githubusercontent.com/webpack-contrib/json-minimizer-webpack-plugin/master/README.md","edit":"https://github.com/webpack-contrib/json-minimizer-webpack-plugin/edit/master/README.md","repo":"https://github.com/webpack-contrib/json-minimizer-webpack-plugin","thirdParty":true},{"path":"src/content/plugins/_mini-css-extract-plugin.mdx","name":"mini-css-extract-plugin.mdx","size":29667,"type":"file","extension":".mdx","url":"/plugins/mini-css-extract-plugin/","anchors":[{"title":"Getting Started","id":"getting-started","level":2},{"title":"Options","id":"options","level":2},{"title":"Plugin Options","id":"plugin-options","level":3},{"title":"Loader Options","id":"loader-options","level":3},{"title":"Examples","id":"examples","level":2},{"title":"Recommended","id":"recommended","level":3},{"title":"Minimal example","id":"minimal-example","level":3},{"title":"Named export for CSS Modules","id":"named-export-for-css-modules","level":3},{"title":"The publicPath option as function","id":"the-publicpath-option-as-function","level":3},{"title":"Advanced configuration example","id":"advanced-configuration-example","level":3},{"title":"Hot Module Reloading (HMR)","id":"hot-module-reloading-hmr","level":3},{"title":"Minimizing For Production","id":"minimizing-for-production","level":3},{"title":"Using preloaded or inlined CSS","id":"using-preloaded-or-inlined-css","level":3},{"title":"Extracting all CSS in a single file","id":"extracting-all-css-in-a-single-file","level":3},{"title":"Extracting CSS based on entry","id":"extracting-css-based-on-entry","level":3},{"title":"Filename Option as function","id":"filename-option-as-function","level":3},{"title":"Long Term Caching","id":"long-term-caching","level":3},{"title":"Remove Order Warnings","id":"remove-order-warnings","level":3},{"title":"Multiple Themes","id":"multiple-themes","level":3},{"title":"Media Query Plugin","id":"media-query-plugin","level":3},{"title":"Contributing","id":"contributing","level":2},{"title":"License","id":"license","level":2}],"title":"MiniCssExtractPlugin","group":"webpack contrib","source":"https://raw.githubusercontent.com/webpack-contrib/mini-css-extract-plugin/master/README.md","edit":"https://github.com/webpack-contrib/mini-css-extract-plugin/edit/master/README.md","repo":"https://github.com/webpack-contrib/mini-css-extract-plugin","thirdParty":true},{"path":"src/content/plugins/_stylelint-webpack-plugin.mdx","name":"stylelint-webpack-plugin.mdx","size":7601,"type":"file","extension":".mdx","url":"/plugins/stylelint-webpack-plugin/","anchors":[{"title":"Getting Started","id":"getting-started","level":2},{"title":"Options","id":"options","level":2},{"title":"cache","id":"cache","level":3},{"title":"cacheLocation","id":"cachelocation","level":3},{"title":"configFile","id":"configfile","level":3},{"title":"context","id":"context","level":3},{"title":"exclude","id":"exclude","level":3},{"title":"extensions","id":"extensions","level":3},{"title":"files","id":"files","level":3},{"title":"fix","id":"fix","level":3},{"title":"formatter","id":"formatter","level":3},{"title":"lintDirtyModulesOnly","id":"lintdirtymodulesonly","level":3},{"title":"stylelintPath","id":"stylelintpath","level":3},{"title":"threads","id":"threads","level":3},{"title":"Errors and Warning","id":"errors-and-warning","level":3},{"title":"Changelog","id":"changelog","level":2},{"title":"License","id":"license","level":2}],"title":"StylelintWebpackPlugin","group":"webpack contrib","source":"https://raw.githubusercontent.com/webpack-contrib/stylelint-webpack-plugin/master/README.md","edit":"https://github.com/webpack-contrib/stylelint-webpack-plugin/edit/master/README.md","repo":"https://github.com/webpack-contrib/stylelint-webpack-plugin","thirdParty":true},{"path":"src/content/plugins/_terser-webpack-plugin.mdx","name":"terser-webpack-plugin.mdx","size":21559,"type":"file","extension":".mdx","url":"/plugins/terser-webpack-plugin/","anchors":[{"title":"Getting Started","id":"getting-started","level":2},{"title":"Note about source maps","id":"note-about-source-maps","level":2},{"title":"Options","id":"options","level":2},{"title":"test","id":"test","level":3},{"title":"include","id":"include","level":3},{"title":"exclude","id":"exclude","level":3},{"title":"parallel","id":"parallel","level":3},{"title":"minify","id":"minify","level":3},{"title":"terserOptions","id":"terseroptions","level":3},{"title":"extractComments","id":"extractcomments","level":3},{"title":"Examples","id":"examples","level":2},{"title":"Preserve Comments","id":"preserve-comments","level":3},{"title":"Remove Comments","id":"remove-comments","level":3},{"title":"Custom Minify Function","id":"custom-minify-function","level":3},{"title":"Typescript","id":"typescript","level":3},{"title":"Contributing","id":"contributing","level":2},{"title":"License","id":"license","level":2}],"title":"TerserWebpackPlugin","group":"webpack contrib","source":"https://raw.githubusercontent.com/webpack-contrib/terser-webpack-plugin/master/README.md","edit":"https://github.com/webpack-contrib/terser-webpack-plugin/edit/master/README.md","repo":"https://github.com/webpack-contrib/terser-webpack-plugin","thirdParty":true}],"size":324909,"type":"directory","url":"/plugins/"},{"path":"src/content/index.mdx","name":"index.mdx","size":940,"type":"file","extension":".mdx","url":"/","anchors":[{"title":"Write Your Code","id":"write-your-code","level":2},{"title":"Bundle It","id":"bundle-it","level":2},{"title":"Awesome isn\'t it? Let\'s dive in!","id":"awesome-isnt-it-lets-dive-in","level":2}],"title":"webpack","sort":-1},{"path":"src/content/comparison.mdx","name":"comparison.mdx","size":18878,"type":"file","extension":".mdx","url":"/comparison/","anchors":[{"title":"Bundling vs. Loading","id":"bundling-vs-loading","level":2}],"title":"Comparison","sort":1,"contributors":["pksjce","bebraw","chrisVillanueva","tashian","simon04","byzyk"],"related":[{"title":"JSPM vs. webpack","url":"https://ilikekillnerds.com/2015/07/jspm-vs-webpack/"},{"title":"webpack vs. Browserify vs. SystemJS","url":"https://engineering.velocityapp.com/webpack-vs-browersify-vs-systemjs-for-spas-95b349a41fa0"}]},{"path":"src/content/awesome-webpack.mdx","name":"awesome-webpack.mdx","size":43053,"type":"file","extension":".mdx","url":"/awesome-webpack/","anchors":[{"title":"Webpack Ecosystem","id":"webpack-ecosystem","level":2},{"title":"Support Webpack","id":"support-webpack","level":3},{"title":"Community","id":"community","level":3},{"title":"Twitter","id":"twitter","level":3},{"title":"Libraries","id":"libraries","level":2},{"title":"Loaders","id":"loaders","level":3},{"title":"Integration Libraries","id":"integration-libraries","level":3},{"title":"Webpack Plugins","id":"webpack-plugins","level":3},{"title":"Webpack Tools","id":"webpack-tools","level":3},{"title":"Research & Training","id":"research--training","level":2},{"title":"Articles","id":"articles","level":3},{"title":"Videos","id":"videos","level":3},{"title":"Courses","id":"courses","level":3},{"title":"Books","id":"books","level":3},{"title":"Webpack Examples","id":"webpack-examples","level":3},{"title":"Community Examples","id":"community-examples","level":3},{"title":"Other","id":"other","level":3}],"title":"Awesome webpack","sort":2,"contributors":["snitin315","licg9999"]},{"path":"src/content/branding.mdx","name":"branding.mdx","size":5677,"type":"file","extension":".mdx","url":"/branding/","anchors":[{"title":"The Name","id":"the-name","level":2},{"title":"Logo","id":"logo","level":2},{"title":"Icon only","id":"icon-only","level":2},{"title":"Color Palette","id":"color-palette","level":2},{"title":"License","id":"license","level":2}],"title":"Branding Guidelines","sort":2,"contributors":["jhnns","skipjack","rouzbeh84","byzyk"]},{"path":"src/content/glossary.mdx","name":"glossary.mdx","size":5804,"type":"file","extension":".mdx","url":"/glossary/","anchors":[{"title":"A","id":"a","level":2},{"title":"B","id":"b","level":2},{"title":"C","id":"c","level":2},{"title":"D","id":"d","level":2},{"title":"E","id":"e","level":2},{"title":"H","id":"h","level":2},{"title":"L","id":"l","level":2},{"title":"M","id":"m","level":2},{"title":"O","id":"o","level":2},{"title":"P","id":"p","level":2},{"title":"R","id":"r","level":2},{"title":"S","id":"s","level":2},{"title":"T","id":"t","level":2},{"title":"V","id":"v","level":2},{"title":"W","id":"w","level":2}],"title":"Glossary","sort":3,"contributors":["kryptokinght","rouzbeh84","bebraw","skipjack","byzyk","pranshuchittora","jamesgeorge007"]},{"path":"src/content/license.mdx","name":"license.mdx","size":772,"type":"file","extension":".mdx","url":"/license/","anchors":[{"title":"webpack","id":"webpack","level":2},{"title":"webpack logo and icon","id":"webpack-logo-and-icon","level":2},{"title":"webpack documentation","id":"webpack-documentation","level":2},{"title":"webpack code samples","id":"webpack-code-samples","level":2}],"title":"License","sort":5,"contributors":["EugeneHlushko","pranshuchittora"]},{"path":"src/content/printable.mdx","name":"printable.mdx","size":505,"type":"file","extension":".mdx","url":"/printable/","anchors":[{"title":"webpack","id":"webpack","level":1},{"title":"Comparison","id":"comparison","level":1},{"title":"Awesome webpack","id":"awesome-webpack","level":1},{"title":"Branding Guidelines","id":"branding-guidelines","level":1},{"title":"Glossary","id":"glossary","level":1},{"title":"License","id":"license","level":1}],"title":"Printable","sort":999,"contributors":["webpack"]}],"size":1673318,"type":"directory","url":"/"}');
+const _content_namespaceObject = JSON.parse('{"path":"./src/content","name":"content","children":[{"path":"src/content/api","name":"api","children":[{"path":"src/content/api/index.mdx","name":"index.mdx","size":1888,"type":"file","extension":".mdx","url":"/api/","anchors":[{"title":"CLI","id":"cli","level":2},{"title":"Module","id":"module","level":2},{"title":"Node","id":"node","level":2},{"title":"Loaders","id":"loaders","level":2},{"title":"Plugins","id":"plugins","level":2}],"title":"Introduction","sort":-1,"contributors":["tbroadley"]},{"path":"src/content/api/cli.mdx","name":"cli.mdx","size":25994,"type":"file","extension":".mdx","url":"/api/cli/","anchors":[{"title":"Commands","id":"commands","level":2},{"title":"Build","id":"build","level":3},{"title":"Init","id":"init","level":3},{"title":"Loader","id":"loader","level":3},{"title":"Plugin","id":"plugin","level":3},{"title":"Info","id":"info","level":3},{"title":"Configtest","id":"configtest","level":3},{"title":"Serve","id":"serve","level":3},{"title":"Watch","id":"watch","level":3},{"title":"Flags","id":"flags","level":2},{"title":"Negated Flags","id":"negated-flags","level":3},{"title":"Core Flags","id":"core-flags","level":3},{"title":"Usage","id":"usage","level":2},{"title":"With configuration file","id":"with-configuration-file","level":3},{"title":"Without configuration file","id":"without-configuration-file","level":3},{"title":"Default Configurations","id":"default-configurations","level":2},{"title":"Common Options","id":"common-options","level":2},{"title":"help","id":"help","level":3},{"title":"version","id":"version","level":3},{"title":"config","id":"config","level":3},{"title":"config-name","id":"config-name","level":3},{"title":"merge","id":"merge","level":3},{"title":"extends","id":"extends","level":3},{"title":"json","id":"json","level":3},{"title":"Environment Options","id":"environment-options","level":2},{"title":"env","id":"env","level":3},{"title":"node-env","id":"node-env","level":3},{"title":"define-process-env-node-env","id":"define-process-env-node-env","level":3},{"title":"Configuration Options","id":"configuration-options","level":2},{"title":"Analyzing Bundle","id":"analyzing-bundle","level":2},{"title":"Progress","id":"progress","level":2},{"title":"Pass CLI arguments to Node.js","id":"pass-cli-arguments-to-nodejs","level":2},{"title":"Exit codes and their meanings","id":"exit-codes-and-their-meanings","level":2},{"title":"CLI Environment Variables","id":"cli-environment-variables","level":2},{"title":"WEBPACK_PACKAGE","id":"webpack_package","level":3},{"title":"Troubleshooting","id":"troubleshooting","level":2},{"title":"TypeError [ERR_UNKNOWN_FILE_EXTENSION]: Unknown file extension \\".ts\\" for ./webpack.config.ts","id":"typeerror-err_unknown_file_extension-unknown-file-extension-ts-for-webpackconfigts","level":3}],"title":"Command Line Interface","sort":1,"contributors":["anshumanv","rishabh3112","snitin315","evenstensberg","simon04","tbroadley","chenxsan","rencire","madhavarshney","EugeneHlushko","byzyk","wizardofhogwarts","EslamHiko","smelukov","anikethsaha","jamesgeorge007","burhanuday"],"related":[{"title":"Analyzing Build Statistics","url":"https://survivejs.com/webpack/optimizing-build/analyzing-build-statistics/"},{"title":"Three simple ways to inspect a webpack bundle","url":"https://medium.com/@joeclever/three-simple-ways-to-inspect-a-webpack-bundle-7f6a8fe7195d#.7d2i06mjx"},{"title":"Optimising your application bundle size with webpack","url":"https://hackernoon.com/optimising-your-application-bundle-size-with-webpack-e85b00bab579#.5w5ko08pq"},{"title":"Analysing and minimising the size of client-side bundle with webpack and source-map-explorer","url":"https://medium.com/@nimgrg/analysing-and-minimising-the-size-of-client-side-bundle-with-webpack-and-source-map-explorer-41096559beca#.c3t2srr8x"}]},{"path":"src/content/api/node.mdx","name":"node.mdx","size":9916,"type":"file","extension":".mdx","url":"/api/node/","anchors":[{"title":"Installation","id":"installation","level":2},{"title":"webpack()","id":"webpack","level":2},{"title":"Compiler Instance","id":"compiler-instance","level":2},{"title":"Run","id":"run","level":2},{"title":"Watching","id":"watching","level":2},{"title":"Close Watching","id":"close-watching","level":3},{"title":"Invalidate Watching","id":"invalidate-watching","level":3},{"title":"Stats Object","id":"stats-object","level":2},{"title":"stats.hasErrors()","id":"statshaserrors","level":3},{"title":"stats.hasWarnings()","id":"statshaswarnings","level":3},{"title":"stats.toJson(options)","id":"statstojsonoptions","level":3},{"title":"stats.toString(options)","id":"statstostringoptions","level":3},{"title":"MultiCompiler","id":"multicompiler","level":2},{"title":"Error Handling","id":"error-handling","level":2},{"title":"Custom File Systems","id":"custom-file-systems","level":2}],"title":"Node Interface","sort":2,"contributors":["sallar","rynclark","byzyk","wizardofhogwarts","EugeneHlushko","lukasgeiter","toshihidetagami","chenxsan","jamesgeorge007","textbook"]},{"path":"src/content/api/stats.mdx","name":"stats.mdx","size":11861,"type":"file","extension":".mdx","url":"/api/stats/","anchors":[{"title":"Structure","id":"structure","level":2},{"title":"Asset Objects","id":"asset-objects","level":3},{"title":"Chunk Objects","id":"chunk-objects","level":3},{"title":"Module Objects","id":"module-objects","level":3},{"title":"Entry Objects","id":"entry-objects","level":3},{"title":"Errors and Warnings","id":"errors-and-warnings","level":3}],"title":"Stats Data","sort":3,"contributors":["skipjack","franjohn21","byzyk","EugeneHlushko","superburrito","chenxsan","rahul3v","snitin315"]},{"path":"src/content/api/webpack-dev-server.mdx","name":"webpack-dev-server.mdx","size":4181,"type":"file","extension":".mdx","url":"/api/webpack-dev-server/","anchors":[{"title":"Installation","id":"installation","level":2},{"title":"start","id":"start","level":2},{"title":"startCallback(callback)","id":"startcallbackcallback","level":2},{"title":"stop","id":"stop","level":2},{"title":"stopCallback(callback)","id":"stopcallbackcallback","level":2},{"title":"internalIP(family: \\"v4\\" | \\"v6\\")","id":"internalipfamily-v4--v6","level":2},{"title":"internalIPSync(family: \\"v4\\" | \\"v6\\")","id":"internalipsyncfamily-v4--v6","level":2}],"title":"webpack-dev-server API","sort":3,"contributors":["snitin315"]},{"path":"src/content/api/hot-module-replacement.mdx","name":"hot-module-replacement.mdx","size":12482,"type":"file","extension":".mdx","url":"/api/hot-module-replacement/","anchors":[{"title":"Module API","id":"module-api","level":2},{"title":"accept","id":"accept","level":3},{"title":"accept (self)","id":"accept-self","level":3},{"title":"decline","id":"decline","level":3},{"title":"decline (self)","id":"decline-self","level":3},{"title":"dispose (or addDisposeHandler)","id":"dispose-or-adddisposehandler","level":3},{"title":"invalidate","id":"invalidate","level":3},{"title":"removeDisposeHandler","id":"removedisposehandler","level":3},{"title":"Management API","id":"management-api","level":2},{"title":"status","id":"status","level":3},{"title":"check","id":"check","level":3},{"title":"apply","id":"apply","level":3},{"title":"addStatusHandler","id":"addstatushandler","level":3},{"title":"removeStatusHandler","id":"removestatushandler","level":3}],"title":"Hot Module Replacement","sort":4,"contributors":["sokra","skipjack","tbroadley","byzyk","wizardofhogwarts","snitin315"],"related":[{"title":"Concepts - Hot Module Replacement","url":"/concepts/hot-module-replacement"},{"title":"Guides - Hot Module Replacement","url":"/guides/hot-module-replacement"}]},{"path":"src/content/api/loaders.mdx","name":"loaders.mdx","size":26784,"type":"file","extension":".mdx","url":"/api/loaders/","anchors":[{"title":"Examples","id":"examples","level":2},{"title":"Synchronous Loaders","id":"synchronous-loaders","level":3},{"title":"Asynchronous Loaders","id":"asynchronous-loaders","level":3},{"title":"\\"Raw\\" Loader","id":"raw-loader","level":3},{"title":"Pitching Loader","id":"pitching-loader","level":3},{"title":"The Loader Context","id":"the-loader-context","level":2},{"title":"Example for the loader context","id":"example-for-the-loader-context","level":3},{"title":"this.addContextDependency","id":"thisaddcontextdependency","level":3},{"title":"this.addDependency","id":"thisadddependency","level":3},{"title":"this.addMissingDependency","id":"thisaddmissingdependency","level":3},{"title":"this.async","id":"thisasync","level":3},{"title":"this.cacheable","id":"thiscacheable","level":3},{"title":"this.callback","id":"thiscallback","level":3},{"title":"this.clearDependencies","id":"thiscleardependencies","level":3},{"title":"this.context","id":"thiscontext","level":3},{"title":"this.data","id":"thisdata","level":3},{"title":"this.emitError","id":"thisemiterror","level":3},{"title":"this.emitFile","id":"thisemitfile","level":3},{"title":"this.emitWarning","id":"thisemitwarning","level":3},{"title":"this.environment","id":"thisenvironment","level":3},{"title":"this.fs","id":"thisfs","level":3},{"title":"this.getOptions(schema)","id":"thisgetoptionsschema","level":3},{"title":"this.getResolve","id":"thisgetresolve","level":3},{"title":"this.hot","id":"thishot","level":3},{"title":"this.importModule","id":"thisimportmodule","level":3},{"title":"this.loaderIndex","id":"thisloaderindex","level":3},{"title":"this.loadModule","id":"thisloadmodule","level":3},{"title":"this.loaders","id":"thisloaders","level":3},{"title":"this.mode","id":"thismode","level":3},{"title":"this.query","id":"thisquery","level":3},{"title":"this.request","id":"thisrequest","level":3},{"title":"this.resolve","id":"thisresolve","level":3},{"title":"this.resource","id":"thisresource","level":3},{"title":"this.resourcePath","id":"thisresourcepath","level":3},{"title":"this.resourceQuery","id":"thisresourcequery","level":3},{"title":"this.rootContext","id":"thisrootcontext","level":3},{"title":"this.sourceMap","id":"thissourcemap","level":3},{"title":"this.target","id":"thistarget","level":3},{"title":"this.utils","id":"thisutils","level":3},{"title":"this.version","id":"thisversion","level":3},{"title":"this.webpack","id":"thiswebpack","level":3},{"title":"Webpack specific properties","id":"webpack-specific-properties","level":2},{"title":"this._compilation","id":"this_compilation","level":3},{"title":"this._compiler","id":"this_compiler","level":3},{"title":"Deprecated context properties","id":"deprecated-context-properties","level":2},{"title":"this.debug","id":"thisdebug","level":3},{"title":"this.inputValue","id":"thisinputvalue","level":3},{"title":"this.minimize","id":"thisminimize","level":3},{"title":"this.value","id":"thisvalue","level":3},{"title":"this._module","id":"this_module","level":3},{"title":"Error Reporting","id":"error-reporting","level":2},{"title":"Inline matchResource","id":"inline-matchresource","level":2},{"title":"Logging","id":"logging","level":2}],"title":"Loader Interface","sort":5,"contributors":["TheLarkInn","jhnns","tbroadley","byzyk","sokra","EugeneHlushko","jantimon","superburrito","wizardofhogwarts","snitin315","chenxsan","jamesgeorge007"]},{"path":"src/content/api/logging.mdx","name":"logging.mdx","size":4597,"type":"file","extension":".mdx","url":"/api/logging/","anchors":[{"title":"Examples of how to get and use webpack logger in loaders and plugins","id":"examples-of-how-to-get-and-use-webpack-logger-in-loaders-and-plugins","level":2},{"title":"Logger methods","id":"logger-methods","level":2},{"title":"Runtime Logger API","id":"runtime-logger-api","level":2}],"title":"Logger Interface","sort":6,"contributors":["EugeneHlushko","wizardofhogwarts","chenxsan","snitin315"]},{"path":"src/content/api/printable.mdx","name":"printable.mdx","size":1666,"type":"file","extension":".mdx","url":"/api/printable/","anchors":[{"title":"Introduction","id":"introduction","level":1},{"title":"Command Line Interface","id":"command-line-interface","level":1},{"title":"Node Interface","id":"node-interface","level":1},{"title":"Stats Data","id":"stats-data","level":1},{"title":"webpack-dev-server API","id":"webpack-dev-server-api","level":1},{"title":"Hot Module Replacement","id":"hot-module-replacement","level":1},{"title":"Loader Interface","id":"loader-interface","level":1},{"title":"Logger Interface","id":"logger-interface","level":1},{"title":"Module Methods","id":"module-methods","level":1},{"title":"Module Variables","id":"module-variables","level":1},{"title":"Compiler Hooks","id":"compiler-hooks","level":1},{"title":"Compilation Hooks","id":"compilation-hooks","level":1},{"title":"ContextModuleFactory Hooks","id":"contextmodulefactory-hooks","level":1},{"title":"JavascriptParser Hooks","id":"javascriptparser-hooks","level":1},{"title":"NormalModuleFactory Hooks","id":"normalmodulefactory-hooks","level":1},{"title":"Compilation Object","id":"compilation-object","level":1},{"title":"Plugin API","id":"plugin-api","level":1},{"title":"Resolvers","id":"resolvers","level":1}],"title":"Printable","sort":999,"contributors":["webpack"]},{"path":"src/content/api/module-methods.mdx","name":"module-methods.mdx","size":19723,"type":"file","extension":".mdx","url":"/api/module-methods/","anchors":[{"title":"ES6 (Recommended)","id":"es6-recommended","level":2},{"title":"import","id":"import","level":3},{"title":"export","id":"export","level":3},{"title":"import()","id":"import-1","level":3},{"title":"Dynamic expressions in import()","id":"dynamic-expressions-in-import","level":3},{"title":"CommonJS","id":"commonjs","level":2},{"title":"require","id":"require","level":3},{"title":"require.resolve","id":"requireresolve","level":3},{"title":"require.cache","id":"requirecache","level":3},{"title":"require.ensure","id":"requireensure","level":3},{"title":"AMD","id":"amd","level":2},{"title":"define (with factory)","id":"define-with-factory","level":3},{"title":"define (with value)","id":"define-with-value","level":3},{"title":"require (amd-version)","id":"require-amd-version","level":3},{"title":"Labeled Modules","id":"labeled-modules","level":2},{"title":"export label","id":"export-label","level":3},{"title":"require label","id":"require-label","level":3},{"title":"Webpack","id":"webpack","level":2},{"title":"require.context","id":"requirecontext","level":3},{"title":"require.include","id":"requireinclude","level":3},{"title":"require.resolveWeak","id":"requireresolveweak","level":3},{"title":"warning","id":"warning","level":3}],"title":"Module Methods","group":"Modules","sort":7,"contributors":["skipjack","sokra","fadysamirsadek","byzyk","debs-obrien","wizardofhogwarts","EugeneHlushko","chenxsan","jamesgeorge007","WofWca"],"related":[{"title":"CommonJS Wikipedia","url":"https://en.wikipedia.org/wiki/CommonJS"},{"title":"Asynchronous Module Definition","url":"https://en.wikipedia.org/wiki/Asynchronous_module_definition"}]},{"path":"src/content/api/module-variables.mdx","name":"module-variables.mdx","size":8539,"type":"file","extension":".mdx","url":"/api/module-variables/","anchors":[{"title":"module.loaded (NodeJS)","id":"moduleloaded-nodejs","level":2},{"title":"module.hot (webpack-specific)","id":"modulehot-webpack-specific","level":2},{"title":"module.id (CommonJS)","id":"moduleid-commonjs","level":2},{"title":"module.exports (CommonJS)","id":"moduleexports-commonjs","level":2},{"title":"exports (CommonJS)","id":"exports-commonjs","level":2},{"title":"global (NodeJS)","id":"global-nodejs","level":2},{"title":"__dirname (NodeJS)","id":"__dirname-nodejs","level":2},{"title":"import.meta","id":"importmeta","level":2},{"title":"import.meta.url","id":"importmetaurl","level":3},{"title":"import.meta.webpack","id":"importmetawebpack","level":3},{"title":"import.meta.webpackHot","id":"importmetawebpackhot","level":3},{"title":"import.meta.webpackContext","id":"importmetawebpackcontext","level":3},{"title":"__filename (NodeJS)","id":"__filename-nodejs","level":2},{"title":"__resourceQuery (webpack-specific)","id":"__resourcequery-webpack-specific","level":2},{"title":"__webpack_public_path__ (webpack-specific)","id":"__webpack_public_path__-webpack-specific","level":2},{"title":"__webpack_require__ (webpack-specific)","id":"__webpack_require__-webpack-specific","level":2},{"title":"__webpack_chunk_load__ (webpack-specific)","id":"__webpack_chunk_load__-webpack-specific","level":2},{"title":"__webpack_module__ (webpack-specific)","id":"__webpack_module__-webpack-specific","level":2},{"title":"__webpack_module__.id (webpack-specific)","id":"__webpack_module__id-webpack-specific","level":2},{"title":"__webpack_modules__ (webpack-specific)","id":"__webpack_modules__-webpack-specific","level":2},{"title":"__webpack_hash__ (webpack-specific)","id":"__webpack_hash__-webpack-specific","level":2},{"title":"__webpack_get_script_filename__ (webpack-specific)","id":"__webpack_get_script_filename__-webpack-specific","level":2},{"title":"__non_webpack_require__ (webpack-specific)","id":"__non_webpack_require__-webpack-specific","level":2},{"title":"__webpack_exports_info__ (webpack-specific)","id":"__webpack_exports_info__-webpack-specific","level":2},{"title":"__webpack_is_included__ (webpack-specific)","id":"__webpack_is_included__-webpack-specific","level":2},{"title":"__webpack_base_uri__ (webpack-specific)","id":"__webpack_base_uri__-webpack-specific","level":2},{"title":"__webpack_runtime_id__","id":"__webpack_runtime_id__","level":2},{"title":"DEBUG (webpack-specific)","id":"debug-webpack-specific","level":2}],"title":"Module Variables","group":"Modules","sort":8,"contributors":["skipjack","sokra","ahmehri","tbroadley","byzyk","EugeneHlushko","wizardofhogwarts","anikethsaha","chenxsan","jamesgeorge007","snitin315"],"related":[{"title":"CommonJS","url":"https://en.wikipedia.org/wiki/CommonJS"},{"title":"Asynchronous Module Definition","url":"https://en.wikipedia.org/wiki/Asynchronous_module_definition"}]},{"path":"src/content/api/compilation-object.mdx","name":"compilation-object.mdx","size":7134,"type":"file","extension":".mdx","url":"/api/compilation-object/","anchors":[{"title":"compilation object methods","id":"compilation-object-methods","level":2},{"title":"getStats","id":"getstats","level":3},{"title":"addModule","id":"addmodule","level":3},{"title":"getModule","id":"getmodule","level":3},{"title":"findModule","id":"findmodule","level":3},{"title":"buildModule","id":"buildmodule","level":3},{"title":"processModuleDependencies","id":"processmoduledependencies","level":3},{"title":"addEntry","id":"addentry","level":3},{"title":"rebuildModule","id":"rebuildmodule","level":3},{"title":"finish","id":"finish","level":3},{"title":"seal","id":"seal","level":3},{"title":"unseal","id":"unseal","level":3},{"title":"reportDependencyErrorsAndWarnings","id":"reportdependencyerrorsandwarnings","level":3},{"title":"addChunkInGroup","id":"addchunkingroup","level":3},{"title":"addChunk","id":"addchunk","level":3},{"title":"assignDepth","id":"assigndepth","level":3},{"title":"getDependencyReference","id":"getdependencyreference","level":3},{"title":"processDependenciesBlocksForChunkGroups","id":"processdependenciesblocksforchunkgroups","level":3},{"title":"removeReasonsOfDependencyBlock","id":"removereasonsofdependencyblock","level":3},{"title":"patchChunksAfterReasonRemoval","id":"patchchunksafterreasonremoval","level":3},{"title":"removeChunkFromDependencies","id":"removechunkfromdependencies","level":3},{"title":"sortItemsWithChunkIds","id":"sortitemswithchunkids","level":3},{"title":"summarizeDependencies","id":"summarizedependencies","level":3},{"title":"createHash","id":"createhash","level":3},{"title":"createModuleAssets","id":"createmoduleassets","level":3},{"title":"createChunkAssets","id":"createchunkassets","level":3},{"title":"getPath","id":"getpath","level":3},{"title":"getPathWithInfo","id":"getpathwithinfo","level":3},{"title":"createChildCompiler","id":"createchildcompiler","level":3},{"title":"checkConstraints","id":"checkconstraints","level":3},{"title":"emitAsset","id":"emitasset","level":3},{"title":"updateAsset","id":"updateasset","level":3},{"title":"deleteAsset","id":"deleteasset","level":3},{"title":"getAssets","id":"getassets","level":3},{"title":"getAsset","id":"getasset","level":3}],"title":"Compilation Object","group":"Objects","sort":14,"contributors":["EugeneHlushko","wizardofhogwarts","jamesgeorge007","snitin315"]},{"path":"src/content/api/compiler-hooks.mdx","name":"compiler-hooks.mdx","size":6946,"type":"file","extension":".mdx","url":"/api/compiler-hooks/","anchors":[{"title":"Watching","id":"watching","level":2},{"title":"Hooks","id":"hooks","level":2},{"title":"environment","id":"environment","level":3},{"title":"afterEnvironment","id":"afterenvironment","level":3},{"title":"entryOption","id":"entryoption","level":3},{"title":"afterPlugins","id":"afterplugins","level":3},{"title":"afterResolvers","id":"afterresolvers","level":3},{"title":"initialize","id":"initialize","level":3},{"title":"beforeRun","id":"beforerun","level":3},{"title":"run","id":"run","level":3},{"title":"watchRun","id":"watchrun","level":3},{"title":"normalModuleFactory","id":"normalmodulefactory","level":3},{"title":"contextModuleFactory","id":"contextmodulefactory","level":3},{"title":"beforeCompile","id":"beforecompile","level":3},{"title":"compile","id":"compile","level":3},{"title":"thisCompilation","id":"thiscompilation","level":3},{"title":"compilation","id":"compilation","level":3},{"title":"make","id":"make","level":3},{"title":"afterCompile","id":"aftercompile","level":3},{"title":"shouldEmit","id":"shouldemit","level":3},{"title":"emit","id":"emit","level":3},{"title":"afterEmit","id":"afteremit","level":3},{"title":"assetEmitted","id":"assetemitted","level":3},{"title":"done","id":"done","level":3},{"title":"additionalPass","id":"additionalpass","level":3},{"title":"failed","id":"failed","level":3},{"title":"invalid","id":"invalid","level":3},{"title":"watchClose","id":"watchclose","level":3},{"title":"shutdown","id":"shutdown","level":3},{"title":"infrastructureLog","id":"infrastructurelog","level":3},{"title":"log","id":"log","level":3}],"title":"Compiler Hooks","group":"Plugins","sort":9,"contributors":["rishantagarwal","byzyk","madhavarshney","misterdev","EugeneHlushko","superburrito","chenxsan"]},{"path":"src/content/api/compilation-hooks.mdx","name":"compilation-hooks.mdx","size":15807,"type":"file","extension":".mdx","url":"/api/compilation-hooks/","anchors":[{"title":"buildModule","id":"buildmodule","level":3},{"title":"rebuildModule","id":"rebuildmodule","level":3},{"title":"failedModule","id":"failedmodule","level":3},{"title":"succeedModule","id":"succeedmodule","level":3},{"title":"finishModules","id":"finishmodules","level":3},{"title":"finishRebuildingModule","id":"finishrebuildingmodule","level":3},{"title":"seal","id":"seal","level":3},{"title":"unseal","id":"unseal","level":3},{"title":"optimizeDependencies","id":"optimizedependencies","level":3},{"title":"afterOptimizeDependencies","id":"afteroptimizedependencies","level":3},{"title":"afterChunks","id":"afterchunks","level":3},{"title":"optimize","id":"optimize","level":3},{"title":"optimizeModules","id":"optimizemodules","level":3},{"title":"afterOptimizeModules","id":"afteroptimizemodules","level":3},{"title":"optimizeChunks","id":"optimizechunks","level":3},{"title":"afterOptimizeChunks","id":"afteroptimizechunks","level":3},{"title":"optimizeTree","id":"optimizetree","level":3},{"title":"afterOptimizeTree","id":"afteroptimizetree","level":3},{"title":"optimizeChunkModules","id":"optimizechunkmodules","level":3},{"title":"afterOptimizeChunkModules","id":"afteroptimizechunkmodules","level":3},{"title":"shouldRecord","id":"shouldrecord","level":3},{"title":"reviveModules","id":"revivemodules","level":3},{"title":"beforeModuleIds","id":"beforemoduleids","level":3},{"title":"moduleIds","id":"moduleids","level":3},{"title":"optimizeModuleIds","id":"optimizemoduleids","level":3},{"title":"afterOptimizeModuleIds","id":"afteroptimizemoduleids","level":3},{"title":"reviveChunks","id":"revivechunks","level":3},{"title":"beforeChunkIds","id":"beforechunkids","level":3},{"title":"chunkIds","id":"chunkids","level":3},{"title":"optimizeChunkIds","id":"optimizechunkids","level":3},{"title":"afterOptimizeChunkIds","id":"afteroptimizechunkids","level":3},{"title":"recordModules","id":"recordmodules","level":3},{"title":"recordChunks","id":"recordchunks","level":3},{"title":"beforeModuleHash","id":"beforemodulehash","level":3},{"title":"afterModuleHash","id":"aftermodulehash","level":3},{"title":"beforeHash","id":"beforehash","level":3},{"title":"afterHash","id":"afterhash","level":3},{"title":"recordHash","id":"recordhash","level":3},{"title":"record","id":"record","level":3},{"title":"beforeModuleAssets","id":"beforemoduleassets","level":3},{"title":"additionalChunkAssets","id":"additionalchunkassets","level":3},{"title":"shouldGenerateChunkAssets","id":"shouldgeneratechunkassets","level":3},{"title":"beforeChunkAssets","id":"beforechunkassets","level":3},{"title":"additionalAssets","id":"additionalassets","level":3},{"title":"optimizeChunkAssets","id":"optimizechunkassets","level":3},{"title":"afterOptimizeChunkAssets","id":"afteroptimizechunkassets","level":3},{"title":"optimizeAssets","id":"optimizeassets","level":3},{"title":"afterOptimizeAssets","id":"afteroptimizeassets","level":3},{"title":"processAssets","id":"processassets","level":3},{"title":"afterProcessAssets","id":"afterprocessassets","level":3},{"title":"needAdditionalSeal","id":"needadditionalseal","level":3},{"title":"afterSeal","id":"afterseal","level":3},{"title":"chunkHash","id":"chunkhash","level":3},{"title":"moduleAsset","id":"moduleasset","level":3},{"title":"chunkAsset","id":"chunkasset","level":3},{"title":"assetPath","id":"assetpath","level":3},{"title":"needAdditionalPass","id":"needadditionalpass","level":3},{"title":"childCompiler","id":"childcompiler","level":3},{"title":"normalModuleLoader","id":"normalmoduleloader","level":3}],"title":"Compilation Hooks","group":"Plugins","sort":10,"contributors":["slavafomin","byzyk","madhavarshney","misterdev","wizardofhogwarts","EugeneHlushko","chenxsan","jamesgeorge007"]},{"path":"src/content/api/contextmodulefactory-hooks.mdx","name":"contextmodulefactory-hooks.mdx","size":1531,"type":"file","extension":".mdx","url":"/api/contextmodulefactory-hooks/","anchors":[{"title":"beforeResolve","id":"beforeresolve","level":3},{"title":"afterResolve","id":"afterresolve","level":3},{"title":"contextModuleFiles","id":"contextmodulefiles","level":3},{"title":"alternativeRequests","id":"alternativerequests","level":3}],"title":"ContextModuleFactory Hooks","group":"Plugins","sort":11,"contributors":["iguessitsokay"]},{"path":"src/content/api/parser.mdx","name":"parser.mdx","size":9932,"type":"file","extension":".mdx","url":"/api/parser/","anchors":[{"title":"Hooks","id":"hooks","level":2},{"title":"evaluateTypeof","id":"evaluatetypeof","level":3},{"title":"evaluate","id":"evaluate","level":3},{"title":"evaluateIdentifier","id":"evaluateidentifier","level":3},{"title":"evaluateDefinedIdentifier","id":"evaluatedefinedidentifier","level":3},{"title":"evaluateCallExpressionMember","id":"evaluatecallexpressionmember","level":3},{"title":"statement","id":"statement","level":3},{"title":"statementIf","id":"statementif","level":3},{"title":"label","id":"label","level":3},{"title":"import","id":"import","level":3},{"title":"importSpecifier","id":"importspecifier","level":3},{"title":"export","id":"export","level":3},{"title":"exportImport","id":"exportimport","level":3},{"title":"exportDeclaration","id":"exportdeclaration","level":3},{"title":"exportExpression","id":"exportexpression","level":3},{"title":"exportSpecifier","id":"exportspecifier","level":3},{"title":"exportImportSpecifier","id":"exportimportspecifier","level":3},{"title":"varDeclaration","id":"vardeclaration","level":3},{"title":"varDeclarationLet","id":"vardeclarationlet","level":3},{"title":"varDeclarationConst","id":"vardeclarationconst","level":3},{"title":"varDeclarationVar","id":"vardeclarationvar","level":3},{"title":"canRename","id":"canrename","level":3},{"title":"rename","id":"rename","level":3},{"title":"assigned","id":"assigned","level":3},{"title":"assign","id":"assign","level":3},{"title":"typeof","id":"typeof","level":3},{"title":"call","id":"call","level":3},{"title":"callMemberChain","id":"callmemberchain","level":3},{"title":"new","id":"new","level":3},{"title":"expression","id":"expression","level":3},{"title":"expressionConditionalOperator","id":"expressionconditionaloperator","level":3},{"title":"program","id":"program","level":3}],"title":"JavascriptParser Hooks","group":"Plugins","sort":12,"contributors":["byzyk","DeTeam","misterdev","EugeneHlushko","chenxsan"]},{"path":"src/content/api/normalmodulefactory-hooks.mdx","name":"normalmodulefactory-hooks.mdx","size":3784,"type":"file","extension":".mdx","url":"/api/normalmodulefactory-hooks/","anchors":[{"title":"beforeResolve","id":"beforeresolve","level":3},{"title":"factorize","id":"factorize","level":3},{"title":"resolve","id":"resolve","level":3},{"title":"resolveForScheme","id":"resolveforscheme","level":3},{"title":"afterResolve","id":"afterresolve","level":3},{"title":"createModule","id":"createmodule","level":3},{"title":"createModuleClass","id":"createmoduleclass","level":3},{"title":"module","id":"module","level":3},{"title":"createParser","id":"createparser","level":3},{"title":"parser","id":"parser","level":3},{"title":"createGenerator","id":"creategenerator","level":3},{"title":"generator","id":"generator","level":3}],"title":"NormalModuleFactory Hooks","group":"Plugins","sort":13,"contributors":["iguessitsokay","chenxsan"]},{"path":"src/content/api/plugins.mdx","name":"plugins.mdx","size":6988,"type":"file","extension":".mdx","url":"/api/plugins/","anchors":[{"title":"Tapable","id":"tapable","level":2},{"title":"Plugin Types","id":"plugin-types","level":2},{"title":"Custom Hooks","id":"custom-hooks","level":2},{"title":"Reporting Progress","id":"reporting-progress","level":2},{"title":"Logging","id":"logging","level":2},{"title":"Next Steps","id":"next-steps","level":2}],"title":"Plugin API","group":"Plugins","sort":14,"contributors":["thelarkinn","pksjce","e-cloud","byzyk","EugeneHlushko","wizardofhogwarts","snitin315"]},{"path":"src/content/api/resolvers.mdx","name":"resolvers.mdx","size":2183,"type":"file","extension":".mdx","url":"/api/resolvers/","anchors":[{"title":"Types","id":"types","level":2},{"title":"Configuration Options","id":"configuration-options","level":2}],"title":"Resolvers","group":"Plugins","sort":15,"contributors":["EugeneHlushko","chenxsan"]}],"size":181936,"type":"directory","url":"/api/"},{"path":"src/content/blog","name":"blog","children":[{"path":"src/content/blog/2020-12-08-roadmap-2021.mdx","name":"2020-12-08-roadmap-2021.mdx","size":16371,"type":"file","extension":".mdx","url":"/blog/2020-12-08-roadmap-2021/","anchors":[{"title":"What happened so far?","id":"what-happened-so-far","level":2},{"title":"Roadmap 2021","id":"roadmap-2021","level":2},{"title":"Further stabilizing","id":"further-stabilizing","level":3},{"title":"EcmaScript Modules","id":"ecmascript-modules","level":3},{"title":"More first-class citizen","id":"more-first-class-citizen","level":3},{"title":"SourceMap performance","id":"sourcemap-performance","level":3},{"title":"exports/imports package.json field","id":"exportsimports-packagejson-field","level":3},{"title":"Improve CommonJS analysis","id":"improve-commonjs-analysis","level":3},{"title":"Hot Module Replacement for Module Federation","id":"hot-module-replacement-for-module-federation","level":3},{"title":"Hinting system","id":"hinting-system","level":3},{"title":"Multi-Threading","id":"multi-threading","level":3},{"title":"WebAssembly","id":"webassembly","level":3},{"title":"Disclaimer","id":"disclaimer","level":2}],"title":"Roadmap 2021 (2020-12-08)","sort":-202012080,"contributors":["sokra"]},{"path":"src/content/blog/2020-10-10-webpack-5-release.mdx","name":"2020-10-10-webpack-5-release.mdx","size":71620,"type":"file","extension":".mdx","url":"/blog/2020-10-10-webpack-5-release/","anchors":[{"title":"Common Questions","id":"common-questions","level":2},{"title":"So what does the release mean?","id":"so-what-does-the-release-mean","level":3},{"title":"So when is the time to upgrade?","id":"so-when-is-the-time-to-upgrade","level":3},{"title":"Sponsoring Update","id":"sponsoring-update","level":2},{"title":"General direction","id":"general-direction","level":2},{"title":"Migration Guide","id":"migration-guide","level":2},{"title":"Major Changes: Removals","id":"major-changes-removals","level":2},{"title":"Removed Deprecated Items","id":"removed-deprecated-items","level":3},{"title":"Deprecation codes","id":"deprecation-codes","level":3},{"title":"Syntax deprecated","id":"syntax-deprecated","level":3},{"title":"Automatic Node.js Polyfills Removed","id":"automatic-nodejs-polyfills-removed","level":3},{"title":"Major Changes: Long Term Caching","id":"major-changes-long-term-caching","level":2},{"title":"Deterministic Chunk, Module IDs and Export names","id":"deterministic-chunk-module-ids-and-export-names","level":3},{"title":"Real Content Hash","id":"real-content-hash","level":3},{"title":"Major Changes: Development Support","id":"major-changes-development-support","level":2},{"title":"Named Chunk IDs","id":"named-chunk-ids","level":3},{"title":"Module Federation","id":"module-federation","level":3},{"title":"Major Changes: New Web Platform Features","id":"major-changes-new-web-platform-features","level":2},{"title":"JSON modules","id":"json-modules","level":3},{"title":"import.meta","id":"importmeta","level":3},{"title":"Asset modules","id":"asset-modules","level":3},{"title":"Native Worker support","id":"native-worker-support","level":3},{"title":"URIs","id":"uris","level":3},{"title":"Async modules","id":"async-modules","level":3},{"title":"Externals","id":"externals","level":3},{"title":"Major Changes: New Node.js Ecosystem Features","id":"major-changes-new-nodejs-ecosystem-features","level":2},{"title":"Resolving","id":"resolving","level":3},{"title":"Major Changes: Development Experience","id":"major-changes-development-experience","level":2},{"title":"Improved target","id":"improved-target","level":3},{"title":"Stats","id":"stats","level":3},{"title":"Progress","id":"progress","level":3},{"title":"Automatic unique naming","id":"automatic-unique-naming","level":3},{"title":"Automatic public path","id":"automatic-public-path","level":3},{"title":"Typescript typings","id":"typescript-typings","level":3},{"title":"Major Changes: Optimization","id":"major-changes-optimization","level":2},{"title":"Nested tree-shaking","id":"nested-tree-shaking","level":3},{"title":"Inner-module tree-shaking","id":"inner-module-tree-shaking","level":3},{"title":"CommonJs Tree Shaking","id":"commonjs-tree-shaking","level":3},{"title":"Side-Effect analysis","id":"side-effect-analysis","level":3},{"title":"Optimization per runtime","id":"optimization-per-runtime","level":3},{"title":"Module Concatenation","id":"module-concatenation","level":3},{"title":"General Tree Shaking improvements","id":"general-tree-shaking-improvements","level":3},{"title":"Development Production Similarity","id":"development-production-similarity","level":3},{"title":"Improved Code Generation","id":"improved-code-generation","level":3},{"title":"Improved target option","id":"improved-target-option","level":3},{"title":"SplitChunks and Module Sizes","id":"splitchunks-and-module-sizes","level":3},{"title":"Major Changes: Performance","id":"major-changes-performance","level":2},{"title":"Persistent Caching","id":"persistent-caching","level":3},{"title":"File Emitting","id":"file-emitting","level":3},{"title":"Major Changes: Long outstanding problems","id":"major-changes-long-outstanding-problems","level":2},{"title":"Code Splitting for single-file-targets","id":"code-splitting-for-single-file-targets","level":3},{"title":"Updated Resolver","id":"updated-resolver","level":3},{"title":"Chunks without JS","id":"chunks-without-js","level":3},{"title":"Major Changes: Future","id":"major-changes-future","level":2},{"title":"Experiments","id":"experiments","level":3},{"title":"Minimum Node.js Version","id":"minimum-nodejs-version","level":3},{"title":"Changes to the Configuration","id":"changes-to-the-configuration","level":2},{"title":"Changes to the Structure","id":"changes-to-the-structure","level":3},{"title":"Changes to the Defaults","id":"changes-to-the-defaults","level":3},{"title":"Loader related Changes","id":"loader-related-changes","level":2},{"title":"this.getOptions","id":"thisgetoptions","level":3},{"title":"this.exec","id":"thisexec","level":3},{"title":"this.getResolve","id":"thisgetresolve","level":3},{"title":"Major Internal Changes","id":"major-internal-changes","level":2},{"title":"New plugin order","id":"new-plugin-order","level":3},{"title":"Runtime Modules","id":"runtime-modules","level":3},{"title":"Serialization","id":"serialization","level":3},{"title":"Plugins for Caching","id":"plugins-for-caching","level":3},{"title":"Hook Object Frozen","id":"hook-object-frozen","level":3},{"title":"Tapable Upgrade","id":"tapable-upgrade","level":3},{"title":"Staged Hooks","id":"staged-hooks","level":3},{"title":"Main/Chunk/ModuleTemplate deprecation","id":"mainchunkmoduletemplate-deprecation","level":3},{"title":"Entry point descriptor","id":"entry-point-descriptor","level":3},{"title":"Order and IDs","id":"order-and-ids","level":3},{"title":"Arrays to Sets","id":"arrays-to-sets","level":3},{"title":"Compilation.fileSystemInfo","id":"compilationfilesysteminfo","level":3},{"title":"Filesystems","id":"filesystems","level":3},{"title":"Hot Module Replacement","id":"hot-module-replacement","level":3},{"title":"Work Queues","id":"work-queues","level":3},{"title":"Logging","id":"logging","level":3},{"title":"Module and Chunk Graph","id":"module-and-chunk-graph","level":3},{"title":"Init Fragments","id":"init-fragments","level":3},{"title":"Module Source Types","id":"module-source-types","level":3},{"title":"Plugins for Stats","id":"plugins-for-stats","level":3},{"title":"New Watching","id":"new-watching","level":3},{"title":"SizeOnlySource after emit","id":"sizeonlysource-after-emit","level":3},{"title":"Emitting assets multiple times","id":"emitting-assets-multiple-times","level":3},{"title":"ExportsInfo","id":"exportsinfo","level":3},{"title":"Code Generation Phase","id":"code-generation-phase","level":3},{"title":"DependencyReference","id":"dependencyreference","level":3},{"title":"Presentational Dependencies","id":"presentational-dependencies","level":3},{"title":"Deprecated loaders","id":"deprecated-loaders","level":3},{"title":"Minor Changes","id":"minor-changes","level":2},{"title":"Other Minor Changes","id":"other-minor-changes","level":2}],"title":"Webpack 5 release (2020-10-10)","sort":-202010100,"contributors":["sokra","chenxsan"]},{"path":"src/content/blog/index.mdx","name":"index.mdx","size":214,"type":"file","extension":".mdx","url":"/blog/","anchors":[{"title":"Popular posts","id":"popular-posts","level":2}],"title":"Blog","sort":-1,"contributors":["sokra"]},{"path":"src/content/blog/printable.mdx","name":"printable.mdx","size":383,"type":"file","extension":".mdx","url":"/blog/printable/","anchors":[{"title":"Roadmap 2021 (2020-12-08)","id":"roadmap-2021-2020-12-08","level":1},{"title":"Webpack 5 release (2020-10-10)","id":"webpack-5-release-2020-10-10","level":1},{"title":"Blog","id":"blog","level":1}],"title":"Printable","sort":999,"contributors":["webpack"]}],"size":88588,"type":"directory","url":"/blog/"},{"path":"src/content/concepts","name":"concepts","children":[{"path":"src/content/concepts/index.mdx","name":"index.mdx","size":7732,"type":"file","extension":".mdx","url":"/concepts/","anchors":[{"title":"Entry","id":"entry","level":2},{"title":"Output","id":"output","level":2},{"title":"Loaders","id":"loaders","level":2},{"title":"Plugins","id":"plugins","level":2},{"title":"Mode","id":"mode","level":2},{"title":"Browser Compatibility","id":"browser-compatibility","level":2},{"title":"Environment","id":"environment","level":2}],"title":"Concepts","sort":-1,"contributors":["TheLarkInn","jhnns","grgur","johnstew","jimrfenner","TheDutchCoder","adambraimbridge","EugeneHlushko","jeremenichelli","arjunsajeev","byzyk","yairhaimo","farskid","LukeMwila","Jalitha","muhmushtaha","chenxsan","RyanGreyling2"]},{"path":"src/content/concepts/entry-points.mdx","name":"entry-points.mdx","size":6616,"type":"file","extension":".mdx","url":"/concepts/entry-points/","anchors":[{"title":"Single Entry (Shorthand) Syntax","id":"single-entry-shorthand-syntax","level":2},{"title":"Object Syntax","id":"object-syntax","level":2},{"title":"EntryDescription object","id":"entrydescription-object","level":3},{"title":"Scenarios","id":"scenarios","level":2},{"title":"Separate App and Vendor Entries","id":"separate-app-and-vendor-entries","level":3},{"title":"Multi-Page Application","id":"multi-page-application","level":3}],"title":"Entry Points","sort":1,"contributors":["TheLarkInn","chrisVillanueva","byzyk","sokra","EugeneHlushko","Zearin","chenxsan","adyjs","anshumanv","ritikbanger"]},{"path":"src/content/concepts/output.mdx","name":"output.mdx","size":1840,"type":"file","extension":".mdx","url":"/concepts/output/","anchors":[{"title":"Usage","id":"usage","level":2},{"title":"Multiple Entry Points","id":"multiple-entry-points","level":2},{"title":"Advanced","id":"advanced","level":2}],"title":"Output","sort":2,"contributors":["TheLarkInn","chyipin","rouzbeh84","byzyk","EugeneHlushko"]},{"path":"src/content/concepts/loaders.mdx","name":"loaders.mdx","size":5546,"type":"file","extension":".mdx","url":"/concepts/loaders/","anchors":[{"title":"Example","id":"example","level":2},{"title":"Using Loaders","id":"using-loaders","level":2},{"title":"Configuration","id":"configuration","level":3},{"title":"Inline","id":"inline","level":3},{"title":"Loader Features","id":"loader-features","level":2},{"title":"Resolving Loaders","id":"resolving-loaders","level":2}],"title":"Loaders","sort":3,"contributors":["manekinekko","evenstensberg","SpaceK33z","gangachris","TheLarkInn","simon04","jhnns","byzyk","debs-obrien","EugeneHlushko","wizardofhogwarts","lukasgeiter","furkle","jamesgeorge007","textbook"]},{"path":"src/content/concepts/plugins.mdx","name":"plugins.mdx","size":3373,"type":"file","extension":".mdx","url":"/concepts/plugins/","anchors":[{"title":"Anatomy","id":"anatomy","level":2},{"title":"Usage","id":"usage","level":2},{"title":"Configuration","id":"configuration","level":3},{"title":"Node API","id":"node-api","level":3}],"title":"Plugins","sort":4,"contributors":["TheLarkInn","jhnns","rouzbeh84","johnstew","MisterDev","byzyk","chenxsan"]},{"path":"src/content/concepts/configuration.mdx","name":"configuration.mdx","size":2448,"type":"file","extension":".mdx","url":"/concepts/configuration/","anchors":[{"title":"Introductory Configuration","id":"introductory-configuration","level":2},{"title":"Multiple Targets","id":"multiple-targets","level":2},{"title":"Using other Configuration Languages","id":"using-other-configuration-languages","level":2}],"title":"Configuration","sort":5,"contributors":["TheLarkInn","simon04","EugeneHlushko","byzyk"]},{"path":"src/content/concepts/modules.mdx","name":"modules.mdx","size":2898,"type":"file","extension":".mdx","url":"/concepts/modules/","anchors":[{"title":"What is a webpack Module","id":"what-is-a-webpack-module","level":2},{"title":"Supported Module Types","id":"supported-module-types","level":2}],"title":"Modules","sort":6,"contributors":["TheLarkInn","simon04","rouzbeh84","EugeneHlushko","byzyk"],"related":[{"title":"JavaScript Module Systems Showdown","url":"https://auth0.com/blog/javascript-module-systems-showdown/"}]},{"path":"src/content/concepts/module-resolution.mdx","name":"module-resolution.mdx","size":4080,"type":"file","extension":".mdx","url":"/concepts/module-resolution/","anchors":[{"title":"Resolving rules in webpack","id":"resolving-rules-in-webpack","level":2},{"title":"Absolute paths","id":"absolute-paths","level":3},{"title":"Relative paths","id":"relative-paths","level":3},{"title":"Module paths","id":"module-paths","level":3},{"title":"Resolving Loaders","id":"resolving-loaders","level":2},{"title":"Caching","id":"caching","level":2}],"title":"Module Resolution","sort":7,"contributors":["pksjce","pastelsky","byzyk","EugeneHlushko","wizardofhogwarts"]},{"path":"src/content/concepts/module-federation.mdx","name":"module-federation.mdx","size":14602,"type":"file","extension":".mdx","url":"/concepts/module-federation/","anchors":[{"title":"Motivation","id":"motivation","level":2},{"title":"Low-level concepts","id":"low-level-concepts","level":2},{"title":"High-level concepts","id":"high-level-concepts","level":2},{"title":"Building blocks","id":"building-blocks","level":2},{"title":"ContainerPlugin (low level)","id":"containerplugin-low-level","level":3},{"title":"ContainerReferencePlugin (low level)","id":"containerreferenceplugin-low-level","level":3},{"title":"ModuleFederationPlugin (high level)","id":"modulefederationplugin-high-level","level":3},{"title":"Concept goals","id":"concept-goals","level":2},{"title":"Use cases","id":"use-cases","level":2},{"title":"Separate builds per page","id":"separate-builds-per-page","level":3},{"title":"Components library as container","id":"components-library-as-container","level":3},{"title":"Dynamic Remote Containers","id":"dynamic-remote-containers","level":2},{"title":"Promise Based Dynamic Remotes","id":"promise-based-dynamic-remotes","level":2},{"title":"Dynamic Public Path","id":"dynamic-public-path","level":2},{"title":"Offer a host API to set the publicPath","id":"offer-a-host-api-to-set-the-publicpath","level":3},{"title":"Infer publicPath from script","id":"infer-publicpath-from-script","level":3},{"title":"Troubleshooting","id":"troubleshooting","level":2},{"title":"Uncaught Error: Shared module is not available for eager consumption","id":"uncaught-error-shared-module-is-not-available-for-eager-consumption","level":3},{"title":"Uncaught Error: Module \\"./Button\\" does not exist in container.","id":"uncaught-error-module-button-does-not-exist-in-container","level":3},{"title":"Uncaught TypeError: fn is not a function","id":"uncaught-typeerror-fn-is-not-a-function","level":3},{"title":"Collision between modules from different remotes","id":"collision-between-modules-from-different-remotes","level":3}],"title":"Module Federation","sort":8,"contributors":["sokra","chenxsan","EugeneHlushko","jamesgeorge007","ScriptedAlchemy","snitin315","XiaofengXie16","KyleBastien","Alevale","burhanuday"],"related":[{"title":"Webpack 5 Module Federation: A game-changer in JavaScript architecture","url":"https://medium.com/swlh/webpack-5-module-federation-a-game-changer-to-javascript-architecture-bcdd30e02669"},{"title":"Explanations and Examples","url":"https://github.com/module-federation/module-federation-examples"},{"title":"Module Federation YouTube Playlist","url":"https://www.youtube.com/playlist?list=PLWSiF9YHHK-DqsFHGYbeAMwbd9xcZbEWJ"}]},{"path":"src/content/concepts/dependency-graph.mdx","name":"dependency-graph.mdx","size":1223,"type":"file","extension":".mdx","url":"/concepts/dependency-graph/","anchors":[],"title":"Dependency Graph","sort":9,"contributors":["TheLarkInn","EugeneHlushko"],"related":[{"title":"HTTP2 Aggressive Splitting Example","url":"https://github.com/webpack/webpack/tree/master/examples/http2-aggressive-splitting"},{"title":"webpack & HTTP/2","url":"https://medium.com/webpack/webpack-http-2-7083ec3f3ce6"}]},{"path":"src/content/concepts/targets.mdx","name":"targets.mdx","size":2462,"type":"file","extension":".mdx","url":"/concepts/targets/","anchors":[{"title":"Usage","id":"usage","level":2},{"title":"Multiple Targets","id":"multiple-targets","level":2},{"title":"Resources","id":"resources","level":2}],"title":"Targets","sort":10,"contributors":["TheLarkInn","rouzbeh84","johnstew","srilman","byzyk","EugeneHlushko"]},{"path":"src/content/concepts/manifest.mdx","name":"manifest.mdx","size":3393,"type":"file","extension":".mdx","url":"/concepts/manifest/","anchors":[{"title":"Runtime","id":"runtime","level":2},{"title":"Manifest","id":"manifest","level":2},{"title":"The Problem","id":"the-problem","level":2}],"title":"The Manifest","sort":11,"contributors":["skipjack","EugeneHlushko"],"related":[{"title":"Separating a Manifest","url":"https://survivejs.com/webpack/optimizing/separating-manifest/"},{"title":"Predictable Long Term Caching with webpack","url":"https://medium.com/webpack/predictable-long-term-caching-with-webpack-d3eee1d3fa31"},{"title":"Caching","url":"/guides/caching/"}]},{"path":"src/content/concepts/hot-module-replacement.mdx","name":"hot-module-replacement.mdx","size":4931,"type":"file","extension":".mdx","url":"/concepts/hot-module-replacement/","anchors":[{"title":"How It Works","id":"how-it-works","level":2},{"title":"In the Application","id":"in-the-application","level":3},{"title":"In the Compiler","id":"in-the-compiler","level":3},{"title":"In a Module","id":"in-a-module","level":3},{"title":"In the Runtime","id":"in-the-runtime","level":3},{"title":"Get Started","id":"get-started","level":2}],"title":"Hot Module Replacement","sort":12,"contributors":["kryptokinght","SpaceK33z","sokra","GRardB","rouzbeh84","skipjack"]},{"path":"src/content/concepts/why-webpack.mdx","name":"why-webpack.mdx","size":4124,"type":"file","extension":".mdx","url":"/concepts/why-webpack/","anchors":[{"title":"IIFEs - Immediately invoked function expressions","id":"iifes---immediately-invoked-function-expressions","level":2},{"title":"Birth of JavaScript Modules happened thanks to Node.js","id":"birth-of-javascript-modules-happened-thanks-to-nodejs","level":2},{"title":"npm + Node.js + modules – mass distribution","id":"npm--nodejs--modules--mass-distribution","level":2},{"title":"ESM - ECMAScript Modules","id":"esm---ecmascript-modules","level":2},{"title":"Automatic Dependency Collection","id":"automatic-dependency-collection","level":2},{"title":"Wouldn\'t it be nice…","id":"wouldnt-it-be-nice","level":2}],"title":"Why webpack","sort":13,"contributors":["debs-obrien","montogeek","jeremenichelli","EugeneHlushko"]},{"path":"src/content/concepts/under-the-hood.mdx","name":"under-the-hood.mdx","size":3980,"type":"file","extension":".mdx","url":"/concepts/under-the-hood/","anchors":[{"title":"The main parts","id":"the-main-parts","level":2},{"title":"Chunks","id":"chunks","level":2},{"title":"Output","id":"output","level":2}],"title":"Under The Hood","sort":14,"contributors":["smelukov","EugeneHlushko","chenxsan","amirsaeed671"]},{"path":"src/content/concepts/printable.mdx","name":"printable.mdx","size":1271,"type":"file","extension":".mdx","url":"/concepts/printable/","anchors":[{"title":"Concepts","id":"concepts","level":1},{"title":"Entry Points","id":"entry-points","level":1},{"title":"Output","id":"output","level":1},{"title":"Loaders","id":"loaders","level":1},{"title":"Plugins","id":"plugins","level":1},{"title":"Configuration","id":"configuration","level":1},{"title":"Modules","id":"modules","level":1},{"title":"Module Resolution","id":"module-resolution","level":1},{"title":"Module Federation","id":"module-federation","level":1},{"title":"Dependency Graph","id":"dependency-graph","level":1},{"title":"Targets","id":"targets","level":1},{"title":"The Manifest","id":"the-manifest","level":1},{"title":"Hot Module Replacement","id":"hot-module-replacement","level":1},{"title":"Why webpack","id":"why-webpack","level":1},{"title":"Under The Hood","id":"under-the-hood","level":1}],"title":"Printable","sort":999,"contributors":["webpack"]}],"size":70519,"type":"directory","url":"/concepts/"},{"path":"src/content/configuration","name":"configuration","children":[{"path":"src/content/configuration/index.mdx","name":"index.mdx","size":3489,"type":"file","extension":".mdx","url":"/configuration/","anchors":[{"title":"Use a different configuration file","id":"use-a-different-configuration-file","level":2},{"title":"Set up a new webpack project","id":"set-up-a-new-webpack-project","level":2}],"title":"Configuration","sort":1,"contributors":["sokra","skipjack","grgur","bondz","sricc","terinjokes","mattce","kbariotis","sterlingvix","jeremenichelli","dasarianudeep","lukasgeiter","EugeneHlushko","bigdawggi","anshumanv","textbook","coly010","chenxsan"]},{"path":"src/content/configuration/configuration-languages.mdx","name":"configuration-languages.mdx","size":5621,"type":"file","extension":".mdx","url":"/configuration/configuration-languages/","anchors":[{"title":"TypeScript","id":"typescript","level":2},{"title":"CoffeeScript","id":"coffeescript","level":2},{"title":"Babel and JSX","id":"babel-and-jsx","level":2}],"title":"Configuration Languages","sort":2,"contributors":["sokra","skipjack","tarang9211","simon04","peterblazejewicz","youta1119","byzyk","Nek-","liyiming22","daimalou","ChocolateLoverRaj","snitin315"]},{"path":"src/content/configuration/configuration-types.mdx","name":"configuration-types.mdx","size":3714,"type":"file","extension":".mdx","url":"/configuration/configuration-types/","anchors":[{"title":"Exporting a Function","id":"exporting-a-function","level":2},{"title":"Exporting a Promise","id":"exporting-a-promise","level":2},{"title":"Exporting multiple configurations","id":"exporting-multiple-configurations","level":2},{"title":"dependencies","id":"dependencies","level":3},{"title":"parallelism","id":"parallelism","level":3}],"title":"Configuration Types","sort":3,"contributors":["sokra","skipjack","kbariotis","simon04","fadysamirsadek","byzyk","EugeneHlushko","dhurlburtusa","anshumanv","thorn0"]},{"path":"src/content/configuration/entry-context.mdx","name":"entry-context.mdx","size":5075,"type":"file","extension":".mdx","url":"/configuration/entry-context/","anchors":[{"title":"context","id":"context","level":2},{"title":"entry","id":"entry","level":2},{"title":"Naming","id":"naming","level":3},{"title":"Entry descriptor","id":"entry-descriptor","level":3},{"title":"Output filename","id":"output-filename","level":3},{"title":"Dependencies","id":"dependencies","level":3},{"title":"Dynamic entry","id":"dynamic-entry","level":3}],"title":"Entry and Context","sort":4,"contributors":["sokra","skipjack","tarang9211","byzyk","madhavarshney","EugeneHlushko","smelukov","anshumanv","snitin315"]},{"path":"src/content/configuration/mode.mdx","name":"mode.mdx","size":2960,"type":"file","extension":".mdx","url":"/configuration/mode/","anchors":[{"title":"Usage","id":"usage","level":2},{"title":"Mode: development","id":"mode-development","level":3},{"title":"Mode: production","id":"mode-production","level":3},{"title":"Mode: none","id":"mode-none","level":3}],"title":"Mode","sort":5,"contributors":["EugeneHlushko","byzyk","mrichmond","Fental","snitin315","chenxsan"],"related":[{"title":"webpack default options (source code)","url":"https://github.com/webpack/webpack/blob/main/lib/config/defaults.js"}]},{"path":"src/content/configuration/output.mdx","name":"output.mdx","size":70419,"type":"file","extension":".mdx","url":"/configuration/output/","anchors":[{"title":"output.assetModuleFilename","id":"outputassetmodulefilename","level":2},{"title":"output.asyncChunks","id":"outputasyncchunks","level":2},{"title":"output.auxiliaryComment","id":"outputauxiliarycomment","level":2},{"title":"output.charset","id":"outputcharset","level":2},{"title":"output.chunkFilename","id":"outputchunkfilename","level":2},{"title":"output.chunkFormat","id":"outputchunkformat","level":2},{"title":"output.chunkLoadTimeout","id":"outputchunkloadtimeout","level":2},{"title":"output.chunkLoadingGlobal","id":"outputchunkloadingglobal","level":2},{"title":"output.chunkLoading","id":"outputchunkloading","level":2},{"title":"output.clean","id":"outputclean","level":2},{"title":"output.compareBeforeEmit","id":"outputcomparebeforeemit","level":2},{"title":"output.crossOriginLoading","id":"outputcrossoriginloading","level":2},{"title":"output.devtoolFallbackModuleFilenameTemplate","id":"outputdevtoolfallbackmodulefilenametemplate","level":2},{"title":"output.devtoolModuleFilenameTemplate","id":"outputdevtoolmodulefilenametemplate","level":2},{"title":"output.devtoolNamespace","id":"outputdevtoolnamespace","level":2},{"title":"output.enabledChunkLoadingTypes","id":"outputenabledchunkloadingtypes","level":2},{"title":"output.enabledLibraryTypes","id":"outputenabledlibrarytypes","level":2},{"title":"output.enabledWasmLoadingTypes","id":"outputenabledwasmloadingtypes","level":2},{"title":"output.environment","id":"outputenvironment","level":2},{"title":"output.filename","id":"outputfilename","level":2},{"title":"Template strings","id":"template-strings","level":3},{"title":"output.globalObject","id":"outputglobalobject","level":2},{"title":"output.hashDigest","id":"outputhashdigest","level":2},{"title":"output.hashDigestLength","id":"outputhashdigestlength","level":2},{"title":"output.hashFunction","id":"outputhashfunction","level":2},{"title":"output.hashSalt","id":"outputhashsalt","level":2},{"title":"output.hotUpdateChunkFilename","id":"outputhotupdatechunkfilename","level":2},{"title":"output.hotUpdateGlobal","id":"outputhotupdateglobal","level":2},{"title":"output.hotUpdateMainFilename","id":"outputhotupdatemainfilename","level":2},{"title":"output.iife","id":"outputiife","level":2},{"title":"output.ignoreBrowserWarnings","id":"outputignorebrowserwarnings","level":2},{"title":"output.importFunctionName","id":"outputimportfunctionname","level":2},{"title":"output.library","id":"outputlibrary","level":2},{"title":"output.library.amdContainer","id":"outputlibraryamdcontainer","level":3},{"title":"output.library.name","id":"outputlibraryname","level":3},{"title":"output.library.type","id":"outputlibrarytype","level":3},{"title":"output.library.export","id":"outputlibraryexport","level":3},{"title":"output.library.auxiliaryComment","id":"outputlibraryauxiliarycomment","level":3},{"title":"output.library.umdNamedDefine","id":"outputlibraryumdnameddefine","level":3},{"title":"output.libraryExport","id":"outputlibraryexport-1","level":2},{"title":"output.libraryTarget","id":"outputlibrarytarget","level":2},{"title":"Expose a Variable","id":"expose-a-variable-1","level":3},{"title":"Expose Via Object Assignment","id":"expose-via-object-assignment-1","level":3},{"title":"Module Definition Systems","id":"module-definition-systems-1","level":3},{"title":"Other Targets","id":"other-targets","level":3},{"title":"output.module","id":"outputmodule","level":2},{"title":"output.path","id":"outputpath","level":2},{"title":"output.pathinfo","id":"outputpathinfo","level":2},{"title":"output.publicPath","id":"outputpublicpath","level":2},{"title":"output.scriptType","id":"outputscripttype","level":2},{"title":"output.sourceMapFilename","id":"outputsourcemapfilename","level":2},{"title":"output.sourcePrefix","id":"outputsourceprefix","level":2},{"title":"output.strictModuleErrorHandling","id":"outputstrictmoduleerrorhandling","level":2},{"title":"output.strictModuleExceptionHandling","id":"outputstrictmoduleexceptionhandling","level":2},{"title":"output.trustedTypes","id":"outputtrustedtypes","level":2},{"title":"output.trustedTypes.onPolicyCreationFailure","id":"outputtrustedtypesonpolicycreationfailure","level":3},{"title":"output.umdNamedDefine","id":"outputumdnameddefine","level":2},{"title":"output.uniqueName","id":"outputuniquename","level":2},{"title":"output.wasmLoading","id":"outputwasmloading","level":2},{"title":"output.workerChunkLoading","id":"outputworkerchunkloading","level":2},{"title":"output.workerPublicPath","id":"outputworkerpublicpath","level":2}],"title":"Output","sort":6,"contributors":["sokra","skipjack","tomasAlabes","mattce","irth","fvgs","dhurlburtusa","MagicDuck","fadysamirsadek","byzyk","madhavarshney","harshwardhansingh","eemeli","EugeneHlushko","g-plane","smelukov","Neob91","anikethsaha","jamesgeorge007","hiroppy","chenxsan","snitin315","QC-L","anshumanv","mrzalyaul","JakobJingleheimer","long76"]},{"path":"src/content/configuration/module.mdx","name":"module.mdx","size":35011,"type":"file","extension":".mdx","url":"/configuration/module/","anchors":[{"title":"module.generator","id":"modulegenerator","level":2},{"title":"module.parser","id":"moduleparser","level":2},{"title":"module.parser.javascript","id":"moduleparserjavascript","level":3},{"title":"module.noParse","id":"modulenoparse","level":2},{"title":"module.unsafeCache","id":"moduleunsafecache","level":2},{"title":"module.rules","id":"modulerules","level":2},{"title":"Rule","id":"rule","level":2},{"title":"Rule Conditions","id":"rule-conditions","level":3},{"title":"Rule results","id":"rule-results","level":3},{"title":"Nested rules","id":"nested-rules","level":2},{"title":"Rule.enforce","id":"ruleenforce","level":2},{"title":"Rule.exclude","id":"ruleexclude","level":2},{"title":"Rule.include","id":"ruleinclude","level":2},{"title":"Rule.issuer","id":"ruleissuer","level":2},{"title":"Rule.issuerLayer","id":"ruleissuerlayer","level":2},{"title":"Rule.layer","id":"rulelayer","level":2},{"title":"Rule.loader","id":"ruleloader","level":2},{"title":"Rule.loaders","id":"ruleloaders","level":2},{"title":"Rule.mimetype","id":"rulemimetype","level":2},{"title":"Rule.oneOf","id":"ruleoneof","level":2},{"title":"Rule.options / Rule.query","id":"ruleoptions--rulequery","level":2},{"title":"Rule.parser","id":"ruleparser","level":2},{"title":"Rule.parser.dataUrlCondition","id":"ruleparserdataurlcondition","level":2},{"title":"Rule.generator","id":"rulegenerator","level":2},{"title":"Rule.generator.dataUrl","id":"rulegeneratordataurl","level":3},{"title":"Rule.generator.emit","id":"rulegeneratoremit","level":3},{"title":"Rule.generator.filename","id":"rulegeneratorfilename","level":3},{"title":"Rule.generator.publicPath","id":"rulegeneratorpublicpath","level":3},{"title":"Rule.generator.outputPath","id":"rulegeneratoroutputpath","level":3},{"title":"Rule.resource","id":"ruleresource","level":2},{"title":"Rule.resourceQuery","id":"ruleresourcequery","level":2},{"title":"Rule.parser.parse","id":"ruleparserparse","level":2},{"title":"Rule.rules","id":"rulerules","level":2},{"title":"Rule.scheme","id":"rulescheme","level":2},{"title":"Rule.sideEffects","id":"rulesideeffects","level":2},{"title":"Rule.test","id":"ruletest","level":2},{"title":"Rule.type","id":"ruletype","level":2},{"title":"Rule.use","id":"ruleuse","level":2},{"title":"Rule.resolve","id":"ruleresolve","level":2},{"title":"resolve.fullySpecified","id":"resolvefullyspecified","level":3},{"title":"Condition","id":"condition","level":2},{"title":"UseEntry","id":"useentry","level":2},{"title":"Module Contexts","id":"module-contexts","level":2}],"title":"Module","sort":7,"contributors":["sokra","skipjack","jouni-kantola","jhnns","dylanonelson","byzyk","pnevares","fadysamirsadek","nerdkid93","EugeneHlushko","superburrito","lukasgeiter","skovy","smelukov","opl-","Mistyyyy","anshumanv","chenxsan","snitin315","vabushkevich"]},{"path":"src/content/configuration/resolve.mdx","name":"resolve.mdx","size":17803,"type":"file","extension":".mdx","url":"/configuration/resolve/","anchors":[{"title":"resolve","id":"resolve","level":2},{"title":"resolve.alias","id":"resolvealias","level":3},{"title":"resolve.aliasFields","id":"resolvealiasfields","level":3},{"title":"resolve.cacheWithContext","id":"resolvecachewithcontext","level":3},{"title":"resolve.conditionNames","id":"resolveconditionnames","level":3},{"title":"resolve.descriptionFiles","id":"resolvedescriptionfiles","level":3},{"title":"resolve.enforceExtension","id":"resolveenforceextension","level":3},{"title":"resolve.extensionAlias","id":"resolveextensionalias","level":3},{"title":"resolve.extensions","id":"resolveextensions","level":3},{"title":"resolve.fallback","id":"resolvefallback","level":3},{"title":"resolve.mainFields","id":"resolvemainfields","level":3},{"title":"resolve.mainFiles","id":"resolvemainfiles","level":3},{"title":"resolve.exportsFields","id":"resolveexportsfields","level":3},{"title":"resolve.modules","id":"resolvemodules","level":3},{"title":"resolve.unsafeCache","id":"resolveunsafecache","level":3},{"title":"resolve.useSyncFileSystemCalls","id":"resolveusesyncfilesystemcalls","level":3},{"title":"resolve.plugins","id":"resolveplugins","level":3},{"title":"resolve.preferRelative","id":"resolvepreferrelative","level":3},{"title":"resolve.preferAbsolute","id":"resolvepreferabsolute","level":3},{"title":"resolve.symlinks","id":"resolvesymlinks","level":3},{"title":"resolve.cachePredicate","id":"resolvecachepredicate","level":3},{"title":"resolve.restrictions","id":"resolverestrictions","level":3},{"title":"resolve.roots","id":"resolveroots","level":3},{"title":"resolve.importsFields","id":"resolveimportsfields","level":3},{"title":"resolve.byDependency","id":"resolvebydependency","level":3},{"title":"resolveLoader","id":"resolveloader","level":2}],"title":"Resolve","sort":8,"contributors":["sokra","skipjack","SpaceK33z","pksjce","sebastiandeutsch","tbroadley","byzyk","numb86","jgravois","EugeneHlushko","Aghassi","myshov","anikethsaha","chenxsan","jamesgeorge007","snitin315"]},{"path":"src/content/configuration/optimization.mdx","name":"optimization.mdx","size":17521,"type":"file","extension":".mdx","url":"/configuration/optimization/","anchors":[{"title":"optimization.chunkIds","id":"optimizationchunkids","level":2},{"title":"optimization.concatenateModules","id":"optimizationconcatenatemodules","level":2},{"title":"optimization.emitOnErrors","id":"optimizationemitonerrors","level":2},{"title":"optimization.flagIncludedChunks","id":"optimizationflagincludedchunks","level":2},{"title":"optimization.innerGraph","id":"optimizationinnergraph","level":2},{"title":"optimization.mangleExports","id":"optimizationmangleexports","level":2},{"title":"optimization.mangleWasmImports","id":"optimizationmanglewasmimports","level":2},{"title":"optimization.mergeDuplicateChunks","id":"optimizationmergeduplicatechunks","level":2},{"title":"optimization.minimize","id":"optimizationminimize","level":2},{"title":"optimization.minimizer","id":"optimizationminimizer","level":2},{"title":"optimization.moduleIds","id":"optimizationmoduleids","level":2},{"title":"optimization.nodeEnv","id":"optimizationnodeenv","level":2},{"title":"optimization.portableRecords","id":"optimizationportablerecords","level":2},{"title":"optimization.providedExports","id":"optimizationprovidedexports","level":2},{"title":"optimization.realContentHash","id":"optimizationrealcontenthash","level":2},{"title":"optimization.removeAvailableModules","id":"optimizationremoveavailablemodules","level":2},{"title":"optimization.removeEmptyChunks","id":"optimizationremoveemptychunks","level":2},{"title":"optimization.runtimeChunk","id":"optimizationruntimechunk","level":2},{"title":"optimization.sideEffects","id":"optimizationsideeffects","level":2},{"title":"optimization.splitChunks","id":"optimizationsplitchunks","level":2},{"title":"optimization.usedExports","id":"optimizationusedexports","level":2}],"title":"Optimization","sort":9,"contributors":["EugeneHlushko","jeremenichelli","simon04","byzyk","madhavarshney","dhurlburtusa","jamesgeorge007","anikethsaha","snitin315","pixel-ray","chenxsan","Roberto14"],"related":[{"title":"webpack 4: Code Splitting, chunk graph and the splitChunks optimization","url":"https://medium.com/webpack/webpack-4-code-splitting-chunk-graph-and-the-splitchunks-optimization-be739a861366"}]},{"path":"src/content/configuration/plugins.mdx","name":"plugins.mdx","size":1683,"type":"file","extension":".mdx","url":"/configuration/plugins/","anchors":[{"title":"plugins","id":"plugins","level":2}],"title":"Plugins","sort":10,"contributors":["sokra","skipjack","yatharthk","byzyk","EugeneHlushko","snitin315"]},{"path":"src/content/configuration/dev-server.mdx","name":"dev-server.mdx","size":42513,"type":"file","extension":".mdx","url":"/configuration/dev-server/","anchors":[{"title":"devServer","id":"devserver","level":2},{"title":"Usage via CLI","id":"usage-via-cli","level":3},{"title":"Usage via API","id":"usage-via-api","level":3},{"title":"devServer.allowedHosts","id":"devserverallowedhosts","level":2},{"title":"devServer.bonjour","id":"devserverbonjour","level":2},{"title":"devServer.client","id":"devserverclient","level":2},{"title":"logging","id":"logging","level":3},{"title":"overlay","id":"overlay","level":3},{"title":"progress","id":"progress","level":3},{"title":"reconnect","id":"reconnect","level":3},{"title":"webSocketTransport","id":"websockettransport","level":3},{"title":"webSocketURL","id":"websocketurl","level":3},{"title":"devServer.compress","id":"devservercompress","level":2},{"title":"devServer.devMiddleware","id":"devserverdevmiddleware","level":2},{"title":"devServer.http2","id":"devserverhttp2","level":2},{"title":"devServer.https","id":"devserverhttps","level":2},{"title":"devServer.headers","id":"devserverheaders","level":2},{"title":"devServer.historyApiFallback","id":"devserverhistoryapifallback","level":2},{"title":"devServer.host","id":"devserverhost","level":2},{"title":"local-ip","id":"local-ip","level":3},{"title":"local-ipv4","id":"local-ipv4","level":3},{"title":"local-ipv6","id":"local-ipv6","level":3},{"title":"devServer.hot","id":"devserverhot","level":2},{"title":"devServer.ipc","id":"devserveripc","level":2},{"title":"devServer.liveReload","id":"devserverlivereload","level":2},{"title":"devServer.magicHtml","id":"devservermagichtml","level":2},{"title":"devServer.onAfterSetupMiddleware","id":"devserveronaftersetupmiddleware","level":2},{"title":"devServer.onBeforeSetupMiddleware","id":"devserveronbeforesetupmiddleware","level":2},{"title":"devserver.onListening","id":"devserveronlistening","level":2},{"title":"devServer.open","id":"devserveropen","level":2},{"title":"devServer.port","id":"devserverport","level":2},{"title":"devServer.proxy","id":"devserverproxy","level":2},{"title":"devServer.server","id":"devserverserver","level":2},{"title":"devServer.setupExitSignals","id":"devserversetupexitsignals","level":2},{"title":"devServer.setupMiddlewares","id":"devserversetupmiddlewares","level":2},{"title":"devServer.static","id":"devserverstatic","level":2},{"title":"directory","id":"directory","level":3},{"title":"staticOptions","id":"staticoptions","level":3},{"title":"publicPath","id":"publicpath","level":3},{"title":"serveIndex","id":"serveindex","level":3},{"title":"watch","id":"watch","level":3},{"title":"devServer.watchFiles","id":"devserverwatchfiles","level":2},{"title":"devServer.webSocketServer","id":"devserverwebsocketserver","level":2}],"title":"DevServer","sort":11,"contributors":["sokra","skipjack","spacek33z","charlespwd","orteth01","byzyk","EugeneHlushko","Yiidiir","Loonride","dmohns","EslamHiko","digitaljohn","bhavya9107","wizardofhogwarts","jamesgeorge007","g100g","anikethsaha","snitin315","Biki-das","SaulSilver","malcolm-kee"]},{"path":"src/content/configuration/cache.mdx","name":"cache.mdx","size":11657,"type":"file","extension":".mdx","url":"/configuration/cache/","anchors":[{"title":"cache","id":"cache","level":2},{"title":"cache.allowCollectingMemory","id":"cacheallowcollectingmemory","level":3},{"title":"cache.buildDependencies","id":"cachebuilddependencies","level":3},{"title":"cache.cacheDirectory","id":"cachecachedirectory","level":3},{"title":"cache.cacheLocation","id":"cachecachelocation","level":3},{"title":"cache.cacheUnaffected","id":"cachecacheunaffected","level":3},{"title":"cache.compression","id":"cachecompression","level":3},{"title":"cache.hashAlgorithm","id":"cachehashalgorithm","level":3},{"title":"cache.idleTimeout","id":"cacheidletimeout","level":3},{"title":"cache.idleTimeoutAfterLargeChanges","id":"cacheidletimeoutafterlargechanges","level":3},{"title":"cache.idleTimeoutForInitialStore","id":"cacheidletimeoutforinitialstore","level":3},{"title":"cache.managedPaths","id":"cachemanagedpaths","level":3},{"title":"cache.maxAge","id":"cachemaxage","level":3},{"title":"cache.maxGenerations","id":"cachemaxgenerations","level":3},{"title":"cache.maxMemoryGenerations","id":"cachemaxmemorygenerations","level":3},{"title":"cache.memoryCacheUnaffected","id":"cachememorycacheunaffected","level":3},{"title":"cache.name","id":"cachename","level":3},{"title":"cache.profile","id":"cacheprofile","level":3},{"title":"cache.store","id":"cachestore","level":3},{"title":"cache.type","id":"cachetype","level":3},{"title":"cache.version","id":"cacheversion","level":3},{"title":"Setup cache in CI/CD system","id":"setup-cache-in-cicd-system","level":2},{"title":"GitLab CI/CD","id":"gitlab-cicd","level":3},{"title":"Github actions","id":"github-actions","level":3}],"title":"Cache","sort":12,"contributors":["snitin315","chenxsan"]},{"path":"src/content/configuration/devtool.mdx","name":"devtool.mdx","size":17292,"type":"file","extension":".mdx","url":"/configuration/devtool/","anchors":[{"title":"devtool","id":"devtool","level":2},{"title":"Qualities","id":"qualities","level":3},{"title":"Development","id":"development","level":3},{"title":"Special cases","id":"special-cases","level":3},{"title":"Production","id":"production","level":3}],"title":"Devtool","sort":12,"contributors":["sokra","skipjack","SpaceK33z","lricoy","madhavarshney","wizardofhogwarts","anikethsaha","snitin315"],"related":[{"title":"Enabling Source Maps","url":"https://survivejs.com/webpack/developing-with-webpack/enabling-sourcemaps/"},{"title":"webpack\'s Devtool Source Map","url":"http://cheng.logdown.com/posts/2016/03/25/679045"}]},{"path":"src/content/configuration/extending-configurations.mdx","name":"extending-configurations.mdx","size":3419,"type":"file","extension":".mdx","url":"/configuration/extending-configurations/","anchors":[{"title":"extends","id":"extends","level":2},{"title":"Extending multiple configurations","id":"extending-multiple-configurations","level":2},{"title":"Overridding Configurations","id":"overridding-configurations","level":2},{"title":"Loading configuration from external packages","id":"loading-configuration-from-external-packages","level":2}],"title":"Extends","sort":12,"contributors":["burhanuday"]},{"path":"src/content/configuration/target.mdx","name":"target.mdx","size":7857,"type":"file","extension":".mdx","url":"/configuration/target/","anchors":[{"title":"target","id":"target","level":2},{"title":"string","id":"string","level":3},{"title":"[string]","id":"string-1","level":3},{"title":"false","id":"false","level":3}],"title":"Target","sort":13,"contributors":["juangl","sokra","skipjack","SpaceK33z","pastelsky","tbroadley","byzyk","EugeneHlushko","smelukov","chenxsan"]},{"path":"src/content/configuration/watch.mdx","name":"watch.mdx","size":6463,"type":"file","extension":".mdx","url":"/configuration/watch/","anchors":[{"title":"watch","id":"watch","level":2},{"title":"watchOptions","id":"watchoptions","level":2},{"title":"watchOptions.aggregateTimeout","id":"watchoptionsaggregatetimeout","level":3},{"title":"watchOptions.ignored","id":"watchoptionsignored","level":3},{"title":"watchOptions.poll","id":"watchoptionspoll","level":3},{"title":"watchOptions.followSymlinks","id":"watchoptionsfollowsymlinks","level":3},{"title":"watchOptions.stdin","id":"watchoptionsstdin","level":3},{"title":"Troubleshooting","id":"troubleshooting","level":2},{"title":"Changes Seen But Not Processed","id":"changes-seen-but-not-processed","level":3},{"title":"Not Enough Watchers","id":"not-enough-watchers","level":3},{"title":"macOS fsevents Bug","id":"macos-fsevents-bug","level":3},{"title":"Windows Paths","id":"windows-paths","level":3},{"title":"Vim","id":"vim","level":3},{"title":"Saving in WebStorm","id":"saving-in-webstorm","level":3}],"title":"Watch and WatchOptions","sort":14,"contributors":["sokra","skipjack","SpaceK33z","EugeneHlushko","byzyk","spicalous","Neob91","Loonride","snitin315","chenxsan"]},{"path":"src/content/configuration/externals.mdx","name":"externals.mdx","size":21244,"type":"file","extension":".mdx","url":"/configuration/externals/","anchors":[{"title":"externals","id":"externals","level":2},{"title":"string","id":"string","level":3},{"title":"[string]","id":"string-1","level":3},{"title":"object","id":"object","level":3},{"title":"function","id":"function","level":3},{"title":"RegExp","id":"regexp","level":3},{"title":"Combining syntaxes","id":"combining-syntaxes","level":3},{"title":"byLayer","id":"bylayer","level":3},{"title":"externalsType","id":"externalstype","level":2},{"title":"externalsType.commonjs","id":"externalstypecommonjs","level":3},{"title":"externalsType.global","id":"externalstypeglobal","level":3},{"title":"externalsType.module","id":"externalstypemodule","level":3},{"title":"externalsType.node-commonjs","id":"externalstypenode-commonjs","level":3},{"title":"externalsType.promise","id":"externalstypepromise","level":3},{"title":"externalsType.self","id":"externalstypeself","level":3},{"title":"externalsType.script","id":"externalstypescript","level":3},{"title":"externalsType.this","id":"externalstypethis","level":3},{"title":"externalsType.var","id":"externalstypevar","level":3},{"title":"externalsType.window","id":"externalstypewindow","level":3},{"title":"externalsPresets","id":"externalspresets","level":2}],"title":"Externals","sort":15,"contributors":["sokra","skipjack","pksjce","fadysamirsadek","byzyk","zefman","Mistyyyy","jamesgeorge007","tanhauhau","snitin315","beejunk","EugeneHlushko","chenxsan","pranshuchittora","kinetifex","anshumanv","SaulSilver"]},{"path":"src/content/configuration/performance.mdx","name":"performance.mdx","size":2639,"type":"file","extension":".mdx","url":"/configuration/performance/","anchors":[{"title":"performance","id":"performance","level":2},{"title":"performance.assetFilter","id":"performanceassetfilter","level":3},{"title":"performance.hints","id":"performancehints","level":3},{"title":"performance.maxAssetSize","id":"performancemaxassetsize","level":3},{"title":"performance.maxEntrypointSize","id":"performancemaxentrypointsize","level":3}],"title":"Performance","sort":16,"contributors":["thelarkinn","tbroadley","byzyk","madhavarshney","EugeneHlushko"]},{"path":"src/content/configuration/node.mdx","name":"node.mdx","size":2484,"type":"file","extension":".mdx","url":"/configuration/node/","anchors":[{"title":"node","id":"node","level":2},{"title":"node.global","id":"nodeglobal","level":2},{"title":"node.__filename","id":"node__filename","level":2},{"title":"node.__dirname","id":"node__dirname","level":2}],"title":"Node","sort":17,"contributors":["sokra","skipjack","oneforwonder","Rob--W","byzyk","EugeneHlushko","anikethsaha","chenxsan"]},{"path":"src/content/configuration/stats.mdx","name":"stats.mdx","size":23173,"type":"file","extension":".mdx","url":"/configuration/stats/","anchors":[{"title":"Stats Presets","id":"stats-presets","level":2},{"title":"Stats Options","id":"stats-options","level":2},{"title":"stats.all","id":"statsall","level":3},{"title":"stats.assets","id":"statsassets","level":3},{"title":"stats.assetsSort","id":"statsassetssort","level":3},{"title":"stats.builtAt","id":"statsbuiltat","level":3},{"title":"stats.moduleAssets","id":"statsmoduleassets","level":3},{"title":"stats.assetsSpace","id":"statsassetsspace","level":3},{"title":"stats.modulesSpace","id":"statsmodulesspace","level":3},{"title":"stats.chunkModulesSpace","id":"statschunkmodulesspace","level":3},{"title":"stats.nestedModules","id":"statsnestedmodules","level":3},{"title":"stats.nestedModulesSpace","id":"statsnestedmodulesspace","level":3},{"title":"stats.cached","id":"statscached","level":3},{"title":"stats.cachedModules","id":"statscachedmodules","level":3},{"title":"stats.runtimeModules","id":"statsruntimemodules","level":3},{"title":"stats.dependentModules","id":"statsdependentmodules","level":3},{"title":"stats.groupAssetsByChunk","id":"statsgroupassetsbychunk","level":3},{"title":"stats.groupAssetsByEmitStatus","id":"statsgroupassetsbyemitstatus","level":3},{"title":"stats.groupAssetsByExtension","id":"statsgroupassetsbyextension","level":3},{"title":"stats.groupAssetsByInfo","id":"statsgroupassetsbyinfo","level":3},{"title":"stats.groupAssetsByPath","id":"statsgroupassetsbypath","level":3},{"title":"stats.groupModulesByAttributes","id":"statsgroupmodulesbyattributes","level":3},{"title":"stats.groupModulesByCacheStatus","id":"statsgroupmodulesbycachestatus","level":3},{"title":"stats.groupModulesByExtension","id":"statsgroupmodulesbyextension","level":3},{"title":"stats.groupModulesByLayer","id":"statsgroupmodulesbylayer","level":3},{"title":"stats.groupModulesByPath","id":"statsgroupmodulesbypath","level":3},{"title":"stats.groupModulesByType","id":"statsgroupmodulesbytype","level":3},{"title":"stats.groupReasonsByOrigin","id":"statsgroupreasonsbyorigin","level":3},{"title":"stats.cachedAssets","id":"statscachedassets","level":3},{"title":"stats.children","id":"statschildren","level":3},{"title":"stats.chunks","id":"statschunks","level":3},{"title":"stats.chunkGroups","id":"statschunkgroups","level":3},{"title":"stats.chunkModules","id":"statschunkmodules","level":3},{"title":"stats.chunkOrigins","id":"statschunkorigins","level":3},{"title":"stats.chunksSort","id":"statschunkssort","level":3},{"title":"stats.context","id":"statscontext","level":3},{"title":"stats.colors","id":"statscolors","level":3},{"title":"stats.depth","id":"statsdepth","level":3},{"title":"stats.entrypoints","id":"statsentrypoints","level":3},{"title":"stats.env","id":"statsenv","level":3},{"title":"stats.orphanModules","id":"statsorphanmodules","level":3},{"title":"stats.errors","id":"statserrors","level":3},{"title":"stats.errorDetails","id":"statserrordetails","level":3},{"title":"stats.errorStack","id":"statserrorstack","level":3},{"title":"stats.errorsSpace","id":"statserrorsspace","level":3},{"title":"stats.excludeAssets","id":"statsexcludeassets","level":3},{"title":"stats.excludeModules","id":"statsexcludemodules","level":3},{"title":"stats.exclude","id":"statsexclude","level":3},{"title":"stats.hash","id":"statshash","level":3},{"title":"stats.logging","id":"statslogging","level":3},{"title":"stats.loggingDebug","id":"statsloggingdebug","level":3},{"title":"stats.loggingTrace","id":"statsloggingtrace","level":3},{"title":"stats.modules","id":"statsmodules","level":3},{"title":"stats.modulesSort","id":"statsmodulessort","level":3},{"title":"stats.moduleTrace","id":"statsmoduletrace","level":3},{"title":"stats.optimizationBailout","id":"statsoptimizationbailout","level":3},{"title":"stats.outputPath","id":"statsoutputpath","level":3},{"title":"stats.performance","id":"statsperformance","level":3},{"title":"stats.preset","id":"statspreset","level":3},{"title":"stats.providedExports","id":"statsprovidedexports","level":3},{"title":"stats.errorsCount","id":"statserrorscount","level":3},{"title":"stats.warningsCount","id":"statswarningscount","level":3},{"title":"stats.publicPath","id":"statspublicpath","level":3},{"title":"stats.reasons","id":"statsreasons","level":3},{"title":"stats.reasonsSpace","id":"statsreasonsspace","level":3},{"title":"stats.relatedAssets","id":"statsrelatedassets","level":3},{"title":"stats.source","id":"statssource","level":3},{"title":"stats.timings","id":"statstimings","level":3},{"title":"stats.ids","id":"statsids","level":3},{"title":"stats.usedExports","id":"statsusedexports","level":3},{"title":"stats.version","id":"statsversion","level":3},{"title":"stats.chunkGroupAuxiliary","id":"statschunkgroupauxiliary","level":3},{"title":"stats.chunkGroupChildren","id":"statschunkgroupchildren","level":3},{"title":"stats.chunkGroupMaxAssets","id":"statschunkgroupmaxassets","level":3},{"title":"stats.warnings","id":"statswarnings","level":3},{"title":"stats.warningsSpace","id":"statswarningsspace","level":3},{"title":"stats.warningsFilter","id":"statswarningsfilter","level":3},{"title":"stats.chunkRelations","id":"statschunkrelations","level":3},{"title":"Sorting fields","id":"sorting-fields","level":3},{"title":"Extending stats behaviours","id":"extending-stats-behaviours","level":3}],"title":"Stats","sort":18,"contributors":["SpaceK33z","sallar","jungomi","ldrick","jasonblanchard","byzyk","renjithspace","Raiondesu","EugeneHlushko","grgur","anshumanv","pixel-ray","snitin315","u01jmg3","grrizzly"]},{"path":"src/content/configuration/experiments.mdx","name":"experiments.mdx","size":8093,"type":"file","extension":".mdx","url":"/configuration/experiments/","anchors":[{"title":"experiments","id":"experiments","level":2},{"title":"experiments.backCompat","id":"experimentsbackcompat","level":3},{"title":"experiments.buildHttp","id":"experimentsbuildhttp","level":3},{"title":"experiments.css","id":"experimentscss","level":3},{"title":"experiments.cacheUnaffected","id":"experimentscacheunaffected","level":3},{"title":"experiments.futureDefaults","id":"experimentsfuturedefaults","level":3},{"title":"experiments.lazyCompilation","id":"experimentslazycompilation","level":3},{"title":"experiments.outputModule","id":"experimentsoutputmodule","level":3},{"title":"experiments.topLevelAwait","id":"experimentstoplevelawait","level":3}],"title":"Experiments","sort":19,"contributors":["EugeneHlushko","wizardofhogwarts","chenxsan","anshumanv","snitin315"]},{"path":"src/content/configuration/other-options.mdx","name":"other-options.mdx","size":13286,"type":"file","extension":".mdx","url":"/configuration/other-options/","anchors":[{"title":"amd","id":"amd","level":2},{"title":"bail","id":"bail","level":2},{"title":"dependencies","id":"dependencies","level":2},{"title":"ignoreWarnings","id":"ignorewarnings","level":2},{"title":"infrastructureLogging","id":"infrastructurelogging","level":2},{"title":"appendOnly","id":"appendonly","level":3},{"title":"colors","id":"colors","level":3},{"title":"console","id":"console","level":3},{"title":"debug","id":"debug","level":3},{"title":"level","id":"level","level":3},{"title":"stream","id":"stream","level":3},{"title":"loader","id":"loader","level":2},{"title":"name","id":"name","level":2},{"title":"parallelism","id":"parallelism","level":2},{"title":"profile","id":"profile","level":2},{"title":"recordsInputPath","id":"recordsinputpath","level":2},{"title":"recordsOutputPath","id":"recordsoutputpath","level":2},{"title":"recordsPath","id":"recordspath","level":2},{"title":"snapshot","id":"snapshot","level":2},{"title":"buildDependencies","id":"builddependencies","level":3},{"title":"immutablePaths","id":"immutablepaths","level":3},{"title":"managedPaths","id":"managedpaths","level":3},{"title":"module","id":"module","level":3},{"title":"resolve","id":"resolve","level":3},{"title":"resolveBuildDependencies","id":"resolvebuilddependencies","level":3}],"title":"Other Options","sort":20,"contributors":["sokra","skipjack","terinjokes","byzyk","liorgreenb","vansosnin","EugeneHlushko","skovy","rishabh3112","niravasher","Neob91","chenxsan","u01jmg3","jamesgeorge007","snitin315"],"related":[{"title":"Using Records","url":"https://survivejs.com/webpack/optimizing/separating-manifest/#using-records"}]},{"path":"src/content/configuration/printable.mdx","name":"printable.mdx","size":1705,"type":"file","extension":".mdx","url":"/configuration/printable/","anchors":[{"title":"Configuration","id":"configuration","level":1},{"title":"Configuration Languages","id":"configuration-languages","level":1},{"title":"Configuration Types","id":"configuration-types","level":1},{"title":"Entry and Context","id":"entry-and-context","level":1},{"title":"Mode","id":"mode","level":1},{"title":"Output","id":"output","level":1},{"title":"Module","id":"module","level":1},{"title":"Resolve","id":"resolve","level":1},{"title":"Optimization","id":"optimization","level":1},{"title":"Plugins","id":"plugins","level":1},{"title":"DevServer","id":"devserver","level":1},{"title":"Cache","id":"cache","level":1},{"title":"Devtool","id":"devtool","level":1},{"title":"Extends","id":"extends","level":1},{"title":"Target","id":"target","level":1},{"title":"Watch and WatchOptions","id":"watch-and-watchoptions","level":1},{"title":"Externals","id":"externals","level":1},{"title":"Performance","id":"performance","level":1},{"title":"Node","id":"node","level":1},{"title":"Stats","id":"stats","level":1},{"title":"Experiments","id":"experiments","level":1},{"title":"Other Options","id":"other-options","level":1}],"title":"Printable","sort":999,"contributors":["webpack"]}],"size":325121,"type":"directory","url":"/configuration/"},{"path":"src/content/contribute","name":"contribute","children":[{"path":"src/content/contribute/index.mdx","name":"index.mdx","size":4759,"type":"file","extension":".mdx","url":"/contribute/","anchors":[{"title":"Developers","id":"developers","level":2},{"title":"How Can I Help?","id":"how-can-i-help","level":3},{"title":"Encouraging Employers","id":"encouraging-employers","level":3},{"title":"Your Contributions","id":"your-contributions","level":3},{"title":"Executives","id":"executives","level":2},{"title":"Sponsorship","id":"sponsorship","level":3},{"title":"Anyone Else","id":"anyone-else","level":3},{"title":"Pull requests","id":"pull-requests","level":2}],"title":"Contribute","sort":-1,"contributors":["rouzbeh84","scottdj92","harrynewsome","dhedgecock","tbroadley","EugeneHlushko"]},{"path":"src/content/contribute/writers-guide.mdx","name":"writers-guide.mdx","size":6883,"type":"file","extension":".mdx","url":"/contribute/writers-guide/","anchors":[{"title":"Process","id":"process","level":2},{"title":"YAML Frontmatter","id":"yaml-frontmatter","level":2},{"title":"Article Structure","id":"article-structure","level":2},{"title":"Typesetting","id":"typesetting","level":2},{"title":"Formatting","id":"formatting","level":2},{"title":"Code","id":"code","level":3},{"title":"Lists","id":"lists","level":3},{"title":"Tables","id":"tables","level":3},{"title":"Configuration Properties","id":"configuration-properties","level":3},{"title":"Quotes","id":"quotes","level":3},{"title":"Assumptions and simplicity","id":"assumptions-and-simplicity","level":3},{"title":"Configuration defaults and types","id":"configuration-defaults-and-types","level":3},{"title":"Options shortlists and their typing","id":"options-shortlists-and-their-typing","level":3},{"title":"Adding links","id":"adding-links","level":3}],"title":"Writer\'s Guide","sort":1,"contributors":["pranshuchittora","EugeneHlushko"]},{"path":"src/content/contribute/writing-a-loader.mdx","name":"writing-a-loader.mdx","size":13545,"type":"file","extension":".mdx","url":"/contribute/writing-a-loader/","anchors":[{"title":"Setup","id":"setup","level":2},{"title":"Simple Usage","id":"simple-usage","level":2},{"title":"Complex Usage","id":"complex-usage","level":2},{"title":"Guidelines","id":"guidelines","level":2},{"title":"Simple","id":"simple","level":3},{"title":"Chaining","id":"chaining","level":3},{"title":"Modular","id":"modular","level":3},{"title":"Stateless","id":"stateless","level":3},{"title":"Loader Utilities","id":"loader-utilities","level":3},{"title":"Loader Dependencies","id":"loader-dependencies","level":3},{"title":"Module Dependencies","id":"module-dependencies","level":3},{"title":"Common Code","id":"common-code","level":3},{"title":"Absolute Paths","id":"absolute-paths","level":3},{"title":"Peer Dependencies","id":"peer-dependencies","level":3},{"title":"Testing","id":"testing","level":2}],"title":"Writing a Loader","sort":2,"contributors":["asulaiman","michael-ciniawsky","byzyk","anikethsaha","jamesgeorge007","chenxsan","dev-itsheng"]},{"path":"src/content/contribute/writing-a-plugin.mdx","name":"writing-a-plugin.mdx","size":13637,"type":"file","extension":".mdx","url":"/contribute/writing-a-plugin/","anchors":[{"title":"Creating a Plugin","id":"creating-a-plugin","level":2},{"title":"Basic plugin architecture","id":"basic-plugin-architecture","level":2},{"title":"Compiler and Compilation","id":"compiler-and-compilation","level":2},{"title":"Async event hooks","id":"async-event-hooks","level":2},{"title":"tapAsync","id":"tapasync","level":3},{"title":"Example","id":"example","level":2},{"title":"Different Plugin Shapes","id":"different-plugin-shapes","level":2},{"title":"Synchronous Hooks","id":"synchronous-hooks","level":3},{"title":"Asynchronous Hooks","id":"asynchronous-hooks","level":3},{"title":"Configuration defaults","id":"configuration-defaults","level":3}],"title":"Writing a Plugin","sort":3,"contributors":["slavafomin","tbroadley","nveenjain","iamakulov","byzyk","franjohn21","EugeneHlushko","snitin315","rahul3v","jamesgeorge007"]},{"path":"src/content/contribute/plugin-patterns.mdx","name":"plugin-patterns.mdx","size":4742,"type":"file","extension":".mdx","url":"/contribute/plugin-patterns/","anchors":[{"title":"Exploring assets, chunks, modules, and dependencies","id":"exploring-assets-chunks-modules-and-dependencies","level":2},{"title":"Monitoring the watch graph","id":"monitoring-the-watch-graph","level":3},{"title":"Changed chunks","id":"changed-chunks","level":2}],"title":"Plugin Patterns","sort":5,"contributors":["nveenjain","EugeneHlushko","benglynn"]},{"path":"src/content/contribute/release-process.mdx","name":"release-process.mdx","size":831,"type":"file","extension":".mdx","url":"/contribute/release-process/","anchors":[{"title":"Pull Requests","id":"pull-requests","level":2},{"title":"Releasing","id":"releasing","level":2}],"title":"Release Process","sort":6,"contributors":["d3viant0ne","sokra","byzyk","chenxsan"]},{"path":"src/content/contribute/debugging.mdx","name":"debugging.mdx","size":4340,"type":"file","extension":".mdx","url":"/contribute/debugging/","anchors":[{"title":"Stats","id":"stats","level":2},{"title":"DevTools","id":"devtools","level":2}],"title":"Debugging","sort":7,"contributors":["skipjack","tbroadley","madhavarshney","bhavya9107","akaustav"],"related":[{"title":"Learn and Debug webpack with Chrome DevTools!","url":"https://medium.com/webpack/webpack-bits-learn-and-debug-webpack-with-chrome-dev-tools-da1c5b19554"},{"title":"Debugging Guide | Node","url":"https://nodejs.org/en/docs/guides/debugging-getting-started/"},{"title":"Debugging Node.js with Chrome DevTools","url":"https://medium.com/@paul_irish/debugging-node-js-nightlies-with-chrome-devtools-7c4a1b95ae27"}]},{"path":"src/content/contribute/printable.mdx","name":"printable.mdx","size":666,"type":"file","extension":".mdx","url":"/contribute/printable/","anchors":[{"title":"Contribute","id":"contribute","level":1},{"title":"Writer\'s Guide","id":"writers-guide","level":1},{"title":"Writing a Loader","id":"writing-a-loader","level":1},{"title":"Writing a Plugin","id":"writing-a-plugin","level":1},{"title":"Plugin Patterns","id":"plugin-patterns","level":1},{"title":"Release Process","id":"release-process","level":1},{"title":"Debugging","id":"debugging","level":1}],"title":"Printable","sort":999,"contributors":["webpack"]}],"size":49403,"type":"directory","url":"/contribute/"},{"path":"src/content/guides","name":"guides","children":[{"path":"src/content/guides/index.mdx","name":"index.mdx","size":924,"type":"file","extension":".mdx","url":"/guides/","anchors":[],"title":"Guides","sort":-1,"contributors":["skipjack","EugeneHlushko","benschac"]},{"path":"src/content/guides/getting-started.mdx","name":"getting-started.mdx","size":12838,"type":"file","extension":".mdx","url":"/guides/getting-started/","anchors":[{"title":"Basic Setup","id":"basic-setup","level":2},{"title":"Creating a Bundle","id":"creating-a-bundle","level":2},{"title":"Modules","id":"modules","level":2},{"title":"Using a Configuration","id":"using-a-configuration","level":2},{"title":"NPM Scripts","id":"npm-scripts","level":2},{"title":"Conclusion","id":"conclusion","level":2}],"title":"Getting Started","description":"Learn how to bundle a JavaScript application with webpack 5.","sort":1,"contributors":["bebraw","varunjayaraman","cntanglijun","chrisVillanueva","johnstew","simon04","aaronang","TheDutchCoder","sudarsangp","Vanguard90","chenxsan","EugeneHlushko","ATGardner","ayvarot","bjarki","ztomasze","Spiral90210","byzyk","wizardofhogwarts","myshov","anshumanv","d3lm","snitin315","Etheryen"]},{"path":"src/content/guides/asset-management.mdx","name":"asset-management.mdx","size":24303,"type":"file","extension":".mdx","url":"/guides/asset-management/","anchors":[{"title":"Setup","id":"setup","level":2},{"title":"Loading CSS","id":"loading-css","level":2},{"title":"Loading Images","id":"loading-images","level":2},{"title":"Loading Fonts","id":"loading-fonts","level":2},{"title":"Loading Data","id":"loading-data","level":2},{"title":"Customize parser of JSON modules","id":"customize-parser-of-json-modules","level":3},{"title":"Global Assets","id":"global-assets","level":2},{"title":"Wrapping up","id":"wrapping-up","level":2},{"title":"Next guide","id":"next-guide","level":2},{"title":"Further Reading","id":"further-reading","level":2}],"title":"Asset Management","sort":2,"contributors":["skipjack","michael-ciniawsky","TheDutchCoder","sudarsangp","chenxsan","EugeneHlushko","AnayaDesign","wizardofhogwarts","astonizer","snitin315"]},{"path":"src/content/guides/output-management.mdx","name":"output-management.mdx","size":7573,"type":"file","extension":".mdx","url":"/guides/output-management/","anchors":[{"title":"Preparation","id":"preparation","level":2},{"title":"Setting up HtmlWebpackPlugin","id":"setting-up-htmlwebpackplugin","level":2},{"title":"Cleaning up the /dist folder","id":"cleaning-up-the-dist-folder","level":2},{"title":"The Manifest","id":"the-manifest","level":2},{"title":"Conclusion","id":"conclusion","level":2}],"title":"Output Management","sort":3,"contributors":["skipjack","TheDutchCoder","sudarsangp","JGJP","EugeneHlushko","AnayaDesign","chenxsan","snitin315"]},{"path":"src/content/guides/development.mdx","name":"development.mdx","size":14559,"type":"file","extension":".mdx","url":"/guides/development/","anchors":[{"title":"Using source maps","id":"using-source-maps","level":2},{"title":"Choosing a Development Tool","id":"choosing-a-development-tool","level":2},{"title":"Using Watch Mode","id":"using-watch-mode","level":3},{"title":"Using webpack-dev-server","id":"using-webpack-dev-server","level":3},{"title":"Using webpack-dev-middleware","id":"using-webpack-dev-middleware","level":3},{"title":"Adjusting Your Text Editor","id":"adjusting-your-text-editor","level":2},{"title":"Conclusion","id":"conclusion","level":2}],"title":"Development","sort":4,"contributors":["SpaceK33z","rafde","fvgs","TheDutchCoder","WojciechKo","Calinou","GAumala","EugeneHlushko","byzyk","trivikr","aholzner","chenxsan","maxloh","snitin315","f3ndot"]},{"path":"src/content/guides/code-splitting.mdx","name":"code-splitting.mdx","size":18088,"type":"file","extension":".mdx","url":"/guides/code-splitting/","anchors":[{"title":"Entry Points","id":"entry-points","level":2},{"title":"Prevent Duplication","id":"prevent-duplication","level":2},{"title":"Entry dependencies","id":"entry-dependencies","level":3},{"title":"SplitChunksPlugin","id":"splitchunksplugin","level":3},{"title":"Dynamic Imports","id":"dynamic-imports","level":2},{"title":"Prefetching/Preloading modules","id":"prefetchingpreloading-modules","level":2},{"title":"Bundle Analysis","id":"bundle-analysis","level":2},{"title":"Next Steps","id":"next-steps","level":2}],"title":"Code Splitting","sort":5,"contributors":["pksjce","pastelsky","simon04","jonwheeler","johnstew","shinxi","tomtasche","levy9527","rahulcs","chrisVillanueva","rafde","bartushek","shaunwallace","skipjack","jakearchibald","TheDutchCoder","rouzbeh84","shaodahong","sudarsangp","kcolton","efreitasn","EugeneHlushko","Tiendo1011","byzyk","AnayaDesign","wizardofhogwarts","maximilianschmelzer","smelukov","chenxsan","Adarah","atesgoral","snitin315","artem-malko"],"related":[{"title":"<link rel=\\"prefetch/preload\\" /> in webpack","url":"https://medium.com/webpack/link-rel-prefetch-preload-in-webpack-51a52358f84c"},{"title":"Preload, Prefetch And Priorities in Chrome","url":"https://medium.com/reloading/preload-prefetch-and-priorities-in-chrome-776165961bbf"},{"title":"Preloading content with <link rel=\\"preload\\" />","url":"https://developer.mozilla.org/en-US/docs/Web/HTML/Preloading_content"}]},{"path":"src/content/guides/caching.mdx","name":"caching.mdx","size":11422,"type":"file","extension":".mdx","url":"/guides/caching/","anchors":[{"title":"Output Filenames","id":"output-filenames","level":2},{"title":"Extracting Boilerplate","id":"extracting-boilerplate","level":2},{"title":"Module Identifiers","id":"module-identifiers","level":2},{"title":"Conclusion","id":"conclusion","level":2}],"title":"Caching","sort":6,"contributors":["okonet","jouni-kantola","skipjack","dannycjones","fadysamirsadek","afontcu","rosavage","saiprasad2595","EugeneHlushko","AnayaDesign","aholzner","snitin315"],"related":[{"title":"Issue 652","url":"https://github.com/webpack/webpack.js.org/issues/652"}]},{"path":"src/content/guides/author-libraries.mdx","name":"author-libraries.mdx","size":8163,"type":"file","extension":".mdx","url":"/guides/author-libraries/","anchors":[{"title":"Authoring a Library","id":"authoring-a-library","level":2},{"title":"Webpack Configuration","id":"webpack-configuration","level":2},{"title":"Expose the Library","id":"expose-the-library","level":2},{"title":"Externalize Lodash","id":"externalize-lodash","level":2},{"title":"External Limitations","id":"external-limitations","level":3},{"title":"Final Steps","id":"final-steps","level":2}],"title":"Authoring Libraries","sort":7,"contributors":["pksjce","johnstew","simon04","5angel","marioacc","byzyk","EugeneHlushko","AnayaDesign","chenxsan","wizardofhogwarts"]},{"path":"src/content/guides/environment-variables.mdx","name":"environment-variables.mdx","size":1845,"type":"file","extension":".mdx","url":"/guides/environment-variables/","anchors":[],"title":"Environment Variables","sort":8,"contributors":["simon04","grisanu","tbroadley","legalcodes","byzyk","jceipek","snitin315"]},{"path":"src/content/guides/build-performance.mdx","name":"build-performance.mdx","size":8685,"type":"file","extension":".mdx","url":"/guides/build-performance/","anchors":[{"title":"General","id":"general","level":2},{"title":"Stay Up to Date","id":"stay-up-to-date","level":3},{"title":"Loaders","id":"loaders","level":3},{"title":"Bootstrap","id":"bootstrap","level":3},{"title":"Resolving","id":"resolving","level":3},{"title":"Dlls","id":"dlls","level":3},{"title":"Smaller = Faster","id":"smaller--faster","level":3},{"title":"Worker Pool","id":"worker-pool","level":3},{"title":"Persistent cache","id":"persistent-cache","level":3},{"title":"Custom plugins/loaders","id":"custom-pluginsloaders","level":3},{"title":"Progress plugin","id":"progress-plugin","level":3},{"title":"Development","id":"development","level":2},{"title":"Incremental Builds","id":"incremental-builds","level":3},{"title":"Compile in Memory","id":"compile-in-memory","level":3},{"title":"stats.toJson speed","id":"statstojson-speed","level":3},{"title":"Devtool","id":"devtool","level":3},{"title":"Avoid Production Specific Tooling","id":"avoid-production-specific-tooling","level":3},{"title":"Minimal Entry Chunk","id":"minimal-entry-chunk","level":3},{"title":"Avoid Extra Optimization Steps","id":"avoid-extra-optimization-steps","level":3},{"title":"Output Without Path Info","id":"output-without-path-info","level":3},{"title":"Node.js Versions 8.9.10-9.11.1","id":"nodejs-versions-8910-9111","level":3},{"title":"TypeScript Loader","id":"typescript-loader","level":3},{"title":"Production","id":"production","level":2},{"title":"Source Maps","id":"source-maps","level":3},{"title":"Specific Tooling Issues","id":"specific-tooling-issues","level":2},{"title":"Babel","id":"babel","level":3},{"title":"TypeScript","id":"typescript","level":3},{"title":"Sass","id":"sass","level":3}],"title":"Build Performance","sort":9,"contributors":["sokra","tbroadley","byzyk","madhavarshney","wizardofhogwarts","anikethsaha"]},{"path":"src/content/guides/csp.mdx","name":"csp.mdx","size":2291,"type":"file","extension":".mdx","url":"/guides/csp/","anchors":[{"title":"Examples","id":"examples","level":2},{"title":"Enabling CSP","id":"enabling-csp","level":2},{"title":"Trusted Types","id":"trusted-types","level":2}],"title":"Content Security Policies","sort":10,"contributors":["EugeneHlushko","probablyup","wizardofhogwarts","koto"],"related":[{"title":"Nonce purpose explained","url":"https://stackoverflow.com/questions/42922784/what-s-the-purpose-of-the-html-nonce-attribute-for-script-and-style-elements"},{"title":"On the Insecurity of Whitelists and the Future of Content Security Policy","url":"https://ai.google/research/pubs/pub45542"},{"title":"Locking Down Your Website Scripts with CSP, Hashes, Nonces and Report URI","url":"https://www.troyhunt.com/locking-down-your-website-scripts-with-csp-hashes-nonces-and-report-uri/"},{"title":"CSP on MDN","url":"https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP"},{"title":"Trusted Types","url":"https://web.dev/trusted-types"}]},{"path":"src/content/guides/development-vagrant.mdx","name":"development-vagrant.mdx","size":3484,"type":"file","extension":".mdx","url":"/guides/development-vagrant/","anchors":[{"title":"Configuring the Project","id":"configuring-the-project","level":2},{"title":"Running the Server","id":"running-the-server","level":2},{"title":"Advanced Usage with nginx","id":"advanced-usage-with-nginx","level":2},{"title":"Conclusion","id":"conclusion","level":2}],"title":"Development - Vagrant","sort":11,"contributors":["SpaceK33z","chrisVillanueva","byzyk","wizardofhogwarts"]},{"path":"src/content/guides/dependency-management.mdx","name":"dependency-management.mdx","size":3159,"type":"file","extension":".mdx","url":"/guides/dependency-management/","anchors":[{"title":"require with expression","id":"require-with-expression","level":2},{"title":"require.context","id":"requirecontext","level":2},{"title":"context module API","id":"context-module-api","level":3}],"title":"Dependency Management","sort":12,"contributors":["ndelangen","chrisVillanueva","sokra","byzyk","AnayaDesign"]},{"path":"src/content/guides/installation.mdx","name":"installation.mdx","size":2799,"type":"file","extension":".mdx","url":"/guides/installation/","anchors":[{"title":"Prerequisites","id":"prerequisites","level":2},{"title":"Local Installation","id":"local-installation","level":2},{"title":"Global Installation","id":"global-installation","level":2},{"title":"Bleeding Edge","id":"bleeding-edge","level":2}],"title":"Installation","sort":13,"contributors":["pksjce","bebraw","simon04","EugeneHlushko","sibiraj-s","chenxsan"]},{"path":"src/content/guides/hot-module-replacement.mdx","name":"hot-module-replacement.mdx","size":12146,"type":"file","extension":".mdx","url":"/guides/hot-module-replacement/","anchors":[{"title":"Enabling HMR","id":"enabling-hmr","level":2},{"title":"Via the Node.js API","id":"via-the-nodejs-api","level":2},{"title":"Gotchas","id":"gotchas","level":2},{"title":"HMR with Stylesheets","id":"hmr-with-stylesheets","level":2},{"title":"Other Code and Frameworks","id":"other-code-and-frameworks","level":2}],"title":"Hot Module Replacement","sort":15,"contributors":["jmreidy","jhnns","sararubin","rohannair","joshsantos","drpicox","skipjack","sbaidon","gdi2290","bdwain","caryli","xgirma","EugeneHlushko","AnayaDesign","aviyacohen","dhruvdutt","wizardofhogwarts","aholzner","snitin315"],"related":[{"title":"Concepts - Hot Module Replacement","url":"/concepts/hot-module-replacement"},{"title":"API - Hot Module Replacement","url":"/api/hot-module-replacement"}]},{"path":"src/content/guides/tree-shaking.mdx","name":"tree-shaking.mdx","size":15044,"type":"file","extension":".mdx","url":"/guides/tree-shaking/","anchors":[{"title":"Add a Utility","id":"add-a-utility","level":2},{"title":"Mark the file as side-effect-free","id":"mark-the-file-as-side-effect-free","level":2},{"title":"Clarifying tree shaking and sideEffects","id":"clarifying-tree-shaking-and-sideeffects","level":2},{"title":"Mark a function call as side-effect-free","id":"mark-a-function-call-as-side-effect-free","level":2},{"title":"Minify the Output","id":"minify-the-output","level":2},{"title":"Conclusion","id":"conclusion","level":2}],"title":"Tree Shaking","sort":16,"contributors":["simon04","zacanger","alexjoverm","avant1","MijaelWatts","dmitriid","probablyup","gish","lumo10","byzyk","pnevares","EugeneHlushko","AnayaDesign","torifat","rahul3v","snitin315"],"related":[{"title":"Debugging Optimization Bailouts","url":"https://webpack.js.org/plugins/module-concatenation-plugin/#debugging-optimization-bailouts"},{"title":"Issue 6074 - Add support for more complex selectors for sideEffects","url":"https://github.com/webpack/webpack/issues/6074"}]},{"path":"src/content/guides/production.mdx","name":"production.mdx","size":9195,"type":"file","extension":".mdx","url":"/guides/production/","anchors":[{"title":"Setup","id":"setup","level":2},{"title":"NPM Scripts","id":"npm-scripts","level":2},{"title":"Specify the Mode","id":"specify-the-mode","level":2},{"title":"Minification","id":"minification","level":2},{"title":"Source Mapping","id":"source-mapping","level":2},{"title":"Minimize CSS","id":"minimize-css","level":2},{"title":"CLI Alternatives","id":"cli-alternatives","level":2}],"title":"Production","sort":17,"contributors":["henriquea","rajagopal4890","makuzaverite","markerikson","simon04","kisnows","chrisVillanueva","swapnilmishra","bring2dip","redian","skipjack","xgqfrms","kelset","xgirma","mehrdaad","SevenOutman","AnayaDesign","wizardofhogwarts","aholzner","EugeneHlushko","snitin315"]},{"path":"src/content/guides/lazy-loading.mdx","name":"lazy-loading.mdx","size":4299,"type":"file","extension":".mdx","url":"/guides/lazy-loading/","anchors":[{"title":"Example","id":"example","level":2},{"title":"Frameworks","id":"frameworks","level":2}],"title":"Lazy Loading","sort":18,"contributors":["iammerrick","chrisVillanueva","skipjack","byzyk","EugeneHlushko","AnayaDesign","tapanprakasht","snitin315"],"related":[{"title":"Lazy Loading ES2015 Modules in the Browser","url":"https://dzone.com/articles/lazy-loading-es2015-modules-in-the-browser"},{"title":"Asynchronous vs Deferred JavaScript","url":"https://bitsofco.de/async-vs-defer/"}]},{"path":"src/content/guides/ecma-script-modules.mdx","name":"ecma-script-modules.mdx","size":3017,"type":"file","extension":".mdx","url":"/guides/ecma-script-modules/","anchors":[{"title":"Exporting","id":"exporting","level":2},{"title":"Importing","id":"importing","level":2},{"title":"Flagging modules as ESM","id":"flagging-modules-as-esm","level":2}],"title":"ECMAScript Modules","sort":19,"contributors":["sokra"],"related":[{"title":"ECMAScript Modules in Node.js","url":"https://nodejs.org/api/esm.html"}]},{"path":"src/content/guides/shimming.mdx","name":"shimming.mdx","size":14898,"type":"file","extension":".mdx","url":"/guides/shimming/","anchors":[{"title":"Shimming Globals","id":"shimming-globals","level":2},{"title":"Granular Shimming","id":"granular-shimming","level":2},{"title":"Global Exports","id":"global-exports","level":2},{"title":"Loading Polyfills","id":"loading-polyfills","level":2},{"title":"Further Optimizations","id":"further-optimizations","level":2},{"title":"Node Built-Ins","id":"node-built-ins","level":2},{"title":"Other Utilities","id":"other-utilities","level":2}],"title":"Shimming","sort":20,"contributors":["pksjce","jhnns","simon04","jeremenichelli","svyandun","byzyk","EugeneHlushko","AnayaDesign","dhurlburtusa","plr108","NicolasLetellier","wizardofhogwarts","snitin315","chenxsan"],"related":[{"title":"Reward modern browser users script","url":"https://medium.com/hackernoon/10-things-i-learned-making-the-fastest-site-in-the-world-18a0e1cdf4a7"},{"title":"useBuiltIns in babel-preset-env","url":"https://babeljs.io/docs/en/babel-preset-env#usebuiltins"}]},{"path":"src/content/guides/typescript.mdx","name":"typescript.mdx","size":6829,"type":"file","extension":".mdx","url":"/guides/typescript/","anchors":[{"title":"Basic Setup","id":"basic-setup","level":2},{"title":"Loader","id":"loader","level":2},{"title":"Source Maps","id":"source-maps","level":2},{"title":"Client types","id":"client-types","level":2},{"title":"Using Third Party Libraries","id":"using-third-party-libraries","level":2},{"title":"Importing Other Assets","id":"importing-other-assets","level":2},{"title":"Build Performance","id":"build-performance","level":2}],"title":"TypeScript","sort":21,"contributors":["morsdyce","kkamali","mtrivera","byzyk","EugeneHlushko","chenxsan","snitin315"]},{"path":"src/content/guides/web-workers.mdx","name":"web-workers.mdx","size":2026,"type":"file","extension":".mdx","url":"/guides/web-workers/","anchors":[{"title":"Syntax","id":"syntax","level":2},{"title":"Example","id":"example","level":2},{"title":"Node.js","id":"nodejs","level":2}],"title":"Web Workers","sort":21,"contributors":["chenxsan"]},{"path":"src/content/guides/progressive-web-application.mdx","name":"progressive-web-application.mdx","size":6018,"type":"file","extension":".mdx","url":"/guides/progressive-web-application/","anchors":[{"title":"We Don\'t Work Offline Now","id":"we-dont-work-offline-now","level":2},{"title":"Adding Workbox","id":"adding-workbox","level":2},{"title":"Registering Our Service Worker","id":"registering-our-service-worker","level":2},{"title":"Conclusion","id":"conclusion","level":2}],"title":"Progressive Web Application","sort":22,"contributors":["johnnyreilly","chenxsan","EugeneHlushko","benschac","aholzner"]},{"path":"src/content/guides/public-path.mdx","name":"public-path.mdx","size":3070,"type":"file","extension":".mdx","url":"/guides/public-path/","anchors":[{"title":"Use Cases","id":"use-cases","level":2},{"title":"Environment Based","id":"environment-based","level":3},{"title":"On The Fly","id":"on-the-fly","level":3},{"title":"Automatic publicPath","id":"automatic-publicpath","level":3}],"title":"Public Path","sort":23,"contributors":["rafaelrinaldi","chrisVillanueva","gonzoyumo","chenxsan"]},{"path":"src/content/guides/integrations.mdx","name":"integrations.mdx","size":5414,"type":"file","extension":".mdx","url":"/guides/integrations/","anchors":[{"title":"NPM Scripts","id":"npm-scripts","level":2},{"title":"Grunt","id":"grunt","level":2},{"title":"Gulp","id":"gulp","level":2},{"title":"Mocha","id":"mocha","level":2},{"title":"Karma","id":"karma","level":2}],"title":"Integrations","sort":24,"contributors":["pksjce","bebraw","tashian","skipjack","AnayaDesign"]},{"path":"src/content/guides/asset-modules.mdx","name":"asset-modules.mdx","size":11519,"type":"file","extension":".mdx","url":"/guides/asset-modules/","anchors":[{"title":"Resource assets","id":"resource-assets","level":2},{"title":"Custom output filename","id":"custom-output-filename","level":3},{"title":"Inlining assets","id":"inlining-assets","level":2},{"title":"Custom data URI generator","id":"custom-data-uri-generator","level":3},{"title":"Source assets","id":"source-assets","level":2},{"title":"URL assets","id":"url-assets","level":2},{"title":"General asset type","id":"general-asset-type","level":2},{"title":"Replacing Inline Loader Syntax","id":"replacing-inline-loader-syntax","level":2},{"title":"Disable emitting assets","id":"disable-emitting-assets","level":2}],"title":"Asset Modules","sort":25,"contributors":["smelukov","EugeneHlushko","chenxsan","anshumanv","spence-s","dkdk225"],"related":[{"title":"webpack 5 - Asset Modules","url":"https://dev.to/smelukov/webpack-5-asset-modules-2o3h"}]},{"path":"src/content/guides/entry-advanced.mdx","name":"entry-advanced.mdx","size":2072,"type":"file","extension":".mdx","url":"/guides/entry-advanced/","anchors":[{"title":"Multiple file types per entry","id":"multiple-file-types-per-entry","level":2}],"title":"Advanced entry","sort":25,"contributors":["EugeneHlushko"]},{"path":"src/content/guides/package-exports.mdx","name":"package-exports.mdx","size":24715,"type":"file","extension":".mdx","url":"/guides/package-exports/","anchors":[{"title":"General syntax","id":"general-syntax","level":2},{"title":"Alternatives","id":"alternatives","level":2},{"title":"Conditional syntax","id":"conditional-syntax","level":2},{"title":"Abbreviation","id":"abbreviation","level":2},{"title":"Notes about ordering","id":"notes-about-ordering","level":2},{"title":"Support","id":"support","level":2},{"title":"Conditions","id":"conditions","level":2},{"title":"Reference syntax","id":"reference-syntax","level":3},{"title":"Optimizations","id":"optimizations","level":3},{"title":"Target environment","id":"target-environment","level":3},{"title":"Conditions: Preprocessor and runtimes","id":"conditions-preprocessor-and-runtimes","level":3},{"title":"Conditions: Custom","id":"conditions-custom","level":3},{"title":"Common patterns","id":"common-patterns","level":2},{"title":"Target environment independent packages","id":"target-environment-independent-packages","level":3},{"title":"Providing devtools or production optimizations","id":"providing-devtools-or-production-optimizations","level":3},{"title":"Providing different versions depending on target environment","id":"providing-different-versions-depending-on-target-environment","level":3},{"title":"Combining patterns","id":"combining-patterns","level":3},{"title":"Guidelines","id":"guidelines","level":2}],"title":"Package exports","sort":25,"contributors":["sokra"],"related":[{"title":"Package entry points in Node.js","url":"https://nodejs.org/api/packages.html#packages_package_entry_points"}]},{"path":"src/content/guides/printable.mdx","name":"printable.mdx","size":2617,"type":"file","extension":".mdx","url":"/guides/printable/","anchors":[{"title":"Guides","id":"guides","level":1},{"title":"Getting Started","id":"getting-started","level":1},{"title":"Asset Management","id":"asset-management","level":1},{"title":"Output Management","id":"output-management","level":1},{"title":"Development","id":"development","level":1},{"title":"Code Splitting","id":"code-splitting","level":1},{"title":"Caching","id":"caching","level":1},{"title":"Authoring Libraries","id":"authoring-libraries","level":1},{"title":"Environment Variables","id":"environment-variables","level":1},{"title":"Build Performance","id":"build-performance","level":1},{"title":"Content Security Policies","id":"content-security-policies","level":1},{"title":"Development - Vagrant","id":"development---vagrant","level":1},{"title":"Dependency Management","id":"dependency-management","level":1},{"title":"Installation","id":"installation","level":1},{"title":"Hot Module Replacement","id":"hot-module-replacement","level":1},{"title":"Tree Shaking","id":"tree-shaking","level":1},{"title":"Production","id":"production","level":1},{"title":"Lazy Loading","id":"lazy-loading","level":1},{"title":"ECMAScript Modules","id":"ecmascript-modules","level":1},{"title":"Shimming","id":"shimming","level":1},{"title":"TypeScript","id":"typescript","level":1},{"title":"Web Workers","id":"web-workers","level":1},{"title":"Progressive Web Application","id":"progressive-web-application","level":1},{"title":"Public Path","id":"public-path","level":1},{"title":"Integrations","id":"integrations","level":1},{"title":"Advanced entry","id":"advanced-entry","level":1},{"title":"Asset Modules","id":"asset-modules","level":1},{"title":"Package exports","id":"package-exports","level":1}],"title":"Printable","sort":999,"contributors":["webpack"]}],"size":243012,"type":"directory","url":"/guides/"},{"path":"src/content/loaders","name":"loaders","children":[{"path":"src/content/loaders/_babel-loader.mdx","name":"babel-loader.mdx","size":13793,"type":"file","extension":".mdx","url":"/loaders/babel-loader/","anchors":[{"title":"Install","id":"install","level":2},{"title":"Usage","id":"usage","level":2},{"title":"Options","id":"options","level":3},{"title":"Troubleshooting","id":"troubleshooting","level":2},{"title":"babel-loader is slow!","id":"babel-loader-is-slow","level":3},{"title":"Some files in my node_modules are not transpiled for IE 11","id":"some-files-in-my-node_modules-are-not-transpiled-for-ie-11","level":3},{"title":"Babel is injecting helpers into each file and bloating my code!","id":"babel-is-injecting-helpers-into-each-file-and-bloating-my-code","level":3},{"title":"The Node.js API for babel has been moved to babel-core.","id":"the-nodejs-api-for-babel-has-been-moved-to-babel-core","level":3},{"title":"Exclude libraries that should not be transpiled","id":"exclude-libraries-that-should-not-be-transpiled","level":3},{"title":"Top level function (IIFE) is still arrow (on Webpack 5)","id":"top-level-function-iife-is-still-arrow-on-webpack-5","level":3},{"title":"Customize config based on webpack target","id":"customize-config-based-on-webpack-target","level":2},{"title":"Customized Loader","id":"customized-loader","level":2},{"title":"Example","id":"example","level":3},{"title":"customOptions(options: Object): { custom: Object, loader: Object }","id":"customoptionsoptions-object--custom-object-loader-object-","level":3},{"title":"config(cfg: PartialConfig, options: { source, customOptions }): Object","id":"configcfg-partialconfig-options--source-customoptions--object","level":3},{"title":"result(result: Result): Result","id":"resultresult-result-result","level":3},{"title":"License","id":"license","level":2}],"title":"babel-loader","source":"https://raw.githubusercontent.com/babel/babel-loader/main/README.md","edit":"https://github.com/babel/babel-loader/edit/main/README.md","repo":"https://github.com/babel/babel-loader","thirdParty":true},{"path":"src/content/loaders/_coffee-loader.mdx","name":"coffee-loader.mdx","size":5019,"type":"file","extension":".mdx","url":"/loaders/coffee-loader/","anchors":[{"title":"Getting Started","id":"getting-started","level":2},{"title":"Options","id":"options","level":2},{"title":"Examples","id":"examples","level":2},{"title":"CoffeeScript and Babel","id":"coffeescript-and-babel","level":3},{"title":"Literate CoffeeScript","id":"literate-coffeescript","level":3},{"title":"Contributing","id":"contributing","level":2},{"title":"License","id":"license","level":2}],"title":"coffee-loader","source":"https://raw.githubusercontent.com/webpack-contrib/coffee-loader/master/README.md","edit":"https://github.com/webpack-contrib/coffee-loader/edit/master/README.md","repo":"https://github.com/webpack-contrib/coffee-loader","thirdParty":true},{"path":"src/content/loaders/_exports-loader.mdx","name":"exports-loader.mdx","size":13582,"type":"file","extension":".mdx","url":"/loaders/exports-loader/","anchors":[{"title":"Getting Started","id":"getting-started","level":2},{"title":"Inline","id":"inline","level":3},{"title":"Using Configuration","id":"using-configuration","level":3},{"title":"Options","id":"options","level":2},{"title":"type","id":"type","level":3},{"title":"exports","id":"exports","level":3},{"title":"Contributing","id":"contributing","level":2},{"title":"License","id":"license","level":2}],"title":"exports-loader","source":"https://raw.githubusercontent.com/webpack-contrib/exports-loader/master/README.md","edit":"https://github.com/webpack-contrib/exports-loader/edit/master/README.md","repo":"https://github.com/webpack-contrib/exports-loader","thirdParty":true},{"path":"src/content/loaders/_expose-loader.mdx","name":"expose-loader.mdx","size":9862,"type":"file","extension":".mdx","url":"/loaders/expose-loader/","anchors":[{"title":"Getting Started","id":"getting-started","level":2},{"title":"Inline","id":"inline","level":2},{"title":"Using Configuration","id":"using-configuration","level":2},{"title":"Options","id":"options","level":2},{"title":"exposes","id":"exposes","level":3},{"title":"globalObject","id":"globalobject","level":3},{"title":"Contributing","id":"contributing","level":2},{"title":"License","id":"license","level":2}],"title":"expose-loader","source":"https://raw.githubusercontent.com/webpack-contrib/expose-loader/master/README.md","edit":"https://github.com/webpack-contrib/expose-loader/edit/master/README.md","repo":"https://github.com/webpack-contrib/expose-loader","thirdParty":true},{"path":"src/content/loaders/_html-loader.mdx","name":"html-loader.mdx","size":24363,"type":"file","extension":".mdx","url":"/loaders/html-loader/","anchors":[{"title":"Getting Started","id":"getting-started","level":2},{"title":"Options","id":"options","level":2},{"title":"sources","id":"sources","level":3},{"title":"preprocessor","id":"preprocessor","level":3},{"title":"minimize","id":"minimize","level":3},{"title":"esModule","id":"esmodule","level":3},{"title":"Examples","id":"examples","level":2},{"title":"Disable url resolving using the `` comment","id":"disable-url-resolving-using-the--comment","level":3},{"title":"roots","id":"roots","level":3},{"title":"CDN","id":"cdn","level":3},{"title":"Process script and link tags","id":"process-script-and-link-tags","level":3},{"title":"Templating","id":"templating","level":3},{"title":"PostHTML","id":"posthtml","level":3},{"title":"Export into HTML files","id":"export-into-html-files","level":3},{"title":"Contributing","id":"contributing","level":2},{"title":"License","id":"license","level":2}],"title":"html-loader","source":"https://raw.githubusercontent.com/webpack-contrib/html-loader/master/README.md","edit":"https://github.com/webpack-contrib/html-loader/edit/master/README.md","repo":"https://github.com/webpack-contrib/html-loader","thirdParty":true},{"path":"src/content/loaders/_imports-loader.mdx","name":"imports-loader.mdx","size":17274,"type":"file","extension":".mdx","url":"/loaders/imports-loader/","anchors":[{"title":"Getting Started","id":"getting-started","level":2},{"title":"Inline","id":"inline","level":3},{"title":"Using Configuration","id":"using-configuration","level":3},{"title":"Options","id":"options","level":2},{"title":"type","id":"type","level":3},{"title":"imports","id":"imports","level":3},{"title":"wrapper","id":"wrapper","level":3},{"title":"additionalCode","id":"additionalcode","level":3},{"title":"Contributing","id":"contributing","level":2},{"title":"License","id":"license","level":2}],"title":"imports-loader","source":"https://raw.githubusercontent.com/webpack-contrib/imports-loader/master/README.md","edit":"https://github.com/webpack-contrib/imports-loader/edit/master/README.md","repo":"https://github.com/webpack-contrib/imports-loader","thirdParty":true},{"path":"src/content/loaders/index.mdx","name":"index.mdx","size":4115,"type":"file","extension":".mdx","url":"/loaders/","anchors":[{"title":"Files","id":"files","level":2},{"title":"JSON","id":"json","level":2},{"title":"Transpiling","id":"transpiling","level":2},{"title":"Templating","id":"templating","level":2},{"title":"Styling","id":"styling","level":2},{"title":"Frameworks","id":"frameworks","level":2},{"title":"Awesome","id":"awesome","level":2}],"title":"Loaders","sort":-1,"contributors":["simon04","bajras","rhys-vdw","EugeneHlushko","hemal7735","snitin315","anshumanv","jamesgeorge007","chenxsan"]},{"path":"src/content/loaders/_node-loader.mdx","name":"node-loader.mdx","size":5276,"type":"file","extension":".mdx","url":"/loaders/node-loader/","anchors":[{"title":"Getting Started","id":"getting-started","level":2},{"title":"Inline","id":"inline","level":3},{"title":"Configuration","id":"configuration","level":3},{"title":"Options","id":"options","level":2},{"title":"flags","id":"flags","level":3},{"title":"name","id":"name","level":3},{"title":"Contributing","id":"contributing","level":2},{"title":"License","id":"license","level":2}],"title":"node-loader","source":"https://raw.githubusercontent.com/webpack-contrib/node-loader/master/README.md","edit":"https://github.com/webpack-contrib/node-loader/edit/master/README.md","repo":"https://github.com/webpack-contrib/node-loader","thirdParty":true},{"path":"src/content/loaders/printable.mdx","name":"printable.mdx","size":1599,"type":"file","extension":".mdx","url":"/loaders/printable/","anchors":[{"title":"babel-loader","id":"babel-loader","level":1},{"title":"coffee-loader","id":"coffee-loader","level":1},{"title":"css-loader","id":"css-loader","level":1},{"title":"exports-loader","id":"exports-loader","level":1},{"title":"expose-loader","id":"expose-loader","level":1},{"title":"html-loader","id":"html-loader","level":1},{"title":"imports-loader","id":"imports-loader","level":1},{"title":"less-loader","id":"less-loader","level":1},{"title":"node-loader","id":"node-loader","level":1},{"title":"postcss-loader","id":"postcss-loader","level":1},{"title":"remark-loader","id":"remark-loader","level":1},{"title":"sass-loader","id":"sass-loader","level":1},{"title":"source-map-loader","id":"source-map-loader","level":1},{"title":"style-loader","id":"style-loader","level":1},{"title":"stylus-loader","id":"stylus-loader","level":1},{"title":"thread-loader","id":"thread-loader","level":1},{"title":"val-loader","id":"val-loader","level":1},{"title":"Loaders","id":"loaders","level":1}],"title":"Printable","sort":999,"contributors":["webpack"]},{"path":"src/content/loaders/_remark-loader.mdx","name":"remark-loader.mdx","size":8153,"type":"file","extension":".mdx","url":"/loaders/remark-loader/","anchors":[{"title":"Usage","id":"usage","level":2},{"title":"Options","id":"options","level":2},{"title":"remarkOptions","id":"remarkoptions","level":3},{"title":"removeFrontMatter","id":"removefrontmatter","level":3},{"title":"Inspiration","id":"inspiration","level":2},{"title":"Examples","id":"examples","level":2},{"title":"Markdown to HTML","id":"markdown-to-html","level":3},{"title":"Markdown to Markdown","id":"markdown-to-markdown","level":3},{"title":"Contributing","id":"contributing","level":2},{"title":"License","id":"license","level":2}],"title":"remark-loader","source":"https://raw.githubusercontent.com/webpack-contrib/remark-loader/master/README.md","edit":"https://github.com/webpack-contrib/remark-loader/edit/master/README.md","repo":"https://github.com/webpack-contrib/remark-loader","thirdParty":true},{"path":"src/content/loaders/_source-map-loader.mdx","name":"source-map-loader.mdx","size":5406,"type":"file","extension":".mdx","url":"/loaders/source-map-loader/","anchors":[{"title":"Getting Started","id":"getting-started","level":2},{"title":"Options","id":"options","level":2},{"title":"filterSourceMappingUrl","id":"filtersourcemappingurl","level":3},{"title":"Examples","id":"examples","level":2},{"title":"Ignoring Warnings","id":"ignoring-warnings","level":3},{"title":"Contributing","id":"contributing","level":2},{"title":"License","id":"license","level":2}],"title":"source-map-loader","source":"https://raw.githubusercontent.com/webpack-contrib/source-map-loader/master/README.md","edit":"https://github.com/webpack-contrib/source-map-loader/edit/master/README.md","repo":"https://github.com/webpack-contrib/source-map-loader","thirdParty":true},{"path":"src/content/loaders/_thread-loader.mdx","name":"thread-loader.mdx","size":4455,"type":"file","extension":".mdx","url":"/loaders/thread-loader/","anchors":[{"title":"Getting Started","id":"getting-started","level":2},{"title":"Examples","id":"examples","level":3},{"title":"Contributing","id":"contributing","level":2},{"title":"License","id":"license","level":2}],"title":"thread-loader","source":"https://raw.githubusercontent.com/webpack-contrib/thread-loader/master/README.md","edit":"https://github.com/webpack-contrib/thread-loader/edit/master/README.md","repo":"https://github.com/webpack-contrib/thread-loader","thirdParty":true},{"path":"src/content/loaders/_val-loader.mdx","name":"val-loader.mdx","size":10033,"type":"file","extension":".mdx","url":"/loaders/val-loader/","anchors":[{"title":"Getting Started","id":"getting-started","level":2},{"title":"Options","id":"options","level":2},{"title":"executableFile","id":"executablefile","level":3},{"title":"Return Object Properties","id":"return-object-properties","level":2},{"title":"code","id":"code","level":3},{"title":"sourceMap","id":"sourcemap","level":3},{"title":"ast","id":"ast","level":3},{"title":"dependencies","id":"dependencies","level":3},{"title":"contextDependencies","id":"contextdependencies","level":3},{"title":"buildDependencies","id":"builddependencies","level":3},{"title":"cacheable","id":"cacheable","level":3},{"title":"Examples","id":"examples","level":2},{"title":"Simple","id":"simple","level":3},{"title":"Modernizr","id":"modernizr","level":3},{"title":"Figlet","id":"figlet","level":3},{"title":"Contributing","id":"contributing","level":2},{"title":"License","id":"license","level":2}],"title":"val-loader","source":"https://raw.githubusercontent.com/webpack-contrib/val-loader/master/README.md","edit":"https://github.com/webpack-contrib/val-loader/edit/master/README.md","repo":"https://github.com/webpack-contrib/val-loader","thirdParty":true},{"path":"src/content/loaders/_css-loader.mdx","name":"css-loader.mdx","size":45786,"type":"file","extension":".mdx","url":"/loaders/css-loader/","anchors":[{"title":"Getting Started","id":"getting-started","level":2},{"title":"Options","id":"options","level":2},{"title":"url","id":"url","level":3},{"title":"import","id":"import","level":3},{"title":"modules","id":"modules","level":3},{"title":"importLoaders","id":"importloaders","level":3},{"title":"sourceMap","id":"sourcemap","level":3},{"title":"esModule","id":"esmodule","level":3},{"title":"exportType","id":"exporttype","level":3},{"title":"Examples","id":"examples","level":2},{"title":"Recommend","id":"recommend","level":3},{"title":"Disable url resolving using the /* webpackIgnore: true */ comment","id":"disable-url-resolving-using-the--webpackignore-true--comment","level":3},{"title":"Assets","id":"assets","level":3},{"title":"Extract","id":"extract","level":3},{"title":"Pure CSS, CSS modules and PostCSS","id":"pure-css-css-modules-and-postcss","level":3},{"title":"Resolve unresolved URLs using an alias","id":"resolve-unresolved-urls-using-an-alias","level":3},{"title":"Named export with custom export names","id":"named-export-with-custom-export-names","level":3},{"title":"Separating Interoperable CSS-only and CSS Module features","id":"separating-interoperable-css-only-and-css-module-features","level":3},{"title":"Contributing","id":"contributing","level":2},{"title":"License","id":"license","level":2}],"title":"css-loader","source":"https://raw.githubusercontent.com/webpack-contrib/css-loader/master/README.md","edit":"https://github.com/webpack-contrib/css-loader/edit/master/README.md","repo":"https://github.com/webpack-contrib/css-loader","thirdParty":true,"group":"CSS"},{"path":"src/content/loaders/_less-loader.mdx","name":"less-loader.mdx","size":15774,"type":"file","extension":".mdx","url":"/loaders/less-loader/","anchors":[{"title":"Getting Started","id":"getting-started","level":2},{"title":"Options","id":"options","level":2},{"title":"lessOptions","id":"lessoptions","level":3},{"title":"additionalData","id":"additionaldata","level":3},{"title":"sourceMap","id":"sourcemap","level":3},{"title":"webpackImporter","id":"webpackimporter","level":3},{"title":"implementation","id":"implementation","level":3},{"title":"Examples","id":"examples","level":2},{"title":"Normal usage","id":"normal-usage","level":3},{"title":"Source maps","id":"source-maps","level":3},{"title":"In production","id":"in-production","level":3},{"title":"Imports","id":"imports","level":3},{"title":"Plugins","id":"plugins","level":3},{"title":"Extracting style sheets","id":"extracting-style-sheets","level":3},{"title":"CSS modules gotcha","id":"css-modules-gotcha","level":3},{"title":"Contributing","id":"contributing","level":2},{"title":"License","id":"license","level":2}],"title":"less-loader","source":"https://raw.githubusercontent.com/webpack-contrib/less-loader/master/README.md","edit":"https://github.com/webpack-contrib/less-loader/edit/master/README.md","repo":"https://github.com/webpack-contrib/less-loader","thirdParty":true,"group":"CSS"},{"path":"src/content/loaders/_postcss-loader.mdx","name":"postcss-loader.mdx","size":25177,"type":"file","extension":".mdx","url":"/loaders/postcss-loader/","anchors":[{"title":"Getting Started","id":"getting-started","level":2},{"title":"Options","id":"options","level":2},{"title":"execute","id":"execute","level":3},{"title":"postcssOptions","id":"postcssoptions","level":3},{"title":"sourceMap","id":"sourcemap","level":3},{"title":"implementation","id":"implementation","level":3},{"title":"Examples","id":"examples","level":2},{"title":"SugarSS","id":"sugarss","level":3},{"title":"Autoprefixer","id":"autoprefixer","level":3},{"title":"PostCSS Preset Env","id":"postcss-preset-env","level":3},{"title":"CSS Modules","id":"css-modules","level":3},{"title":"Extract CSS","id":"extract-css","level":3},{"title":"Emit assets","id":"emit-assets","level":3},{"title":"Add dependencies, contextDependencies, buildDependencies, missingDependencies","id":"add-dependencies-contextdependencies-builddependencies-missingdependencies","level":3},{"title":"Contributing","id":"contributing","level":2},{"title":"License","id":"license","level":2}],"title":"postcss-loader","source":"https://raw.githubusercontent.com/webpack-contrib/postcss-loader/master/README.md","edit":"https://github.com/webpack-contrib/postcss-loader/edit/master/README.md","repo":"https://github.com/webpack-contrib/postcss-loader","thirdParty":true,"group":"CSS"},{"path":"src/content/loaders/_sass-loader.mdx","name":"sass-loader.mdx","size":24121,"type":"file","extension":".mdx","url":"/loaders/sass-loader/","anchors":[{"title":"Getting Started","id":"getting-started","level":2},{"title":"The outputStyle (old API) and style (new API) options in production mode","id":"the-outputstyle-old-api-and-style-new-api-options-in-production-mode","level":3},{"title":"Resolving import at-rules","id":"resolving-import-at-rules","level":3},{"title":"Problems with url(...)","id":"problems-with-url","level":3},{"title":"Options","id":"options","level":2},{"title":"implementation","id":"implementation","level":3},{"title":"sassOptions","id":"sassoptions","level":3},{"title":"sourceMap","id":"sourcemap","level":3},{"title":"additionalData","id":"additionaldata","level":3},{"title":"webpackImporter","id":"webpackimporter","level":3},{"title":"warnRuleAsWarning","id":"warnruleaswarning","level":3},{"title":"api","id":"api","level":3},{"title":"How to enable @debug output","id":"how-to-enable-debug-output","level":2},{"title":"Examples","id":"examples","level":2},{"title":"Extracts CSS into separate files","id":"extracts-css-into-separate-files","level":3},{"title":"Source maps","id":"source-maps","level":3},{"title":"Contributing","id":"contributing","level":2},{"title":"License","id":"license","level":2}],"title":"sass-loader","source":"https://raw.githubusercontent.com/webpack-contrib/sass-loader/master/README.md","edit":"https://github.com/webpack-contrib/sass-loader/edit/master/README.md","repo":"https://github.com/webpack-contrib/sass-loader","thirdParty":true,"group":"CSS"},{"path":"src/content/loaders/_style-loader.mdx","name":"style-loader.mdx","size":27281,"type":"file","extension":".mdx","url":"/loaders/style-loader/","anchors":[{"title":"Getting Started","id":"getting-started","level":2},{"title":"Options","id":"options","level":2},{"title":"injectType","id":"injecttype","level":3},{"title":"attributes","id":"attributes","level":3},{"title":"insert","id":"insert","level":3},{"title":"styleTagTransform","id":"styletagtransform","level":3},{"title":"base","id":"base","level":3},{"title":"esModule","id":"esmodule","level":3},{"title":"Examples","id":"examples","level":2},{"title":"Recommend","id":"recommend","level":3},{"title":"Named export for CSS Modules","id":"named-export-for-css-modules","level":3},{"title":"Source maps","id":"source-maps","level":3},{"title":"Nonce","id":"nonce","level":3},{"title":"Contributing","id":"contributing","level":2},{"title":"License","id":"license","level":2}],"title":"style-loader","source":"https://raw.githubusercontent.com/webpack-contrib/style-loader/master/README.md","edit":"https://github.com/webpack-contrib/style-loader/edit/master/README.md","repo":"https://github.com/webpack-contrib/style-loader","thirdParty":true,"group":"CSS"},{"path":"src/content/loaders/_stylus-loader.mdx","name":"stylus-loader.mdx","size":18226,"type":"file","extension":".mdx","url":"/loaders/stylus-loader/","anchors":[{"title":"Getting Started","id":"getting-started","level":2},{"title":"Options","id":"options","level":2},{"title":"stylusOptions","id":"stylusoptions","level":3},{"title":"sourceMap","id":"sourcemap","level":3},{"title":"webpackImporter","id":"webpackimporter","level":3},{"title":"additionalData","id":"additionaldata","level":3},{"title":"implementation","id":"implementation","level":3},{"title":"Examples","id":"examples","level":2},{"title":"Normal usage","id":"normal-usage","level":3},{"title":"Source maps","id":"source-maps","level":3},{"title":"Using nib with stylus","id":"using-nib-with-stylus","level":3},{"title":"Import JSON files","id":"import-json-files","level":3},{"title":"In production","id":"in-production","level":3},{"title":"webpack resolver","id":"webpack-resolver","level":3},{"title":"Stylus resolver","id":"stylus-resolver","level":3},{"title":"Extracting style sheets","id":"extracting-style-sheets","level":3},{"title":"Contributing","id":"contributing","level":2},{"title":"License","id":"license","level":2}],"title":"stylus-loader","source":"https://raw.githubusercontent.com/webpack-contrib/stylus-loader/master/README.md","edit":"https://github.com/webpack-contrib/stylus-loader/edit/master/README.md","repo":"https://github.com/webpack-contrib/stylus-loader","thirdParty":true,"group":"CSS"}],"size":279295,"type":"directory","url":"/loaders/"},{"path":"src/content/migrate","name":"migrate","children":[{"path":"src/content/migrate/index.mdx","name":"index.mdx","size":161,"type":"file","extension":".mdx","url":"/migrate/","anchors":[],"title":"Migrate","sort":-1,"contributors":["EugeneHlushko"]},{"path":"src/content/migrate/5.mdx","name":"5.mdx","size":15701,"type":"file","extension":".mdx","url":"/migrate/5/","anchors":[{"title":"Preparations","id":"preparations","level":2},{"title":"Upgrade webpack 4 and its plugins/loaders","id":"upgrade-webpack-4-and-its-pluginsloaders","level":2},{"title":"Make sure your build has no errors or warnings","id":"make-sure-your-build-has-no-errors-or-warnings","level":3},{"title":"Make sure to use mode","id":"make-sure-to-use-mode","level":3},{"title":"Update outdated options","id":"update-outdated-options","level":3},{"title":"Test webpack 5 compatibility","id":"test-webpack-5-compatibility","level":3},{"title":"Upgrade webpack to 5","id":"upgrade-webpack-to-5","level":2},{"title":"Clean up configuration","id":"clean-up-configuration","level":3},{"title":"Need to support an older browser like IE 11?","id":"need-to-support-an-older-browser-like-ie-11","level":3},{"title":"Cleanup the code","id":"cleanup-the-code","level":3},{"title":"Run a single build and follow advice","id":"run-a-single-build-and-follow-advice","level":3},{"title":"Everything works?","id":"everything-works","level":2},{"title":"It is not working?","id":"it-is-not-working","level":2},{"title":"Something missing in this guide?","id":"something-missing-in-this-guide","level":2},{"title":"Changes to internals","id":"changes-to-internals","level":2},{"title":"getOptions method for Loaders","id":"getoptions-method-for-loaders","level":3}],"title":"To v5 from v4","sort":1,"contributors":["sokra","salemhilal","keichinger","EugeneHlushko","MattGoldwater","rramaa","chenxsan","jamesgeorge007","getsnoopy","yevhen-logosha"]},{"path":"src/content/migrate/4.mdx","name":"4.mdx","size":4115,"type":"file","extension":".mdx","url":"/migrate/4/","anchors":[{"title":"Node.js v4","id":"nodejs-v4","level":2},{"title":"CLI","id":"cli","level":2},{"title":"Update plugins","id":"update-plugins","level":2},{"title":"mode","id":"mode","level":2},{"title":"Deprecated/Removed plugins","id":"deprecatedremoved-plugins","level":2},{"title":"CommonsChunkPlugin","id":"commonschunkplugin","level":2},{"title":"import() and CommonJS","id":"import-and-commonjs","level":2},{"title":"json and loaders","id":"json-and-loaders","level":2},{"title":"module.loaders","id":"moduleloaders","level":2}],"title":"To v4 from v3","sort":2,"contributors":["sokra","EugeneHlushko","Kolhar730"],"related":[{"title":"To v2 or v3 from v1","url":"https://webpack.js.org/migrate/3/"},{"title":"RIP CommonChunkPlugin","url":"https://gist.github.com/sokra/1522d586b8e5c0f5072d7565c2bee693"},{"title":"webpack 4: migration guide for plugins/loaders","url":"https://medium.com/webpack/webpack-4-migration-guide-for-plugins-loaders-20a79b927202"}]},{"path":"src/content/migrate/3.mdx","name":"3.mdx","size":16052,"type":"file","extension":".mdx","url":"/migrate/3/","anchors":[{"title":"resolve.root, resolve.fallback, resolve.modulesDirectories","id":"resolveroot-resolvefallback-resolvemodulesdirectories","level":2},{"title":"resolve.extensions","id":"resolveextensions","level":2},{"title":"resolve.*","id":"resolve","level":2},{"title":"module.loaders is now module.rules","id":"moduleloaders-is-now-modulerules","level":2},{"title":"Chaining loaders","id":"chaining-loaders","level":2},{"title":"Automatic -loader module name extension removed","id":"automatic--loader-module-name-extension-removed","level":2},{"title":"json-loader is not required anymore","id":"json-loader-is-not-required-anymore","level":2},{"title":"Loaders in configuration resolve relative to context","id":"loaders-in-configuration-resolve-relative-to-context","level":2},{"title":"module.preLoaders and module.postLoaders were removed:","id":"modulepreloaders-and-modulepostloaders-were-removed","level":2},{"title":"UglifyJsPlugin sourceMap","id":"uglifyjsplugin-sourcemap","level":2},{"title":"UglifyJsPlugin warnings","id":"uglifyjsplugin-warnings","level":2},{"title":"UglifyJsPlugin minimize loaders","id":"uglifyjsplugin-minimize-loaders","level":2},{"title":"DedupePlugin has been removed","id":"dedupeplugin-has-been-removed","level":2},{"title":"BannerPlugin - breaking change","id":"bannerplugin---breaking-change","level":2},{"title":"OccurrenceOrderPlugin is now on by default","id":"occurrenceorderplugin-is-now-on-by-default","level":2},{"title":"ExtractTextWebpackPlugin - breaking change","id":"extracttextwebpackplugin---breaking-change","level":2},{"title":"ExtractTextPlugin.extract","id":"extracttextpluginextract","level":3},{"title":"new ExtractTextPlugin({options})","id":"new-extracttextpluginoptions","level":3},{"title":"Full dynamic requires now fail by default","id":"full-dynamic-requires-now-fail-by-default","level":2},{"title":"Using custom arguments in CLI and configuration","id":"using-custom-arguments-in-cli-and-configuration","level":3},{"title":"require.ensure and AMD require are asynchronous","id":"requireensure-and-amd-require-are-asynchronous","level":2},{"title":"Loader configuration is through options","id":"loader-configuration-is-through-options","level":2},{"title":"What are options?","id":"what-are-options","level":3},{"title":"LoaderOptionsPlugin context","id":"loaderoptionsplugin-context","level":2},{"title":"debug","id":"debug","level":2},{"title":"Code Splitting with ES2015","id":"code-splitting-with-es2015","level":2},{"title":"Dynamic expressions","id":"dynamic-expressions","level":2},{"title":"Mixing ES2015 with AMD and CommonJS","id":"mixing-es2015-with-amd-and-commonjs","level":2},{"title":"Hints","id":"hints","level":2},{"title":"Template strings","id":"template-strings","level":3},{"title":"Configuration Promise","id":"configuration-promise","level":3},{"title":"Advanced loader matching","id":"advanced-loader-matching","level":3},{"title":"More CLI options","id":"more-cli-options","level":3},{"title":"Loader changes","id":"loader-changes","level":2},{"title":"Cacheable","id":"cacheable","level":3},{"title":"Complex options","id":"complex-options","level":3}],"title":"To v2 or v3 from v1","sort":3,"contributors":["sokra","jhnns","grgur","domfarolino","johnnyreilly","jouni-kantola","frederikprijck","chrisVillanueva","bebraw","howdy39","selbekk","ndelangen","EugeneHlushko","byzyk"]},{"path":"src/content/migrate/printable.mdx","name":"printable.mdx","size":286,"type":"file","extension":".mdx","url":"/migrate/printable/","anchors":[{"title":"Migrate","id":"migrate","level":1},{"title":"To v5 from v4","id":"to-v5-from-v4","level":1},{"title":"To v4 from v3","id":"to-v4-from-v3","level":1},{"title":"To v2 or v3 from v1","id":"to-v2-or-v3-from-v1","level":1}],"title":"Printable","sort":999,"contributors":["webpack"]}],"size":36315,"type":"directory","url":"/migrate/"},{"path":"src/content/plugins","name":"plugins","children":[{"path":"src/content/plugins/index.mdx","name":"index.mdx","size":4929,"type":"file","extension":".mdx","url":"/plugins/","anchors":[],"title":"Plugins","sort":-1,"contributors":["simon04","gonzoyumo","rouzbeh84","aretecode","eko3alpha","refactorized","byzyk","EugeneHlushko","snitin315","chenxsan"]},{"path":"src/content/plugins/printable.mdx","name":"printable.mdx","size":4723,"type":"file","extension":".mdx","url":"/plugins/printable/","anchors":[{"title":"AutomaticPrefetchPlugin","id":"automaticprefetchplugin","level":1},{"title":"BannerPlugin","id":"bannerplugin","level":1},{"title":"CommonsChunkPlugin","id":"commonschunkplugin","level":1},{"title":"CompressionWebpackPlugin","id":"compressionwebpackplugin","level":1},{"title":"ContextExclusionPlugin","id":"contextexclusionplugin","level":1},{"title":"ContextReplacementPlugin","id":"contextreplacementplugin","level":1},{"title":"CopyWebpackPlugin","id":"copywebpackplugin","level":1},{"title":"CssMinimizerWebpackPlugin","id":"cssminimizerwebpackplugin","level":1},{"title":"DefinePlugin","id":"defineplugin","level":1},{"title":"DllPlugin","id":"dllplugin","level":1},{"title":"EnvironmentPlugin","id":"environmentplugin","level":1},{"title":"EslintWebpackPlugin","id":"eslintwebpackplugin","level":1},{"title":"EvalSourceMapDevToolPlugin","id":"evalsourcemapdevtoolplugin","level":1},{"title":"HashedModuleIdsPlugin","id":"hashedmoduleidsplugin","level":1},{"title":"HotModuleReplacementPlugin","id":"hotmodulereplacementplugin","level":1},{"title":"HtmlMinimizerWebpackPlugin","id":"htmlminimizerwebpackplugin","level":1},{"title":"HtmlWebpackPlugin","id":"htmlwebpackplugin","level":1},{"title":"IgnorePlugin","id":"ignoreplugin","level":1},{"title":"ImageMinimizerWebpackPlugin","id":"imageminimizerwebpackplugin","level":1},{"title":"InstallWebpackPlugin","id":"installwebpackplugin","level":1},{"title":"Internal webpack plugins","id":"internal-webpack-plugins","level":1},{"title":"JsonMinimizerWebpackPlugin","id":"jsonminimizerwebpackplugin","level":1},{"title":"LimitChunkCountPlugin","id":"limitchunkcountplugin","level":1},{"title":"MinChunkSizePlugin","id":"minchunksizeplugin","level":1},{"title":"MiniCssExtractPlugin","id":"minicssextractplugin","level":1},{"title":"ModuleConcatenationPlugin","id":"moduleconcatenationplugin","level":1},{"title":"Plugins","id":"plugins","level":1},{"title":"ModuleFederationPlugin","id":"modulefederationplugin","level":1},{"title":"NoEmitOnErrorsPlugin","id":"noemitonerrorsplugin","level":1},{"title":"NormalModuleReplacementPlugin","id":"normalmodulereplacementplugin","level":1},{"title":"PrefetchPlugin","id":"prefetchplugin","level":1},{"title":"ProfilingPlugin","id":"profilingplugin","level":1},{"title":"ProgressPlugin","id":"progressplugin","level":1},{"title":"ProvidePlugin","id":"provideplugin","level":1},{"title":"SourceMapDevToolPlugin","id":"sourcemapdevtoolplugin","level":1},{"title":"SplitChunksPlugin","id":"splitchunksplugin","level":1},{"title":"StylelintWebpackPlugin","id":"stylelintwebpackplugin","level":1},{"title":"SvgChunkWebpackPlugin","id":"svgchunkwebpackplugin","level":1},{"title":"TerserWebpackPlugin","id":"terserwebpackplugin","level":1},{"title":"WatchIgnorePlugin","id":"watchignoreplugin","level":1}],"title":"Printable","sort":999,"contributors":["webpack"]},{"path":"src/content/plugins/html-webpack-plugin.mdx","name":"html-webpack-plugin.mdx","size":2010,"type":"file","extension":".mdx","url":"/plugins/html-webpack-plugin/","anchors":[{"title":"Installation","id":"installation","level":2},{"title":"Basic Usage","id":"basic-usage","level":2},{"title":"Configuration","id":"configuration","level":2},{"title":"Third party addons","id":"third-party-addons","level":2}],"title":"HtmlWebpackPlugin","group":"Community","contributors":["ampedandwired","simon04","Sibiraj-S","EugeneHlushko"]},{"path":"src/content/plugins/_svg-chunk-webpack-plugin.mdx","name":"svg-chunk-webpack-plugin.mdx","size":8936,"type":"file","extension":".mdx","url":"/plugins/svg-chunk-webpack-plugin/","anchors":[{"title":"When to use this plugin","id":"when-to-use-this-plugin","level":2},{"title":"Zero config","id":"zero-config","level":2},{"title":"Installation","id":"installation","level":2},{"title":"Environment","id":"environment","level":2},{"title":"Example","id":"example","level":2},{"title":"Basic usage","id":"basic-usage","level":2},{"title":"Using a configuration","id":"using-a-configuration","level":2},{"title":"Loader","id":"loader","level":3},{"title":"Plugin","id":"plugin","level":3},{"title":"filename","id":"filename","level":3},{"title":"svgstoreConfig","id":"svgstoreconfig","level":3},{"title":"generateSpritesManifest","id":"generatespritesmanifest","level":3},{"title":"generateSpritesPreview","id":"generatespritespreview","level":3},{"title":"Caching","id":"caching","level":2},{"title":"[contenthash]","id":"contenthash","level":3},{"title":"[fullhash]","id":"fullhash","level":3},{"title":"License","id":"license","level":2}],"title":"SvgChunkWebpackPlugin","group":"Community","contributors":["yoriiis","alexander-akait"],"source":"https://raw.githubusercontent.com/yoriiis/svg-chunk-webpack-plugin/main/README.md","edit":"https://github.com/yoriiis/svg-chunk-webpack-plugin/edit/main/README.md","repo":"https://github.com/yoriiis/svg-chunk-webpack-plugin","thirdParty":true},{"path":"src/content/plugins/automatic-prefetch-plugin.mdx","name":"automatic-prefetch-plugin.mdx","size":591,"type":"file","extension":".mdx","url":"/plugins/automatic-prefetch-plugin/","anchors":[],"title":"AutomaticPrefetchPlugin","group":"webpack","contributors":["sokra","EugeneHlushko"]},{"path":"src/content/plugins/banner-plugin.mdx","name":"banner-plugin.mdx","size":1652,"type":"file","extension":".mdx","url":"/plugins/banner-plugin/","anchors":[{"title":"Options","id":"options","level":2},{"title":"Usage","id":"usage","level":2},{"title":"Placeholders","id":"placeholders","level":2}],"title":"BannerPlugin","group":"webpack","contributors":["simon04","byzyk","chenxsan"],"related":[{"title":"banner-plugin-hashing test","url":"https://github.com/webpack/webpack/blob/master/test/configCases/plugins/banner-plugin-hashing/webpack.config.js"}]},{"path":"src/content/plugins/commons-chunk-plugin.mdx","name":"commons-chunk-plugin.mdx","size":9405,"type":"file","extension":".mdx","url":"/plugins/commons-chunk-plugin/","anchors":[{"title":"Options","id":"options","level":2},{"title":"Examples","id":"examples","level":2},{"title":"Commons chunk for entries","id":"commons-chunk-for-entries","level":3},{"title":"Explicit vendor chunk","id":"explicit-vendor-chunk","level":3},{"title":"Move common modules into the parent chunk","id":"move-common-modules-into-the-parent-chunk","level":3},{"title":"Extra async commons chunk","id":"extra-async-commons-chunk","level":3},{"title":"Passing the minChunks property a function","id":"passing-the-minchunks-property-a-function","level":3},{"title":"Manifest file","id":"manifest-file","level":2},{"title":"Combining implicit common vendor chunks and manifest file","id":"combining-implicit-common-vendor-chunks-and-manifest-file","level":2},{"title":"More Examples","id":"more-examples","level":2}],"title":"CommonsChunkPlugin","group":"webpack","contributors":["bebraw","simon04","christopher4lis","kevinzwhuang","jdbevan","jeremenichelli","byzyk","madhavarshney","snitin315"]},{"path":"src/content/plugins/context-exclusion-plugin.mdx","name":"context-exclusion-plugin.mdx","size":516,"type":"file","extension":".mdx","url":"/plugins/context-exclusion-plugin/","anchors":[],"title":"ContextExclusionPlugin","group":"webpack","contributors":["jeffin"]},{"path":"src/content/plugins/context-replacement-plugin.mdx","name":"context-replacement-plugin.mdx","size":3107,"type":"file","extension":".mdx","url":"/plugins/context-replacement-plugin/","anchors":[{"title":"Usage","id":"usage","level":2},{"title":"Content Callback","id":"content-callback","level":2},{"title":"Other Options","id":"other-options","level":2}],"title":"ContextReplacementPlugin","group":"webpack","contributors":["simon04","byzyk","masives","chenxsan"],"related":[{"title":"Issue 2783 - ContextReplacementPlugin Description","url":"https://github.com/webpack/webpack/issues/2783#issuecomment-234137265"},{"title":"Using context replacement module for date-fns","url":"https://github.com/date-fns/date-fns/blob/master/docs/webpack.md"}]},{"path":"src/content/plugins/define-plugin.mdx","name":"define-plugin.mdx","size":4474,"type":"file","extension":".mdx","url":"/plugins/define-plugin/","anchors":[{"title":"Usage","id":"usage","level":2},{"title":"Feature Flags","id":"feature-flags","level":2},{"title":"Service URLs","id":"service-urls","level":2},{"title":"Runtime values via runtimeValue","id":"runtime-values-via-runtimevalue","level":2}],"title":"DefinePlugin","group":"webpack","contributors":["simon04","rouzbeh84","byzyk","EugeneHlushko","smonusbonus","chenxsan"]},{"path":"src/content/plugins/dll-plugin.mdx","name":"dll-plugin.mdx","size":5604,"type":"file","extension":".mdx","url":"/plugins/dll-plugin/","anchors":[{"title":"DllPlugin","id":"dllplugin","level":2},{"title":"DllReferencePlugin","id":"dllreferenceplugin","level":2},{"title":"Modes","id":"modes","level":3},{"title":"Usage","id":"usage","level":2},{"title":"Examples","id":"examples","level":2},{"title":"References","id":"references","level":2},{"title":"Source","id":"source","level":3},{"title":"Tests","id":"tests","level":3}],"title":"DllPlugin","group":"webpack","contributors":["aretecode","sokra","opiepj","simon04","skipjack","byzyk","EugeneHlushko","EslamHiko","snitin315"],"related":[{"title":"Code Splitting Example","url":"https://github.com/webpack/webpack/blob/master/examples/explicit-vendor-chunk/README.md"}]},{"path":"src/content/plugins/environment-plugin.mdx","name":"environment-plugin.mdx","size":3629,"type":"file","extension":".mdx","url":"/plugins/environment-plugin/","anchors":[{"title":"Usage","id":"usage","level":2},{"title":"Usage with default values","id":"usage-with-default-values","level":2},{"title":"Use Case: Git Version","id":"use-case-git-version","level":2},{"title":"DotenvPlugin","id":"dotenvplugin","level":2}],"title":"EnvironmentPlugin","group":"webpack","contributors":["simon04","einarlove","rouzbeh84","byzyk"]},{"path":"src/content/plugins/eval-source-map-dev-tool-plugin.mdx","name":"eval-source-map-dev-tool-plugin.mdx","size":2528,"type":"file","extension":".mdx","url":"/plugins/eval-source-map-dev-tool-plugin/","anchors":[{"title":"Options","id":"options","level":2},{"title":"Examples","id":"examples","level":2},{"title":"Basic Use Case","id":"basic-use-case","level":3},{"title":"Exclude Vendor Maps","id":"exclude-vendor-maps","level":3}],"title":"EvalSourceMapDevToolPlugin","group":"webpack","contributors":["johnnyreilly","simon04","kinseyost","byzyk","madhavarshney","koke","jamesgeorge007","anshumanv","EugeneHlushko"],"related":[{"title":"Building Eval Source Maps","url":"https://survivejs.com/webpack/building/source-maps/#sourcemapdevtoolplugin-and-evalsourcemapdevtoolplugin"}]},{"path":"src/content/plugins/hashed-module-ids-plugin.mdx","name":"hashed-module-ids-plugin.mdx","size":1288,"type":"file","extension":".mdx","url":"/plugins/hashed-module-ids-plugin/","anchors":[{"title":"Options","id":"options","level":2},{"title":"Usage","id":"usage","level":2}],"title":"HashedModuleIdsPlugin","group":"webpack","contributors":["shaodahong","byzyk","EslamHiko"]},{"path":"src/content/plugins/hot-module-replacement-plugin.mdx","name":"hot-module-replacement-plugin.mdx","size":608,"type":"file","extension":".mdx","url":"/plugins/hot-module-replacement-plugin/","anchors":[{"title":"Basic Usage","id":"basic-usage","level":2}],"title":"HotModuleReplacementPlugin","group":"webpack","contributors":["skipjack","byzyk","chenxsan","snitin315"],"related":[{"title":"Concepts - Hot Module Replacement","url":"/concepts/hot-module-replacement"},{"title":"API - Hot Module Replacement","url":"/api/hot-module-replacement"}]},{"path":"src/content/plugins/ignore-plugin.mdx","name":"ignore-plugin.mdx","size":2077,"type":"file","extension":".mdx","url":"/plugins/ignore-plugin/","anchors":[{"title":"Using regular expressions","id":"using-regular-expressions","level":2},{"title":"Using filter functions","id":"using-filter-functions","level":2},{"title":"Example of ignoring Moment Locales","id":"example-of-ignoring-moment-locales","level":2}],"title":"IgnorePlugin","group":"webpack","contributors":["simon04","byzyk","DullReferenceException","EugeneHlushko","FadySamirSadek","iamakulov","chenxsan"]},{"path":"src/content/plugins/internal-plugins.mdx","name":"internal-plugins.mdx","size":9140,"type":"file","extension":".mdx","url":"/plugins/internal-plugins/","anchors":[{"title":"environment","id":"environment","level":2},{"title":"NodeEnvironmentPlugin","id":"nodeenvironmentplugin","level":3},{"title":"compiler","id":"compiler","level":2},{"title":"MemoryCachePlugin","id":"memorycacheplugin","level":3},{"title":"ProgressPlugin","id":"progressplugin","level":3},{"title":"RecordIdsPlugin","id":"recordidsplugin","level":3},{"title":"entry","id":"entry","level":2},{"title":"EntryPlugin","id":"entryplugin","level":3},{"title":"PrefetchPlugin","id":"prefetchplugin","level":3},{"title":"output","id":"output","level":2},{"title":"JsonpTemplatePlugin","id":"jsonptemplateplugin","level":3},{"title":"NodeTemplatePlugin","id":"nodetemplateplugin","level":3},{"title":"LibraryTemplatePlugin","id":"librarytemplateplugin","level":3},{"title":"WebWorkerTemplatePlugin","id":"webworkertemplateplugin","level":3},{"title":"EvalDevToolModulePlugin","id":"evaldevtoolmoduleplugin","level":3},{"title":"SourceMapDevToolPlugin","id":"sourcemapdevtoolplugin","level":3},{"title":"HotModuleReplacementPlugin","id":"hotmodulereplacementplugin","level":3},{"title":"source","id":"source","level":2},{"title":"APIPlugin","id":"apiplugin","level":3},{"title":"CompatibilityPlugin","id":"compatibilityplugin","level":3},{"title":"ConstPlugin","id":"constplugin","level":3},{"title":"ProvidePlugin","id":"provideplugin","level":3},{"title":"NodeStuffPlugin","id":"nodestuffplugin","level":3},{"title":"RequireJsStuffPlugin","id":"requirejsstuffplugin","level":3},{"title":"NodeSourcePlugin","id":"nodesourceplugin","level":3},{"title":"NodeTargetPlugin","id":"nodetargetplugin","level":3},{"title":"AMDPlugin","id":"amdplugin","level":3},{"title":"CommonJsPlugin","id":"commonjsplugin","level":3},{"title":"RequireContextPlugin","id":"requirecontextplugin","level":3},{"title":"RequireEnsurePlugin","id":"requireensureplugin","level":3},{"title":"RequireIncludePlugin","id":"requireincludeplugin","level":3},{"title":"DefinePlugin","id":"defineplugin","level":3},{"title":"optimize","id":"optimize","level":2},{"title":"LimitChunkCountPlugin","id":"limitchunkcountplugin","level":3},{"title":"MergeDuplicateChunksPlugin","id":"mergeduplicatechunksplugin","level":3},{"title":"RemoveEmptyChunksPlugin","id":"removeemptychunksplugin","level":3},{"title":"MinChunkSizePlugin","id":"minchunksizeplugin","level":3},{"title":"ModuleConcatenationPlugin","id":"moduleconcatenationplugin","level":3},{"title":"FlagIncludedChunksPlugin","id":"flagincludedchunksplugin","level":3},{"title":"RealContentHashPlugin","id":"realcontenthashplugin","level":3}],"title":"Internal webpack plugins","group":"webpack","contributors":["iAziz786","EugeneHlushko","ooflorent","Legends","chenxsan"]},{"path":"src/content/plugins/limit-chunk-count-plugin.mdx","name":"limit-chunk-count-plugin.mdx","size":1278,"type":"file","extension":".mdx","url":"/plugins/limit-chunk-count-plugin/","anchors":[{"title":"Options","id":"options","level":2},{"title":"maxChunks","id":"maxchunks","level":3},{"title":"minChunkSize","id":"minchunksize","level":3},{"title":"Usage via CLI","id":"usage-via-cli","level":2}],"title":"LimitChunkCountPlugin","group":"webpack","contributors":["rouzbeh84","skipjack","tbroadley","byzyk","EugeneHlushko","erykpiast"]},{"path":"src/content/plugins/min-chunk-size-plugin.mdx","name":"min-chunk-size-plugin.mdx","size":449,"type":"file","extension":".mdx","url":"/plugins/min-chunk-size-plugin/","anchors":[{"title":"Usage via CLI","id":"usage-via-cli","level":2}],"title":"MinChunkSizePlugin","group":"webpack","contributors":["byzyk","erykpiast"]},{"path":"src/content/plugins/module-concatenation-plugin.mdx","name":"module-concatenation-plugin.mdx","size":4259,"type":"file","extension":".mdx","url":"/plugins/module-concatenation-plugin/","anchors":[{"title":"Optimization Bailouts","id":"optimization-bailouts","level":2},{"title":"Module Grouping Algorithm","id":"module-grouping-algorithm","level":3},{"title":"Debugging Optimization Bailouts","id":"debugging-optimization-bailouts","level":3}],"title":"ModuleConcatenationPlugin","group":"webpack","contributors":["skipjack","TheLarkInn","byzyk"]},{"path":"src/content/plugins/module-federation-plugin.mdx","name":"module-federation-plugin.mdx","size":6999,"type":"file","extension":".mdx","url":"/plugins/module-federation-plugin/","anchors":[{"title":"Options","id":"options","level":2},{"title":"runtime","id":"runtime","level":3},{"title":"Specify package versions","id":"specify-package-versions","level":3},{"title":"Sharing hints","id":"sharing-hints","level":3}],"title":"ModuleFederationPlugin","group":"webpack","contributors":["XiaofengXie16","chenxsan","burhanuday"],"related":[{"title":"Module Federation","url":"/concepts/module-federation/"}]},{"path":"src/content/plugins/NoEmitOnErrorsPlugin.mdx","name":"NoEmitOnErrorsPlugin.mdx","size":434,"type":"file","extension":".mdx","url":"/plugins/NoEmitOnErrorsPlugin/","anchors":[],"title":"NoEmitOnErrorsPlugin","group":"webpack","contributors":["jeffin","chenxsan","snitin315"]},{"path":"src/content/plugins/normal-module-replacement-plugin.mdx","name":"normal-module-replacement-plugin.mdx","size":2476,"type":"file","extension":".mdx","url":"/plugins/normal-module-replacement-plugin/","anchors":[{"title":"Basic Example","id":"basic-example","level":2},{"title":"Advanced Example","id":"advanced-example","level":2}],"title":"NormalModuleReplacementPlugin","group":"webpack","contributors":["gonzoyumo","byzyk","chenxsan"]},{"path":"src/content/plugins/prefetch-plugin.mdx","name":"prefetch-plugin.mdx","size":503,"type":"file","extension":".mdx","url":"/plugins/prefetch-plugin/","anchors":[{"title":"Options","id":"options","level":2}],"title":"PrefetchPlugin","group":"webpack","contributors":["skipjack","byzyk"]},{"path":"src/content/plugins/profiling-plugin.mdx","name":"profiling-plugin.mdx","size":937,"type":"file","extension":".mdx","url":"/plugins/profiling-plugin/","anchors":[{"title":"Options","id":"options","level":2},{"title":"Usage: default","id":"usage-default","level":2},{"title":"Usage: custom outputPath","id":"usage-custom-outputpath","level":2}],"title":"ProfilingPlugin","group":"webpack","contributors":["EugeneHlushko","byzyk","akgupta0777"]},{"path":"src/content/plugins/progress-plugin.mdx","name":"progress-plugin.mdx","size":4986,"type":"file","extension":".mdx","url":"/plugins/progress-plugin/","anchors":[{"title":"Usage","id":"usage","level":2},{"title":"Providing function","id":"providing-function","level":3},{"title":"Providing object","id":"providing-object","level":3},{"title":"webpack.ProgressPlugin.createDefaultHandler","id":"webpackprogressplugincreatedefaulthandler","level":3},{"title":"Percentage calculation","id":"percentage-calculation","level":2},{"title":"Supported Hooks","id":"supported-hooks","level":2},{"title":"Source","id":"source","level":2}],"title":"ProgressPlugin","group":"webpack","contributors":["elliottsj","EugeneHlushko","byzyk","smelukov","chenxsan"]},{"path":"src/content/plugins/provide-plugin.mdx","name":"provide-plugin.mdx","size":1893,"type":"file","extension":".mdx","url":"/plugins/provide-plugin/","anchors":[{"title":"Usage: jQuery","id":"usage-jquery","level":2},{"title":"Usage: jQuery with Angular 1","id":"usage-jquery-with-angular-1","level":2},{"title":"Usage: Lodash Map","id":"usage-lodash-map","level":2},{"title":"Usage: Vue.js","id":"usage-vuejs","level":3}],"title":"ProvidePlugin","group":"webpack","contributors":["sokra","simon04","re-fort","byzyk","seckin92"]},{"path":"src/content/plugins/source-map-dev-tool-plugin.mdx","name":"source-map-dev-tool-plugin.mdx","size":4335,"type":"file","extension":".mdx","url":"/plugins/source-map-dev-tool-plugin/","anchors":[{"title":"Options","id":"options","level":2},{"title":"Examples","id":"examples","level":2},{"title":"Basic Use Case","id":"basic-use-case","level":3},{"title":"Exclude Vendor Maps","id":"exclude-vendor-maps","level":3},{"title":"Host Source Maps Externally","id":"host-source-maps-externally","level":3}],"title":"SourceMapDevToolPlugin","group":"webpack","contributors":["johnnyreilly","simon04","neilkennedy","byzyk","EugeneHlushko","chenxsan"],"related":[{"title":"Building Source Maps","url":"https://survivejs.com/webpack/building/source-maps/#-sourcemapdevtoolplugin-and-evalsourcemapdevtoolplugin-"}]},{"path":"src/content/plugins/split-chunks-plugin.mdx","name":"split-chunks-plugin.mdx","size":21411,"type":"file","extension":".mdx","url":"/plugins/split-chunks-plugin/","anchors":[{"title":"Defaults","id":"defaults","level":2},{"title":"Configuration","id":"configuration","level":2},{"title":"optimization.splitChunks","id":"optimizationsplitchunks","level":2},{"title":"splitChunks.automaticNameDelimiter","id":"splitchunksautomaticnamedelimiter","level":3},{"title":"splitChunks.chunks","id":"splitchunkschunks","level":3},{"title":"splitChunks.maxAsyncRequests","id":"splitchunksmaxasyncrequests","level":3},{"title":"splitChunks.maxInitialRequests","id":"splitchunksmaxinitialrequests","level":3},{"title":"splitChunks.defaultSizeTypes","id":"splitchunksdefaultsizetypes","level":3},{"title":"splitChunks.minChunks","id":"splitchunksminchunks","level":3},{"title":"splitChunks.hidePathInfo","id":"splitchunkshidepathinfo","level":3},{"title":"splitChunks.minSize","id":"splitchunksminsize","level":3},{"title":"splitChunks.minSizeReduction","id":"splitchunksminsizereduction","level":3},{"title":"splitChunks.enforceSizeThreshold","id":"splitchunksenforcesizethreshold","level":3},{"title":"splitChunks.minRemainingSize","id":"splitchunksminremainingsize","level":3},{"title":"splitChunks.layer","id":"splitchunkslayer","level":3},{"title":"splitChunks.maxSize","id":"splitchunksmaxsize","level":3},{"title":"splitChunks.maxAsyncSize","id":"splitchunksmaxasyncsize","level":3},{"title":"splitChunks.maxInitialSize","id":"splitchunksmaxinitialsize","level":3},{"title":"splitChunks.name","id":"splitchunksname","level":3},{"title":"splitChunks.usedExports","id":"splitchunksusedexports","level":3},{"title":"splitChunks.cacheGroups","id":"splitchunkscachegroups","level":3},{"title":"Examples","id":"examples","level":2},{"title":"Defaults: Example 1","id":"defaults-example-1","level":3},{"title":"Defaults: Example 2","id":"defaults-example-2","level":3},{"title":"Split Chunks: Example 1","id":"split-chunks-example-1","level":3},{"title":"Split Chunks: Example 2","id":"split-chunks-example-2","level":3},{"title":"Split Chunks: Example 3","id":"split-chunks-example-3","level":3}],"title":"SplitChunksPlugin","group":"webpack","contributors":["sokra","jeremenichelli","Priestch","chrisdothtml","EugeneHlushko","byzyk","jacobangel","madhavarshney","sakhisheikh","superburrito","ryandrew14","snitin315","chenxsan","rohrlaf","jamesgeorge007","anshumanv","snitin315"],"related":[{"title":"webpack\'s automatic deduplication algorithm example","url":"https://github.com/webpack/webpack/blob/master/examples/many-pages/README.md"},{"title":"webpack 4: Code Splitting, chunk graph and the splitChunks optimization","url":"https://medium.com/webpack/webpack-4-code-splitting-chunk-graph-and-the-splitchunks-optimization-be739a861366"}]},{"path":"src/content/plugins/watch-ignore-plugin.mdx","name":"watch-ignore-plugin.mdx","size":552,"type":"file","extension":".mdx","url":"/plugins/watch-ignore-plugin/","anchors":[{"title":"Options","id":"options","level":2}],"title":"WatchIgnorePlugin","group":"webpack","contributors":["skipjack","byzyk","EugeneHlushko"]},{"path":"src/content/plugins/_compression-webpack-plugin.mdx","name":"compression-webpack-plugin.mdx","size":11805,"type":"file","extension":".mdx","url":"/plugins/compression-webpack-plugin/","anchors":[{"title":"Getting Started","id":"getting-started","level":2},{"title":"Options","id":"options","level":2},{"title":"test","id":"test","level":3},{"title":"include","id":"include","level":3},{"title":"exclude","id":"exclude","level":3},{"title":"algorithm","id":"algorithm","level":3},{"title":"compressionOptions","id":"compressionoptions","level":3},{"title":"threshold","id":"threshold","level":3},{"title":"minRatio","id":"minratio","level":3},{"title":"filename","id":"filename","level":3},{"title":"deleteOriginalAssets","id":"deleteoriginalassets","level":3},{"title":"Examples","id":"examples","level":2},{"title":"Using Zopfli","id":"using-zopfli","level":3},{"title":"Using Brotli","id":"using-brotli","level":3},{"title":"Multiple compressed versions of assets for different algorithm","id":"multiple-compressed-versions-of-assets-for-different-algorithm","level":3},{"title":"Contributing","id":"contributing","level":2},{"title":"License","id":"license","level":2}],"title":"CompressionWebpackPlugin","group":"webpack contrib","source":"https://raw.githubusercontent.com/webpack-contrib/compression-webpack-plugin/master/README.md","edit":"https://github.com/webpack-contrib/compression-webpack-plugin/edit/master/README.md","repo":"https://github.com/webpack-contrib/compression-webpack-plugin","thirdParty":true},{"path":"src/content/plugins/_copy-webpack-plugin.mdx","name":"copy-webpack-plugin.mdx","size":27639,"type":"file","extension":".mdx","url":"/plugins/copy-webpack-plugin/","anchors":[{"title":"Getting Started","id":"getting-started","level":2},{"title":"Options","id":"options","level":2},{"title":"Patterns","id":"patterns","level":3},{"title":"noErrorOnMissing","id":"noerroronmissing","level":3},{"title":"Options","id":"options-1","level":3},{"title":"Examples","id":"examples","level":3},{"title":"Contributing","id":"contributing","level":2},{"title":"License","id":"license","level":2}],"title":"CopyWebpackPlugin","group":"webpack contrib","source":"https://raw.githubusercontent.com/webpack-contrib/copy-webpack-plugin/master/README.md","edit":"https://github.com/webpack-contrib/copy-webpack-plugin/edit/master/README.md","repo":"https://github.com/webpack-contrib/copy-webpack-plugin","thirdParty":true},{"path":"src/content/plugins/_css-minimizer-webpack-plugin.mdx","name":"css-minimizer-webpack-plugin.mdx","size":16599,"type":"file","extension":".mdx","url":"/plugins/css-minimizer-webpack-plugin/","anchors":[{"title":"Getting Started","id":"getting-started","level":2},{"title":"Note about source maps","id":"note-about-source-maps","level":2},{"title":"Options","id":"options","level":2},{"title":"test","id":"test","level":3},{"title":"include","id":"include","level":3},{"title":"exclude","id":"exclude","level":3},{"title":"parallel","id":"parallel","level":3},{"title":"minify","id":"minify","level":3},{"title":"minimizerOptions","id":"minimizeroptions","level":3},{"title":"warningsFilter","id":"warningsfilter","level":3},{"title":"Examples","id":"examples","level":2},{"title":"Use sourcemaps","id":"use-sourcemaps","level":3},{"title":"Remove all comments","id":"remove-all-comments","level":3},{"title":"Contributing","id":"contributing","level":2},{"title":"License","id":"license","level":2}],"title":"CssMinimizerWebpackPlugin","group":"webpack contrib","source":"https://raw.githubusercontent.com/webpack-contrib/css-minimizer-webpack-plugin/master/README.md","edit":"https://github.com/webpack-contrib/css-minimizer-webpack-plugin/edit/master/README.md","repo":"https://github.com/webpack-contrib/css-minimizer-webpack-plugin","thirdParty":true},{"path":"src/content/plugins/_eslint-webpack-plugin.mdx","name":"eslint-webpack-plugin.mdx","size":7727,"type":"file","extension":".mdx","url":"/plugins/eslint-webpack-plugin/","anchors":[{"title":"Getting Started","id":"getting-started","level":2},{"title":"Options","id":"options","level":2},{"title":"cache","id":"cache","level":3},{"title":"cacheLocation","id":"cachelocation","level":3},{"title":"context","id":"context","level":3},{"title":"eslintPath","id":"eslintpath","level":3},{"title":"extensions","id":"extensions","level":3},{"title":"exclude","id":"exclude","level":3},{"title":"resourceQueryExclude","id":"resourcequeryexclude","level":3},{"title":"files","id":"files","level":3},{"title":"fix","id":"fix","level":3},{"title":"formatter","id":"formatter","level":3},{"title":"lintDirtyModulesOnly","id":"lintdirtymodulesonly","level":3},{"title":"threads","id":"threads","level":3},{"title":"Errors and Warning","id":"errors-and-warning","level":3},{"title":"Changelog","id":"changelog","level":2},{"title":"License","id":"license","level":2}],"title":"EslintWebpackPlugin","group":"webpack contrib","source":"https://raw.githubusercontent.com/webpack-contrib/eslint-webpack-plugin/master/README.md","edit":"https://github.com/webpack-contrib/eslint-webpack-plugin/edit/master/README.md","repo":"https://github.com/webpack-contrib/eslint-webpack-plugin","thirdParty":true},{"path":"src/content/plugins/_html-minimizer-webpack-plugin.mdx","name":"html-minimizer-webpack-plugin.mdx","size":15233,"type":"file","extension":".mdx","url":"/plugins/html-minimizer-webpack-plugin/","anchors":[{"title":"Getting Started","id":"getting-started","level":2},{"title":"Options","id":"options","level":2},{"title":"test","id":"test","level":3},{"title":"include","id":"include","level":3},{"title":"exclude","id":"exclude","level":3},{"title":"parallel","id":"parallel","level":3},{"title":"minify","id":"minify","level":3},{"title":"minimizerOptions","id":"minimizeroptions","level":3},{"title":"Examples","id":"examples","level":2},{"title":"swc/html","id":"swchtml","level":3},{"title":"@minify-html/node","id":"minify-htmlnode","level":3},{"title":"Contributing","id":"contributing","level":2},{"title":"License","id":"license","level":2}],"title":"HtmlMinimizerWebpackPlugin","group":"webpack contrib","source":"https://raw.githubusercontent.com/webpack-contrib/html-minimizer-webpack-plugin/master/README.md","edit":"https://github.com/webpack-contrib/html-minimizer-webpack-plugin/edit/master/README.md","repo":"https://github.com/webpack-contrib/html-minimizer-webpack-plugin","thirdParty":true},{"path":"src/content/plugins/_image-minimizer-webpack-plugin.mdx","name":"image-minimizer-webpack-plugin.mdx","size":63294,"type":"file","extension":".mdx","url":"/plugins/image-minimizer-webpack-plugin/","anchors":[{"title":"Getting Started","id":"getting-started","level":2},{"title":"Install optimize/generate tool","id":"install-optimizegenerate-tool","level":3},{"title":"Advanced setup","id":"advanced-setup","level":3},{"title":"Plugin Options","id":"plugin-options","level":2},{"title":"test","id":"test","level":3},{"title":"include","id":"include","level":3},{"title":"exclude","id":"exclude","level":3},{"title":"minimizer","id":"minimizer","level":3},{"title":"generator","id":"generator","level":3},{"title":"severityError","id":"severityerror","level":3},{"title":"loader","id":"loader","level":3},{"title":"concurrency","id":"concurrency","level":3},{"title":"deleteOriginalAssets","id":"deleteoriginalassets","level":3},{"title":"Loader Options","id":"loader-options","level":2},{"title":"minimizer","id":"minimizer-1","level":3},{"title":"generator","id":"generator-1","level":3},{"title":"severityError","id":"severityerror-1","level":3},{"title":"Additional API","id":"additional-api","level":2},{"title":"imageminNormalizeConfig(config)","id":"imageminnormalizeconfigconfig","level":3},{"title":"Examples","id":"examples","level":2},{"title":"Optimize images based on size","id":"optimize-images-based-on-size","level":3},{"title":"Optimize and generate webp images","id":"optimize-and-generate-webp-images","level":3},{"title":"Generate webp images from copied assets","id":"generate-webp-images-from-copied-assets","level":3},{"title":"Contributing","id":"contributing","level":2},{"title":"License","id":"license","level":2}],"title":"ImageMinimizerWebpackPlugin","group":"webpack contrib","source":"https://raw.githubusercontent.com/webpack-contrib/image-minimizer-webpack-plugin/master/README.md","edit":"https://github.com/webpack-contrib/image-minimizer-webpack-plugin/edit/master/README.md","repo":"https://github.com/webpack-contrib/image-minimizer-webpack-plugin","thirdParty":true},{"path":"src/content/plugins/_install-webpack-plugin.mdx","name":"install-webpack-plugin.mdx","size":5303,"type":"file","extension":".mdx","url":"/plugins/install-webpack-plugin/","anchors":[{"title":"Usage","id":"usage","level":1},{"title":"Options","id":"options","level":1},{"title":"dependencies","id":"dependencies","level":2},{"title":"peer","id":"peer","level":3},{"title":"packageManager","id":"packagemanager","level":2},{"title":"type","id":"type","level":3},{"title":"options","id":"options-1","level":3},{"title":"arguments","id":"arguments","level":3},{"title":"dev","id":"dev","level":3},{"title":"quiet","id":"quiet","level":3},{"title":"prompt","id":"prompt","level":2},{"title":"Demo","id":"demo","level":1},{"title":"Features","id":"features","level":1},{"title":"Contributing","id":"contributing","level":2}],"title":"InstallWebpackPlugin","group":"webpack contrib","source":"https://raw.githubusercontent.com/webpack-contrib/install-webpack-plugin/master/README.md","edit":"https://github.com/webpack-contrib/install-webpack-plugin/edit/master/README.md","repo":"https://github.com/webpack-contrib/install-webpack-plugin","thirdParty":true},{"path":"src/content/plugins/_json-minimizer-webpack-plugin.mdx","name":"json-minimizer-webpack-plugin.mdx","size":4876,"type":"file","extension":".mdx","url":"/plugins/json-minimizer-webpack-plugin/","anchors":[{"title":"Getting Started","id":"getting-started","level":2},{"title":"Options","id":"options","level":2},{"title":"test","id":"test","level":3},{"title":"include","id":"include","level":3},{"title":"exclude","id":"exclude","level":3},{"title":"minimizerOptions","id":"minimizeroptions","level":3},{"title":"Contributing","id":"contributing","level":2},{"title":"License","id":"license","level":2}],"title":"JsonMinimizerWebpackPlugin","group":"webpack contrib","source":"https://raw.githubusercontent.com/webpack-contrib/json-minimizer-webpack-plugin/master/README.md","edit":"https://github.com/webpack-contrib/json-minimizer-webpack-plugin/edit/master/README.md","repo":"https://github.com/webpack-contrib/json-minimizer-webpack-plugin","thirdParty":true},{"path":"src/content/plugins/_mini-css-extract-plugin.mdx","name":"mini-css-extract-plugin.mdx","size":29667,"type":"file","extension":".mdx","url":"/plugins/mini-css-extract-plugin/","anchors":[{"title":"Getting Started","id":"getting-started","level":2},{"title":"Options","id":"options","level":2},{"title":"Plugin Options","id":"plugin-options","level":3},{"title":"Loader Options","id":"loader-options","level":3},{"title":"Examples","id":"examples","level":2},{"title":"Recommended","id":"recommended","level":3},{"title":"Minimal example","id":"minimal-example","level":3},{"title":"Named export for CSS Modules","id":"named-export-for-css-modules","level":3},{"title":"The publicPath option as function","id":"the-publicpath-option-as-function","level":3},{"title":"Advanced configuration example","id":"advanced-configuration-example","level":3},{"title":"Hot Module Reloading (HMR)","id":"hot-module-reloading-hmr","level":3},{"title":"Minimizing For Production","id":"minimizing-for-production","level":3},{"title":"Using preloaded or inlined CSS","id":"using-preloaded-or-inlined-css","level":3},{"title":"Extracting all CSS in a single file","id":"extracting-all-css-in-a-single-file","level":3},{"title":"Extracting CSS based on entry","id":"extracting-css-based-on-entry","level":3},{"title":"Filename Option as function","id":"filename-option-as-function","level":3},{"title":"Long Term Caching","id":"long-term-caching","level":3},{"title":"Remove Order Warnings","id":"remove-order-warnings","level":3},{"title":"Multiple Themes","id":"multiple-themes","level":3},{"title":"Media Query Plugin","id":"media-query-plugin","level":3},{"title":"Contributing","id":"contributing","level":2},{"title":"License","id":"license","level":2}],"title":"MiniCssExtractPlugin","group":"webpack contrib","source":"https://raw.githubusercontent.com/webpack-contrib/mini-css-extract-plugin/master/README.md","edit":"https://github.com/webpack-contrib/mini-css-extract-plugin/edit/master/README.md","repo":"https://github.com/webpack-contrib/mini-css-extract-plugin","thirdParty":true},{"path":"src/content/plugins/_stylelint-webpack-plugin.mdx","name":"stylelint-webpack-plugin.mdx","size":7601,"type":"file","extension":".mdx","url":"/plugins/stylelint-webpack-plugin/","anchors":[{"title":"Getting Started","id":"getting-started","level":2},{"title":"Options","id":"options","level":2},{"title":"cache","id":"cache","level":3},{"title":"cacheLocation","id":"cachelocation","level":3},{"title":"configFile","id":"configfile","level":3},{"title":"context","id":"context","level":3},{"title":"exclude","id":"exclude","level":3},{"title":"extensions","id":"extensions","level":3},{"title":"files","id":"files","level":3},{"title":"fix","id":"fix","level":3},{"title":"formatter","id":"formatter","level":3},{"title":"lintDirtyModulesOnly","id":"lintdirtymodulesonly","level":3},{"title":"stylelintPath","id":"stylelintpath","level":3},{"title":"threads","id":"threads","level":3},{"title":"Errors and Warning","id":"errors-and-warning","level":3},{"title":"Changelog","id":"changelog","level":2},{"title":"License","id":"license","level":2}],"title":"StylelintWebpackPlugin","group":"webpack contrib","source":"https://raw.githubusercontent.com/webpack-contrib/stylelint-webpack-plugin/master/README.md","edit":"https://github.com/webpack-contrib/stylelint-webpack-plugin/edit/master/README.md","repo":"https://github.com/webpack-contrib/stylelint-webpack-plugin","thirdParty":true},{"path":"src/content/plugins/_terser-webpack-plugin.mdx","name":"terser-webpack-plugin.mdx","size":21559,"type":"file","extension":".mdx","url":"/plugins/terser-webpack-plugin/","anchors":[{"title":"Getting Started","id":"getting-started","level":2},{"title":"Note about source maps","id":"note-about-source-maps","level":2},{"title":"Options","id":"options","level":2},{"title":"test","id":"test","level":3},{"title":"include","id":"include","level":3},{"title":"exclude","id":"exclude","level":3},{"title":"parallel","id":"parallel","level":3},{"title":"minify","id":"minify","level":3},{"title":"terserOptions","id":"terseroptions","level":3},{"title":"extractComments","id":"extractcomments","level":3},{"title":"Examples","id":"examples","level":2},{"title":"Preserve Comments","id":"preserve-comments","level":3},{"title":"Remove Comments","id":"remove-comments","level":3},{"title":"Custom Minify Function","id":"custom-minify-function","level":3},{"title":"Typescript","id":"typescript","level":3},{"title":"Contributing","id":"contributing","level":2},{"title":"License","id":"license","level":2}],"title":"TerserWebpackPlugin","group":"webpack contrib","source":"https://raw.githubusercontent.com/webpack-contrib/terser-webpack-plugin/master/README.md","edit":"https://github.com/webpack-contrib/terser-webpack-plugin/edit/master/README.md","repo":"https://github.com/webpack-contrib/terser-webpack-plugin","thirdParty":true}],"size":327032,"type":"directory","url":"/plugins/"},{"path":"src/content/index.mdx","name":"index.mdx","size":940,"type":"file","extension":".mdx","url":"/","anchors":[{"title":"Write Your Code","id":"write-your-code","level":2},{"title":"Bundle It","id":"bundle-it","level":2},{"title":"Awesome isn\'t it? Let\'s dive in!","id":"awesome-isnt-it-lets-dive-in","level":2}],"title":"webpack","sort":-1},{"path":"src/content/comparison.mdx","name":"comparison.mdx","size":18878,"type":"file","extension":".mdx","url":"/comparison/","anchors":[{"title":"Bundling vs. Loading","id":"bundling-vs-loading","level":2}],"title":"Comparison","sort":1,"contributors":["pksjce","bebraw","chrisVillanueva","tashian","simon04","byzyk"],"related":[{"title":"JSPM vs. webpack","url":"https://ilikekillnerds.com/2015/07/jspm-vs-webpack/"},{"title":"webpack vs. Browserify vs. SystemJS","url":"https://engineering.velocityapp.com/webpack-vs-browersify-vs-systemjs-for-spas-95b349a41fa0"}]},{"path":"src/content/awesome-webpack.mdx","name":"awesome-webpack.mdx","size":43053,"type":"file","extension":".mdx","url":"/awesome-webpack/","anchors":[{"title":"Webpack Ecosystem","id":"webpack-ecosystem","level":2},{"title":"Support Webpack","id":"support-webpack","level":3},{"title":"Community","id":"community","level":3},{"title":"Twitter","id":"twitter","level":3},{"title":"Libraries","id":"libraries","level":2},{"title":"Loaders","id":"loaders","level":3},{"title":"Integration Libraries","id":"integration-libraries","level":3},{"title":"Webpack Plugins","id":"webpack-plugins","level":3},{"title":"Webpack Tools","id":"webpack-tools","level":3},{"title":"Research & Training","id":"research--training","level":2},{"title":"Articles","id":"articles","level":3},{"title":"Videos","id":"videos","level":3},{"title":"Courses","id":"courses","level":3},{"title":"Books","id":"books","level":3},{"title":"Webpack Examples","id":"webpack-examples","level":3},{"title":"Community Examples","id":"community-examples","level":3},{"title":"Other","id":"other","level":3}],"title":"Awesome webpack","sort":2,"contributors":["snitin315","licg9999"]},{"path":"src/content/branding.mdx","name":"branding.mdx","size":5677,"type":"file","extension":".mdx","url":"/branding/","anchors":[{"title":"The Name","id":"the-name","level":2},{"title":"Logo","id":"logo","level":2},{"title":"Icon only","id":"icon-only","level":2},{"title":"Color Palette","id":"color-palette","level":2},{"title":"License","id":"license","level":2}],"title":"Branding Guidelines","sort":2,"contributors":["jhnns","skipjack","rouzbeh84","byzyk"]},{"path":"src/content/glossary.mdx","name":"glossary.mdx","size":5804,"type":"file","extension":".mdx","url":"/glossary/","anchors":[{"title":"A","id":"a","level":2},{"title":"B","id":"b","level":2},{"title":"C","id":"c","level":2},{"title":"D","id":"d","level":2},{"title":"E","id":"e","level":2},{"title":"H","id":"h","level":2},{"title":"L","id":"l","level":2},{"title":"M","id":"m","level":2},{"title":"O","id":"o","level":2},{"title":"P","id":"p","level":2},{"title":"R","id":"r","level":2},{"title":"S","id":"s","level":2},{"title":"T","id":"t","level":2},{"title":"V","id":"v","level":2},{"title":"W","id":"w","level":2}],"title":"Glossary","sort":3,"contributors":["kryptokinght","rouzbeh84","bebraw","skipjack","byzyk","pranshuchittora","jamesgeorge007"]},{"path":"src/content/license.mdx","name":"license.mdx","size":772,"type":"file","extension":".mdx","url":"/license/","anchors":[{"title":"webpack","id":"webpack","level":2},{"title":"webpack logo and icon","id":"webpack-logo-and-icon","level":2},{"title":"webpack documentation","id":"webpack-documentation","level":2},{"title":"webpack code samples","id":"webpack-code-samples","level":2}],"title":"License","sort":5,"contributors":["EugeneHlushko","pranshuchittora"]},{"path":"src/content/printable.mdx","name":"printable.mdx","size":505,"type":"file","extension":".mdx","url":"/printable/","anchors":[{"title":"webpack","id":"webpack","level":1},{"title":"Comparison","id":"comparison","level":1},{"title":"Awesome webpack","id":"awesome-webpack","level":1},{"title":"Branding Guidelines","id":"branding-guidelines","level":1},{"title":"Glossary","id":"glossary","level":1},{"title":"License","id":"license","level":1}],"title":"Printable","sort":999,"contributors":["webpack"]}],"size":1676850,"type":"directory","url":"/"}');
 ;// CONCATENATED MODULE: ./components/Site/clientSideRedirections.js
 // RedirectWebpackPlugin won't work for URI fragments
 // hence we redirect them with client side script
@@ -299113,7 +299136,7 @@ function PrintScript() {
   });
 }
 ;// CONCATENATED MODULE: ../dist/prod-assets-manifest.json
-const prod_assets_manifest_namespaceObject = JSON.parse('{"js":["/vendor.8510a9ef17d80b2d.js","/index.c2912cdab18a5c5a.js"],"i":["/index.ea3c3d6e6ddab037.css","/5701.236794b1fd205ccd.css"]}');
+const prod_assets_manifest_namespaceObject = JSON.parse('{"js":["/vendor.acfe758b77abbed6.js","/index.a521a893a76759aa.js"],"i":["/index.fd328ed094fff3af.css","/5701.f4ef9bf48713e70a.css"]}');
 ;// CONCATENATED MODULE: ./server.jsx
 // Import External Dependencies
 

@@ -9,7 +9,7 @@ exports.modules = {
 
 // @ts-ignore
 try {
-    self['workbox:core:6.5.3'] && _();
+    self['workbox:core:7.0.0'] && _();
 }
 catch (e) { }
 
@@ -22,7 +22,7 @@ catch (e) { }
 
 // @ts-ignore
 try {
-    self['workbox:window:6.5.3'] && _();
+    self['workbox:window:7.0.0'] && _();
 }
 catch (e) { }
 

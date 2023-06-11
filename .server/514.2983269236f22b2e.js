@@ -71,7 +71,7 @@ MessageBar.propTypes = {
 function MessageBar(props) {
   const [list, setList] = (0,react.useState)([]);
   const listTransitions = (0,esm/* useTransition */.Yz)(list, {
-    config: esm/* config.gentle */.vc.gentle,
+    config: esm/* config */.vc.gentle,
     from: {
       opacity: 0,
       transform: 'translate3d(-50%, 0px, 0px)'
@@ -90,7 +90,7 @@ function MessageBar(props) {
     props.onClose();
   };
   return /*#__PURE__*/(0,jsx_runtime.jsx)(jsx_runtime.Fragment, {
-    children: listTransitions(styles => /*#__PURE__*/(0,jsx_runtime.jsxs)(esm/* animated.div */.q.div, {
+    children: listTransitions(styles => /*#__PURE__*/(0,jsx_runtime.jsxs)(esm/* animated */.q.div, {
       className: "flex items-center rounded z-50 fixed left-[1px] right-[1px] bottom-[1px] bg-white border-2 border-solid border-gray-700 max-w-full pl-20 py-20 shadow-2xl md:left-20 md:right-auto md:bottom-20 md:max-w-[300px] dark:bg-gray-500 print:hidden",
       style: styles,
       children: [/*#__PURE__*/(0,jsx_runtime.jsx)(Notification, {}), NotificationBar/* localStorageIsEnabled */.Bn ? /*#__PURE__*/(0,jsx_runtime.jsx)("div", {
