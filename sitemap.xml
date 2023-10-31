@@ -4,9 +4,6 @@
         <loc>https://webpack.js.org/</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/pluginsapi</loc>
-    </url>
-    <url>
         <loc>https://webpack.js.org/api</loc>
     </url>
     <url>
@@ -58,22 +55,13 @@
         <loc>https://webpack.js.org/plugins</loc>
     </url>
     <url>
+        <loc>https://webpack.js.org/pluginsapi</loc>
+    </url>
+    <url>
         <loc>https://webpack.js.org/support</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/writers-guide</loc>
-    </url>
-    <url>
-        <loc>https://webpack.js.org/plugins/copy-webpack-plugin</loc>
-    </url>
-    <url>
-        <loc>https://webpack.js.org/plugins/css-minimizer-webpack-plugin</loc>
-    </url>
-    <url>
-        <loc>https://webpack.js.org/plugins/define-plugin</loc>
-    </url>
-    <url>
-        <loc>https://webpack.js.org/pluginsapi/template</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/api/cli</loc>
@@ -218,6 +206,9 @@
     </url>
     <url>
         <loc>https://webpack.js.org/configuration/node</loc>
+    </url>
+    <url>
+        <loc>https://webpack.js.org/plugins/profiling-plugin</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/configuration/optimization</loc>
@@ -493,6 +484,15 @@
         <loc>https://webpack.js.org/plugins/context-replacement-plugin</loc>
     </url>
     <url>
+        <loc>https://webpack.js.org/plugins/copy-webpack-plugin</loc>
+    </url>
+    <url>
+        <loc>https://webpack.js.org/plugins/css-minimizer-webpack-plugin</loc>
+    </url>
+    <url>
+        <loc>https://webpack.js.org/plugins/define-plugin</loc>
+    </url>
+    <url>
         <loc>https://webpack.js.org/plugins/dll-plugin</loc>
     </url>
     <url>
@@ -556,9 +556,6 @@
         <loc>https://webpack.js.org/plugins/prefetch-plugin</loc>
     </url>
     <url>
-        <loc>https://webpack.js.org/plugins/profiling-plugin</loc>
-    </url>
-    <url>
         <loc>https://webpack.js.org/plugins/progress-plugin</loc>
     </url>
     <url>
@@ -584,6 +581,9 @@
     </url>
     <url>
         <loc>https://webpack.js.org/pluginsapi/compiler</loc>
+    </url>
+    <url>
+        <loc>https://webpack.js.org/pluginsapi/template</loc>
     </url>
     <url>
         <loc>https://webpack.js.org/api/plugins/compilation</loc>
