@@ -214285,7 +214285,7 @@ function MDXContent(_ref) {
   }, ","), "\n\n      ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token comment",
     parentName: "code"
-  }, "// number of jobs the poll distributes to the workers"), "\n      ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+  }, "// number of jobs the pool distributes to the workers"), "\n      ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token comment",
     parentName: "code"
   }, "// defaults to 200"), "\n      ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
@@ -298742,7 +298742,7 @@ module.exports = require("stream");
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames based on template
-/******/ 			return ".server/" + chunkId + "." + {"483":"27246626d81578d1","514":"bcc151eec59a1367","759":"00116e74f8a2fa01","790":"537e190e82c6c4d0"}[chunkId] + ".js";
+/******/ 			return ".server/" + chunkId + "." + {"483":"27246626d81578d1","514":"bcc151eec59a1367","759":"c18dd9e60d4971b7","790":"537e190e82c6c4d0"}[chunkId] + ".js";
 /******/ 		};
 /******/ 	})();
 /******/ 	
@@ -305996,7 +305996,7 @@ function PrintScript() {
   });
 }
 ;// CONCATENATED MODULE: ../dist/prod-assets-manifest.json
-const prod_assets_manifest_namespaceObject = JSON.parse('{"js":["/vendor.a8883abd3205da0f.js","/index.c8725cef546a7c86.js"],"i":["/index.164e87ee23c5f6e9.css","/5701.1dee01a036acb042.css"]}');
+const prod_assets_manifest_namespaceObject = JSON.parse('{"js":["/vendor.a8883abd3205da0f.js","/index.3495e35d6a3aa718.js"],"i":["/index.164e87ee23c5f6e9.css","/5701.1dee01a036acb042.css"]}');
 ;// CONCATENATED MODULE: ./server.jsx
 // Import External Dependencies
 
