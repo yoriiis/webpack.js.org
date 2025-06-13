@@ -155883,9 +155883,9 @@ function MDXContent(_ref) {
   }, "}"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token punctuation",
     parentName: "code"
-  }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Run ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Finally, run ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "webpack"), " using your preferred method."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "If you need to extract CSS into a separate file (i.e. do not store CSS in a JS module), consider using the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+  }, "webpack"), " using the method you normally use (e.g., via CLI or an npm script)."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "If you need to extract CSS into a separate file (i.e. do not store CSS in a JS module), consider using the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "https://github.com/webpack-contrib/css-loader#recommend",
     parentName: "p"
   }, "recommend example"), "."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
@@ -156516,7 +156516,7 @@ function MDXContent(_ref) {
     parentName: "a"
   }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Allows filtering of ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "url()"), " values. Any filtered ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "url()"), " values."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Any filtered ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "url()"), " will not be resolved (left in the code as they were written)."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
@@ -156858,9 +156858,9 @@ function MDXContent(_ref) {
     parentName: "p"
   }, "true")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Allows you to enable or disable handling of ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "@import"), " at-rules.\nControls how ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "@import"), " at-rules."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Controls how ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "@import"), " statements are resolved.\nAbsolute URLs in ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "@import"), " statements are resolved."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Absolute URLs in ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "@import"), " will be moved in runtime code."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Examples resolutions:"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
     parentName: "pre"
@@ -157065,7 +157065,7 @@ function MDXContent(_ref) {
     parentName: "p"
   }, "undefined")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Allows filtering of ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "@import"), ". Any filtered ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "@import"), "."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Any filtered ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "@import"), " will not be resolved (left in the code as they were written)."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
@@ -160565,7 +160565,7 @@ function MDXContent(_ref) {
     parentName: "code"
   }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Default: ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "undefined")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Allows to add custom hash to generate more unique classes.\nFor more information see ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+  }, "undefined")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Allows to add custom hash to generate more unique classes."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "For more information see ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "/configuration/output/#outputhashsalt",
     parentName: "p"
   }, "output.hashSalt"), "."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
@@ -160705,7 +160705,7 @@ function MDXContent(_ref) {
     parentName: "code"
   }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Default: ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "md4")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Allows to specify hash function to generate classes .\nFor more information see ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+  }, "md4")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Allows to specify hash function to generate classes ."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "For more information see ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "/configuration/output/#outputhashfunction",
     parentName: "p"
   }, "output.hashFunction"), "."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
@@ -160845,7 +160845,7 @@ function MDXContent(_ref) {
     parentName: "code"
   }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Default: ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "hex")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Allows to specify hash digest to generate classes.\nFor more information see ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+  }, "hex")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Allows to specify hash digest to generate classes."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "For more information see ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "/configuration/output/#outputhashdigest",
     parentName: "p"
   }, "output.hashDigest"), "."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
@@ -160985,7 +160985,7 @@ function MDXContent(_ref) {
     parentName: "code"
   }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Default: ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "20")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Allows to specify hash digest length to generate classes.\nFor more information, see ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+  }, "20")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Allows to specify hash digest length to generate classes."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "For more information, see ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "/configuration/output/#outputhashdigestlength",
     parentName: "p"
   }, "output.hashDigestLength"), "."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
@@ -161427,7 +161427,7 @@ function MDXContent(_ref) {
     parentName: "code"
   }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Default: ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "undefined")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Allows to specify a function to generate the classname.\nBy default we use built-in function to generate a classname.\nIf your custom function returns ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "undefined")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Allows to specify a function to generate the classname."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "By default we use built-in function to generate a classname."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "If your custom function returns ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "null"), " or ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
@@ -161917,7 +161917,7 @@ function MDXContent(_ref) {
     parentName: "p"
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "a"
-  }, "exportLocalsConvention")), " option as a function.\nSee below in the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+  }, "exportLocalsConvention")), " option as a function."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "See below in the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "#examples",
     parentName: "p"
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
@@ -162880,13 +162880,13 @@ function MDXContent(_ref) {
     parentName: "p"
   }, "Useful"), " when you use ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
-  }, "css modules"), " for pre-rendering (for example SSR).\nFor pre-rendering with ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "css modules"), " for pre-rendering (for example SSR)."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "For pre-rendering with ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "mini-css-extract-plugin"), " you should use this option instead of ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "style-loader!css-loader"), " ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
-  }, "in the pre-rendering bundle"), ".\nIt doesn't embed CSS; it only exports the identifier mappings."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+  }, "in the pre-rendering bundle"), "."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "It doesn't embed CSS; it only exports the identifier mappings."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
   }, "webpack.config.js")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
     className: "hljs language-js",
@@ -163119,7 +163119,7 @@ function MDXContent(_ref) {
     parentName: "code"
   }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Default: ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "undefined")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Enables a callback to output the CSS modules mapping JSON. The callback is invoked with an object containing the following:"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+  }, "undefined")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Enables a callback to output the CSS modules mapping JSON."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "The callback is invoked with an object containing the following:"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
     parentName: "ul"
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
     parentName: "li"
@@ -163297,7 +163297,7 @@ function MDXContent(_ref) {
     parentName: "code"
   }, "}"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Using ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "getJSON"), ", it's possible to output a file with all CSS module mappings.\nIn the following example, we use ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "getJSON"), ", it's possible to output a file with all CSS module mappings."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "In the following example, we use ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "getJSON"), " to cache canonical mappings and add stand-ins for any composed values (through ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
@@ -165566,7 +165566,7 @@ function MDXContent(_ref) {
     parentName: "p"
   }, "true")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "By default, ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "css-loader"), " generates JS modules that use the ES modules syntax.\nThere are some cases in which using ES modules is beneficial, like in the case of ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+  }, "css-loader"), " generates JS modules that use the ES modules syntax."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "There are some cases in which using ES modules is beneficial, like in the case of ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "/plugins/module-concatenation-plugin/",
     parentName: "p"
   }, "module concatenation"), " and ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
@@ -165717,7 +165717,7 @@ function MDXContent(_ref) {
     parentName: "p"
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "a"
-  }, "CSSStyleSheet")), ").\nThe default value is ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "CSSStyleSheet")), ")."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "The default value is ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "'array'"), ", i.e. loader exports an array of modules with a specific API which is used in ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
@@ -166696,10 +166696,10 @@ function MDXContent(_ref) {
     parentName: "a"
   }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "For ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "production"), " builds, it's recommended to extract the CSS from your bundle being able to use parallel loading of CSS/JS resources later on.\nThis can be achieved by using the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+  }, "production"), " builds, it's recommended to extract the CSS from your bundle being able to use parallel loading of CSS/JS resources later on."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "This can be achieved by using the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "/plugins/mini-css-extract-plugin/",
     parentName: "p"
-  }, "mini-css-extract-plugin"), ", because it creates separate css files.\nFor ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "mini-css-extract-plugin"), ", because it creates separate css files."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "For ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "development"), " mode (including ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
@@ -168188,7 +168188,7 @@ function MDXContent(_ref) {
     parentName: "p"
   }, "ICSS"), " features applied to all files was default ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "css-loader"), " behavior before v4.\nMeanwhile, all files matching ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "css-loader"), " behavior before v4."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Meanwhile, all files matching ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "*.module.scss"), " are treated as ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
@@ -168613,7 +168613,7 @@ function MDXContent(_ref) {
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "header-link",
     parentName: "a"
-  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Please take a moment to read our contributing guidelines if you haven't yet done so."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "We welcome all contributions!"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "If you are new here, please take a moment to review our contributing guidelines before submitting issues or pull requests."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "https://github.com/webpack-contrib/css-loader/blob/master/.github/CONTRIBUTING.md",
     parentName: "p"
   }, "CONTRIBUTING")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
@@ -168706,28 +168706,28 @@ function MDXContent(_ref) {
     src: "https://packagephobia.now.sh/badge?p=exports-loader",
     alt: "size",
     parentName: "a"
-  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Allow to setup exports ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Allows you to set up exports using ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "module.exports"), "/", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "module.exports"), " or ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "export"), " for source files."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Useful when a source file does not contain exports or something does not export."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "For further hints on compatibility issues, check out ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+  }, "export"), " for source files."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Useful when a source file does not contain exports or when something is not exported."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "For more information on compatibility issues, refer to the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "/guides/shimming/",
     parentName: "p"
-  }, "Shimming"), " of the official docs."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+  }, "Shimming"), " guide in the official documentation."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
     parentName: "blockquote"
   }, "[!WARNING]"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
     parentName: "blockquote"
-  }, "By default loader generate ES module named syntax.")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+  }, "By default, the loader generates exports using ES module syntax.")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
     parentName: "blockquote"
   }, "[!WARNING]"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
     parentName: "blockquote"
-  }, "Be careful, existing exports (", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "Be careful: modifying existing exports (", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "export"), "/", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "export"), ", ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "module.exports"), "/", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "module.exports"), ", or ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "exports"), ") in the original code and exporting new values can cause a failure.")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+  }, "exports"), ") or adding new exports can lead to errors.")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     id: "getting-started",
     parentName: "h2"
   }), "Getting Started", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
@@ -168770,7 +168770,7 @@ function MDXContent(_ref) {
     parentName: "p"
   }, "name"), " and ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "alias"), " of export.\nThe documentation and syntax examples can be read ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+  }, "alias"), " of export."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "The documentation and syntax examples can be read ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "#syntax",
     parentName: "p"
   }, "here"), "."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
@@ -168779,7 +168779,7 @@ function MDXContent(_ref) {
     parentName: "blockquote"
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "%20"), " is space in a query string, because you can't use spaces in URLs")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Then add the loader to the desired ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "%20"), " represents a space in a query string because spaces are not allowed in URLs.")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Then add the loader to the desired ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "import"), " statement or ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
@@ -169185,7 +169185,7 @@ function MDXContent(_ref) {
   }, ")"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token punctuation",
     parentName: "code"
-  }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Description of string values can be found in the documentation below."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+  }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Descriptions of string values can be found in the documentation below."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     id: "using-configuration",
     parentName: "h3"
   }), "Using Configuration", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
@@ -169306,9 +169306,9 @@ function MDXContent(_ref) {
   }, "}"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token punctuation",
     parentName: "code"
-  }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "And run ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Finally, run ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "webpack"), " via your preferred method."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+  }, "webpack"), " using the method you normally use (e.g., via CLI or an npm script)."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     id: "options",
     parentName: "h2"
   }), "Options", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
@@ -171262,7 +171262,7 @@ function MDXContent(_ref) {
     parentName: "blockquote"
   }, "[!WARNING]"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
     parentName: "blockquote"
-  }, "Not possible to use ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "Not possible to use both ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "single"), " and ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
@@ -171855,7 +171855,7 @@ function MDXContent(_ref) {
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "header-link",
     parentName: "a"
-  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Please take a moment to read our contributing guidelines if you haven't yet done so."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "We welcome all contributions!"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "If you're new here, please take a moment to review our contributing guidelines."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "https://github.com/webpack-contrib/exports-loader/blob/master/.github/CONTRIBUTING.md",
     parentName: "p"
   }, "CONTRIBUTING")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
@@ -171950,16 +171950,16 @@ function MDXContent(_ref) {
     parentName: "a"
   }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "The ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "expose-loader"), " loader allows to expose a module (in whole or in part) to global object (", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "expose-loader"), " loader allows to expose a module (either in whole or in part) to global object (", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "self"), ", ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "window"), " and ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "global"), ")."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "For further hints on compatibility issues, check out ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+  }, "global"), ")."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "For compatibility tips and examples, check out ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "/guides/shimming/",
     parentName: "p"
-  }, "Shimming"), " of the official docs."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+  }, "Shimming"), " guide in the official documentation."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     id: "getting-started",
     parentName: "h2"
   }), "Getting Started", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
@@ -171981,7 +171981,7 @@ function MDXContent(_ref) {
   }, "yarn add -D expose-loader\n")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "or"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
     className: "hljs language-console",
     parentName: "pre"
-  }, "pnpm add -D expose-loader\n")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "(If you're using WebPack 4, install ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "pnpm add -D expose-loader\n")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "(If you're using webpack 4, install ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "expose-loader@1"), " and follow the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "https://v4.webpack.js.org/loaders/expose-loader/",
@@ -172009,7 +172009,7 @@ function MDXContent(_ref) {
     parentName: "p"
   }, "moduleLocalName"), " and ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "override"), " of expose.\nThe documentation and syntax examples can be read ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+  }, "override"), " of expose."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "The documentation and syntax examples can be read ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "#syntax",
     parentName: "p"
   }, "here"), "."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
@@ -172018,7 +172018,9 @@ function MDXContent(_ref) {
     parentName: "blockquote"
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "%20"), " is space in a query string, because you can't use spaces in URLs")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
+  }, "%20"), " represents a ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    parentName: "p"
+  }, "space"), " in a query string because spaces are not allowed in URLs.")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
     className: "hljs language-js",
     parentName: "pre"
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
@@ -172385,15 +172387,15 @@ function MDXContent(_ref) {
     parentName: "a"
   }, "require.resolve")), " call is a Node.js function (unrelated to ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "require.resolve"), " in webpack processing).\n", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "require.resolve"), " in webpack processing)."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "require.resolve"), " gives you the absolute path to the module (", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "require.resolve"), " that returns the absolute path of the module (", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "\"/.../app/node_modules/jquery/dist/jquery.js\""), ").\nSo the expose only applies to the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "\"/.../app/node_modules/jquery/dist/jquery.js\""), ")."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "So the expose only applies to the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "jquery"), " module. And it's only exposed when used in the bundle."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "And run ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "jquery"), " module and it's only exposed when used in the bundle."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Finally, run ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "webpack"), " via your preferred method."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+  }, "webpack"), " using the method you normally use (e.g., via CLI or an npm script)."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     id: "options",
     parentName: "h2"
   }), "Options", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
@@ -172677,7 +172679,9 @@ function MDXContent(_ref) {
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "header-link",
     parentName: "a"
-  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Allows to use a string to describe an expose."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h5", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Allows to use a ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    parentName: "p"
+  }, "string"), " to describe an expose."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h5", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     id: "syntax",
     parentName: "h5"
   }), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
@@ -172708,7 +172712,7 @@ function MDXContent(_ref) {
     parentName: "ul"
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "li"
-  }, "globalName"), " - the name in the global object, for example ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "globalName"), " - The name on the global object, for example ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "li"
   }, "window.$"), " for a browser environment (", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "li"
@@ -172716,13 +172720,13 @@ function MDXContent(_ref) {
     parentName: "ul"
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "li"
-  }, "moduleLocalName"), " - the name of method/variable/etc of the module (the module must export it) (", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+  }, "moduleLocalName"), " - The name of method/variable etc of the module (the module must export it) (", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "li"
   }, "may be omitted"), ")"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
     parentName: "ul"
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "li"
-  }, "override"), " - allows to override existing value in the global object (", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+  }, "override"), " - Allows to override existing value in the global object (", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "li"
   }, "may be omitted"), ")")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "If ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
@@ -173171,7 +173175,7 @@ function MDXContent(_ref) {
     parentName: "code"
   }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Default: ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "undefined")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "The name of method/variable/etc of the module (the module must export it).\nIf ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "undefined")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "The name of method/variable etc of the module (the module must export it)."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "If ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "moduleLocalName"), " is specified, it exposes only the value of ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
@@ -173347,9 +173351,9 @@ function MDXContent(_ref) {
     parentName: "code"
   }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Default: ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "false")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "By default, loader does not override the existing value in the global object, because it is unsafe.\nIn ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "false")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "By default, loader does not override the existing value in the global object, because it is unsafe."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "In ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "development"), " mode, we throw an error if the value already present in the global object.\nBut you can configure loader to override the existing value in the global object using this option."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "To force override the value that is already present in the global object you can set the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "development"), " mode, we throw an error if the value already present in the global object."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "But you can configure loader to override the existing value in the global object using this option."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "To force override the value that is already present in the global object you can set the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "override"), " option to the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
@@ -173711,7 +173715,7 @@ function MDXContent(_ref) {
     parentName: "p"
   }, "find"), " (under ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "myNameForFind"), " name) methods to the global object."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "In a browser these methods will be available under ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "myNameForFind"), " name) methods to the global object."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "In browsers, these methods will be available under ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "windows._.map(..args)"), ", ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
@@ -174139,7 +174143,7 @@ function MDXContent(_ref) {
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "header-link",
     parentName: "a"
-  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Please take a moment to read our contributing guidelines if you haven't yet done so."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "We welcome all contributions!"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "If you're new here, please take a moment to review our contributing guidelines before submitting issues or pull requests."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "https://github.com/webpack-contrib/expose-loader/blob/master/.github/CONTRIBUTING.md",
     parentName: "p"
   }, "CONTRIBUTING")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
@@ -174254,9 +174258,9 @@ function MDXContent(_ref) {
   }, "yarn add -D html-loader\n")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "or"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
     className: "hljs language-console",
     parentName: "pre"
-  }, "pnpm add -D html-loader\n")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Then add the plugin to your ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "pnpm add -D html-loader\n")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Then add the loader to your ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "webpack"), " config. For example:"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+  }, "webpack"), " configuration. For example:"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
   }, "file.js")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
     className: "hljs language-js",
@@ -174638,115 +174642,115 @@ function MDXContent(_ref) {
     parentName: "a"
   }, "asset modules")), ")."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Supported tags and attributes:"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
     parentName: "ul"
-  }, "the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "The ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "li"
   }, "src"), " attribute of the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "li"
   }, "audio"), " tag"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
     parentName: "ul"
-  }, "the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "The ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "li"
   }, "src"), " attribute of the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "li"
   }, "embed"), " tag"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
     parentName: "ul"
-  }, "the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "The ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "li"
   }, "src"), " attribute of the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "li"
   }, "img"), " tag"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
     parentName: "ul"
-  }, "the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "The ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "li"
   }, "srcset"), " attribute of the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "li"
   }, "img"), " tag"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
     parentName: "ul"
-  }, "the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "The ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "li"
   }, "src"), " attribute of the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "li"
   }, "input"), " tag"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
     parentName: "ul"
-  }, "the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "The ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "li"
   }, "data"), " attribute of the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "li"
   }, "object"), " tag"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
     parentName: "ul"
-  }, "the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "The ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "li"
   }, "src"), " attribute of the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "li"
   }, "script"), " tag"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
     parentName: "ul"
-  }, "the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "The ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "li"
   }, "href"), " attribute of the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "li"
   }, "script"), " tag"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
     parentName: "ul"
-  }, "the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "The ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "li"
   }, "xlink:href"), " attribute of the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "li"
   }, "script"), " tag"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
     parentName: "ul"
-  }, "the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "The ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "li"
   }, "src"), " attribute of the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "li"
   }, "source"), " tag"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
     parentName: "ul"
-  }, "the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "The ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "li"
   }, "srcset"), " attribute of the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "li"
   }, "source"), " tag"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
     parentName: "ul"
-  }, "the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "The ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "li"
   }, "src"), " attribute of the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "li"
   }, "track"), " tag"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
     parentName: "ul"
-  }, "the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "The ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "li"
   }, "poster"), " attribute of the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "li"
   }, "video"), " tag"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
     parentName: "ul"
-  }, "the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "The ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "li"
   }, "src"), " attribute of the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "li"
   }, "video"), " tag"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
     parentName: "ul"
-  }, "the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "The ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "li"
   }, "xlink:href"), " attribute of the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "li"
   }, "image"), " tag"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
     parentName: "ul"
-  }, "the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "The ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "li"
   }, "href"), " attribute of the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "li"
   }, "image"), " tag"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
     parentName: "ul"
-  }, "the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "The ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "li"
   }, "xlink:href"), " attribute of the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "li"
   }, "use"), " tag"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
     parentName: "ul"
-  }, "the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "The ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "li"
   }, "href"), " attribute of the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "li"
   }, "use"), " tag"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
     parentName: "ul"
-  }, "the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "The ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "li"
   }, "href"), " attribute of the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "li"
@@ -174796,7 +174800,7 @@ function MDXContent(_ref) {
     parentName: "li"
   }, "layoutimage")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
     parentName: "ul"
-  }, "the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "The ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "li"
   }, "imagesrcset"), " attribute of the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "li"
@@ -174824,7 +174828,7 @@ function MDXContent(_ref) {
     parentName: "li"
   }, "preload")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
     parentName: "ul"
-  }, "the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "The ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "li"
   }, "content"), " attribute of the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "li"
@@ -174886,7 +174890,7 @@ function MDXContent(_ref) {
     parentName: "li"
   }, "layoutimage")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
     parentName: "ul"
-  }, "the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "The ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "li"
   }, "icon-uri"), " value component in ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "li"
@@ -174909,11 +174913,11 @@ function MDXContent(_ref) {
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "header-link",
     parentName: "a"
-  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "The ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-    parentName: "p"
-  }, "true"), " value enables the processing of all default elements and attributes, the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-    parentName: "p"
-  }, "false"), " value disables the processing of all attributes."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+    parentName: "ul"
+  }, "true: Enables processing of all default tags and attributes"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+    parentName: "ul"
+  }, "false: Disables processing entirely")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
   }, "webpack.config.js")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
     className: "hljs language-js",
@@ -175021,7 +175025,7 @@ function MDXContent(_ref) {
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "header-link",
     parentName: "a"
-  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Allows you to specify which tags and attributes to process, filter them, filter urls and process sources starting with ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Allows you to specify which tags and attributes to process, filter them, filter URLs and process sources starting with ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "/"), "."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "For example:"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
@@ -175890,7 +175894,7 @@ function MDXContent(_ref) {
     parentName: "code"
   }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "If the tag name is not specified it will process all the tags."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
     parentName: "blockquote"
-  }, "You can use your custom filter to specify html elements to be processed.")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "For example:"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+  }, "You can use your custom filter to specify HTML elements to be processed.")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "For example:"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
   }, "webpack.config.js")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
     className: "hljs language-js",
@@ -176582,7 +176586,7 @@ function MDXContent(_ref) {
     parentName: "code"
   }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Default: ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "undefined")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Allow to filter urls. All filtered urls will not be resolved (left in the code as they were written).\nNon-requestable sources (for example ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "undefined")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Allow to filter URLs. All filtered URLs will not be resolved (left in the code as they were written).\nNon-requestable sources (for example ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "<img src=\"javascript:void(0)\"/>"), ") are not handled by default."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
     className: "hljs language-js",
@@ -176804,13 +176808,13 @@ function MDXContent(_ref) {
     parentName: "p"
   }, "html-loader"), " interprets content inside ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "<noscript>"), " tags as ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "<noscript>"), " tags as plain ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "#text"), ", so processing of content inside this tag will be ignored."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "In order to enable processing inside ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "#text"), ", so processing of content inside these tags will is ignored during processing."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "In order to enable processing inside ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "<noscript>"), " for content recognition by the parser as ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "#AST"), ", set this parameter to: ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "#AST"), ", set this option to: ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "false")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Additional information: ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "https://parse5.js.org/interfaces/parse5.ParserOptions.html#scriptingenabled",
@@ -176976,11 +176980,11 @@ function MDXContent(_ref) {
     parentName: "code"
   }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Default: ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "undefined")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Allows pre-processing of content before handling."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+  }, "undefined")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Allows pre-processing of content before handling by the loader."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
     parentName: "blockquote"
   }, "[!WARNING]"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
     parentName: "blockquote"
-  }, "You should always return valid HTML")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+  }, "You should always return valid HTML.")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
   }, "file.hbs")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
     className: "hljs language-hbs",
@@ -177959,7 +177963,9 @@ function MDXContent(_ref) {
     parentName: "code"
   }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "You can also set the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "postprocessor"), " option as an asynchronous function instance."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "For example:"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+  }, "postprocessor"), " option as an asynchronous ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    parentName: "p"
+  }, "function"), " instance."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "For example:"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
   }, "webpack.config.js")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
     className: "hljs language-js",
@@ -178404,9 +178410,9 @@ function MDXContent(_ref) {
     parentName: "p"
   }, "true"), " in production mode, otherwise ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "false")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Tell ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "false")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Use this option to enable or customize HTML minimization with ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "html-loader"), " to minimize HTML."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h4", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+  }, "html-loader"), "."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h4", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     id: "boolean-1",
     parentName: "h4"
   }), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
@@ -178639,7 +178645,7 @@ function MDXContent(_ref) {
     parentName: "p"
   }, "html-minifier-terser"), "'s documentation for more information on the available options."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "The default rules can be overridden using the following options in your ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "webpack.conf.js")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+  }, "webpack.config.js")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
   }, "webpack.config.js")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
     className: "hljs language-js",
@@ -178939,7 +178945,9 @@ function MDXContent(_ref) {
   }, "module concatenation"), " and ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "/guides/tree-shaking/",
     parentName: "p"
-  }, "tree shaking"), "."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "You can enable a CommonJS modules syntax using:"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+  }, "tree shaking"), "."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "If you want to generate CommonJS modules instead (e.g., ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    parentName: "p"
+  }, "module.exports ="), "), set:"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
   }, "webpack.config.js")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
     className: "hljs language-js",
@@ -179045,7 +179053,7 @@ function MDXContent(_ref) {
   }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     id: "disable-url-resolving-using-the----webpackignore-true----comment",
     parentName: "h3"
-  }), "Disable url resolving using the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }), "Disable URL resolving using the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "h3"
   }, "<!-- webpackIgnore: true -->"), " comment", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "#disable-url-resolving-using-the----webpackignore-true----comment",
@@ -179055,9 +179063,9 @@ function MDXContent(_ref) {
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "header-link",
     parentName: "a"
-  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "With ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Use the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "<!-- webpackIgnore: true -->"), " comment, one can disable sources handling for next tag."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
+  }, "<!-- webpackIgnore: true -->"), " comment to prevent html-loader from processing URLs for the next HTML tag. This is useful when you don’t want Webpack to handle asset imports automatically."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
     className: "hljs language-html",
     parentName: "pre"
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
@@ -180298,7 +180306,7 @@ function MDXContent(_ref) {
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "header-link",
     parentName: "a"
-  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "You can use any template system. Below is an example for ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "You can use any templating engine by leveraging the preprocessor option in html-loader. The preprocessor function receives the file content and the loader context, allowing you to transform the HTML before it’s processed by webpack."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Below is an example for ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "https://handlebarsjs.com/",
     parentName: "p"
   }, "handlebars"), "."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
@@ -180545,7 +180553,11 @@ function MDXContent(_ref) {
   }, "}"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token punctuation",
     parentName: "code"
-  }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+  }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "This setup will transform the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    parentName: "p"
+  }, "file.hbs"), " template using Handlebars before passing the result to ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    parentName: "p"
+  }, "html-loader"), "."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     id: "posthtml",
     parentName: "h3"
   }), "PostHTML", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
@@ -180559,7 +180571,7 @@ function MDXContent(_ref) {
   }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "You can use ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "https://github.com/posthtml/posthtml",
     parentName: "p"
-  }, "PostHTML"), " without any additional loaders."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+  }, "PostHTML"), " to transform HTML before it's processed, without needing additional loaders.\nThis is useful for tasks like converting image formats, adding attributes, or restructuring markup."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
   }, "file.html")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
     className: "hljs language-html",
@@ -181042,7 +181054,7 @@ function MDXContent(_ref) {
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "header-link",
     parentName: "a"
-  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Please take a moment to read our contributing guidelines if you haven't yet done so."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "We welcome all contributions!\nIf you're new here, please take a moment to review our contributing guidelines before submitting issues or pull requests."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "https://github.com/webpack-contrib/html-loader/blob/master/.github/CONTRIBUTING.md",
     parentName: "p"
   }, "CONTRIBUTING")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
@@ -181135,22 +181147,22 @@ function MDXContent(_ref) {
     src: "https://packagephobia.now.sh/badge?p=imports-loader",
     alt: "size",
     parentName: "a"
-  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "The imports loader allows you to use modules that depend on specific global variables."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "This is useful for third-party modules that rely on global variables like ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "The imports loader allows you to use modules that depend on specific global variables."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "This is especially useful for third-party modules that rely on global variables like ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "$"), " or ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "$"), " or where ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "this"), " being the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "this"), " is expected to be the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "window"), " object.\nThe imports loader can add the necessary ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "window"), " object. The imports loader can add the necessary ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "require('whatever')"), " calls, so those modules work with webpack."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "For further hints on compatibility issues, check out ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+  }, "require('whatever')"), " calls, so those modules work with webpack."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "For further hints on compatibility issues, see the official webpack documentation on ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "/guides/shimming/",
     parentName: "p"
-  }, "Shimming"), " of the official docs."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+  }, "Shimming"), "."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
     parentName: "blockquote"
   }, "[!WARNING]"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
     parentName: "blockquote"
-  }, "By default loader generate ES module named syntax.")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+  }, "By default, this loader generates ES module named syntax.")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
     parentName: "blockquote"
   }, "[!WARNING]"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
     parentName: "blockquote"
@@ -181248,7 +181260,9 @@ function MDXContent(_ref) {
     parentName: "blockquote"
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "%20"), " is space in a query string, because you can't use spaces in URLs")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
+  }, "%20"), " represents a ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    parentName: "p"
+  }, "space"), " in a query string, because you can't use spaces in URLs")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
     className: "hljs language-js",
     parentName: "pre"
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
@@ -181855,9 +181869,9 @@ function MDXContent(_ref) {
   }, "\"angular\""), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token punctuation",
     parentName: "code"
-  }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "And run ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Finally, run ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "webpack"), " via your preferred method."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+  }, "webpack"), " using the method you normally use (e.g., via CLI or an npm script)."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     id: "options",
     parentName: "h2"
   }), "Options", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
@@ -181940,11 +181954,15 @@ function MDXContent(_ref) {
     parentName: "code"
   }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Default: ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "module")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Format of generated exports."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Possible values - ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-    parentName: "p"
-  }, "commonjs"), " (CommonJS module syntax) and ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-    parentName: "p"
-  }, "module"), " (ES module syntax)."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h4", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+  }, "module")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Defines the format of generated exports."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Possible values:"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+    parentName: "ul"
+  }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    parentName: "li"
+  }, "commonjs"), " (CommonJS module syntax)"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+    parentName: "ul"
+  }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    parentName: "li"
+  }, "module"), " (ES module syntax).")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h4", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     id: "commonjs",
     parentName: "h4"
   }), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
@@ -183305,7 +183323,7 @@ function MDXContent(_ref) {
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "header-link",
     parentName: "a"
-  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Allow to specify multiple imports.\nEach item can be a ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Allow to specify multiple imports.\nEach item can be either a ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "https://github.com/webpack-contrib/imports-loader#string",
     parentName: "p"
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
@@ -183743,7 +183761,7 @@ function MDXContent(_ref) {
     parentName: "blockquote"
   }, "[!WARNING]"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
     parentName: "blockquote"
-  }, "Do not use this option if source code contains ES module import(s)")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h4", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+  }, "Do not use this option if source code contains ES module import(s). It is intended for legacy or non-ESM compatible code.")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h4", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     id: "boolean",
     parentName: "h4"
   }), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
@@ -183756,7 +183774,7 @@ function MDXContent(_ref) {
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "header-link",
     parentName: "a"
-  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Wraps the code in an IIFE (Immediately Invoked Function Expression) with default context."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
   }, "webpack.config.js")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
     className: "hljs language-js",
@@ -183984,7 +184002,7 @@ function MDXContent(_ref) {
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "header-link",
     parentName: "a"
-  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Passes a custom thisArg to the .call() context."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
   }, "webpack.config.js")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
     className: "hljs language-js",
@@ -184212,7 +184230,7 @@ function MDXContent(_ref) {
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "header-link",
     parentName: "a"
-  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Allows advanced control: specify the this context and custom arguments passed into the IIFE"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
   }, "webpack.config.js")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
     className: "hljs language-js",
@@ -184485,7 +184503,7 @@ function MDXContent(_ref) {
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "header-link",
     parentName: "a"
-  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Allows remapping argument names in the function signature using a key-value object."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
   }, "webpack.config.js")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
     className: "hljs language-js",
@@ -185216,7 +185234,7 @@ function MDXContent(_ref) {
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "header-link",
     parentName: "a"
-  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Please take a moment to read our contributing guidelines if you haven't yet done so."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "We welcome contributions!\nIf you’re interested in helping improve this loader, please take a moment to read our contributing guidelines."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "https://github.com/webpack-contrib/imports-loader/blob/master/.github/CONTRIBUTING.md",
     parentName: "p"
   }, "CONTRIBUTING")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
@@ -185309,7 +185327,7 @@ function MDXContent(_ref) {
     src: "https://packagephobia.now.sh/badge?p=less-loader",
     alt: "size",
     parentName: "a"
-  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "A Less loader for webpack. Compiles Less to CSS."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "A Less loader for webpack that compiles Less files into CSS."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     id: "getting-started",
     parentName: "h2"
   }), "Getting Started", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
@@ -185335,7 +185353,7 @@ function MDXContent(_ref) {
     parentName: "pre"
   }, "pnpm add -D less less-loader\n")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Then add the loader to your ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "webpack"), " config. For example:"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+  }, "webpack"), " configuration. For example:"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
   }, "webpack.config.js")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
     className: "hljs language-js",
@@ -185430,9 +185448,9 @@ function MDXContent(_ref) {
   }, "}"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token punctuation",
     parentName: "code"
-  }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "And run ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Finally, run ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "webpack"), " via your preferred method."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+  }, "webpack"), " using the method you normally use (e.g., via CLI or an npm script)."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     id: "options",
     parentName: "h2"
   }), "Options", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
@@ -185588,7 +185606,7 @@ function MDXContent(_ref) {
   }, "loader options"), ". See the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "http://lesscss.org/usage/#command-line-usage-options",
     parentName: "p"
-  }, "Less documentation"), " for all available options in dash-case. Since we're passing these options to Less programmatically, you need to pass them in camelCase here:"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h4", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+  }, "Less documentation"), " for all available options in dash-case."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Since we're passing these options to Less programmatically, you need to pass them in camelCase here:"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h4", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     id: "object",
     parentName: "h4"
   }), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
@@ -185601,7 +185619,7 @@ function MDXContent(_ref) {
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "header-link",
     parentName: "a"
-  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Use an object to pass options through to Less."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Use an object to pass options directly to Less."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
   }, "webpack.config.js")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
     className: "hljs language-js",
@@ -185775,7 +185793,7 @@ function MDXContent(_ref) {
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "header-link",
     parentName: "a"
-  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Allows setting the options passed through to Less based off of the loader context."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
+  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Allows setting the Less options dynamically based on the loader context."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
     className: "hljs language-js",
     parentName: "pre"
   }, "module", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
@@ -186117,13 +186135,13 @@ function MDXContent(_ref) {
     parentName: "code"
   }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Default: ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "undefined")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Prepends/Appends ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "undefined")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Prepends or Appends ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "Less"), " code to the actual entry file.\nIn this case, the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "less-loader"), " will not override the source but just ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
-  }, "prepend"), " the entry's content."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "This is especially useful when some of your Less variables depend on the environment:"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+  }, "prepend"), " the entry's content."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "This is especially useful when some of your Less variables depend on the environment."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
     parentName: "blockquote"
   }, "Since you're injecting code, this will break the source mappings in your entry file. Often there's a simpler solution than this, like multiple Less entry files.")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h4", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     id: "string",
@@ -186839,7 +186857,7 @@ function MDXContent(_ref) {
     parentName: "p"
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "a"
-  }, "devtool")), " option. All values enable source map generation except ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "devtool")), " option.\nAll values enable source map generation except ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "eval"), " and ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
@@ -187040,7 +187058,7 @@ function MDXContent(_ref) {
     parentName: "code"
   }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Default: ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "true")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Enables/Disables the default ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "true")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Enables or disables the default ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "webpack"), " importer."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "This can improve performance in some cases. Use it with caution because aliases and ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
@@ -187210,7 +187228,7 @@ function MDXContent(_ref) {
     parentName: "code"
   }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
     parentName: "blockquote"
-  }, "less-loader compatible with Less 3 and 4 versions")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "The special ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "less-loader compatible with both Less 3 and 4 versions")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "The special ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "implementation"), " option determines which implementation of Less to use. Overrides the locally installed ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
@@ -187231,7 +187249,7 @@ function MDXContent(_ref) {
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "header-link",
     parentName: "a"
-  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Example using a Less instance:"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
   }, "webpack.config.js")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
     className: "hljs language-js",
@@ -187378,7 +187396,7 @@ function MDXContent(_ref) {
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "header-link",
     parentName: "a"
-  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Example using a resolved Less module path:"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
   }, "webpack.config.js")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
     className: "hljs language-js",
@@ -187550,7 +187568,7 @@ function MDXContent(_ref) {
     parentName: "p"
   }, "false")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "Less"), " warnings and errors will be webpack warnings and errors, not just logs."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+  }, "Less"), " warnings and errors will be treated as webpack warnings and errors, instead of being logged silently."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
   }, "warning.less")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
     className: "hljs language-less",
@@ -187561,7 +187579,7 @@ function MDXContent(_ref) {
     parentName: "p"
   }, "false"), " it will be just a log and webpack will compile successfully, but if you set this option to ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "true"), " webpack will compile fail with a warning."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+  }, "true"), " webpack will compile fail with a warning(or error), and can break the build if configured accordingly."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
   }, "webpack.config.js")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
     className: "hljs language-js",
@@ -187710,12 +187728,12 @@ function MDXContent(_ref) {
     parentName: "a"
   }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Chain the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "less-loader"), " with the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+  }, "less-loader"), " with ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "/loaders/css-loader/",
     parentName: "p"
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "a"
-  }, "css-loader")), " and the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+  }, "css-loader")), " and ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "/loaders/style-loader/",
     parentName: "p"
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
@@ -187779,7 +187797,7 @@ function MDXContent(_ref) {
   }, ","), " ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token comment",
     parentName: "code"
-  }, "// creates style nodes from JS strings"), "\n          ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+  }, "// Creates style nodes from JS strings"), "\n          ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token punctuation",
     parentName: "code"
   }, "}"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
@@ -187800,7 +187818,7 @@ function MDXContent(_ref) {
   }, ","), " ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token comment",
     parentName: "code"
-  }, "// translates CSS into CommonJS"), "\n          ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+  }, "// Translates CSS into CommonJS"), "\n          ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token punctuation",
     parentName: "code"
   }, "}"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
@@ -187821,7 +187839,7 @@ function MDXContent(_ref) {
   }, ","), " ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token comment",
     parentName: "code"
-  }, "// compiles Less to CSS"), "\n          ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+  }, "// Compiles Less to CSS"), "\n          ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token punctuation",
     parentName: "code"
   }, "}"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
@@ -188062,7 +188080,7 @@ function MDXContent(_ref) {
   }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Usually, it's recommended to extract the style sheets into a dedicated file in production using the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "/plugins/mini-css-extract-plugin/",
     parentName: "p"
-  }, "MiniCssExtractPlugin"), ". This way your styles are not dependent on JavaScript."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+  }, "MiniCssExtractPlugin"), ". This way your styles are not dependent on JavaScript, improving performance and cacheability."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     id: "imports",
     parentName: "h3"
   }), "Imports", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
@@ -188118,7 +188136,7 @@ function MDXContent(_ref) {
     parentName: "span"
   }, ";")))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Using ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "~"), " is deprecated and can be removed from your code (", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+  }, "~"), " prefix (e.g., @import \"~bootstrap/less/bootstrap\";) is deprecated and can be removed from your code (", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
   }, "we recommend it"), "), but we still support it for historical reasons.\nWhy you can removed it? The loader will first try to resolve ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
@@ -188504,7 +188522,7 @@ function MDXContent(_ref) {
   }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "In order to use ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "http://lesscss.org/usage/#plugins",
     parentName: "p"
-  }, "plugins"), ", simply set the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "Less plugins"), ", simply set the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "plugins"), " option like this:"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
@@ -188641,7 +188659,7 @@ function MDXContent(_ref) {
   }, "Access to the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "/api/loaders/#the-loader-context",
     parentName: "p"
-  }, "loader context"), " inside the custom plugin can be done using the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "loader context"), " inside a custom plugin can be done using the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "pluginManager.webpackLoaderContext"), " property.")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
     className: "hljs language-js",
@@ -188759,7 +188777,7 @@ function MDXContent(_ref) {
   }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Bundling CSS with webpack has some nice advantages like referencing images and fonts with hashed urls or ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "/concepts/hot-module-replacement/",
     parentName: "p"
-  }, "hot module replacement"), " in development. In production, on the other hand, it's not a good idea to apply your style sheets depending on JS execution. Rendering may be delayed or even a ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+  }, "Hot Module Replacement(HMR)"), " in development."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "In production, on the other hand, it's not a good idea to apply your style sheets depending on JS execution. Rendering may be delayed or even a ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "https://en.wikipedia.org/wiki/Flash_of_unstyled_content",
     parentName: "p"
   }, "FOUC"), " might be visible. Thus it's often still better to have them as separate files in your final production build."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "There are two possibilities to extract a style sheet from the bundle:"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
@@ -188787,12 +188805,12 @@ function MDXContent(_ref) {
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "header-link",
     parentName: "a"
-  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "There is a known problem with Less and ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "There is a known problem when using Less with ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "https://github.com/css-modules/css-modules",
     parentName: "p"
   }, "CSS modules"), " regarding relative file paths in ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "url(...)"), " statements. ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+  }, "url(...)"), " statements.\n", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "https://github.com/webpack-contrib/less-loader/issues/109#issuecomment-253797335",
     parentName: "p"
   }, "See this issue for an explanation"), "."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
@@ -188806,7 +188824,7 @@ function MDXContent(_ref) {
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "header-link",
     parentName: "a"
-  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Please take a moment to read our contributing guidelines if you haven't yet done so."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "We welcome all contributions!\nIf you're new here, please take a moment to review our contributing guidelines before submitting issues or pull requests."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "https://github.com/webpack-contrib/less-loader/blob/master/.github/CONTRIBUTING.md",
     parentName: "p"
   }, "CONTRIBUTING")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
@@ -190029,7 +190047,7 @@ function MDXContent(_ref) {
     src: "https://badges.gitter.im/postcss/postcss.svg",
     alt: "chat-postcss",
     parentName: "a"
-  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Loader to process CSS with ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "A loader to process CSS using ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "https://github.com/postcss/postcss",
     parentName: "p"
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
@@ -190058,9 +190076,9 @@ function MDXContent(_ref) {
   }, "yarn add -D postcss-loader postcss\n")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "or"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
     className: "hljs language-console",
     parentName: "pre"
-  }, "pnpm add -D postcss-loader postcss\n")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Then add the plugin to your ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "pnpm add -D postcss-loader postcss\n")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Then add the loader to your ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "webpack"), " config. For example:"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+  }, "webpack"), " configuration. For example:"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
     parentName: "blockquote"
   }, "In the following configuration the plugin ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "https://github.com/csstools/postcss-preset-env",
@@ -190404,9 +190422,9 @@ function MDXContent(_ref) {
   }, "}"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token punctuation",
     parentName: "code"
-  }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "And run ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Finally, run ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "webpack"), " via your preferred method."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+  }, "webpack"), " using the method you normally use (e.g., via CLI or an npm script)."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     id: "options",
     parentName: "h2"
   }), "Options", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
@@ -190478,7 +190496,7 @@ function MDXContent(_ref) {
     parentName: "code"
   }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Default: ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "undefined")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Enable PostCSS Parser support in ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "undefined")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Enable PostCSS parser support for ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "CSS-in-JS"), ".\nIf you use JS styles the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "https://github.com/postcss/postcss-js",
@@ -190839,7 +190857,7 @@ function MDXContent(_ref) {
     parentName: "code"
   }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Default: ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "undefined")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Allows to set ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+  }, "undefined")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Allows you to set ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "https://postcss.org/api/#processoptions",
     parentName: "p"
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
@@ -190859,11 +190877,11 @@ function MDXContent(_ref) {
     parentName: "p"
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "a"
-  }, "sourcemap")), " option."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "For large projects, to optimize performance of the loader, it is better to provide ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "sourcemap")), " option instead."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "For large projects, to optimize performance of the loader, it is better to provide ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "postcssOptions"), " in loader\nconfig and specify ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "postcssOptions"), " in loader config and specify ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "config: false"), ". This approach removes the need to lookup and load external config files multiple\ntimes during compilation."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h4", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+  }, "config: false"), ".\nThis approach removes the need to lookup and load external config files multiple times during compilation."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h4", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     id: "object",
     parentName: "h4"
   }), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
@@ -192044,7 +192062,7 @@ function MDXContent(_ref) {
     parentName: "code"
   }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Default: ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "true")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Allows to set options using config files.\nOptions specified in the config file are combined with options passed to the loader, the loader options overwrite options from config."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h5", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+  }, "true")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Allows you to set options using config files.\nOptions specified in the config file are combined with options passed to the loader, the loader options overwrite options from config."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h5", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     id: "config-files",
     parentName: "h5"
   }), "Config Files", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
@@ -192057,17 +192075,17 @@ function MDXContent(_ref) {
     parentName: "a"
   }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "The loader will search up the directory tree for configuration in the following places:"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
     parentName: "ul"
-  }, "a ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "A ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "li"
   }, "postcss"), " property in ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "li"
   }, "package.json")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
     parentName: "ul"
-  }, "a ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "A ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "li"
   }, ".postcssrc"), " file in JSON or YAML format"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
     parentName: "ul"
-  }, "a ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "A ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "li"
   }, ".postcssrc.json"), ", ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "li"
@@ -192079,7 +192097,7 @@ function MDXContent(_ref) {
     parentName: "li"
   }, ".postcssrc.cjs"), " file"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
     parentName: "ul"
-  }, "a ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "A ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "li"
   }, "postcss.config.js"), " or ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "li"
@@ -192500,7 +192518,9 @@ function MDXContent(_ref) {
     parentName: "p"
   }, "webpack.config.js"), ".\nYou can use it standalone or in conjunction with ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "css-loader"), " (recommended)."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Use it ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+  }, "css-loader"), " (recommended)."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Use ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    parentName: "p"
+  }, "postcss-loader"), " ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
   }, "before"), " ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
@@ -193701,7 +193721,9 @@ function MDXContent(_ref) {
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "header-link",
     parentName: "a"
-  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "You'll need to install ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    parentName: "p"
+  }, "SugarSS"), " is a whitespace-based syntax for PostCSS."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "You'll need to install ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "sugarss"), ":"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
     className: "hljs language-console",
@@ -193894,7 +193916,7 @@ function MDXContent(_ref) {
   }, "autoprefixer"), ":"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
     className: "hljs language-console",
     parentName: "pre"
-  }, "npm install --save-dev autoprefixer\n")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Add vendor prefixes to CSS rules using ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+  }, "npm install --save-dev autoprefixer\n")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Automatically add vendor prefixes to CSS rules using ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "https://github.com/postcss/autoprefixer",
     parentName: "p"
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
@@ -194030,7 +194052,7 @@ function MDXContent(_ref) {
   }, "{"), "\n                      ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token comment",
     parentName: "code"
-  }, "// Options"), "\n                    ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+  }, "// Autoprefixer options (optional)"), "\n                    ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token punctuation",
     parentName: "code"
   }, "}"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
@@ -194337,14 +194359,16 @@ function MDXContent(_ref) {
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "header-link",
     parentName: "a"
-  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "What is ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+    parentName: "blockquote"
+  }, "What are ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "CSS Modules"), "? Please ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "https://github.com/webpack-contrib/css-loader#modules",
     parentName: "p"
-  }, "read"), "."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "No additional options required on the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "read here"), ".")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "No additional options required on the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "postcss-loader"), " side.\nTo make them work properly, either add the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "postcss-loader"), " side to support CSS Modules.\nTo make them work properly, either add the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "css-loader"), "’s ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
@@ -194498,7 +194522,9 @@ function MDXContent(_ref) {
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "header-link",
     parentName: "a"
-  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "You'll need to install ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "To process styles written in JavaScript, you can use ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    parentName: "p"
+  }, "postcss-js"), " as the parser."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "You'll need to install ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "postcss-js"), ":"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
     className: "hljs language-console",
@@ -194693,7 +194719,7 @@ function MDXContent(_ref) {
   }, "}"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token punctuation",
     parentName: "code"
-  }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "As result you will be able to write styles in the following way"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
+  }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "As result you will be able to write styles in the following way:"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
     className: "hljs language-js",
     parentName: "pre"
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
@@ -194784,7 +194810,7 @@ function MDXContent(_ref) {
     parentName: "blockquote"
   }, "[!WARNING]"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
     parentName: "blockquote"
-  }, "If you are using Babel you need to do the following in order for the setup to work")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ol", {
+  }, "If you are using Babel you need to do the following in order for the setup to work"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ol", {
     parentName: "blockquote"
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
     parentName: "ol"
@@ -194808,7 +194834,7 @@ function MDXContent(_ref) {
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "header-link",
     parentName: "a"
-  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Using ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "To extract CSS into separate files, use ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "/plugins/mini-css-extract-plugin/",
     parentName: "p"
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
@@ -195028,7 +195054,9 @@ function MDXContent(_ref) {
   }, "}"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token punctuation",
     parentName: "code"
-  }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+  }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+    parentName: "blockquote"
+  }, "💡 Use this setup to extract and cache CSS in production while keeping fast style injection during development.")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     id: "emit-assets",
     parentName: "h3"
   }), "Emit assets", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
@@ -195039,7 +195067,7 @@ function MDXContent(_ref) {
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "header-link",
     parentName: "a"
-  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "To write a asset from PostCSS plugin to the webpack, need to add a message in ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "To emit an asset from PostCSS plugin to the webpack, need to add a message in ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "result.messages"), "."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "The message should contain the following fields:"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
     parentName: "ul"
@@ -195361,7 +195389,9 @@ function MDXContent(_ref) {
   }, "}"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token punctuation",
     parentName: "code"
-  }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+  }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+    parentName: "blockquote"
+  }, "ℹ️ This allows your plugin to generate additional files as part of the build process, and Webpack will handle them like any other emitted asset.")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     id: "add-dependencies-contextdependencies-builddependencies-missingdependencies",
     parentName: "h3"
   }), "Add dependencies, contextDependencies, buildDependencies, missingDependencies", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
@@ -195729,16 +195759,18 @@ function MDXContent(_ref) {
   }, "}"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token punctuation",
     parentName: "code"
-  }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Or you can use ready-made plugin ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+  }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+    parentName: "blockquote"
+  }, "💡 You can use ready-made plugin ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "https://www.npmjs.com/package/postcss-add-dependencies",
     parentName: "p"
-  }, "postcss-add-dependencies"), "."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ol", {
+  }, "postcss-add-dependencies"), " to simplify this process.")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ol", {
     start: "2"
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
     parentName: "ol"
   }, "Pass ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "li"
-  }, "loaderContext"), " in plugin.")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+  }, "loaderContext"), " in plugin (for advanced setups).")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
   }, "webpack.config.js")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
     className: "hljs language-js",
@@ -195911,9 +195943,15 @@ function MDXContent(_ref) {
   }, "}"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token punctuation",
     parentName: "code"
-  }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+  }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+    parentName: "blockquote"
+  }, "⚠️ Use this approach only when managing dependencies via custom PostCSS configurations with dynamic imports or external files.")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
-  }, "postcss.config.js")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
+  }, "postcss.config.js")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Pass the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    parentName: "p"
+  }, "webpackLoaderContext"), " through the PostCSS ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    parentName: "p"
+  }, "api"), " object:"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
     className: "hljs language-js",
     parentName: "pre"
   }, "module", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
@@ -196002,7 +196040,9 @@ function MDXContent(_ref) {
     parentName: "code"
   }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
-  }, "postcssCustomPlugin.js")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
+  }, "postcssCustomPlugin.js")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Register a file dependency using ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    parentName: "p"
+  }, "loaderContext.addDependency"), ":"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
     className: "hljs language-js",
     parentName: "pre"
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
@@ -196194,7 +196234,9 @@ function MDXContent(_ref) {
   }, "="), " postcssCustomPlugin", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token punctuation",
     parentName: "code"
-  }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+  }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+    parentName: "blockquote"
+  }, "✅ This method is ideal when you want to dynamically declare dependencies without relying on result.messages, especially in more complex setups or shared plugin configurations.")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     id: "contributing",
     parentName: "h2"
   }), "Contributing", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
@@ -196205,7 +196247,7 @@ function MDXContent(_ref) {
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "header-link",
     parentName: "a"
-  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Please take a moment to read our contributing guidelines if you haven't yet done so."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "We welcome all contributions!\nIf you're new here, please take a moment to review our contributing guidelines before submitting issues or pull requests."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "https://github.com/webpack-contrib/postcss-loader/blob/master/.github/CONTRIBUTING.md",
     parentName: "p"
   }, "CONTRIBUTING")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
@@ -196652,7 +196694,7 @@ function MDXContent(_ref) {
     parentName: "p"
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "a"
-  }, "remark"), " plugins"), "\nType:"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
+  }, "remark"), " plugins")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Type:"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
     className: "hljs language-ts",
     parentName: "pre"
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
@@ -196857,7 +196899,9 @@ function MDXContent(_ref) {
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "header-link",
     parentName: "a"
-  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "If need to specify options for the plugin, can pass the plugin using an array, where the second argument will be options."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "If need to specify options for the plugin, you can pass the plugin using an array, where the second argument will be the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    parentName: "p"
+  }, "options"), "."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
   }, "webpack.config.js")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
     className: "hljs language-js",
@@ -197068,9 +197112,7 @@ function MDXContent(_ref) {
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "header-link",
     parentName: "a"
-  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Remark settings", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("br", {
-    parentName: "p"
-  }), "Type:"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
+  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Remark settings"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Type:"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
     className: "hljs language-ts",
     parentName: "pre"
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
@@ -197097,7 +197139,7 @@ function MDXContent(_ref) {
     parentName: "p"
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "a"
-  }, "remark-parse"), " options"), " options to the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "remark-parse"), " options"), " to ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "remark"), "."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
@@ -197259,9 +197301,7 @@ function MDXContent(_ref) {
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "header-link",
     parentName: "a"
-  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Information available to all plugins", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("br", {
-    parentName: "p"
-  }), "Type:"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
+  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Information available to all plugins"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Type:"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
     className: "hljs language-ts",
     parentName: "pre"
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
@@ -197278,12 +197318,12 @@ function MDXContent(_ref) {
     parentName: "code"
   }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Default: ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "undefined")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Configure the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+  }, "undefined")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Configure ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "https://github.com/unifiedjs/unified#processordatakey-value",
     parentName: "p"
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "a"
-  }, "remark")), " with information available to all plugins.\nInformation is stored in an in-memory key-value store."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+  }, "remark")), " with information available to all plugins.\nThis information is stored in an in-memory key-value store."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
   }, "webpack.config.js")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
     className: "hljs language-js",
@@ -197722,7 +197762,7 @@ function MDXContent(_ref) {
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "header-link",
     parentName: "a"
-  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "To get html, need to add ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "To get HTML, you need to add ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "https://github.com/wooorm/remark-html",
     parentName: "p"
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
@@ -197732,9 +197772,9 @@ function MDXContent(_ref) {
     parentName: "p"
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "a"
-  }, "html-loader")), " to the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "html-loader")), " to your ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "webpack.config")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
+  }, "webpack.config.js")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
     className: "hljs language-js",
     parentName: "pre"
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
@@ -198074,7 +198114,7 @@ function MDXContent(_ref) {
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "header-link",
     parentName: "a"
-  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Please take a moment to read our contributing guidelines if you haven't yet done so."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "We welcome all contributions!\nIf you're new here, please take a moment to review our contributing guidelines before submitting issues or pull requests."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "https://github.com/webpack-contrib/remark-loader/blob/master/.github/CONTRIBUTING.md",
     parentName: "p"
   }, "CONTRIBUTING")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
@@ -198212,7 +198252,7 @@ function MDXContent(_ref) {
   }, "Node Sass"), " on your own (more documentation can be found below) or ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "https://github.com/sass/embedded-host-node",
     parentName: "p"
-  }, "Sass Embedded"), "."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "This allows you to control the versions of all your dependencies, and to choose which Sass implementation to use."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+  }, "Sass Embedded"), "."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "This allows you to control the versions of all your dependencies and to choose which Sass implementation to use."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
     parentName: "blockquote"
   }, "[!NOTE]"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
     parentName: "blockquote"
@@ -198243,7 +198283,7 @@ function MDXContent(_ref) {
   }, "css-loader"), " and the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "/loaders/style-loader/",
     parentName: "p"
-  }, "style-loader"), " to immediately apply all styles to the DOM or the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+  }, "style-loader"), " to immediately apply all styles to the DOM, or with the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "/plugins/mini-css-extract-plugin/",
     parentName: "p"
   }, "mini-css-extract-plugin"), " to extract it into a separate file."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Then add the loader to your webpack configuration. For example:"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
@@ -198401,7 +198441,7 @@ function MDXContent(_ref) {
     parentName: "code"
   }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Finally run ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "webpack"), " via your preferred method."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+  }, "webpack"), " via your preferred method (e.g., via CLI or an npm script)."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     id: "the-style-new-api-by-default-since-16-version-and-outputstyle-old-api-options-in-production-mode",
     parentName: "h3"
   }), "The ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
@@ -198448,7 +198488,7 @@ function MDXContent(_ref) {
     parentName: "p"
   }, "advanced mechanism to resolve files"), "."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "The ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "sass-loader"), " uses Sass's custom importer feature to pass all queries to the webpack resolving engine enabling you to import your Sass modules from ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "sass-loader"), " uses Sass's custom importer feature to pass all queries to the webpack resolving engine, enabling you to import your Sass modules from ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "node_modules"), "."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
     className: "hljs language-scss",
@@ -198464,7 +198504,7 @@ function MDXContent(_ref) {
     parentName: "code"
   }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Using ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "~"), " is deprecated and should be removed from your code, but we still support it for historical reasons.\nWhy can you remove it? The loader will first try to resolve ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "~"), " is deprecated and should be removed from your code, but we still support it for historical reasons."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Why can you remove it? The loader will first try to resolve ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "@import"), " as a relative path. If it cannot be resolved, then the loader will try to resolve ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
@@ -198496,11 +198536,11 @@ function MDXContent(_ref) {
     parentName: "p"
   }, "~"), ", because ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "~/"), " resolves to the home directory.\nWebpack needs to distinguish between ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "~/"), " resolves to the home directory."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Webpack needs to distinguish between ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "bootstrap"), " and ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "~bootstrap"), " because CSS and Sass files have no special syntax for importing relative files.\nWriting ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "~bootstrap"), " because CSS and Sass files have no special syntax for importing relative files."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Writing ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "@import \"style.scss\""), " is the same as ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
@@ -198524,13 +198564,13 @@ function MDXContent(_ref) {
     parentName: "ul"
   }, "If you pass the generated CSS on to the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "li"
-  }, "css-loader"), ", all urls must be relative to the entry-file (e.g. ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "css-loader"), ", all URLs must be relative to the entry-file (e.g. ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "li"
   }, "main.scss"), ")."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
     parentName: "ul"
   }, "If you're just generating CSS without passing it to the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "li"
-  }, "css-loader"), ", it must be relative to your web root.")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "You might be surprised by this first issue, as it is natural to expect relative references to be resolved against the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "css-loader"), ", URLs must be relative to your web root.")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "You might be surprised by this first issue, as it is natural to expect relative references to be resolved against the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, ".sass"), "/", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
@@ -198538,19 +198578,23 @@ function MDXContent(_ref) {
     parentName: "p"
   }, ".css"), " files)."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Thankfully there are two solutions to this problem:"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
     parentName: "ul"
-  }, "Add the missing url rewriting using the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+  }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+    parentName: "li"
+  }, "Add the missing URL rewriting using the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "https://github.com/bholloway/resolve-url-loader",
-    parentName: "li"
+    parentName: "p"
   }, "resolve-url-loader"), ". Place it before ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-    parentName: "li"
-  }, "sass-loader"), " in the loader chain."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+    parentName: "p"
+  }, "sass-loader"), " in the loader chain.")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
     parentName: "ul"
+  }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+    parentName: "li"
   }, "Library authors usually provide a variable to modify the asset path. ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "https://github.com/twbs/bootstrap-sass",
-    parentName: "li"
-  }, "bootstrap-sass"), " for example has an ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-    parentName: "li"
-  }, "$icon-font-path"), ".")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    parentName: "p"
+  }, "bootstrap-sass"), " for example, has an ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    parentName: "p"
+  }, "$icon-font-path"), "."))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     id: "options",
     parentName: "h2"
   }), "Options", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
@@ -198672,7 +198716,7 @@ function MDXContent(_ref) {
     parentName: "p"
   }, "node-sass"), " package) and install dependencies."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Example where the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "sass-loader"), " loader uses the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "sass-loader"), " uses the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "sass"), " (", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
@@ -198722,7 +198766,7 @@ function MDXContent(_ref) {
     parentName: "code"
   }, "}"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Example where the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "sass-loader"), " loader uses the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "sass-loader"), " uses the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "node-sass"), " implementation:"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
@@ -198770,7 +198814,7 @@ function MDXContent(_ref) {
     parentName: "code"
   }, "}"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Example where the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "sass-loader"), " loader uses the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "sass-loader"), " uses the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "sass-embedded"), " implementation:"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
@@ -198850,7 +198894,7 @@ function MDXContent(_ref) {
     parentName: "p"
   }, "sass-loader"), " can fallback to ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "sass"), "\nwhen running on an operating system not supported by ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "sass"), " when running on an operating system not supported by ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "sass-embedded"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Be aware of the order that ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
@@ -198881,7 +198925,9 @@ function MDXContent(_ref) {
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "header-link",
     parentName: "a"
-  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "For example, to always use Dart Sass, you'd pass:"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
+  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "For example, to always use ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    parentName: "p"
+  }, "Dart Sass"), ", you'd pass:"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
     className: "hljs language-js",
     parentName: "pre"
   }, "module", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
@@ -199307,9 +199353,9 @@ function MDXContent(_ref) {
     parentName: "p"
   }, "true"), " by default for ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "dart-sass"), ", we strongly discourage setting this to ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "dart-sass"), ". We strongly discourage setting this to ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "false"), ", because webpack doesn't support files other than ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "false"), " because webpack doesn't support files other than ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "utf-8"), ".")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
     parentName: "blockquote"
@@ -199321,11 +199367,11 @@ function MDXContent(_ref) {
     parentName: "p"
   }, "and"), "indentedSyntax", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "(old API) option is"), "scss", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "(old API) option is "), "scss", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "for the"), "scss", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "extension,"), "indented", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, " extension,"), "indented", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "for the"), "sass", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
@@ -199892,7 +199938,7 @@ function MDXContent(_ref) {
     parentName: "code"
   }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Default: depends on the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "compiler.devtool"), " value"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Enables/Disables generation of source maps."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "By default generation of source maps depends on the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+  }, "compiler.devtool"), " value"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Enables/disables generation of source maps."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "By default generation of source maps depends on the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "/configuration/devtool/",
     parentName: "p"
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
@@ -200079,13 +200125,13 @@ function MDXContent(_ref) {
     parentName: "blockquote"
   }, "ℹ In some rare cases ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "node-sass"), " can output invalid source maps (it is a ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "node-sass"), " can output invalid source maps (this is a ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "node-sass"), " bug)."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
     parentName: "blockquote"
   }, "In order to avoid this, you can try to update ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "node-sass"), " to latest version, or you can try to set within ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "node-sass"), " to the latest version, or you can try to set within ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "sassOptions"), " the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
@@ -201012,7 +201058,7 @@ function MDXContent(_ref) {
     parentName: "code"
   }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Default: ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "true")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Enables/Disables the default webpack importer."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "This can improve performance in some cases, though use it with caution because aliases and ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "true")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Enables/disables the default webpack importer."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "This can improve performance in some cases, though use it with caution because aliases and ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "@import"), " at-rules starting with ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
@@ -201023,7 +201069,7 @@ function MDXContent(_ref) {
     parentName: "p"
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "a"
-  }, "importer docs")), ")."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+  }, "importer"), " docs"), ")."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
   }, "webpack.config.js")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
     className: "hljs language-js",
@@ -201374,7 +201420,7 @@ function MDXContent(_ref) {
   }, ";"), "\n", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token punctuation",
     parentName: "code"
-  }, "}"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "The presented code will throw a webpack warning instead logging."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "To ignore unnecessary warnings you can use the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+  }, "}"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "The presented code will throw a webpack warning instead of logging."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "To ignore unnecessary warnings you can use the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "/configuration/other-options/#ignorewarnings",
     parentName: "p"
   }, "ignoreWarnings"), " option."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
@@ -201577,18 +201623,18 @@ function MDXContent(_ref) {
     parentName: "p"
   }, "modern-compiler"), " and ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "sass-embedded"), " together significantly improve performance and decrease built time. We strongly recommend their use. We will enable them by default in a future major release.")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+  }, "sass-embedded"), " together significantly improves performance and decreases build time. We strongly recommend their use. We will enable them by default in a future major release.")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
     parentName: "blockquote"
   }, "[!WARNING]"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
     parentName: "blockquote"
-  }, "The sass options are different for the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "The Sass options are different for the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "legacy"), " and ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "modern"), " APIs. Please look at ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "https://sass-lang.com/documentation/js-api",
     parentName: "p"
-  }, "docs"), " how to migrate to the modern options.")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+  }, "docs"), " to learn how to migrate to the modern options.")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
   }, "webpack.config.js")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
     className: "hljs language-js",
@@ -201743,7 +201789,7 @@ function MDXContent(_ref) {
     parentName: "a"
   }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "By default, the output of ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "@debug"), " messages are disabled.\nAdd the following to ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+  }, "@debug"), " messages is disabled.\nAdd the following to ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
   }, "webpack.config.js"), " to enable them:"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
     className: "hljs language-js",
@@ -201815,7 +201861,7 @@ function MDXContent(_ref) {
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "header-link",
     parentName: "a"
-  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "For production builds it's recommended to extract the CSS from your bundle to be able to use parallel loading of CSS/JS resources later on."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "There are four recommended ways to extract a stylesheet from a bundle:"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h4", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "For production builds, it's recommended to extract the CSS from your bundle to enable parallel loading of CSS/JS resources."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "There are four recommended ways to extract a stylesheet from a bundle:"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h4", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     id: "1-mini-css-extract-plugin",
     parentName: "h4"
   }), "1. ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
@@ -202446,9 +202492,9 @@ function MDXContent(_ref) {
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "header-link",
     parentName: "a"
-  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Enables/Disables generation of source maps."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "To enable CSS source maps, you'll need to pass the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Enables/disables generation of source maps."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "To enable CSS source maps, you'll need to pass the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "sourceMap"), " option to the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "sourceMap"), " option to both the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "sass-loader"), " ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("em", {
     parentName: "p"
@@ -202627,10 +202673,10 @@ function MDXContent(_ref) {
   }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "If you want to edit the original Sass files inside Chrome, ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "https://medium.com/@toolmantim/getting-started-with-css-sourcemaps-and-in-browser-sass-editing-b4daab987fb0",
     parentName: "p"
-  }, "there's a good blog post"), ". Checkout ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+  }, "there's a good blog post"), ".\nCheckout ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "https://github.com/webpack-contrib/sass-loader/tree/master/test",
     parentName: "p"
-  }, "test/sourceMap"), " for a running example."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+  }, "test/sourceMap"), " for a working example."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     id: "contributing",
     parentName: "h2"
   }), "Contributing", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
@@ -202641,7 +202687,7 @@ function MDXContent(_ref) {
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "header-link",
     parentName: "a"
-  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Please take a moment to read our contributing guidelines if you haven't yet done so."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "We welcome all contributions!\nIf you're new here, please take a moment to review our contributing guidelines before submitting issues or pull requests."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "https://github.com/webpack-contrib/sass-loader/blob/master/.github/CONTRIBUTING.md",
     parentName: "p"
   }, "CONTRIBUTING")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
@@ -202734,9 +202780,9 @@ function MDXContent(_ref) {
     src: "https://packagephobia.now.sh/badge?p=source-map-loader",
     alt: "size",
     parentName: "a"
-  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Extracts source maps from existing source files (from their ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
+  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Extracts source maps from existing source files (from their ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "sourceMappingURL"), ")."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+  }, "<code>sourceMappingURL</code>"), ")."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     id: "getting-started",
     parentName: "h2"
   }), "Getting Started", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
@@ -202758,9 +202804,9 @@ function MDXContent(_ref) {
   }, "yarn add -D source-map-loader\n")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "or"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
     className: "hljs language-console",
     parentName: "pre"
-  }, "pnpm add -D source-map-loader\n")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Then add the plugin to your ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "pnpm add -D source-map-loader\n")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Then add the loader to your ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "webpack"), " config. For example:"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+  }, "webpack"), " configuration. For example:"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
   }, "file.js")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
     className: "hljs language-js",
@@ -202865,7 +202911,9 @@ function MDXContent(_ref) {
     parentName: "code"
   }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "The ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "source-map-loader"), " extracts existing source maps from all JavaScript entries.\nThis includes both inline source maps as well as those linked via URL.\nAll source map data is passed to webpack for processing as per a chosen ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+  }, "source-map-loader"), " extracts existing source maps from all JavaScript entries.\nThis includes both inline source maps as well as those linked via a ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    parentName: "p"
+  }, "sourceMappingURL"), "."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "All source map data is passed to webpack for processing as per a chosen ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "/configuration/devtool/",
     parentName: "p"
   }, "source map style"), " specified by the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
@@ -202873,21 +202921,21 @@ function MDXContent(_ref) {
   }, "devtool"), " option in ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "/configuration/",
     parentName: "p"
-  }, "webpack.config.js"), ".\nThis loader is especially useful when using 3rd-party libraries having their own source maps.\nIf not extracted and processed into the source map of the webpack bundle, browsers may misinterpret source map data. ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "webpack.config.js"), "."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "This loader is especially useful when using third-party libraries having their own source maps.\nIf not extracted and processed into the source map of the webpack bundle, browsers may misinterpret or ignore source map data."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "The ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "source-map-loader"), " allows webpack to maintain source map data continuity across libraries so ease of debugging is preserved.\nThe ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "source-map-loader"), " allows webpack to maintain source map data continuity across libraries so ease of debugging is preserved."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "The ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "source-map-loader"), " will extract from any JavaScript file, including those in the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "node_modules"), " directory.\nBe mindful in setting ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+  }, "node_modules"), " directory."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Be mindful in setting ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "/configuration/module/#ruleinclude",
     parentName: "p"
   }, "include"), " and ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "/configuration/module/#ruleexclude",
     parentName: "p"
-  }, "exclude"), " rule conditions to maximize bundling performance."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "And run ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "exclude"), " rule conditions to maximize bundling performance."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Finally, run ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "webpack"), " via your preferred method."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+  }, "webpack"), " using the method you normally use (e.g., via CLI or an npm script)."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     id: "options",
     parentName: "h2"
   }), "Options", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
@@ -202972,7 +203020,7 @@ function MDXContent(_ref) {
     parentName: "p"
   }, "undefined")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Allows you to specify the behavior of the loader for ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "SourceMappingURL"), " comment."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "The function must return one of the values:"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+  }, "SourceMappingURL"), " comment."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "The function must return one of the following values:"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
     parentName: "ul"
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "li"
@@ -203363,7 +203411,7 @@ function MDXContent(_ref) {
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "header-link",
     parentName: "a"
-  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Please take a moment to read our contributing guidelines if you haven't yet done so."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "We welcome all contributions!\nIf you're new here, please take a moment to review our contributing guidelines before submitting issues or pull requests."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "https://github.com/webpack-contrib/source-map-loader/blob/master/.github/CONTRIBUTING.md",
     parentName: "p"
   }, "CONTRIBUTING")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
@@ -203487,7 +203535,7 @@ function MDXContent(_ref) {
     parentName: "a"
   }, "css-loader"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Then add the loader to your ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "webpack"), " config. For example:"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+  }, "webpack"), " configuration. For example:"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
   }, "style.css")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
     className: "hljs language-css",
@@ -203619,7 +203667,7 @@ function MDXContent(_ref) {
     className: "header-link",
     parentName: "a"
   }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "This loader is primarily meant for development. The default settings are not safe for production environments. See the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-    href: "#recommend",
+    href: "#examples",
     parentName: "p"
   }, "recommended example configuration"), " and the section on ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "#nonce",
@@ -203761,7 +203809,7 @@ function MDXContent(_ref) {
     parentName: "code"
   }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Default: ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "styleTag")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Allows to setup how styles will be injected into the DOM."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Possible values:"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h4", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+  }, "styleTag")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Allows you to setup how styles will be injected into the DOM."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Possible values:"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h4", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     id: "styletag",
     parentName: "h4"
   }), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
@@ -203776,7 +203824,7 @@ function MDXContent(_ref) {
     parentName: "a"
   }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Automatically injects styles into the DOM using multiple ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "<style></style>"), ". It is ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+  }, "<style></style>"), ". It is the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
   }, "default"), " behaviour."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
@@ -203857,11 +203905,11 @@ function MDXContent(_ref) {
   }, "]"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token punctuation",
     parentName: "code"
-  }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "All local variables (class names) are exported as named exports. To achieve this behaviour you also have to setup ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "All local variables (class names) are exported as named exports. To achieve this behaviour you also have to set up the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "modules"), " option for ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "css-loader"), ". For more information consult with ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "css-loader"), ". For more information, consult the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "css-loader"), " ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "/loaders/css-loader/",
@@ -204114,9 +204162,9 @@ function MDXContent(_ref) {
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "header-link",
     parentName: "a"
-  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Automatically injects styles into the DOM using one ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Automatically injects styles into the DOM using a single ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "<style></style>"), "."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+  }, "<style></style>"), " tag."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
     parentName: "blockquote"
   }, "[!WARNING]"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
     parentName: "blockquote"
@@ -204199,11 +204247,11 @@ function MDXContent(_ref) {
   }, "]"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token punctuation",
     parentName: "code"
-  }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "All local variables (class names) are exported as named exports. To achieve this behaviour you also have to setup ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "All local variables (class names) are exported as named exports. To achieve this behaviour, you also have to set up the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "modules"), " option for ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "css-loader"), ". For more information consult with ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "css-loader"), ". For more information, consult the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "css-loader"), " ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "/loaders/css-loader/",
@@ -204451,9 +204499,9 @@ function MDXContent(_ref) {
     parentName: "a"
   }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Injects styles into the DOM using multiple ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "<style></style>"), " on demand.\nWe recommend following ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "<style></style>"), " tags on demand."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "We recommend following the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, ".lazy.css"), " naming convention for lazy styles and the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, ".lazy.css"), " naming convention for lazy styles and ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, ".css"), " for basic ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
@@ -204461,11 +204509,11 @@ function MDXContent(_ref) {
     parentName: "p"
   }, ".lazy.less"), " and ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, ".less"), ").\nWhen you ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, ".less"), ")."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "When you use the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "lazyStyleTag"), " value the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "lazyStyleTag"), " value, ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "style-loader"), " injects the styles lazily making them useable on-demand via ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "style-loader"), " injects the styles lazily, making them useable on-demand via ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "style.use()"), " / ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
@@ -204593,11 +204641,11 @@ function MDXContent(_ref) {
   }, "="), " myClass", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token punctuation",
     parentName: "code"
-  }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "All local variables (class names) are exported as named exports. To achieve this behaviour you also have to setup ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "All local variables (class names) are exported as named exports. To achieve this behaviour, you also have to set up the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "modules"), " option for ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "css-loader"), ". For more information consult with ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "css-loader"), ". For more information, consult the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "css-loader"), " ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "/loaders/css-loader/",
@@ -204895,9 +204943,9 @@ function MDXContent(_ref) {
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "header-link",
     parentName: "a"
-  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Injects styles into the DOM using one ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Injects styles into the DOM using a single ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "<style></style>"), " on demand.\nWe recommend following ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "<style></style>"), " tag on demand."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "We recommend following ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, ".lazy.css"), " naming convention for lazy styles and the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
@@ -204907,9 +204955,9 @@ function MDXContent(_ref) {
     parentName: "p"
   }, ".lazy.less"), " and ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, ".less"), ").\nWhen you ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, ".less"), ")."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "When you use the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "lazySingletonStyleTag"), " value the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "lazySingletonStyleTag"), " value, ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "style-loader"), " injects the styles lazily making them useable on-demand via ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
@@ -205041,11 +205089,11 @@ function MDXContent(_ref) {
   }, "="), " myClass", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token punctuation",
     parentName: "code"
-  }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "All local variables (class names) are exported as named exports. To achieve this behaviour you also have to setup ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "All local variables (class names) are exported as named exports. To achieve this behaviour, you also have to set up the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "modules"), " option for ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "css-loader"), ". For more information consult with ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "css-loader"), ". For more information, consult the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "css-loader"), " ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "/loaders/css-loader/",
@@ -205612,7 +205660,7 @@ function MDXContent(_ref) {
     parentName: "p"
   }, "{}")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "If defined, the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "style-loader"), " will attach given attributes with their values on ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "style-loader"), " will attach the given attributes with their values on ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "<style>"), " / ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
@@ -205849,10 +205897,10 @@ function MDXContent(_ref) {
     parentName: "p"
   }, "<head>"), " tag of the page unless specified by ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "insert"), ".\nThis will cause CSS created by the loader to take priority over CSS already present in the target.\nYou can use other values if the standard behavior is not suitable for you, but we do not recommend doing this.\nIf you target an ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+  }, "insert"), "."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "This will cause CSS created by the loader to take priority over CSS already present in the target."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "You can use other values if the standard behavior is not suitable for you, but we do not recommend doing this."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "If you target an ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "https://developer.mozilla.org/en-US/docs/Web/API/HTMLIFrameElement",
     parentName: "p"
-  }, "iframe"), " make sure you have sufficient access rights, the styles will be injected into the content document head."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h4", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+  }, "iframe"), ", make sure you have sufficient access rights; the styles will be injected into the content document head."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h4", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     id: "selector",
     parentName: "h4"
   }), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
@@ -205865,10 +205913,10 @@ function MDXContent(_ref) {
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "header-link",
     parentName: "a"
-  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Allows to setup custom ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Allows you to setup custom ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector",
     parentName: "p"
-  }, "query selector"), " where styles inject into the DOM."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+  }, "query selector"), " where styles are injected into the DOM."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
   }, "webpack.config.js")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
     className: "hljs language-js",
@@ -206000,7 +206048,7 @@ function MDXContent(_ref) {
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "header-link",
     parentName: "a"
-  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Allows to setup absolute path to custom function that allows to override default behavior and insert styles at any position."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Allows you to setup an absolute path to custom function that allows to override the default behavior and insert styles at any position."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
     parentName: "blockquote"
   }, "[!WARNING]"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
     parentName: "blockquote"
@@ -206010,19 +206058,19 @@ function MDXContent(_ref) {
     parentName: "p"
   }, "const"), ", ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "arrow function expression"), " and etc. We recommend using ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+  }, "arrow function expression"), ", etc. We recommend using ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "/loaders/babel-loader/",
     parentName: "p"
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "a"
-  }, "babel-loader")), " for support latest ECMA features.")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+  }, "babel-loader")), " to support the latest ECMA features.")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
     parentName: "blockquote"
   }, "[!WARNING]"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
     parentName: "blockquote"
-  }, "Do not forget that some DOM methods may not be available in older browsers, we recommended use only ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+  }, "Do not forget that some DOM methods may not be available in older browsers. We recommended using only ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "https://caniuse.com/#search=dom%20core",
     parentName: "p"
-  }, "DOM core level 2 properties"), ", but it is depends what browsers you want to support")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+  }, "DOM core level 2 properties"), ", but it depends on which browsers you want to support.")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
   }, "webpack.config.js")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
     className: "hljs language-js",
@@ -206153,11 +206201,11 @@ function MDXContent(_ref) {
   }, "}"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token punctuation",
     parentName: "code"
-  }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "A new ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "New ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "<style>"), "/", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "<link>"), " elements will be inserted into at bottom of ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "<link>"), " elements will be inserted at the bottom of the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "body"), " tag."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Examples:"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Insert styles at top of ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
@@ -206485,7 +206533,7 @@ function MDXContent(_ref) {
     parentName: "code"
   }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "You can pass any parameters to ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "style.use(options)"), " and this value will be passed to ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "style.use(options)"), " and this value will be passed to the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "insert"), " and ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
@@ -207163,7 +207211,9 @@ function MDXContent(_ref) {
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "header-link",
     parentName: "a"
-  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Allows to setup absolute path to custom function that allows to override default behavior styleTagTransform."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Allows you to setup an absolute path to a custom function that allows to override default ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    parentName: "p"
+  }, "styleTagTransform"), " behavior."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
     parentName: "blockquote"
   }, "[!WARNING]"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
     parentName: "blockquote"
@@ -207173,14 +207223,14 @@ function MDXContent(_ref) {
     parentName: "p"
   }, "const"), ", ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "arrow function expression"), " and etc, we recommend use only ECMA 5 features, but it is depends what browsers you want to support")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+  }, "arrow function expression"), ", etc. We recommend use only ECMA 5 features, but it depends on which browsers you want to support.")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
     parentName: "blockquote"
   }, "[!WARNING]"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
     parentName: "blockquote"
-  }, "Do not forget that some DOM methods may not be available in older browsers, we recommended use only ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+  }, "Do not forget that some DOM methods may not be available in older browsers. We recommended using only ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "https://caniuse.com/#search=dom%20core",
     parentName: "p"
-  }, "DOM core level 2 properties"), ", but it depends what browsers you want to support")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+  }, "DOM core level 2 properties"), ", but it depends on which browsers you want to support.")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
   }, "webpack.config.js")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
     className: "hljs language-js",
@@ -207354,18 +207404,18 @@ function MDXContent(_ref) {
   }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "This setting is primarily used as a workaround for ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "https://github.com/webpack-contrib/style-loader/issues/163",
     parentName: "p"
-  }, "css clashes"), " when using one or more ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+  }, "CSS clashes"), " when using one or more ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "https://robertknight.me.uk/posts/webpack-dll-plugins/",
     parentName: "p"
-  }, "DllPlugin"), "'s. ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "DllPlugin"), "s.\n", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "base"), " allows you to prevent either the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("em", {
     parentName: "p"
-  }, "app"), "'s css (or ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("em", {
+  }, "app"), "'s CSS (or ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("em", {
     parentName: "p"
   }, "DllPlugin2"), "'s css) from overwriting ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("em", {
     parentName: "p"
-  }, "DllPlugin1"), "'s css by specifying a css module id base which is greater than the range used by ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("em", {
+  }, "DllPlugin1"), "'s CSS by specifying a CSS module ID base that is greater than the range used by ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("em", {
     parentName: "p"
   }, "DllPlugin1"), " e.g.:"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
@@ -207711,13 +207761,13 @@ function MDXContent(_ref) {
     parentName: "p"
   }, "true")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "By default, ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "style-loader"), " generates JS modules that use the ES modules syntax.\nThere are some cases in which using ES modules is beneficial, like in the case of ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+  }, "style-loader"), " generates JS modules that use the ES modules syntax."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "There are some cases in which using ES modules is beneficial, such as in the case of ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "/plugins/module-concatenation-plugin/",
     parentName: "p"
   }, "module concatenation"), " and ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "/guides/tree-shaking/",
     parentName: "p"
-  }, "tree shaking"), "."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "You can enable a CommonJS modules syntax using:"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+  }, "tree shaking"), "."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "You can enable a CommonJS module syntax using:"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
   }, "webpack.config.js")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
     className: "hljs language-js",
@@ -207821,10 +207871,10 @@ function MDXContent(_ref) {
     className: "header-link",
     parentName: "a"
   }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
-    id: "recommend",
+    id: "recommended",
     parentName: "h3"
-  }), "Recommend", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-    href: "#recommend",
+  }), "Recommended", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+    href: "#recommended",
     "aria-hidden": "true",
     tabIndex: "-1",
     parentName: "h3"
@@ -207833,26 +207883,26 @@ function MDXContent(_ref) {
     parentName: "a"
   }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "For ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "production"), " builds it's recommended to extract the CSS from your bundle being able to use parallel loading of CSS/JS resources later on.\nThis can be achieved by using the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+  }, "production"), " builds, it's recommended to extract the CSS from your bundle to enable parallel loading of CSS/JS resources later on.\nThis can be achieved by using the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "/plugins/mini-css-extract-plugin/",
     parentName: "p"
-  }, "mini-css-extract-plugin"), ", because it creates separate css files.\nFor ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "mini-css-extract-plugin"), ", because it creates separate CSS files.\nFor ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "development"), " mode (including ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "webpack-dev-server"), ") you can use ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "webpack-dev-server"), "), you can use ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "style-loader"), ", because it injects CSS into the DOM using multiple ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "<style></style>"), " and works faster."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+  }, "<style></style>"), " tags and works faster."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
     parentName: "blockquote"
   }, "[!WARNING]"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
     parentName: "blockquote"
-  }, "Do not use together ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "Do not use ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "style-loader"), " and ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "mini-css-extract-plugin"), ".")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+  }, "mini-css-extract-plugin"), " together.")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
   }, "webpack.config.js")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
     className: "hljs language-js",
@@ -208073,7 +208123,7 @@ function MDXContent(_ref) {
     parentName: "blockquote"
   }, "[!WARNING]"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
     parentName: "blockquote"
-  }, "It is not allowed to use JavaScript reserved words in css class names.")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+  }, "It is not allowed to use JavaScript reserved words in CSS class names.")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
     parentName: "blockquote"
   }, "[!WARNING]"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
     parentName: "blockquote"
@@ -208259,7 +208309,7 @@ function MDXContent(_ref) {
   }, ")"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token punctuation",
     parentName: "code"
-  }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "You can enable a ES module named export using:"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+  }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "You can enable an ES module named export using:"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
   }, "webpack.config.js")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
     className: "hljs language-js",
@@ -208413,7 +208463,7 @@ function MDXContent(_ref) {
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "header-link",
     parentName: "a"
-  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "The loader automatically inject source maps when previous loader emit them.\nTherefore, to generate source maps, set the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "The loader automatically injects source maps when the previous loader emits them."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Therefore, to generate source maps, set the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "sourceMap"), " option to ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
@@ -208551,11 +208601,11 @@ function MDXContent(_ref) {
     parentName: "p"
   }, "nonce"), ":"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
     parentName: "ul"
-  }, "using the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "Using the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "li"
   }, "attributes"), " option"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
     parentName: "ul"
-  }, "using the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "Using the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "li"
   }, "__webpack_nonce__"), " variable")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
     parentName: "blockquote"
@@ -209709,7 +209759,7 @@ function MDXContent(_ref) {
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "header-link",
     parentName: "a"
-  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "You can define custom target for your styles for the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "You can define custom target for your styles when using the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "lazyStyleTag"), " type."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
@@ -209934,9 +209984,9 @@ function MDXContent(_ref) {
   }, "}"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token punctuation",
     parentName: "code"
-  }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Insert styles to the provided element or to the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Insert styles to the provided element, or into the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "head"), " tag if target isn't provided."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+  }, "head"), " tag if the target isn't provided."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
   }, "custom-square.css")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
     className: "hljs language-css",
@@ -210350,7 +210400,7 @@ function MDXContent(_ref) {
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "header-link",
     parentName: "a"
-  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Please take a moment to read our contributing guidelines if you haven't yet done so."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "We welcome all contributions!\nIf you're new here, please take a moment to review our contributing guidelines before submitting issues or pull requests."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "https://github.com/webpack-contrib/style-loader/blob/master/.github/CONTRIBUTING.md",
     parentName: "p"
   }, "CONTRIBUTING")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
@@ -210443,7 +210493,7 @@ function MDXContent(_ref) {
     src: "https://packagephobia.now.sh/badge?p=stylus-loader",
     alt: "size",
     parentName: "a"
-  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "A Stylus loader for webpack. Compiles Styl to CSS."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "A Stylus loader for webpack. Compiles Stylus files into CSS."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     id: "getting-started",
     parentName: "h2"
   }), "Getting Started", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
@@ -210469,7 +210519,7 @@ function MDXContent(_ref) {
     parentName: "pre"
   }, "pnpm add -D stylus stylus-loader\n")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Then add the loader to your ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "webpack"), " config. For example:"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+  }, "webpack"), " configuration. For example:"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
   }, "webpack.config.js")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
     className: "hljs language-js",
@@ -210543,9 +210593,9 @@ function MDXContent(_ref) {
   }, "}"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token punctuation",
     parentName: "code"
-  }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "And run ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Finally, run ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "webpack"), " via your preferred method."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+  }, "webpack"), " using the method you normally use (e.g., via CLI or an npm script)."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     id: "options",
     parentName: "h2"
   }), "Options", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
@@ -210794,10 +210844,10 @@ function MDXContent(_ref) {
   }, "stylusOptions"), " property in the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "/configuration/module/#ruleoptions--rulequery",
     parentName: "p"
-  }, "loader options"), "\nSee the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+  }, "loader options"), "."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "See the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "https://stylus-lang.com/docs/js.html",
     parentName: "p"
-  }, "Stylus documentation"), ".\nOptions in dash-case should use camelCase."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h4", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+  }, "Stylus documentation"), "."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Options in dash-case should be written in camelCase."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h4", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     id: "object",
     parentName: "h4"
   }), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
@@ -211713,7 +211763,7 @@ function MDXContent(_ref) {
     parentName: "code"
   }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Default: ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "true")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Enables/Disables the default Webpack importer."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "This can improve performance in some cases.\nUse it with caution because aliases and ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "true")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Enables/disables the default Webpack importer."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "This can improve performance in some cases.\nUse it with caution because aliases and ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "@import"), " at-rules starting with ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
@@ -211921,13 +211971,13 @@ function MDXContent(_ref) {
     parentName: "p"
   }, "Stylus"), " code before the actual entry file.\nIn this case, the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "stylus-loader"), " will not override the source but just ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+  }, "stylus-loader"), " will not override the source but will simply ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
-  }, "prepend"), " the entry's content."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "This is especially useful when some of your Stylus variables depend on the environment:"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+  }, "prepend"), " the entry's content."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "This is especially useful when some of your Stylus variables depend on the environment."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
     parentName: "blockquote"
   }, "[!NOTE]"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
     parentName: "blockquote"
-  }, "Since you're injecting code, this will break the source mappings in your entry file. Often there's a simpler solution than this, like multiple Stylus entry files.")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h4", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+  }, "Since you're injecting code, this will break the source mappings in your entry file.\nOften there's a simpler solution than this, such as using multiple Stylus entry files.")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h4", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     id: "string",
     parentName: "h4"
   }), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
@@ -212297,7 +212347,7 @@ function MDXContent(_ref) {
   }, "return"), " ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token string",
     parentName: "code"
-  }, "\"value 200px\""), " ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+  }, "\"value = 200px\""), " ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token operator",
     parentName: "code"
   }, "+"), " content", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
@@ -212545,7 +212595,7 @@ function MDXContent(_ref) {
   }, "return"), " ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token string",
     parentName: "code"
-  }, "\"value 200px\""), " ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+  }, "\"value = 200px\""), " ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token operator",
     parentName: "code"
   }, "+"), " content", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
@@ -212636,9 +212686,11 @@ function MDXContent(_ref) {
   }, "string"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token punctuation",
     parentName: "code"
-  }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "The special ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "The ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "implementation"), " option determines which implementation of Stylus to use. Overrides the locally installed ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "implementation"), " option allows you to specify which ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    parentName: "p"
+  }, "Stylus implementation"), " to use.\nIt overrides the locally installed ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "peerDependency"), " version of ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
@@ -212953,7 +213005,7 @@ function MDXContent(_ref) {
   }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     id: "normal-usage",
     parentName: "h3"
-  }), "Normal usage", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+  }), "Normal Usage", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "#normal-usage",
     "aria-hidden": "true",
     tabIndex: "-1",
@@ -212961,14 +213013,14 @@ function MDXContent(_ref) {
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "header-link",
     parentName: "a"
-  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Chain the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Chain ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "stylus-loader"), " with the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "/loaders/css-loader/",
     parentName: "p"
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "a"
-  }, "css-loader")), " and the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+  }, "css-loader")), " and ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "/loaders/style-loader/",
     parentName: "p"
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
@@ -213123,7 +213175,7 @@ function MDXContent(_ref) {
     parentName: "a"
   }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "To enable sourcemaps for CSS, you'll need to pass the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "sourceMap"), " property in the loader's options. If this is not passed, the loader will respect the setting for webpack source maps, set in ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "sourceMap"), " property in the loader's options.\nIf this is not passed, the loader will respect the setting for webpack source maps, set in ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "devtool"), "."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
@@ -213528,9 +213580,9 @@ function MDXContent(_ref) {
     parentName: "a"
   }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Stylus does not provide resolving capabilities in the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "json"), " function.\nTherefore webpack resolver does not work for ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "json()"), " function.\nTherefore webpack resolver does not work for ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, ".json"), " files.\nUse ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+  }, ".json"), " files.\nTo handle this, use a ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "#stylus-resolver",
     parentName: "p"
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
@@ -213697,7 +213749,7 @@ function MDXContent(_ref) {
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "header-link",
     parentName: "a"
-  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Usually, it's recommended to extract the style sheets into a dedicated file in production using the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Usually, it's recommended to extract the style sheets into a dedicated CSS file in production using the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "/plugins/mini-css-extract-plugin/",
     parentName: "p"
   }, "MiniCssExtractPlugin"), ". This way your styles are not dependent on JavaScript."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
@@ -213716,16 +213768,16 @@ function MDXContent(_ref) {
     parentName: "p"
   }, "advanced mechanism to resolve files"), ".\nThe ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "stylus-loader"), " applies the webpack resolver when processing queries.\nThus you can import your Stylus modules from ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "stylus-loader"), " applies the webpack resolver when processing queries.\nThus you can import your Stylus modules directly from ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "node_modules"), "."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
     className: "hljs language-styl",
     parentName: "pre"
   }, "@import 'bootstrap-styl/bootstrap/index.styl';\n")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Using ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "~"), " is deprecated and can be removed from your code (", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+  }, "~"), " prefix is deprecated and can be removed from your code (", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
-  }, "we recommend it"), "), but we still support it for historical reasons.\nWhy you can removed it? The loader will first try to resolve ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "we recommended"), "), but we still support it for historical reasons."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Why you can removed it? The loader will first try to resolve ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "@import"), "/", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
@@ -213738,7 +213790,7 @@ function MDXContent(_ref) {
     parentName: "p"
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "a"
-  }, "node_modules")), ".\nJust prepend them with a ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "node_modules")), "."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Just prepend them with a ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "~"), " which tells webpack to look up the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "/configuration/resolve/#resolvemodules",
@@ -213752,11 +213804,11 @@ function MDXContent(_ref) {
     parentName: "p"
   }, "~"), ", because ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "~/"), " resolves to the home-directory.\nWebpack needs to distinguish between ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "~/"), " resolves to the home-directory, which is different."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Webpack needs to distinguish between ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "bootstrap"), " and ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "~bootstrap"), ", because CSS and Styl files have no special syntax for importing relative files.\nWriting ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "~bootstrap"), ", because CSS and Stylus files have no special syntax for importing relative files."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Writing ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "@import \"file\""), " is the same as ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
@@ -213775,7 +213827,7 @@ function MDXContent(_ref) {
     parentName: "p"
   }, "paths"), " option, modules will be searched in the given ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "paths"), ".\nThis is Stylus default behavior."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+  }, "paths"), ".\nThis is the default Stylus behavior."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
   }, "webpack.config.js")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
     className: "hljs language-js",
@@ -213968,10 +214020,10 @@ function MDXContent(_ref) {
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "header-link",
     parentName: "a"
-  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Bundling CSS with webpack has some nice advantages like referencing images and fonts with hashed urls or ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Bundling CSS with webpack has some nice advantages like referencing images and fonts with hashed URLs or ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "/concepts/hot-module-replacement/",
     parentName: "p"
-  }, "hot module replacement"), " in development. In production, on the other hand, it's not a good idea to apply your style sheets depending on JS execution. Rendering may be delayed or even a ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+  }, "hot module replacement"), " in development.\nIn production, on the other hand, it's not a good idea to apply your style sheets depending on JS execution.\nRendering may be delayed or even a ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "https://en.wikipedia.org/wiki/Flash_of_unstyled_content",
     parentName: "p"
   }, "FOUC"), " might be visible. Thus it's often still better to have them as separate files in your final production build."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "There are two possibilities to extract a style sheet from the bundle:"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
@@ -213997,7 +214049,7 @@ function MDXContent(_ref) {
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "header-link",
     parentName: "a"
-  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Please take a moment to read our contributing guidelines if you haven't yet done so."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "We welcome all contributions!\nIf you're new here, please take a moment to review our contributing guidelines before submitting issues or pull requests."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "https://github.com/webpack-contrib/stylus-loader/blob/master/.github/CONTRIBUTING.md",
     parentName: "p"
   }, "CONTRIBUTING")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
@@ -214090,7 +214142,7 @@ function MDXContent(_ref) {
     src: "https://packagephobia.now.sh/badge?p=thread-loader",
     alt: "size",
     parentName: "a"
-  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Runs the following loaders in a worker pool."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Runs the specified loaders in a worker pool."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     id: "getting-started",
     parentName: "h2"
   }), "Getting Started", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
@@ -214128,13 +214180,15 @@ function MDXContent(_ref) {
   }, "pnpm"), " ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token function",
     parentName: "code"
-  }, "add"), " -D thread-loader")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Put this loader in front of other loaders. The following loaders run in a worker pool."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Loaders running in a worker pool are limited. Examples:"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+  }, "add"), " -D thread-loader")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Put this loader in front of other loaders.\nThe following loaders run in a worker pool."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Loaders running in a worker pool have limitations. Examples:"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
     parentName: "ul"
   }, "Loaders cannot emit files."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
     parentName: "ul"
-  }, "Loaders cannot use custom loader API (i. e. by plugins)."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+  }, "Loaders cannot use custom loader APIs (i.e. by plugins)."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
     parentName: "ul"
-  }, "Loaders cannot access the webpack options.")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Each worker is a separate node.js process, which has an overhead of ~600ms. There is also an overhead of inter-process communication."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Use this loader only for expensive operations!"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+  }, "Loaders cannot access webpack options.")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Each worker is a separate Node.js process, which has an overhead of ~600ms. There is also additional overhead from inter-process communication."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+    parentName: "blockquote"
+  }, "Use this loader only for expensive operations!")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     id: "examples",
     parentName: "h3"
   }), "Examples", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
@@ -214374,7 +214428,7 @@ function MDXContent(_ref) {
   }, "// defaults to 200"), "\n      ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token comment",
     parentName: "code"
-  }, "// decrease of less efficient but more fair distribution"), "\n      poolParallelJobs", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+  }, "// decrease for less efficient but more fair distribution"), "\n      poolParallelJobs", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token operator",
     parentName: "code"
   }, ":"), " ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
@@ -214389,7 +214443,7 @@ function MDXContent(_ref) {
   }, "// name of the pool"), "\n      ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token comment",
     parentName: "code"
-  }, "// can be used to create different pools with elsewise identical options"), "\n      name", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+  }, "// can be used to create different pools with otherwise identical options"), "\n      name", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token operator",
     parentName: "code"
   }, ":"), " ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
@@ -214421,7 +214475,7 @@ function MDXContent(_ref) {
     parentName: "code"
   }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
-  }, "prewarming")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "To prevent the high delay when booting workers it possible to warmup the worker pool."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "This boots the max number of workers in the pool and loads specified modules into the node.js module cache."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
+  }, "prewarming")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "To prevent the high delays when booting workers, it is possible to warm up the worker pool."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "This boots the max number of workers in the pool and loads the specified modules into the Node.js module cache."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
     className: "hljs language-js",
     parentName: "pre"
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
@@ -214478,7 +214532,7 @@ function MDXContent(_ref) {
   }, "// modules to load"), "\n    ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token comment",
     parentName: "code"
-  }, "// can be any module, i. e."), "\n    ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+  }, "// can be any module, i.e."), "\n    ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token string",
     parentName: "code"
   }, "'babel-loader'"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
@@ -214487,7 +214541,7 @@ function MDXContent(_ref) {
   }, ","), "\n    ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token string",
     parentName: "code"
-  }, "'babel-preset-es2015'"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+  }, "'@babel/preset-env'"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token punctuation",
     parentName: "code"
   }, ","), "\n    ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
@@ -214519,7 +214573,7 @@ function MDXContent(_ref) {
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "header-link",
     parentName: "a"
-  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Please take a moment to read our contributing guidelines if you haven't yet done so."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "We welcome all contributions!\nIf you're new here, please take a moment to review our contributing guidelines before submitting issues or pull requests."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "https://github.com/webpack-contrib/thread-loader/blob/master/.github/CONTRIBUTING.md",
     parentName: "p"
   }, "CONTRIBUTING")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
@@ -214612,9 +214666,9 @@ function MDXContent(_ref) {
     src: "https://packagephobia.now.sh/badge?p=val-loader",
     alt: "size",
     parentName: "a"
-  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "A webpack loader which executes a given module, and returns the result of the\nexecution at build-time, when the module is required in the bundle. In this way,\nthe loader changes a module from code to a result."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Another way to view ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "A webpack loader that executes a given module and returns the result of the execution at build-time, when the module is required in the bundle. In this way, the loader changes a module from code into a result."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Another way to view ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "val-loader"), ", is that it allows a user a way to make their\nown custom loader logic, without having to write a custom loader."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "The target module is called with two arguments: ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "val-loader"), " is that it allows users to implement custom loader logic without needing to write a full custom loader."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "The target module is called with two arguments: ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "(options, loaderContext)")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
     parentName: "ul"
@@ -214652,9 +214706,9 @@ function MDXContent(_ref) {
   }, "yarn add -D val-loader\n")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
     className: "hljs language-console",
     parentName: "pre"
-  }, "pnpm add -D val-loader\n")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Then add the loader to your ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "pnpm add -D val-loader\n")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Then, add the loader to your ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "webpack"), " config. For example:"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+  }, "webpack"), " configuration. For example:"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
   }, "target-file.js")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
     className: "hljs language-js",
@@ -214837,9 +214891,9 @@ function MDXContent(_ref) {
   }, ")"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token punctuation",
     parentName: "code"
-  }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "And run ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Finally, run ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "webpack"), " via your preferred method."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+  }, "webpack"), " using the method you normally use (e.g., via CLI or an npm script)."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     id: "options",
     parentName: "h2"
   }), "Options", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
@@ -214892,7 +214946,7 @@ function MDXContent(_ref) {
     parentName: "code"
   }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Default: ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "undefined")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Allows to specify path to the executable file"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+  }, "undefined")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Allows to specify path to the executable file."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
   }, "data.json")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
     className: "hljs language-json",
@@ -215235,11 +215289,11 @@ function MDXContent(_ref) {
     parentName: "a"
   }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Targeted modules of this loader must export a ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "Function"), " that returns an object,\nor a ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "function"), " that returns an object, or a ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "Promise"), " resolving an object (e.g. async function), containing a ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "Promise"), " resolving to an object (e.g. async function), containing a ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "code"), " property at a minimum, but can\ncontain any number of additional properties."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+  }, "code"), " property at a minimum, but can also include additional properties."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     id: "code",
     parentName: "h3"
   }), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
@@ -215277,7 +215331,7 @@ function MDXContent(_ref) {
     parentName: "p"
   }, "undefined"), "\n", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("em", {
     parentName: "p"
-  }, "Required")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Code passed along to webpack or the next loader that will replace the module."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+  }, "Required")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Code passed along to webpack or the next loader that will replace the original module."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     id: "sourcemap",
     parentName: "h3"
   }), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
@@ -215349,7 +215403,7 @@ function MDXContent(_ref) {
   }, "undefined")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "An ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "https://en.wikipedia.org/wiki/Abstract_syntax_tree",
     parentName: "p"
-  }, "Abstract Syntax Tree"), "\nthat will be passed to the next loader. Useful to speed up the build time if the\nnext loader uses the same AST."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+  }, "Abstract Syntax Tree (AST)"), " that will be passed to the next loader. Useful to speed up the build time if the next loader uses the same AST."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     id: "dependencies",
     parentName: "h3"
   }), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
@@ -215522,7 +215576,7 @@ function MDXContent(_ref) {
     parentName: "p"
   }, "false")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "If ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "true"), ", specifies that the code can be re-used in watch mode if none of the\n", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "true"), ", specifies that the code can be reused in watch mode if none of the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "dependencies"), " have changed."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     id: "examples",
@@ -215546,15 +215600,15 @@ function MDXContent(_ref) {
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "header-link",
     parentName: "a"
-  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "In this example the loader is configured to operator on a file name of\n", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "In this example the loader is configured to operate on a file name of ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "years-in-ms.js"), ", execute the code, and store the result in the bundle as the\nresult of the execution. This example passes ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "years-in-ms.js"), ", execute the code, and store the result in the bundle as the result of the execution.\nThis example passes ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "years"), " as an ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "option"), ", which\ncorresponds to the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "option"), ", which corresponds to the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "years"), " parameter in the target module exported function:"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+  }, "years"), " parameter in the target module's exported function:"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
   }, "years-in-ms.js")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
     className: "hljs language-js",
@@ -217092,7 +217146,7 @@ function MDXContent(_ref) {
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "header-link",
     parentName: "a"
-  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Please take a moment to read our contributing guidelines if you haven't yet done so."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "We welcome all contributions!\nIf you're new here, please take a moment to review our contributing guidelines before submitting issues or pull requests."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "https://github.com/webpack-contrib/val-loader/blob/master/.github/CONTRIBUTING.md",
     parentName: "p"
   }, "CONTRIBUTING")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
@@ -233336,7 +233390,7 @@ function MDXContent(_ref) {
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "header-link",
     parentName: "a"
-  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Please take a moment to read our contributing guidelines if you haven't yet done so."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "We welcome all contributions!"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "If you are new here, please take a moment to review our contributing guidelines before submitting issues or pull requests."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "https://github.com/webpack-contrib/copy-webpack-plugin/blob/master/.github/CONTRIBUTING.md",
     parentName: "p"
   }, "CONTRIBUTING")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
@@ -233432,10 +233486,10 @@ function MDXContent(_ref) {
   }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "This plugin uses ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "https://cssnano.github.io/cssnano/",
     parentName: "p"
-  }, "cssnano"), " to optimize and minify your CSS."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Just like ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+  }, "cssnano"), " to optimize and minify your CSS."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "It serves as a more accurate alternative to ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "https://github.com/NMFR/optimize-css-assets-webpack-plugin",
     parentName: "p"
-  }, "optimize-css-assets-webpack-plugin"), " but more accurate with source maps and assets using query string, allows caching and works in parallel mode."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+  }, "optimize-css-assets-webpack-plugin"), ", with better support for source maps, assets with query strings, caching, and parallel processing."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     id: "getting-started",
     parentName: "h2"
   }), "Getting Started", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
@@ -233536,7 +233590,7 @@ function MDXContent(_ref) {
   }, ":"), " ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token regex",
     parentName: "code"
-  }, "/.s?css$/"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+  }, "/\\.s?css$/"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token punctuation",
     parentName: "code"
   }, ","), "\n        use", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
@@ -233599,10 +233653,7 @@ function MDXContent(_ref) {
   }, "["), "\n      ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token comment",
     parentName: "code"
-  }, "// For webpack@5 you can use the `...` syntax to extend existing minimizers (i.e. `terser-webpack-plugin`), uncomment the next line"), "\n      ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
-    className: "token comment",
-    parentName: "code"
-  }, "// `...`,"), "\n      ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+  }, "// For webpack v5, you can use the `...` syntax to extend existing minimizers (i.e. `terser-webpack-plugin`), uncomment the next line // `...`,"), "\n      ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token keyword",
     parentName: "code"
   }, "new"), " ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
@@ -233659,7 +233710,11 @@ function MDXContent(_ref) {
   }, "}"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token punctuation",
     parentName: "code"
-  }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "This will enable CSS optimization only in production mode."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "If you want to run it also in development set the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+    parentName: "blockquote"
+  }, "[!NOTE]"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+    parentName: "blockquote"
+  }, "This enables CSS optimization only in production mode by default.")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "To enable it in development mode as well, set the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "optimization.minimize"), " option to ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
@@ -233710,9 +233765,7 @@ function MDXContent(_ref) {
   }, "}"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token punctuation",
     parentName: "code"
-  }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "And run ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-    parentName: "p"
-  }, "webpack"), " via your preferred method."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+  }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Finally, run Webpack using your preferred method."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     id: "note-about-source-maps",
     parentName: "h2"
   }), "Note about source maps", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
@@ -233725,7 +233778,7 @@ function MDXContent(_ref) {
     parentName: "a"
   }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
-  }, "Works only with ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "This plugin works only with ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "strong"
   }, "source-map"), ", ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "strong"
@@ -233738,24 +233791,24 @@ function MDXContent(_ref) {
     parentName: "strong"
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "a"
-  }, "devtool")), " option.")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Why? Because CSS support only these source map types."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "The plugin respect the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+  }, "devtool")), " option.")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Why? Because CSS support only these source map types."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "The plugin respects the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "/configuration/devtool/",
     parentName: "p"
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "a"
-  }, "devtool")), " and using the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "devtool")), " setting and uses the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "SourceMapDevToolPlugin"), " plugin.\nUsing supported ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "SourceMapDevToolPlugin"), " internally."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Using a supported ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "devtool"), " values enable source map generation.\nUsing ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "devtool"), " value enables source map generation."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Enabling the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "SourceMapDevToolPlugin"), " with enabled the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "columns"), " option in ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "columns"), " option enables source map generation."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Use source maps to map error message locations to modules (this slows down the compilation).\nIf you use your own ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "SourceMapDevToolPlugin"), " also allows source map generation."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Use source maps to map error message locations to their original modules (note that this may slow down compilation)."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "If you use your own ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "minify"), " function please read the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "minify"), " function please refer to the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "minify"), " section for handling source maps correctly."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+  }, "minify"), " section for correct handling of source maps."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     id: "options",
     parentName: "h2"
   }), "Options", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
@@ -233932,7 +233985,7 @@ function MDXContent(_ref) {
     parentName: "tr"
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     parentName: "td"
-  }, "Enable/disable multi-process parallel running."))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tr", {
+  }, "Enable or disable multi-process parallel running."))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("tr", {
     parentName: "tbody"
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("td", {
     align: "center",
@@ -234046,7 +234099,7 @@ function MDXContent(_ref) {
     parentName: "tr"
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     parentName: "td"
-  }, "Allow to filter css-minimizer warnings."))))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+  }, "Allows filtering of css-minimizer warnings."))))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     id: "test",
     parentName: "h3"
   }), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
@@ -234059,11 +234112,15 @@ function MDXContent(_ref) {
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "header-link",
     parentName: "a"
-  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Type: ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-    parentName: "p"
-  }, "String|RegExp|Array<String|RegExp>"), " - default: ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-    parentName: "p"
-  }, "/\\.css(\\?.*)?$/i")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Test to match files against."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
+  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+    parentName: "ul"
+  }, "Type: ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    parentName: "li"
+  }, "String|RegExp|Array<String|RegExp>")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+    parentName: "ul"
+  }, "Default: ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    parentName: "li"
+  }, "/\\.css(\\?.*)?$/i"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Test to match files against."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
     className: "hljs language-js",
     parentName: "pre"
   }, "module", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
@@ -234157,11 +234214,15 @@ function MDXContent(_ref) {
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "header-link",
     parentName: "a"
-  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Type: ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-    parentName: "p"
-  }, "String|RegExp|Array<String|RegExp>"), "\nDefault: ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-    parentName: "p"
-  }, "undefined")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Files to include."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+    parentName: "ul"
+  }, "Type: ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    parentName: "li"
+  }, "String|RegExp|Array<String|RegExp>")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+    parentName: "ul"
+  }, "Default: ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    parentName: "li"
+  }, "undefined"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Files to include."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
   }, "webpack.config.js")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
     className: "hljs language-js",
@@ -234257,11 +234318,15 @@ function MDXContent(_ref) {
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "header-link",
     parentName: "a"
-  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Type: ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-    parentName: "p"
-  }, "String|RegExp|Array<String|RegExp>"), "\nDefault: ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-    parentName: "p"
-  }, "undefined")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Files to exclude."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+    parentName: "ul"
+  }, "Type: ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    parentName: "li"
+  }, "String|RegExp|Array<String|RegExp>")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+    parentName: "ul"
+  }, "Default: ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    parentName: "li"
+  }, "undefined"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Files to exclude."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
   }, "webpack.config.js")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
     className: "hljs language-js",
@@ -234357,11 +234422,15 @@ function MDXContent(_ref) {
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "header-link",
     parentName: "a"
-  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Type: ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-    parentName: "p"
-  }, "Boolean|Number"), "\nDefault: ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-    parentName: "p"
-  }, "true")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Use multi-process parallel running to improve the build speed.\nDefault number of concurrent runs: ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+    parentName: "ul"
+  }, "Type: ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    parentName: "li"
+  }, "Boolean|Number")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+    parentName: "ul"
+  }, "Default: ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    parentName: "li"
+  }, "true"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Use multi-process parallel running to improve the build speed."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "The default number of concurrent runs: ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "os.cpus().length - 1"), " or ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
@@ -234393,7 +234462,7 @@ function MDXContent(_ref) {
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "header-link",
     parentName: "a"
-  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Enable/disable multi-process parallel running."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Enable or disable multi-process parallel running."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
   }, "webpack.config.js")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
     className: "hljs language-js",
@@ -234489,7 +234558,7 @@ function MDXContent(_ref) {
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "header-link",
     parentName: "a"
-  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Enable multi-process parallel running and set number of concurrent runs."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Enable multi-process parallel running and specify the number of concurrent runs."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
   }, "webpack.config.js")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
     className: "hljs language-js",
@@ -234585,14 +234654,20 @@ function MDXContent(_ref) {
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "header-link",
     parentName: "a"
-  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Type: ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-    parentName: "p"
-  }, "Function|Array<Function>"), "\nDefault: ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-    parentName: "p"
-  }, "CssMinimizerPlugin.cssnanoMinify")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Allows overriding default minify function.\nBy default, plugin uses ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+    parentName: "ul"
+  }, "Type: ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    parentName: "li"
+  }, "Function|Array<Function>")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+    parentName: "ul"
+  }, "Default: ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    parentName: "li"
+  }, "CssMinimizerPlugin.cssnanoMinify"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Overrides the default minify function."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "By default, plugin uses ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "https://github.com/cssnano/cssnano",
     parentName: "p"
-  }, "cssnano"), " package.\nUseful for using and testing unpublished versions or forks."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Possible options:"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+  }, "cssnano"), " package."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+    parentName: "blockquote"
+  }, "This is useful when using or testing unpublished versions or forks.")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Possible options:"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
     parentName: "ul"
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "li"
@@ -234630,7 +234705,7 @@ function MDXContent(_ref) {
     parentName: "strong"
   }, "minify"), " function when ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "strong"
-  }, "parallel"), " option enabled"), ".")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h4", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+  }, "parallel"), " option is enabled"), ".")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h4", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     id: "function",
     parentName: "h4"
   }), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
@@ -234791,7 +234866,7 @@ function MDXContent(_ref) {
     parentName: "p"
   }, "minify"), " option, the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "minimizerOptions"), " must also be an array.\nThe function index in the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "minimizerOptions"), " must also be an array."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "The function index in the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "minify"), " array corresponds to the options object with the same index in the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
@@ -234935,7 +235010,7 @@ function MDXContent(_ref) {
   }, "{"), "\n            ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token comment",
     parentName: "code"
-  }, "// To do something"), "\n            ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+  }, "//  Custom minifier function"), "\n            ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token keyword",
     parentName: "code"
   }, "return"), " ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
@@ -235059,11 +235134,15 @@ function MDXContent(_ref) {
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "header-link",
     parentName: "a"
-  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Type: ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-    parentName: "p"
-  }, "Object|Array<Object>"), "\nDefault: ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-    parentName: "p"
-  }, "{ preset: 'default' }")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Cssnano optimisations ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+    parentName: "ul"
+  }, "Type: ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    parentName: "li"
+  }, "Object|Array<Object>")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+    parentName: "ul"
+  }, "Default: ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    parentName: "li"
+  }, "{ preset: 'default' }"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Cssnano optimisations ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "https://cssnano.co/docs/what-are-optimisations/",
     parentName: "p"
   }, "options"), "."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h4", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
@@ -235225,15 +235304,15 @@ function MDXContent(_ref) {
     parentName: "p"
   }, "minify"), " array corresponds to the options object with the same index in the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "minimizerOptions"), " array.\nIf you use ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "minimizerOptions"), " array."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "If you use ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "minimizerOptions"), " like object, all ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "minify"), " function accept it."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
     parentName: "blockquote"
-  }, "If a parallelization is enabled, the packages in ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "If parallelization is enabled, the packages in ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "minimizerOptions"), " must be required via strings (", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "minimizerOptions"), " must be referenced via strings (", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "packageName"), " or ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
@@ -235359,16 +235438,20 @@ function MDXContent(_ref) {
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "header-link",
     parentName: "a"
-  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Type: ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-    parentName: "p"
-  }, "Object"), "\nDefault: ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-    parentName: "p"
-  }, "{ from: assetName }")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Allows filtering options ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+    parentName: "ul"
+  }, "Type: ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    parentName: "li"
+  }, "Object")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+    parentName: "ul"
+  }, "Default: ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    parentName: "li"
+  }, "{ from: assetName }"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Allows filtering options ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "https://postcss.org/api/#processoptions",
     parentName: "p"
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "a"
-  }, "processoptions")), " for the cssnano.\nThe ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "processoptions")), " for the cssnano."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "The ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "parser"), ",", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
@@ -235380,7 +235463,7 @@ function MDXContent(_ref) {
     parentName: "blockquote"
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
-  }, "If a function is passed, the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "If any of these options are passed as a function, the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "strong"
   }, "parallel"), " option must be disabled."), ".")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
     className: "hljs language-js",
@@ -235623,30 +235706,34 @@ function MDXContent(_ref) {
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "header-link",
     parentName: "a"
-  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Type: ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-    parentName: "p"
-  }, "Function<(warning, file, source) -> Boolean>"), "\nDefault: ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-    parentName: "p"
-  }, "() => true")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Allow filtering css-minimizer warnings (By default ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+    parentName: "ul"
+  }, "Type: ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    parentName: "li"
+  }, "Function<(warning, file, source) -> Boolean>")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+    parentName: "ul"
+  }, "Default: ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    parentName: "li"
+  }, "() => true"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Filter css-minimizer warnings (By default ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "https://github.com/cssnano/cssnano",
     parentName: "p"
-  }, "cssnano"), ").\nReturn ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "cssnano"), ")."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Return ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "true"), " to keep the warning, a falsy value (", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "true"), " to keep the warning, or a falsy value (", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "false"), "/", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "null"), "/", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "undefined"), ") otherwise."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+  }, "undefined"), ") to suppress it."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
     parentName: "blockquote"
   }, "[!WARNING]"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
     parentName: "blockquote"
   }, "The ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "source"), " argument will contain ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "source"), " parameter will be ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "undefined"), " if you don't use source maps.")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+  }, "undefined"), " unless source maps are enabled.")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
   }, "webpack.config.js")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
     className: "hljs language-js",
@@ -235966,7 +236053,7 @@ function MDXContent(_ref) {
   }, ":"), " ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token regex",
     parentName: "code"
-  }, "/.s?css$/"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+  }, "/\\.s?css$/"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token punctuation",
     parentName: "code"
   }, ","), "\n        use", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
@@ -236148,9 +236235,9 @@ function MDXContent(_ref) {
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "header-link",
     parentName: "a"
-  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Remove all comments (including comments starting with ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Remove all comments, including those starting with ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "/*!"), ")."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
+  }, "/*!"), "."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
     className: "hljs language-js",
     parentName: "pre"
   }, "module", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
@@ -236624,10 +236711,7 @@ function MDXContent(_ref) {
   }, "{"), "\n  ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token comment",
     parentName: "code"
-  }, "// Uncomment if you need source maps"), "\n  ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
-    className: "token comment",
-    parentName: "code"
-  }, "// devtool: \"source-map\","), "\n  optimization", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+  }, "// devtool: \"source-map\", // Uncomment for source maps"), "\n  optimization", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token operator",
     parentName: "code"
   }, ":"), " ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
@@ -236733,10 +236817,7 @@ function MDXContent(_ref) {
   }, "{"), "\n  ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token comment",
     parentName: "code"
-  }, "// Uncomment if you need source maps"), "\n  ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
-    className: "token comment",
-    parentName: "code"
-  }, "// devtool: \"source-map\","), "\n  optimization", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+  }, "// devtool: \"source-map\", // Uncomment for source maps"), "\n  optimization", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token operator",
     parentName: "code"
   }, ":"), " ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
@@ -236822,7 +236903,7 @@ function MDXContent(_ref) {
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "header-link",
     parentName: "a"
-  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Please take a moment to read our contributing guidelines if you haven't yet done so."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "We welcome all contributions!"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "If you're new here, please take a moment to review our contributing guidelines."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "https://github.com/webpack-contrib/css-minimizer-webpack-plugin/blob/master/.github/CONTRIBUTING.md",
     parentName: "p"
   }, "CONTRIBUTING")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
@@ -237269,7 +237350,7 @@ function MDXContent(_ref) {
     parentName: "li"
   }, "eslint"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Path to ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "eslint"), " instance that will be used for linting.\nIf the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "eslint"), " instance that will be used for linting."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "If the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "eslintPath"), " is a folder like a official ESlint, or specify a ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
@@ -237639,7 +237720,7 @@ function MDXContent(_ref) {
     parentName: "ul"
   }, "Default: ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "li"
-  }, "'stylish'"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Accepts a function that receives an array of ESLint messages (object) as its argument and must return a string as output.\nYou can use official ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+  }, "'stylish'"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Accepts a function that receives an array of ESLint messages (object) as its argument and must return a string as output."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "You can use official ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "https://eslint.org/docs/user-guide/formatters/",
     parentName: "p"
   }, "ESlint formatters"), "."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
@@ -237735,7 +237816,7 @@ function MDXContent(_ref) {
     parentName: "a"
   }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
-  }, "By default the plugin will auto adjust error reporting depending on eslint errors/warnings counts."), "\nYou can still force this behavior by using ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "By default the plugin will auto adjust error reporting depending on eslint errors/warnings counts.")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "You can still force this behavior by using ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "emitError"), " ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
@@ -238151,7 +238232,7 @@ function MDXContent(_ref) {
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "header-link",
     parentName: "a"
-  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "We welcome all contributions!\nIf you're new here, please take a moment to review our contributing guidelines."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "We welcome all contributions!"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "If you're new here, please take a moment to review our contributing guidelines."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "https://github.com/webpack-contrib/eslint-webpack-plugin/blob/master/.github/CONTRIBUTING.md",
     parentName: "p"
   }, "CONTRIBUTING")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
@@ -238265,7 +238346,7 @@ function MDXContent(_ref) {
     parentName: "li"
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "a"
-  }, "@minify-html/node")), " - A Rust HTML minifier meticulously optimised for speed and effectiveness, with bindings for other languages.")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+  }, "@minify-html/node")), " - A Rust HTML minifier meticulously optimised for speed and effectiveness, with bindings for other languages.")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "This plugin integrates seamlessly into your Webpack build pipeline to reduce HTML size and improve loading performance."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     id: "getting-started",
     parentName: "h2"
   }), "Getting Started", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
@@ -238599,7 +238680,7 @@ function MDXContent(_ref) {
   }, "//"), "\n      ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token comment",
     parentName: "code"
-  }, "// HTML fragments - HTML fragments, i.e. HTML files without doctype or used in `<template>` tags or HTML parts which injects into another HTML parts"), "\n      ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+  }, "// HTML fragments - HTML fragments, i.e. HTML files without doctype or used in `<template></template>` tags or HTML parts which injects into another HTML parts"), "\n      ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token comment",
     parentName: "code"
   }, "//"), "\n      ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
@@ -238638,13 +238719,15 @@ function MDXContent(_ref) {
   }, "}"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token punctuation",
     parentName: "code"
-  }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "This will enable HTML optimization only in production mode.\nIf you want to run it also in development set the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+    parentName: "blockquote"
+  }, "[!NOTE]"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+    parentName: "blockquote"
+  }, "HTML will only be minimized in production mode by default. To enable minification in development, explicitly set ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "optimization.minimize"), " option to ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "optimization.minimize: true"), ".")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Finally, run ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "true"), "."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "And run ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-    parentName: "p"
-  }, "webpack"), " via your preferred method."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+  }, "webpack"), " using the method you normally use (e.g., via CLI or an npm script)."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
     parentName: "blockquote"
   }, "[!NOTE]"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
     parentName: "blockquote"
@@ -238654,7 +238737,7 @@ function MDXContent(_ref) {
     parentName: "ul"
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "li"
-  }, "@swc/html"), " - remove and collapse whitespaces only in safe places (for example - around ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "@swc/html"), " - Remove and collapse whitespaces only in safe places (for example - around ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "li"
   }, "html"), " and ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "li"
@@ -238670,7 +238753,7 @@ function MDXContent(_ref) {
     parentName: "ul"
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "li"
-  }, "html-minifier-terser"), " - always collapse multiple whitespaces to 1 space (never remove it entirely), but you can change it using ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+  }, "html-minifier-terser"), " - Always collapse multiple whitespaces to 1 space (never remove it entirely), but you can change it using ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "https://github.com/terser/html-minifier-terser#options-quick-reference",
     parentName: "li"
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
@@ -238679,10 +238762,10 @@ function MDXContent(_ref) {
     parentName: "ul"
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "li"
-  }, "@minify-html/node"), " - please read documentation ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+  }, "@minify-html/node"), " - Please read documentation ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "https://github.com/wilsonzlin/minify-html#whitespace",
     parentName: "li"
-  }, "https://github.com/wilsonzlin/minify-html#whitespace")))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+  }, "https://github.com/wilsonzlin/minify-html#whitespace"), " for detailed whitespace behavior."))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     id: "options",
     parentName: "h2"
   }), "Options", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
@@ -238936,7 +239019,7 @@ function MDXContent(_ref) {
     parentName: "code"
   }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Default: ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "undefined")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Files to include."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+  }, "undefined")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Files to include for minification."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
   }, "webpack.config.js")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
     className: "hljs language-js",
@@ -239073,7 +239156,7 @@ function MDXContent(_ref) {
     parentName: "code"
   }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Default: ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "undefined")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Files to exclude."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+  }, "undefined")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Files to exclude from minification."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
   }, "webpack.config.js")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
     className: "hljs language-js",
@@ -239201,11 +239284,23 @@ function MDXContent(_ref) {
     parentName: "code"
   }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Default: ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "true")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Use multi-process parallel running to improve the build speed.\nDefault number of concurrent runs: ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "true")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Enables multi-process parallelization to improve build performance."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+    parentName: "ul"
+  }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+    parentName: "li"
+  }, "If ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    parentName: "p"
+  }, "true"), ", uses ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "os.cpus().length - 1"), " or ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "os.availableParallelism() - 1"), " (if this function is supported)."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+  }, "os.availableParallelism() - 1"), " (if available).")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+    parentName: "ul"
+  }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+    parentName: "li"
+  }, "If ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    parentName: "p"
+  }, "number"), ", sets the number of concurrent workers."))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
     parentName: "blockquote"
   }, "[!NOTE]"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
     parentName: "blockquote"
@@ -239224,7 +239319,7 @@ function MDXContent(_ref) {
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "header-link",
     parentName: "a"
-  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Enable/disable multi-process parallel running."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Enable or disable multi-process parallel running."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
   }, "webpack.config.js")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
     className: "hljs language-js",
@@ -239785,7 +239880,7 @@ function MDXContent(_ref) {
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "header-link",
     parentName: "a"
-  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "You can define a custom minify function, giving full control over how the HTML is processed."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
   }, "webpack.config.js")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
     className: "hljs language-js",
@@ -240041,17 +240136,25 @@ function MDXContent(_ref) {
     parentName: "p"
   }, "minify"), " option, the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "minimizerOptions"), " can be an array or an object.\nIf ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "minimizerOptions"), " can be either as:"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+    parentName: "ul"
+  }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+    parentName: "li"
+  }, "An array; If ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "minimizerOptions"), " is array, the function index in the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "minify"), " array corresponds to the options object with the same index in the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "minimizerOptions"), " array.\nIf you use ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "minimizerOptions"), " array.")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+    parentName: "ul"
+  }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+    parentName: "li"
+  }, "A single object; If you use ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "minimizerOptions"), " like object, all ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "minify"), " function accept it."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+  }, "minify"), " function accept it."))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
   }, "webpack.config.js")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
     className: "hljs language-js",
@@ -240402,9 +240505,97 @@ function MDXContent(_ref) {
   }, ">"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token punctuation",
     parentName: "code"
-  }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Default: ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-    parentName: "p"
-  }, "{ caseSensitive: true, collapseWhitespace: true, conservativeCollapse: true, keepClosingSlash: true, minifyCSS: true, minifyJS: true, removeComments: true, removeScriptTypeAttributes: true, removeStyleLinkTypeAttributes: true, }")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Default:"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
+    className: "hljs language-js",
+    parentName: "pre"
+  }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token punctuation",
+    parentName: "code"
+  }, "{"), "\ncaseSensitive", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token operator",
+    parentName: "code"
+  }, ":"), " ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token boolean",
+    parentName: "code"
+  }, "true"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token punctuation",
+    parentName: "code"
+  }, ","), "\ncollapseWhitespace", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token operator",
+    parentName: "code"
+  }, ":"), " ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token boolean",
+    parentName: "code"
+  }, "true"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token punctuation",
+    parentName: "code"
+  }, ","), "\nconservativeCollapse", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token operator",
+    parentName: "code"
+  }, ":"), " ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token boolean",
+    parentName: "code"
+  }, "true"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token punctuation",
+    parentName: "code"
+  }, ","), "\nkeepClosingSlash", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token operator",
+    parentName: "code"
+  }, ":"), " ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token boolean",
+    parentName: "code"
+  }, "true"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token punctuation",
+    parentName: "code"
+  }, ","), "\nminifyCSS", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token operator",
+    parentName: "code"
+  }, ":"), " ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token boolean",
+    parentName: "code"
+  }, "true"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token punctuation",
+    parentName: "code"
+  }, ","), "\nminifyJS", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token operator",
+    parentName: "code"
+  }, ":"), " ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token boolean",
+    parentName: "code"
+  }, "true"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token punctuation",
+    parentName: "code"
+  }, ","), "\nremoveComments", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token operator",
+    parentName: "code"
+  }, ":"), " ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token boolean",
+    parentName: "code"
+  }, "true"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token punctuation",
+    parentName: "code"
+  }, ","), "\nremoveScriptTypeAttributes", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token operator",
+    parentName: "code"
+  }, ":"), " ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token boolean",
+    parentName: "code"
+  }, "true"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token punctuation",
+    parentName: "code"
+  }, ","), "\nremoveStyleLinkTypeAttributes", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token operator",
+    parentName: "code"
+  }, ":"), " ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token boolean",
+    parentName: "code"
+  }, "true"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token punctuation",
+    parentName: "code"
+  }, ","), "\n", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token punctuation",
+    parentName: "code"
+  }, "}"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "Html-minifier-terser"), " optimizations ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "https://github.com/terser/html-minifier-terser#options-quick-reference",
@@ -240422,7 +240613,9 @@ function MDXContent(_ref) {
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "header-link",
     parentName: "a"
-  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
+  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Applies the same options to the default or custom ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    parentName: "p"
+  }, "minify"), " function."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
     className: "hljs language-js",
     parentName: "pre"
   }, "module", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
@@ -241098,7 +241291,9 @@ function MDXContent(_ref) {
   }, "}"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token punctuation",
     parentName: "code"
-  }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "HTML Fragments:"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
+  }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "HTML Fragments:"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Use this for partial HTML files (e.g. inside ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    parentName: "p"
+  }, "<template></template>"), " tags or HTML strings)."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
     className: "hljs language-js",
     parentName: "pre"
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
@@ -241138,6 +241333,27 @@ function MDXContent(_ref) {
     className: "token string",
     parentName: "code"
   }, "\"copy-webpack-plugin\""), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token punctuation",
+    parentName: "code"
+  }, ")"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token punctuation",
+    parentName: "code"
+  }, ";"), "\n", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token keyword",
+    parentName: "code"
+  }, "const"), " path ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token operator",
+    parentName: "code"
+  }, "="), " ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token function",
+    parentName: "code"
+  }, "require"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token punctuation",
+    parentName: "code"
+  }, "("), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token string",
+    parentName: "code"
+  }, "\"path\""), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token punctuation",
     parentName: "code"
   }, ")"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
@@ -241698,7 +241914,7 @@ function MDXContent(_ref) {
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "header-link",
     parentName: "a"
-  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Please take a moment to read our contributing guidelines if you haven't yet done so."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "We welcome all contributions!\nIf you're new here, please take a moment to review our contributing guidelines before submitting issues or pull requests."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "https://github.com/webpack-contrib/html-minimizer-webpack-plugin/blob/master/.github/CONTRIBUTING.md",
     parentName: "p"
   }, "CONTRIBUTING")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
@@ -241753,7 +241969,7 @@ function MDXContent(_ref) {
     parentName: "div"
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
     parentName: "p"
-  }, "Plugin and Loader for ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+  }, "A Plugin and Loader for ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "http://webpack.js.org/",
     parentName: "p"
   }, "webpack"), " to optimize (compress) all images using ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
@@ -241811,7 +242027,7 @@ function MDXContent(_ref) {
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
     parentName: "ul"
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-    href: "#install-optimizegenerate-tool",
+    href: "#install-an-optimizationgeneration-tool",
     parentName: "li"
   }, "Install optimize/generate tool")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
     parentName: "ul"
@@ -242205,14 +242421,14 @@ function MDXContent(_ref) {
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "header-link",
     parentName: "a"
-  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "This plugin can use 4 tools to optimize/generate images:"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "This plugin can use four different tools to optimize or generate images:"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
     parentName: "ul"
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "https://github.com/imagemin/imagemin",
     parentName: "li"
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "a"
-  }, "imagemin")), " - optimize your images by default, since it is stable and works with all types of images"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+  }, "imagemin")), " - Optimize your images by default, since it is stable and works with all types of images"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
     parentName: "ul"
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "li"
@@ -242249,11 +242465,11 @@ function MDXContent(_ref) {
     parentName: "blockquote"
   }, "[!WARNING]"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
     parentName: "blockquote"
-  }, "By default we don't install anything")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
-    id: "install-optimizegenerate-tool",
+  }, "By default, we don’t install any additional packages.")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    id: "install-an-optimizationgeneration-tool",
     parentName: "h3"
-  }), "Install optimize/generate tool", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
-    href: "#install-optimizegenerate-tool",
+  }), "Install an Optimization/Generation Tool", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+    href: "#install-an-optimizationgeneration-tool",
     "aria-hidden": "true",
     tabIndex: "-1",
     parentName: "h3"
@@ -242262,7 +242478,7 @@ function MDXContent(_ref) {
     parentName: "a"
   }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "To begin, you'll need to install ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "image-minimizer-webpack-plugin"), " and image minimizer/generator:"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+  }, "image-minimizer-webpack-plugin"), " along with an image optimizer or generator:"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
     parentName: "ul"
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "https://github.com/imagemin/imagemin",
@@ -242276,7 +242492,7 @@ function MDXContent(_ref) {
     parentName: "blockquote"
   }, "[!WARNING]"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
     parentName: "blockquote"
-  }, "imagemin uses plugin to optimize/generate images, so you need to install them too")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+  }, "imagemin uses plugins to optimize or generate images, so you’ll need to install those as well.")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
     parentName: "ul"
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "li"
@@ -242318,7 +242534,7 @@ function MDXContent(_ref) {
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "https://en.wikipedia.org/wiki/Lossy_compression",
     parentName: "li"
-  }, "Lossy"), " (with loss of quality).")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+  }, "Lossy"), " (with some loss of quality).")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     id: "optimize-with-imagemin",
     parentName: "h3"
   }), "Optimize with ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
@@ -242348,9 +242564,11 @@ function MDXContent(_ref) {
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "https://github.com/imagemin/imagemin-svgo",
     parentName: "li"
-  }, "imagemin-svgo"), " can be configured in lossless and lossy mode."))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Explore the options to get the best result for you."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+  }, "imagemin-svgo"), " can be configured in lossless and lossy mode."))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Explore the available options to find the best results for your use case."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
-  }, "Recommended imagemin plugins for lossless optimization")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
+  }, "Recommended ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    parentName: "strong"
+  }, "imagemin"), " plugins for lossless optimization")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
     className: "hljs language-shell",
     parentName: "pre"
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
@@ -242361,7 +242579,9 @@ function MDXContent(_ref) {
     parentName: "code"
   }, "install"), " imagemin-gifsicle imagemin-jpegtran imagemin-optipng imagemin-svgo --save-dev")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
-  }, "Recommended imagemin plugins for lossy optimization")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
+  }, "Recommended ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    parentName: "strong"
+  }, "imagemin"), " plugins for lossy optimization")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
     className: "hljs language-shell",
     parentName: "pre"
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
@@ -242372,10 +242592,10 @@ function MDXContent(_ref) {
     parentName: "code"
   }, "install"), " imagemin-gifsicle imagemin-mozjpeg imagemin-pngquant imagemin-svgo --save-dev")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "For ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "imagemin-svgo"), " v9.0.0+ need use svgo ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+  }, "imagemin-svgo"), " v9.0.0+, you need to use the official ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "https://github.com/svg/svgo#configuration",
     parentName: "p"
-  }, "configuration")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+  }, "SVGO configuration")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
   }, "webpack.config.js")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
     className: "hljs language-js",
@@ -242518,7 +242738,7 @@ function MDXContent(_ref) {
   }, "// Lossless optimization with custom option"), "\n            ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token comment",
     parentName: "code"
-  }, "// Feel free to experiment with options for better result for you"), "\n            plugins", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+  }, "// Feel free to experiment with options for better results"), "\n            plugins", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token operator",
     parentName: "code"
   }, ":"), " ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
@@ -242608,7 +242828,7 @@ function MDXContent(_ref) {
   }, ","), "\n              ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token comment",
     parentName: "code"
-  }, "// Svgo configuration here https://github.com/svg/svgo#configuration"), "\n              ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+  }, "// SVGO configuration here https://github.com/svg/svgo#configuration"), "\n              ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token punctuation",
     parentName: "code"
   }, "["), "\n                ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
@@ -242816,12 +243036,14 @@ function MDXContent(_ref) {
     parentName: "p"
   }, "Recommended ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "strong"
-  }, "@squoosh/lib"), " options for lossy optimization")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "For lossy optimization we recommend using the default settings of ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "@squoosh/lib"), " options for lossy optimization")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "For lossy optimization, we recommend using the default settings of ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "@squoosh/lib"), " package.\nThe default values and supported file types for each option can be found in the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "https://github.com/GoogleChromeLabs/squoosh/blob/dev/libsquoosh/src/codecs.ts",
     parentName: "p"
-  }, "codecs.ts"), " file under codecs."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+  }, "codecs.ts"), " file under ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    parentName: "p"
+  }, "codecs"), " directory."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
   }, "webpack.config.js")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
     className: "hljs language-js",
@@ -242871,7 +243093,7 @@ function MDXContent(_ref) {
   }, "["), "\n      ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token comment",
     parentName: "code"
-  }, "// You need this, if you are using `import file from \"file.ext\"`, for `new URL(...)` syntax you don't need it"), "\n      ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+  }, "// You need this, if you are using `import file from \"file.ext\"`; not needed for `new URL(...)` syntax"), "\n      ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token punctuation",
     parentName: "code"
   }, "{"), "\n        test", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
@@ -242964,7 +243186,7 @@ function MDXContent(_ref) {
   }, "{"), "\n            ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token comment",
     parentName: "code"
-  }, "// Your options for `squoosh`"), "\n          ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+  }, "// Your options for `squoosh` here"), "\n          ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token punctuation",
     parentName: "code"
   }, "}"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
@@ -243161,7 +243383,7 @@ function MDXContent(_ref) {
   }, "// That setting might be close to lossless, but it’s not guaranteed"), "\n                ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token comment",
     parentName: "code"
-  }, "// https://github.com/GoogleChromeLabs/squoosh/issues/85"), "\n                quality", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+  }, "// See https://github.com/GoogleChromeLabs/squoosh/issues/85"), "\n                quality", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token operator",
     parentName: "code"
   }, ":"), " ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
@@ -243206,7 +243428,7 @@ function MDXContent(_ref) {
   }, "{"), "\n                ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token comment",
     parentName: "code"
-  }, "// https://github.com/GoogleChromeLabs/squoosh/blob/dev/codecs/avif/enc/README.md"), "\n                cqLevel", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+  }, "// See https://github.com/GoogleChromeLabs/squoosh/blob/dev/codecs/avif/enc/README.md"), "\n                cqLevel", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token operator",
     parentName: "code"
   }, ":"), " ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
@@ -243443,10 +243665,10 @@ function MDXContent(_ref) {
   }, "{"), "\n              ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token comment",
     parentName: "code"
-  }, "// Your options for `sharp`"), "\n              ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+  }, "// Customize your `sharp` options here"), "\n              ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token comment",
     parentName: "code"
-  }, "// https://sharp.pixelplumbing.com/api-output"), "\n            ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+  }, "// See https://sharp.pixelplumbing.com/api-output"), "\n            ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token punctuation",
     parentName: "code"
   }, "}"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
@@ -243547,7 +243769,7 @@ function MDXContent(_ref) {
   }, "["), "\n      ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token comment",
     parentName: "code"
-  }, "// You need this, if you are using `import file from \"file.ext\"`, for `new URL(...)` syntax you don't need it"), "\n      ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+  }, "// You need this, if you are using `import file from \"file.ext\"`. Not needed for `new URL(...)` syntax"), "\n      ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token punctuation",
     parentName: "code"
   }, "{"), "\n        test", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
@@ -243712,7 +243934,7 @@ function MDXContent(_ref) {
   }, ","), "\n\n              ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token comment",
     parentName: "code"
-  }, "// png by default sets the quality to 100%, which is same as lossless"), "\n              ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+  }, "// PNG by default sets the quality to 100%, which is same as lossless"), "\n              ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token comment",
     parentName: "code"
   }, "// https://sharp.pixelplumbing.com/api-output#png"), "\n              png", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
@@ -243730,7 +243952,7 @@ function MDXContent(_ref) {
   }, ","), "\n\n              ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token comment",
     parentName: "code"
-  }, "// gif does not support lossless compression at all"), "\n              ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+  }, "// GIF does not support lossless compression at all"), "\n              ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token comment",
     parentName: "code"
   }, "// https://sharp.pixelplumbing.com/api-output#gif"), "\n              gif", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
@@ -243813,7 +244035,7 @@ function MDXContent(_ref) {
     parentName: "p"
   }, "Recommended ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "strong"
-  }, "svgo"), " options for optimization")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "For optimization we recommend using the options listed below in ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "svgo"), " options for optimization")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "For SVG optimization we recommend using the options listed below in ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "minimizer.options.encodeOptions"), ".\nThe default values for plugins can be found in the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "https://github.com/svg/svgo/tree/main/plugins",
@@ -243868,7 +244090,7 @@ function MDXContent(_ref) {
   }, "["), "\n      ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token comment",
     parentName: "code"
-  }, "// You need this, if you are using `import file from \"file.ext\"`, for `new URL(...)` syntax you don't need it"), "\n      ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+  }, "// You need this, if you are using `import file from \"file.ext\"`. Not needed for `new URL(...)` syntax"), "\n      ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token punctuation",
     parentName: "code"
   }, "{"), "\n        test", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
@@ -243967,7 +244189,7 @@ function MDXContent(_ref) {
   }, "{"), "\n              ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token comment",
     parentName: "code"
-  }, "// Pass over SVGs multiple times to ensure all optimizations are applied. False by default"), "\n              multipass", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+  }, "// Pass over SVGs multiple times to ensure all optimizations are applied (False by default)"), "\n              multipass", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token operator",
     parentName: "code"
   }, ":"), " ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
@@ -243985,10 +244207,10 @@ function MDXContent(_ref) {
   }, "["), "\n                ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token comment",
     parentName: "code"
-  }, "// set of built-in plugins enabled by default"), "\n                ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+  }, "// Built-in plugin preset enabled by default"), "\n                ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token comment",
     parentName: "code"
-  }, "// see: https://github.com/svg/svgo#default-preset"), "\n                ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+  }, "// See: https://github.com/svg/svgo#default-preset"), "\n                ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token string",
     parentName: "code"
   }, "\"preset-default\""), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
@@ -244056,21 +244278,33 @@ function MDXContent(_ref) {
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "header-link",
     parentName: "a"
-  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "If you want to use ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+    parentName: "ul"
+  }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+    parentName: "li"
+  }, "If you want to use ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "loader"), " or ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "plugin"), " standalone see sections below, but this is ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
-  }, "not recommended"), "."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "By default, plugin configures ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "not recommended"), ".")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+    parentName: "ul"
+  }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+    parentName: "li"
+  }, "By default, plugin configures ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "loader"), " (please use the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "loader"), " option if you want to disable this behaviour), therefore you should not setup standalone loader when you use a plugin setup."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Loader optimizes or generates images using options, so inlined images via ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "loader"), " option if you want to disable this behaviour), therefore you should not setup standalone loader when you use a plugin setup.")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+    parentName: "ul"
+  }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+    parentName: "li"
+  }, "Loader optimizes or generates images using options, so inlined images via ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "data"), " URI (i.e. ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "data:"), ") will be optimized or generated too, not inlined images will be optimized too."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h4", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+  }, "data:"), ") will be optimized or generated too, non-inlined images will be optimized too."))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h4", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     id: "query-parameters-only-squoosh-and-sharp-currently",
     parentName: "h4"
   }), "Query Parameters (only ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
@@ -244556,7 +244790,7 @@ function MDXContent(_ref) {
     parentName: "p"
   }, "avif"), " and ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "webp"), " presets, ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+  }, "webp"), " presets, See the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "#optimize-and-generate-webp-images",
     parentName: "p"
   }, "example for webp"), ".")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h4", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
@@ -244632,7 +244866,7 @@ function MDXContent(_ref) {
   }, "["), "\n      ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token comment",
     parentName: "code"
-  }, "// You need this, if you are using `import file from \"file.ext\"`, for `new URL(...)` syntax you don't need it"), "\n      ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+  }, "// You need this, if you are using `import file from \"file.ext\"`. Not needed for `new URL(...)` syntax"), "\n      ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token punctuation",
     parentName: "code"
   }, "{"), "\n        test", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
@@ -244882,7 +245116,7 @@ function MDXContent(_ref) {
   }, "["), "\n      ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token comment",
     parentName: "code"
-  }, "// You need this, if you are using `import file from \"file.ext\"`, for `new URL(...)` syntax you don't need it"), "\n      ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+  }, "// You need this, if you are using `import file from \"file.ext\"`. Not needed for `new URL(...)` syntax"), "\n      ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token punctuation",
     parentName: "code"
   }, "{"), "\n        test", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
@@ -245026,10 +245260,7 @@ function MDXContent(_ref) {
   }, "}"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token punctuation",
     parentName: "code"
-  }, ","), "\n        ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
-    className: "token comment",
-    parentName: "code"
-  }, "// Disable `loader`"), "\n        loader", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+  }, ","), "\n        loader", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token operator",
     parentName: "code"
   }, ":"), " ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
@@ -245038,7 +245269,10 @@ function MDXContent(_ref) {
   }, "false"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token punctuation",
     parentName: "code"
-  }, ","), "\n      ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+  }, ","), " ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token comment",
+    parentName: "code"
+  }, "// Disable the `loader`"), "\n      ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token punctuation",
     parentName: "code"
   }, "}"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
@@ -248647,11 +248881,11 @@ function MDXContent(_ref) {
     parentName: "code"
   }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Default: ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "() => true")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Allows filtering of images for optimization/generation."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Return ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "() => true")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Allows filtering of images for optimization or generation."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Return ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "true"), " to optimize the image, ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "true"), " to process (optimize or generate) the image, or ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "false"), " otherwise."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+  }, "false"), " to skip it."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
   }, "webpack.config.js")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
     className: "hljs language-js",
@@ -249018,13 +249252,13 @@ function MDXContent(_ref) {
     parentName: "p"
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "a"
-  }, "webpack template strings")), ", ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "webpack template strings")), " (see the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "File-level"), " section."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "We also support ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "File-level"), " section for supported patterns)."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "We also support ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "[width]"), " and ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "[height]"), " placeholders (only ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "[height]"), " placeholders (only when using ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "sharp"), " and ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
@@ -249952,11 +250186,11 @@ function MDXContent(_ref) {
     parentName: "code"
   }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Default: ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "undefined")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Allow to setup default generators.\nUseful if you need generate ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "undefined")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Allow to setup default image generators.\nThis is useful when you want to generate additional formats like ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "webp"), "/", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "webp"), ", ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "avif"), "/etc from other formats."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+  }, "avif"), ", etc., from the original images."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
     parentName: "blockquote"
   }, "[!WARNING]"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
     parentName: "blockquote"
@@ -249964,11 +250198,11 @@ function MDXContent(_ref) {
     parentName: "p"
   }, "?as=webp"), " was found in query params), the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "minimizer"), " option will be used. Therefore, it is recommended to configure generator outputs optimized image.")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+  }, "minimizer"), " option will be used.\nTherefore, it is recommended to configure generator outputs optimized image.")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
     parentName: "blockquote"
   }, "[!WARNING]"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
     parentName: "blockquote"
-  }, "The option will not work if you disable ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "The option will not work if you disable the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "loader"), " (i.e. set the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
@@ -250091,7 +250325,10 @@ function MDXContent(_ref) {
   }, "{"), "\n            ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token comment",
     parentName: "code"
-  }, "// You can apply generator using `?as=webp`, you can use any name and provide more options"), "\n            preset", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+  }, "// You can apply generator using `?as=webp`"), "\n            ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "token comment",
+    parentName: "code"
+  }, "// You can use any name and provide more options"), "\n            preset", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token operator",
     parentName: "code"
   }, ":"), " ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
@@ -251138,10 +251375,10 @@ function MDXContent(_ref) {
   }, "}"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token punctuation",
     parentName: "code"
-  }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "You can find more information ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+  }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "You can find more information in the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "https://github.com/GoogleChromeLabs/squoosh/tree/dev/libsquoosh",
     parentName: "p"
-  }, "here"), "."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "For only ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "squoosh GitHub repository"), "."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "For only ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "sharp"), " currently, you can even generate the non-retina resizes of images:"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
@@ -251886,15 +252123,17 @@ function MDXContent(_ref) {
     parentName: "code"
   }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Default: ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "\"import\"")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Allows you to apply the generator for ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "\"import\"")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Allows you to apply the generator for either ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "import"), " or assets from compilation (useful for copied assets).\nBy default, generators are applying on ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "import"), " or ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    parentName: "p"
+  }, "assets"), " from compilation (useful for copied assets).\nBy default, generators are applying on ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "import"), "/", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "require"), ", but sometimes you need to generate new images from other plugins (for example - ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "copy-webpack-plugin"), "), if you need this, please set ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "copy-webpack-plugin"), ").\nIf you need this, please set ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "asset"), " value for the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
@@ -252236,7 +252475,7 @@ function MDXContent(_ref) {
     parentName: "code"
   }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Default: ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "undefined")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Configure the name of preset, i.e. you can use it in ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "undefined")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Configures the name of preset, i.e. you can use it in ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "?as=name"), "."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
@@ -252735,7 +252974,7 @@ function MDXContent(_ref) {
     parentName: "code"
   }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Default: ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "undefined")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Configure the default ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "undefined")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Configures the default ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "implementation"), "."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
@@ -252975,7 +253214,7 @@ function MDXContent(_ref) {
     parentName: "p"
   }, "undefined")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Options for the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "implementation"), " option (i.e. options for ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "implementation"), " (i.e. options for ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "imagemin"), "/", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
@@ -253216,9 +253455,9 @@ function MDXContent(_ref) {
     parentName: "p"
   }, "() => true")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Allows filtering of images for optimization/generation."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Return ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "true"), " to optimize the image, ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "true"), " to optimize the image, or ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "false"), " otherwise."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+  }, "false"), " to skip it."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
   }, "webpack.config.js")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
     className: "hljs language-js",
@@ -253328,10 +253567,10 @@ function MDXContent(_ref) {
   }, "{"), "\n              ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token comment",
     parentName: "code"
-  }, "// The `source` argument is a `Buffer` of source file"), "\n              ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+  }, "// The `source` argument is a `Buffer` of the source file"), "\n              ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token comment",
     parentName: "code"
-  }, "// The `sourcePath` argument is an absolute path to source"), "\n              ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+  }, "// The `sourcePath` argument is an absolute path to the source"), "\n              ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token keyword",
     parentName: "code"
   }, "if"), " ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
@@ -253573,7 +253812,7 @@ function MDXContent(_ref) {
     parentName: "p"
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "a"
-  }, "webpack template strings")), ", ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "webpack template strings")), ", under the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "File-level"), " section."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
@@ -253998,19 +254237,19 @@ function MDXContent(_ref) {
     parentName: "code"
   }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Default: ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "'error'")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Allows to choose how errors are displayed."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Сan have the following values:"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+  }, "'error'")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Allows to choose how errors are displayed during image optimization."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Сan have the following values:"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
     parentName: "ul"
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "li"
-  }, "'off'"), " - suppresses errors and warnings"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+  }, "'off'"), " - Suppresses both errors and warnings"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
     parentName: "ul"
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "li"
-  }, "'warning'"), " - emit warnings instead errors"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+  }, "'warning'"), " - Emits warnings instead of errors"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
     parentName: "ul"
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "li"
-  }, "'error'"), " - emit errors")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+  }, "'error'"), " - Emits errors")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
   }, "webpack.config.js")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
     className: "hljs language-js",
@@ -255881,7 +256120,7 @@ function MDXContent(_ref) {
     parentName: "code"
   }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Default: ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "undefined")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Allows to setup default minimizer."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h4", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+  }, "undefined")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Allows to setup default minimizer."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "You can use either a single minimizer object or an array of them."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h4", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     id: "loader-minimizer-example-for-imagemin",
     parentName: "h4"
   }), "Loader minimizer example for ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
@@ -256265,11 +256504,7 @@ function MDXContent(_ref) {
     parentName: "code"
   }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Default: ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "undefined")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Allow to setup default generators.\nUseful if you need generate ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-    parentName: "p"
-  }, "webp"), "/", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
-    parentName: "p"
-  }, "avif"), "/etc from other formats."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h4", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+  }, "undefined")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Allow to setup default generators.\nThis is useful for creating new image formats (e.g., webp, avif, etc.) from existing images."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h4", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     id: "loader-generator-example-for-imagemin",
     parentName: "h4"
   }), "Loader generator example for ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
@@ -256282,7 +256517,7 @@ function MDXContent(_ref) {
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "header-link",
     parentName: "a"
-  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "The following example demonstrates how to configure a generator that converts images to the webp format using imagemin."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
   }, "webpack.config.js")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
     className: "hljs language-js",
@@ -256488,7 +256723,7 @@ function MDXContent(_ref) {
   }, "}"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token punctuation",
     parentName: "code"
-  }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "For more information and supported options please read ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+  }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "This setup will automatically generate .webp versions of the original assets during the build process.\nFor more information and supported options please read ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "#generator",
     parentName: "p"
   }, "here"), "."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
@@ -256524,19 +256759,19 @@ function MDXContent(_ref) {
     parentName: "code"
   }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Default: ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "'error'")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Allows to choose how errors are displayed."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Сan have the following values:"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+  }, "'error'")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Allows to choose how errors are displayed during image optimization."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Сan have the following values:"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
     parentName: "ul"
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "li"
-  }, "'off'"), " - suppresses errors and warnings"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+  }, "'off'"), " - Suppresses errors and warnings"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
     parentName: "ul"
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "li"
-  }, "'warning'"), " - emit warnings instead errors"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+  }, "'warning'"), " - Emits warnings instead errors"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
     parentName: "ul"
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "li"
-  }, "'error'"), " - emit errors")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+  }, "'error'"), " - Emits errors")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
   }, "webpack.config.js")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
     className: "hljs language-js",
@@ -257430,7 +257665,11 @@ function MDXContent(_ref) {
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "header-link",
     parentName: "a"
-  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "You can generate modern image formats like ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    parentName: "p"
+  }, "webp"), " alongside optimized originals using the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    parentName: "p"
+  }, "generator"), " option."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
     parentName: "ul"
   }, "imagemin")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
@@ -258081,7 +258320,11 @@ function MDXContent(_ref) {
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "header-link",
     parentName: "a"
-  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
+  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "You can use the generator feature to create modern image formats (like ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    parentName: "p"
+  }, "webp"), ") from static assets copied using ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    parentName: "p"
+  }, "copy-webpack-plugin"), "."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("ul", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("li", {
     parentName: "ul"
   }, "imagemin")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
@@ -258910,7 +259153,7 @@ function MDXContent(_ref) {
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "header-link",
     parentName: "a"
-  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Please take a moment to read our contributing guidelines if you haven't yet done so."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "We welcome contributions!\nIf you’re interested in helping improve this plugin, please take a moment to read our contributing guidelines."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "https://github.com/webpack-contrib/image-minimizer-webpack-plugin/blob/master/.github/CONTRIBUTING.md",
     parentName: "p"
   }, "CONTRIBUTING")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
@@ -260098,7 +260341,7 @@ function MDXContent(_ref) {
   }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "This plugin uses ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify",
     parentName: "p"
-  }, "JSON.stringify()"), " to minify your JSON."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+  }, "JSON.stringify()"), " to minify your JSON files during the build process."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     id: "getting-started",
     parentName: "h2"
   }), "Getting Started", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
@@ -260379,9 +260622,9 @@ function MDXContent(_ref) {
   }, "}"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token punctuation",
     parentName: "code"
-  }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "And run ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Finally, run ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "webpack"), " via your preferred method."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+  }, "webpack"), " using the method you normally use (e.g., via CLI or an npm script)."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     id: "options",
     parentName: "h2"
   }), "Options", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
@@ -260617,7 +260860,7 @@ function MDXContent(_ref) {
     parentName: "code"
   }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Default: ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "undefined")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Files to include."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+  }, "undefined")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Files to include for minimization."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
   }, "webpack.config.js")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
     className: "hljs language-js",
@@ -260754,7 +260997,7 @@ function MDXContent(_ref) {
     parentName: "code"
   }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Default: ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "undefined")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Files to exclude."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+  }, "undefined")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Files to exclude from minimization."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
   }, "webpack.config.js")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
     className: "hljs language-js",
@@ -261045,7 +261288,7 @@ function MDXContent(_ref) {
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "header-link",
     parentName: "a"
-  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Please take a moment to read our contributing guidelines if you haven't yet done so."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "We welcome all contributions!\nIf you're new here, please take a moment to review our contributing guidelines before submitting issues or pull requests."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "https://github.com/webpack-contrib/json-minimizer-webpack-plugin/blob/master/.github/CONTRIBUTING.md",
     parentName: "p"
   }, "CONTRIBUTING")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
@@ -268790,7 +269033,9 @@ function MDXContent(_ref) {
     parentName: "a"
   }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
     parentName: "blockquote"
-  }, "This version of stylelint-webpack-plugin only works with webpack 5. For the webpack 4, see the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+  }, "This version of ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    parentName: "p"
+  }, "stylelint-webpack-plugin"), " only works with webpack 5. For webpack 4, see the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "https://github.com/webpack-contrib/stylelint-webpack-plugin/tree/2.x",
     parentName: "p"
   }, "2.x branch"), ".")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "This plugin uses ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
@@ -268798,7 +269043,7 @@ function MDXContent(_ref) {
     parentName: "p"
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "a"
-  }, "stylelint")), " that helps you avoid errors and enforce conventions in your styles."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+  }, "stylelint")), ", which helps you avoid errors and enforce conventions in your styles."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     id: "getting-started",
     parentName: "h2"
   }), "Getting Started", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
@@ -268841,7 +269086,7 @@ function MDXContent(_ref) {
     parentName: "blockquote"
   }, "If you are using Stylelint 13 rather than 14+, you might also need to install ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "@types/stylelint"), " as a dev dependency if getting stylelint related type errors.")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Then add the plugin to your webpack config. For example:"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
+  }, "@types/stylelint"), " as a dev dependency if you encounter Stylelint-related type errors.")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Then add the plugin to your webpack configuration. For example:"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
     className: "hljs language-js",
     parentName: "pre"
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
@@ -268924,9 +269169,9 @@ function MDXContent(_ref) {
   }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "See ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "https://stylelint.io/user-guide/usage/node-api#options",
     parentName: "p"
-  }, "stylelint's options"), " for the complete list of options available. These options are passed through to the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "stylelint's options"), " for the complete list of available options . These options are passed directly to ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "stylelint"), " directly."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+  }, "stylelint"), "."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     id: "cache",
     parentName: "h3"
   }), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
@@ -269000,7 +269245,7 @@ function MDXContent(_ref) {
     parentName: "ul"
   }, "Default: ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "li"
-  }, "node_modules/.cache/stylelint-webpack-plugin/.stylelintcache"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Specify the path to the cache location. Can be a file or a directory."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+  }, "node_modules/.cache/stylelint-webpack-plugin/.stylelintcache"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Specify the path to the cache location. This can be a file or a directory."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     id: "configfile",
     parentName: "h3"
   }), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
@@ -269193,7 +269438,7 @@ function MDXContent(_ref) {
     parentName: "ul"
   }, "Default: ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "li"
-  }, "['css', 'scss', 'sass']"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Specify extensions that should be checked."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+  }, "['css', 'scss', 'sass']"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Specify the extensions that should be checked."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     id: "files",
     parentName: "h3"
   }), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
@@ -269247,7 +269492,7 @@ function MDXContent(_ref) {
     parentName: "li"
   }, "null"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Specify directories, files, or globs. Must be relative to ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "options.context"), ". Directories are traversed recursively looking for files matching ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "options.context"), ". Directories are traversed recursively, looking for files matching ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "options.extensions"), ". File and glob patterns ignore ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
@@ -269371,7 +269616,7 @@ function MDXContent(_ref) {
     parentName: "ul"
   }, "Default: ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "li"
-  }, "'string'"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Specify the formatter that you would like to use to format your results. See ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+  }, "'string'"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Specify the formatter you would like to use to format your results. See the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "https://stylelint.io/user-guide/usage/options#formatter",
     parentName: "p"
   }, "formatter option"), "."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
@@ -269411,7 +269656,7 @@ function MDXContent(_ref) {
     parentName: "ul"
   }, "Default: ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "li"
-  }, "false"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Lint only changed files, skip lint on start."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+  }, "false"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Lint only changed files; skip linting on start."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     id: "stylelintpath",
     parentName: "h3"
   }), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
@@ -269493,7 +269738,11 @@ function MDXContent(_ref) {
     parentName: "ul"
   }, "Default: ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "li"
-  }, "false"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Set to true for an auto-selected pool size based on number of cpus. Set to a number greater than 1 to set an explicit pool size. Set to false, 1, or less to disable and only run in main process."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+  }, "false"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Set to ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    parentName: "p"
+  }, "true"), " for an auto-selected pool size based on number of CPUs. Set to a number greater than 1 to set an explicit pool size."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Set to ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    parentName: "p"
+  }, "false"), ", 1, or less to disable and run only in main process."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h3", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     id: "errors-and-warning",
     parentName: "h3"
   }), "Errors and Warning", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
@@ -269506,7 +269755,7 @@ function MDXContent(_ref) {
     parentName: "a"
   }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
-  }, "By default the plugin will auto adjust error reporting depending on stylelint errors/warnings counts."), "\nYou can still force this behavior by using ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "By default, the plugin will automatically adjust error reporting depending on the number of Stylelint errors/warnings.")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "You can still force this behavior by using the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "emitError"), " ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
@@ -269549,7 +269798,7 @@ function MDXContent(_ref) {
     parentName: "ul"
   }, "Default: ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "li"
-  }, "true"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "The errors found will always be emitted, to disable set to ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "true"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "The errors found will always be emitted. To disable, set to ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "false"), "."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h4", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     id: "emitwarning",
@@ -269588,7 +269837,7 @@ function MDXContent(_ref) {
     parentName: "ul"
   }, "Default: ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "li"
-  }, "true"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "The warnings found will always be emitted, to disable set to ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "true"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "The warnings found will always be emitted. To disable, set to ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "false"), "."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h4", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     id: "failonerror",
@@ -269627,7 +269876,7 @@ function MDXContent(_ref) {
     parentName: "ul"
   }, "Default: ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "li"
-  }, "true"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Will cause the module build to fail if there are any errors, to disable set to ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "true"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Will cause the module build to fail if there are any errors. To disable, set to ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "false"), "."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h4", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     id: "failonwarning",
@@ -269666,7 +269915,7 @@ function MDXContent(_ref) {
     parentName: "ul"
   }, "Default: ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "li"
-  }, "false"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Will cause the module build to fail if there are any warnings, if set to ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "false"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Will cause the module build to fail if there are any warnings, when set to ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "true"), "."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h4", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     id: "quiet",
@@ -269705,7 +269954,7 @@ function MDXContent(_ref) {
     parentName: "ul"
   }, "Default: ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "li"
-  }, "false"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Will process and report errors only and ignore warnings, if set to ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "false"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Will process and report errors only, and ignore warnings, when set to ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "true"), "."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h4", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     id: "outputreport",
@@ -269852,13 +270101,13 @@ function MDXContent(_ref) {
     parentName: "ul"
   }, "Default: ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "li"
-  }, "false"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Write the output of the errors to a file, for example a ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "false"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Writes the output of the errors to a file - for example, a ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "json"), " file for use for reporting.\nThe ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "json"), " file for use for reporting."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "The ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "filePath"), " is relative to the webpack config: ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "output.path"), ".\nYou can pass in a different formatter for the output file, if none is passed in the default/configured formatter will be used."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
+  }, "output.path"), "."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "You can pass in a different formatter for the output file. If none is passed in the default/configured formatter will be used."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
     className: "hljs language-js",
     parentName: "pre"
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
@@ -269900,6 +270149,20 @@ function MDXContent(_ref) {
     href: "https://github.com/webpack-contrib/stylelint-webpack-plugin/blob/master/CHANGELOG.md",
     parentName: "p"
   }, "Changelog")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    id: "contributing",
+    parentName: "h2"
+  }), "Contributing", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+    href: "#contributing",
+    "aria-hidden": "true",
+    tabIndex: "-1",
+    parentName: "h2"
+  }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+    className: "header-link",
+    parentName: "a"
+  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "We welcome all contributions!\nIf you're new here, please take a moment to review our contributing guidelines before submitting issues or pull requests."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+    href: "https://github.com/webpack-contrib/stylelint-webpack-plugin/blob/master/.github/CONTRIBUTING.md",
+    parentName: "p"
+  }, "CONTRIBUTING")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     id: "license",
     parentName: "h2"
   }), "License", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
@@ -271200,9 +271463,9 @@ function MDXContent(_ref) {
     parentName: "a"
   }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Webpack v5 comes with the latest ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "terser-webpack-plugin"), " out of the box. If you are using Webpack v5 or above and wish to customize the options, you will still need to install ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "terser-webpack-plugin"), " out of the box.\nIf you are using Webpack v5 or above and wish to customize the options, you will still need to install ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "terser-webpack-plugin"), ". Using Webpack v4, you have to install ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "terser-webpack-plugin"), ".\nUsing Webpack v4, you have to install ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "terser-webpack-plugin"), " v4."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "To begin, you'll need to install ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
@@ -271217,7 +271480,7 @@ function MDXContent(_ref) {
     parentName: "pre"
   }, "pnpm add -D terser-webpack-plugin\n")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Then add the plugin to your ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "webpack"), " config. For example:"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+  }, "webpack"), " configuration. For example:"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
   }, "webpack.config.js")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
     className: "hljs language-js",
@@ -271303,9 +271566,9 @@ function MDXContent(_ref) {
   }, "}"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token punctuation",
     parentName: "code"
-  }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "And run ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Finally, run ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "webpack"), " via your preferred method."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+  }, "webpack"), " using the method you normally use (e.g., via CLI or an npm script)."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     id: "note-about-source-maps",
     parentName: "h2"
   }), "Note about source maps", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
@@ -271341,7 +271604,7 @@ function MDXContent(_ref) {
     parentName: "ul"
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "li"
-  }, "cheap"), " has not column information and minimizer generate only a single line, which leave only a single mapping.")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Using supported ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "cheap"), " has no column information and the minimizer generates only a single line, which leaves only a single mapping.")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Using supported ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "devtool"), " values enable source map generation."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     id: "options",
@@ -271867,7 +272130,7 @@ function MDXContent(_ref) {
     parentName: "code"
   }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Default: ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "true")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Use multi-process parallel running to improve the build speed.\nDefault number of concurrent runs: ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "true")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Use multi-process parallel running to improve the build speed."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Default number of concurrent runs: ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "os.cpus().length - 1"), " or ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
@@ -271887,7 +272150,7 @@ function MDXContent(_ref) {
     parentName: "blockquote"
   }, "If you use ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
-  }, "Circle CI"), " or any other environment that doesn't provide real available count of CPUs then you need to setup explicitly number of CPUs to avoid ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "Circle CI"), " or any other environment that doesn't provide the real available count of CPUs then you need to explicitly set up the number of CPUs to avoid ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "Error: Call retries were exceeded"), " (see ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "https://github.com/webpack-contrib/terser-webpack-plugin/issues/143",
@@ -272780,7 +273043,7 @@ function MDXContent(_ref) {
     parentName: "code"
   }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Default: ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "TerserPlugin.terserMinify")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Allows you to override default minify function.\nBy default plugin uses ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+  }, "TerserPlugin.terserMinify")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Allows you to override the default minify function.\nBy default plugin uses ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "https://github.com/terser/terser",
     parentName: "p"
   }, "terser"), " package.\nUseful for using and testing unpublished versions or forks."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
@@ -274011,15 +274274,15 @@ function MDXContent(_ref) {
   }, "true")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Whether comments shall be extracted to a separate file, (see ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "https://github.com/webpack/webpack/commit/71933e979e51c533b432658d5e37917f9e71595a",
     parentName: "p"
-  }, "details"), ").\nBy default extract only comments using ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "details"), ")."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "By default, extract only comments using ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "/^\\**!|@preserve|@license|@cc_on/i"), " regexp condition and remove remaining comments.\nIf the original file is named ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "/^\\**!|@preserve|@license|@cc_on/i"), " RegExp condition and remove remaining comments."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "If the original file is named ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "foo.js"), ", then the comments will be stored to ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "foo.js.LICENSE.txt"), ".\nThe ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "foo.js.LICENSE.txt"), "."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "The ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "terserOptions.format.comments"), " option specifies whether the comment will be preserved, i.e. it is possible to preserve some comments (e.g. annotations) while extracting others or even preserving comments that have been extracted."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h4", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
+  }, "terserOptions.format.comments"), " option specifies whether the comment will be preserved - i.e., it is possible to preserve some comments (e.g. annotations) while extracting others, or even preserve comments that have already been extracted."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h4", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     id: "boolean-1",
     parentName: "h4"
   }), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
@@ -274132,7 +274395,7 @@ function MDXContent(_ref) {
     parentName: "p"
   }, "all"), " or ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "some"), " (use ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "some"), " (use the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "/^\\**!|@preserve|@license|@cc_on/i"), " RegExp) comments."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
@@ -274230,7 +274493,7 @@ function MDXContent(_ref) {
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "header-link",
     parentName: "a"
-  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "All comments that match the given expression will be extracted to the separate file."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "All comments that match the given expression will be extracted to a separate file."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
   }, "webpack.config.js")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
     className: "hljs language-js",
@@ -274326,7 +274589,7 @@ function MDXContent(_ref) {
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "header-link",
     parentName: "a"
-  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "All comments that match the given expression will be extracted to the separate file."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "All comments that match the given expression will be extracted to a separate file."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
   }, "webpack.config.js")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
     className: "hljs language-js",
@@ -274494,7 +274757,7 @@ function MDXContent(_ref) {
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "header-link",
     parentName: "a"
-  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Allow to customize condition for extract comments, specify extracted file name and banner."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Allows you to customize condition for extracting comments, and specify the extracted file name and banner."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
   }, "webpack.config.js")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
     className: "hljs language-js",
@@ -274875,7 +275138,7 @@ function MDXContent(_ref) {
   }, "undefined"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "token punctuation",
     parentName: "code"
-  }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Condition what comments you need extract."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+  }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "The condition that determines which comments should be extracted."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
   }, "webpack.config.js")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
     className: "hljs language-js",
@@ -275170,7 +275433,7 @@ function MDXContent(_ref) {
     parentName: "p"
   }, "[filebase]"), " (", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "[base]"), " for webpack 5)."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "The file where the extracted comments will be stored.\nDefault is to append the suffix ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "[base]"), " for webpack 5)."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "The file where the extracted comments will be stored."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Default is to append the suffix ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, ".LICENSE.txt"), " to the original filename."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
     parentName: "blockquote"
@@ -275180,13 +275443,13 @@ function MDXContent(_ref) {
     parentName: "blockquote"
   }, "We highly recommend using the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "txt"), " extension. Using ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, ".txt"), " extension. Using ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "js"), "/", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, ".js"), "/", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "cjs"), "/", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, ".cjs"), "/", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "mjs"), " extensions may conflict with existing assets which leads to broken code.")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+  }, ".mjs"), " extensions may conflict with existing assets, which leads to broken code.")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
   }, "webpack.config.js")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
     className: "hljs language-js",
@@ -275416,13 +275679,13 @@ function MDXContent(_ref) {
     parentName: "code"
   }, ";"))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Default: ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "/*! For license information please see ${commentsFile} */")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "The banner text that points to the extracted file and will be added on top of the original file.\nCan be ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "/*! For license information please see ${commentsFile} */")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "The banner text that points to the extracted file and will be added at the top of the original file."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "It can be ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "false"), " (no banner), a ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "String"), ", or a ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "Function<(string) -> String>"), " that will be called with the filename where extracted comments have been stored.\nWill be wrapped into comment."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+  }, "function<(string) -> String>"), " that will be called with the filename where the extracted comments have been stored."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "The banner will be wrapped in a comment."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
   }, "webpack.config.js")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
     className: "hljs language-js",
@@ -275796,7 +276059,7 @@ function MDXContent(_ref) {
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "header-link",
     parentName: "a"
-  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "If you avoid building with comments, use this config:"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "If you want to build without comments, use this config:"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
   }, "webpack.config.js")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
     className: "hljs language-js",
@@ -276055,15 +276318,17 @@ function MDXContent(_ref) {
     parentName: "p"
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "a"
-  }, "swc")), " is a super-fast compiler written in rust; producing widely-supported javascript from modern standards and typescript."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
+  }, "swc")), " is a super-fast compiler written in ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+    parentName: "p"
+  }, "Rust"), ", producing widely supported JavaScript from modern standards and TypeScript."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("blockquote", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
     parentName: "blockquote"
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
   }, "Warning")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
     parentName: "blockquote"
-  }, "the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "The ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "extractComments"), " option is not supported and all comments will be removed by default, it will be fixed in future")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+  }, "extractComments"), " option is not supported, and all comments will be removed by default. This will be fixed in future")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
   }, "webpack.config.js")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
     className: "hljs language-js",
@@ -276191,9 +276456,9 @@ function MDXContent(_ref) {
     parentName: "p"
   }, "Warning")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", {
     parentName: "blockquote"
-  }, "the ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }, "The ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
-  }, "extractComments"), " option is not supported and all legal comments (i.e. copyright, licenses and etc) will be preserved")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
+  }, "extractComments"), " option is not supported, and all legal comments (i.e. copyright, licenses and etc) will be preserved.")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
   }, "webpack.config.js")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
     className: "hljs language-js",
@@ -276326,7 +276591,7 @@ function MDXContent(_ref) {
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "header-link",
     parentName: "a"
-  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Override default minify function - use ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
+  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Override the default minify function - use ", (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("inlineCode", {
     parentName: "p"
   }, "uglify-js"), " for minification."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("strong", {
     parentName: "p"
@@ -276533,7 +276798,7 @@ function MDXContent(_ref) {
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "header-link",
     parentName: "a"
-  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "With default terser minify function:"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
+  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "With default Terser minify function:"), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("pre", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("code", {
     className: "hljs language-ts",
     parentName: "pre"
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
@@ -276997,7 +277262,7 @@ function MDXContent(_ref) {
   }, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
     className: "header-link",
     parentName: "a"
-  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "Please take a moment to read our contributing guidelines if you haven't yet done so."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
+  }))), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, "We welcome all contributions!\nIf you're new here, please take a moment to review our contributing guidelines before submitting issues or pull requests."), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("p", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("a", {
     href: "https://github.com/webpack-contrib/terser-webpack-plugin/blob/master/.github/CONTRIBUTING.md",
     parentName: "p"
   }, "CONTRIBUTING")), (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("h2", null, (0,_mdx_js_react__WEBPACK_IMPORTED_MODULE_1__/* .mdx */ .kt)("span", {
@@ -298986,7 +299251,7 @@ module.exports = require("stream");
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames based on template
-/******/ 			return ".server/" + chunkId + "." + {"483":"27246626d81578d1","514":"bcc151eec59a1367","759":"5f5a8bce0dd2a524","790":"537e190e82c6c4d0"}[chunkId] + ".js";
+/******/ 			return ".server/" + chunkId + "." + {"483":"27246626d81578d1","514":"bcc151eec59a1367","759":"ddd7f2dd4be37d0a","790":"537e190e82c6c4d0"}[chunkId] + ".js";
 /******/ 		};
 /******/ 	})();
 /******/ 	
@@ -305852,7 +306117,7 @@ const logo_on_white_bg_namespaceObject = __webpack_require__.p + "logo-on-white-
 ;// CONCATENATED MODULE: ./assets/icon-pwa-512x512.png
 const icon_pwa_512x512_namespaceObject = __webpack_require__.p + "icon-pwa-512x512.934507c816afbcdb.png";
 ;// CONCATENATED MODULE: ./_content.json
-const _content_namespaceObject = JSON.parse('{"path":"./src/content","name":"content","children":[{"path":"src/content/api","name":"api","children":[{"path":"src/content/api/index.mdx","name":"index.mdx","size":1888,"type":"file","extension":".mdx","url":"/api/","anchors":[{"title":"CLI","id":"cli","level":2},{"title":"Module","id":"module","level":2},{"title":"Node","id":"node","level":2},{"title":"Loaders","id":"loaders","level":2},{"title":"Plugins","id":"plugins","level":2}],"title":"Introduction","sort":-1,"contributors":["tbroadley"]},{"path":"src/content/api/cli.mdx","name":"cli.mdx","size":25994,"type":"file","extension":".mdx","url":"/api/cli/","anchors":[{"title":"Commands","id":"commands","level":2},{"title":"Build","id":"build","level":3},{"title":"Init","id":"init","level":3},{"title":"Loader","id":"loader","level":3},{"title":"Plugin","id":"plugin","level":3},{"title":"Info","id":"info","level":3},{"title":"Configtest","id":"configtest","level":3},{"title":"Serve","id":"serve","level":3},{"title":"Watch","id":"watch","level":3},{"title":"Flags","id":"flags","level":2},{"title":"Negated Flags","id":"negated-flags","level":3},{"title":"Core Flags","id":"core-flags","level":3},{"title":"Usage","id":"usage","level":2},{"title":"With configuration file","id":"with-configuration-file","level":3},{"title":"Without configuration file","id":"without-configuration-file","level":3},{"title":"Default Configurations","id":"default-configurations","level":2},{"title":"Common Options","id":"common-options","level":2},{"title":"help","id":"help","level":3},{"title":"version","id":"version","level":3},{"title":"config","id":"config","level":3},{"title":"config-name","id":"config-name","level":3},{"title":"merge","id":"merge","level":3},{"title":"extends","id":"extends","level":3},{"title":"json","id":"json","level":3},{"title":"Environment Options","id":"environment-options","level":2},{"title":"env","id":"env","level":3},{"title":"node-env","id":"node-env","level":3},{"title":"define-process-env-node-env","id":"define-process-env-node-env","level":3},{"title":"Configuration Options","id":"configuration-options","level":2},{"title":"Analyzing Bundle","id":"analyzing-bundle","level":2},{"title":"Progress","id":"progress","level":2},{"title":"Pass CLI arguments to Node.js","id":"pass-cli-arguments-to-nodejs","level":2},{"title":"Exit codes and their meanings","id":"exit-codes-and-their-meanings","level":2},{"title":"CLI Environment Variables","id":"cli-environment-variables","level":2},{"title":"WEBPACK_PACKAGE","id":"webpack_package","level":3},{"title":"Troubleshooting","id":"troubleshooting","level":2},{"title":"TypeError [ERR_UNKNOWN_FILE_EXTENSION]: Unknown file extension \\".ts\\" for ./webpack.config.ts","id":"typeerror-err_unknown_file_extension-unknown-file-extension-ts-for-webpackconfigts","level":3}],"title":"Command Line Interface","sort":1,"contributors":["anshumanv","rishabh3112","snitin315","evenstensberg","simon04","tbroadley","chenxsan","rencire","madhavarshney","EugeneHlushko","byzyk","wizardofhogwarts","EslamHiko","smelukov","anikethsaha","jamesgeorge007","burhanuday"],"related":[{"title":"Analyzing Build Statistics","url":"https://survivejs.com/webpack/optimizing-build/analyzing-build-statistics/"},{"title":"Three simple ways to inspect a webpack bundle","url":"https://medium.com/@joeclever/three-simple-ways-to-inspect-a-webpack-bundle-7f6a8fe7195d#.7d2i06mjx"},{"title":"Optimising your application bundle size with webpack","url":"https://hackernoon.com/optimising-your-application-bundle-size-with-webpack-e85b00bab579#.5w5ko08pq"},{"title":"Analysing and minimising the size of client-side bundle with webpack and source-map-explorer","url":"https://medium.com/@nimgrg/analysing-and-minimising-the-size-of-client-side-bundle-with-webpack-and-source-map-explorer-41096559beca#.c3t2srr8x"}]},{"path":"src/content/api/node.mdx","name":"node.mdx","size":9912,"type":"file","extension":".mdx","url":"/api/node/","anchors":[{"title":"Installation","id":"installation","level":2},{"title":"webpack()","id":"webpack","level":2},{"title":"Compiler Instance","id":"compiler-instance","level":2},{"title":"Run","id":"run","level":2},{"title":"Watching","id":"watching","level":2},{"title":"Close Watching","id":"close-watching","level":3},{"title":"Invalidate Watching","id":"invalidate-watching","level":3},{"title":"Stats Object","id":"stats-object","level":2},{"title":"stats.hasErrors()","id":"statshaserrors","level":3},{"title":"stats.hasWarnings()","id":"statshaswarnings","level":3},{"title":"stats.toJson(options)","id":"statstojsonoptions","level":3},{"title":"stats.toString(options)","id":"statstostringoptions","level":3},{"title":"MultiCompiler","id":"multicompiler","level":2},{"title":"Error Handling","id":"error-handling","level":2},{"title":"Custom File Systems","id":"custom-file-systems","level":2}],"title":"Node Interface","sort":2,"contributors":["sallar","rynclark","byzyk","wizardofhogwarts","EugeneHlushko","lukasgeiter","toshihidetagami","chenxsan","jamesgeorge007","textbook"]},{"path":"src/content/api/stats.mdx","name":"stats.mdx","size":11861,"type":"file","extension":".mdx","url":"/api/stats/","anchors":[{"title":"Structure","id":"structure","level":2},{"title":"Asset Objects","id":"asset-objects","level":3},{"title":"Chunk Objects","id":"chunk-objects","level":3},{"title":"Module Objects","id":"module-objects","level":3},{"title":"Entry Objects","id":"entry-objects","level":3},{"title":"Errors and Warnings","id":"errors-and-warnings","level":3}],"title":"Stats Data","sort":3,"contributors":["skipjack","franjohn21","byzyk","EugeneHlushko","superburrito","chenxsan","rahul3v","snitin315"]},{"path":"src/content/api/webpack-dev-server.mdx","name":"webpack-dev-server.mdx","size":4181,"type":"file","extension":".mdx","url":"/api/webpack-dev-server/","anchors":[{"title":"Installation","id":"installation","level":2},{"title":"start","id":"start","level":2},{"title":"startCallback(callback)","id":"startcallbackcallback","level":2},{"title":"stop","id":"stop","level":2},{"title":"stopCallback(callback)","id":"stopcallbackcallback","level":2},{"title":"internalIP(family: \\"v4\\" | \\"v6\\")","id":"internalipfamily-v4--v6","level":2},{"title":"internalIPSync(family: \\"v4\\" | \\"v6\\")","id":"internalipsyncfamily-v4--v6","level":2}],"title":"webpack-dev-server API","sort":3,"contributors":["snitin315"]},{"path":"src/content/api/hot-module-replacement.mdx","name":"hot-module-replacement.mdx","size":12482,"type":"file","extension":".mdx","url":"/api/hot-module-replacement/","anchors":[{"title":"Module API","id":"module-api","level":2},{"title":"accept","id":"accept","level":3},{"title":"accept (self)","id":"accept-self","level":3},{"title":"decline","id":"decline","level":3},{"title":"decline (self)","id":"decline-self","level":3},{"title":"dispose (or addDisposeHandler)","id":"dispose-or-adddisposehandler","level":3},{"title":"invalidate","id":"invalidate","level":3},{"title":"removeDisposeHandler","id":"removedisposehandler","level":3},{"title":"Management API","id":"management-api","level":2},{"title":"status","id":"status","level":3},{"title":"check","id":"check","level":3},{"title":"apply","id":"apply","level":3},{"title":"addStatusHandler","id":"addstatushandler","level":3},{"title":"removeStatusHandler","id":"removestatushandler","level":3}],"title":"Hot Module Replacement","sort":4,"contributors":["sokra","skipjack","tbroadley","byzyk","wizardofhogwarts","snitin315"],"related":[{"title":"Concepts - Hot Module Replacement","url":"/concepts/hot-module-replacement"},{"title":"Guides - Hot Module Replacement","url":"/guides/hot-module-replacement"}]},{"path":"src/content/api/loaders.mdx","name":"loaders.mdx","size":26782,"type":"file","extension":".mdx","url":"/api/loaders/","anchors":[{"title":"Examples","id":"examples","level":2},{"title":"Synchronous Loaders","id":"synchronous-loaders","level":3},{"title":"Asynchronous Loaders","id":"asynchronous-loaders","level":3},{"title":"\\"Raw\\" Loader","id":"raw-loader","level":3},{"title":"Pitching Loader","id":"pitching-loader","level":3},{"title":"The Loader Context","id":"the-loader-context","level":2},{"title":"Example for the loader context","id":"example-for-the-loader-context","level":3},{"title":"this.addContextDependency","id":"thisaddcontextdependency","level":3},{"title":"this.addDependency","id":"thisadddependency","level":3},{"title":"this.addMissingDependency","id":"thisaddmissingdependency","level":3},{"title":"this.async","id":"thisasync","level":3},{"title":"this.cacheable","id":"thiscacheable","level":3},{"title":"this.callback","id":"thiscallback","level":3},{"title":"this.clearDependencies","id":"thiscleardependencies","level":3},{"title":"this.context","id":"thiscontext","level":3},{"title":"this.data","id":"thisdata","level":3},{"title":"this.emitError","id":"thisemiterror","level":3},{"title":"this.emitFile","id":"thisemitfile","level":3},{"title":"this.emitWarning","id":"thisemitwarning","level":3},{"title":"this.environment","id":"thisenvironment","level":3},{"title":"this.fs","id":"thisfs","level":3},{"title":"this.getOptions(schema)","id":"thisgetoptionsschema","level":3},{"title":"this.getResolve","id":"thisgetresolve","level":3},{"title":"this.hot","id":"thishot","level":3},{"title":"this.importModule","id":"thisimportmodule","level":3},{"title":"this.loaderIndex","id":"thisloaderindex","level":3},{"title":"this.loadModule","id":"thisloadmodule","level":3},{"title":"this.loaders","id":"thisloaders","level":3},{"title":"this.mode","id":"thismode","level":3},{"title":"this.query","id":"thisquery","level":3},{"title":"this.request","id":"thisrequest","level":3},{"title":"this.resolve","id":"thisresolve","level":3},{"title":"this.resource","id":"thisresource","level":3},{"title":"this.resourcePath","id":"thisresourcepath","level":3},{"title":"this.resourceQuery","id":"thisresourcequery","level":3},{"title":"this.rootContext","id":"thisrootcontext","level":3},{"title":"this.sourceMap","id":"thissourcemap","level":3},{"title":"this.target","id":"thistarget","level":3},{"title":"this.utils","id":"thisutils","level":3},{"title":"this.version","id":"thisversion","level":3},{"title":"this.webpack","id":"thiswebpack","level":3},{"title":"Webpack specific properties","id":"webpack-specific-properties","level":2},{"title":"this._compilation","id":"this_compilation","level":3},{"title":"this._compiler","id":"this_compiler","level":3},{"title":"Deprecated context properties","id":"deprecated-context-properties","level":2},{"title":"this.debug","id":"thisdebug","level":3},{"title":"this.inputValue","id":"thisinputvalue","level":3},{"title":"this.minimize","id":"thisminimize","level":3},{"title":"this.value","id":"thisvalue","level":3},{"title":"this._module","id":"this_module","level":3},{"title":"Error Reporting","id":"error-reporting","level":2},{"title":"Inline matchResource","id":"inline-matchresource","level":2},{"title":"Logging","id":"logging","level":2}],"title":"Loader Interface","sort":5,"contributors":["TheLarkInn","jhnns","tbroadley","byzyk","sokra","EugeneHlushko","jantimon","superburrito","wizardofhogwarts","snitin315","chenxsan","jamesgeorge007"]},{"path":"src/content/api/logging.mdx","name":"logging.mdx","size":4597,"type":"file","extension":".mdx","url":"/api/logging/","anchors":[{"title":"Examples of how to get and use webpack logger in loaders and plugins","id":"examples-of-how-to-get-and-use-webpack-logger-in-loaders-and-plugins","level":2},{"title":"Logger methods","id":"logger-methods","level":2},{"title":"Runtime Logger API","id":"runtime-logger-api","level":2}],"title":"Logger Interface","sort":6,"contributors":["EugeneHlushko","wizardofhogwarts","chenxsan","snitin315"]},{"path":"src/content/api/printable.mdx","name":"printable.mdx","size":1666,"type":"file","extension":".mdx","url":"/api/printable/","anchors":[{"title":"Introduction","id":"introduction","level":1},{"title":"Command Line Interface","id":"command-line-interface","level":1},{"title":"Node Interface","id":"node-interface","level":1},{"title":"Stats Data","id":"stats-data","level":1},{"title":"webpack-dev-server API","id":"webpack-dev-server-api","level":1},{"title":"Hot Module Replacement","id":"hot-module-replacement","level":1},{"title":"Loader Interface","id":"loader-interface","level":1},{"title":"Logger Interface","id":"logger-interface","level":1},{"title":"Module Methods","id":"module-methods","level":1},{"title":"Module Variables","id":"module-variables","level":1},{"title":"Compiler Hooks","id":"compiler-hooks","level":1},{"title":"Compilation Hooks","id":"compilation-hooks","level":1},{"title":"ContextModuleFactory Hooks","id":"contextmodulefactory-hooks","level":1},{"title":"JavascriptParser Hooks","id":"javascriptparser-hooks","level":1},{"title":"NormalModuleFactory Hooks","id":"normalmodulefactory-hooks","level":1},{"title":"Compilation Object","id":"compilation-object","level":1},{"title":"Plugin API","id":"plugin-api","level":1},{"title":"Resolvers","id":"resolvers","level":1}],"title":"Printable","sort":999,"contributors":["webpack"]},{"path":"src/content/api/module-methods.mdx","name":"module-methods.mdx","size":20293,"type":"file","extension":".mdx","url":"/api/module-methods/","anchors":[{"title":"ES6 (Recommended)","id":"es6-recommended","level":2},{"title":"import","id":"import","level":3},{"title":"export","id":"export","level":3},{"title":"import()","id":"import-1","level":3},{"title":"Dynamic expressions in import()","id":"dynamic-expressions-in-import","level":3},{"title":"CommonJS","id":"commonjs","level":2},{"title":"require","id":"require","level":3},{"title":"require.resolve","id":"requireresolve","level":3},{"title":"require.cache","id":"requirecache","level":3},{"title":"require.ensure","id":"requireensure","level":3},{"title":"AMD","id":"amd","level":2},{"title":"define (with factory)","id":"define-with-factory","level":3},{"title":"define (with value)","id":"define-with-value","level":3},{"title":"require (amd-version)","id":"require-amd-version","level":3},{"title":"Labeled Modules","id":"labeled-modules","level":2},{"title":"export label","id":"export-label","level":3},{"title":"require label","id":"require-label","level":3},{"title":"Webpack","id":"webpack","level":2},{"title":"require.context","id":"requirecontext","level":3},{"title":"require.include","id":"requireinclude","level":3},{"title":"require.resolveWeak","id":"requireresolveweak","level":3},{"title":"warning","id":"warning","level":3}],"title":"Module Methods","group":"Modules","sort":7,"contributors":["skipjack","sokra","fadysamirsadek","byzyk","debs-obrien","wizardofhogwarts","EugeneHlushko","chenxsan","jamesgeorge007","WofWca"],"related":[{"title":"CommonJS Wikipedia","url":"https://en.wikipedia.org/wiki/CommonJS"},{"title":"Asynchronous Module Definition","url":"https://en.wikipedia.org/wiki/Asynchronous_module_definition"}]},{"path":"src/content/api/module-variables.mdx","name":"module-variables.mdx","size":8539,"type":"file","extension":".mdx","url":"/api/module-variables/","anchors":[{"title":"module.loaded (NodeJS)","id":"moduleloaded-nodejs","level":2},{"title":"module.hot (webpack-specific)","id":"modulehot-webpack-specific","level":2},{"title":"module.id (CommonJS)","id":"moduleid-commonjs","level":2},{"title":"module.exports (CommonJS)","id":"moduleexports-commonjs","level":2},{"title":"exports (CommonJS)","id":"exports-commonjs","level":2},{"title":"global (NodeJS)","id":"global-nodejs","level":2},{"title":"__dirname (NodeJS)","id":"__dirname-nodejs","level":2},{"title":"import.meta","id":"importmeta","level":2},{"title":"import.meta.url","id":"importmetaurl","level":3},{"title":"import.meta.webpack","id":"importmetawebpack","level":3},{"title":"import.meta.webpackHot","id":"importmetawebpackhot","level":3},{"title":"import.meta.webpackContext","id":"importmetawebpackcontext","level":3},{"title":"__filename (NodeJS)","id":"__filename-nodejs","level":2},{"title":"__resourceQuery (webpack-specific)","id":"__resourcequery-webpack-specific","level":2},{"title":"__webpack_public_path__ (webpack-specific)","id":"__webpack_public_path__-webpack-specific","level":2},{"title":"__webpack_require__ (webpack-specific)","id":"__webpack_require__-webpack-specific","level":2},{"title":"__webpack_chunk_load__ (webpack-specific)","id":"__webpack_chunk_load__-webpack-specific","level":2},{"title":"__webpack_module__ (webpack-specific)","id":"__webpack_module__-webpack-specific","level":2},{"title":"__webpack_module__.id (webpack-specific)","id":"__webpack_module__id-webpack-specific","level":2},{"title":"__webpack_modules__ (webpack-specific)","id":"__webpack_modules__-webpack-specific","level":2},{"title":"__webpack_hash__ (webpack-specific)","id":"__webpack_hash__-webpack-specific","level":2},{"title":"__webpack_get_script_filename__ (webpack-specific)","id":"__webpack_get_script_filename__-webpack-specific","level":2},{"title":"__non_webpack_require__ (webpack-specific)","id":"__non_webpack_require__-webpack-specific","level":2},{"title":"__webpack_exports_info__ (webpack-specific)","id":"__webpack_exports_info__-webpack-specific","level":2},{"title":"__webpack_is_included__ (webpack-specific)","id":"__webpack_is_included__-webpack-specific","level":2},{"title":"__webpack_base_uri__ (webpack-specific)","id":"__webpack_base_uri__-webpack-specific","level":2},{"title":"__webpack_runtime_id__","id":"__webpack_runtime_id__","level":2},{"title":"DEBUG (webpack-specific)","id":"debug-webpack-specific","level":2}],"title":"Module Variables","group":"Modules","sort":8,"contributors":["skipjack","sokra","ahmehri","tbroadley","byzyk","EugeneHlushko","wizardofhogwarts","anikethsaha","chenxsan","jamesgeorge007","snitin315"],"related":[{"title":"CommonJS","url":"https://en.wikipedia.org/wiki/CommonJS"},{"title":"Asynchronous Module Definition","url":"https://en.wikipedia.org/wiki/Asynchronous_module_definition"}]},{"path":"src/content/api/compilation-object.mdx","name":"compilation-object.mdx","size":7134,"type":"file","extension":".mdx","url":"/api/compilation-object/","anchors":[{"title":"compilation object methods","id":"compilation-object-methods","level":2},{"title":"getStats","id":"getstats","level":3},{"title":"addModule","id":"addmodule","level":3},{"title":"getModule","id":"getmodule","level":3},{"title":"findModule","id":"findmodule","level":3},{"title":"buildModule","id":"buildmodule","level":3},{"title":"processModuleDependencies","id":"processmoduledependencies","level":3},{"title":"addEntry","id":"addentry","level":3},{"title":"rebuildModule","id":"rebuildmodule","level":3},{"title":"finish","id":"finish","level":3},{"title":"seal","id":"seal","level":3},{"title":"unseal","id":"unseal","level":3},{"title":"reportDependencyErrorsAndWarnings","id":"reportdependencyerrorsandwarnings","level":3},{"title":"addChunkInGroup","id":"addchunkingroup","level":3},{"title":"addChunk","id":"addchunk","level":3},{"title":"assignDepth","id":"assigndepth","level":3},{"title":"getDependencyReference","id":"getdependencyreference","level":3},{"title":"processDependenciesBlocksForChunkGroups","id":"processdependenciesblocksforchunkgroups","level":3},{"title":"removeReasonsOfDependencyBlock","id":"removereasonsofdependencyblock","level":3},{"title":"patchChunksAfterReasonRemoval","id":"patchchunksafterreasonremoval","level":3},{"title":"removeChunkFromDependencies","id":"removechunkfromdependencies","level":3},{"title":"sortItemsWithChunkIds","id":"sortitemswithchunkids","level":3},{"title":"summarizeDependencies","id":"summarizedependencies","level":3},{"title":"createHash","id":"createhash","level":3},{"title":"createModuleAssets","id":"createmoduleassets","level":3},{"title":"createChunkAssets","id":"createchunkassets","level":3},{"title":"getPath","id":"getpath","level":3},{"title":"getPathWithInfo","id":"getpathwithinfo","level":3},{"title":"createChildCompiler","id":"createchildcompiler","level":3},{"title":"checkConstraints","id":"checkconstraints","level":3},{"title":"emitAsset","id":"emitasset","level":3},{"title":"updateAsset","id":"updateasset","level":3},{"title":"deleteAsset","id":"deleteasset","level":3},{"title":"getAssets","id":"getassets","level":3},{"title":"getAsset","id":"getasset","level":3}],"title":"Compilation Object","group":"Objects","sort":14,"contributors":["EugeneHlushko","wizardofhogwarts","jamesgeorge007","snitin315"]},{"path":"src/content/api/compiler-hooks.mdx","name":"compiler-hooks.mdx","size":6946,"type":"file","extension":".mdx","url":"/api/compiler-hooks/","anchors":[{"title":"Watching","id":"watching","level":2},{"title":"Hooks","id":"hooks","level":2},{"title":"environment","id":"environment","level":3},{"title":"afterEnvironment","id":"afterenvironment","level":3},{"title":"entryOption","id":"entryoption","level":3},{"title":"afterPlugins","id":"afterplugins","level":3},{"title":"afterResolvers","id":"afterresolvers","level":3},{"title":"initialize","id":"initialize","level":3},{"title":"beforeRun","id":"beforerun","level":3},{"title":"run","id":"run","level":3},{"title":"watchRun","id":"watchrun","level":3},{"title":"normalModuleFactory","id":"normalmodulefactory","level":3},{"title":"contextModuleFactory","id":"contextmodulefactory","level":3},{"title":"beforeCompile","id":"beforecompile","level":3},{"title":"compile","id":"compile","level":3},{"title":"thisCompilation","id":"thiscompilation","level":3},{"title":"compilation","id":"compilation","level":3},{"title":"make","id":"make","level":3},{"title":"afterCompile","id":"aftercompile","level":3},{"title":"shouldEmit","id":"shouldemit","level":3},{"title":"emit","id":"emit","level":3},{"title":"afterEmit","id":"afteremit","level":3},{"title":"assetEmitted","id":"assetemitted","level":3},{"title":"done","id":"done","level":3},{"title":"additionalPass","id":"additionalpass","level":3},{"title":"failed","id":"failed","level":3},{"title":"invalid","id":"invalid","level":3},{"title":"watchClose","id":"watchclose","level":3},{"title":"shutdown","id":"shutdown","level":3},{"title":"infrastructureLog","id":"infrastructurelog","level":3},{"title":"log","id":"log","level":3}],"title":"Compiler Hooks","group":"Plugins","sort":9,"contributors":["rishantagarwal","byzyk","madhavarshney","misterdev","EugeneHlushko","superburrito","chenxsan"]},{"path":"src/content/api/compilation-hooks.mdx","name":"compilation-hooks.mdx","size":16219,"type":"file","extension":".mdx","url":"/api/compilation-hooks/","anchors":[{"title":"buildModule","id":"buildmodule","level":3},{"title":"rebuildModule","id":"rebuildmodule","level":3},{"title":"failedModule","id":"failedmodule","level":3},{"title":"succeedModule","id":"succeedmodule","level":3},{"title":"finishModules","id":"finishmodules","level":3},{"title":"finishRebuildingModule","id":"finishrebuildingmodule","level":3},{"title":"seal","id":"seal","level":3},{"title":"unseal","id":"unseal","level":3},{"title":"optimizeDependencies","id":"optimizedependencies","level":3},{"title":"afterOptimizeDependencies","id":"afteroptimizedependencies","level":3},{"title":"afterChunks","id":"afterchunks","level":3},{"title":"optimize","id":"optimize","level":3},{"title":"optimizeModules","id":"optimizemodules","level":3},{"title":"afterOptimizeModules","id":"afteroptimizemodules","level":3},{"title":"optimizeChunks","id":"optimizechunks","level":3},{"title":"afterOptimizeChunks","id":"afteroptimizechunks","level":3},{"title":"optimizeTree","id":"optimizetree","level":3},{"title":"afterOptimizeTree","id":"afteroptimizetree","level":3},{"title":"optimizeChunkModules","id":"optimizechunkmodules","level":3},{"title":"afterOptimizeChunkModules","id":"afteroptimizechunkmodules","level":3},{"title":"shouldRecord","id":"shouldrecord","level":3},{"title":"reviveModules","id":"revivemodules","level":3},{"title":"beforeModuleIds","id":"beforemoduleids","level":3},{"title":"moduleIds","id":"moduleids","level":3},{"title":"optimizeModuleIds","id":"optimizemoduleids","level":3},{"title":"afterOptimizeModuleIds","id":"afteroptimizemoduleids","level":3},{"title":"reviveChunks","id":"revivechunks","level":3},{"title":"beforeChunkIds","id":"beforechunkids","level":3},{"title":"chunkIds","id":"chunkids","level":3},{"title":"optimizeChunkIds","id":"optimizechunkids","level":3},{"title":"afterOptimizeChunkIds","id":"afteroptimizechunkids","level":3},{"title":"recordModules","id":"recordmodules","level":3},{"title":"recordChunks","id":"recordchunks","level":3},{"title":"beforeModuleHash","id":"beforemodulehash","level":3},{"title":"afterModuleHash","id":"aftermodulehash","level":3},{"title":"beforeHash","id":"beforehash","level":3},{"title":"afterHash","id":"afterhash","level":3},{"title":"recordHash","id":"recordhash","level":3},{"title":"record","id":"record","level":3},{"title":"beforeModuleAssets","id":"beforemoduleassets","level":3},{"title":"additionalChunkAssets","id":"additionalchunkassets","level":3},{"title":"shouldGenerateChunkAssets","id":"shouldgeneratechunkassets","level":3},{"title":"beforeChunkAssets","id":"beforechunkassets","level":3},{"title":"additionalAssets","id":"additionalassets","level":3},{"title":"optimizeChunkAssets","id":"optimizechunkassets","level":3},{"title":"afterOptimizeChunkAssets","id":"afteroptimizechunkassets","level":3},{"title":"optimizeAssets","id":"optimizeassets","level":3},{"title":"afterOptimizeAssets","id":"afteroptimizeassets","level":3},{"title":"processAssets","id":"processassets","level":3},{"title":"afterProcessAssets","id":"afterprocessassets","level":3},{"title":"needAdditionalSeal","id":"needadditionalseal","level":3},{"title":"afterSeal","id":"afterseal","level":3},{"title":"chunkHash","id":"chunkhash","level":3},{"title":"moduleAsset","id":"moduleasset","level":3},{"title":"chunkAsset","id":"chunkasset","level":3},{"title":"assetPath","id":"assetpath","level":3},{"title":"needAdditionalPass","id":"needadditionalpass","level":3},{"title":"childCompiler","id":"childcompiler","level":3},{"title":"normalModuleLoader","id":"normalmoduleloader","level":3}],"title":"Compilation Hooks","group":"Plugins","sort":10,"contributors":["slavafomin","byzyk","madhavarshney","misterdev","wizardofhogwarts","EugeneHlushko","chenxsan","jamesgeorge007"]},{"path":"src/content/api/contextmodulefactory-hooks.mdx","name":"contextmodulefactory-hooks.mdx","size":1531,"type":"file","extension":".mdx","url":"/api/contextmodulefactory-hooks/","anchors":[{"title":"beforeResolve","id":"beforeresolve","level":3},{"title":"afterResolve","id":"afterresolve","level":3},{"title":"contextModuleFiles","id":"contextmodulefiles","level":3},{"title":"alternativeRequests","id":"alternativerequests","level":3}],"title":"ContextModuleFactory Hooks","group":"Plugins","sort":11,"contributors":["iguessitsokay"]},{"path":"src/content/api/parser.mdx","name":"parser.mdx","size":9932,"type":"file","extension":".mdx","url":"/api/parser/","anchors":[{"title":"Hooks","id":"hooks","level":2},{"title":"evaluateTypeof","id":"evaluatetypeof","level":3},{"title":"evaluate","id":"evaluate","level":3},{"title":"evaluateIdentifier","id":"evaluateidentifier","level":3},{"title":"evaluateDefinedIdentifier","id":"evaluatedefinedidentifier","level":3},{"title":"evaluateCallExpressionMember","id":"evaluatecallexpressionmember","level":3},{"title":"statement","id":"statement","level":3},{"title":"statementIf","id":"statementif","level":3},{"title":"label","id":"label","level":3},{"title":"import","id":"import","level":3},{"title":"importSpecifier","id":"importspecifier","level":3},{"title":"export","id":"export","level":3},{"title":"exportImport","id":"exportimport","level":3},{"title":"exportDeclaration","id":"exportdeclaration","level":3},{"title":"exportExpression","id":"exportexpression","level":3},{"title":"exportSpecifier","id":"exportspecifier","level":3},{"title":"exportImportSpecifier","id":"exportimportspecifier","level":3},{"title":"varDeclaration","id":"vardeclaration","level":3},{"title":"varDeclarationLet","id":"vardeclarationlet","level":3},{"title":"varDeclarationConst","id":"vardeclarationconst","level":3},{"title":"varDeclarationVar","id":"vardeclarationvar","level":3},{"title":"canRename","id":"canrename","level":3},{"title":"rename","id":"rename","level":3},{"title":"assigned","id":"assigned","level":3},{"title":"assign","id":"assign","level":3},{"title":"typeof","id":"typeof","level":3},{"title":"call","id":"call","level":3},{"title":"callMemberChain","id":"callmemberchain","level":3},{"title":"new","id":"new","level":3},{"title":"expression","id":"expression","level":3},{"title":"expressionConditionalOperator","id":"expressionconditionaloperator","level":3},{"title":"program","id":"program","level":3}],"title":"JavascriptParser Hooks","group":"Plugins","sort":12,"contributors":["byzyk","DeTeam","misterdev","EugeneHlushko","chenxsan"]},{"path":"src/content/api/normalmodulefactory-hooks.mdx","name":"normalmodulefactory-hooks.mdx","size":3784,"type":"file","extension":".mdx","url":"/api/normalmodulefactory-hooks/","anchors":[{"title":"beforeResolve","id":"beforeresolve","level":3},{"title":"factorize","id":"factorize","level":3},{"title":"resolve","id":"resolve","level":3},{"title":"resolveForScheme","id":"resolveforscheme","level":3},{"title":"afterResolve","id":"afterresolve","level":3},{"title":"createModule","id":"createmodule","level":3},{"title":"createModuleClass","id":"createmoduleclass","level":3},{"title":"module","id":"module","level":3},{"title":"createParser","id":"createparser","level":3},{"title":"parser","id":"parser","level":3},{"title":"createGenerator","id":"creategenerator","level":3},{"title":"generator","id":"generator","level":3}],"title":"NormalModuleFactory Hooks","group":"Plugins","sort":13,"contributors":["iguessitsokay","chenxsan"]},{"path":"src/content/api/plugins.mdx","name":"plugins.mdx","size":6988,"type":"file","extension":".mdx","url":"/api/plugins/","anchors":[{"title":"Tapable","id":"tapable","level":2},{"title":"Plugin Types","id":"plugin-types","level":2},{"title":"Custom Hooks","id":"custom-hooks","level":2},{"title":"Reporting Progress","id":"reporting-progress","level":2},{"title":"Logging","id":"logging","level":2},{"title":"Next Steps","id":"next-steps","level":2}],"title":"Plugin API","group":"Plugins","sort":14,"contributors":["thelarkinn","pksjce","e-cloud","byzyk","EugeneHlushko","wizardofhogwarts","snitin315"]},{"path":"src/content/api/resolvers.mdx","name":"resolvers.mdx","size":2183,"type":"file","extension":".mdx","url":"/api/resolvers/","anchors":[{"title":"Types","id":"types","level":2},{"title":"Configuration Options","id":"configuration-options","level":2}],"title":"Resolvers","group":"Plugins","sort":15,"contributors":["EugeneHlushko","chenxsan"]}],"size":182912,"type":"directory","url":"/api/"},{"path":"src/content/blog","name":"blog","children":[{"path":"src/content/blog/2020-12-08-roadmap-2021.mdx","name":"2020-12-08-roadmap-2021.mdx","size":16371,"type":"file","extension":".mdx","url":"/blog/2020-12-08-roadmap-2021/","anchors":[{"title":"What happened so far?","id":"what-happened-so-far","level":2},{"title":"Roadmap 2021","id":"roadmap-2021","level":2},{"title":"Further stabilizing","id":"further-stabilizing","level":3},{"title":"EcmaScript Modules","id":"ecmascript-modules","level":3},{"title":"More first-class citizen","id":"more-first-class-citizen","level":3},{"title":"SourceMap performance","id":"sourcemap-performance","level":3},{"title":"exports/imports package.json field","id":"exportsimports-packagejson-field","level":3},{"title":"Improve CommonJS analysis","id":"improve-commonjs-analysis","level":3},{"title":"Hot Module Replacement for Module Federation","id":"hot-module-replacement-for-module-federation","level":3},{"title":"Hinting system","id":"hinting-system","level":3},{"title":"Multi-Threading","id":"multi-threading","level":3},{"title":"WebAssembly","id":"webassembly","level":3},{"title":"Disclaimer","id":"disclaimer","level":2}],"title":"Roadmap 2021 (2020-12-08)","sort":-202012080,"contributors":["sokra"]},{"path":"src/content/blog/2020-10-10-webpack-5-release.mdx","name":"2020-10-10-webpack-5-release.mdx","size":71620,"type":"file","extension":".mdx","url":"/blog/2020-10-10-webpack-5-release/","anchors":[{"title":"Common Questions","id":"common-questions","level":2},{"title":"So what does the release mean?","id":"so-what-does-the-release-mean","level":3},{"title":"So when is the time to upgrade?","id":"so-when-is-the-time-to-upgrade","level":3},{"title":"Sponsoring Update","id":"sponsoring-update","level":2},{"title":"General direction","id":"general-direction","level":2},{"title":"Migration Guide","id":"migration-guide","level":2},{"title":"Major Changes: Removals","id":"major-changes-removals","level":2},{"title":"Removed Deprecated Items","id":"removed-deprecated-items","level":3},{"title":"Deprecation codes","id":"deprecation-codes","level":3},{"title":"Syntax deprecated","id":"syntax-deprecated","level":3},{"title":"Automatic Node.js Polyfills Removed","id":"automatic-nodejs-polyfills-removed","level":3},{"title":"Major Changes: Long Term Caching","id":"major-changes-long-term-caching","level":2},{"title":"Deterministic Chunk, Module IDs and Export names","id":"deterministic-chunk-module-ids-and-export-names","level":3},{"title":"Real Content Hash","id":"real-content-hash","level":3},{"title":"Major Changes: Development Support","id":"major-changes-development-support","level":2},{"title":"Named Chunk IDs","id":"named-chunk-ids","level":3},{"title":"Module Federation","id":"module-federation","level":3},{"title":"Major Changes: New Web Platform Features","id":"major-changes-new-web-platform-features","level":2},{"title":"JSON modules","id":"json-modules","level":3},{"title":"import.meta","id":"importmeta","level":3},{"title":"Asset modules","id":"asset-modules","level":3},{"title":"Native Worker support","id":"native-worker-support","level":3},{"title":"URIs","id":"uris","level":3},{"title":"Async modules","id":"async-modules","level":3},{"title":"Externals","id":"externals","level":3},{"title":"Major Changes: New Node.js Ecosystem Features","id":"major-changes-new-nodejs-ecosystem-features","level":2},{"title":"Resolving","id":"resolving","level":3},{"title":"Major Changes: Development Experience","id":"major-changes-development-experience","level":2},{"title":"Improved target","id":"improved-target","level":3},{"title":"Stats","id":"stats","level":3},{"title":"Progress","id":"progress","level":3},{"title":"Automatic unique naming","id":"automatic-unique-naming","level":3},{"title":"Automatic public path","id":"automatic-public-path","level":3},{"title":"Typescript typings","id":"typescript-typings","level":3},{"title":"Major Changes: Optimization","id":"major-changes-optimization","level":2},{"title":"Nested tree-shaking","id":"nested-tree-shaking","level":3},{"title":"Inner-module tree-shaking","id":"inner-module-tree-shaking","level":3},{"title":"CommonJs Tree Shaking","id":"commonjs-tree-shaking","level":3},{"title":"Side-Effect analysis","id":"side-effect-analysis","level":3},{"title":"Optimization per runtime","id":"optimization-per-runtime","level":3},{"title":"Module Concatenation","id":"module-concatenation","level":3},{"title":"General Tree Shaking improvements","id":"general-tree-shaking-improvements","level":3},{"title":"Development Production Similarity","id":"development-production-similarity","level":3},{"title":"Improved Code Generation","id":"improved-code-generation","level":3},{"title":"Improved target option","id":"improved-target-option","level":3},{"title":"SplitChunks and Module Sizes","id":"splitchunks-and-module-sizes","level":3},{"title":"Major Changes: Performance","id":"major-changes-performance","level":2},{"title":"Persistent Caching","id":"persistent-caching","level":3},{"title":"File Emitting","id":"file-emitting","level":3},{"title":"Major Changes: Long outstanding problems","id":"major-changes-long-outstanding-problems","level":2},{"title":"Code Splitting for single-file-targets","id":"code-splitting-for-single-file-targets","level":3},{"title":"Updated Resolver","id":"updated-resolver","level":3},{"title":"Chunks without JS","id":"chunks-without-js","level":3},{"title":"Major Changes: Future","id":"major-changes-future","level":2},{"title":"Experiments","id":"experiments","level":3},{"title":"Minimum Node.js Version","id":"minimum-nodejs-version","level":3},{"title":"Changes to the Configuration","id":"changes-to-the-configuration","level":2},{"title":"Changes to the Structure","id":"changes-to-the-structure","level":3},{"title":"Changes to the Defaults","id":"changes-to-the-defaults","level":3},{"title":"Loader related Changes","id":"loader-related-changes","level":2},{"title":"this.getOptions","id":"thisgetoptions","level":3},{"title":"this.exec","id":"thisexec","level":3},{"title":"this.getResolve","id":"thisgetresolve","level":3},{"title":"Major Internal Changes","id":"major-internal-changes","level":2},{"title":"New plugin order","id":"new-plugin-order","level":3},{"title":"Runtime Modules","id":"runtime-modules","level":3},{"title":"Serialization","id":"serialization","level":3},{"title":"Plugins for Caching","id":"plugins-for-caching","level":3},{"title":"Hook Object Frozen","id":"hook-object-frozen","level":3},{"title":"Tapable Upgrade","id":"tapable-upgrade","level":3},{"title":"Staged Hooks","id":"staged-hooks","level":3},{"title":"Main/Chunk/ModuleTemplate deprecation","id":"mainchunkmoduletemplate-deprecation","level":3},{"title":"Entry point descriptor","id":"entry-point-descriptor","level":3},{"title":"Order and IDs","id":"order-and-ids","level":3},{"title":"Arrays to Sets","id":"arrays-to-sets","level":3},{"title":"Compilation.fileSystemInfo","id":"compilationfilesysteminfo","level":3},{"title":"Filesystems","id":"filesystems","level":3},{"title":"Hot Module Replacement","id":"hot-module-replacement","level":3},{"title":"Work Queues","id":"work-queues","level":3},{"title":"Logging","id":"logging","level":3},{"title":"Module and Chunk Graph","id":"module-and-chunk-graph","level":3},{"title":"Init Fragments","id":"init-fragments","level":3},{"title":"Module Source Types","id":"module-source-types","level":3},{"title":"Plugins for Stats","id":"plugins-for-stats","level":3},{"title":"New Watching","id":"new-watching","level":3},{"title":"SizeOnlySource after emit","id":"sizeonlysource-after-emit","level":3},{"title":"Emitting assets multiple times","id":"emitting-assets-multiple-times","level":3},{"title":"ExportsInfo","id":"exportsinfo","level":3},{"title":"Code Generation Phase","id":"code-generation-phase","level":3},{"title":"DependencyReference","id":"dependencyreference","level":3},{"title":"Presentational Dependencies","id":"presentational-dependencies","level":3},{"title":"Deprecated loaders","id":"deprecated-loaders","level":3},{"title":"Minor Changes","id":"minor-changes","level":2},{"title":"Other Minor Changes","id":"other-minor-changes","level":2}],"title":"Webpack 5 release (2020-10-10)","sort":-202010100,"contributors":["sokra","chenxsan"]},{"path":"src/content/blog/index.mdx","name":"index.mdx","size":214,"type":"file","extension":".mdx","url":"/blog/","anchors":[{"title":"Popular posts","id":"popular-posts","level":2}],"title":"Blog","sort":-1,"contributors":["sokra"]},{"path":"src/content/blog/printable.mdx","name":"printable.mdx","size":383,"type":"file","extension":".mdx","url":"/blog/printable/","anchors":[{"title":"Roadmap 2021 (2020-12-08)","id":"roadmap-2021-2020-12-08","level":1},{"title":"Webpack 5 release (2020-10-10)","id":"webpack-5-release-2020-10-10","level":1},{"title":"Blog","id":"blog","level":1}],"title":"Printable","sort":999,"contributors":["webpack"]}],"size":88588,"type":"directory","url":"/blog/"},{"path":"src/content/concepts","name":"concepts","children":[{"path":"src/content/concepts/index.mdx","name":"index.mdx","size":7732,"type":"file","extension":".mdx","url":"/concepts/","anchors":[{"title":"Entry","id":"entry","level":2},{"title":"Output","id":"output","level":2},{"title":"Loaders","id":"loaders","level":2},{"title":"Plugins","id":"plugins","level":2},{"title":"Mode","id":"mode","level":2},{"title":"Browser Compatibility","id":"browser-compatibility","level":2},{"title":"Environment","id":"environment","level":2}],"title":"Concepts","sort":-1,"contributors":["TheLarkInn","jhnns","grgur","johnstew","jimrfenner","TheDutchCoder","adambraimbridge","EugeneHlushko","jeremenichelli","arjunsajeev","byzyk","yairhaimo","farskid","LukeMwila","Jalitha","muhmushtaha","chenxsan","RyanGreyling2"]},{"path":"src/content/concepts/entry-points.mdx","name":"entry-points.mdx","size":6616,"type":"file","extension":".mdx","url":"/concepts/entry-points/","anchors":[{"title":"Single Entry (Shorthand) Syntax","id":"single-entry-shorthand-syntax","level":2},{"title":"Object Syntax","id":"object-syntax","level":2},{"title":"EntryDescription object","id":"entrydescription-object","level":3},{"title":"Scenarios","id":"scenarios","level":2},{"title":"Separate App and Vendor Entries","id":"separate-app-and-vendor-entries","level":3},{"title":"Multi-Page Application","id":"multi-page-application","level":3}],"title":"Entry Points","sort":1,"contributors":["TheLarkInn","chrisVillanueva","byzyk","sokra","EugeneHlushko","Zearin","chenxsan","adyjs","anshumanv","ritikbanger"]},{"path":"src/content/concepts/output.mdx","name":"output.mdx","size":1840,"type":"file","extension":".mdx","url":"/concepts/output/","anchors":[{"title":"Usage","id":"usage","level":2},{"title":"Multiple Entry Points","id":"multiple-entry-points","level":2},{"title":"Advanced","id":"advanced","level":2}],"title":"Output","sort":2,"contributors":["TheLarkInn","chyipin","rouzbeh84","byzyk","EugeneHlushko"]},{"path":"src/content/concepts/loaders.mdx","name":"loaders.mdx","size":5546,"type":"file","extension":".mdx","url":"/concepts/loaders/","anchors":[{"title":"Example","id":"example","level":2},{"title":"Using Loaders","id":"using-loaders","level":2},{"title":"Configuration","id":"configuration","level":3},{"title":"Inline","id":"inline","level":3},{"title":"Loader Features","id":"loader-features","level":2},{"title":"Resolving Loaders","id":"resolving-loaders","level":2}],"title":"Loaders","sort":3,"contributors":["manekinekko","evenstensberg","SpaceK33z","gangachris","TheLarkInn","simon04","jhnns","byzyk","debs-obrien","EugeneHlushko","wizardofhogwarts","lukasgeiter","furkle","jamesgeorge007","textbook"]},{"path":"src/content/concepts/plugins.mdx","name":"plugins.mdx","size":3398,"type":"file","extension":".mdx","url":"/concepts/plugins/","anchors":[{"title":"Anatomy","id":"anatomy","level":2},{"title":"Usage","id":"usage","level":2},{"title":"Configuration","id":"configuration","level":3},{"title":"Node API","id":"node-api","level":3}],"title":"Plugins","sort":4,"contributors":["TheLarkInn","jhnns","rouzbeh84","johnstew","MisterDev","byzyk","chenxsan"]},{"path":"src/content/concepts/configuration.mdx","name":"configuration.mdx","size":2448,"type":"file","extension":".mdx","url":"/concepts/configuration/","anchors":[{"title":"Introductory Configuration","id":"introductory-configuration","level":2},{"title":"Multiple Targets","id":"multiple-targets","level":2},{"title":"Using other Configuration Languages","id":"using-other-configuration-languages","level":2}],"title":"Configuration","sort":5,"contributors":["TheLarkInn","simon04","EugeneHlushko","byzyk"]},{"path":"src/content/concepts/modules.mdx","name":"modules.mdx","size":2898,"type":"file","extension":".mdx","url":"/concepts/modules/","anchors":[{"title":"What is a webpack Module","id":"what-is-a-webpack-module","level":2},{"title":"Supported Module Types","id":"supported-module-types","level":2}],"title":"Modules","sort":6,"contributors":["TheLarkInn","simon04","rouzbeh84","EugeneHlushko","byzyk"],"related":[{"title":"JavaScript Module Systems Showdown","url":"https://auth0.com/blog/javascript-module-systems-showdown/"}]},{"path":"src/content/concepts/module-resolution.mdx","name":"module-resolution.mdx","size":4080,"type":"file","extension":".mdx","url":"/concepts/module-resolution/","anchors":[{"title":"Resolving rules in webpack","id":"resolving-rules-in-webpack","level":2},{"title":"Absolute paths","id":"absolute-paths","level":3},{"title":"Relative paths","id":"relative-paths","level":3},{"title":"Module paths","id":"module-paths","level":3},{"title":"Resolving Loaders","id":"resolving-loaders","level":2},{"title":"Caching","id":"caching","level":2}],"title":"Module Resolution","sort":7,"contributors":["pksjce","pastelsky","byzyk","EugeneHlushko","wizardofhogwarts"]},{"path":"src/content/concepts/module-federation.mdx","name":"module-federation.mdx","size":14602,"type":"file","extension":".mdx","url":"/concepts/module-federation/","anchors":[{"title":"Motivation","id":"motivation","level":2},{"title":"Low-level concepts","id":"low-level-concepts","level":2},{"title":"High-level concepts","id":"high-level-concepts","level":2},{"title":"Building blocks","id":"building-blocks","level":2},{"title":"ContainerPlugin (low level)","id":"containerplugin-low-level","level":3},{"title":"ContainerReferencePlugin (low level)","id":"containerreferenceplugin-low-level","level":3},{"title":"ModuleFederationPlugin (high level)","id":"modulefederationplugin-high-level","level":3},{"title":"Concept goals","id":"concept-goals","level":2},{"title":"Use cases","id":"use-cases","level":2},{"title":"Separate builds per page","id":"separate-builds-per-page","level":3},{"title":"Components library as container","id":"components-library-as-container","level":3},{"title":"Dynamic Remote Containers","id":"dynamic-remote-containers","level":2},{"title":"Promise Based Dynamic Remotes","id":"promise-based-dynamic-remotes","level":2},{"title":"Dynamic Public Path","id":"dynamic-public-path","level":2},{"title":"Offer a host API to set the publicPath","id":"offer-a-host-api-to-set-the-publicpath","level":3},{"title":"Infer publicPath from script","id":"infer-publicpath-from-script","level":3},{"title":"Troubleshooting","id":"troubleshooting","level":2},{"title":"Uncaught Error: Shared module is not available for eager consumption","id":"uncaught-error-shared-module-is-not-available-for-eager-consumption","level":3},{"title":"Uncaught Error: Module \\"./Button\\" does not exist in container.","id":"uncaught-error-module-button-does-not-exist-in-container","level":3},{"title":"Uncaught TypeError: fn is not a function","id":"uncaught-typeerror-fn-is-not-a-function","level":3},{"title":"Collision between modules from different remotes","id":"collision-between-modules-from-different-remotes","level":3}],"title":"Module Federation","sort":8,"contributors":["sokra","chenxsan","EugeneHlushko","jamesgeorge007","ScriptedAlchemy","snitin315","XiaofengXie16","KyleBastien","Alevale","burhanuday"],"related":[{"title":"Webpack 5 Module Federation: A game-changer in JavaScript architecture","url":"https://medium.com/swlh/webpack-5-module-federation-a-game-changer-to-javascript-architecture-bcdd30e02669"},{"title":"Explanations and Examples","url":"https://github.com/module-federation/module-federation-examples"},{"title":"Module Federation YouTube Playlist","url":"https://www.youtube.com/playlist?list=PLWSiF9YHHK-DqsFHGYbeAMwbd9xcZbEWJ"}]},{"path":"src/content/concepts/dependency-graph.mdx","name":"dependency-graph.mdx","size":1223,"type":"file","extension":".mdx","url":"/concepts/dependency-graph/","anchors":[],"title":"Dependency Graph","sort":9,"contributors":["TheLarkInn","EugeneHlushko"],"related":[{"title":"HTTP2 Aggressive Splitting Example","url":"https://github.com/webpack/webpack/tree/master/examples/http2-aggressive-splitting"},{"title":"webpack & HTTP/2","url":"https://medium.com/webpack/webpack-http-2-7083ec3f3ce6"}]},{"path":"src/content/concepts/targets.mdx","name":"targets.mdx","size":2462,"type":"file","extension":".mdx","url":"/concepts/targets/","anchors":[{"title":"Usage","id":"usage","level":2},{"title":"Multiple Targets","id":"multiple-targets","level":2},{"title":"Resources","id":"resources","level":2}],"title":"Targets","sort":10,"contributors":["TheLarkInn","rouzbeh84","johnstew","srilman","byzyk","EugeneHlushko"]},{"path":"src/content/concepts/manifest.mdx","name":"manifest.mdx","size":3393,"type":"file","extension":".mdx","url":"/concepts/manifest/","anchors":[{"title":"Runtime","id":"runtime","level":2},{"title":"Manifest","id":"manifest","level":2},{"title":"The Problem","id":"the-problem","level":2}],"title":"The Manifest","sort":11,"contributors":["skipjack","EugeneHlushko"],"related":[{"title":"Separating a Manifest","url":"https://survivejs.com/webpack/optimizing/separating-manifest/"},{"title":"Predictable Long Term Caching with webpack","url":"https://medium.com/webpack/predictable-long-term-caching-with-webpack-d3eee1d3fa31"},{"title":"Caching","url":"/guides/caching/"}]},{"path":"src/content/concepts/hot-module-replacement.mdx","name":"hot-module-replacement.mdx","size":4931,"type":"file","extension":".mdx","url":"/concepts/hot-module-replacement/","anchors":[{"title":"How It Works","id":"how-it-works","level":2},{"title":"In the Application","id":"in-the-application","level":3},{"title":"In the Compiler","id":"in-the-compiler","level":3},{"title":"In a Module","id":"in-a-module","level":3},{"title":"In the Runtime","id":"in-the-runtime","level":3},{"title":"Get Started","id":"get-started","level":2}],"title":"Hot Module Replacement","sort":12,"contributors":["kryptokinght","SpaceK33z","sokra","GRardB","rouzbeh84","skipjack"]},{"path":"src/content/concepts/why-webpack.mdx","name":"why-webpack.mdx","size":4124,"type":"file","extension":".mdx","url":"/concepts/why-webpack/","anchors":[{"title":"IIFEs - Immediately invoked function expressions","id":"iifes---immediately-invoked-function-expressions","level":2},{"title":"Birth of JavaScript Modules happened thanks to Node.js","id":"birth-of-javascript-modules-happened-thanks-to-nodejs","level":2},{"title":"npm + Node.js + modules – mass distribution","id":"npm--nodejs--modules--mass-distribution","level":2},{"title":"ESM - ECMAScript Modules","id":"esm---ecmascript-modules","level":2},{"title":"Automatic Dependency Collection","id":"automatic-dependency-collection","level":2},{"title":"Wouldn\'t it be nice…","id":"wouldnt-it-be-nice","level":2}],"title":"Why webpack","sort":13,"contributors":["debs-obrien","montogeek","jeremenichelli","EugeneHlushko"]},{"path":"src/content/concepts/under-the-hood.mdx","name":"under-the-hood.mdx","size":3980,"type":"file","extension":".mdx","url":"/concepts/under-the-hood/","anchors":[{"title":"The main parts","id":"the-main-parts","level":2},{"title":"Chunks","id":"chunks","level":2},{"title":"Output","id":"output","level":2}],"title":"Under The Hood","sort":14,"contributors":["smelukov","EugeneHlushko","chenxsan","amirsaeed671"]},{"path":"src/content/concepts/printable.mdx","name":"printable.mdx","size":1271,"type":"file","extension":".mdx","url":"/concepts/printable/","anchors":[{"title":"Concepts","id":"concepts","level":1},{"title":"Entry Points","id":"entry-points","level":1},{"title":"Output","id":"output","level":1},{"title":"Loaders","id":"loaders","level":1},{"title":"Plugins","id":"plugins","level":1},{"title":"Configuration","id":"configuration","level":1},{"title":"Modules","id":"modules","level":1},{"title":"Module Resolution","id":"module-resolution","level":1},{"title":"Module Federation","id":"module-federation","level":1},{"title":"Dependency Graph","id":"dependency-graph","level":1},{"title":"Targets","id":"targets","level":1},{"title":"The Manifest","id":"the-manifest","level":1},{"title":"Hot Module Replacement","id":"hot-module-replacement","level":1},{"title":"Why webpack","id":"why-webpack","level":1},{"title":"Under The Hood","id":"under-the-hood","level":1}],"title":"Printable","sort":999,"contributors":["webpack"]}],"size":70544,"type":"directory","url":"/concepts/"},{"path":"src/content/configuration","name":"configuration","children":[{"path":"src/content/configuration/index.mdx","name":"index.mdx","size":3489,"type":"file","extension":".mdx","url":"/configuration/","anchors":[{"title":"Use a different configuration file","id":"use-a-different-configuration-file","level":2},{"title":"Set up a new webpack project","id":"set-up-a-new-webpack-project","level":2}],"title":"Configuration","sort":1,"contributors":["sokra","skipjack","grgur","bondz","sricc","terinjokes","mattce","kbariotis","sterlingvix","jeremenichelli","dasarianudeep","lukasgeiter","EugeneHlushko","bigdawggi","anshumanv","textbook","coly010","chenxsan"]},{"path":"src/content/configuration/configuration-languages.mdx","name":"configuration-languages.mdx","size":5756,"type":"file","extension":".mdx","url":"/configuration/configuration-languages/","anchors":[{"title":"TypeScript","id":"typescript","level":2},{"title":"CoffeeScript","id":"coffeescript","level":2},{"title":"Babel and JSX","id":"babel-and-jsx","level":2}],"title":"Configuration Languages","sort":2,"contributors":["piouson","sokra","skipjack","tarang9211","simon04","peterblazejewicz","youta1119","byzyk","Nek-","liyiming22","daimalou","ChocolateLoverRaj","snitin315"]},{"path":"src/content/configuration/configuration-types.mdx","name":"configuration-types.mdx","size":3714,"type":"file","extension":".mdx","url":"/configuration/configuration-types/","anchors":[{"title":"Exporting a Function","id":"exporting-a-function","level":2},{"title":"Exporting a Promise","id":"exporting-a-promise","level":2},{"title":"Exporting multiple configurations","id":"exporting-multiple-configurations","level":2},{"title":"dependencies","id":"dependencies","level":3},{"title":"parallelism","id":"parallelism","level":3}],"title":"Configuration Types","sort":3,"contributors":["sokra","skipjack","kbariotis","simon04","fadysamirsadek","byzyk","EugeneHlushko","dhurlburtusa","anshumanv","thorn0"]},{"path":"src/content/configuration/entry-context.mdx","name":"entry-context.mdx","size":5075,"type":"file","extension":".mdx","url":"/configuration/entry-context/","anchors":[{"title":"context","id":"context","level":2},{"title":"entry","id":"entry","level":2},{"title":"Naming","id":"naming","level":3},{"title":"Entry descriptor","id":"entry-descriptor","level":3},{"title":"Output filename","id":"output-filename","level":3},{"title":"Dependencies","id":"dependencies","level":3},{"title":"Dynamic entry","id":"dynamic-entry","level":3}],"title":"Entry and Context","sort":4,"contributors":["sokra","skipjack","tarang9211","byzyk","madhavarshney","EugeneHlushko","smelukov","anshumanv","snitin315"]},{"path":"src/content/configuration/mode.mdx","name":"mode.mdx","size":2960,"type":"file","extension":".mdx","url":"/configuration/mode/","anchors":[{"title":"Usage","id":"usage","level":2},{"title":"Mode: development","id":"mode-development","level":3},{"title":"Mode: production","id":"mode-production","level":3},{"title":"Mode: none","id":"mode-none","level":3}],"title":"Mode","sort":5,"contributors":["EugeneHlushko","byzyk","mrichmond","Fental","snitin315","chenxsan"],"related":[{"title":"webpack default options (source code)","url":"https://github.com/webpack/webpack/blob/main/lib/config/defaults.js"}]},{"path":"src/content/configuration/output.mdx","name":"output.mdx","size":70542,"type":"file","extension":".mdx","url":"/configuration/output/","anchors":[{"title":"output.assetModuleFilename","id":"outputassetmodulefilename","level":2},{"title":"output.asyncChunks","id":"outputasyncchunks","level":2},{"title":"output.auxiliaryComment","id":"outputauxiliarycomment","level":2},{"title":"output.charset","id":"outputcharset","level":2},{"title":"output.chunkFilename","id":"outputchunkfilename","level":2},{"title":"output.chunkFormat","id":"outputchunkformat","level":2},{"title":"output.chunkLoadTimeout","id":"outputchunkloadtimeout","level":2},{"title":"output.chunkLoadingGlobal","id":"outputchunkloadingglobal","level":2},{"title":"output.chunkLoading","id":"outputchunkloading","level":2},{"title":"output.clean","id":"outputclean","level":2},{"title":"output.compareBeforeEmit","id":"outputcomparebeforeemit","level":2},{"title":"output.crossOriginLoading","id":"outputcrossoriginloading","level":2},{"title":"output.devtoolFallbackModuleFilenameTemplate","id":"outputdevtoolfallbackmodulefilenametemplate","level":2},{"title":"output.devtoolModuleFilenameTemplate","id":"outputdevtoolmodulefilenametemplate","level":2},{"title":"output.devtoolNamespace","id":"outputdevtoolnamespace","level":2},{"title":"output.enabledChunkLoadingTypes","id":"outputenabledchunkloadingtypes","level":2},{"title":"output.enabledLibraryTypes","id":"outputenabledlibrarytypes","level":2},{"title":"output.enabledWasmLoadingTypes","id":"outputenabledwasmloadingtypes","level":2},{"title":"output.environment","id":"outputenvironment","level":2},{"title":"output.filename","id":"outputfilename","level":2},{"title":"Template strings","id":"template-strings","level":3},{"title":"output.globalObject","id":"outputglobalobject","level":2},{"title":"output.hashDigest","id":"outputhashdigest","level":2},{"title":"output.hashDigestLength","id":"outputhashdigestlength","level":2},{"title":"output.hashFunction","id":"outputhashfunction","level":2},{"title":"output.hashSalt","id":"outputhashsalt","level":2},{"title":"output.hotUpdateChunkFilename","id":"outputhotupdatechunkfilename","level":2},{"title":"output.hotUpdateGlobal","id":"outputhotupdateglobal","level":2},{"title":"output.hotUpdateMainFilename","id":"outputhotupdatemainfilename","level":2},{"title":"output.iife","id":"outputiife","level":2},{"title":"output.ignoreBrowserWarnings","id":"outputignorebrowserwarnings","level":2},{"title":"output.importFunctionName","id":"outputimportfunctionname","level":2},{"title":"output.library","id":"outputlibrary","level":2},{"title":"output.library.amdContainer","id":"outputlibraryamdcontainer","level":3},{"title":"output.library.name","id":"outputlibraryname","level":3},{"title":"output.library.type","id":"outputlibrarytype","level":3},{"title":"output.library.export","id":"outputlibraryexport","level":3},{"title":"output.library.auxiliaryComment","id":"outputlibraryauxiliarycomment","level":3},{"title":"output.library.umdNamedDefine","id":"outputlibraryumdnameddefine","level":3},{"title":"output.libraryExport","id":"outputlibraryexport-1","level":2},{"title":"output.libraryTarget","id":"outputlibrarytarget","level":2},{"title":"Expose a Variable","id":"expose-a-variable-1","level":3},{"title":"Expose Via Object Assignment","id":"expose-via-object-assignment-1","level":3},{"title":"Module Definition Systems","id":"module-definition-systems-1","level":3},{"title":"Other Targets","id":"other-targets","level":3},{"title":"output.module","id":"outputmodule","level":2},{"title":"output.path","id":"outputpath","level":2},{"title":"output.pathinfo","id":"outputpathinfo","level":2},{"title":"output.publicPath","id":"outputpublicpath","level":2},{"title":"output.scriptType","id":"outputscripttype","level":2},{"title":"output.sourceMapFilename","id":"outputsourcemapfilename","level":2},{"title":"output.sourcePrefix","id":"outputsourceprefix","level":2},{"title":"output.strictModuleErrorHandling","id":"outputstrictmoduleerrorhandling","level":2},{"title":"output.strictModuleExceptionHandling","id":"outputstrictmoduleexceptionhandling","level":2},{"title":"output.trustedTypes","id":"outputtrustedtypes","level":2},{"title":"output.trustedTypes.onPolicyCreationFailure","id":"outputtrustedtypesonpolicycreationfailure","level":3},{"title":"output.umdNamedDefine","id":"outputumdnameddefine","level":2},{"title":"output.uniqueName","id":"outputuniquename","level":2},{"title":"output.wasmLoading","id":"outputwasmloading","level":2},{"title":"output.workerChunkLoading","id":"outputworkerchunkloading","level":2},{"title":"output.workerPublicPath","id":"outputworkerpublicpath","level":2}],"title":"Output","sort":6,"contributors":["sokra","skipjack","tomasAlabes","mattce","irth","fvgs","dhurlburtusa","MagicDuck","fadysamirsadek","byzyk","madhavarshney","harshwardhansingh","eemeli","EugeneHlushko","g-plane","smelukov","Neob91","anikethsaha","jamesgeorge007","hiroppy","chenxsan","snitin315","QC-L","anshumanv","mrzalyaul","JakobJingleheimer","long76"]},{"path":"src/content/configuration/module.mdx","name":"module.mdx","size":40470,"type":"file","extension":".mdx","url":"/configuration/module/","anchors":[{"title":"module.defaultRules","id":"moduledefaultrules","level":2},{"title":"module.generator","id":"modulegenerator","level":2},{"title":"module.parser","id":"moduleparser","level":2},{"title":"module.parser.javascript","id":"moduleparserjavascript","level":3},{"title":"module.noParse","id":"modulenoparse","level":2},{"title":"module.unsafeCache","id":"moduleunsafecache","level":2},{"title":"module.rules","id":"modulerules","level":2},{"title":"Rule","id":"rule","level":2},{"title":"Rule Conditions","id":"rule-conditions","level":3},{"title":"Rule results","id":"rule-results","level":3},{"title":"Nested rules","id":"nested-rules","level":2},{"title":"Rule.enforce","id":"ruleenforce","level":2},{"title":"Rule.exclude","id":"ruleexclude","level":2},{"title":"Rule.include","id":"ruleinclude","level":2},{"title":"Rule.issuer","id":"ruleissuer","level":2},{"title":"Rule.issuerLayer","id":"ruleissuerlayer","level":2},{"title":"Rule.layer","id":"rulelayer","level":2},{"title":"Rule.loader","id":"ruleloader","level":2},{"title":"Rule.loaders","id":"ruleloaders","level":2},{"title":"Rule.mimetype","id":"rulemimetype","level":2},{"title":"Rule.oneOf","id":"ruleoneof","level":2},{"title":"Rule.options / Rule.query","id":"ruleoptions--rulequery","level":2},{"title":"Rule.parser","id":"ruleparser","level":2},{"title":"Rule.parser.dataUrlCondition","id":"ruleparserdataurlcondition","level":2},{"title":"Rule.generator","id":"rulegenerator","level":2},{"title":"Rule.generator.dataUrl","id":"rulegeneratordataurl","level":3},{"title":"Rule.generator.emit","id":"rulegeneratoremit","level":3},{"title":"Rule.generator.filename","id":"rulegeneratorfilename","level":3},{"title":"Rule.generator.publicPath","id":"rulegeneratorpublicpath","level":3},{"title":"Rule.generator.outputPath","id":"rulegeneratoroutputpath","level":3},{"title":"Rule.resource","id":"ruleresource","level":2},{"title":"Rule.resourceQuery","id":"ruleresourcequery","level":2},{"title":"Rule.parser.parse","id":"ruleparserparse","level":2},{"title":"Rule.rules","id":"rulerules","level":2},{"title":"Rule.scheme","id":"rulescheme","level":2},{"title":"Rule.sideEffects","id":"rulesideeffects","level":2},{"title":"Rule.test","id":"ruletest","level":2},{"title":"Rule.type","id":"ruletype","level":2},{"title":"css/auto","id":"cssauto","level":3},{"title":"Rule.use","id":"ruleuse","level":2},{"title":"Rule.resolve","id":"ruleresolve","level":2},{"title":"resolve.fullySpecified","id":"resolvefullyspecified","level":3},{"title":"Condition","id":"condition","level":2},{"title":"UseEntry","id":"useentry","level":2},{"title":"Module Contexts","id":"module-contexts","level":2}],"title":"Module","sort":7,"contributors":["sokra","skipjack","jouni-kantola","jhnns","dylanonelson","byzyk","pnevares","fadysamirsadek","nerdkid93","EugeneHlushko","superburrito","lukasgeiter","skovy","smelukov","opl-","Mistyyyy","anshumanv","chenxsan","snitin315","vabushkevich"]},{"path":"src/content/configuration/resolve.mdx","name":"resolve.mdx","size":17803,"type":"file","extension":".mdx","url":"/configuration/resolve/","anchors":[{"title":"resolve","id":"resolve","level":2},{"title":"resolve.alias","id":"resolvealias","level":3},{"title":"resolve.aliasFields","id":"resolvealiasfields","level":3},{"title":"resolve.cacheWithContext","id":"resolvecachewithcontext","level":3},{"title":"resolve.conditionNames","id":"resolveconditionnames","level":3},{"title":"resolve.descriptionFiles","id":"resolvedescriptionfiles","level":3},{"title":"resolve.enforceExtension","id":"resolveenforceextension","level":3},{"title":"resolve.extensionAlias","id":"resolveextensionalias","level":3},{"title":"resolve.extensions","id":"resolveextensions","level":3},{"title":"resolve.fallback","id":"resolvefallback","level":3},{"title":"resolve.mainFields","id":"resolvemainfields","level":3},{"title":"resolve.mainFiles","id":"resolvemainfiles","level":3},{"title":"resolve.exportsFields","id":"resolveexportsfields","level":3},{"title":"resolve.modules","id":"resolvemodules","level":3},{"title":"resolve.unsafeCache","id":"resolveunsafecache","level":3},{"title":"resolve.useSyncFileSystemCalls","id":"resolveusesyncfilesystemcalls","level":3},{"title":"resolve.plugins","id":"resolveplugins","level":3},{"title":"resolve.preferRelative","id":"resolvepreferrelative","level":3},{"title":"resolve.preferAbsolute","id":"resolvepreferabsolute","level":3},{"title":"resolve.symlinks","id":"resolvesymlinks","level":3},{"title":"resolve.cachePredicate","id":"resolvecachepredicate","level":3},{"title":"resolve.restrictions","id":"resolverestrictions","level":3},{"title":"resolve.roots","id":"resolveroots","level":3},{"title":"resolve.importsFields","id":"resolveimportsfields","level":3},{"title":"resolve.byDependency","id":"resolvebydependency","level":3},{"title":"resolveLoader","id":"resolveloader","level":2}],"title":"Resolve","sort":8,"contributors":["sokra","skipjack","SpaceK33z","pksjce","sebastiandeutsch","tbroadley","byzyk","numb86","jgravois","EugeneHlushko","Aghassi","myshov","anikethsaha","chenxsan","jamesgeorge007","snitin315"]},{"path":"src/content/configuration/optimization.mdx","name":"optimization.mdx","size":17448,"type":"file","extension":".mdx","url":"/configuration/optimization/","anchors":[{"title":"optimization.chunkIds","id":"optimizationchunkids","level":2},{"title":"optimization.concatenateModules","id":"optimizationconcatenatemodules","level":2},{"title":"optimization.emitOnErrors","id":"optimizationemitonerrors","level":2},{"title":"optimization.flagIncludedChunks","id":"optimizationflagincludedchunks","level":2},{"title":"optimization.innerGraph","id":"optimizationinnergraph","level":2},{"title":"optimization.mangleExports","id":"optimizationmangleexports","level":2},{"title":"optimization.mangleWasmImports","id":"optimizationmanglewasmimports","level":2},{"title":"optimization.mergeDuplicateChunks","id":"optimizationmergeduplicatechunks","level":2},{"title":"optimization.minimize","id":"optimizationminimize","level":2},{"title":"optimization.minimizer","id":"optimizationminimizer","level":2},{"title":"optimization.moduleIds","id":"optimizationmoduleids","level":2},{"title":"optimization.nodeEnv","id":"optimizationnodeenv","level":2},{"title":"optimization.portableRecords","id":"optimizationportablerecords","level":2},{"title":"optimization.providedExports","id":"optimizationprovidedexports","level":2},{"title":"optimization.realContentHash","id":"optimizationrealcontenthash","level":2},{"title":"optimization.removeAvailableModules","id":"optimizationremoveavailablemodules","level":2},{"title":"optimization.removeEmptyChunks","id":"optimizationremoveemptychunks","level":2},{"title":"optimization.runtimeChunk","id":"optimizationruntimechunk","level":2},{"title":"optimization.sideEffects","id":"optimizationsideeffects","level":2},{"title":"optimization.splitChunks","id":"optimizationsplitchunks","level":2},{"title":"optimization.usedExports","id":"optimizationusedexports","level":2}],"title":"Optimization","sort":9,"contributors":["EugeneHlushko","jeremenichelli","simon04","byzyk","madhavarshney","dhurlburtusa","jamesgeorge007","anikethsaha","snitin315","pixel-ray","chenxsan","Roberto14"],"related":[{"title":"webpack 4: Code Splitting, chunk graph and the splitChunks optimization","url":"https://medium.com/webpack/webpack-4-code-splitting-chunk-graph-and-the-splitchunks-optimization-be739a861366"}]},{"path":"src/content/configuration/plugins.mdx","name":"plugins.mdx","size":1847,"type":"file","extension":".mdx","url":"/configuration/plugins/","anchors":[{"title":"plugins","id":"plugins","level":2}],"title":"Plugins","sort":10,"contributors":["sokra","skipjack","yatharthk","byzyk","EugeneHlushko","snitin315"]},{"path":"src/content/configuration/dev-server.mdx","name":"dev-server.mdx","size":42513,"type":"file","extension":".mdx","url":"/configuration/dev-server/","anchors":[{"title":"devServer","id":"devserver","level":2},{"title":"Usage via CLI","id":"usage-via-cli","level":3},{"title":"Usage via API","id":"usage-via-api","level":3},{"title":"devServer.allowedHosts","id":"devserverallowedhosts","level":2},{"title":"devServer.bonjour","id":"devserverbonjour","level":2},{"title":"devServer.client","id":"devserverclient","level":2},{"title":"logging","id":"logging","level":3},{"title":"overlay","id":"overlay","level":3},{"title":"progress","id":"progress","level":3},{"title":"reconnect","id":"reconnect","level":3},{"title":"webSocketTransport","id":"websockettransport","level":3},{"title":"webSocketURL","id":"websocketurl","level":3},{"title":"devServer.compress","id":"devservercompress","level":2},{"title":"devServer.devMiddleware","id":"devserverdevmiddleware","level":2},{"title":"devServer.http2","id":"devserverhttp2","level":2},{"title":"devServer.https","id":"devserverhttps","level":2},{"title":"devServer.headers","id":"devserverheaders","level":2},{"title":"devServer.historyApiFallback","id":"devserverhistoryapifallback","level":2},{"title":"devServer.host","id":"devserverhost","level":2},{"title":"local-ip","id":"local-ip","level":3},{"title":"local-ipv4","id":"local-ipv4","level":3},{"title":"local-ipv6","id":"local-ipv6","level":3},{"title":"devServer.hot","id":"devserverhot","level":2},{"title":"devServer.ipc","id":"devserveripc","level":2},{"title":"devServer.liveReload","id":"devserverlivereload","level":2},{"title":"devServer.magicHtml","id":"devservermagichtml","level":2},{"title":"devServer.onAfterSetupMiddleware","id":"devserveronaftersetupmiddleware","level":2},{"title":"devServer.onBeforeSetupMiddleware","id":"devserveronbeforesetupmiddleware","level":2},{"title":"devserver.onListening","id":"devserveronlistening","level":2},{"title":"devServer.open","id":"devserveropen","level":2},{"title":"devServer.port","id":"devserverport","level":2},{"title":"devServer.proxy","id":"devserverproxy","level":2},{"title":"devServer.server","id":"devserverserver","level":2},{"title":"devServer.setupExitSignals","id":"devserversetupexitsignals","level":2},{"title":"devServer.setupMiddlewares","id":"devserversetupmiddlewares","level":2},{"title":"devServer.static","id":"devserverstatic","level":2},{"title":"directory","id":"directory","level":3},{"title":"staticOptions","id":"staticoptions","level":3},{"title":"publicPath","id":"publicpath","level":3},{"title":"serveIndex","id":"serveindex","level":3},{"title":"watch","id":"watch","level":3},{"title":"devServer.watchFiles","id":"devserverwatchfiles","level":2},{"title":"devServer.webSocketServer","id":"devserverwebsocketserver","level":2}],"title":"DevServer","sort":11,"contributors":["sokra","skipjack","spacek33z","charlespwd","orteth01","byzyk","EugeneHlushko","Yiidiir","Loonride","dmohns","EslamHiko","digitaljohn","bhavya9107","wizardofhogwarts","jamesgeorge007","g100g","anikethsaha","snitin315","Biki-das","SaulSilver","malcolm-kee"]},{"path":"src/content/configuration/cache.mdx","name":"cache.mdx","size":11908,"type":"file","extension":".mdx","url":"/configuration/cache/","anchors":[{"title":"cache","id":"cache","level":2},{"title":"cache.allowCollectingMemory","id":"cacheallowcollectingmemory","level":3},{"title":"cache.buildDependencies","id":"cachebuilddependencies","level":3},{"title":"cache.cacheDirectory","id":"cachecachedirectory","level":3},{"title":"cache.cacheLocation","id":"cachecachelocation","level":3},{"title":"cache.cacheUnaffected","id":"cachecacheunaffected","level":3},{"title":"cache.compression","id":"cachecompression","level":3},{"title":"cache.hashAlgorithm","id":"cachehashalgorithm","level":3},{"title":"cache.idleTimeout","id":"cacheidletimeout","level":3},{"title":"cache.idleTimeoutAfterLargeChanges","id":"cacheidletimeoutafterlargechanges","level":3},{"title":"cache.idleTimeoutForInitialStore","id":"cacheidletimeoutforinitialstore","level":3},{"title":"cache.managedPaths","id":"cachemanagedpaths","level":3},{"title":"cache.maxAge","id":"cachemaxage","level":3},{"title":"cache.maxGenerations","id":"cachemaxgenerations","level":3},{"title":"cache.maxMemoryGenerations","id":"cachemaxmemorygenerations","level":3},{"title":"cache.memoryCacheUnaffected","id":"cachememorycacheunaffected","level":3},{"title":"cache.name","id":"cachename","level":3},{"title":"cache.profile","id":"cacheprofile","level":3},{"title":"cache.readonly","id":"cachereadonly","level":3},{"title":"cache.store","id":"cachestore","level":3},{"title":"cache.type","id":"cachetype","level":3},{"title":"cache.version","id":"cacheversion","level":3},{"title":"Setup cache in CI/CD system","id":"setup-cache-in-cicd-system","level":2},{"title":"GitLab CI/CD","id":"gitlab-cicd","level":3},{"title":"Github actions","id":"github-actions","level":3}],"title":"Cache","sort":12,"contributors":["snitin315","chenxsan"]},{"path":"src/content/configuration/devtool.mdx","name":"devtool.mdx","size":17292,"type":"file","extension":".mdx","url":"/configuration/devtool/","anchors":[{"title":"devtool","id":"devtool","level":2},{"title":"Qualities","id":"qualities","level":3},{"title":"Development","id":"development","level":3},{"title":"Special cases","id":"special-cases","level":3},{"title":"Production","id":"production","level":3}],"title":"Devtool","sort":12,"contributors":["sokra","skipjack","SpaceK33z","lricoy","madhavarshney","wizardofhogwarts","anikethsaha","snitin315"],"related":[{"title":"Enabling Source Maps","url":"https://survivejs.com/webpack/developing-with-webpack/enabling-sourcemaps/"},{"title":"webpack\'s Devtool Source Map","url":"http://cheng.logdown.com/posts/2016/03/25/679045"}]},{"path":"src/content/configuration/extending-configurations.mdx","name":"extending-configurations.mdx","size":3419,"type":"file","extension":".mdx","url":"/configuration/extending-configurations/","anchors":[{"title":"extends","id":"extends","level":2},{"title":"Extending multiple configurations","id":"extending-multiple-configurations","level":2},{"title":"Overridding Configurations","id":"overridding-configurations","level":2},{"title":"Loading configuration from external packages","id":"loading-configuration-from-external-packages","level":2}],"title":"Extends","sort":12,"contributors":["burhanuday"]},{"path":"src/content/configuration/target.mdx","name":"target.mdx","size":7855,"type":"file","extension":".mdx","url":"/configuration/target/","anchors":[{"title":"target","id":"target","level":2},{"title":"string","id":"string","level":3},{"title":"[string]","id":"string-1","level":3},{"title":"false","id":"false","level":3}],"title":"Target","sort":13,"contributors":["juangl","sokra","skipjack","SpaceK33z","pastelsky","tbroadley","byzyk","EugeneHlushko","smelukov","chenxsan"]},{"path":"src/content/configuration/watch.mdx","name":"watch.mdx","size":6463,"type":"file","extension":".mdx","url":"/configuration/watch/","anchors":[{"title":"watch","id":"watch","level":2},{"title":"watchOptions","id":"watchoptions","level":2},{"title":"watchOptions.aggregateTimeout","id":"watchoptionsaggregatetimeout","level":3},{"title":"watchOptions.ignored","id":"watchoptionsignored","level":3},{"title":"watchOptions.poll","id":"watchoptionspoll","level":3},{"title":"watchOptions.followSymlinks","id":"watchoptionsfollowsymlinks","level":3},{"title":"watchOptions.stdin","id":"watchoptionsstdin","level":3},{"title":"Troubleshooting","id":"troubleshooting","level":2},{"title":"Changes Seen But Not Processed","id":"changes-seen-but-not-processed","level":3},{"title":"Not Enough Watchers","id":"not-enough-watchers","level":3},{"title":"macOS fsevents Bug","id":"macos-fsevents-bug","level":3},{"title":"Windows Paths","id":"windows-paths","level":3},{"title":"Vim","id":"vim","level":3},{"title":"Saving in WebStorm","id":"saving-in-webstorm","level":3}],"title":"Watch and WatchOptions","sort":14,"contributors":["sokra","skipjack","SpaceK33z","EugeneHlushko","byzyk","spicalous","Neob91","Loonride","snitin315","chenxsan"]},{"path":"src/content/configuration/externals.mdx","name":"externals.mdx","size":21244,"type":"file","extension":".mdx","url":"/configuration/externals/","anchors":[{"title":"externals","id":"externals","level":2},{"title":"string","id":"string","level":3},{"title":"[string]","id":"string-1","level":3},{"title":"object","id":"object","level":3},{"title":"function","id":"function","level":3},{"title":"RegExp","id":"regexp","level":3},{"title":"Combining syntaxes","id":"combining-syntaxes","level":3},{"title":"byLayer","id":"bylayer","level":3},{"title":"externalsType","id":"externalstype","level":2},{"title":"externalsType.commonjs","id":"externalstypecommonjs","level":3},{"title":"externalsType.global","id":"externalstypeglobal","level":3},{"title":"externalsType.module","id":"externalstypemodule","level":3},{"title":"externalsType.node-commonjs","id":"externalstypenode-commonjs","level":3},{"title":"externalsType.promise","id":"externalstypepromise","level":3},{"title":"externalsType.self","id":"externalstypeself","level":3},{"title":"externalsType.script","id":"externalstypescript","level":3},{"title":"externalsType.this","id":"externalstypethis","level":3},{"title":"externalsType.var","id":"externalstypevar","level":3},{"title":"externalsType.window","id":"externalstypewindow","level":3},{"title":"externalsPresets","id":"externalspresets","level":2}],"title":"Externals","sort":15,"contributors":["sokra","skipjack","pksjce","fadysamirsadek","byzyk","zefman","Mistyyyy","jamesgeorge007","tanhauhau","snitin315","beejunk","EugeneHlushko","chenxsan","pranshuchittora","kinetifex","anshumanv","SaulSilver"]},{"path":"src/content/configuration/performance.mdx","name":"performance.mdx","size":2639,"type":"file","extension":".mdx","url":"/configuration/performance/","anchors":[{"title":"performance","id":"performance","level":2},{"title":"performance.assetFilter","id":"performanceassetfilter","level":3},{"title":"performance.hints","id":"performancehints","level":3},{"title":"performance.maxAssetSize","id":"performancemaxassetsize","level":3},{"title":"performance.maxEntrypointSize","id":"performancemaxentrypointsize","level":3}],"title":"Performance","sort":16,"contributors":["thelarkinn","tbroadley","byzyk","madhavarshney","EugeneHlushko"]},{"path":"src/content/configuration/node.mdx","name":"node.mdx","size":2789,"type":"file","extension":".mdx","url":"/configuration/node/","anchors":[{"title":"node","id":"node","level":2},{"title":"node.global","id":"nodeglobal","level":2},{"title":"node.__filename","id":"node__filename","level":2},{"title":"node.__dirname","id":"node__dirname","level":2}],"title":"Node","sort":17,"contributors":["sokra","skipjack","oneforwonder","Rob--W","byzyk","EugeneHlushko","anikethsaha","chenxsan","snitin315"]},{"path":"src/content/configuration/stats.mdx","name":"stats.mdx","size":23171,"type":"file","extension":".mdx","url":"/configuration/stats/","anchors":[{"title":"Stats Presets","id":"stats-presets","level":2},{"title":"Stats Options","id":"stats-options","level":2},{"title":"stats.all","id":"statsall","level":3},{"title":"stats.assets","id":"statsassets","level":3},{"title":"stats.assetsSort","id":"statsassetssort","level":3},{"title":"stats.builtAt","id":"statsbuiltat","level":3},{"title":"stats.moduleAssets","id":"statsmoduleassets","level":3},{"title":"stats.assetsSpace","id":"statsassetsspace","level":3},{"title":"stats.modulesSpace","id":"statsmodulesspace","level":3},{"title":"stats.chunkModulesSpace","id":"statschunkmodulesspace","level":3},{"title":"stats.nestedModules","id":"statsnestedmodules","level":3},{"title":"stats.nestedModulesSpace","id":"statsnestedmodulesspace","level":3},{"title":"stats.cached","id":"statscached","level":3},{"title":"stats.cachedModules","id":"statscachedmodules","level":3},{"title":"stats.runtimeModules","id":"statsruntimemodules","level":3},{"title":"stats.dependentModules","id":"statsdependentmodules","level":3},{"title":"stats.groupAssetsByChunk","id":"statsgroupassetsbychunk","level":3},{"title":"stats.groupAssetsByEmitStatus","id":"statsgroupassetsbyemitstatus","level":3},{"title":"stats.groupAssetsByExtension","id":"statsgroupassetsbyextension","level":3},{"title":"stats.groupAssetsByInfo","id":"statsgroupassetsbyinfo","level":3},{"title":"stats.groupAssetsByPath","id":"statsgroupassetsbypath","level":3},{"title":"stats.groupModulesByAttributes","id":"statsgroupmodulesbyattributes","level":3},{"title":"stats.groupModulesByCacheStatus","id":"statsgroupmodulesbycachestatus","level":3},{"title":"stats.groupModulesByExtension","id":"statsgroupmodulesbyextension","level":3},{"title":"stats.groupModulesByLayer","id":"statsgroupmodulesbylayer","level":3},{"title":"stats.groupModulesByPath","id":"statsgroupmodulesbypath","level":3},{"title":"stats.groupModulesByType","id":"statsgroupmodulesbytype","level":3},{"title":"stats.groupReasonsByOrigin","id":"statsgroupreasonsbyorigin","level":3},{"title":"stats.cachedAssets","id":"statscachedassets","level":3},{"title":"stats.children","id":"statschildren","level":3},{"title":"stats.chunks","id":"statschunks","level":3},{"title":"stats.chunkGroups","id":"statschunkgroups","level":3},{"title":"stats.chunkModules","id":"statschunkmodules","level":3},{"title":"stats.chunkOrigins","id":"statschunkorigins","level":3},{"title":"stats.chunksSort","id":"statschunkssort","level":3},{"title":"stats.context","id":"statscontext","level":3},{"title":"stats.colors","id":"statscolors","level":3},{"title":"stats.depth","id":"statsdepth","level":3},{"title":"stats.entrypoints","id":"statsentrypoints","level":3},{"title":"stats.env","id":"statsenv","level":3},{"title":"stats.orphanModules","id":"statsorphanmodules","level":3},{"title":"stats.errors","id":"statserrors","level":3},{"title":"stats.errorDetails","id":"statserrordetails","level":3},{"title":"stats.errorStack","id":"statserrorstack","level":3},{"title":"stats.errorsSpace","id":"statserrorsspace","level":3},{"title":"stats.excludeAssets","id":"statsexcludeassets","level":3},{"title":"stats.excludeModules","id":"statsexcludemodules","level":3},{"title":"stats.exclude","id":"statsexclude","level":3},{"title":"stats.hash","id":"statshash","level":3},{"title":"stats.logging","id":"statslogging","level":3},{"title":"stats.loggingDebug","id":"statsloggingdebug","level":3},{"title":"stats.loggingTrace","id":"statsloggingtrace","level":3},{"title":"stats.modules","id":"statsmodules","level":3},{"title":"stats.modulesSort","id":"statsmodulessort","level":3},{"title":"stats.moduleTrace","id":"statsmoduletrace","level":3},{"title":"stats.optimizationBailout","id":"statsoptimizationbailout","level":3},{"title":"stats.outputPath","id":"statsoutputpath","level":3},{"title":"stats.performance","id":"statsperformance","level":3},{"title":"stats.preset","id":"statspreset","level":3},{"title":"stats.providedExports","id":"statsprovidedexports","level":3},{"title":"stats.errorsCount","id":"statserrorscount","level":3},{"title":"stats.warningsCount","id":"statswarningscount","level":3},{"title":"stats.publicPath","id":"statspublicpath","level":3},{"title":"stats.reasons","id":"statsreasons","level":3},{"title":"stats.reasonsSpace","id":"statsreasonsspace","level":3},{"title":"stats.relatedAssets","id":"statsrelatedassets","level":3},{"title":"stats.source","id":"statssource","level":3},{"title":"stats.timings","id":"statstimings","level":3},{"title":"stats.ids","id":"statsids","level":3},{"title":"stats.usedExports","id":"statsusedexports","level":3},{"title":"stats.version","id":"statsversion","level":3},{"title":"stats.chunkGroupAuxiliary","id":"statschunkgroupauxiliary","level":3},{"title":"stats.chunkGroupChildren","id":"statschunkgroupchildren","level":3},{"title":"stats.chunkGroupMaxAssets","id":"statschunkgroupmaxassets","level":3},{"title":"stats.warnings","id":"statswarnings","level":3},{"title":"stats.warningsSpace","id":"statswarningsspace","level":3},{"title":"stats.warningsFilter","id":"statswarningsfilter","level":3},{"title":"stats.chunkRelations","id":"statschunkrelations","level":3},{"title":"Sorting fields","id":"sorting-fields","level":3},{"title":"Extending stats behaviours","id":"extending-stats-behaviours","level":3}],"title":"Stats","sort":18,"contributors":["SpaceK33z","sallar","jungomi","ldrick","jasonblanchard","byzyk","renjithspace","Raiondesu","EugeneHlushko","grgur","anshumanv","pixel-ray","snitin315","u01jmg3","grrizzly"]},{"path":"src/content/configuration/experiments.mdx","name":"experiments.mdx","size":9308,"type":"file","extension":".mdx","url":"/configuration/experiments/","anchors":[{"title":"experiments","id":"experiments","level":2},{"title":"experiments.backCompat","id":"experimentsbackcompat","level":3},{"title":"experiments.buildHttp","id":"experimentsbuildhttp","level":3},{"title":"experiments.css","id":"experimentscss","level":3},{"title":"experiments.cacheUnaffected","id":"experimentscacheunaffected","level":3},{"title":"experiments.futureDefaults","id":"experimentsfuturedefaults","level":3},{"title":"experiments.lazyCompilation","id":"experimentslazycompilation","level":3},{"title":"experiments.outputModule","id":"experimentsoutputmodule","level":3},{"title":"experiments.topLevelAwait","id":"experimentstoplevelawait","level":3}],"title":"Experiments","sort":19,"contributors":["EugeneHlushko","wizardofhogwarts","chenxsan","anshumanv","snitin315","burhanuday"]},{"path":"src/content/configuration/other-options.mdx","name":"other-options.mdx","size":13559,"type":"file","extension":".mdx","url":"/configuration/other-options/","anchors":[{"title":"amd","id":"amd","level":2},{"title":"bail","id":"bail","level":2},{"title":"dependencies","id":"dependencies","level":2},{"title":"ignoreWarnings","id":"ignorewarnings","level":2},{"title":"infrastructureLogging","id":"infrastructurelogging","level":2},{"title":"appendOnly","id":"appendonly","level":3},{"title":"colors","id":"colors","level":3},{"title":"console","id":"console","level":3},{"title":"debug","id":"debug","level":3},{"title":"level","id":"level","level":3},{"title":"stream","id":"stream","level":3},{"title":"loader","id":"loader","level":2},{"title":"name","id":"name","level":2},{"title":"parallelism","id":"parallelism","level":2},{"title":"profile","id":"profile","level":2},{"title":"recordsInputPath","id":"recordsinputpath","level":2},{"title":"recordsOutputPath","id":"recordsoutputpath","level":2},{"title":"recordsPath","id":"recordspath","level":2},{"title":"snapshot","id":"snapshot","level":2},{"title":"buildDependencies","id":"builddependencies","level":3},{"title":"immutablePaths","id":"immutablepaths","level":3},{"title":"managedPaths","id":"managedpaths","level":3},{"title":"unmanagedPaths","id":"unmanagedpaths","level":3},{"title":"module","id":"module","level":3},{"title":"resolve","id":"resolve","level":3},{"title":"resolveBuildDependencies","id":"resolvebuilddependencies","level":3}],"title":"Other Options","sort":20,"contributors":["sokra","skipjack","terinjokes","byzyk","liorgreenb","vansosnin","EugeneHlushko","skovy","rishabh3112","niravasher","Neob91","chenxsan","u01jmg3","jamesgeorge007","snitin315"],"related":[{"title":"Using Records","url":"https://survivejs.com/webpack/optimizing/separating-manifest/#using-records"}]},{"path":"src/content/configuration/printable.mdx","name":"printable.mdx","size":1705,"type":"file","extension":".mdx","url":"/configuration/printable/","anchors":[{"title":"Configuration","id":"configuration","level":1},{"title":"Configuration Languages","id":"configuration-languages","level":1},{"title":"Configuration Types","id":"configuration-types","level":1},{"title":"Entry and Context","id":"entry-and-context","level":1},{"title":"Mode","id":"mode","level":1},{"title":"Output","id":"output","level":1},{"title":"Module","id":"module","level":1},{"title":"Resolve","id":"resolve","level":1},{"title":"Optimization","id":"optimization","level":1},{"title":"Plugins","id":"plugins","level":1},{"title":"DevServer","id":"devserver","level":1},{"title":"Cache","id":"cache","level":1},{"title":"Devtool","id":"devtool","level":1},{"title":"Extends","id":"extends","level":1},{"title":"Target","id":"target","level":1},{"title":"Watch and WatchOptions","id":"watch-and-watchoptions","level":1},{"title":"Externals","id":"externals","level":1},{"title":"Performance","id":"performance","level":1},{"title":"Node","id":"node","level":1},{"title":"Stats","id":"stats","level":1},{"title":"Experiments","id":"experiments","level":1},{"title":"Other Options","id":"other-options","level":1}],"title":"Printable","sort":999,"contributors":["webpack"]}],"size":332969,"type":"directory","url":"/configuration/"},{"path":"src/content/contribute","name":"contribute","children":[{"path":"src/content/contribute/index.mdx","name":"index.mdx","size":4703,"type":"file","extension":".mdx","url":"/contribute/","anchors":[{"title":"Developers","id":"developers","level":2},{"title":"How Can I Help?","id":"how-can-i-help","level":3},{"title":"Encouraging Employers","id":"encouraging-employers","level":3},{"title":"Your Contributions","id":"your-contributions","level":3},{"title":"Executives","id":"executives","level":2},{"title":"Sponsorship","id":"sponsorship","level":3},{"title":"Anyone Else","id":"anyone-else","level":3},{"title":"Pull requests","id":"pull-requests","level":2}],"title":"Contribute","sort":-1,"contributors":["rouzbeh84","scottdj92","harrynewsome","dhedgecock","tbroadley","EugeneHlushko","dkdk225"]},{"path":"src/content/contribute/writers-guide.mdx","name":"writers-guide.mdx","size":6883,"type":"file","extension":".mdx","url":"/contribute/writers-guide/","anchors":[{"title":"Process","id":"process","level":2},{"title":"YAML Frontmatter","id":"yaml-frontmatter","level":2},{"title":"Article Structure","id":"article-structure","level":2},{"title":"Typesetting","id":"typesetting","level":2},{"title":"Formatting","id":"formatting","level":2},{"title":"Code","id":"code","level":3},{"title":"Lists","id":"lists","level":3},{"title":"Tables","id":"tables","level":3},{"title":"Configuration Properties","id":"configuration-properties","level":3},{"title":"Quotes","id":"quotes","level":3},{"title":"Assumptions and simplicity","id":"assumptions-and-simplicity","level":3},{"title":"Configuration defaults and types","id":"configuration-defaults-and-types","level":3},{"title":"Options shortlists and their typing","id":"options-shortlists-and-their-typing","level":3},{"title":"Adding links","id":"adding-links","level":3}],"title":"Writer\'s Guide","sort":1,"contributors":["pranshuchittora","EugeneHlushko"]},{"path":"src/content/contribute/writing-a-loader.mdx","name":"writing-a-loader.mdx","size":13545,"type":"file","extension":".mdx","url":"/contribute/writing-a-loader/","anchors":[{"title":"Setup","id":"setup","level":2},{"title":"Simple Usage","id":"simple-usage","level":2},{"title":"Complex Usage","id":"complex-usage","level":2},{"title":"Guidelines","id":"guidelines","level":2},{"title":"Simple","id":"simple","level":3},{"title":"Chaining","id":"chaining","level":3},{"title":"Modular","id":"modular","level":3},{"title":"Stateless","id":"stateless","level":3},{"title":"Loader Utilities","id":"loader-utilities","level":3},{"title":"Loader Dependencies","id":"loader-dependencies","level":3},{"title":"Module Dependencies","id":"module-dependencies","level":3},{"title":"Common Code","id":"common-code","level":3},{"title":"Absolute Paths","id":"absolute-paths","level":3},{"title":"Peer Dependencies","id":"peer-dependencies","level":3},{"title":"Testing","id":"testing","level":2}],"title":"Writing a Loader","sort":2,"contributors":["asulaiman","michael-ciniawsky","byzyk","anikethsaha","jamesgeorge007","chenxsan","dev-itsheng"]},{"path":"src/content/contribute/writing-a-plugin.mdx","name":"writing-a-plugin.mdx","size":13637,"type":"file","extension":".mdx","url":"/contribute/writing-a-plugin/","anchors":[{"title":"Creating a Plugin","id":"creating-a-plugin","level":2},{"title":"Basic plugin architecture","id":"basic-plugin-architecture","level":2},{"title":"Compiler and Compilation","id":"compiler-and-compilation","level":2},{"title":"Async event hooks","id":"async-event-hooks","level":2},{"title":"tapAsync","id":"tapasync","level":3},{"title":"Example","id":"example","level":2},{"title":"Different Plugin Shapes","id":"different-plugin-shapes","level":2},{"title":"Synchronous Hooks","id":"synchronous-hooks","level":3},{"title":"Asynchronous Hooks","id":"asynchronous-hooks","level":3},{"title":"Configuration defaults","id":"configuration-defaults","level":3}],"title":"Writing a Plugin","sort":3,"contributors":["slavafomin","tbroadley","nveenjain","iamakulov","byzyk","franjohn21","EugeneHlushko","snitin315","rahul3v","jamesgeorge007"]},{"path":"src/content/contribute/plugin-patterns.mdx","name":"plugin-patterns.mdx","size":4742,"type":"file","extension":".mdx","url":"/contribute/plugin-patterns/","anchors":[{"title":"Exploring assets, chunks, modules, and dependencies","id":"exploring-assets-chunks-modules-and-dependencies","level":2},{"title":"Monitoring the watch graph","id":"monitoring-the-watch-graph","level":3},{"title":"Changed chunks","id":"changed-chunks","level":2}],"title":"Plugin Patterns","sort":5,"contributors":["nveenjain","EugeneHlushko","benglynn"]},{"path":"src/content/contribute/release-process.mdx","name":"release-process.mdx","size":831,"type":"file","extension":".mdx","url":"/contribute/release-process/","anchors":[{"title":"Pull Requests","id":"pull-requests","level":2},{"title":"Releasing","id":"releasing","level":2}],"title":"Release Process","sort":6,"contributors":["d3viant0ne","sokra","byzyk","chenxsan"]},{"path":"src/content/contribute/debugging.mdx","name":"debugging.mdx","size":3576,"type":"file","extension":".mdx","url":"/contribute/debugging/","anchors":[{"title":"Stats","id":"stats","level":2},{"title":"DevTools","id":"devtools","level":2}],"title":"Debugging","sort":7,"contributors":["skipjack","tbroadley","madhavarshney","bhavya9107","akaustav"],"related":[{"title":"Learn and Debug webpack with Chrome DevTools!","url":"https://medium.com/webpack/webpack-bits-learn-and-debug-webpack-with-chrome-dev-tools-da1c5b19554"},{"title":"Debugging Guide | Node","url":"https://nodejs.org/en/docs/guides/debugging-getting-started/"},{"title":"Debugging Node.js with Chrome DevTools","url":"https://medium.com/@paul_irish/debugging-node-js-nightlies-with-chrome-devtools-7c4a1b95ae27"}]},{"path":"src/content/contribute/printable.mdx","name":"printable.mdx","size":666,"type":"file","extension":".mdx","url":"/contribute/printable/","anchors":[{"title":"Contribute","id":"contribute","level":1},{"title":"Writer\'s Guide","id":"writers-guide","level":1},{"title":"Writing a Loader","id":"writing-a-loader","level":1},{"title":"Writing a Plugin","id":"writing-a-plugin","level":1},{"title":"Plugin Patterns","id":"plugin-patterns","level":1},{"title":"Release Process","id":"release-process","level":1},{"title":"Debugging","id":"debugging","level":1}],"title":"Printable","sort":999,"contributors":["webpack"]}],"size":48583,"type":"directory","url":"/contribute/"},{"path":"src/content/guides","name":"guides","children":[{"path":"src/content/guides/index.mdx","name":"index.mdx","size":924,"type":"file","extension":".mdx","url":"/guides/","anchors":[],"title":"Guides","sort":-1,"contributors":["skipjack","EugeneHlushko","benschac"]},{"path":"src/content/guides/getting-started.mdx","name":"getting-started.mdx","size":12838,"type":"file","extension":".mdx","url":"/guides/getting-started/","anchors":[{"title":"Basic Setup","id":"basic-setup","level":2},{"title":"Creating a Bundle","id":"creating-a-bundle","level":2},{"title":"Modules","id":"modules","level":2},{"title":"Using a Configuration","id":"using-a-configuration","level":2},{"title":"NPM Scripts","id":"npm-scripts","level":2},{"title":"Conclusion","id":"conclusion","level":2}],"title":"Getting Started","description":"Learn how to bundle a JavaScript application with webpack 5.","sort":1,"contributors":["bebraw","varunjayaraman","cntanglijun","chrisVillanueva","johnstew","simon04","aaronang","TheDutchCoder","sudarsangp","Vanguard90","chenxsan","EugeneHlushko","ATGardner","ayvarot","bjarki","ztomasze","Spiral90210","byzyk","wizardofhogwarts","myshov","anshumanv","d3lm","snitin315","Etheryen"]},{"path":"src/content/guides/asset-management.mdx","name":"asset-management.mdx","size":24303,"type":"file","extension":".mdx","url":"/guides/asset-management/","anchors":[{"title":"Setup","id":"setup","level":2},{"title":"Loading CSS","id":"loading-css","level":2},{"title":"Loading Images","id":"loading-images","level":2},{"title":"Loading Fonts","id":"loading-fonts","level":2},{"title":"Loading Data","id":"loading-data","level":2},{"title":"Customize parser of JSON modules","id":"customize-parser-of-json-modules","level":3},{"title":"Global Assets","id":"global-assets","level":2},{"title":"Wrapping up","id":"wrapping-up","level":2},{"title":"Next guide","id":"next-guide","level":2},{"title":"Further Reading","id":"further-reading","level":2}],"title":"Asset Management","sort":2,"contributors":["skipjack","michael-ciniawsky","TheDutchCoder","sudarsangp","chenxsan","EugeneHlushko","AnayaDesign","wizardofhogwarts","astonizer","snitin315"]},{"path":"src/content/guides/output-management.mdx","name":"output-management.mdx","size":7573,"type":"file","extension":".mdx","url":"/guides/output-management/","anchors":[{"title":"Preparation","id":"preparation","level":2},{"title":"Setting up HtmlWebpackPlugin","id":"setting-up-htmlwebpackplugin","level":2},{"title":"Cleaning up the /dist folder","id":"cleaning-up-the-dist-folder","level":2},{"title":"The Manifest","id":"the-manifest","level":2},{"title":"Conclusion","id":"conclusion","level":2}],"title":"Output Management","sort":3,"contributors":["skipjack","TheDutchCoder","sudarsangp","JGJP","EugeneHlushko","AnayaDesign","chenxsan","snitin315"]},{"path":"src/content/guides/development.mdx","name":"development.mdx","size":14559,"type":"file","extension":".mdx","url":"/guides/development/","anchors":[{"title":"Using source maps","id":"using-source-maps","level":2},{"title":"Choosing a Development Tool","id":"choosing-a-development-tool","level":2},{"title":"Using Watch Mode","id":"using-watch-mode","level":3},{"title":"Using webpack-dev-server","id":"using-webpack-dev-server","level":3},{"title":"Using webpack-dev-middleware","id":"using-webpack-dev-middleware","level":3},{"title":"Adjusting Your Text Editor","id":"adjusting-your-text-editor","level":2},{"title":"Conclusion","id":"conclusion","level":2}],"title":"Development","sort":4,"contributors":["SpaceK33z","rafde","fvgs","TheDutchCoder","WojciechKo","Calinou","GAumala","EugeneHlushko","byzyk","trivikr","aholzner","chenxsan","maxloh","snitin315","f3ndot"]},{"path":"src/content/guides/code-splitting.mdx","name":"code-splitting.mdx","size":18088,"type":"file","extension":".mdx","url":"/guides/code-splitting/","anchors":[{"title":"Entry Points","id":"entry-points","level":2},{"title":"Prevent Duplication","id":"prevent-duplication","level":2},{"title":"Entry dependencies","id":"entry-dependencies","level":3},{"title":"SplitChunksPlugin","id":"splitchunksplugin","level":3},{"title":"Dynamic Imports","id":"dynamic-imports","level":2},{"title":"Prefetching/Preloading modules","id":"prefetchingpreloading-modules","level":2},{"title":"Bundle Analysis","id":"bundle-analysis","level":2},{"title":"Next Steps","id":"next-steps","level":2}],"title":"Code Splitting","sort":5,"contributors":["pksjce","pastelsky","simon04","jonwheeler","johnstew","shinxi","tomtasche","levy9527","rahulcs","chrisVillanueva","rafde","bartushek","shaunwallace","skipjack","jakearchibald","TheDutchCoder","rouzbeh84","shaodahong","sudarsangp","kcolton","efreitasn","EugeneHlushko","Tiendo1011","byzyk","AnayaDesign","wizardofhogwarts","maximilianschmelzer","smelukov","chenxsan","Adarah","atesgoral","snitin315","artem-malko"],"related":[{"title":"<link rel=\\"prefetch/preload\\" /> in webpack","url":"https://medium.com/webpack/link-rel-prefetch-preload-in-webpack-51a52358f84c"},{"title":"Preload, Prefetch And Priorities in Chrome","url":"https://medium.com/reloading/preload-prefetch-and-priorities-in-chrome-776165961bbf"},{"title":"Preloading content with <link rel=\\"preload\\" />","url":"https://developer.mozilla.org/en-US/docs/Web/HTML/Preloading_content"}]},{"path":"src/content/guides/caching.mdx","name":"caching.mdx","size":11422,"type":"file","extension":".mdx","url":"/guides/caching/","anchors":[{"title":"Output Filenames","id":"output-filenames","level":2},{"title":"Extracting Boilerplate","id":"extracting-boilerplate","level":2},{"title":"Module Identifiers","id":"module-identifiers","level":2},{"title":"Conclusion","id":"conclusion","level":2}],"title":"Caching","sort":6,"contributors":["okonet","jouni-kantola","skipjack","dannycjones","fadysamirsadek","afontcu","rosavage","saiprasad2595","EugeneHlushko","AnayaDesign","aholzner","snitin315"],"related":[{"title":"Issue 652","url":"https://github.com/webpack/webpack.js.org/issues/652"}]},{"path":"src/content/guides/author-libraries.mdx","name":"author-libraries.mdx","size":8163,"type":"file","extension":".mdx","url":"/guides/author-libraries/","anchors":[{"title":"Authoring a Library","id":"authoring-a-library","level":2},{"title":"Webpack Configuration","id":"webpack-configuration","level":2},{"title":"Expose the Library","id":"expose-the-library","level":2},{"title":"Externalize Lodash","id":"externalize-lodash","level":2},{"title":"External Limitations","id":"external-limitations","level":3},{"title":"Final Steps","id":"final-steps","level":2}],"title":"Authoring Libraries","sort":7,"contributors":["pksjce","johnstew","simon04","5angel","marioacc","byzyk","EugeneHlushko","AnayaDesign","chenxsan","wizardofhogwarts"]},{"path":"src/content/guides/environment-variables.mdx","name":"environment-variables.mdx","size":1845,"type":"file","extension":".mdx","url":"/guides/environment-variables/","anchors":[],"title":"Environment Variables","sort":8,"contributors":["simon04","grisanu","tbroadley","legalcodes","byzyk","jceipek","snitin315"]},{"path":"src/content/guides/build-performance.mdx","name":"build-performance.mdx","size":8685,"type":"file","extension":".mdx","url":"/guides/build-performance/","anchors":[{"title":"General","id":"general","level":2},{"title":"Stay Up to Date","id":"stay-up-to-date","level":3},{"title":"Loaders","id":"loaders","level":3},{"title":"Bootstrap","id":"bootstrap","level":3},{"title":"Resolving","id":"resolving","level":3},{"title":"Dlls","id":"dlls","level":3},{"title":"Smaller = Faster","id":"smaller--faster","level":3},{"title":"Worker Pool","id":"worker-pool","level":3},{"title":"Persistent cache","id":"persistent-cache","level":3},{"title":"Custom plugins/loaders","id":"custom-pluginsloaders","level":3},{"title":"Progress plugin","id":"progress-plugin","level":3},{"title":"Development","id":"development","level":2},{"title":"Incremental Builds","id":"incremental-builds","level":3},{"title":"Compile in Memory","id":"compile-in-memory","level":3},{"title":"stats.toJson speed","id":"statstojson-speed","level":3},{"title":"Devtool","id":"devtool","level":3},{"title":"Avoid Production Specific Tooling","id":"avoid-production-specific-tooling","level":3},{"title":"Minimal Entry Chunk","id":"minimal-entry-chunk","level":3},{"title":"Avoid Extra Optimization Steps","id":"avoid-extra-optimization-steps","level":3},{"title":"Output Without Path Info","id":"output-without-path-info","level":3},{"title":"Node.js Versions 8.9.10-9.11.1","id":"nodejs-versions-8910-9111","level":3},{"title":"TypeScript Loader","id":"typescript-loader","level":3},{"title":"Production","id":"production","level":2},{"title":"Source Maps","id":"source-maps","level":3},{"title":"Specific Tooling Issues","id":"specific-tooling-issues","level":2},{"title":"Babel","id":"babel","level":3},{"title":"TypeScript","id":"typescript","level":3},{"title":"Sass","id":"sass","level":3}],"title":"Build Performance","sort":9,"contributors":["sokra","tbroadley","byzyk","madhavarshney","wizardofhogwarts","anikethsaha"]},{"path":"src/content/guides/csp.mdx","name":"csp.mdx","size":2291,"type":"file","extension":".mdx","url":"/guides/csp/","anchors":[{"title":"Examples","id":"examples","level":2},{"title":"Enabling CSP","id":"enabling-csp","level":2},{"title":"Trusted Types","id":"trusted-types","level":2}],"title":"Content Security Policies","sort":10,"contributors":["EugeneHlushko","probablyup","wizardofhogwarts","koto"],"related":[{"title":"Nonce purpose explained","url":"https://stackoverflow.com/questions/42922784/what-s-the-purpose-of-the-html-nonce-attribute-for-script-and-style-elements"},{"title":"On the Insecurity of Whitelists and the Future of Content Security Policy","url":"https://ai.google/research/pubs/pub45542"},{"title":"Locking Down Your Website Scripts with CSP, Hashes, Nonces and Report URI","url":"https://www.troyhunt.com/locking-down-your-website-scripts-with-csp-hashes-nonces-and-report-uri/"},{"title":"CSP on MDN","url":"https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP"},{"title":"Trusted Types","url":"https://web.dev/trusted-types"}]},{"path":"src/content/guides/development-vagrant.mdx","name":"development-vagrant.mdx","size":3484,"type":"file","extension":".mdx","url":"/guides/development-vagrant/","anchors":[{"title":"Configuring the Project","id":"configuring-the-project","level":2},{"title":"Running the Server","id":"running-the-server","level":2},{"title":"Advanced Usage with nginx","id":"advanced-usage-with-nginx","level":2},{"title":"Conclusion","id":"conclusion","level":2}],"title":"Development - Vagrant","sort":11,"contributors":["SpaceK33z","chrisVillanueva","byzyk","wizardofhogwarts"]},{"path":"src/content/guides/dependency-management.mdx","name":"dependency-management.mdx","size":3159,"type":"file","extension":".mdx","url":"/guides/dependency-management/","anchors":[{"title":"require with expression","id":"require-with-expression","level":2},{"title":"require.context","id":"requirecontext","level":2},{"title":"context module API","id":"context-module-api","level":3}],"title":"Dependency Management","sort":12,"contributors":["ndelangen","chrisVillanueva","sokra","byzyk","AnayaDesign"]},{"path":"src/content/guides/installation.mdx","name":"installation.mdx","size":2799,"type":"file","extension":".mdx","url":"/guides/installation/","anchors":[{"title":"Prerequisites","id":"prerequisites","level":2},{"title":"Local Installation","id":"local-installation","level":2},{"title":"Global Installation","id":"global-installation","level":2},{"title":"Bleeding Edge","id":"bleeding-edge","level":2}],"title":"Installation","sort":13,"contributors":["pksjce","bebraw","simon04","EugeneHlushko","sibiraj-s","chenxsan"]},{"path":"src/content/guides/hot-module-replacement.mdx","name":"hot-module-replacement.mdx","size":12146,"type":"file","extension":".mdx","url":"/guides/hot-module-replacement/","anchors":[{"title":"Enabling HMR","id":"enabling-hmr","level":2},{"title":"Via the Node.js API","id":"via-the-nodejs-api","level":2},{"title":"Gotchas","id":"gotchas","level":2},{"title":"HMR with Stylesheets","id":"hmr-with-stylesheets","level":2},{"title":"Other Code and Frameworks","id":"other-code-and-frameworks","level":2}],"title":"Hot Module Replacement","sort":15,"contributors":["jmreidy","jhnns","sararubin","rohannair","joshsantos","drpicox","skipjack","sbaidon","gdi2290","bdwain","caryli","xgirma","EugeneHlushko","AnayaDesign","aviyacohen","dhruvdutt","wizardofhogwarts","aholzner","snitin315"],"related":[{"title":"Concepts - Hot Module Replacement","url":"/concepts/hot-module-replacement"},{"title":"API - Hot Module Replacement","url":"/api/hot-module-replacement"}]},{"path":"src/content/guides/tree-shaking.mdx","name":"tree-shaking.mdx","size":15124,"type":"file","extension":".mdx","url":"/guides/tree-shaking/","anchors":[{"title":"Add a Utility","id":"add-a-utility","level":2},{"title":"Mark the file as side-effect-free","id":"mark-the-file-as-side-effect-free","level":2},{"title":"Clarifying tree shaking and sideEffects","id":"clarifying-tree-shaking-and-sideeffects","level":2},{"title":"Mark a function call as side-effect-free","id":"mark-a-function-call-as-side-effect-free","level":2},{"title":"Minify the Output","id":"minify-the-output","level":2},{"title":"Conclusion","id":"conclusion","level":2}],"title":"Tree Shaking","sort":16,"contributors":["simon04","zacanger","alexjoverm","avant1","MijaelWatts","dmitriid","probablyup","gish","lumo10","byzyk","pnevares","EugeneHlushko","AnayaDesign","torifat","rahul3v","snitin315"],"related":[{"title":"Debugging Optimization Bailouts","url":"https://webpack.js.org/plugins/module-concatenation-plugin/#debugging-optimization-bailouts"},{"title":"Issue 6074 - Add support for more complex selectors for sideEffects","url":"https://github.com/webpack/webpack/issues/6074"}]},{"path":"src/content/guides/production.mdx","name":"production.mdx","size":9195,"type":"file","extension":".mdx","url":"/guides/production/","anchors":[{"title":"Setup","id":"setup","level":2},{"title":"NPM Scripts","id":"npm-scripts","level":2},{"title":"Specify the Mode","id":"specify-the-mode","level":2},{"title":"Minification","id":"minification","level":2},{"title":"Source Mapping","id":"source-mapping","level":2},{"title":"Minimize CSS","id":"minimize-css","level":2},{"title":"CLI Alternatives","id":"cli-alternatives","level":2}],"title":"Production","sort":17,"contributors":["henriquea","rajagopal4890","makuzaverite","markerikson","simon04","kisnows","chrisVillanueva","swapnilmishra","bring2dip","redian","skipjack","xgqfrms","kelset","xgirma","mehrdaad","SevenOutman","AnayaDesign","wizardofhogwarts","aholzner","EugeneHlushko","snitin315"]},{"path":"src/content/guides/lazy-loading.mdx","name":"lazy-loading.mdx","size":4299,"type":"file","extension":".mdx","url":"/guides/lazy-loading/","anchors":[{"title":"Example","id":"example","level":2},{"title":"Frameworks","id":"frameworks","level":2}],"title":"Lazy Loading","sort":18,"contributors":["iammerrick","chrisVillanueva","skipjack","byzyk","EugeneHlushko","AnayaDesign","tapanprakasht","snitin315"],"related":[{"title":"Lazy Loading ES2015 Modules in the Browser","url":"https://dzone.com/articles/lazy-loading-es2015-modules-in-the-browser"},{"title":"Asynchronous vs Deferred JavaScript","url":"https://bitsofco.de/async-vs-defer/"}]},{"path":"src/content/guides/ecma-script-modules.mdx","name":"ecma-script-modules.mdx","size":3017,"type":"file","extension":".mdx","url":"/guides/ecma-script-modules/","anchors":[{"title":"Exporting","id":"exporting","level":2},{"title":"Importing","id":"importing","level":2},{"title":"Flagging modules as ESM","id":"flagging-modules-as-esm","level":2}],"title":"ECMAScript Modules","sort":19,"contributors":["sokra"],"related":[{"title":"ECMAScript Modules in Node.js","url":"https://nodejs.org/api/esm.html"}]},{"path":"src/content/guides/shimming.mdx","name":"shimming.mdx","size":14898,"type":"file","extension":".mdx","url":"/guides/shimming/","anchors":[{"title":"Shimming Globals","id":"shimming-globals","level":2},{"title":"Granular Shimming","id":"granular-shimming","level":2},{"title":"Global Exports","id":"global-exports","level":2},{"title":"Loading Polyfills","id":"loading-polyfills","level":2},{"title":"Further Optimizations","id":"further-optimizations","level":2},{"title":"Node Built-Ins","id":"node-built-ins","level":2},{"title":"Other Utilities","id":"other-utilities","level":2}],"title":"Shimming","sort":20,"contributors":["pksjce","jhnns","simon04","jeremenichelli","svyandun","byzyk","EugeneHlushko","AnayaDesign","dhurlburtusa","plr108","NicolasLetellier","wizardofhogwarts","snitin315","chenxsan"],"related":[{"title":"Reward modern browser users script","url":"https://medium.com/hackernoon/10-things-i-learned-making-the-fastest-site-in-the-world-18a0e1cdf4a7"},{"title":"useBuiltIns in babel-preset-env","url":"https://babeljs.io/docs/en/babel-preset-env#usebuiltins"}]},{"path":"src/content/guides/typescript.mdx","name":"typescript.mdx","size":6914,"type":"file","extension":".mdx","url":"/guides/typescript/","anchors":[{"title":"Basic Setup","id":"basic-setup","level":2},{"title":"Loader","id":"loader","level":2},{"title":"Source Maps","id":"source-maps","level":2},{"title":"Client types","id":"client-types","level":2},{"title":"Using Third Party Libraries","id":"using-third-party-libraries","level":2},{"title":"Importing Other Assets","id":"importing-other-assets","level":2},{"title":"Build Performance","id":"build-performance","level":2}],"title":"TypeScript","sort":21,"contributors":["morsdyce","kkamali","mtrivera","byzyk","EugeneHlushko","chenxsan","snitin315"]},{"path":"src/content/guides/web-workers.mdx","name":"web-workers.mdx","size":2026,"type":"file","extension":".mdx","url":"/guides/web-workers/","anchors":[{"title":"Syntax","id":"syntax","level":2},{"title":"Example","id":"example","level":2},{"title":"Node.js","id":"nodejs","level":2}],"title":"Web Workers","sort":21,"contributors":["chenxsan"]},{"path":"src/content/guides/progressive-web-application.mdx","name":"progressive-web-application.mdx","size":6018,"type":"file","extension":".mdx","url":"/guides/progressive-web-application/","anchors":[{"title":"We Don\'t Work Offline Now","id":"we-dont-work-offline-now","level":2},{"title":"Adding Workbox","id":"adding-workbox","level":2},{"title":"Registering Our Service Worker","id":"registering-our-service-worker","level":2},{"title":"Conclusion","id":"conclusion","level":2}],"title":"Progressive Web Application","sort":22,"contributors":["johnnyreilly","chenxsan","EugeneHlushko","benschac","aholzner"]},{"path":"src/content/guides/public-path.mdx","name":"public-path.mdx","size":3070,"type":"file","extension":".mdx","url":"/guides/public-path/","anchors":[{"title":"Use Cases","id":"use-cases","level":2},{"title":"Environment Based","id":"environment-based","level":3},{"title":"On The Fly","id":"on-the-fly","level":3},{"title":"Automatic publicPath","id":"automatic-publicpath","level":3}],"title":"Public Path","sort":23,"contributors":["rafaelrinaldi","chrisVillanueva","gonzoyumo","chenxsan"]},{"path":"src/content/guides/integrations.mdx","name":"integrations.mdx","size":5414,"type":"file","extension":".mdx","url":"/guides/integrations/","anchors":[{"title":"NPM Scripts","id":"npm-scripts","level":2},{"title":"Grunt","id":"grunt","level":2},{"title":"Gulp","id":"gulp","level":2},{"title":"Mocha","id":"mocha","level":2},{"title":"Karma","id":"karma","level":2}],"title":"Integrations","sort":24,"contributors":["pksjce","bebraw","tashian","skipjack","AnayaDesign"]},{"path":"src/content/guides/asset-modules.mdx","name":"asset-modules.mdx","size":12549,"type":"file","extension":".mdx","url":"/guides/asset-modules/","anchors":[{"title":"Public Path","id":"public-path","level":2},{"title":"On The Fly Override","id":"on-the-fly-override","level":3},{"title":"Resource assets","id":"resource-assets","level":2},{"title":"Custom output filename","id":"custom-output-filename","level":3},{"title":"Inlining assets","id":"inlining-assets","level":2},{"title":"Custom data URI generator","id":"custom-data-uri-generator","level":3},{"title":"Source assets","id":"source-assets","level":2},{"title":"URL assets","id":"url-assets","level":2},{"title":"General asset type","id":"general-asset-type","level":2},{"title":"Replacing Inline Loader Syntax","id":"replacing-inline-loader-syntax","level":2},{"title":"Disable emitting assets","id":"disable-emitting-assets","level":2}],"title":"Asset Modules","sort":25,"contributors":["smelukov","EugeneHlushko","chenxsan","anshumanv","spence-s","dkdk225"],"related":[{"title":"webpack 5 - Asset Modules","url":"https://dev.to/smelukov/webpack-5-asset-modules-2o3h"}]},{"path":"src/content/guides/entry-advanced.mdx","name":"entry-advanced.mdx","size":2072,"type":"file","extension":".mdx","url":"/guides/entry-advanced/","anchors":[{"title":"Multiple file types per entry","id":"multiple-file-types-per-entry","level":2}],"title":"Advanced entry","sort":25,"contributors":["EugeneHlushko"]},{"path":"src/content/guides/package-exports.mdx","name":"package-exports.mdx","size":24715,"type":"file","extension":".mdx","url":"/guides/package-exports/","anchors":[{"title":"General syntax","id":"general-syntax","level":2},{"title":"Alternatives","id":"alternatives","level":2},{"title":"Conditional syntax","id":"conditional-syntax","level":2},{"title":"Abbreviation","id":"abbreviation","level":2},{"title":"Notes about ordering","id":"notes-about-ordering","level":2},{"title":"Support","id":"support","level":2},{"title":"Conditions","id":"conditions","level":2},{"title":"Reference syntax","id":"reference-syntax","level":3},{"title":"Optimizations","id":"optimizations","level":3},{"title":"Target environment","id":"target-environment","level":3},{"title":"Conditions: Preprocessor and runtimes","id":"conditions-preprocessor-and-runtimes","level":3},{"title":"Conditions: Custom","id":"conditions-custom","level":3},{"title":"Common patterns","id":"common-patterns","level":2},{"title":"Target environment independent packages","id":"target-environment-independent-packages","level":3},{"title":"Providing devtools or production optimizations","id":"providing-devtools-or-production-optimizations","level":3},{"title":"Providing different versions depending on target environment","id":"providing-different-versions-depending-on-target-environment","level":3},{"title":"Combining patterns","id":"combining-patterns","level":3},{"title":"Guidelines","id":"guidelines","level":2}],"title":"Package exports","sort":25,"contributors":["sokra"],"related":[{"title":"Package entry points in Node.js","url":"https://nodejs.org/api/packages.html#packages_package_entry_points"}]},{"path":"src/content/guides/printable.mdx","name":"printable.mdx","size":2617,"type":"file","extension":".mdx","url":"/guides/printable/","anchors":[{"title":"Guides","id":"guides","level":1},{"title":"Getting Started","id":"getting-started","level":1},{"title":"Asset Management","id":"asset-management","level":1},{"title":"Output Management","id":"output-management","level":1},{"title":"Development","id":"development","level":1},{"title":"Code Splitting","id":"code-splitting","level":1},{"title":"Caching","id":"caching","level":1},{"title":"Authoring Libraries","id":"authoring-libraries","level":1},{"title":"Environment Variables","id":"environment-variables","level":1},{"title":"Build Performance","id":"build-performance","level":1},{"title":"Content Security Policies","id":"content-security-policies","level":1},{"title":"Development - Vagrant","id":"development---vagrant","level":1},{"title":"Dependency Management","id":"dependency-management","level":1},{"title":"Installation","id":"installation","level":1},{"title":"Hot Module Replacement","id":"hot-module-replacement","level":1},{"title":"Tree Shaking","id":"tree-shaking","level":1},{"title":"Production","id":"production","level":1},{"title":"Lazy Loading","id":"lazy-loading","level":1},{"title":"ECMAScript Modules","id":"ecmascript-modules","level":1},{"title":"Shimming","id":"shimming","level":1},{"title":"TypeScript","id":"typescript","level":1},{"title":"Web Workers","id":"web-workers","level":1},{"title":"Progressive Web Application","id":"progressive-web-application","level":1},{"title":"Public Path","id":"public-path","level":1},{"title":"Integrations","id":"integrations","level":1},{"title":"Advanced entry","id":"advanced-entry","level":1},{"title":"Asset Modules","id":"asset-modules","level":1},{"title":"Package exports","id":"package-exports","level":1}],"title":"Printable","sort":999,"contributors":["webpack"]}],"size":244207,"type":"directory","url":"/guides/"},{"path":"src/content/loaders","name":"loaders","children":[{"path":"src/content/loaders/_babel-loader.mdx","name":"babel-loader.mdx","size":14646,"type":"file","extension":".mdx","url":"/loaders/babel-loader/","anchors":[{"title":"Install","id":"install","level":2},{"title":"Usage","id":"usage","level":2},{"title":"Options","id":"options","level":3},{"title":"Troubleshooting","id":"troubleshooting","level":2},{"title":"Enable debug mode logging","id":"enable-debug-mode-logging","level":3},{"title":"babel-loader is slow!","id":"babel-loader-is-slow","level":3},{"title":"Some files in my node_modules are not transpiled for IE 11","id":"some-files-in-my-node_modules-are-not-transpiled-for-ie-11","level":3},{"title":"Babel is injecting helpers into each file and bloating my code!","id":"babel-is-injecting-helpers-into-each-file-and-bloating-my-code","level":3},{"title":"The Node.js API for babel has been moved to babel-core.","id":"the-nodejs-api-for-babel-has-been-moved-to-babel-core","level":3},{"title":"Exclude libraries that should not be transpiled","id":"exclude-libraries-that-should-not-be-transpiled","level":3},{"title":"Top level function (IIFE) is still arrow (on Webpack 5)","id":"top-level-function-iife-is-still-arrow-on-webpack-5","level":3},{"title":"Customize config based on webpack target","id":"customize-config-based-on-webpack-target","level":2},{"title":"Customized Loader","id":"customized-loader","level":2},{"title":"Example","id":"example","level":3},{"title":"customOptions(options: Object): { custom: Object, loader: Object }","id":"customoptionsoptions-object--custom-object-loader-object-","level":3},{"title":"config(cfg: PartialConfig, options: { source, customOptions }): Object","id":"configcfg-partialconfig-options--source-customoptions--object","level":3},{"title":"result(result: Result): Result","id":"resultresult-result-result","level":3},{"title":"License","id":"license","level":2}],"title":"babel-loader","source":"https://raw.githubusercontent.com/babel/babel-loader/main/README.md","edit":"https://github.com/babel/babel-loader/edit/main/README.md","repo":"https://github.com/babel/babel-loader","thirdParty":true},{"path":"src/content/loaders/_coffee-loader.mdx","name":"coffee-loader.mdx","size":5066,"type":"file","extension":".mdx","url":"/loaders/coffee-loader/","anchors":[{"title":"Getting Started","id":"getting-started","level":2},{"title":"Options","id":"options","level":2},{"title":"Examples","id":"examples","level":2},{"title":"CoffeeScript and Babel","id":"coffeescript-and-babel","level":3},{"title":"Literate CoffeeScript","id":"literate-coffeescript","level":3},{"title":"Contributing","id":"contributing","level":2},{"title":"License","id":"license","level":2}],"title":"coffee-loader","source":"https://raw.githubusercontent.com/webpack-contrib/coffee-loader/master/README.md","edit":"https://github.com/webpack-contrib/coffee-loader/edit/master/README.md","repo":"https://github.com/webpack-contrib/coffee-loader","thirdParty":true},{"path":"src/content/loaders/_exports-loader.mdx","name":"exports-loader.mdx","size":13574,"type":"file","extension":".mdx","url":"/loaders/exports-loader/","anchors":[{"title":"Getting Started","id":"getting-started","level":2},{"title":"Inline","id":"inline","level":3},{"title":"Using Configuration","id":"using-configuration","level":3},{"title":"Options","id":"options","level":2},{"title":"type","id":"type","level":3},{"title":"exports","id":"exports","level":3},{"title":"Contributing","id":"contributing","level":2},{"title":"License","id":"license","level":2}],"title":"exports-loader","source":"https://raw.githubusercontent.com/webpack-contrib/exports-loader/master/README.md","edit":"https://github.com/webpack-contrib/exports-loader/edit/master/README.md","repo":"https://github.com/webpack-contrib/exports-loader","thirdParty":true},{"path":"src/content/loaders/_expose-loader.mdx","name":"expose-loader.mdx","size":11162,"type":"file","extension":".mdx","url":"/loaders/expose-loader/","anchors":[{"title":"Getting Started","id":"getting-started","level":2},{"title":"Inline","id":"inline","level":2},{"title":"Using Configuration","id":"using-configuration","level":2},{"title":"Options","id":"options","level":2},{"title":"exposes","id":"exposes","level":3},{"title":"globalObject","id":"globalobject","level":3},{"title":"Examples","id":"examples","level":2},{"title":"Expose a local module","id":"expose-a-local-module","level":3},{"title":"Contributing","id":"contributing","level":2},{"title":"License","id":"license","level":2}],"title":"expose-loader","source":"https://raw.githubusercontent.com/webpack-contrib/expose-loader/master/README.md","edit":"https://github.com/webpack-contrib/expose-loader/edit/master/README.md","repo":"https://github.com/webpack-contrib/expose-loader","thirdParty":true},{"path":"src/content/loaders/_html-loader.mdx","name":"html-loader.mdx","size":26821,"type":"file","extension":".mdx","url":"/loaders/html-loader/","anchors":[{"title":"Getting Started","id":"getting-started","level":2},{"title":"Options","id":"options","level":2},{"title":"sources","id":"sources","level":3},{"title":"preprocessor","id":"preprocessor","level":3},{"title":"postprocessor","id":"postprocessor","level":3},{"title":"minimize","id":"minimize","level":3},{"title":"esModule","id":"esmodule","level":3},{"title":"Examples","id":"examples","level":2},{"title":"Disable url resolving using the <!-- webpackIgnore: true --> comment","id":"disable-url-resolving-using-the----webpackignore-true----comment","level":3},{"title":"roots","id":"roots","level":3},{"title":"CDN","id":"cdn","level":3},{"title":"Process script and link tags","id":"process-script-and-link-tags","level":3},{"title":"Templating","id":"templating","level":3},{"title":"PostHTML","id":"posthtml","level":3},{"title":"Export into HTML files","id":"export-into-html-files","level":3},{"title":"Contributing","id":"contributing","level":2},{"title":"License","id":"license","level":2}],"title":"html-loader","source":"https://raw.githubusercontent.com/webpack-contrib/html-loader/master/README.md","edit":"https://github.com/webpack-contrib/html-loader/edit/master/README.md","repo":"https://github.com/webpack-contrib/html-loader","thirdParty":true},{"path":"src/content/loaders/_imports-loader.mdx","name":"imports-loader.mdx","size":17277,"type":"file","extension":".mdx","url":"/loaders/imports-loader/","anchors":[{"title":"Getting Started","id":"getting-started","level":2},{"title":"Inline","id":"inline","level":3},{"title":"Using Configuration","id":"using-configuration","level":3},{"title":"Options","id":"options","level":2},{"title":"type","id":"type","level":3},{"title":"imports","id":"imports","level":3},{"title":"wrapper","id":"wrapper","level":3},{"title":"additionalCode","id":"additionalcode","level":3},{"title":"Contributing","id":"contributing","level":2},{"title":"License","id":"license","level":2}],"title":"imports-loader","source":"https://raw.githubusercontent.com/webpack-contrib/imports-loader/master/README.md","edit":"https://github.com/webpack-contrib/imports-loader/edit/master/README.md","repo":"https://github.com/webpack-contrib/imports-loader","thirdParty":true},{"path":"src/content/loaders/index.mdx","name":"index.mdx","size":4115,"type":"file","extension":".mdx","url":"/loaders/","anchors":[{"title":"Files","id":"files","level":2},{"title":"JSON","id":"json","level":2},{"title":"Transpiling","id":"transpiling","level":2},{"title":"Templating","id":"templating","level":2},{"title":"Styling","id":"styling","level":2},{"title":"Frameworks","id":"frameworks","level":2},{"title":"Awesome","id":"awesome","level":2}],"title":"Loaders","sort":-1,"contributors":["simon04","bajras","rhys-vdw","EugeneHlushko","hemal7735","snitin315","anshumanv","jamesgeorge007","chenxsan"]},{"path":"src/content/loaders/_node-loader.mdx","name":"node-loader.mdx","size":5343,"type":"file","extension":".mdx","url":"/loaders/node-loader/","anchors":[{"title":"node-loader","id":"node-loader","level":1},{"title":"Getting Started","id":"getting-started","level":2},{"title":"Inline","id":"inline","level":3},{"title":"Configuration","id":"configuration","level":3},{"title":"Options","id":"options","level":2},{"title":"flags","id":"flags","level":3},{"title":"name","id":"name","level":3},{"title":"Contributing","id":"contributing","level":2},{"title":"License","id":"license","level":2}],"title":"node-loader","source":"https://raw.githubusercontent.com/webpack-contrib/node-loader/master/README.md","edit":"https://github.com/webpack-contrib/node-loader/edit/master/README.md","repo":"https://github.com/webpack-contrib/node-loader","thirdParty":true},{"path":"src/content/loaders/printable.mdx","name":"printable.mdx","size":1599,"type":"file","extension":".mdx","url":"/loaders/printable/","anchors":[{"title":"babel-loader","id":"babel-loader","level":1},{"title":"coffee-loader","id":"coffee-loader","level":1},{"title":"css-loader","id":"css-loader","level":1},{"title":"exports-loader","id":"exports-loader","level":1},{"title":"expose-loader","id":"expose-loader","level":1},{"title":"html-loader","id":"html-loader","level":1},{"title":"imports-loader","id":"imports-loader","level":1},{"title":"less-loader","id":"less-loader","level":1},{"title":"node-loader","id":"node-loader","level":1},{"title":"postcss-loader","id":"postcss-loader","level":1},{"title":"remark-loader","id":"remark-loader","level":1},{"title":"sass-loader","id":"sass-loader","level":1},{"title":"source-map-loader","id":"source-map-loader","level":1},{"title":"style-loader","id":"style-loader","level":1},{"title":"stylus-loader","id":"stylus-loader","level":1},{"title":"thread-loader","id":"thread-loader","level":1},{"title":"val-loader","id":"val-loader","level":1},{"title":"Loaders","id":"loaders","level":1}],"title":"Printable","sort":999,"contributors":["webpack"]},{"path":"src/content/loaders/_remark-loader.mdx","name":"remark-loader.mdx","size":8153,"type":"file","extension":".mdx","url":"/loaders/remark-loader/","anchors":[{"title":"Usage","id":"usage","level":2},{"title":"Options","id":"options","level":2},{"title":"remarkOptions","id":"remarkoptions","level":3},{"title":"removeFrontMatter","id":"removefrontmatter","level":3},{"title":"Inspiration","id":"inspiration","level":2},{"title":"Examples","id":"examples","level":2},{"title":"Markdown to HTML","id":"markdown-to-html","level":3},{"title":"Markdown to Markdown","id":"markdown-to-markdown","level":3},{"title":"Contributing","id":"contributing","level":2},{"title":"License","id":"license","level":2}],"title":"remark-loader","source":"https://raw.githubusercontent.com/webpack-contrib/remark-loader/master/README.md","edit":"https://github.com/webpack-contrib/remark-loader/edit/master/README.md","repo":"https://github.com/webpack-contrib/remark-loader","thirdParty":true},{"path":"src/content/loaders/_source-map-loader.mdx","name":"source-map-loader.mdx","size":5406,"type":"file","extension":".mdx","url":"/loaders/source-map-loader/","anchors":[{"title":"Getting Started","id":"getting-started","level":2},{"title":"Options","id":"options","level":2},{"title":"filterSourceMappingUrl","id":"filtersourcemappingurl","level":3},{"title":"Examples","id":"examples","level":2},{"title":"Ignoring Warnings","id":"ignoring-warnings","level":3},{"title":"Contributing","id":"contributing","level":2},{"title":"License","id":"license","level":2}],"title":"source-map-loader","source":"https://raw.githubusercontent.com/webpack-contrib/source-map-loader/master/README.md","edit":"https://github.com/webpack-contrib/source-map-loader/edit/master/README.md","repo":"https://github.com/webpack-contrib/source-map-loader","thirdParty":true},{"path":"src/content/loaders/_thread-loader.mdx","name":"thread-loader.mdx","size":4456,"type":"file","extension":".mdx","url":"/loaders/thread-loader/","anchors":[{"title":"Getting Started","id":"getting-started","level":2},{"title":"Examples","id":"examples","level":3},{"title":"Contributing","id":"contributing","level":2},{"title":"License","id":"license","level":2}],"title":"thread-loader","source":"https://raw.githubusercontent.com/webpack-contrib/thread-loader/master/README.md","edit":"https://github.com/webpack-contrib/thread-loader/edit/master/README.md","repo":"https://github.com/webpack-contrib/thread-loader","thirdParty":true},{"path":"src/content/loaders/_val-loader.mdx","name":"val-loader.mdx","size":10034,"type":"file","extension":".mdx","url":"/loaders/val-loader/","anchors":[{"title":"Getting Started","id":"getting-started","level":2},{"title":"Options","id":"options","level":2},{"title":"executableFile","id":"executablefile","level":3},{"title":"Return Object Properties","id":"return-object-properties","level":2},{"title":"code","id":"code","level":3},{"title":"sourceMap","id":"sourcemap","level":3},{"title":"ast","id":"ast","level":3},{"title":"dependencies","id":"dependencies","level":3},{"title":"contextDependencies","id":"contextdependencies","level":3},{"title":"buildDependencies","id":"builddependencies","level":3},{"title":"cacheable","id":"cacheable","level":3},{"title":"Examples","id":"examples","level":2},{"title":"Simple","id":"simple","level":3},{"title":"Modernizr","id":"modernizr","level":3},{"title":"Figlet","id":"figlet","level":3},{"title":"Contributing","id":"contributing","level":2},{"title":"License","id":"license","level":2}],"title":"val-loader","source":"https://raw.githubusercontent.com/webpack-contrib/val-loader/master/README.md","edit":"https://github.com/webpack-contrib/val-loader/edit/master/README.md","repo":"https://github.com/webpack-contrib/val-loader","thirdParty":true},{"path":"src/content/loaders/_css-loader.mdx","name":"css-loader.mdx","size":55155,"type":"file","extension":".mdx","url":"/loaders/css-loader/","anchors":[{"title":"Getting Started","id":"getting-started","level":2},{"title":"Options","id":"options","level":2},{"title":"url","id":"url","level":3},{"title":"import","id":"import","level":3},{"title":"modules","id":"modules","level":3},{"title":"importLoaders","id":"importloaders","level":3},{"title":"sourceMap","id":"sourcemap","level":3},{"title":"esModule","id":"esmodule","level":3},{"title":"exportType","id":"exporttype","level":3},{"title":"Examples","id":"examples","level":2},{"title":"Recommend","id":"recommend","level":3},{"title":"Disable URL resolving using the /* webpackIgnore: true */ comment","id":"disable-url-resolving-using-the--webpackignore-true--comment","level":3},{"title":"Assets","id":"assets","level":3},{"title":"Extract","id":"extract","level":3},{"title":"Pure CSS, CSS Modules and PostCSS","id":"pure-css-css-modules-and-postcss","level":3},{"title":"Resolve unresolved URLs using an alias","id":"resolve-unresolved-urls-using-an-alias","level":3},{"title":"Named export with custom export names","id":"named-export-with-custom-export-names","level":3},{"title":"Separating Interoperable CSS-only and CSS Module features","id":"separating-interoperable-css-only-and-css-module-features","level":3},{"title":"Contributing","id":"contributing","level":2},{"title":"License","id":"license","level":2}],"title":"css-loader","source":"https://raw.githubusercontent.com/webpack-contrib/css-loader/master/README.md","edit":"https://github.com/webpack-contrib/css-loader/edit/master/README.md","repo":"https://github.com/webpack-contrib/css-loader","thirdParty":true,"group":"CSS"},{"path":"src/content/loaders/_less-loader.mdx","name":"less-loader.mdx","size":16601,"type":"file","extension":".mdx","url":"/loaders/less-loader/","anchors":[{"title":"Getting Started","id":"getting-started","level":2},{"title":"Options","id":"options","level":2},{"title":"lessOptions","id":"lessoptions","level":3},{"title":"additionalData","id":"additionaldata","level":3},{"title":"sourceMap","id":"sourcemap","level":3},{"title":"webpackImporter","id":"webpackimporter","level":3},{"title":"implementation","id":"implementation","level":3},{"title":"lessLogAsWarnOrErr","id":"lesslogaswarnorerr","level":3},{"title":"Examples","id":"examples","level":2},{"title":"Normal usage","id":"normal-usage","level":3},{"title":"Source maps","id":"source-maps","level":3},{"title":"In production","id":"in-production","level":3},{"title":"Imports","id":"imports","level":3},{"title":"Plugins","id":"plugins","level":3},{"title":"Extracting style sheets","id":"extracting-style-sheets","level":3},{"title":"CSS modules gotcha","id":"css-modules-gotcha","level":3},{"title":"Contributing","id":"contributing","level":2},{"title":"License","id":"license","level":2}],"title":"less-loader","source":"https://raw.githubusercontent.com/webpack-contrib/less-loader/master/README.md","edit":"https://github.com/webpack-contrib/less-loader/edit/master/README.md","repo":"https://github.com/webpack-contrib/less-loader","thirdParty":true,"group":"CSS"},{"path":"src/content/loaders/_postcss-loader.mdx","name":"postcss-loader.mdx","size":25176,"type":"file","extension":".mdx","url":"/loaders/postcss-loader/","anchors":[{"title":"Getting Started","id":"getting-started","level":2},{"title":"Options","id":"options","level":2},{"title":"execute","id":"execute","level":3},{"title":"postcssOptions","id":"postcssoptions","level":3},{"title":"sourceMap","id":"sourcemap","level":3},{"title":"implementation","id":"implementation","level":3},{"title":"Examples","id":"examples","level":2},{"title":"SugarSS","id":"sugarss","level":3},{"title":"Autoprefixer","id":"autoprefixer","level":3},{"title":"PostCSS Preset Env","id":"postcss-preset-env","level":3},{"title":"CSS Modules","id":"css-modules","level":3},{"title":"Extract CSS","id":"extract-css","level":3},{"title":"Emit assets","id":"emit-assets","level":3},{"title":"Add dependencies, contextDependencies, buildDependencies, missingDependencies","id":"add-dependencies-contextdependencies-builddependencies-missingdependencies","level":3},{"title":"Contributing","id":"contributing","level":2},{"title":"License","id":"license","level":2}],"title":"postcss-loader","source":"https://raw.githubusercontent.com/webpack-contrib/postcss-loader/master/README.md","edit":"https://github.com/webpack-contrib/postcss-loader/edit/master/README.md","repo":"https://github.com/webpack-contrib/postcss-loader","thirdParty":true,"group":"CSS"},{"path":"src/content/loaders/_sass-loader.mdx","name":"sass-loader.mdx","size":23226,"type":"file","extension":".mdx","url":"/loaders/sass-loader/","anchors":[{"title":"Getting Started","id":"getting-started","level":2},{"title":"The style (new API, by default since 16 version) and outputStyle (old API) options in production mode","id":"the-style-new-api-by-default-since-16-version-and-outputstyle-old-api-options-in-production-mode","level":3},{"title":"Resolving import and use at-rules","id":"resolving-import-and-use-at-rules","level":3},{"title":"Problems with url(...)","id":"problems-with-url","level":3},{"title":"Options","id":"options","level":2},{"title":"implementation","id":"implementation","level":3},{"title":"sassOptions","id":"sassoptions","level":3},{"title":"sourceMap","id":"sourcemap","level":3},{"title":"additionalData","id":"additionaldata","level":3},{"title":"webpackImporter","id":"webpackimporter","level":3},{"title":"warnRuleAsWarning","id":"warnruleaswarning","level":3},{"title":"api","id":"api","level":3},{"title":"How to enable @debug output","id":"how-to-enable-debug-output","level":2},{"title":"Examples","id":"examples","level":2},{"title":"Extracts CSS into separate files","id":"extracts-css-into-separate-files","level":3},{"title":"Source maps","id":"source-maps","level":3},{"title":"Contributing","id":"contributing","level":2},{"title":"License","id":"license","level":2}],"title":"sass-loader","source":"https://raw.githubusercontent.com/webpack-contrib/sass-loader/master/README.md","edit":"https://github.com/webpack-contrib/sass-loader/edit/master/README.md","repo":"https://github.com/webpack-contrib/sass-loader","thirdParty":true,"group":"CSS"},{"path":"src/content/loaders/_style-loader.mdx","name":"style-loader.mdx","size":27591,"type":"file","extension":".mdx","url":"/loaders/style-loader/","anchors":[{"title":"Getting Started","id":"getting-started","level":2},{"title":"Security Warning","id":"security-warning","level":2},{"title":"Options","id":"options","level":2},{"title":"injectType","id":"injecttype","level":3},{"title":"attributes","id":"attributes","level":3},{"title":"insert","id":"insert","level":3},{"title":"styleTagTransform","id":"styletagtransform","level":3},{"title":"base","id":"base","level":3},{"title":"esModule","id":"esmodule","level":3},{"title":"Examples","id":"examples","level":2},{"title":"Recommend","id":"recommend","level":3},{"title":"Named export for CSS Modules","id":"named-export-for-css-modules","level":3},{"title":"Source maps","id":"source-maps","level":3},{"title":"Nonce","id":"nonce","level":3},{"title":"Contributing","id":"contributing","level":2},{"title":"License","id":"license","level":2}],"title":"style-loader","source":"https://raw.githubusercontent.com/webpack-contrib/style-loader/master/README.md","edit":"https://github.com/webpack-contrib/style-loader/edit/master/README.md","repo":"https://github.com/webpack-contrib/style-loader","thirdParty":true,"group":"CSS"},{"path":"src/content/loaders/_stylus-loader.mdx","name":"stylus-loader.mdx","size":18238,"type":"file","extension":".mdx","url":"/loaders/stylus-loader/","anchors":[{"title":"Getting Started","id":"getting-started","level":2},{"title":"Options","id":"options","level":2},{"title":"stylusOptions","id":"stylusoptions","level":3},{"title":"sourceMap","id":"sourcemap","level":3},{"title":"webpackImporter","id":"webpackimporter","level":3},{"title":"additionalData","id":"additionaldata","level":3},{"title":"implementation","id":"implementation","level":3},{"title":"Examples","id":"examples","level":2},{"title":"Normal usage","id":"normal-usage","level":3},{"title":"Source maps","id":"source-maps","level":3},{"title":"Using nib with stylus","id":"using-nib-with-stylus","level":3},{"title":"Import JSON files","id":"import-json-files","level":3},{"title":"In production","id":"in-production","level":3},{"title":"webpack resolver","id":"webpack-resolver","level":3},{"title":"Stylus resolver","id":"stylus-resolver","level":3},{"title":"Extracting style sheets","id":"extracting-style-sheets","level":3},{"title":"Contributing","id":"contributing","level":2},{"title":"License","id":"license","level":2}],"title":"stylus-loader","source":"https://raw.githubusercontent.com/webpack-contrib/stylus-loader/master/README.md","edit":"https://github.com/webpack-contrib/stylus-loader/edit/master/README.md","repo":"https://github.com/webpack-contrib/stylus-loader","thirdParty":true,"group":"CSS"}],"size":293639,"type":"directory","url":"/loaders/"},{"path":"src/content/migrate","name":"migrate","children":[{"path":"src/content/migrate/index.mdx","name":"index.mdx","size":161,"type":"file","extension":".mdx","url":"/migrate/","anchors":[],"title":"Migrate","sort":-1,"contributors":["EugeneHlushko"]},{"path":"src/content/migrate/5.mdx","name":"5.mdx","size":15701,"type":"file","extension":".mdx","url":"/migrate/5/","anchors":[{"title":"Preparations","id":"preparations","level":2},{"title":"Upgrade webpack 4 and its plugins/loaders","id":"upgrade-webpack-4-and-its-pluginsloaders","level":2},{"title":"Make sure your build has no errors or warnings","id":"make-sure-your-build-has-no-errors-or-warnings","level":3},{"title":"Make sure to use mode","id":"make-sure-to-use-mode","level":3},{"title":"Update outdated options","id":"update-outdated-options","level":3},{"title":"Test webpack 5 compatibility","id":"test-webpack-5-compatibility","level":3},{"title":"Upgrade webpack to 5","id":"upgrade-webpack-to-5","level":2},{"title":"Clean up configuration","id":"clean-up-configuration","level":3},{"title":"Need to support an older browser like IE 11?","id":"need-to-support-an-older-browser-like-ie-11","level":3},{"title":"Cleanup the code","id":"cleanup-the-code","level":3},{"title":"Run a single build and follow advice","id":"run-a-single-build-and-follow-advice","level":3},{"title":"Everything works?","id":"everything-works","level":2},{"title":"It is not working?","id":"it-is-not-working","level":2},{"title":"Something missing in this guide?","id":"something-missing-in-this-guide","level":2},{"title":"Changes to internals","id":"changes-to-internals","level":2},{"title":"getOptions method for Loaders","id":"getoptions-method-for-loaders","level":3}],"title":"To v5 from v4","sort":1,"contributors":["sokra","salemhilal","keichinger","EugeneHlushko","MattGoldwater","rramaa","chenxsan","jamesgeorge007","getsnoopy","yevhen-logosha"]},{"path":"src/content/migrate/4.mdx","name":"4.mdx","size":4115,"type":"file","extension":".mdx","url":"/migrate/4/","anchors":[{"title":"Node.js v4","id":"nodejs-v4","level":2},{"title":"CLI","id":"cli","level":2},{"title":"Update plugins","id":"update-plugins","level":2},{"title":"mode","id":"mode","level":2},{"title":"Deprecated/Removed plugins","id":"deprecatedremoved-plugins","level":2},{"title":"CommonsChunkPlugin","id":"commonschunkplugin","level":2},{"title":"import() and CommonJS","id":"import-and-commonjs","level":2},{"title":"json and loaders","id":"json-and-loaders","level":2},{"title":"module.loaders","id":"moduleloaders","level":2}],"title":"To v4 from v3","sort":2,"contributors":["sokra","EugeneHlushko","Kolhar730"],"related":[{"title":"To v2 or v3 from v1","url":"https://webpack.js.org/migrate/3/"},{"title":"RIP CommonChunkPlugin","url":"https://gist.github.com/sokra/1522d586b8e5c0f5072d7565c2bee693"},{"title":"webpack 4: migration guide for plugins/loaders","url":"https://medium.com/webpack/webpack-4-migration-guide-for-plugins-loaders-20a79b927202"}]},{"path":"src/content/migrate/3.mdx","name":"3.mdx","size":16052,"type":"file","extension":".mdx","url":"/migrate/3/","anchors":[{"title":"resolve.root, resolve.fallback, resolve.modulesDirectories","id":"resolveroot-resolvefallback-resolvemodulesdirectories","level":2},{"title":"resolve.extensions","id":"resolveextensions","level":2},{"title":"resolve.*","id":"resolve","level":2},{"title":"module.loaders is now module.rules","id":"moduleloaders-is-now-modulerules","level":2},{"title":"Chaining loaders","id":"chaining-loaders","level":2},{"title":"Automatic -loader module name extension removed","id":"automatic--loader-module-name-extension-removed","level":2},{"title":"json-loader is not required anymore","id":"json-loader-is-not-required-anymore","level":2},{"title":"Loaders in configuration resolve relative to context","id":"loaders-in-configuration-resolve-relative-to-context","level":2},{"title":"module.preLoaders and module.postLoaders were removed:","id":"modulepreloaders-and-modulepostloaders-were-removed","level":2},{"title":"UglifyJsPlugin sourceMap","id":"uglifyjsplugin-sourcemap","level":2},{"title":"UglifyJsPlugin warnings","id":"uglifyjsplugin-warnings","level":2},{"title":"UglifyJsPlugin minimize loaders","id":"uglifyjsplugin-minimize-loaders","level":2},{"title":"DedupePlugin has been removed","id":"dedupeplugin-has-been-removed","level":2},{"title":"BannerPlugin - breaking change","id":"bannerplugin---breaking-change","level":2},{"title":"OccurrenceOrderPlugin is now on by default","id":"occurrenceorderplugin-is-now-on-by-default","level":2},{"title":"ExtractTextWebpackPlugin - breaking change","id":"extracttextwebpackplugin---breaking-change","level":2},{"title":"ExtractTextPlugin.extract","id":"extracttextpluginextract","level":3},{"title":"new ExtractTextPlugin({options})","id":"new-extracttextpluginoptions","level":3},{"title":"Full dynamic requires now fail by default","id":"full-dynamic-requires-now-fail-by-default","level":2},{"title":"Using custom arguments in CLI and configuration","id":"using-custom-arguments-in-cli-and-configuration","level":3},{"title":"require.ensure and AMD require are asynchronous","id":"requireensure-and-amd-require-are-asynchronous","level":2},{"title":"Loader configuration is through options","id":"loader-configuration-is-through-options","level":2},{"title":"What are options?","id":"what-are-options","level":3},{"title":"LoaderOptionsPlugin context","id":"loaderoptionsplugin-context","level":2},{"title":"debug","id":"debug","level":2},{"title":"Code Splitting with ES2015","id":"code-splitting-with-es2015","level":2},{"title":"Dynamic expressions","id":"dynamic-expressions","level":2},{"title":"Mixing ES2015 with AMD and CommonJS","id":"mixing-es2015-with-amd-and-commonjs","level":2},{"title":"Hints","id":"hints","level":2},{"title":"Template strings","id":"template-strings","level":3},{"title":"Configuration Promise","id":"configuration-promise","level":3},{"title":"Advanced loader matching","id":"advanced-loader-matching","level":3},{"title":"More CLI options","id":"more-cli-options","level":3},{"title":"Loader changes","id":"loader-changes","level":2},{"title":"Cacheable","id":"cacheable","level":3},{"title":"Complex options","id":"complex-options","level":3}],"title":"To v2 or v3 from v1","sort":3,"contributors":["sokra","jhnns","grgur","domfarolino","johnnyreilly","jouni-kantola","frederikprijck","chrisVillanueva","bebraw","howdy39","selbekk","ndelangen","EugeneHlushko","byzyk"]},{"path":"src/content/migrate/printable.mdx","name":"printable.mdx","size":286,"type":"file","extension":".mdx","url":"/migrate/printable/","anchors":[{"title":"Migrate","id":"migrate","level":1},{"title":"To v5 from v4","id":"to-v5-from-v4","level":1},{"title":"To v4 from v3","id":"to-v4-from-v3","level":1},{"title":"To v2 or v3 from v1","id":"to-v2-or-v3-from-v1","level":1}],"title":"Printable","sort":999,"contributors":["webpack"]}],"size":36315,"type":"directory","url":"/migrate/"},{"path":"src/content/plugins","name":"plugins","children":[{"path":"src/content/plugins/index.mdx","name":"index.mdx","size":4929,"type":"file","extension":".mdx","url":"/plugins/","anchors":[],"title":"Plugins","sort":-1,"contributors":["simon04","gonzoyumo","rouzbeh84","aretecode","eko3alpha","refactorized","byzyk","EugeneHlushko","snitin315","chenxsan"]},{"path":"src/content/plugins/printable.mdx","name":"printable.mdx","size":4723,"type":"file","extension":".mdx","url":"/plugins/printable/","anchors":[{"title":"AutomaticPrefetchPlugin","id":"automaticprefetchplugin","level":1},{"title":"BannerPlugin","id":"bannerplugin","level":1},{"title":"CommonsChunkPlugin","id":"commonschunkplugin","level":1},{"title":"CompressionWebpackPlugin","id":"compressionwebpackplugin","level":1},{"title":"ContextExclusionPlugin","id":"contextexclusionplugin","level":1},{"title":"ContextReplacementPlugin","id":"contextreplacementplugin","level":1},{"title":"CopyWebpackPlugin","id":"copywebpackplugin","level":1},{"title":"CssMinimizerWebpackPlugin","id":"cssminimizerwebpackplugin","level":1},{"title":"DefinePlugin","id":"defineplugin","level":1},{"title":"DllPlugin","id":"dllplugin","level":1},{"title":"EnvironmentPlugin","id":"environmentplugin","level":1},{"title":"EslintWebpackPlugin","id":"eslintwebpackplugin","level":1},{"title":"EvalSourceMapDevToolPlugin","id":"evalsourcemapdevtoolplugin","level":1},{"title":"HashedModuleIdsPlugin","id":"hashedmoduleidsplugin","level":1},{"title":"HotModuleReplacementPlugin","id":"hotmodulereplacementplugin","level":1},{"title":"HtmlMinimizerWebpackPlugin","id":"htmlminimizerwebpackplugin","level":1},{"title":"HtmlWebpackPlugin","id":"htmlwebpackplugin","level":1},{"title":"IgnorePlugin","id":"ignoreplugin","level":1},{"title":"ImageMinimizerWebpackPlugin","id":"imageminimizerwebpackplugin","level":1},{"title":"InstallWebpackPlugin","id":"installwebpackplugin","level":1},{"title":"Internal webpack plugins","id":"internal-webpack-plugins","level":1},{"title":"JsonMinimizerWebpackPlugin","id":"jsonminimizerwebpackplugin","level":1},{"title":"LimitChunkCountPlugin","id":"limitchunkcountplugin","level":1},{"title":"MinChunkSizePlugin","id":"minchunksizeplugin","level":1},{"title":"MiniCssExtractPlugin","id":"minicssextractplugin","level":1},{"title":"ModuleConcatenationPlugin","id":"moduleconcatenationplugin","level":1},{"title":"Plugins","id":"plugins","level":1},{"title":"ModuleFederationPlugin","id":"modulefederationplugin","level":1},{"title":"NoEmitOnErrorsPlugin","id":"noemitonerrorsplugin","level":1},{"title":"NormalModuleReplacementPlugin","id":"normalmodulereplacementplugin","level":1},{"title":"PrefetchPlugin","id":"prefetchplugin","level":1},{"title":"ProfilingPlugin","id":"profilingplugin","level":1},{"title":"ProgressPlugin","id":"progressplugin","level":1},{"title":"ProvidePlugin","id":"provideplugin","level":1},{"title":"SourceMapDevToolPlugin","id":"sourcemapdevtoolplugin","level":1},{"title":"SplitChunksPlugin","id":"splitchunksplugin","level":1},{"title":"StylelintWebpackPlugin","id":"stylelintwebpackplugin","level":1},{"title":"SvgChunkWebpackPlugin","id":"svgchunkwebpackplugin","level":1},{"title":"TerserWebpackPlugin","id":"terserwebpackplugin","level":1},{"title":"WatchIgnorePlugin","id":"watchignoreplugin","level":1}],"title":"Printable","sort":999,"contributors":["webpack"]},{"path":"src/content/plugins/html-webpack-plugin.mdx","name":"html-webpack-plugin.mdx","size":2010,"type":"file","extension":".mdx","url":"/plugins/html-webpack-plugin/","anchors":[{"title":"Installation","id":"installation","level":2},{"title":"Basic Usage","id":"basic-usage","level":2},{"title":"Configuration","id":"configuration","level":2},{"title":"Third party addons","id":"third-party-addons","level":2}],"title":"HtmlWebpackPlugin","group":"Community","contributors":["ampedandwired","simon04","Sibiraj-S","EugeneHlushko"]},{"path":"src/content/plugins/_svg-chunk-webpack-plugin.mdx","name":"svg-chunk-webpack-plugin.mdx","size":9140,"type":"file","extension":".mdx","url":"/plugins/svg-chunk-webpack-plugin/","anchors":[{"title":"When to use this plugin","id":"when-to-use-this-plugin","level":2},{"title":"Zero config","id":"zero-config","level":2},{"title":"Installation","id":"installation","level":2},{"title":"Example","id":"example","level":2},{"title":"Basic usage","id":"basic-usage","level":2},{"title":"Using a configuration","id":"using-a-configuration","level":2},{"title":"Loader","id":"loader","level":3},{"title":"Plugin","id":"plugin","level":3},{"title":"filename","id":"filename","level":3},{"title":"svgstoreConfig","id":"svgstoreconfig","level":3},{"title":"generateSpritesManifest","id":"generatespritesmanifest","level":3},{"title":"generateSpritesPreview","id":"generatespritespreview","level":3},{"title":"Caching","id":"caching","level":2},{"title":"[contenthash]","id":"contenthash","level":3},{"title":"[fullhash]","id":"fullhash","level":3},{"title":"License","id":"license","level":2}],"title":"SvgChunkWebpackPlugin","group":"Community","contributors":["yoriiis","alexander-akait"],"source":"https://raw.githubusercontent.com/yoriiis/svg-chunk-webpack-plugin/main/README.md","edit":"https://github.com/yoriiis/svg-chunk-webpack-plugin/edit/main/README.md","repo":"https://github.com/yoriiis/svg-chunk-webpack-plugin","thirdParty":true},{"path":"src/content/plugins/automatic-prefetch-plugin.mdx","name":"automatic-prefetch-plugin.mdx","size":591,"type":"file","extension":".mdx","url":"/plugins/automatic-prefetch-plugin/","anchors":[],"title":"AutomaticPrefetchPlugin","group":"webpack","contributors":["sokra","EugeneHlushko"]},{"path":"src/content/plugins/banner-plugin.mdx","name":"banner-plugin.mdx","size":1650,"type":"file","extension":".mdx","url":"/plugins/banner-plugin/","anchors":[{"title":"Options","id":"options","level":2},{"title":"Usage","id":"usage","level":2},{"title":"Placeholders","id":"placeholders","level":2}],"title":"BannerPlugin","group":"webpack","contributors":["simon04","byzyk","chenxsan"],"related":[{"title":"banner-plugin-hashing test","url":"https://github.com/webpack/webpack/blob/main/test/configCases/plugins/banner-plugin-hashing/webpack.config.js"}]},{"path":"src/content/plugins/commons-chunk-plugin.mdx","name":"commons-chunk-plugin.mdx","size":9403,"type":"file","extension":".mdx","url":"/plugins/commons-chunk-plugin/","anchors":[{"title":"Options","id":"options","level":2},{"title":"Examples","id":"examples","level":2},{"title":"Commons chunk for entries","id":"commons-chunk-for-entries","level":3},{"title":"Explicit vendor chunk","id":"explicit-vendor-chunk","level":3},{"title":"Move common modules into the parent chunk","id":"move-common-modules-into-the-parent-chunk","level":3},{"title":"Extra async commons chunk","id":"extra-async-commons-chunk","level":3},{"title":"Passing the minChunks property a function","id":"passing-the-minchunks-property-a-function","level":3},{"title":"Manifest file","id":"manifest-file","level":2},{"title":"Combining implicit common vendor chunks and manifest file","id":"combining-implicit-common-vendor-chunks-and-manifest-file","level":2},{"title":"More Examples","id":"more-examples","level":2}],"title":"CommonsChunkPlugin","group":"webpack","contributors":["bebraw","simon04","christopher4lis","kevinzwhuang","jdbevan","jeremenichelli","byzyk","madhavarshney","snitin315"]},{"path":"src/content/plugins/context-exclusion-plugin.mdx","name":"context-exclusion-plugin.mdx","size":516,"type":"file","extension":".mdx","url":"/plugins/context-exclusion-plugin/","anchors":[],"title":"ContextExclusionPlugin","group":"webpack","contributors":["jeffin"]},{"path":"src/content/plugins/context-replacement-plugin.mdx","name":"context-replacement-plugin.mdx","size":3107,"type":"file","extension":".mdx","url":"/plugins/context-replacement-plugin/","anchors":[{"title":"Usage","id":"usage","level":2},{"title":"Content Callback","id":"content-callback","level":2},{"title":"Other Options","id":"other-options","level":2}],"title":"ContextReplacementPlugin","group":"webpack","contributors":["simon04","byzyk","masives","chenxsan"],"related":[{"title":"Issue 2783 - ContextReplacementPlugin Description","url":"https://github.com/webpack/webpack/issues/2783#issuecomment-234137265"},{"title":"Using context replacement module for date-fns","url":"https://github.com/date-fns/date-fns/blob/master/docs/webpack.md"}]},{"path":"src/content/plugins/define-plugin.mdx","name":"define-plugin.mdx","size":4474,"type":"file","extension":".mdx","url":"/plugins/define-plugin/","anchors":[{"title":"Usage","id":"usage","level":2},{"title":"Feature Flags","id":"feature-flags","level":2},{"title":"Service URLs","id":"service-urls","level":2},{"title":"Runtime values via runtimeValue","id":"runtime-values-via-runtimevalue","level":2}],"title":"DefinePlugin","group":"webpack","contributors":["simon04","rouzbeh84","byzyk","EugeneHlushko","smonusbonus","chenxsan"]},{"path":"src/content/plugins/dll-plugin.mdx","name":"dll-plugin.mdx","size":5586,"type":"file","extension":".mdx","url":"/plugins/dll-plugin/","anchors":[{"title":"DllPlugin","id":"dllplugin","level":2},{"title":"DllReferencePlugin","id":"dllreferenceplugin","level":2},{"title":"Modes","id":"modes","level":3},{"title":"Usage","id":"usage","level":2},{"title":"Examples","id":"examples","level":2},{"title":"References","id":"references","level":2},{"title":"Source","id":"source","level":3},{"title":"Tests","id":"tests","level":3}],"title":"DllPlugin","group":"webpack","contributors":["aretecode","sokra","opiepj","simon04","skipjack","byzyk","EugeneHlushko","EslamHiko","snitin315"],"related":[{"title":"Code Splitting Example","url":"https://github.com/webpack/webpack/blob/main/examples/explicit-vendor-chunk/README.md"}]},{"path":"src/content/plugins/environment-plugin.mdx","name":"environment-plugin.mdx","size":3629,"type":"file","extension":".mdx","url":"/plugins/environment-plugin/","anchors":[{"title":"Usage","id":"usage","level":2},{"title":"Usage with default values","id":"usage-with-default-values","level":2},{"title":"Use Case: Git Version","id":"use-case-git-version","level":2},{"title":"DotenvPlugin","id":"dotenvplugin","level":2}],"title":"EnvironmentPlugin","group":"webpack","contributors":["simon04","einarlove","rouzbeh84","byzyk"]},{"path":"src/content/plugins/eval-source-map-dev-tool-plugin.mdx","name":"eval-source-map-dev-tool-plugin.mdx","size":2779,"type":"file","extension":".mdx","url":"/plugins/eval-source-map-dev-tool-plugin/","anchors":[{"title":"Options","id":"options","level":2},{"title":"Examples","id":"examples","level":2},{"title":"Basic Use Case","id":"basic-use-case","level":3},{"title":"Exclude Vendor Maps","id":"exclude-vendor-maps","level":3}],"title":"EvalSourceMapDevToolPlugin","group":"webpack","contributors":["johnnyreilly","simon04","kinseyost","byzyk","madhavarshney","koke","jamesgeorge007","anshumanv","EugeneHlushko"],"related":[{"title":"Building Eval Source Maps","url":"https://survivejs.com/webpack/building/source-maps/#sourcemapdevtoolplugin-and-evalsourcemapdevtoolplugin"}]},{"path":"src/content/plugins/hashed-module-ids-plugin.mdx","name":"hashed-module-ids-plugin.mdx","size":1288,"type":"file","extension":".mdx","url":"/plugins/hashed-module-ids-plugin/","anchors":[{"title":"Options","id":"options","level":2},{"title":"Usage","id":"usage","level":2}],"title":"HashedModuleIdsPlugin","group":"webpack","contributors":["shaodahong","byzyk","EslamHiko"]},{"path":"src/content/plugins/hot-module-replacement-plugin.mdx","name":"hot-module-replacement-plugin.mdx","size":608,"type":"file","extension":".mdx","url":"/plugins/hot-module-replacement-plugin/","anchors":[{"title":"Basic Usage","id":"basic-usage","level":2}],"title":"HotModuleReplacementPlugin","group":"webpack","contributors":["skipjack","byzyk","chenxsan","snitin315"],"related":[{"title":"Concepts - Hot Module Replacement","url":"/concepts/hot-module-replacement"},{"title":"API - Hot Module Replacement","url":"/api/hot-module-replacement"}]},{"path":"src/content/plugins/ignore-plugin.mdx","name":"ignore-plugin.mdx","size":2077,"type":"file","extension":".mdx","url":"/plugins/ignore-plugin/","anchors":[{"title":"Using regular expressions","id":"using-regular-expressions","level":2},{"title":"Using filter functions","id":"using-filter-functions","level":2},{"title":"Example of ignoring Moment Locales","id":"example-of-ignoring-moment-locales","level":2}],"title":"IgnorePlugin","group":"webpack","contributors":["simon04","byzyk","DullReferenceException","EugeneHlushko","FadySamirSadek","iamakulov","chenxsan"]},{"path":"src/content/plugins/internal-plugins.mdx","name":"internal-plugins.mdx","size":9140,"type":"file","extension":".mdx","url":"/plugins/internal-plugins/","anchors":[{"title":"environment","id":"environment","level":2},{"title":"NodeEnvironmentPlugin","id":"nodeenvironmentplugin","level":3},{"title":"compiler","id":"compiler","level":2},{"title":"MemoryCachePlugin","id":"memorycacheplugin","level":3},{"title":"ProgressPlugin","id":"progressplugin","level":3},{"title":"RecordIdsPlugin","id":"recordidsplugin","level":3},{"title":"entry","id":"entry","level":2},{"title":"EntryPlugin","id":"entryplugin","level":3},{"title":"PrefetchPlugin","id":"prefetchplugin","level":3},{"title":"output","id":"output","level":2},{"title":"JsonpTemplatePlugin","id":"jsonptemplateplugin","level":3},{"title":"NodeTemplatePlugin","id":"nodetemplateplugin","level":3},{"title":"LibraryTemplatePlugin","id":"librarytemplateplugin","level":3},{"title":"WebWorkerTemplatePlugin","id":"webworkertemplateplugin","level":3},{"title":"EvalDevToolModulePlugin","id":"evaldevtoolmoduleplugin","level":3},{"title":"SourceMapDevToolPlugin","id":"sourcemapdevtoolplugin","level":3},{"title":"HotModuleReplacementPlugin","id":"hotmodulereplacementplugin","level":3},{"title":"source","id":"source","level":2},{"title":"APIPlugin","id":"apiplugin","level":3},{"title":"CompatibilityPlugin","id":"compatibilityplugin","level":3},{"title":"ConstPlugin","id":"constplugin","level":3},{"title":"ProvidePlugin","id":"provideplugin","level":3},{"title":"NodeStuffPlugin","id":"nodestuffplugin","level":3},{"title":"RequireJsStuffPlugin","id":"requirejsstuffplugin","level":3},{"title":"NodeSourcePlugin","id":"nodesourceplugin","level":3},{"title":"NodeTargetPlugin","id":"nodetargetplugin","level":3},{"title":"AMDPlugin","id":"amdplugin","level":3},{"title":"CommonJsPlugin","id":"commonjsplugin","level":3},{"title":"RequireContextPlugin","id":"requirecontextplugin","level":3},{"title":"RequireEnsurePlugin","id":"requireensureplugin","level":3},{"title":"RequireIncludePlugin","id":"requireincludeplugin","level":3},{"title":"DefinePlugin","id":"defineplugin","level":3},{"title":"optimize","id":"optimize","level":2},{"title":"LimitChunkCountPlugin","id":"limitchunkcountplugin","level":3},{"title":"MergeDuplicateChunksPlugin","id":"mergeduplicatechunksplugin","level":3},{"title":"RemoveEmptyChunksPlugin","id":"removeemptychunksplugin","level":3},{"title":"MinChunkSizePlugin","id":"minchunksizeplugin","level":3},{"title":"ModuleConcatenationPlugin","id":"moduleconcatenationplugin","level":3},{"title":"FlagIncludedChunksPlugin","id":"flagincludedchunksplugin","level":3},{"title":"RealContentHashPlugin","id":"realcontenthashplugin","level":3}],"title":"Internal webpack plugins","group":"webpack","contributors":["iAziz786","EugeneHlushko","ooflorent","Legends","chenxsan"]},{"path":"src/content/plugins/limit-chunk-count-plugin.mdx","name":"limit-chunk-count-plugin.mdx","size":1278,"type":"file","extension":".mdx","url":"/plugins/limit-chunk-count-plugin/","anchors":[{"title":"Options","id":"options","level":2},{"title":"maxChunks","id":"maxchunks","level":3},{"title":"minChunkSize","id":"minchunksize","level":3},{"title":"Usage via CLI","id":"usage-via-cli","level":2}],"title":"LimitChunkCountPlugin","group":"webpack","contributors":["rouzbeh84","skipjack","tbroadley","byzyk","EugeneHlushko","erykpiast"]},{"path":"src/content/plugins/min-chunk-size-plugin.mdx","name":"min-chunk-size-plugin.mdx","size":449,"type":"file","extension":".mdx","url":"/plugins/min-chunk-size-plugin/","anchors":[{"title":"Usage via CLI","id":"usage-via-cli","level":2}],"title":"MinChunkSizePlugin","group":"webpack","contributors":["byzyk","erykpiast"]},{"path":"src/content/plugins/module-concatenation-plugin.mdx","name":"module-concatenation-plugin.mdx","size":4259,"type":"file","extension":".mdx","url":"/plugins/module-concatenation-plugin/","anchors":[{"title":"Optimization Bailouts","id":"optimization-bailouts","level":2},{"title":"Module Grouping Algorithm","id":"module-grouping-algorithm","level":3},{"title":"Debugging Optimization Bailouts","id":"debugging-optimization-bailouts","level":3}],"title":"ModuleConcatenationPlugin","group":"webpack","contributors":["skipjack","TheLarkInn","byzyk"]},{"path":"src/content/plugins/module-federation-plugin.mdx","name":"module-federation-plugin.mdx","size":8517,"type":"file","extension":".mdx","url":"/plugins/module-federation-plugin/","anchors":[{"title":"Options","id":"options","level":2},{"title":"runtime","id":"runtime","level":3},{"title":"Sharing libraries","id":"sharing-libraries","level":3}],"title":"ModuleFederationPlugin","group":"webpack","contributors":["XiaofengXie16","chenxsan","burhanuday","christian24"],"related":[{"title":"Module Federation","url":"/concepts/module-federation/"}]},{"path":"src/content/plugins/NoEmitOnErrorsPlugin.mdx","name":"NoEmitOnErrorsPlugin.mdx","size":434,"type":"file","extension":".mdx","url":"/plugins/NoEmitOnErrorsPlugin/","anchors":[],"title":"NoEmitOnErrorsPlugin","group":"webpack","contributors":["jeffin","chenxsan","snitin315"]},{"path":"src/content/plugins/normal-module-replacement-plugin.mdx","name":"normal-module-replacement-plugin.mdx","size":2723,"type":"file","extension":".mdx","url":"/plugins/normal-module-replacement-plugin/","anchors":[{"title":"Basic Example","id":"basic-example","level":2},{"title":"Advanced Example","id":"advanced-example","level":2}],"title":"NormalModuleReplacementPlugin","group":"webpack","contributors":["gonzoyumo","byzyk","chenxsan"]},{"path":"src/content/plugins/prefetch-plugin.mdx","name":"prefetch-plugin.mdx","size":503,"type":"file","extension":".mdx","url":"/plugins/prefetch-plugin/","anchors":[{"title":"Options","id":"options","level":2}],"title":"PrefetchPlugin","group":"webpack","contributors":["skipjack","byzyk"]},{"path":"src/content/plugins/profiling-plugin.mdx","name":"profiling-plugin.mdx","size":937,"type":"file","extension":".mdx","url":"/plugins/profiling-plugin/","anchors":[{"title":"Options","id":"options","level":2},{"title":"Usage: default","id":"usage-default","level":2},{"title":"Usage: custom outputPath","id":"usage-custom-outputpath","level":2}],"title":"ProfilingPlugin","group":"webpack","contributors":["EugeneHlushko","byzyk","akgupta0777"]},{"path":"src/content/plugins/progress-plugin.mdx","name":"progress-plugin.mdx","size":4984,"type":"file","extension":".mdx","url":"/plugins/progress-plugin/","anchors":[{"title":"Usage","id":"usage","level":2},{"title":"Providing function","id":"providing-function","level":3},{"title":"Providing object","id":"providing-object","level":3},{"title":"webpack.ProgressPlugin.createDefaultHandler","id":"webpackprogressplugincreatedefaulthandler","level":3},{"title":"Percentage calculation","id":"percentage-calculation","level":2},{"title":"Supported Hooks","id":"supported-hooks","level":2},{"title":"Source","id":"source","level":2}],"title":"ProgressPlugin","group":"webpack","contributors":["elliottsj","EugeneHlushko","byzyk","smelukov","chenxsan"]},{"path":"src/content/plugins/provide-plugin.mdx","name":"provide-plugin.mdx","size":1893,"type":"file","extension":".mdx","url":"/plugins/provide-plugin/","anchors":[{"title":"Usage: jQuery","id":"usage-jquery","level":2},{"title":"Usage: jQuery with Angular 1","id":"usage-jquery-with-angular-1","level":2},{"title":"Usage: Lodash Map","id":"usage-lodash-map","level":2},{"title":"Usage: Vue.js","id":"usage-vuejs","level":3}],"title":"ProvidePlugin","group":"webpack","contributors":["sokra","simon04","re-fort","byzyk","seckin92"]},{"path":"src/content/plugins/source-map-dev-tool-plugin.mdx","name":"source-map-dev-tool-plugin.mdx","size":4597,"type":"file","extension":".mdx","url":"/plugins/source-map-dev-tool-plugin/","anchors":[{"title":"Options","id":"options","level":2},{"title":"Examples","id":"examples","level":2},{"title":"Basic Use Case","id":"basic-use-case","level":3},{"title":"Exclude Vendor Maps","id":"exclude-vendor-maps","level":3},{"title":"Host Source Maps Externally","id":"host-source-maps-externally","level":3}],"title":"SourceMapDevToolPlugin","group":"webpack","contributors":["johnnyreilly","simon04","neilkennedy","byzyk","EugeneHlushko","chenxsan"],"related":[{"title":"Building Source Maps","url":"https://survivejs.com/webpack/building/source-maps/#-sourcemapdevtoolplugin-and-evalsourcemapdevtoolplugin-"}]},{"path":"src/content/plugins/split-chunks-plugin.mdx","name":"split-chunks-plugin.mdx","size":21409,"type":"file","extension":".mdx","url":"/plugins/split-chunks-plugin/","anchors":[{"title":"Defaults","id":"defaults","level":2},{"title":"Configuration","id":"configuration","level":2},{"title":"optimization.splitChunks","id":"optimizationsplitchunks","level":2},{"title":"splitChunks.automaticNameDelimiter","id":"splitchunksautomaticnamedelimiter","level":3},{"title":"splitChunks.chunks","id":"splitchunkschunks","level":3},{"title":"splitChunks.maxAsyncRequests","id":"splitchunksmaxasyncrequests","level":3},{"title":"splitChunks.maxInitialRequests","id":"splitchunksmaxinitialrequests","level":3},{"title":"splitChunks.defaultSizeTypes","id":"splitchunksdefaultsizetypes","level":3},{"title":"splitChunks.minChunks","id":"splitchunksminchunks","level":3},{"title":"splitChunks.hidePathInfo","id":"splitchunkshidepathinfo","level":3},{"title":"splitChunks.minSize","id":"splitchunksminsize","level":3},{"title":"splitChunks.minSizeReduction","id":"splitchunksminsizereduction","level":3},{"title":"splitChunks.enforceSizeThreshold","id":"splitchunksenforcesizethreshold","level":3},{"title":"splitChunks.minRemainingSize","id":"splitchunksminremainingsize","level":3},{"title":"splitChunks.layer","id":"splitchunkslayer","level":3},{"title":"splitChunks.maxSize","id":"splitchunksmaxsize","level":3},{"title":"splitChunks.maxAsyncSize","id":"splitchunksmaxasyncsize","level":3},{"title":"splitChunks.maxInitialSize","id":"splitchunksmaxinitialsize","level":3},{"title":"splitChunks.name","id":"splitchunksname","level":3},{"title":"splitChunks.usedExports","id":"splitchunksusedexports","level":3},{"title":"splitChunks.cacheGroups","id":"splitchunkscachegroups","level":3},{"title":"Examples","id":"examples","level":2},{"title":"Defaults: Example 1","id":"defaults-example-1","level":3},{"title":"Defaults: Example 2","id":"defaults-example-2","level":3},{"title":"Split Chunks: Example 1","id":"split-chunks-example-1","level":3},{"title":"Split Chunks: Example 2","id":"split-chunks-example-2","level":3},{"title":"Split Chunks: Example 3","id":"split-chunks-example-3","level":3}],"title":"SplitChunksPlugin","group":"webpack","contributors":["sokra","jeremenichelli","Priestch","chrisdothtml","EugeneHlushko","byzyk","jacobangel","madhavarshney","sakhisheikh","superburrito","ryandrew14","snitin315","chenxsan","rohrlaf","jamesgeorge007","anshumanv","snitin315"],"related":[{"title":"webpack\'s automatic deduplication algorithm example","url":"https://github.com/webpack/webpack/blob/main/examples/many-pages/README.md"},{"title":"webpack 4: Code Splitting, chunk graph and the splitChunks optimization","url":"https://medium.com/webpack/webpack-4-code-splitting-chunk-graph-and-the-splitchunks-optimization-be739a861366"}]},{"path":"src/content/plugins/watch-ignore-plugin.mdx","name":"watch-ignore-plugin.mdx","size":552,"type":"file","extension":".mdx","url":"/plugins/watch-ignore-plugin/","anchors":[{"title":"Options","id":"options","level":2}],"title":"WatchIgnorePlugin","group":"webpack","contributors":["skipjack","byzyk","EugeneHlushko"]},{"path":"src/content/plugins/_compression-webpack-plugin.mdx","name":"compression-webpack-plugin.mdx","size":13061,"type":"file","extension":".mdx","url":"/plugins/compression-webpack-plugin/","anchors":[{"title":"Getting Started","id":"getting-started","level":2},{"title":"Options","id":"options","level":2},{"title":"test","id":"test","level":3},{"title":"include","id":"include","level":3},{"title":"exclude","id":"exclude","level":3},{"title":"algorithm","id":"algorithm","level":3},{"title":"compressionOptions","id":"compressionoptions","level":3},{"title":"threshold","id":"threshold","level":3},{"title":"minRatio","id":"minratio","level":3},{"title":"filename","id":"filename","level":3},{"title":"deleteOriginalAssets","id":"deleteoriginalassets","level":3},{"title":"Examples","id":"examples","level":2},{"title":"Using Zopfli","id":"using-zopfli","level":3},{"title":"Using Brotli","id":"using-brotli","level":3},{"title":"Multiple compressed versions of assets for different algorithm","id":"multiple-compressed-versions-of-assets-for-different-algorithm","level":3},{"title":"Contributing","id":"contributing","level":2},{"title":"License","id":"license","level":2}],"title":"CompressionWebpackPlugin","group":"webpack contrib","source":"https://raw.githubusercontent.com/webpack-contrib/compression-webpack-plugin/master/README.md","edit":"https://github.com/webpack-contrib/compression-webpack-plugin/edit/master/README.md","repo":"https://github.com/webpack-contrib/compression-webpack-plugin","thirdParty":true},{"path":"src/content/plugins/_copy-webpack-plugin.mdx","name":"copy-webpack-plugin.mdx","size":28408,"type":"file","extension":".mdx","url":"/plugins/copy-webpack-plugin/","anchors":[{"title":"Getting Started","id":"getting-started","level":2},{"title":"Options","id":"options","level":2},{"title":"Patterns","id":"patterns","level":3},{"title":"noErrorOnMissing","id":"noerroronmissing","level":3},{"title":"Options","id":"options-1","level":3},{"title":"Examples","id":"examples","level":3},{"title":"Contributing","id":"contributing","level":2},{"title":"License","id":"license","level":2}],"title":"CopyWebpackPlugin","group":"webpack contrib","source":"https://raw.githubusercontent.com/webpack-contrib/copy-webpack-plugin/master/README.md","edit":"https://github.com/webpack-contrib/copy-webpack-plugin/edit/master/README.md","repo":"https://github.com/webpack-contrib/copy-webpack-plugin","thirdParty":true},{"path":"src/content/plugins/_css-minimizer-webpack-plugin.mdx","name":"css-minimizer-webpack-plugin.mdx","size":16813,"type":"file","extension":".mdx","url":"/plugins/css-minimizer-webpack-plugin/","anchors":[{"title":"Getting Started","id":"getting-started","level":2},{"title":"Note about source maps","id":"note-about-source-maps","level":2},{"title":"Options","id":"options","level":2},{"title":"test","id":"test","level":3},{"title":"include","id":"include","level":3},{"title":"exclude","id":"exclude","level":3},{"title":"parallel","id":"parallel","level":3},{"title":"minify","id":"minify","level":3},{"title":"minimizerOptions","id":"minimizeroptions","level":3},{"title":"warningsFilter","id":"warningsfilter","level":3},{"title":"Examples","id":"examples","level":2},{"title":"Use sourcemaps","id":"use-sourcemaps","level":3},{"title":"Remove all comments","id":"remove-all-comments","level":3},{"title":"Contributing","id":"contributing","level":2},{"title":"License","id":"license","level":2}],"title":"CssMinimizerWebpackPlugin","group":"webpack contrib","source":"https://raw.githubusercontent.com/webpack-contrib/css-minimizer-webpack-plugin/master/README.md","edit":"https://github.com/webpack-contrib/css-minimizer-webpack-plugin/edit/master/README.md","repo":"https://github.com/webpack-contrib/css-minimizer-webpack-plugin","thirdParty":true},{"path":"src/content/plugins/_eslint-webpack-plugin.mdx","name":"eslint-webpack-plugin.mdx","size":8430,"type":"file","extension":".mdx","url":"/plugins/eslint-webpack-plugin/","anchors":[{"title":"Getting Started","id":"getting-started","level":2},{"title":"Options","id":"options","level":2},{"title":"cache","id":"cache","level":3},{"title":"cacheLocation","id":"cachelocation","level":3},{"title":"configType","id":"configtype","level":3},{"title":"context","id":"context","level":3},{"title":"eslintPath","id":"eslintpath","level":3},{"title":"extensions","id":"extensions","level":3},{"title":"exclude","id":"exclude","level":3},{"title":"resourceQueryExclude","id":"resourcequeryexclude","level":3},{"title":"files","id":"files","level":3},{"title":"fix","id":"fix","level":3},{"title":"formatter","id":"formatter","level":3},{"title":"lintDirtyModulesOnly","id":"lintdirtymodulesonly","level":3},{"title":"threads","id":"threads","level":3},{"title":"Errors and Warning","id":"errors-and-warning","level":3},{"title":"Changelog","id":"changelog","level":2},{"title":"Contributing","id":"contributing","level":2},{"title":"License","id":"license","level":2}],"title":"EslintWebpackPlugin","group":"webpack contrib","source":"https://raw.githubusercontent.com/webpack-contrib/eslint-webpack-plugin/master/README.md","edit":"https://github.com/webpack-contrib/eslint-webpack-plugin/edit/master/README.md","repo":"https://github.com/webpack-contrib/eslint-webpack-plugin","thirdParty":true},{"path":"src/content/plugins/_html-minimizer-webpack-plugin.mdx","name":"html-minimizer-webpack-plugin.mdx","size":15298,"type":"file","extension":".mdx","url":"/plugins/html-minimizer-webpack-plugin/","anchors":[{"title":"Getting Started","id":"getting-started","level":2},{"title":"Options","id":"options","level":2},{"title":"test","id":"test","level":3},{"title":"include","id":"include","level":3},{"title":"exclude","id":"exclude","level":3},{"title":"parallel","id":"parallel","level":3},{"title":"minify","id":"minify","level":3},{"title":"minimizerOptions","id":"minimizeroptions","level":3},{"title":"Examples","id":"examples","level":2},{"title":"swc/html","id":"swchtml","level":3},{"title":"@minify-html/node","id":"minify-htmlnode","level":3},{"title":"Contributing","id":"contributing","level":2},{"title":"License","id":"license","level":2}],"title":"HtmlMinimizerWebpackPlugin","group":"webpack contrib","source":"https://raw.githubusercontent.com/webpack-contrib/html-minimizer-webpack-plugin/master/README.md","edit":"https://github.com/webpack-contrib/html-minimizer-webpack-plugin/edit/master/README.md","repo":"https://github.com/webpack-contrib/html-minimizer-webpack-plugin","thirdParty":true},{"path":"src/content/plugins/_image-minimizer-webpack-plugin.mdx","name":"image-minimizer-webpack-plugin.mdx","size":65310,"type":"file","extension":".mdx","url":"/plugins/image-minimizer-webpack-plugin/","anchors":[{"title":"Getting Started","id":"getting-started","level":2},{"title":"Install optimize/generate tool","id":"install-optimizegenerate-tool","level":3},{"title":"Advanced setup","id":"advanced-setup","level":3},{"title":"Plugin Options","id":"plugin-options","level":2},{"title":"test","id":"test","level":3},{"title":"include","id":"include","level":3},{"title":"exclude","id":"exclude","level":3},{"title":"minimizer","id":"minimizer","level":3},{"title":"generator","id":"generator","level":3},{"title":"severityError","id":"severityerror","level":3},{"title":"loader","id":"loader","level":3},{"title":"concurrency","id":"concurrency","level":3},{"title":"deleteOriginalAssets","id":"deleteoriginalassets","level":3},{"title":"Loader Options","id":"loader-options","level":2},{"title":"minimizer","id":"minimizer-1","level":3},{"title":"generator","id":"generator-1","level":3},{"title":"severityError","id":"severityerror-1","level":3},{"title":"Additional API","id":"additional-api","level":2},{"title":"imageminNormalizeConfig(config)","id":"imageminnormalizeconfigconfig","level":3},{"title":"Examples","id":"examples","level":2},{"title":"Optimize images based on size","id":"optimize-images-based-on-size","level":3},{"title":"Optimize and generate webp images","id":"optimize-and-generate-webp-images","level":3},{"title":"Generate webp images from copied assets","id":"generate-webp-images-from-copied-assets","level":3},{"title":"Contributing","id":"contributing","level":2},{"title":"License","id":"license","level":2}],"title":"ImageMinimizerWebpackPlugin","group":"webpack contrib","source":"https://raw.githubusercontent.com/webpack-contrib/image-minimizer-webpack-plugin/master/README.md","edit":"https://github.com/webpack-contrib/image-minimizer-webpack-plugin/edit/master/README.md","repo":"https://github.com/webpack-contrib/image-minimizer-webpack-plugin","thirdParty":true},{"path":"src/content/plugins/_install-webpack-plugin.mdx","name":"install-webpack-plugin.mdx","size":5303,"type":"file","extension":".mdx","url":"/plugins/install-webpack-plugin/","anchors":[{"title":"Usage","id":"usage","level":1},{"title":"Options","id":"options","level":1},{"title":"dependencies","id":"dependencies","level":2},{"title":"peer","id":"peer","level":3},{"title":"packageManager","id":"packagemanager","level":2},{"title":"type","id":"type","level":3},{"title":"options","id":"options-1","level":3},{"title":"arguments","id":"arguments","level":3},{"title":"dev","id":"dev","level":3},{"title":"quiet","id":"quiet","level":3},{"title":"prompt","id":"prompt","level":2},{"title":"Demo","id":"demo","level":1},{"title":"Features","id":"features","level":1},{"title":"Contributing","id":"contributing","level":2}],"title":"InstallWebpackPlugin","group":"webpack contrib","source":"https://raw.githubusercontent.com/webpack-contrib/install-webpack-plugin/master/README.md","edit":"https://github.com/webpack-contrib/install-webpack-plugin/edit/master/README.md","repo":"https://github.com/webpack-contrib/install-webpack-plugin","thirdParty":true},{"path":"src/content/plugins/_json-minimizer-webpack-plugin.mdx","name":"json-minimizer-webpack-plugin.mdx","size":4876,"type":"file","extension":".mdx","url":"/plugins/json-minimizer-webpack-plugin/","anchors":[{"title":"Getting Started","id":"getting-started","level":2},{"title":"Options","id":"options","level":2},{"title":"test","id":"test","level":3},{"title":"include","id":"include","level":3},{"title":"exclude","id":"exclude","level":3},{"title":"minimizerOptions","id":"minimizeroptions","level":3},{"title":"Contributing","id":"contributing","level":2},{"title":"License","id":"license","level":2}],"title":"JsonMinimizerWebpackPlugin","group":"webpack contrib","source":"https://raw.githubusercontent.com/webpack-contrib/json-minimizer-webpack-plugin/master/README.md","edit":"https://github.com/webpack-contrib/json-minimizer-webpack-plugin/edit/master/README.md","repo":"https://github.com/webpack-contrib/json-minimizer-webpack-plugin","thirdParty":true},{"path":"src/content/plugins/_mini-css-extract-plugin.mdx","name":"mini-css-extract-plugin.mdx","size":31601,"type":"file","extension":".mdx","url":"/plugins/mini-css-extract-plugin/","anchors":[{"title":"Getting Started","id":"getting-started","level":2},{"title":"Options","id":"options","level":2},{"title":"Plugin Options","id":"plugin-options","level":3},{"title":"Loader Options","id":"loader-options","level":3},{"title":"Examples","id":"examples","level":2},{"title":"Recommended","id":"recommended","level":3},{"title":"Minimal example","id":"minimal-example","level":3},{"title":"Named export for CSS Modules","id":"named-export-for-css-modules","level":3},{"title":"The publicPath option as function","id":"the-publicpath-option-as-function","level":3},{"title":"Advanced configuration example","id":"advanced-configuration-example","level":3},{"title":"Hot Module Reloading (HMR)","id":"hot-module-reloading-hmr","level":3},{"title":"Minimizing For Production","id":"minimizing-for-production","level":3},{"title":"Using preloaded or inlined CSS","id":"using-preloaded-or-inlined-css","level":3},{"title":"Extracting all CSS in a single file","id":"extracting-all-css-in-a-single-file","level":3},{"title":"Extracting CSS based on entry","id":"extracting-css-based-on-entry","level":3},{"title":"Filename Option as function","id":"filename-option-as-function","level":3},{"title":"Long Term Caching","id":"long-term-caching","level":3},{"title":"Remove Order Warnings","id":"remove-order-warnings","level":3},{"title":"Multiple Themes","id":"multiple-themes","level":3},{"title":"Media Query Plugin","id":"media-query-plugin","level":3},{"title":"Hooks","id":"hooks","level":2},{"title":"beforeTagInsert","id":"beforetaginsert","level":3},{"title":"Contributing","id":"contributing","level":2},{"title":"License","id":"license","level":2}],"title":"MiniCssExtractPlugin","group":"webpack contrib","source":"https://raw.githubusercontent.com/webpack-contrib/mini-css-extract-plugin/master/README.md","edit":"https://github.com/webpack-contrib/mini-css-extract-plugin/edit/master/README.md","repo":"https://github.com/webpack-contrib/mini-css-extract-plugin","thirdParty":true},{"path":"src/content/plugins/_stylelint-webpack-plugin.mdx","name":"stylelint-webpack-plugin.mdx","size":7597,"type":"file","extension":".mdx","url":"/plugins/stylelint-webpack-plugin/","anchors":[{"title":"Getting Started","id":"getting-started","level":2},{"title":"Options","id":"options","level":2},{"title":"cache","id":"cache","level":3},{"title":"cacheLocation","id":"cachelocation","level":3},{"title":"configFile","id":"configfile","level":3},{"title":"context","id":"context","level":3},{"title":"exclude","id":"exclude","level":3},{"title":"extensions","id":"extensions","level":3},{"title":"files","id":"files","level":3},{"title":"fix","id":"fix","level":3},{"title":"formatter","id":"formatter","level":3},{"title":"lintDirtyModulesOnly","id":"lintdirtymodulesonly","level":3},{"title":"stylelintPath","id":"stylelintpath","level":3},{"title":"threads","id":"threads","level":3},{"title":"Errors and Warning","id":"errors-and-warning","level":3},{"title":"Changelog","id":"changelog","level":2},{"title":"License","id":"license","level":2}],"title":"StylelintWebpackPlugin","group":"webpack contrib","source":"https://raw.githubusercontent.com/webpack-contrib/stylelint-webpack-plugin/master/README.md","edit":"https://github.com/webpack-contrib/stylelint-webpack-plugin/edit/master/README.md","repo":"https://github.com/webpack-contrib/stylelint-webpack-plugin","thirdParty":true},{"path":"src/content/plugins/_terser-webpack-plugin.mdx","name":"terser-webpack-plugin.mdx","size":21626,"type":"file","extension":".mdx","url":"/plugins/terser-webpack-plugin/","anchors":[{"title":"Getting Started","id":"getting-started","level":2},{"title":"Note about source maps","id":"note-about-source-maps","level":2},{"title":"Options","id":"options","level":2},{"title":"test","id":"test","level":3},{"title":"include","id":"include","level":3},{"title":"exclude","id":"exclude","level":3},{"title":"parallel","id":"parallel","level":3},{"title":"minify","id":"minify","level":3},{"title":"terserOptions","id":"terseroptions","level":3},{"title":"extractComments","id":"extractcomments","level":3},{"title":"Examples","id":"examples","level":2},{"title":"Preserve Comments","id":"preserve-comments","level":3},{"title":"Remove Comments","id":"remove-comments","level":3},{"title":"Custom Minify Function","id":"custom-minify-function","level":3},{"title":"Typescript","id":"typescript","level":3},{"title":"Contributing","id":"contributing","level":2},{"title":"License","id":"license","level":2}],"title":"TerserWebpackPlugin","group":"webpack contrib","source":"https://raw.githubusercontent.com/webpack-contrib/terser-webpack-plugin/master/README.md","edit":"https://github.com/webpack-contrib/terser-webpack-plugin/edit/master/README.md","repo":"https://github.com/webpack-contrib/terser-webpack-plugin","thirdParty":true}],"size":336508,"type":"directory","url":"/plugins/"},{"path":"src/content/index.mdx","name":"index.mdx","size":940,"type":"file","extension":".mdx","url":"/","anchors":[{"title":"Write Your Code","id":"write-your-code","level":2},{"title":"Bundle It","id":"bundle-it","level":2},{"title":"Awesome isn\'t it? Let\'s dive in!","id":"awesome-isnt-it-lets-dive-in","level":2}],"title":"webpack","sort":-1},{"path":"src/content/comparison.mdx","name":"comparison.mdx","size":18878,"type":"file","extension":".mdx","url":"/comparison/","anchors":[{"title":"Bundling vs. Loading","id":"bundling-vs-loading","level":2}],"title":"Comparison","sort":1,"contributors":["pksjce","bebraw","chrisVillanueva","tashian","simon04","byzyk"],"related":[{"title":"JSPM vs. webpack","url":"https://ilikekillnerds.com/2015/07/jspm-vs-webpack/"},{"title":"webpack vs. Browserify vs. SystemJS","url":"https://engineering.velocityapp.com/webpack-vs-browersify-vs-systemjs-for-spas-95b349a41fa0"}]},{"path":"src/content/awesome-webpack.mdx","name":"awesome-webpack.mdx","size":43299,"type":"file","extension":".mdx","url":"/awesome-webpack/","anchors":[{"title":"Webpack Ecosystem","id":"webpack-ecosystem","level":2},{"title":"Support Webpack","id":"support-webpack","level":3},{"title":"Community","id":"community","level":3},{"title":"Twitter","id":"twitter","level":3},{"title":"Libraries","id":"libraries","level":2},{"title":"Loaders","id":"loaders","level":3},{"title":"Integration Libraries","id":"integration-libraries","level":3},{"title":"Webpack Plugins","id":"webpack-plugins","level":3},{"title":"Webpack Tools","id":"webpack-tools","level":3},{"title":"Research & Training","id":"research--training","level":2},{"title":"Articles","id":"articles","level":3},{"title":"Videos","id":"videos","level":3},{"title":"Courses","id":"courses","level":3},{"title":"Books","id":"books","level":3},{"title":"Webpack Examples","id":"webpack-examples","level":3},{"title":"Community Examples","id":"community-examples","level":3},{"title":"Other","id":"other","level":3}],"title":"Awesome webpack","sort":2,"contributors":["snitin315","licg9999","evenstensberg"]},{"path":"src/content/branding.mdx","name":"branding.mdx","size":5677,"type":"file","extension":".mdx","url":"/branding/","anchors":[{"title":"The Name","id":"the-name","level":2},{"title":"Logo","id":"logo","level":2},{"title":"Icon only","id":"icon-only","level":2},{"title":"Color Palette","id":"color-palette","level":2},{"title":"License","id":"license","level":2}],"title":"Branding Guidelines","sort":2,"contributors":["jhnns","skipjack","rouzbeh84","byzyk"]},{"path":"src/content/glossary.mdx","name":"glossary.mdx","size":5804,"type":"file","extension":".mdx","url":"/glossary/","anchors":[{"title":"A","id":"a","level":2},{"title":"B","id":"b","level":2},{"title":"C","id":"c","level":2},{"title":"D","id":"d","level":2},{"title":"E","id":"e","level":2},{"title":"H","id":"h","level":2},{"title":"L","id":"l","level":2},{"title":"M","id":"m","level":2},{"title":"O","id":"o","level":2},{"title":"P","id":"p","level":2},{"title":"R","id":"r","level":2},{"title":"S","id":"s","level":2},{"title":"T","id":"t","level":2},{"title":"V","id":"v","level":2},{"title":"W","id":"w","level":2}],"title":"Glossary","sort":3,"contributors":["kryptokinght","rouzbeh84","bebraw","skipjack","byzyk","pranshuchittora","jamesgeorge007"]},{"path":"src/content/license.mdx","name":"license.mdx","size":770,"type":"file","extension":".mdx","url":"/license/","anchors":[{"title":"webpack","id":"webpack","level":2},{"title":"webpack logo and icon","id":"webpack-logo-and-icon","level":2},{"title":"webpack documentation","id":"webpack-documentation","level":2},{"title":"webpack code samples","id":"webpack-code-samples","level":2}],"title":"License","sort":5,"contributors":["EugeneHlushko","pranshuchittora"]},{"path":"src/content/printable.mdx","name":"printable.mdx","size":505,"type":"file","extension":".mdx","url":"/printable/","anchors":[{"title":"webpack","id":"webpack","level":1},{"title":"Comparison","id":"comparison","level":1},{"title":"Awesome webpack","id":"awesome-webpack","level":1},{"title":"Branding Guidelines","id":"branding-guidelines","level":1},{"title":"Glossary","id":"glossary","level":1},{"title":"License","id":"license","level":1}],"title":"Printable","sort":999,"contributors":["webpack"]}],"size":1710138,"type":"directory","url":"/"}');
+const _content_namespaceObject = JSON.parse('{"path":"./src/content","name":"content","children":[{"path":"src/content/api","name":"api","children":[{"path":"src/content/api/index.mdx","name":"index.mdx","size":1888,"type":"file","extension":".mdx","url":"/api/","anchors":[{"title":"CLI","id":"cli","level":2},{"title":"Module","id":"module","level":2},{"title":"Node","id":"node","level":2},{"title":"Loaders","id":"loaders","level":2},{"title":"Plugins","id":"plugins","level":2}],"title":"Introduction","sort":-1,"contributors":["tbroadley"]},{"path":"src/content/api/cli.mdx","name":"cli.mdx","size":25994,"type":"file","extension":".mdx","url":"/api/cli/","anchors":[{"title":"Commands","id":"commands","level":2},{"title":"Build","id":"build","level":3},{"title":"Init","id":"init","level":3},{"title":"Loader","id":"loader","level":3},{"title":"Plugin","id":"plugin","level":3},{"title":"Info","id":"info","level":3},{"title":"Configtest","id":"configtest","level":3},{"title":"Serve","id":"serve","level":3},{"title":"Watch","id":"watch","level":3},{"title":"Flags","id":"flags","level":2},{"title":"Negated Flags","id":"negated-flags","level":3},{"title":"Core Flags","id":"core-flags","level":3},{"title":"Usage","id":"usage","level":2},{"title":"With configuration file","id":"with-configuration-file","level":3},{"title":"Without configuration file","id":"without-configuration-file","level":3},{"title":"Default Configurations","id":"default-configurations","level":2},{"title":"Common Options","id":"common-options","level":2},{"title":"help","id":"help","level":3},{"title":"version","id":"version","level":3},{"title":"config","id":"config","level":3},{"title":"config-name","id":"config-name","level":3},{"title":"merge","id":"merge","level":3},{"title":"extends","id":"extends","level":3},{"title":"json","id":"json","level":3},{"title":"Environment Options","id":"environment-options","level":2},{"title":"env","id":"env","level":3},{"title":"node-env","id":"node-env","level":3},{"title":"define-process-env-node-env","id":"define-process-env-node-env","level":3},{"title":"Configuration Options","id":"configuration-options","level":2},{"title":"Analyzing Bundle","id":"analyzing-bundle","level":2},{"title":"Progress","id":"progress","level":2},{"title":"Pass CLI arguments to Node.js","id":"pass-cli-arguments-to-nodejs","level":2},{"title":"Exit codes and their meanings","id":"exit-codes-and-their-meanings","level":2},{"title":"CLI Environment Variables","id":"cli-environment-variables","level":2},{"title":"WEBPACK_PACKAGE","id":"webpack_package","level":3},{"title":"Troubleshooting","id":"troubleshooting","level":2},{"title":"TypeError [ERR_UNKNOWN_FILE_EXTENSION]: Unknown file extension \\".ts\\" for ./webpack.config.ts","id":"typeerror-err_unknown_file_extension-unknown-file-extension-ts-for-webpackconfigts","level":3}],"title":"Command Line Interface","sort":1,"contributors":["anshumanv","rishabh3112","snitin315","evenstensberg","simon04","tbroadley","chenxsan","rencire","madhavarshney","EugeneHlushko","byzyk","wizardofhogwarts","EslamHiko","smelukov","anikethsaha","jamesgeorge007","burhanuday"],"related":[{"title":"Analyzing Build Statistics","url":"https://survivejs.com/webpack/optimizing-build/analyzing-build-statistics/"},{"title":"Three simple ways to inspect a webpack bundle","url":"https://medium.com/@joeclever/three-simple-ways-to-inspect-a-webpack-bundle-7f6a8fe7195d#.7d2i06mjx"},{"title":"Optimising your application bundle size with webpack","url":"https://hackernoon.com/optimising-your-application-bundle-size-with-webpack-e85b00bab579#.5w5ko08pq"},{"title":"Analysing and minimising the size of client-side bundle with webpack and source-map-explorer","url":"https://medium.com/@nimgrg/analysing-and-minimising-the-size-of-client-side-bundle-with-webpack-and-source-map-explorer-41096559beca#.c3t2srr8x"}]},{"path":"src/content/api/node.mdx","name":"node.mdx","size":9912,"type":"file","extension":".mdx","url":"/api/node/","anchors":[{"title":"Installation","id":"installation","level":2},{"title":"webpack()","id":"webpack","level":2},{"title":"Compiler Instance","id":"compiler-instance","level":2},{"title":"Run","id":"run","level":2},{"title":"Watching","id":"watching","level":2},{"title":"Close Watching","id":"close-watching","level":3},{"title":"Invalidate Watching","id":"invalidate-watching","level":3},{"title":"Stats Object","id":"stats-object","level":2},{"title":"stats.hasErrors()","id":"statshaserrors","level":3},{"title":"stats.hasWarnings()","id":"statshaswarnings","level":3},{"title":"stats.toJson(options)","id":"statstojsonoptions","level":3},{"title":"stats.toString(options)","id":"statstostringoptions","level":3},{"title":"MultiCompiler","id":"multicompiler","level":2},{"title":"Error Handling","id":"error-handling","level":2},{"title":"Custom File Systems","id":"custom-file-systems","level":2}],"title":"Node Interface","sort":2,"contributors":["sallar","rynclark","byzyk","wizardofhogwarts","EugeneHlushko","lukasgeiter","toshihidetagami","chenxsan","jamesgeorge007","textbook"]},{"path":"src/content/api/stats.mdx","name":"stats.mdx","size":11861,"type":"file","extension":".mdx","url":"/api/stats/","anchors":[{"title":"Structure","id":"structure","level":2},{"title":"Asset Objects","id":"asset-objects","level":3},{"title":"Chunk Objects","id":"chunk-objects","level":3},{"title":"Module Objects","id":"module-objects","level":3},{"title":"Entry Objects","id":"entry-objects","level":3},{"title":"Errors and Warnings","id":"errors-and-warnings","level":3}],"title":"Stats Data","sort":3,"contributors":["skipjack","franjohn21","byzyk","EugeneHlushko","superburrito","chenxsan","rahul3v","snitin315"]},{"path":"src/content/api/webpack-dev-server.mdx","name":"webpack-dev-server.mdx","size":4181,"type":"file","extension":".mdx","url":"/api/webpack-dev-server/","anchors":[{"title":"Installation","id":"installation","level":2},{"title":"start","id":"start","level":2},{"title":"startCallback(callback)","id":"startcallbackcallback","level":2},{"title":"stop","id":"stop","level":2},{"title":"stopCallback(callback)","id":"stopcallbackcallback","level":2},{"title":"internalIP(family: \\"v4\\" | \\"v6\\")","id":"internalipfamily-v4--v6","level":2},{"title":"internalIPSync(family: \\"v4\\" | \\"v6\\")","id":"internalipsyncfamily-v4--v6","level":2}],"title":"webpack-dev-server API","sort":3,"contributors":["snitin315"]},{"path":"src/content/api/hot-module-replacement.mdx","name":"hot-module-replacement.mdx","size":12482,"type":"file","extension":".mdx","url":"/api/hot-module-replacement/","anchors":[{"title":"Module API","id":"module-api","level":2},{"title":"accept","id":"accept","level":3},{"title":"accept (self)","id":"accept-self","level":3},{"title":"decline","id":"decline","level":3},{"title":"decline (self)","id":"decline-self","level":3},{"title":"dispose (or addDisposeHandler)","id":"dispose-or-adddisposehandler","level":3},{"title":"invalidate","id":"invalidate","level":3},{"title":"removeDisposeHandler","id":"removedisposehandler","level":3},{"title":"Management API","id":"management-api","level":2},{"title":"status","id":"status","level":3},{"title":"check","id":"check","level":3},{"title":"apply","id":"apply","level":3},{"title":"addStatusHandler","id":"addstatushandler","level":3},{"title":"removeStatusHandler","id":"removestatushandler","level":3}],"title":"Hot Module Replacement","sort":4,"contributors":["sokra","skipjack","tbroadley","byzyk","wizardofhogwarts","snitin315"],"related":[{"title":"Concepts - Hot Module Replacement","url":"/concepts/hot-module-replacement"},{"title":"Guides - Hot Module Replacement","url":"/guides/hot-module-replacement"}]},{"path":"src/content/api/loaders.mdx","name":"loaders.mdx","size":26782,"type":"file","extension":".mdx","url":"/api/loaders/","anchors":[{"title":"Examples","id":"examples","level":2},{"title":"Synchronous Loaders","id":"synchronous-loaders","level":3},{"title":"Asynchronous Loaders","id":"asynchronous-loaders","level":3},{"title":"\\"Raw\\" Loader","id":"raw-loader","level":3},{"title":"Pitching Loader","id":"pitching-loader","level":3},{"title":"The Loader Context","id":"the-loader-context","level":2},{"title":"Example for the loader context","id":"example-for-the-loader-context","level":3},{"title":"this.addContextDependency","id":"thisaddcontextdependency","level":3},{"title":"this.addDependency","id":"thisadddependency","level":3},{"title":"this.addMissingDependency","id":"thisaddmissingdependency","level":3},{"title":"this.async","id":"thisasync","level":3},{"title":"this.cacheable","id":"thiscacheable","level":3},{"title":"this.callback","id":"thiscallback","level":3},{"title":"this.clearDependencies","id":"thiscleardependencies","level":3},{"title":"this.context","id":"thiscontext","level":3},{"title":"this.data","id":"thisdata","level":3},{"title":"this.emitError","id":"thisemiterror","level":3},{"title":"this.emitFile","id":"thisemitfile","level":3},{"title":"this.emitWarning","id":"thisemitwarning","level":3},{"title":"this.environment","id":"thisenvironment","level":3},{"title":"this.fs","id":"thisfs","level":3},{"title":"this.getOptions(schema)","id":"thisgetoptionsschema","level":3},{"title":"this.getResolve","id":"thisgetresolve","level":3},{"title":"this.hot","id":"thishot","level":3},{"title":"this.importModule","id":"thisimportmodule","level":3},{"title":"this.loaderIndex","id":"thisloaderindex","level":3},{"title":"this.loadModule","id":"thisloadmodule","level":3},{"title":"this.loaders","id":"thisloaders","level":3},{"title":"this.mode","id":"thismode","level":3},{"title":"this.query","id":"thisquery","level":3},{"title":"this.request","id":"thisrequest","level":3},{"title":"this.resolve","id":"thisresolve","level":3},{"title":"this.resource","id":"thisresource","level":3},{"title":"this.resourcePath","id":"thisresourcepath","level":3},{"title":"this.resourceQuery","id":"thisresourcequery","level":3},{"title":"this.rootContext","id":"thisrootcontext","level":3},{"title":"this.sourceMap","id":"thissourcemap","level":3},{"title":"this.target","id":"thistarget","level":3},{"title":"this.utils","id":"thisutils","level":3},{"title":"this.version","id":"thisversion","level":3},{"title":"this.webpack","id":"thiswebpack","level":3},{"title":"Webpack specific properties","id":"webpack-specific-properties","level":2},{"title":"this._compilation","id":"this_compilation","level":3},{"title":"this._compiler","id":"this_compiler","level":3},{"title":"Deprecated context properties","id":"deprecated-context-properties","level":2},{"title":"this.debug","id":"thisdebug","level":3},{"title":"this.inputValue","id":"thisinputvalue","level":3},{"title":"this.minimize","id":"thisminimize","level":3},{"title":"this.value","id":"thisvalue","level":3},{"title":"this._module","id":"this_module","level":3},{"title":"Error Reporting","id":"error-reporting","level":2},{"title":"Inline matchResource","id":"inline-matchresource","level":2},{"title":"Logging","id":"logging","level":2}],"title":"Loader Interface","sort":5,"contributors":["TheLarkInn","jhnns","tbroadley","byzyk","sokra","EugeneHlushko","jantimon","superburrito","wizardofhogwarts","snitin315","chenxsan","jamesgeorge007"]},{"path":"src/content/api/logging.mdx","name":"logging.mdx","size":4597,"type":"file","extension":".mdx","url":"/api/logging/","anchors":[{"title":"Examples of how to get and use webpack logger in loaders and plugins","id":"examples-of-how-to-get-and-use-webpack-logger-in-loaders-and-plugins","level":2},{"title":"Logger methods","id":"logger-methods","level":2},{"title":"Runtime Logger API","id":"runtime-logger-api","level":2}],"title":"Logger Interface","sort":6,"contributors":["EugeneHlushko","wizardofhogwarts","chenxsan","snitin315"]},{"path":"src/content/api/printable.mdx","name":"printable.mdx","size":1666,"type":"file","extension":".mdx","url":"/api/printable/","anchors":[{"title":"Introduction","id":"introduction","level":1},{"title":"Command Line Interface","id":"command-line-interface","level":1},{"title":"Node Interface","id":"node-interface","level":1},{"title":"Stats Data","id":"stats-data","level":1},{"title":"webpack-dev-server API","id":"webpack-dev-server-api","level":1},{"title":"Hot Module Replacement","id":"hot-module-replacement","level":1},{"title":"Loader Interface","id":"loader-interface","level":1},{"title":"Logger Interface","id":"logger-interface","level":1},{"title":"Module Methods","id":"module-methods","level":1},{"title":"Module Variables","id":"module-variables","level":1},{"title":"Compiler Hooks","id":"compiler-hooks","level":1},{"title":"Compilation Hooks","id":"compilation-hooks","level":1},{"title":"ContextModuleFactory Hooks","id":"contextmodulefactory-hooks","level":1},{"title":"JavascriptParser Hooks","id":"javascriptparser-hooks","level":1},{"title":"NormalModuleFactory Hooks","id":"normalmodulefactory-hooks","level":1},{"title":"Compilation Object","id":"compilation-object","level":1},{"title":"Plugin API","id":"plugin-api","level":1},{"title":"Resolvers","id":"resolvers","level":1}],"title":"Printable","sort":999,"contributors":["webpack"]},{"path":"src/content/api/module-methods.mdx","name":"module-methods.mdx","size":20293,"type":"file","extension":".mdx","url":"/api/module-methods/","anchors":[{"title":"ES6 (Recommended)","id":"es6-recommended","level":2},{"title":"import","id":"import","level":3},{"title":"export","id":"export","level":3},{"title":"import()","id":"import-1","level":3},{"title":"Dynamic expressions in import()","id":"dynamic-expressions-in-import","level":3},{"title":"CommonJS","id":"commonjs","level":2},{"title":"require","id":"require","level":3},{"title":"require.resolve","id":"requireresolve","level":3},{"title":"require.cache","id":"requirecache","level":3},{"title":"require.ensure","id":"requireensure","level":3},{"title":"AMD","id":"amd","level":2},{"title":"define (with factory)","id":"define-with-factory","level":3},{"title":"define (with value)","id":"define-with-value","level":3},{"title":"require (amd-version)","id":"require-amd-version","level":3},{"title":"Labeled Modules","id":"labeled-modules","level":2},{"title":"export label","id":"export-label","level":3},{"title":"require label","id":"require-label","level":3},{"title":"Webpack","id":"webpack","level":2},{"title":"require.context","id":"requirecontext","level":3},{"title":"require.include","id":"requireinclude","level":3},{"title":"require.resolveWeak","id":"requireresolveweak","level":3},{"title":"warning","id":"warning","level":3}],"title":"Module Methods","group":"Modules","sort":7,"contributors":["skipjack","sokra","fadysamirsadek","byzyk","debs-obrien","wizardofhogwarts","EugeneHlushko","chenxsan","jamesgeorge007","WofWca"],"related":[{"title":"CommonJS Wikipedia","url":"https://en.wikipedia.org/wiki/CommonJS"},{"title":"Asynchronous Module Definition","url":"https://en.wikipedia.org/wiki/Asynchronous_module_definition"}]},{"path":"src/content/api/module-variables.mdx","name":"module-variables.mdx","size":8539,"type":"file","extension":".mdx","url":"/api/module-variables/","anchors":[{"title":"module.loaded (NodeJS)","id":"moduleloaded-nodejs","level":2},{"title":"module.hot (webpack-specific)","id":"modulehot-webpack-specific","level":2},{"title":"module.id (CommonJS)","id":"moduleid-commonjs","level":2},{"title":"module.exports (CommonJS)","id":"moduleexports-commonjs","level":2},{"title":"exports (CommonJS)","id":"exports-commonjs","level":2},{"title":"global (NodeJS)","id":"global-nodejs","level":2},{"title":"__dirname (NodeJS)","id":"__dirname-nodejs","level":2},{"title":"import.meta","id":"importmeta","level":2},{"title":"import.meta.url","id":"importmetaurl","level":3},{"title":"import.meta.webpack","id":"importmetawebpack","level":3},{"title":"import.meta.webpackHot","id":"importmetawebpackhot","level":3},{"title":"import.meta.webpackContext","id":"importmetawebpackcontext","level":3},{"title":"__filename (NodeJS)","id":"__filename-nodejs","level":2},{"title":"__resourceQuery (webpack-specific)","id":"__resourcequery-webpack-specific","level":2},{"title":"__webpack_public_path__ (webpack-specific)","id":"__webpack_public_path__-webpack-specific","level":2},{"title":"__webpack_require__ (webpack-specific)","id":"__webpack_require__-webpack-specific","level":2},{"title":"__webpack_chunk_load__ (webpack-specific)","id":"__webpack_chunk_load__-webpack-specific","level":2},{"title":"__webpack_module__ (webpack-specific)","id":"__webpack_module__-webpack-specific","level":2},{"title":"__webpack_module__.id (webpack-specific)","id":"__webpack_module__id-webpack-specific","level":2},{"title":"__webpack_modules__ (webpack-specific)","id":"__webpack_modules__-webpack-specific","level":2},{"title":"__webpack_hash__ (webpack-specific)","id":"__webpack_hash__-webpack-specific","level":2},{"title":"__webpack_get_script_filename__ (webpack-specific)","id":"__webpack_get_script_filename__-webpack-specific","level":2},{"title":"__non_webpack_require__ (webpack-specific)","id":"__non_webpack_require__-webpack-specific","level":2},{"title":"__webpack_exports_info__ (webpack-specific)","id":"__webpack_exports_info__-webpack-specific","level":2},{"title":"__webpack_is_included__ (webpack-specific)","id":"__webpack_is_included__-webpack-specific","level":2},{"title":"__webpack_base_uri__ (webpack-specific)","id":"__webpack_base_uri__-webpack-specific","level":2},{"title":"__webpack_runtime_id__","id":"__webpack_runtime_id__","level":2},{"title":"DEBUG (webpack-specific)","id":"debug-webpack-specific","level":2}],"title":"Module Variables","group":"Modules","sort":8,"contributors":["skipjack","sokra","ahmehri","tbroadley","byzyk","EugeneHlushko","wizardofhogwarts","anikethsaha","chenxsan","jamesgeorge007","snitin315"],"related":[{"title":"CommonJS","url":"https://en.wikipedia.org/wiki/CommonJS"},{"title":"Asynchronous Module Definition","url":"https://en.wikipedia.org/wiki/Asynchronous_module_definition"}]},{"path":"src/content/api/compilation-object.mdx","name":"compilation-object.mdx","size":7134,"type":"file","extension":".mdx","url":"/api/compilation-object/","anchors":[{"title":"compilation object methods","id":"compilation-object-methods","level":2},{"title":"getStats","id":"getstats","level":3},{"title":"addModule","id":"addmodule","level":3},{"title":"getModule","id":"getmodule","level":3},{"title":"findModule","id":"findmodule","level":3},{"title":"buildModule","id":"buildmodule","level":3},{"title":"processModuleDependencies","id":"processmoduledependencies","level":3},{"title":"addEntry","id":"addentry","level":3},{"title":"rebuildModule","id":"rebuildmodule","level":3},{"title":"finish","id":"finish","level":3},{"title":"seal","id":"seal","level":3},{"title":"unseal","id":"unseal","level":3},{"title":"reportDependencyErrorsAndWarnings","id":"reportdependencyerrorsandwarnings","level":3},{"title":"addChunkInGroup","id":"addchunkingroup","level":3},{"title":"addChunk","id":"addchunk","level":3},{"title":"assignDepth","id":"assigndepth","level":3},{"title":"getDependencyReference","id":"getdependencyreference","level":3},{"title":"processDependenciesBlocksForChunkGroups","id":"processdependenciesblocksforchunkgroups","level":3},{"title":"removeReasonsOfDependencyBlock","id":"removereasonsofdependencyblock","level":3},{"title":"patchChunksAfterReasonRemoval","id":"patchchunksafterreasonremoval","level":3},{"title":"removeChunkFromDependencies","id":"removechunkfromdependencies","level":3},{"title":"sortItemsWithChunkIds","id":"sortitemswithchunkids","level":3},{"title":"summarizeDependencies","id":"summarizedependencies","level":3},{"title":"createHash","id":"createhash","level":3},{"title":"createModuleAssets","id":"createmoduleassets","level":3},{"title":"createChunkAssets","id":"createchunkassets","level":3},{"title":"getPath","id":"getpath","level":3},{"title":"getPathWithInfo","id":"getpathwithinfo","level":3},{"title":"createChildCompiler","id":"createchildcompiler","level":3},{"title":"checkConstraints","id":"checkconstraints","level":3},{"title":"emitAsset","id":"emitasset","level":3},{"title":"updateAsset","id":"updateasset","level":3},{"title":"deleteAsset","id":"deleteasset","level":3},{"title":"getAssets","id":"getassets","level":3},{"title":"getAsset","id":"getasset","level":3}],"title":"Compilation Object","group":"Objects","sort":14,"contributors":["EugeneHlushko","wizardofhogwarts","jamesgeorge007","snitin315"]},{"path":"src/content/api/compiler-hooks.mdx","name":"compiler-hooks.mdx","size":6946,"type":"file","extension":".mdx","url":"/api/compiler-hooks/","anchors":[{"title":"Watching","id":"watching","level":2},{"title":"Hooks","id":"hooks","level":2},{"title":"environment","id":"environment","level":3},{"title":"afterEnvironment","id":"afterenvironment","level":3},{"title":"entryOption","id":"entryoption","level":3},{"title":"afterPlugins","id":"afterplugins","level":3},{"title":"afterResolvers","id":"afterresolvers","level":3},{"title":"initialize","id":"initialize","level":3},{"title":"beforeRun","id":"beforerun","level":3},{"title":"run","id":"run","level":3},{"title":"watchRun","id":"watchrun","level":3},{"title":"normalModuleFactory","id":"normalmodulefactory","level":3},{"title":"contextModuleFactory","id":"contextmodulefactory","level":3},{"title":"beforeCompile","id":"beforecompile","level":3},{"title":"compile","id":"compile","level":3},{"title":"thisCompilation","id":"thiscompilation","level":3},{"title":"compilation","id":"compilation","level":3},{"title":"make","id":"make","level":3},{"title":"afterCompile","id":"aftercompile","level":3},{"title":"shouldEmit","id":"shouldemit","level":3},{"title":"emit","id":"emit","level":3},{"title":"afterEmit","id":"afteremit","level":3},{"title":"assetEmitted","id":"assetemitted","level":3},{"title":"done","id":"done","level":3},{"title":"additionalPass","id":"additionalpass","level":3},{"title":"failed","id":"failed","level":3},{"title":"invalid","id":"invalid","level":3},{"title":"watchClose","id":"watchclose","level":3},{"title":"shutdown","id":"shutdown","level":3},{"title":"infrastructureLog","id":"infrastructurelog","level":3},{"title":"log","id":"log","level":3}],"title":"Compiler Hooks","group":"Plugins","sort":9,"contributors":["rishantagarwal","byzyk","madhavarshney","misterdev","EugeneHlushko","superburrito","chenxsan"]},{"path":"src/content/api/compilation-hooks.mdx","name":"compilation-hooks.mdx","size":16219,"type":"file","extension":".mdx","url":"/api/compilation-hooks/","anchors":[{"title":"buildModule","id":"buildmodule","level":3},{"title":"rebuildModule","id":"rebuildmodule","level":3},{"title":"failedModule","id":"failedmodule","level":3},{"title":"succeedModule","id":"succeedmodule","level":3},{"title":"finishModules","id":"finishmodules","level":3},{"title":"finishRebuildingModule","id":"finishrebuildingmodule","level":3},{"title":"seal","id":"seal","level":3},{"title":"unseal","id":"unseal","level":3},{"title":"optimizeDependencies","id":"optimizedependencies","level":3},{"title":"afterOptimizeDependencies","id":"afteroptimizedependencies","level":3},{"title":"afterChunks","id":"afterchunks","level":3},{"title":"optimize","id":"optimize","level":3},{"title":"optimizeModules","id":"optimizemodules","level":3},{"title":"afterOptimizeModules","id":"afteroptimizemodules","level":3},{"title":"optimizeChunks","id":"optimizechunks","level":3},{"title":"afterOptimizeChunks","id":"afteroptimizechunks","level":3},{"title":"optimizeTree","id":"optimizetree","level":3},{"title":"afterOptimizeTree","id":"afteroptimizetree","level":3},{"title":"optimizeChunkModules","id":"optimizechunkmodules","level":3},{"title":"afterOptimizeChunkModules","id":"afteroptimizechunkmodules","level":3},{"title":"shouldRecord","id":"shouldrecord","level":3},{"title":"reviveModules","id":"revivemodules","level":3},{"title":"beforeModuleIds","id":"beforemoduleids","level":3},{"title":"moduleIds","id":"moduleids","level":3},{"title":"optimizeModuleIds","id":"optimizemoduleids","level":3},{"title":"afterOptimizeModuleIds","id":"afteroptimizemoduleids","level":3},{"title":"reviveChunks","id":"revivechunks","level":3},{"title":"beforeChunkIds","id":"beforechunkids","level":3},{"title":"chunkIds","id":"chunkids","level":3},{"title":"optimizeChunkIds","id":"optimizechunkids","level":3},{"title":"afterOptimizeChunkIds","id":"afteroptimizechunkids","level":3},{"title":"recordModules","id":"recordmodules","level":3},{"title":"recordChunks","id":"recordchunks","level":3},{"title":"beforeModuleHash","id":"beforemodulehash","level":3},{"title":"afterModuleHash","id":"aftermodulehash","level":3},{"title":"beforeHash","id":"beforehash","level":3},{"title":"afterHash","id":"afterhash","level":3},{"title":"recordHash","id":"recordhash","level":3},{"title":"record","id":"record","level":3},{"title":"beforeModuleAssets","id":"beforemoduleassets","level":3},{"title":"additionalChunkAssets","id":"additionalchunkassets","level":3},{"title":"shouldGenerateChunkAssets","id":"shouldgeneratechunkassets","level":3},{"title":"beforeChunkAssets","id":"beforechunkassets","level":3},{"title":"additionalAssets","id":"additionalassets","level":3},{"title":"optimizeChunkAssets","id":"optimizechunkassets","level":3},{"title":"afterOptimizeChunkAssets","id":"afteroptimizechunkassets","level":3},{"title":"optimizeAssets","id":"optimizeassets","level":3},{"title":"afterOptimizeAssets","id":"afteroptimizeassets","level":3},{"title":"processAssets","id":"processassets","level":3},{"title":"afterProcessAssets","id":"afterprocessassets","level":3},{"title":"needAdditionalSeal","id":"needadditionalseal","level":3},{"title":"afterSeal","id":"afterseal","level":3},{"title":"chunkHash","id":"chunkhash","level":3},{"title":"moduleAsset","id":"moduleasset","level":3},{"title":"chunkAsset","id":"chunkasset","level":3},{"title":"assetPath","id":"assetpath","level":3},{"title":"needAdditionalPass","id":"needadditionalpass","level":3},{"title":"childCompiler","id":"childcompiler","level":3},{"title":"normalModuleLoader","id":"normalmoduleloader","level":3}],"title":"Compilation Hooks","group":"Plugins","sort":10,"contributors":["slavafomin","byzyk","madhavarshney","misterdev","wizardofhogwarts","EugeneHlushko","chenxsan","jamesgeorge007"]},{"path":"src/content/api/contextmodulefactory-hooks.mdx","name":"contextmodulefactory-hooks.mdx","size":1531,"type":"file","extension":".mdx","url":"/api/contextmodulefactory-hooks/","anchors":[{"title":"beforeResolve","id":"beforeresolve","level":3},{"title":"afterResolve","id":"afterresolve","level":3},{"title":"contextModuleFiles","id":"contextmodulefiles","level":3},{"title":"alternativeRequests","id":"alternativerequests","level":3}],"title":"ContextModuleFactory Hooks","group":"Plugins","sort":11,"contributors":["iguessitsokay"]},{"path":"src/content/api/parser.mdx","name":"parser.mdx","size":9932,"type":"file","extension":".mdx","url":"/api/parser/","anchors":[{"title":"Hooks","id":"hooks","level":2},{"title":"evaluateTypeof","id":"evaluatetypeof","level":3},{"title":"evaluate","id":"evaluate","level":3},{"title":"evaluateIdentifier","id":"evaluateidentifier","level":3},{"title":"evaluateDefinedIdentifier","id":"evaluatedefinedidentifier","level":3},{"title":"evaluateCallExpressionMember","id":"evaluatecallexpressionmember","level":3},{"title":"statement","id":"statement","level":3},{"title":"statementIf","id":"statementif","level":3},{"title":"label","id":"label","level":3},{"title":"import","id":"import","level":3},{"title":"importSpecifier","id":"importspecifier","level":3},{"title":"export","id":"export","level":3},{"title":"exportImport","id":"exportimport","level":3},{"title":"exportDeclaration","id":"exportdeclaration","level":3},{"title":"exportExpression","id":"exportexpression","level":3},{"title":"exportSpecifier","id":"exportspecifier","level":3},{"title":"exportImportSpecifier","id":"exportimportspecifier","level":3},{"title":"varDeclaration","id":"vardeclaration","level":3},{"title":"varDeclarationLet","id":"vardeclarationlet","level":3},{"title":"varDeclarationConst","id":"vardeclarationconst","level":3},{"title":"varDeclarationVar","id":"vardeclarationvar","level":3},{"title":"canRename","id":"canrename","level":3},{"title":"rename","id":"rename","level":3},{"title":"assigned","id":"assigned","level":3},{"title":"assign","id":"assign","level":3},{"title":"typeof","id":"typeof","level":3},{"title":"call","id":"call","level":3},{"title":"callMemberChain","id":"callmemberchain","level":3},{"title":"new","id":"new","level":3},{"title":"expression","id":"expression","level":3},{"title":"expressionConditionalOperator","id":"expressionconditionaloperator","level":3},{"title":"program","id":"program","level":3}],"title":"JavascriptParser Hooks","group":"Plugins","sort":12,"contributors":["byzyk","DeTeam","misterdev","EugeneHlushko","chenxsan"]},{"path":"src/content/api/normalmodulefactory-hooks.mdx","name":"normalmodulefactory-hooks.mdx","size":3784,"type":"file","extension":".mdx","url":"/api/normalmodulefactory-hooks/","anchors":[{"title":"beforeResolve","id":"beforeresolve","level":3},{"title":"factorize","id":"factorize","level":3},{"title":"resolve","id":"resolve","level":3},{"title":"resolveForScheme","id":"resolveforscheme","level":3},{"title":"afterResolve","id":"afterresolve","level":3},{"title":"createModule","id":"createmodule","level":3},{"title":"createModuleClass","id":"createmoduleclass","level":3},{"title":"module","id":"module","level":3},{"title":"createParser","id":"createparser","level":3},{"title":"parser","id":"parser","level":3},{"title":"createGenerator","id":"creategenerator","level":3},{"title":"generator","id":"generator","level":3}],"title":"NormalModuleFactory Hooks","group":"Plugins","sort":13,"contributors":["iguessitsokay","chenxsan"]},{"path":"src/content/api/plugins.mdx","name":"plugins.mdx","size":6988,"type":"file","extension":".mdx","url":"/api/plugins/","anchors":[{"title":"Tapable","id":"tapable","level":2},{"title":"Plugin Types","id":"plugin-types","level":2},{"title":"Custom Hooks","id":"custom-hooks","level":2},{"title":"Reporting Progress","id":"reporting-progress","level":2},{"title":"Logging","id":"logging","level":2},{"title":"Next Steps","id":"next-steps","level":2}],"title":"Plugin API","group":"Plugins","sort":14,"contributors":["thelarkinn","pksjce","e-cloud","byzyk","EugeneHlushko","wizardofhogwarts","snitin315"]},{"path":"src/content/api/resolvers.mdx","name":"resolvers.mdx","size":2183,"type":"file","extension":".mdx","url":"/api/resolvers/","anchors":[{"title":"Types","id":"types","level":2},{"title":"Configuration Options","id":"configuration-options","level":2}],"title":"Resolvers","group":"Plugins","sort":15,"contributors":["EugeneHlushko","chenxsan"]}],"size":182912,"type":"directory","url":"/api/"},{"path":"src/content/blog","name":"blog","children":[{"path":"src/content/blog/2020-12-08-roadmap-2021.mdx","name":"2020-12-08-roadmap-2021.mdx","size":16371,"type":"file","extension":".mdx","url":"/blog/2020-12-08-roadmap-2021/","anchors":[{"title":"What happened so far?","id":"what-happened-so-far","level":2},{"title":"Roadmap 2021","id":"roadmap-2021","level":2},{"title":"Further stabilizing","id":"further-stabilizing","level":3},{"title":"EcmaScript Modules","id":"ecmascript-modules","level":3},{"title":"More first-class citizen","id":"more-first-class-citizen","level":3},{"title":"SourceMap performance","id":"sourcemap-performance","level":3},{"title":"exports/imports package.json field","id":"exportsimports-packagejson-field","level":3},{"title":"Improve CommonJS analysis","id":"improve-commonjs-analysis","level":3},{"title":"Hot Module Replacement for Module Federation","id":"hot-module-replacement-for-module-federation","level":3},{"title":"Hinting system","id":"hinting-system","level":3},{"title":"Multi-Threading","id":"multi-threading","level":3},{"title":"WebAssembly","id":"webassembly","level":3},{"title":"Disclaimer","id":"disclaimer","level":2}],"title":"Roadmap 2021 (2020-12-08)","sort":-202012080,"contributors":["sokra"]},{"path":"src/content/blog/2020-10-10-webpack-5-release.mdx","name":"2020-10-10-webpack-5-release.mdx","size":71620,"type":"file","extension":".mdx","url":"/blog/2020-10-10-webpack-5-release/","anchors":[{"title":"Common Questions","id":"common-questions","level":2},{"title":"So what does the release mean?","id":"so-what-does-the-release-mean","level":3},{"title":"So when is the time to upgrade?","id":"so-when-is-the-time-to-upgrade","level":3},{"title":"Sponsoring Update","id":"sponsoring-update","level":2},{"title":"General direction","id":"general-direction","level":2},{"title":"Migration Guide","id":"migration-guide","level":2},{"title":"Major Changes: Removals","id":"major-changes-removals","level":2},{"title":"Removed Deprecated Items","id":"removed-deprecated-items","level":3},{"title":"Deprecation codes","id":"deprecation-codes","level":3},{"title":"Syntax deprecated","id":"syntax-deprecated","level":3},{"title":"Automatic Node.js Polyfills Removed","id":"automatic-nodejs-polyfills-removed","level":3},{"title":"Major Changes: Long Term Caching","id":"major-changes-long-term-caching","level":2},{"title":"Deterministic Chunk, Module IDs and Export names","id":"deterministic-chunk-module-ids-and-export-names","level":3},{"title":"Real Content Hash","id":"real-content-hash","level":3},{"title":"Major Changes: Development Support","id":"major-changes-development-support","level":2},{"title":"Named Chunk IDs","id":"named-chunk-ids","level":3},{"title":"Module Federation","id":"module-federation","level":3},{"title":"Major Changes: New Web Platform Features","id":"major-changes-new-web-platform-features","level":2},{"title":"JSON modules","id":"json-modules","level":3},{"title":"import.meta","id":"importmeta","level":3},{"title":"Asset modules","id":"asset-modules","level":3},{"title":"Native Worker support","id":"native-worker-support","level":3},{"title":"URIs","id":"uris","level":3},{"title":"Async modules","id":"async-modules","level":3},{"title":"Externals","id":"externals","level":3},{"title":"Major Changes: New Node.js Ecosystem Features","id":"major-changes-new-nodejs-ecosystem-features","level":2},{"title":"Resolving","id":"resolving","level":3},{"title":"Major Changes: Development Experience","id":"major-changes-development-experience","level":2},{"title":"Improved target","id":"improved-target","level":3},{"title":"Stats","id":"stats","level":3},{"title":"Progress","id":"progress","level":3},{"title":"Automatic unique naming","id":"automatic-unique-naming","level":3},{"title":"Automatic public path","id":"automatic-public-path","level":3},{"title":"Typescript typings","id":"typescript-typings","level":3},{"title":"Major Changes: Optimization","id":"major-changes-optimization","level":2},{"title":"Nested tree-shaking","id":"nested-tree-shaking","level":3},{"title":"Inner-module tree-shaking","id":"inner-module-tree-shaking","level":3},{"title":"CommonJs Tree Shaking","id":"commonjs-tree-shaking","level":3},{"title":"Side-Effect analysis","id":"side-effect-analysis","level":3},{"title":"Optimization per runtime","id":"optimization-per-runtime","level":3},{"title":"Module Concatenation","id":"module-concatenation","level":3},{"title":"General Tree Shaking improvements","id":"general-tree-shaking-improvements","level":3},{"title":"Development Production Similarity","id":"development-production-similarity","level":3},{"title":"Improved Code Generation","id":"improved-code-generation","level":3},{"title":"Improved target option","id":"improved-target-option","level":3},{"title":"SplitChunks and Module Sizes","id":"splitchunks-and-module-sizes","level":3},{"title":"Major Changes: Performance","id":"major-changes-performance","level":2},{"title":"Persistent Caching","id":"persistent-caching","level":3},{"title":"File Emitting","id":"file-emitting","level":3},{"title":"Major Changes: Long outstanding problems","id":"major-changes-long-outstanding-problems","level":2},{"title":"Code Splitting for single-file-targets","id":"code-splitting-for-single-file-targets","level":3},{"title":"Updated Resolver","id":"updated-resolver","level":3},{"title":"Chunks without JS","id":"chunks-without-js","level":3},{"title":"Major Changes: Future","id":"major-changes-future","level":2},{"title":"Experiments","id":"experiments","level":3},{"title":"Minimum Node.js Version","id":"minimum-nodejs-version","level":3},{"title":"Changes to the Configuration","id":"changes-to-the-configuration","level":2},{"title":"Changes to the Structure","id":"changes-to-the-structure","level":3},{"title":"Changes to the Defaults","id":"changes-to-the-defaults","level":3},{"title":"Loader related Changes","id":"loader-related-changes","level":2},{"title":"this.getOptions","id":"thisgetoptions","level":3},{"title":"this.exec","id":"thisexec","level":3},{"title":"this.getResolve","id":"thisgetresolve","level":3},{"title":"Major Internal Changes","id":"major-internal-changes","level":2},{"title":"New plugin order","id":"new-plugin-order","level":3},{"title":"Runtime Modules","id":"runtime-modules","level":3},{"title":"Serialization","id":"serialization","level":3},{"title":"Plugins for Caching","id":"plugins-for-caching","level":3},{"title":"Hook Object Frozen","id":"hook-object-frozen","level":3},{"title":"Tapable Upgrade","id":"tapable-upgrade","level":3},{"title":"Staged Hooks","id":"staged-hooks","level":3},{"title":"Main/Chunk/ModuleTemplate deprecation","id":"mainchunkmoduletemplate-deprecation","level":3},{"title":"Entry point descriptor","id":"entry-point-descriptor","level":3},{"title":"Order and IDs","id":"order-and-ids","level":3},{"title":"Arrays to Sets","id":"arrays-to-sets","level":3},{"title":"Compilation.fileSystemInfo","id":"compilationfilesysteminfo","level":3},{"title":"Filesystems","id":"filesystems","level":3},{"title":"Hot Module Replacement","id":"hot-module-replacement","level":3},{"title":"Work Queues","id":"work-queues","level":3},{"title":"Logging","id":"logging","level":3},{"title":"Module and Chunk Graph","id":"module-and-chunk-graph","level":3},{"title":"Init Fragments","id":"init-fragments","level":3},{"title":"Module Source Types","id":"module-source-types","level":3},{"title":"Plugins for Stats","id":"plugins-for-stats","level":3},{"title":"New Watching","id":"new-watching","level":3},{"title":"SizeOnlySource after emit","id":"sizeonlysource-after-emit","level":3},{"title":"Emitting assets multiple times","id":"emitting-assets-multiple-times","level":3},{"title":"ExportsInfo","id":"exportsinfo","level":3},{"title":"Code Generation Phase","id":"code-generation-phase","level":3},{"title":"DependencyReference","id":"dependencyreference","level":3},{"title":"Presentational Dependencies","id":"presentational-dependencies","level":3},{"title":"Deprecated loaders","id":"deprecated-loaders","level":3},{"title":"Minor Changes","id":"minor-changes","level":2},{"title":"Other Minor Changes","id":"other-minor-changes","level":2}],"title":"Webpack 5 release (2020-10-10)","sort":-202010100,"contributors":["sokra","chenxsan"]},{"path":"src/content/blog/index.mdx","name":"index.mdx","size":214,"type":"file","extension":".mdx","url":"/blog/","anchors":[{"title":"Popular posts","id":"popular-posts","level":2}],"title":"Blog","sort":-1,"contributors":["sokra"]},{"path":"src/content/blog/printable.mdx","name":"printable.mdx","size":383,"type":"file","extension":".mdx","url":"/blog/printable/","anchors":[{"title":"Roadmap 2021 (2020-12-08)","id":"roadmap-2021-2020-12-08","level":1},{"title":"Webpack 5 release (2020-10-10)","id":"webpack-5-release-2020-10-10","level":1},{"title":"Blog","id":"blog","level":1}],"title":"Printable","sort":999,"contributors":["webpack"]}],"size":88588,"type":"directory","url":"/blog/"},{"path":"src/content/concepts","name":"concepts","children":[{"path":"src/content/concepts/index.mdx","name":"index.mdx","size":7732,"type":"file","extension":".mdx","url":"/concepts/","anchors":[{"title":"Entry","id":"entry","level":2},{"title":"Output","id":"output","level":2},{"title":"Loaders","id":"loaders","level":2},{"title":"Plugins","id":"plugins","level":2},{"title":"Mode","id":"mode","level":2},{"title":"Browser Compatibility","id":"browser-compatibility","level":2},{"title":"Environment","id":"environment","level":2}],"title":"Concepts","sort":-1,"contributors":["TheLarkInn","jhnns","grgur","johnstew","jimrfenner","TheDutchCoder","adambraimbridge","EugeneHlushko","jeremenichelli","arjunsajeev","byzyk","yairhaimo","farskid","LukeMwila","Jalitha","muhmushtaha","chenxsan","RyanGreyling2"]},{"path":"src/content/concepts/entry-points.mdx","name":"entry-points.mdx","size":6616,"type":"file","extension":".mdx","url":"/concepts/entry-points/","anchors":[{"title":"Single Entry (Shorthand) Syntax","id":"single-entry-shorthand-syntax","level":2},{"title":"Object Syntax","id":"object-syntax","level":2},{"title":"EntryDescription object","id":"entrydescription-object","level":3},{"title":"Scenarios","id":"scenarios","level":2},{"title":"Separate App and Vendor Entries","id":"separate-app-and-vendor-entries","level":3},{"title":"Multi-Page Application","id":"multi-page-application","level":3}],"title":"Entry Points","sort":1,"contributors":["TheLarkInn","chrisVillanueva","byzyk","sokra","EugeneHlushko","Zearin","chenxsan","adyjs","anshumanv","ritikbanger"]},{"path":"src/content/concepts/output.mdx","name":"output.mdx","size":1840,"type":"file","extension":".mdx","url":"/concepts/output/","anchors":[{"title":"Usage","id":"usage","level":2},{"title":"Multiple Entry Points","id":"multiple-entry-points","level":2},{"title":"Advanced","id":"advanced","level":2}],"title":"Output","sort":2,"contributors":["TheLarkInn","chyipin","rouzbeh84","byzyk","EugeneHlushko"]},{"path":"src/content/concepts/loaders.mdx","name":"loaders.mdx","size":5546,"type":"file","extension":".mdx","url":"/concepts/loaders/","anchors":[{"title":"Example","id":"example","level":2},{"title":"Using Loaders","id":"using-loaders","level":2},{"title":"Configuration","id":"configuration","level":3},{"title":"Inline","id":"inline","level":3},{"title":"Loader Features","id":"loader-features","level":2},{"title":"Resolving Loaders","id":"resolving-loaders","level":2}],"title":"Loaders","sort":3,"contributors":["manekinekko","evenstensberg","SpaceK33z","gangachris","TheLarkInn","simon04","jhnns","byzyk","debs-obrien","EugeneHlushko","wizardofhogwarts","lukasgeiter","furkle","jamesgeorge007","textbook"]},{"path":"src/content/concepts/plugins.mdx","name":"plugins.mdx","size":3398,"type":"file","extension":".mdx","url":"/concepts/plugins/","anchors":[{"title":"Anatomy","id":"anatomy","level":2},{"title":"Usage","id":"usage","level":2},{"title":"Configuration","id":"configuration","level":3},{"title":"Node API","id":"node-api","level":3}],"title":"Plugins","sort":4,"contributors":["TheLarkInn","jhnns","rouzbeh84","johnstew","MisterDev","byzyk","chenxsan"]},{"path":"src/content/concepts/configuration.mdx","name":"configuration.mdx","size":2448,"type":"file","extension":".mdx","url":"/concepts/configuration/","anchors":[{"title":"Introductory Configuration","id":"introductory-configuration","level":2},{"title":"Multiple Targets","id":"multiple-targets","level":2},{"title":"Using other Configuration Languages","id":"using-other-configuration-languages","level":2}],"title":"Configuration","sort":5,"contributors":["TheLarkInn","simon04","EugeneHlushko","byzyk"]},{"path":"src/content/concepts/modules.mdx","name":"modules.mdx","size":2898,"type":"file","extension":".mdx","url":"/concepts/modules/","anchors":[{"title":"What is a webpack Module","id":"what-is-a-webpack-module","level":2},{"title":"Supported Module Types","id":"supported-module-types","level":2}],"title":"Modules","sort":6,"contributors":["TheLarkInn","simon04","rouzbeh84","EugeneHlushko","byzyk"],"related":[{"title":"JavaScript Module Systems Showdown","url":"https://auth0.com/blog/javascript-module-systems-showdown/"}]},{"path":"src/content/concepts/module-resolution.mdx","name":"module-resolution.mdx","size":4080,"type":"file","extension":".mdx","url":"/concepts/module-resolution/","anchors":[{"title":"Resolving rules in webpack","id":"resolving-rules-in-webpack","level":2},{"title":"Absolute paths","id":"absolute-paths","level":3},{"title":"Relative paths","id":"relative-paths","level":3},{"title":"Module paths","id":"module-paths","level":3},{"title":"Resolving Loaders","id":"resolving-loaders","level":2},{"title":"Caching","id":"caching","level":2}],"title":"Module Resolution","sort":7,"contributors":["pksjce","pastelsky","byzyk","EugeneHlushko","wizardofhogwarts"]},{"path":"src/content/concepts/module-federation.mdx","name":"module-federation.mdx","size":14602,"type":"file","extension":".mdx","url":"/concepts/module-federation/","anchors":[{"title":"Motivation","id":"motivation","level":2},{"title":"Low-level concepts","id":"low-level-concepts","level":2},{"title":"High-level concepts","id":"high-level-concepts","level":2},{"title":"Building blocks","id":"building-blocks","level":2},{"title":"ContainerPlugin (low level)","id":"containerplugin-low-level","level":3},{"title":"ContainerReferencePlugin (low level)","id":"containerreferenceplugin-low-level","level":3},{"title":"ModuleFederationPlugin (high level)","id":"modulefederationplugin-high-level","level":3},{"title":"Concept goals","id":"concept-goals","level":2},{"title":"Use cases","id":"use-cases","level":2},{"title":"Separate builds per page","id":"separate-builds-per-page","level":3},{"title":"Components library as container","id":"components-library-as-container","level":3},{"title":"Dynamic Remote Containers","id":"dynamic-remote-containers","level":2},{"title":"Promise Based Dynamic Remotes","id":"promise-based-dynamic-remotes","level":2},{"title":"Dynamic Public Path","id":"dynamic-public-path","level":2},{"title":"Offer a host API to set the publicPath","id":"offer-a-host-api-to-set-the-publicpath","level":3},{"title":"Infer publicPath from script","id":"infer-publicpath-from-script","level":3},{"title":"Troubleshooting","id":"troubleshooting","level":2},{"title":"Uncaught Error: Shared module is not available for eager consumption","id":"uncaught-error-shared-module-is-not-available-for-eager-consumption","level":3},{"title":"Uncaught Error: Module \\"./Button\\" does not exist in container.","id":"uncaught-error-module-button-does-not-exist-in-container","level":3},{"title":"Uncaught TypeError: fn is not a function","id":"uncaught-typeerror-fn-is-not-a-function","level":3},{"title":"Collision between modules from different remotes","id":"collision-between-modules-from-different-remotes","level":3}],"title":"Module Federation","sort":8,"contributors":["sokra","chenxsan","EugeneHlushko","jamesgeorge007","ScriptedAlchemy","snitin315","XiaofengXie16","KyleBastien","Alevale","burhanuday"],"related":[{"title":"Webpack 5 Module Federation: A game-changer in JavaScript architecture","url":"https://medium.com/swlh/webpack-5-module-federation-a-game-changer-to-javascript-architecture-bcdd30e02669"},{"title":"Explanations and Examples","url":"https://github.com/module-federation/module-federation-examples"},{"title":"Module Federation YouTube Playlist","url":"https://www.youtube.com/playlist?list=PLWSiF9YHHK-DqsFHGYbeAMwbd9xcZbEWJ"}]},{"path":"src/content/concepts/dependency-graph.mdx","name":"dependency-graph.mdx","size":1223,"type":"file","extension":".mdx","url":"/concepts/dependency-graph/","anchors":[],"title":"Dependency Graph","sort":9,"contributors":["TheLarkInn","EugeneHlushko"],"related":[{"title":"HTTP2 Aggressive Splitting Example","url":"https://github.com/webpack/webpack/tree/master/examples/http2-aggressive-splitting"},{"title":"webpack & HTTP/2","url":"https://medium.com/webpack/webpack-http-2-7083ec3f3ce6"}]},{"path":"src/content/concepts/targets.mdx","name":"targets.mdx","size":2462,"type":"file","extension":".mdx","url":"/concepts/targets/","anchors":[{"title":"Usage","id":"usage","level":2},{"title":"Multiple Targets","id":"multiple-targets","level":2},{"title":"Resources","id":"resources","level":2}],"title":"Targets","sort":10,"contributors":["TheLarkInn","rouzbeh84","johnstew","srilman","byzyk","EugeneHlushko"]},{"path":"src/content/concepts/manifest.mdx","name":"manifest.mdx","size":3393,"type":"file","extension":".mdx","url":"/concepts/manifest/","anchors":[{"title":"Runtime","id":"runtime","level":2},{"title":"Manifest","id":"manifest","level":2},{"title":"The Problem","id":"the-problem","level":2}],"title":"The Manifest","sort":11,"contributors":["skipjack","EugeneHlushko"],"related":[{"title":"Separating a Manifest","url":"https://survivejs.com/webpack/optimizing/separating-manifest/"},{"title":"Predictable Long Term Caching with webpack","url":"https://medium.com/webpack/predictable-long-term-caching-with-webpack-d3eee1d3fa31"},{"title":"Caching","url":"/guides/caching/"}]},{"path":"src/content/concepts/hot-module-replacement.mdx","name":"hot-module-replacement.mdx","size":4931,"type":"file","extension":".mdx","url":"/concepts/hot-module-replacement/","anchors":[{"title":"How It Works","id":"how-it-works","level":2},{"title":"In the Application","id":"in-the-application","level":3},{"title":"In the Compiler","id":"in-the-compiler","level":3},{"title":"In a Module","id":"in-a-module","level":3},{"title":"In the Runtime","id":"in-the-runtime","level":3},{"title":"Get Started","id":"get-started","level":2}],"title":"Hot Module Replacement","sort":12,"contributors":["kryptokinght","SpaceK33z","sokra","GRardB","rouzbeh84","skipjack"]},{"path":"src/content/concepts/why-webpack.mdx","name":"why-webpack.mdx","size":4124,"type":"file","extension":".mdx","url":"/concepts/why-webpack/","anchors":[{"title":"IIFEs - Immediately invoked function expressions","id":"iifes---immediately-invoked-function-expressions","level":2},{"title":"Birth of JavaScript Modules happened thanks to Node.js","id":"birth-of-javascript-modules-happened-thanks-to-nodejs","level":2},{"title":"npm + Node.js + modules – mass distribution","id":"npm--nodejs--modules--mass-distribution","level":2},{"title":"ESM - ECMAScript Modules","id":"esm---ecmascript-modules","level":2},{"title":"Automatic Dependency Collection","id":"automatic-dependency-collection","level":2},{"title":"Wouldn\'t it be nice…","id":"wouldnt-it-be-nice","level":2}],"title":"Why webpack","sort":13,"contributors":["debs-obrien","montogeek","jeremenichelli","EugeneHlushko"]},{"path":"src/content/concepts/under-the-hood.mdx","name":"under-the-hood.mdx","size":3980,"type":"file","extension":".mdx","url":"/concepts/under-the-hood/","anchors":[{"title":"The main parts","id":"the-main-parts","level":2},{"title":"Chunks","id":"chunks","level":2},{"title":"Output","id":"output","level":2}],"title":"Under The Hood","sort":14,"contributors":["smelukov","EugeneHlushko","chenxsan","amirsaeed671"]},{"path":"src/content/concepts/printable.mdx","name":"printable.mdx","size":1271,"type":"file","extension":".mdx","url":"/concepts/printable/","anchors":[{"title":"Concepts","id":"concepts","level":1},{"title":"Entry Points","id":"entry-points","level":1},{"title":"Output","id":"output","level":1},{"title":"Loaders","id":"loaders","level":1},{"title":"Plugins","id":"plugins","level":1},{"title":"Configuration","id":"configuration","level":1},{"title":"Modules","id":"modules","level":1},{"title":"Module Resolution","id":"module-resolution","level":1},{"title":"Module Federation","id":"module-federation","level":1},{"title":"Dependency Graph","id":"dependency-graph","level":1},{"title":"Targets","id":"targets","level":1},{"title":"The Manifest","id":"the-manifest","level":1},{"title":"Hot Module Replacement","id":"hot-module-replacement","level":1},{"title":"Why webpack","id":"why-webpack","level":1},{"title":"Under The Hood","id":"under-the-hood","level":1}],"title":"Printable","sort":999,"contributors":["webpack"]}],"size":70544,"type":"directory","url":"/concepts/"},{"path":"src/content/configuration","name":"configuration","children":[{"path":"src/content/configuration/index.mdx","name":"index.mdx","size":3489,"type":"file","extension":".mdx","url":"/configuration/","anchors":[{"title":"Use a different configuration file","id":"use-a-different-configuration-file","level":2},{"title":"Set up a new webpack project","id":"set-up-a-new-webpack-project","level":2}],"title":"Configuration","sort":1,"contributors":["sokra","skipjack","grgur","bondz","sricc","terinjokes","mattce","kbariotis","sterlingvix","jeremenichelli","dasarianudeep","lukasgeiter","EugeneHlushko","bigdawggi","anshumanv","textbook","coly010","chenxsan"]},{"path":"src/content/configuration/configuration-languages.mdx","name":"configuration-languages.mdx","size":5756,"type":"file","extension":".mdx","url":"/configuration/configuration-languages/","anchors":[{"title":"TypeScript","id":"typescript","level":2},{"title":"CoffeeScript","id":"coffeescript","level":2},{"title":"Babel and JSX","id":"babel-and-jsx","level":2}],"title":"Configuration Languages","sort":2,"contributors":["piouson","sokra","skipjack","tarang9211","simon04","peterblazejewicz","youta1119","byzyk","Nek-","liyiming22","daimalou","ChocolateLoverRaj","snitin315"]},{"path":"src/content/configuration/configuration-types.mdx","name":"configuration-types.mdx","size":3714,"type":"file","extension":".mdx","url":"/configuration/configuration-types/","anchors":[{"title":"Exporting a Function","id":"exporting-a-function","level":2},{"title":"Exporting a Promise","id":"exporting-a-promise","level":2},{"title":"Exporting multiple configurations","id":"exporting-multiple-configurations","level":2},{"title":"dependencies","id":"dependencies","level":3},{"title":"parallelism","id":"parallelism","level":3}],"title":"Configuration Types","sort":3,"contributors":["sokra","skipjack","kbariotis","simon04","fadysamirsadek","byzyk","EugeneHlushko","dhurlburtusa","anshumanv","thorn0"]},{"path":"src/content/configuration/entry-context.mdx","name":"entry-context.mdx","size":5075,"type":"file","extension":".mdx","url":"/configuration/entry-context/","anchors":[{"title":"context","id":"context","level":2},{"title":"entry","id":"entry","level":2},{"title":"Naming","id":"naming","level":3},{"title":"Entry descriptor","id":"entry-descriptor","level":3},{"title":"Output filename","id":"output-filename","level":3},{"title":"Dependencies","id":"dependencies","level":3},{"title":"Dynamic entry","id":"dynamic-entry","level":3}],"title":"Entry and Context","sort":4,"contributors":["sokra","skipjack","tarang9211","byzyk","madhavarshney","EugeneHlushko","smelukov","anshumanv","snitin315"]},{"path":"src/content/configuration/mode.mdx","name":"mode.mdx","size":2960,"type":"file","extension":".mdx","url":"/configuration/mode/","anchors":[{"title":"Usage","id":"usage","level":2},{"title":"Mode: development","id":"mode-development","level":3},{"title":"Mode: production","id":"mode-production","level":3},{"title":"Mode: none","id":"mode-none","level":3}],"title":"Mode","sort":5,"contributors":["EugeneHlushko","byzyk","mrichmond","Fental","snitin315","chenxsan"],"related":[{"title":"webpack default options (source code)","url":"https://github.com/webpack/webpack/blob/main/lib/config/defaults.js"}]},{"path":"src/content/configuration/output.mdx","name":"output.mdx","size":70542,"type":"file","extension":".mdx","url":"/configuration/output/","anchors":[{"title":"output.assetModuleFilename","id":"outputassetmodulefilename","level":2},{"title":"output.asyncChunks","id":"outputasyncchunks","level":2},{"title":"output.auxiliaryComment","id":"outputauxiliarycomment","level":2},{"title":"output.charset","id":"outputcharset","level":2},{"title":"output.chunkFilename","id":"outputchunkfilename","level":2},{"title":"output.chunkFormat","id":"outputchunkformat","level":2},{"title":"output.chunkLoadTimeout","id":"outputchunkloadtimeout","level":2},{"title":"output.chunkLoadingGlobal","id":"outputchunkloadingglobal","level":2},{"title":"output.chunkLoading","id":"outputchunkloading","level":2},{"title":"output.clean","id":"outputclean","level":2},{"title":"output.compareBeforeEmit","id":"outputcomparebeforeemit","level":2},{"title":"output.crossOriginLoading","id":"outputcrossoriginloading","level":2},{"title":"output.devtoolFallbackModuleFilenameTemplate","id":"outputdevtoolfallbackmodulefilenametemplate","level":2},{"title":"output.devtoolModuleFilenameTemplate","id":"outputdevtoolmodulefilenametemplate","level":2},{"title":"output.devtoolNamespace","id":"outputdevtoolnamespace","level":2},{"title":"output.enabledChunkLoadingTypes","id":"outputenabledchunkloadingtypes","level":2},{"title":"output.enabledLibraryTypes","id":"outputenabledlibrarytypes","level":2},{"title":"output.enabledWasmLoadingTypes","id":"outputenabledwasmloadingtypes","level":2},{"title":"output.environment","id":"outputenvironment","level":2},{"title":"output.filename","id":"outputfilename","level":2},{"title":"Template strings","id":"template-strings","level":3},{"title":"output.globalObject","id":"outputglobalobject","level":2},{"title":"output.hashDigest","id":"outputhashdigest","level":2},{"title":"output.hashDigestLength","id":"outputhashdigestlength","level":2},{"title":"output.hashFunction","id":"outputhashfunction","level":2},{"title":"output.hashSalt","id":"outputhashsalt","level":2},{"title":"output.hotUpdateChunkFilename","id":"outputhotupdatechunkfilename","level":2},{"title":"output.hotUpdateGlobal","id":"outputhotupdateglobal","level":2},{"title":"output.hotUpdateMainFilename","id":"outputhotupdatemainfilename","level":2},{"title":"output.iife","id":"outputiife","level":2},{"title":"output.ignoreBrowserWarnings","id":"outputignorebrowserwarnings","level":2},{"title":"output.importFunctionName","id":"outputimportfunctionname","level":2},{"title":"output.library","id":"outputlibrary","level":2},{"title":"output.library.amdContainer","id":"outputlibraryamdcontainer","level":3},{"title":"output.library.name","id":"outputlibraryname","level":3},{"title":"output.library.type","id":"outputlibrarytype","level":3},{"title":"output.library.export","id":"outputlibraryexport","level":3},{"title":"output.library.auxiliaryComment","id":"outputlibraryauxiliarycomment","level":3},{"title":"output.library.umdNamedDefine","id":"outputlibraryumdnameddefine","level":3},{"title":"output.libraryExport","id":"outputlibraryexport-1","level":2},{"title":"output.libraryTarget","id":"outputlibrarytarget","level":2},{"title":"Expose a Variable","id":"expose-a-variable-1","level":3},{"title":"Expose Via Object Assignment","id":"expose-via-object-assignment-1","level":3},{"title":"Module Definition Systems","id":"module-definition-systems-1","level":3},{"title":"Other Targets","id":"other-targets","level":3},{"title":"output.module","id":"outputmodule","level":2},{"title":"output.path","id":"outputpath","level":2},{"title":"output.pathinfo","id":"outputpathinfo","level":2},{"title":"output.publicPath","id":"outputpublicpath","level":2},{"title":"output.scriptType","id":"outputscripttype","level":2},{"title":"output.sourceMapFilename","id":"outputsourcemapfilename","level":2},{"title":"output.sourcePrefix","id":"outputsourceprefix","level":2},{"title":"output.strictModuleErrorHandling","id":"outputstrictmoduleerrorhandling","level":2},{"title":"output.strictModuleExceptionHandling","id":"outputstrictmoduleexceptionhandling","level":2},{"title":"output.trustedTypes","id":"outputtrustedtypes","level":2},{"title":"output.trustedTypes.onPolicyCreationFailure","id":"outputtrustedtypesonpolicycreationfailure","level":3},{"title":"output.umdNamedDefine","id":"outputumdnameddefine","level":2},{"title":"output.uniqueName","id":"outputuniquename","level":2},{"title":"output.wasmLoading","id":"outputwasmloading","level":2},{"title":"output.workerChunkLoading","id":"outputworkerchunkloading","level":2},{"title":"output.workerPublicPath","id":"outputworkerpublicpath","level":2}],"title":"Output","sort":6,"contributors":["sokra","skipjack","tomasAlabes","mattce","irth","fvgs","dhurlburtusa","MagicDuck","fadysamirsadek","byzyk","madhavarshney","harshwardhansingh","eemeli","EugeneHlushko","g-plane","smelukov","Neob91","anikethsaha","jamesgeorge007","hiroppy","chenxsan","snitin315","QC-L","anshumanv","mrzalyaul","JakobJingleheimer","long76"]},{"path":"src/content/configuration/module.mdx","name":"module.mdx","size":40470,"type":"file","extension":".mdx","url":"/configuration/module/","anchors":[{"title":"module.defaultRules","id":"moduledefaultrules","level":2},{"title":"module.generator","id":"modulegenerator","level":2},{"title":"module.parser","id":"moduleparser","level":2},{"title":"module.parser.javascript","id":"moduleparserjavascript","level":3},{"title":"module.noParse","id":"modulenoparse","level":2},{"title":"module.unsafeCache","id":"moduleunsafecache","level":2},{"title":"module.rules","id":"modulerules","level":2},{"title":"Rule","id":"rule","level":2},{"title":"Rule Conditions","id":"rule-conditions","level":3},{"title":"Rule results","id":"rule-results","level":3},{"title":"Nested rules","id":"nested-rules","level":2},{"title":"Rule.enforce","id":"ruleenforce","level":2},{"title":"Rule.exclude","id":"ruleexclude","level":2},{"title":"Rule.include","id":"ruleinclude","level":2},{"title":"Rule.issuer","id":"ruleissuer","level":2},{"title":"Rule.issuerLayer","id":"ruleissuerlayer","level":2},{"title":"Rule.layer","id":"rulelayer","level":2},{"title":"Rule.loader","id":"ruleloader","level":2},{"title":"Rule.loaders","id":"ruleloaders","level":2},{"title":"Rule.mimetype","id":"rulemimetype","level":2},{"title":"Rule.oneOf","id":"ruleoneof","level":2},{"title":"Rule.options / Rule.query","id":"ruleoptions--rulequery","level":2},{"title":"Rule.parser","id":"ruleparser","level":2},{"title":"Rule.parser.dataUrlCondition","id":"ruleparserdataurlcondition","level":2},{"title":"Rule.generator","id":"rulegenerator","level":2},{"title":"Rule.generator.dataUrl","id":"rulegeneratordataurl","level":3},{"title":"Rule.generator.emit","id":"rulegeneratoremit","level":3},{"title":"Rule.generator.filename","id":"rulegeneratorfilename","level":3},{"title":"Rule.generator.publicPath","id":"rulegeneratorpublicpath","level":3},{"title":"Rule.generator.outputPath","id":"rulegeneratoroutputpath","level":3},{"title":"Rule.resource","id":"ruleresource","level":2},{"title":"Rule.resourceQuery","id":"ruleresourcequery","level":2},{"title":"Rule.parser.parse","id":"ruleparserparse","level":2},{"title":"Rule.rules","id":"rulerules","level":2},{"title":"Rule.scheme","id":"rulescheme","level":2},{"title":"Rule.sideEffects","id":"rulesideeffects","level":2},{"title":"Rule.test","id":"ruletest","level":2},{"title":"Rule.type","id":"ruletype","level":2},{"title":"css/auto","id":"cssauto","level":3},{"title":"Rule.use","id":"ruleuse","level":2},{"title":"Rule.resolve","id":"ruleresolve","level":2},{"title":"resolve.fullySpecified","id":"resolvefullyspecified","level":3},{"title":"Condition","id":"condition","level":2},{"title":"UseEntry","id":"useentry","level":2},{"title":"Module Contexts","id":"module-contexts","level":2}],"title":"Module","sort":7,"contributors":["sokra","skipjack","jouni-kantola","jhnns","dylanonelson","byzyk","pnevares","fadysamirsadek","nerdkid93","EugeneHlushko","superburrito","lukasgeiter","skovy","smelukov","opl-","Mistyyyy","anshumanv","chenxsan","snitin315","vabushkevich"]},{"path":"src/content/configuration/resolve.mdx","name":"resolve.mdx","size":17803,"type":"file","extension":".mdx","url":"/configuration/resolve/","anchors":[{"title":"resolve","id":"resolve","level":2},{"title":"resolve.alias","id":"resolvealias","level":3},{"title":"resolve.aliasFields","id":"resolvealiasfields","level":3},{"title":"resolve.cacheWithContext","id":"resolvecachewithcontext","level":3},{"title":"resolve.conditionNames","id":"resolveconditionnames","level":3},{"title":"resolve.descriptionFiles","id":"resolvedescriptionfiles","level":3},{"title":"resolve.enforceExtension","id":"resolveenforceextension","level":3},{"title":"resolve.extensionAlias","id":"resolveextensionalias","level":3},{"title":"resolve.extensions","id":"resolveextensions","level":3},{"title":"resolve.fallback","id":"resolvefallback","level":3},{"title":"resolve.mainFields","id":"resolvemainfields","level":3},{"title":"resolve.mainFiles","id":"resolvemainfiles","level":3},{"title":"resolve.exportsFields","id":"resolveexportsfields","level":3},{"title":"resolve.modules","id":"resolvemodules","level":3},{"title":"resolve.unsafeCache","id":"resolveunsafecache","level":3},{"title":"resolve.useSyncFileSystemCalls","id":"resolveusesyncfilesystemcalls","level":3},{"title":"resolve.plugins","id":"resolveplugins","level":3},{"title":"resolve.preferRelative","id":"resolvepreferrelative","level":3},{"title":"resolve.preferAbsolute","id":"resolvepreferabsolute","level":3},{"title":"resolve.symlinks","id":"resolvesymlinks","level":3},{"title":"resolve.cachePredicate","id":"resolvecachepredicate","level":3},{"title":"resolve.restrictions","id":"resolverestrictions","level":3},{"title":"resolve.roots","id":"resolveroots","level":3},{"title":"resolve.importsFields","id":"resolveimportsfields","level":3},{"title":"resolve.byDependency","id":"resolvebydependency","level":3},{"title":"resolveLoader","id":"resolveloader","level":2}],"title":"Resolve","sort":8,"contributors":["sokra","skipjack","SpaceK33z","pksjce","sebastiandeutsch","tbroadley","byzyk","numb86","jgravois","EugeneHlushko","Aghassi","myshov","anikethsaha","chenxsan","jamesgeorge007","snitin315"]},{"path":"src/content/configuration/optimization.mdx","name":"optimization.mdx","size":17448,"type":"file","extension":".mdx","url":"/configuration/optimization/","anchors":[{"title":"optimization.chunkIds","id":"optimizationchunkids","level":2},{"title":"optimization.concatenateModules","id":"optimizationconcatenatemodules","level":2},{"title":"optimization.emitOnErrors","id":"optimizationemitonerrors","level":2},{"title":"optimization.flagIncludedChunks","id":"optimizationflagincludedchunks","level":2},{"title":"optimization.innerGraph","id":"optimizationinnergraph","level":2},{"title":"optimization.mangleExports","id":"optimizationmangleexports","level":2},{"title":"optimization.mangleWasmImports","id":"optimizationmanglewasmimports","level":2},{"title":"optimization.mergeDuplicateChunks","id":"optimizationmergeduplicatechunks","level":2},{"title":"optimization.minimize","id":"optimizationminimize","level":2},{"title":"optimization.minimizer","id":"optimizationminimizer","level":2},{"title":"optimization.moduleIds","id":"optimizationmoduleids","level":2},{"title":"optimization.nodeEnv","id":"optimizationnodeenv","level":2},{"title":"optimization.portableRecords","id":"optimizationportablerecords","level":2},{"title":"optimization.providedExports","id":"optimizationprovidedexports","level":2},{"title":"optimization.realContentHash","id":"optimizationrealcontenthash","level":2},{"title":"optimization.removeAvailableModules","id":"optimizationremoveavailablemodules","level":2},{"title":"optimization.removeEmptyChunks","id":"optimizationremoveemptychunks","level":2},{"title":"optimization.runtimeChunk","id":"optimizationruntimechunk","level":2},{"title":"optimization.sideEffects","id":"optimizationsideeffects","level":2},{"title":"optimization.splitChunks","id":"optimizationsplitchunks","level":2},{"title":"optimization.usedExports","id":"optimizationusedexports","level":2}],"title":"Optimization","sort":9,"contributors":["EugeneHlushko","jeremenichelli","simon04","byzyk","madhavarshney","dhurlburtusa","jamesgeorge007","anikethsaha","snitin315","pixel-ray","chenxsan","Roberto14"],"related":[{"title":"webpack 4: Code Splitting, chunk graph and the splitChunks optimization","url":"https://medium.com/webpack/webpack-4-code-splitting-chunk-graph-and-the-splitchunks-optimization-be739a861366"}]},{"path":"src/content/configuration/plugins.mdx","name":"plugins.mdx","size":1847,"type":"file","extension":".mdx","url":"/configuration/plugins/","anchors":[{"title":"plugins","id":"plugins","level":2}],"title":"Plugins","sort":10,"contributors":["sokra","skipjack","yatharthk","byzyk","EugeneHlushko","snitin315"]},{"path":"src/content/configuration/dev-server.mdx","name":"dev-server.mdx","size":42513,"type":"file","extension":".mdx","url":"/configuration/dev-server/","anchors":[{"title":"devServer","id":"devserver","level":2},{"title":"Usage via CLI","id":"usage-via-cli","level":3},{"title":"Usage via API","id":"usage-via-api","level":3},{"title":"devServer.allowedHosts","id":"devserverallowedhosts","level":2},{"title":"devServer.bonjour","id":"devserverbonjour","level":2},{"title":"devServer.client","id":"devserverclient","level":2},{"title":"logging","id":"logging","level":3},{"title":"overlay","id":"overlay","level":3},{"title":"progress","id":"progress","level":3},{"title":"reconnect","id":"reconnect","level":3},{"title":"webSocketTransport","id":"websockettransport","level":3},{"title":"webSocketURL","id":"websocketurl","level":3},{"title":"devServer.compress","id":"devservercompress","level":2},{"title":"devServer.devMiddleware","id":"devserverdevmiddleware","level":2},{"title":"devServer.http2","id":"devserverhttp2","level":2},{"title":"devServer.https","id":"devserverhttps","level":2},{"title":"devServer.headers","id":"devserverheaders","level":2},{"title":"devServer.historyApiFallback","id":"devserverhistoryapifallback","level":2},{"title":"devServer.host","id":"devserverhost","level":2},{"title":"local-ip","id":"local-ip","level":3},{"title":"local-ipv4","id":"local-ipv4","level":3},{"title":"local-ipv6","id":"local-ipv6","level":3},{"title":"devServer.hot","id":"devserverhot","level":2},{"title":"devServer.ipc","id":"devserveripc","level":2},{"title":"devServer.liveReload","id":"devserverlivereload","level":2},{"title":"devServer.magicHtml","id":"devservermagichtml","level":2},{"title":"devServer.onAfterSetupMiddleware","id":"devserveronaftersetupmiddleware","level":2},{"title":"devServer.onBeforeSetupMiddleware","id":"devserveronbeforesetupmiddleware","level":2},{"title":"devserver.onListening","id":"devserveronlistening","level":2},{"title":"devServer.open","id":"devserveropen","level":2},{"title":"devServer.port","id":"devserverport","level":2},{"title":"devServer.proxy","id":"devserverproxy","level":2},{"title":"devServer.server","id":"devserverserver","level":2},{"title":"devServer.setupExitSignals","id":"devserversetupexitsignals","level":2},{"title":"devServer.setupMiddlewares","id":"devserversetupmiddlewares","level":2},{"title":"devServer.static","id":"devserverstatic","level":2},{"title":"directory","id":"directory","level":3},{"title":"staticOptions","id":"staticoptions","level":3},{"title":"publicPath","id":"publicpath","level":3},{"title":"serveIndex","id":"serveindex","level":3},{"title":"watch","id":"watch","level":3},{"title":"devServer.watchFiles","id":"devserverwatchfiles","level":2},{"title":"devServer.webSocketServer","id":"devserverwebsocketserver","level":2}],"title":"DevServer","sort":11,"contributors":["sokra","skipjack","spacek33z","charlespwd","orteth01","byzyk","EugeneHlushko","Yiidiir","Loonride","dmohns","EslamHiko","digitaljohn","bhavya9107","wizardofhogwarts","jamesgeorge007","g100g","anikethsaha","snitin315","Biki-das","SaulSilver","malcolm-kee"]},{"path":"src/content/configuration/cache.mdx","name":"cache.mdx","size":11908,"type":"file","extension":".mdx","url":"/configuration/cache/","anchors":[{"title":"cache","id":"cache","level":2},{"title":"cache.allowCollectingMemory","id":"cacheallowcollectingmemory","level":3},{"title":"cache.buildDependencies","id":"cachebuilddependencies","level":3},{"title":"cache.cacheDirectory","id":"cachecachedirectory","level":3},{"title":"cache.cacheLocation","id":"cachecachelocation","level":3},{"title":"cache.cacheUnaffected","id":"cachecacheunaffected","level":3},{"title":"cache.compression","id":"cachecompression","level":3},{"title":"cache.hashAlgorithm","id":"cachehashalgorithm","level":3},{"title":"cache.idleTimeout","id":"cacheidletimeout","level":3},{"title":"cache.idleTimeoutAfterLargeChanges","id":"cacheidletimeoutafterlargechanges","level":3},{"title":"cache.idleTimeoutForInitialStore","id":"cacheidletimeoutforinitialstore","level":3},{"title":"cache.managedPaths","id":"cachemanagedpaths","level":3},{"title":"cache.maxAge","id":"cachemaxage","level":3},{"title":"cache.maxGenerations","id":"cachemaxgenerations","level":3},{"title":"cache.maxMemoryGenerations","id":"cachemaxmemorygenerations","level":3},{"title":"cache.memoryCacheUnaffected","id":"cachememorycacheunaffected","level":3},{"title":"cache.name","id":"cachename","level":3},{"title":"cache.profile","id":"cacheprofile","level":3},{"title":"cache.readonly","id":"cachereadonly","level":3},{"title":"cache.store","id":"cachestore","level":3},{"title":"cache.type","id":"cachetype","level":3},{"title":"cache.version","id":"cacheversion","level":3},{"title":"Setup cache in CI/CD system","id":"setup-cache-in-cicd-system","level":2},{"title":"GitLab CI/CD","id":"gitlab-cicd","level":3},{"title":"Github actions","id":"github-actions","level":3}],"title":"Cache","sort":12,"contributors":["snitin315","chenxsan"]},{"path":"src/content/configuration/devtool.mdx","name":"devtool.mdx","size":17292,"type":"file","extension":".mdx","url":"/configuration/devtool/","anchors":[{"title":"devtool","id":"devtool","level":2},{"title":"Qualities","id":"qualities","level":3},{"title":"Development","id":"development","level":3},{"title":"Special cases","id":"special-cases","level":3},{"title":"Production","id":"production","level":3}],"title":"Devtool","sort":12,"contributors":["sokra","skipjack","SpaceK33z","lricoy","madhavarshney","wizardofhogwarts","anikethsaha","snitin315"],"related":[{"title":"Enabling Source Maps","url":"https://survivejs.com/webpack/developing-with-webpack/enabling-sourcemaps/"},{"title":"webpack\'s Devtool Source Map","url":"http://cheng.logdown.com/posts/2016/03/25/679045"}]},{"path":"src/content/configuration/extending-configurations.mdx","name":"extending-configurations.mdx","size":3419,"type":"file","extension":".mdx","url":"/configuration/extending-configurations/","anchors":[{"title":"extends","id":"extends","level":2},{"title":"Extending multiple configurations","id":"extending-multiple-configurations","level":2},{"title":"Overridding Configurations","id":"overridding-configurations","level":2},{"title":"Loading configuration from external packages","id":"loading-configuration-from-external-packages","level":2}],"title":"Extends","sort":12,"contributors":["burhanuday"]},{"path":"src/content/configuration/target.mdx","name":"target.mdx","size":7855,"type":"file","extension":".mdx","url":"/configuration/target/","anchors":[{"title":"target","id":"target","level":2},{"title":"string","id":"string","level":3},{"title":"[string]","id":"string-1","level":3},{"title":"false","id":"false","level":3}],"title":"Target","sort":13,"contributors":["juangl","sokra","skipjack","SpaceK33z","pastelsky","tbroadley","byzyk","EugeneHlushko","smelukov","chenxsan"]},{"path":"src/content/configuration/watch.mdx","name":"watch.mdx","size":6463,"type":"file","extension":".mdx","url":"/configuration/watch/","anchors":[{"title":"watch","id":"watch","level":2},{"title":"watchOptions","id":"watchoptions","level":2},{"title":"watchOptions.aggregateTimeout","id":"watchoptionsaggregatetimeout","level":3},{"title":"watchOptions.ignored","id":"watchoptionsignored","level":3},{"title":"watchOptions.poll","id":"watchoptionspoll","level":3},{"title":"watchOptions.followSymlinks","id":"watchoptionsfollowsymlinks","level":3},{"title":"watchOptions.stdin","id":"watchoptionsstdin","level":3},{"title":"Troubleshooting","id":"troubleshooting","level":2},{"title":"Changes Seen But Not Processed","id":"changes-seen-but-not-processed","level":3},{"title":"Not Enough Watchers","id":"not-enough-watchers","level":3},{"title":"macOS fsevents Bug","id":"macos-fsevents-bug","level":3},{"title":"Windows Paths","id":"windows-paths","level":3},{"title":"Vim","id":"vim","level":3},{"title":"Saving in WebStorm","id":"saving-in-webstorm","level":3}],"title":"Watch and WatchOptions","sort":14,"contributors":["sokra","skipjack","SpaceK33z","EugeneHlushko","byzyk","spicalous","Neob91","Loonride","snitin315","chenxsan"]},{"path":"src/content/configuration/externals.mdx","name":"externals.mdx","size":21244,"type":"file","extension":".mdx","url":"/configuration/externals/","anchors":[{"title":"externals","id":"externals","level":2},{"title":"string","id":"string","level":3},{"title":"[string]","id":"string-1","level":3},{"title":"object","id":"object","level":3},{"title":"function","id":"function","level":3},{"title":"RegExp","id":"regexp","level":3},{"title":"Combining syntaxes","id":"combining-syntaxes","level":3},{"title":"byLayer","id":"bylayer","level":3},{"title":"externalsType","id":"externalstype","level":2},{"title":"externalsType.commonjs","id":"externalstypecommonjs","level":3},{"title":"externalsType.global","id":"externalstypeglobal","level":3},{"title":"externalsType.module","id":"externalstypemodule","level":3},{"title":"externalsType.node-commonjs","id":"externalstypenode-commonjs","level":3},{"title":"externalsType.promise","id":"externalstypepromise","level":3},{"title":"externalsType.self","id":"externalstypeself","level":3},{"title":"externalsType.script","id":"externalstypescript","level":3},{"title":"externalsType.this","id":"externalstypethis","level":3},{"title":"externalsType.var","id":"externalstypevar","level":3},{"title":"externalsType.window","id":"externalstypewindow","level":3},{"title":"externalsPresets","id":"externalspresets","level":2}],"title":"Externals","sort":15,"contributors":["sokra","skipjack","pksjce","fadysamirsadek","byzyk","zefman","Mistyyyy","jamesgeorge007","tanhauhau","snitin315","beejunk","EugeneHlushko","chenxsan","pranshuchittora","kinetifex","anshumanv","SaulSilver"]},{"path":"src/content/configuration/performance.mdx","name":"performance.mdx","size":2639,"type":"file","extension":".mdx","url":"/configuration/performance/","anchors":[{"title":"performance","id":"performance","level":2},{"title":"performance.assetFilter","id":"performanceassetfilter","level":3},{"title":"performance.hints","id":"performancehints","level":3},{"title":"performance.maxAssetSize","id":"performancemaxassetsize","level":3},{"title":"performance.maxEntrypointSize","id":"performancemaxentrypointsize","level":3}],"title":"Performance","sort":16,"contributors":["thelarkinn","tbroadley","byzyk","madhavarshney","EugeneHlushko"]},{"path":"src/content/configuration/node.mdx","name":"node.mdx","size":2789,"type":"file","extension":".mdx","url":"/configuration/node/","anchors":[{"title":"node","id":"node","level":2},{"title":"node.global","id":"nodeglobal","level":2},{"title":"node.__filename","id":"node__filename","level":2},{"title":"node.__dirname","id":"node__dirname","level":2}],"title":"Node","sort":17,"contributors":["sokra","skipjack","oneforwonder","Rob--W","byzyk","EugeneHlushko","anikethsaha","chenxsan","snitin315"]},{"path":"src/content/configuration/stats.mdx","name":"stats.mdx","size":23171,"type":"file","extension":".mdx","url":"/configuration/stats/","anchors":[{"title":"Stats Presets","id":"stats-presets","level":2},{"title":"Stats Options","id":"stats-options","level":2},{"title":"stats.all","id":"statsall","level":3},{"title":"stats.assets","id":"statsassets","level":3},{"title":"stats.assetsSort","id":"statsassetssort","level":3},{"title":"stats.builtAt","id":"statsbuiltat","level":3},{"title":"stats.moduleAssets","id":"statsmoduleassets","level":3},{"title":"stats.assetsSpace","id":"statsassetsspace","level":3},{"title":"stats.modulesSpace","id":"statsmodulesspace","level":3},{"title":"stats.chunkModulesSpace","id":"statschunkmodulesspace","level":3},{"title":"stats.nestedModules","id":"statsnestedmodules","level":3},{"title":"stats.nestedModulesSpace","id":"statsnestedmodulesspace","level":3},{"title":"stats.cached","id":"statscached","level":3},{"title":"stats.cachedModules","id":"statscachedmodules","level":3},{"title":"stats.runtimeModules","id":"statsruntimemodules","level":3},{"title":"stats.dependentModules","id":"statsdependentmodules","level":3},{"title":"stats.groupAssetsByChunk","id":"statsgroupassetsbychunk","level":3},{"title":"stats.groupAssetsByEmitStatus","id":"statsgroupassetsbyemitstatus","level":3},{"title":"stats.groupAssetsByExtension","id":"statsgroupassetsbyextension","level":3},{"title":"stats.groupAssetsByInfo","id":"statsgroupassetsbyinfo","level":3},{"title":"stats.groupAssetsByPath","id":"statsgroupassetsbypath","level":3},{"title":"stats.groupModulesByAttributes","id":"statsgroupmodulesbyattributes","level":3},{"title":"stats.groupModulesByCacheStatus","id":"statsgroupmodulesbycachestatus","level":3},{"title":"stats.groupModulesByExtension","id":"statsgroupmodulesbyextension","level":3},{"title":"stats.groupModulesByLayer","id":"statsgroupmodulesbylayer","level":3},{"title":"stats.groupModulesByPath","id":"statsgroupmodulesbypath","level":3},{"title":"stats.groupModulesByType","id":"statsgroupmodulesbytype","level":3},{"title":"stats.groupReasonsByOrigin","id":"statsgroupreasonsbyorigin","level":3},{"title":"stats.cachedAssets","id":"statscachedassets","level":3},{"title":"stats.children","id":"statschildren","level":3},{"title":"stats.chunks","id":"statschunks","level":3},{"title":"stats.chunkGroups","id":"statschunkgroups","level":3},{"title":"stats.chunkModules","id":"statschunkmodules","level":3},{"title":"stats.chunkOrigins","id":"statschunkorigins","level":3},{"title":"stats.chunksSort","id":"statschunkssort","level":3},{"title":"stats.context","id":"statscontext","level":3},{"title":"stats.colors","id":"statscolors","level":3},{"title":"stats.depth","id":"statsdepth","level":3},{"title":"stats.entrypoints","id":"statsentrypoints","level":3},{"title":"stats.env","id":"statsenv","level":3},{"title":"stats.orphanModules","id":"statsorphanmodules","level":3},{"title":"stats.errors","id":"statserrors","level":3},{"title":"stats.errorDetails","id":"statserrordetails","level":3},{"title":"stats.errorStack","id":"statserrorstack","level":3},{"title":"stats.errorsSpace","id":"statserrorsspace","level":3},{"title":"stats.excludeAssets","id":"statsexcludeassets","level":3},{"title":"stats.excludeModules","id":"statsexcludemodules","level":3},{"title":"stats.exclude","id":"statsexclude","level":3},{"title":"stats.hash","id":"statshash","level":3},{"title":"stats.logging","id":"statslogging","level":3},{"title":"stats.loggingDebug","id":"statsloggingdebug","level":3},{"title":"stats.loggingTrace","id":"statsloggingtrace","level":3},{"title":"stats.modules","id":"statsmodules","level":3},{"title":"stats.modulesSort","id":"statsmodulessort","level":3},{"title":"stats.moduleTrace","id":"statsmoduletrace","level":3},{"title":"stats.optimizationBailout","id":"statsoptimizationbailout","level":3},{"title":"stats.outputPath","id":"statsoutputpath","level":3},{"title":"stats.performance","id":"statsperformance","level":3},{"title":"stats.preset","id":"statspreset","level":3},{"title":"stats.providedExports","id":"statsprovidedexports","level":3},{"title":"stats.errorsCount","id":"statserrorscount","level":3},{"title":"stats.warningsCount","id":"statswarningscount","level":3},{"title":"stats.publicPath","id":"statspublicpath","level":3},{"title":"stats.reasons","id":"statsreasons","level":3},{"title":"stats.reasonsSpace","id":"statsreasonsspace","level":3},{"title":"stats.relatedAssets","id":"statsrelatedassets","level":3},{"title":"stats.source","id":"statssource","level":3},{"title":"stats.timings","id":"statstimings","level":3},{"title":"stats.ids","id":"statsids","level":3},{"title":"stats.usedExports","id":"statsusedexports","level":3},{"title":"stats.version","id":"statsversion","level":3},{"title":"stats.chunkGroupAuxiliary","id":"statschunkgroupauxiliary","level":3},{"title":"stats.chunkGroupChildren","id":"statschunkgroupchildren","level":3},{"title":"stats.chunkGroupMaxAssets","id":"statschunkgroupmaxassets","level":3},{"title":"stats.warnings","id":"statswarnings","level":3},{"title":"stats.warningsSpace","id":"statswarningsspace","level":3},{"title":"stats.warningsFilter","id":"statswarningsfilter","level":3},{"title":"stats.chunkRelations","id":"statschunkrelations","level":3},{"title":"Sorting fields","id":"sorting-fields","level":3},{"title":"Extending stats behaviours","id":"extending-stats-behaviours","level":3}],"title":"Stats","sort":18,"contributors":["SpaceK33z","sallar","jungomi","ldrick","jasonblanchard","byzyk","renjithspace","Raiondesu","EugeneHlushko","grgur","anshumanv","pixel-ray","snitin315","u01jmg3","grrizzly"]},{"path":"src/content/configuration/experiments.mdx","name":"experiments.mdx","size":9308,"type":"file","extension":".mdx","url":"/configuration/experiments/","anchors":[{"title":"experiments","id":"experiments","level":2},{"title":"experiments.backCompat","id":"experimentsbackcompat","level":3},{"title":"experiments.buildHttp","id":"experimentsbuildhttp","level":3},{"title":"experiments.css","id":"experimentscss","level":3},{"title":"experiments.cacheUnaffected","id":"experimentscacheunaffected","level":3},{"title":"experiments.futureDefaults","id":"experimentsfuturedefaults","level":3},{"title":"experiments.lazyCompilation","id":"experimentslazycompilation","level":3},{"title":"experiments.outputModule","id":"experimentsoutputmodule","level":3},{"title":"experiments.topLevelAwait","id":"experimentstoplevelawait","level":3}],"title":"Experiments","sort":19,"contributors":["EugeneHlushko","wizardofhogwarts","chenxsan","anshumanv","snitin315","burhanuday"]},{"path":"src/content/configuration/other-options.mdx","name":"other-options.mdx","size":13559,"type":"file","extension":".mdx","url":"/configuration/other-options/","anchors":[{"title":"amd","id":"amd","level":2},{"title":"bail","id":"bail","level":2},{"title":"dependencies","id":"dependencies","level":2},{"title":"ignoreWarnings","id":"ignorewarnings","level":2},{"title":"infrastructureLogging","id":"infrastructurelogging","level":2},{"title":"appendOnly","id":"appendonly","level":3},{"title":"colors","id":"colors","level":3},{"title":"console","id":"console","level":3},{"title":"debug","id":"debug","level":3},{"title":"level","id":"level","level":3},{"title":"stream","id":"stream","level":3},{"title":"loader","id":"loader","level":2},{"title":"name","id":"name","level":2},{"title":"parallelism","id":"parallelism","level":2},{"title":"profile","id":"profile","level":2},{"title":"recordsInputPath","id":"recordsinputpath","level":2},{"title":"recordsOutputPath","id":"recordsoutputpath","level":2},{"title":"recordsPath","id":"recordspath","level":2},{"title":"snapshot","id":"snapshot","level":2},{"title":"buildDependencies","id":"builddependencies","level":3},{"title":"immutablePaths","id":"immutablepaths","level":3},{"title":"managedPaths","id":"managedpaths","level":3},{"title":"unmanagedPaths","id":"unmanagedpaths","level":3},{"title":"module","id":"module","level":3},{"title":"resolve","id":"resolve","level":3},{"title":"resolveBuildDependencies","id":"resolvebuilddependencies","level":3}],"title":"Other Options","sort":20,"contributors":["sokra","skipjack","terinjokes","byzyk","liorgreenb","vansosnin","EugeneHlushko","skovy","rishabh3112","niravasher","Neob91","chenxsan","u01jmg3","jamesgeorge007","snitin315"],"related":[{"title":"Using Records","url":"https://survivejs.com/webpack/optimizing/separating-manifest/#using-records"}]},{"path":"src/content/configuration/printable.mdx","name":"printable.mdx","size":1705,"type":"file","extension":".mdx","url":"/configuration/printable/","anchors":[{"title":"Configuration","id":"configuration","level":1},{"title":"Configuration Languages","id":"configuration-languages","level":1},{"title":"Configuration Types","id":"configuration-types","level":1},{"title":"Entry and Context","id":"entry-and-context","level":1},{"title":"Mode","id":"mode","level":1},{"title":"Output","id":"output","level":1},{"title":"Module","id":"module","level":1},{"title":"Resolve","id":"resolve","level":1},{"title":"Optimization","id":"optimization","level":1},{"title":"Plugins","id":"plugins","level":1},{"title":"DevServer","id":"devserver","level":1},{"title":"Cache","id":"cache","level":1},{"title":"Devtool","id":"devtool","level":1},{"title":"Extends","id":"extends","level":1},{"title":"Target","id":"target","level":1},{"title":"Watch and WatchOptions","id":"watch-and-watchoptions","level":1},{"title":"Externals","id":"externals","level":1},{"title":"Performance","id":"performance","level":1},{"title":"Node","id":"node","level":1},{"title":"Stats","id":"stats","level":1},{"title":"Experiments","id":"experiments","level":1},{"title":"Other Options","id":"other-options","level":1}],"title":"Printable","sort":999,"contributors":["webpack"]}],"size":332969,"type":"directory","url":"/configuration/"},{"path":"src/content/contribute","name":"contribute","children":[{"path":"src/content/contribute/index.mdx","name":"index.mdx","size":4703,"type":"file","extension":".mdx","url":"/contribute/","anchors":[{"title":"Developers","id":"developers","level":2},{"title":"How Can I Help?","id":"how-can-i-help","level":3},{"title":"Encouraging Employers","id":"encouraging-employers","level":3},{"title":"Your Contributions","id":"your-contributions","level":3},{"title":"Executives","id":"executives","level":2},{"title":"Sponsorship","id":"sponsorship","level":3},{"title":"Anyone Else","id":"anyone-else","level":3},{"title":"Pull requests","id":"pull-requests","level":2}],"title":"Contribute","sort":-1,"contributors":["rouzbeh84","scottdj92","harrynewsome","dhedgecock","tbroadley","EugeneHlushko","dkdk225"]},{"path":"src/content/contribute/writers-guide.mdx","name":"writers-guide.mdx","size":6883,"type":"file","extension":".mdx","url":"/contribute/writers-guide/","anchors":[{"title":"Process","id":"process","level":2},{"title":"YAML Frontmatter","id":"yaml-frontmatter","level":2},{"title":"Article Structure","id":"article-structure","level":2},{"title":"Typesetting","id":"typesetting","level":2},{"title":"Formatting","id":"formatting","level":2},{"title":"Code","id":"code","level":3},{"title":"Lists","id":"lists","level":3},{"title":"Tables","id":"tables","level":3},{"title":"Configuration Properties","id":"configuration-properties","level":3},{"title":"Quotes","id":"quotes","level":3},{"title":"Assumptions and simplicity","id":"assumptions-and-simplicity","level":3},{"title":"Configuration defaults and types","id":"configuration-defaults-and-types","level":3},{"title":"Options shortlists and their typing","id":"options-shortlists-and-their-typing","level":3},{"title":"Adding links","id":"adding-links","level":3}],"title":"Writer\'s Guide","sort":1,"contributors":["pranshuchittora","EugeneHlushko"]},{"path":"src/content/contribute/writing-a-loader.mdx","name":"writing-a-loader.mdx","size":13545,"type":"file","extension":".mdx","url":"/contribute/writing-a-loader/","anchors":[{"title":"Setup","id":"setup","level":2},{"title":"Simple Usage","id":"simple-usage","level":2},{"title":"Complex Usage","id":"complex-usage","level":2},{"title":"Guidelines","id":"guidelines","level":2},{"title":"Simple","id":"simple","level":3},{"title":"Chaining","id":"chaining","level":3},{"title":"Modular","id":"modular","level":3},{"title":"Stateless","id":"stateless","level":3},{"title":"Loader Utilities","id":"loader-utilities","level":3},{"title":"Loader Dependencies","id":"loader-dependencies","level":3},{"title":"Module Dependencies","id":"module-dependencies","level":3},{"title":"Common Code","id":"common-code","level":3},{"title":"Absolute Paths","id":"absolute-paths","level":3},{"title":"Peer Dependencies","id":"peer-dependencies","level":3},{"title":"Testing","id":"testing","level":2}],"title":"Writing a Loader","sort":2,"contributors":["asulaiman","michael-ciniawsky","byzyk","anikethsaha","jamesgeorge007","chenxsan","dev-itsheng"]},{"path":"src/content/contribute/writing-a-plugin.mdx","name":"writing-a-plugin.mdx","size":13637,"type":"file","extension":".mdx","url":"/contribute/writing-a-plugin/","anchors":[{"title":"Creating a Plugin","id":"creating-a-plugin","level":2},{"title":"Basic plugin architecture","id":"basic-plugin-architecture","level":2},{"title":"Compiler and Compilation","id":"compiler-and-compilation","level":2},{"title":"Async event hooks","id":"async-event-hooks","level":2},{"title":"tapAsync","id":"tapasync","level":3},{"title":"Example","id":"example","level":2},{"title":"Different Plugin Shapes","id":"different-plugin-shapes","level":2},{"title":"Synchronous Hooks","id":"synchronous-hooks","level":3},{"title":"Asynchronous Hooks","id":"asynchronous-hooks","level":3},{"title":"Configuration defaults","id":"configuration-defaults","level":3}],"title":"Writing a Plugin","sort":3,"contributors":["slavafomin","tbroadley","nveenjain","iamakulov","byzyk","franjohn21","EugeneHlushko","snitin315","rahul3v","jamesgeorge007"]},{"path":"src/content/contribute/plugin-patterns.mdx","name":"plugin-patterns.mdx","size":4742,"type":"file","extension":".mdx","url":"/contribute/plugin-patterns/","anchors":[{"title":"Exploring assets, chunks, modules, and dependencies","id":"exploring-assets-chunks-modules-and-dependencies","level":2},{"title":"Monitoring the watch graph","id":"monitoring-the-watch-graph","level":3},{"title":"Changed chunks","id":"changed-chunks","level":2}],"title":"Plugin Patterns","sort":5,"contributors":["nveenjain","EugeneHlushko","benglynn"]},{"path":"src/content/contribute/release-process.mdx","name":"release-process.mdx","size":831,"type":"file","extension":".mdx","url":"/contribute/release-process/","anchors":[{"title":"Pull Requests","id":"pull-requests","level":2},{"title":"Releasing","id":"releasing","level":2}],"title":"Release Process","sort":6,"contributors":["d3viant0ne","sokra","byzyk","chenxsan"]},{"path":"src/content/contribute/debugging.mdx","name":"debugging.mdx","size":3576,"type":"file","extension":".mdx","url":"/contribute/debugging/","anchors":[{"title":"Stats","id":"stats","level":2},{"title":"DevTools","id":"devtools","level":2}],"title":"Debugging","sort":7,"contributors":["skipjack","tbroadley","madhavarshney","bhavya9107","akaustav"],"related":[{"title":"Learn and Debug webpack with Chrome DevTools!","url":"https://medium.com/webpack/webpack-bits-learn-and-debug-webpack-with-chrome-dev-tools-da1c5b19554"},{"title":"Debugging Guide | Node","url":"https://nodejs.org/en/docs/guides/debugging-getting-started/"},{"title":"Debugging Node.js with Chrome DevTools","url":"https://medium.com/@paul_irish/debugging-node-js-nightlies-with-chrome-devtools-7c4a1b95ae27"}]},{"path":"src/content/contribute/printable.mdx","name":"printable.mdx","size":666,"type":"file","extension":".mdx","url":"/contribute/printable/","anchors":[{"title":"Contribute","id":"contribute","level":1},{"title":"Writer\'s Guide","id":"writers-guide","level":1},{"title":"Writing a Loader","id":"writing-a-loader","level":1},{"title":"Writing a Plugin","id":"writing-a-plugin","level":1},{"title":"Plugin Patterns","id":"plugin-patterns","level":1},{"title":"Release Process","id":"release-process","level":1},{"title":"Debugging","id":"debugging","level":1}],"title":"Printable","sort":999,"contributors":["webpack"]}],"size":48583,"type":"directory","url":"/contribute/"},{"path":"src/content/guides","name":"guides","children":[{"path":"src/content/guides/index.mdx","name":"index.mdx","size":924,"type":"file","extension":".mdx","url":"/guides/","anchors":[],"title":"Guides","sort":-1,"contributors":["skipjack","EugeneHlushko","benschac"]},{"path":"src/content/guides/getting-started.mdx","name":"getting-started.mdx","size":12838,"type":"file","extension":".mdx","url":"/guides/getting-started/","anchors":[{"title":"Basic Setup","id":"basic-setup","level":2},{"title":"Creating a Bundle","id":"creating-a-bundle","level":2},{"title":"Modules","id":"modules","level":2},{"title":"Using a Configuration","id":"using-a-configuration","level":2},{"title":"NPM Scripts","id":"npm-scripts","level":2},{"title":"Conclusion","id":"conclusion","level":2}],"title":"Getting Started","description":"Learn how to bundle a JavaScript application with webpack 5.","sort":1,"contributors":["bebraw","varunjayaraman","cntanglijun","chrisVillanueva","johnstew","simon04","aaronang","TheDutchCoder","sudarsangp","Vanguard90","chenxsan","EugeneHlushko","ATGardner","ayvarot","bjarki","ztomasze","Spiral90210","byzyk","wizardofhogwarts","myshov","anshumanv","d3lm","snitin315","Etheryen"]},{"path":"src/content/guides/asset-management.mdx","name":"asset-management.mdx","size":24303,"type":"file","extension":".mdx","url":"/guides/asset-management/","anchors":[{"title":"Setup","id":"setup","level":2},{"title":"Loading CSS","id":"loading-css","level":2},{"title":"Loading Images","id":"loading-images","level":2},{"title":"Loading Fonts","id":"loading-fonts","level":2},{"title":"Loading Data","id":"loading-data","level":2},{"title":"Customize parser of JSON modules","id":"customize-parser-of-json-modules","level":3},{"title":"Global Assets","id":"global-assets","level":2},{"title":"Wrapping up","id":"wrapping-up","level":2},{"title":"Next guide","id":"next-guide","level":2},{"title":"Further Reading","id":"further-reading","level":2}],"title":"Asset Management","sort":2,"contributors":["skipjack","michael-ciniawsky","TheDutchCoder","sudarsangp","chenxsan","EugeneHlushko","AnayaDesign","wizardofhogwarts","astonizer","snitin315"]},{"path":"src/content/guides/output-management.mdx","name":"output-management.mdx","size":7573,"type":"file","extension":".mdx","url":"/guides/output-management/","anchors":[{"title":"Preparation","id":"preparation","level":2},{"title":"Setting up HtmlWebpackPlugin","id":"setting-up-htmlwebpackplugin","level":2},{"title":"Cleaning up the /dist folder","id":"cleaning-up-the-dist-folder","level":2},{"title":"The Manifest","id":"the-manifest","level":2},{"title":"Conclusion","id":"conclusion","level":2}],"title":"Output Management","sort":3,"contributors":["skipjack","TheDutchCoder","sudarsangp","JGJP","EugeneHlushko","AnayaDesign","chenxsan","snitin315"]},{"path":"src/content/guides/development.mdx","name":"development.mdx","size":14559,"type":"file","extension":".mdx","url":"/guides/development/","anchors":[{"title":"Using source maps","id":"using-source-maps","level":2},{"title":"Choosing a Development Tool","id":"choosing-a-development-tool","level":2},{"title":"Using Watch Mode","id":"using-watch-mode","level":3},{"title":"Using webpack-dev-server","id":"using-webpack-dev-server","level":3},{"title":"Using webpack-dev-middleware","id":"using-webpack-dev-middleware","level":3},{"title":"Adjusting Your Text Editor","id":"adjusting-your-text-editor","level":2},{"title":"Conclusion","id":"conclusion","level":2}],"title":"Development","sort":4,"contributors":["SpaceK33z","rafde","fvgs","TheDutchCoder","WojciechKo","Calinou","GAumala","EugeneHlushko","byzyk","trivikr","aholzner","chenxsan","maxloh","snitin315","f3ndot"]},{"path":"src/content/guides/code-splitting.mdx","name":"code-splitting.mdx","size":18088,"type":"file","extension":".mdx","url":"/guides/code-splitting/","anchors":[{"title":"Entry Points","id":"entry-points","level":2},{"title":"Prevent Duplication","id":"prevent-duplication","level":2},{"title":"Entry dependencies","id":"entry-dependencies","level":3},{"title":"SplitChunksPlugin","id":"splitchunksplugin","level":3},{"title":"Dynamic Imports","id":"dynamic-imports","level":2},{"title":"Prefetching/Preloading modules","id":"prefetchingpreloading-modules","level":2},{"title":"Bundle Analysis","id":"bundle-analysis","level":2},{"title":"Next Steps","id":"next-steps","level":2}],"title":"Code Splitting","sort":5,"contributors":["pksjce","pastelsky","simon04","jonwheeler","johnstew","shinxi","tomtasche","levy9527","rahulcs","chrisVillanueva","rafde","bartushek","shaunwallace","skipjack","jakearchibald","TheDutchCoder","rouzbeh84","shaodahong","sudarsangp","kcolton","efreitasn","EugeneHlushko","Tiendo1011","byzyk","AnayaDesign","wizardofhogwarts","maximilianschmelzer","smelukov","chenxsan","Adarah","atesgoral","snitin315","artem-malko"],"related":[{"title":"<link rel=\\"prefetch/preload\\" /> in webpack","url":"https://medium.com/webpack/link-rel-prefetch-preload-in-webpack-51a52358f84c"},{"title":"Preload, Prefetch And Priorities in Chrome","url":"https://medium.com/reloading/preload-prefetch-and-priorities-in-chrome-776165961bbf"},{"title":"Preloading content with <link rel=\\"preload\\" />","url":"https://developer.mozilla.org/en-US/docs/Web/HTML/Preloading_content"}]},{"path":"src/content/guides/caching.mdx","name":"caching.mdx","size":11422,"type":"file","extension":".mdx","url":"/guides/caching/","anchors":[{"title":"Output Filenames","id":"output-filenames","level":2},{"title":"Extracting Boilerplate","id":"extracting-boilerplate","level":2},{"title":"Module Identifiers","id":"module-identifiers","level":2},{"title":"Conclusion","id":"conclusion","level":2}],"title":"Caching","sort":6,"contributors":["okonet","jouni-kantola","skipjack","dannycjones","fadysamirsadek","afontcu","rosavage","saiprasad2595","EugeneHlushko","AnayaDesign","aholzner","snitin315"],"related":[{"title":"Issue 652","url":"https://github.com/webpack/webpack.js.org/issues/652"}]},{"path":"src/content/guides/author-libraries.mdx","name":"author-libraries.mdx","size":8163,"type":"file","extension":".mdx","url":"/guides/author-libraries/","anchors":[{"title":"Authoring a Library","id":"authoring-a-library","level":2},{"title":"Webpack Configuration","id":"webpack-configuration","level":2},{"title":"Expose the Library","id":"expose-the-library","level":2},{"title":"Externalize Lodash","id":"externalize-lodash","level":2},{"title":"External Limitations","id":"external-limitations","level":3},{"title":"Final Steps","id":"final-steps","level":2}],"title":"Authoring Libraries","sort":7,"contributors":["pksjce","johnstew","simon04","5angel","marioacc","byzyk","EugeneHlushko","AnayaDesign","chenxsan","wizardofhogwarts"]},{"path":"src/content/guides/environment-variables.mdx","name":"environment-variables.mdx","size":1845,"type":"file","extension":".mdx","url":"/guides/environment-variables/","anchors":[],"title":"Environment Variables","sort":8,"contributors":["simon04","grisanu","tbroadley","legalcodes","byzyk","jceipek","snitin315"]},{"path":"src/content/guides/build-performance.mdx","name":"build-performance.mdx","size":8685,"type":"file","extension":".mdx","url":"/guides/build-performance/","anchors":[{"title":"General","id":"general","level":2},{"title":"Stay Up to Date","id":"stay-up-to-date","level":3},{"title":"Loaders","id":"loaders","level":3},{"title":"Bootstrap","id":"bootstrap","level":3},{"title":"Resolving","id":"resolving","level":3},{"title":"Dlls","id":"dlls","level":3},{"title":"Smaller = Faster","id":"smaller--faster","level":3},{"title":"Worker Pool","id":"worker-pool","level":3},{"title":"Persistent cache","id":"persistent-cache","level":3},{"title":"Custom plugins/loaders","id":"custom-pluginsloaders","level":3},{"title":"Progress plugin","id":"progress-plugin","level":3},{"title":"Development","id":"development","level":2},{"title":"Incremental Builds","id":"incremental-builds","level":3},{"title":"Compile in Memory","id":"compile-in-memory","level":3},{"title":"stats.toJson speed","id":"statstojson-speed","level":3},{"title":"Devtool","id":"devtool","level":3},{"title":"Avoid Production Specific Tooling","id":"avoid-production-specific-tooling","level":3},{"title":"Minimal Entry Chunk","id":"minimal-entry-chunk","level":3},{"title":"Avoid Extra Optimization Steps","id":"avoid-extra-optimization-steps","level":3},{"title":"Output Without Path Info","id":"output-without-path-info","level":3},{"title":"Node.js Versions 8.9.10-9.11.1","id":"nodejs-versions-8910-9111","level":3},{"title":"TypeScript Loader","id":"typescript-loader","level":3},{"title":"Production","id":"production","level":2},{"title":"Source Maps","id":"source-maps","level":3},{"title":"Specific Tooling Issues","id":"specific-tooling-issues","level":2},{"title":"Babel","id":"babel","level":3},{"title":"TypeScript","id":"typescript","level":3},{"title":"Sass","id":"sass","level":3}],"title":"Build Performance","sort":9,"contributors":["sokra","tbroadley","byzyk","madhavarshney","wizardofhogwarts","anikethsaha"]},{"path":"src/content/guides/csp.mdx","name":"csp.mdx","size":2291,"type":"file","extension":".mdx","url":"/guides/csp/","anchors":[{"title":"Examples","id":"examples","level":2},{"title":"Enabling CSP","id":"enabling-csp","level":2},{"title":"Trusted Types","id":"trusted-types","level":2}],"title":"Content Security Policies","sort":10,"contributors":["EugeneHlushko","probablyup","wizardofhogwarts","koto"],"related":[{"title":"Nonce purpose explained","url":"https://stackoverflow.com/questions/42922784/what-s-the-purpose-of-the-html-nonce-attribute-for-script-and-style-elements"},{"title":"On the Insecurity of Whitelists and the Future of Content Security Policy","url":"https://ai.google/research/pubs/pub45542"},{"title":"Locking Down Your Website Scripts with CSP, Hashes, Nonces and Report URI","url":"https://www.troyhunt.com/locking-down-your-website-scripts-with-csp-hashes-nonces-and-report-uri/"},{"title":"CSP on MDN","url":"https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP"},{"title":"Trusted Types","url":"https://web.dev/trusted-types"}]},{"path":"src/content/guides/development-vagrant.mdx","name":"development-vagrant.mdx","size":3484,"type":"file","extension":".mdx","url":"/guides/development-vagrant/","anchors":[{"title":"Configuring the Project","id":"configuring-the-project","level":2},{"title":"Running the Server","id":"running-the-server","level":2},{"title":"Advanced Usage with nginx","id":"advanced-usage-with-nginx","level":2},{"title":"Conclusion","id":"conclusion","level":2}],"title":"Development - Vagrant","sort":11,"contributors":["SpaceK33z","chrisVillanueva","byzyk","wizardofhogwarts"]},{"path":"src/content/guides/dependency-management.mdx","name":"dependency-management.mdx","size":3159,"type":"file","extension":".mdx","url":"/guides/dependency-management/","anchors":[{"title":"require with expression","id":"require-with-expression","level":2},{"title":"require.context","id":"requirecontext","level":2},{"title":"context module API","id":"context-module-api","level":3}],"title":"Dependency Management","sort":12,"contributors":["ndelangen","chrisVillanueva","sokra","byzyk","AnayaDesign"]},{"path":"src/content/guides/installation.mdx","name":"installation.mdx","size":2799,"type":"file","extension":".mdx","url":"/guides/installation/","anchors":[{"title":"Prerequisites","id":"prerequisites","level":2},{"title":"Local Installation","id":"local-installation","level":2},{"title":"Global Installation","id":"global-installation","level":2},{"title":"Bleeding Edge","id":"bleeding-edge","level":2}],"title":"Installation","sort":13,"contributors":["pksjce","bebraw","simon04","EugeneHlushko","sibiraj-s","chenxsan"]},{"path":"src/content/guides/hot-module-replacement.mdx","name":"hot-module-replacement.mdx","size":12146,"type":"file","extension":".mdx","url":"/guides/hot-module-replacement/","anchors":[{"title":"Enabling HMR","id":"enabling-hmr","level":2},{"title":"Via the Node.js API","id":"via-the-nodejs-api","level":2},{"title":"Gotchas","id":"gotchas","level":2},{"title":"HMR with Stylesheets","id":"hmr-with-stylesheets","level":2},{"title":"Other Code and Frameworks","id":"other-code-and-frameworks","level":2}],"title":"Hot Module Replacement","sort":15,"contributors":["jmreidy","jhnns","sararubin","rohannair","joshsantos","drpicox","skipjack","sbaidon","gdi2290","bdwain","caryli","xgirma","EugeneHlushko","AnayaDesign","aviyacohen","dhruvdutt","wizardofhogwarts","aholzner","snitin315"],"related":[{"title":"Concepts - Hot Module Replacement","url":"/concepts/hot-module-replacement"},{"title":"API - Hot Module Replacement","url":"/api/hot-module-replacement"}]},{"path":"src/content/guides/tree-shaking.mdx","name":"tree-shaking.mdx","size":15124,"type":"file","extension":".mdx","url":"/guides/tree-shaking/","anchors":[{"title":"Add a Utility","id":"add-a-utility","level":2},{"title":"Mark the file as side-effect-free","id":"mark-the-file-as-side-effect-free","level":2},{"title":"Clarifying tree shaking and sideEffects","id":"clarifying-tree-shaking-and-sideeffects","level":2},{"title":"Mark a function call as side-effect-free","id":"mark-a-function-call-as-side-effect-free","level":2},{"title":"Minify the Output","id":"minify-the-output","level":2},{"title":"Conclusion","id":"conclusion","level":2}],"title":"Tree Shaking","sort":16,"contributors":["simon04","zacanger","alexjoverm","avant1","MijaelWatts","dmitriid","probablyup","gish","lumo10","byzyk","pnevares","EugeneHlushko","AnayaDesign","torifat","rahul3v","snitin315"],"related":[{"title":"Debugging Optimization Bailouts","url":"https://webpack.js.org/plugins/module-concatenation-plugin/#debugging-optimization-bailouts"},{"title":"Issue 6074 - Add support for more complex selectors for sideEffects","url":"https://github.com/webpack/webpack/issues/6074"}]},{"path":"src/content/guides/production.mdx","name":"production.mdx","size":9195,"type":"file","extension":".mdx","url":"/guides/production/","anchors":[{"title":"Setup","id":"setup","level":2},{"title":"NPM Scripts","id":"npm-scripts","level":2},{"title":"Specify the Mode","id":"specify-the-mode","level":2},{"title":"Minification","id":"minification","level":2},{"title":"Source Mapping","id":"source-mapping","level":2},{"title":"Minimize CSS","id":"minimize-css","level":2},{"title":"CLI Alternatives","id":"cli-alternatives","level":2}],"title":"Production","sort":17,"contributors":["henriquea","rajagopal4890","makuzaverite","markerikson","simon04","kisnows","chrisVillanueva","swapnilmishra","bring2dip","redian","skipjack","xgqfrms","kelset","xgirma","mehrdaad","SevenOutman","AnayaDesign","wizardofhogwarts","aholzner","EugeneHlushko","snitin315"]},{"path":"src/content/guides/lazy-loading.mdx","name":"lazy-loading.mdx","size":4299,"type":"file","extension":".mdx","url":"/guides/lazy-loading/","anchors":[{"title":"Example","id":"example","level":2},{"title":"Frameworks","id":"frameworks","level":2}],"title":"Lazy Loading","sort":18,"contributors":["iammerrick","chrisVillanueva","skipjack","byzyk","EugeneHlushko","AnayaDesign","tapanprakasht","snitin315"],"related":[{"title":"Lazy Loading ES2015 Modules in the Browser","url":"https://dzone.com/articles/lazy-loading-es2015-modules-in-the-browser"},{"title":"Asynchronous vs Deferred JavaScript","url":"https://bitsofco.de/async-vs-defer/"}]},{"path":"src/content/guides/ecma-script-modules.mdx","name":"ecma-script-modules.mdx","size":3017,"type":"file","extension":".mdx","url":"/guides/ecma-script-modules/","anchors":[{"title":"Exporting","id":"exporting","level":2},{"title":"Importing","id":"importing","level":2},{"title":"Flagging modules as ESM","id":"flagging-modules-as-esm","level":2}],"title":"ECMAScript Modules","sort":19,"contributors":["sokra"],"related":[{"title":"ECMAScript Modules in Node.js","url":"https://nodejs.org/api/esm.html"}]},{"path":"src/content/guides/shimming.mdx","name":"shimming.mdx","size":14898,"type":"file","extension":".mdx","url":"/guides/shimming/","anchors":[{"title":"Shimming Globals","id":"shimming-globals","level":2},{"title":"Granular Shimming","id":"granular-shimming","level":2},{"title":"Global Exports","id":"global-exports","level":2},{"title":"Loading Polyfills","id":"loading-polyfills","level":2},{"title":"Further Optimizations","id":"further-optimizations","level":2},{"title":"Node Built-Ins","id":"node-built-ins","level":2},{"title":"Other Utilities","id":"other-utilities","level":2}],"title":"Shimming","sort":20,"contributors":["pksjce","jhnns","simon04","jeremenichelli","svyandun","byzyk","EugeneHlushko","AnayaDesign","dhurlburtusa","plr108","NicolasLetellier","wizardofhogwarts","snitin315","chenxsan"],"related":[{"title":"Reward modern browser users script","url":"https://medium.com/hackernoon/10-things-i-learned-making-the-fastest-site-in-the-world-18a0e1cdf4a7"},{"title":"useBuiltIns in babel-preset-env","url":"https://babeljs.io/docs/en/babel-preset-env#usebuiltins"}]},{"path":"src/content/guides/typescript.mdx","name":"typescript.mdx","size":6914,"type":"file","extension":".mdx","url":"/guides/typescript/","anchors":[{"title":"Basic Setup","id":"basic-setup","level":2},{"title":"Loader","id":"loader","level":2},{"title":"Source Maps","id":"source-maps","level":2},{"title":"Client types","id":"client-types","level":2},{"title":"Using Third Party Libraries","id":"using-third-party-libraries","level":2},{"title":"Importing Other Assets","id":"importing-other-assets","level":2},{"title":"Build Performance","id":"build-performance","level":2}],"title":"TypeScript","sort":21,"contributors":["morsdyce","kkamali","mtrivera","byzyk","EugeneHlushko","chenxsan","snitin315"]},{"path":"src/content/guides/web-workers.mdx","name":"web-workers.mdx","size":2026,"type":"file","extension":".mdx","url":"/guides/web-workers/","anchors":[{"title":"Syntax","id":"syntax","level":2},{"title":"Example","id":"example","level":2},{"title":"Node.js","id":"nodejs","level":2}],"title":"Web Workers","sort":21,"contributors":["chenxsan"]},{"path":"src/content/guides/progressive-web-application.mdx","name":"progressive-web-application.mdx","size":6018,"type":"file","extension":".mdx","url":"/guides/progressive-web-application/","anchors":[{"title":"We Don\'t Work Offline Now","id":"we-dont-work-offline-now","level":2},{"title":"Adding Workbox","id":"adding-workbox","level":2},{"title":"Registering Our Service Worker","id":"registering-our-service-worker","level":2},{"title":"Conclusion","id":"conclusion","level":2}],"title":"Progressive Web Application","sort":22,"contributors":["johnnyreilly","chenxsan","EugeneHlushko","benschac","aholzner"]},{"path":"src/content/guides/public-path.mdx","name":"public-path.mdx","size":3070,"type":"file","extension":".mdx","url":"/guides/public-path/","anchors":[{"title":"Use Cases","id":"use-cases","level":2},{"title":"Environment Based","id":"environment-based","level":3},{"title":"On The Fly","id":"on-the-fly","level":3},{"title":"Automatic publicPath","id":"automatic-publicpath","level":3}],"title":"Public Path","sort":23,"contributors":["rafaelrinaldi","chrisVillanueva","gonzoyumo","chenxsan"]},{"path":"src/content/guides/integrations.mdx","name":"integrations.mdx","size":5414,"type":"file","extension":".mdx","url":"/guides/integrations/","anchors":[{"title":"NPM Scripts","id":"npm-scripts","level":2},{"title":"Grunt","id":"grunt","level":2},{"title":"Gulp","id":"gulp","level":2},{"title":"Mocha","id":"mocha","level":2},{"title":"Karma","id":"karma","level":2}],"title":"Integrations","sort":24,"contributors":["pksjce","bebraw","tashian","skipjack","AnayaDesign"]},{"path":"src/content/guides/asset-modules.mdx","name":"asset-modules.mdx","size":12549,"type":"file","extension":".mdx","url":"/guides/asset-modules/","anchors":[{"title":"Public Path","id":"public-path","level":2},{"title":"On The Fly Override","id":"on-the-fly-override","level":3},{"title":"Resource assets","id":"resource-assets","level":2},{"title":"Custom output filename","id":"custom-output-filename","level":3},{"title":"Inlining assets","id":"inlining-assets","level":2},{"title":"Custom data URI generator","id":"custom-data-uri-generator","level":3},{"title":"Source assets","id":"source-assets","level":2},{"title":"URL assets","id":"url-assets","level":2},{"title":"General asset type","id":"general-asset-type","level":2},{"title":"Replacing Inline Loader Syntax","id":"replacing-inline-loader-syntax","level":2},{"title":"Disable emitting assets","id":"disable-emitting-assets","level":2}],"title":"Asset Modules","sort":25,"contributors":["smelukov","EugeneHlushko","chenxsan","anshumanv","spence-s","dkdk225"],"related":[{"title":"webpack 5 - Asset Modules","url":"https://dev.to/smelukov/webpack-5-asset-modules-2o3h"}]},{"path":"src/content/guides/entry-advanced.mdx","name":"entry-advanced.mdx","size":2072,"type":"file","extension":".mdx","url":"/guides/entry-advanced/","anchors":[{"title":"Multiple file types per entry","id":"multiple-file-types-per-entry","level":2}],"title":"Advanced entry","sort":25,"contributors":["EugeneHlushko"]},{"path":"src/content/guides/package-exports.mdx","name":"package-exports.mdx","size":24715,"type":"file","extension":".mdx","url":"/guides/package-exports/","anchors":[{"title":"General syntax","id":"general-syntax","level":2},{"title":"Alternatives","id":"alternatives","level":2},{"title":"Conditional syntax","id":"conditional-syntax","level":2},{"title":"Abbreviation","id":"abbreviation","level":2},{"title":"Notes about ordering","id":"notes-about-ordering","level":2},{"title":"Support","id":"support","level":2},{"title":"Conditions","id":"conditions","level":2},{"title":"Reference syntax","id":"reference-syntax","level":3},{"title":"Optimizations","id":"optimizations","level":3},{"title":"Target environment","id":"target-environment","level":3},{"title":"Conditions: Preprocessor and runtimes","id":"conditions-preprocessor-and-runtimes","level":3},{"title":"Conditions: Custom","id":"conditions-custom","level":3},{"title":"Common patterns","id":"common-patterns","level":2},{"title":"Target environment independent packages","id":"target-environment-independent-packages","level":3},{"title":"Providing devtools or production optimizations","id":"providing-devtools-or-production-optimizations","level":3},{"title":"Providing different versions depending on target environment","id":"providing-different-versions-depending-on-target-environment","level":3},{"title":"Combining patterns","id":"combining-patterns","level":3},{"title":"Guidelines","id":"guidelines","level":2}],"title":"Package exports","sort":25,"contributors":["sokra"],"related":[{"title":"Package entry points in Node.js","url":"https://nodejs.org/api/packages.html#packages_package_entry_points"}]},{"path":"src/content/guides/printable.mdx","name":"printable.mdx","size":2617,"type":"file","extension":".mdx","url":"/guides/printable/","anchors":[{"title":"Guides","id":"guides","level":1},{"title":"Getting Started","id":"getting-started","level":1},{"title":"Asset Management","id":"asset-management","level":1},{"title":"Output Management","id":"output-management","level":1},{"title":"Development","id":"development","level":1},{"title":"Code Splitting","id":"code-splitting","level":1},{"title":"Caching","id":"caching","level":1},{"title":"Authoring Libraries","id":"authoring-libraries","level":1},{"title":"Environment Variables","id":"environment-variables","level":1},{"title":"Build Performance","id":"build-performance","level":1},{"title":"Content Security Policies","id":"content-security-policies","level":1},{"title":"Development - Vagrant","id":"development---vagrant","level":1},{"title":"Dependency Management","id":"dependency-management","level":1},{"title":"Installation","id":"installation","level":1},{"title":"Hot Module Replacement","id":"hot-module-replacement","level":1},{"title":"Tree Shaking","id":"tree-shaking","level":1},{"title":"Production","id":"production","level":1},{"title":"Lazy Loading","id":"lazy-loading","level":1},{"title":"ECMAScript Modules","id":"ecmascript-modules","level":1},{"title":"Shimming","id":"shimming","level":1},{"title":"TypeScript","id":"typescript","level":1},{"title":"Web Workers","id":"web-workers","level":1},{"title":"Progressive Web Application","id":"progressive-web-application","level":1},{"title":"Public Path","id":"public-path","level":1},{"title":"Integrations","id":"integrations","level":1},{"title":"Advanced entry","id":"advanced-entry","level":1},{"title":"Asset Modules","id":"asset-modules","level":1},{"title":"Package exports","id":"package-exports","level":1}],"title":"Printable","sort":999,"contributors":["webpack"]}],"size":244207,"type":"directory","url":"/guides/"},{"path":"src/content/loaders","name":"loaders","children":[{"path":"src/content/loaders/_babel-loader.mdx","name":"babel-loader.mdx","size":14646,"type":"file","extension":".mdx","url":"/loaders/babel-loader/","anchors":[{"title":"Install","id":"install","level":2},{"title":"Usage","id":"usage","level":2},{"title":"Options","id":"options","level":3},{"title":"Troubleshooting","id":"troubleshooting","level":2},{"title":"Enable debug mode logging","id":"enable-debug-mode-logging","level":3},{"title":"babel-loader is slow!","id":"babel-loader-is-slow","level":3},{"title":"Some files in my node_modules are not transpiled for IE 11","id":"some-files-in-my-node_modules-are-not-transpiled-for-ie-11","level":3},{"title":"Babel is injecting helpers into each file and bloating my code!","id":"babel-is-injecting-helpers-into-each-file-and-bloating-my-code","level":3},{"title":"The Node.js API for babel has been moved to babel-core.","id":"the-nodejs-api-for-babel-has-been-moved-to-babel-core","level":3},{"title":"Exclude libraries that should not be transpiled","id":"exclude-libraries-that-should-not-be-transpiled","level":3},{"title":"Top level function (IIFE) is still arrow (on Webpack 5)","id":"top-level-function-iife-is-still-arrow-on-webpack-5","level":3},{"title":"Customize config based on webpack target","id":"customize-config-based-on-webpack-target","level":2},{"title":"Customized Loader","id":"customized-loader","level":2},{"title":"Example","id":"example","level":3},{"title":"customOptions(options: Object): { custom: Object, loader: Object }","id":"customoptionsoptions-object--custom-object-loader-object-","level":3},{"title":"config(cfg: PartialConfig, options: { source, customOptions }): Object","id":"configcfg-partialconfig-options--source-customoptions--object","level":3},{"title":"result(result: Result): Result","id":"resultresult-result-result","level":3},{"title":"License","id":"license","level":2}],"title":"babel-loader","source":"https://raw.githubusercontent.com/babel/babel-loader/main/README.md","edit":"https://github.com/babel/babel-loader/edit/main/README.md","repo":"https://github.com/babel/babel-loader","thirdParty":true},{"path":"src/content/loaders/_coffee-loader.mdx","name":"coffee-loader.mdx","size":5066,"type":"file","extension":".mdx","url":"/loaders/coffee-loader/","anchors":[{"title":"Getting Started","id":"getting-started","level":2},{"title":"Options","id":"options","level":2},{"title":"Examples","id":"examples","level":2},{"title":"CoffeeScript and Babel","id":"coffeescript-and-babel","level":3},{"title":"Literate CoffeeScript","id":"literate-coffeescript","level":3},{"title":"Contributing","id":"contributing","level":2},{"title":"License","id":"license","level":2}],"title":"coffee-loader","source":"https://raw.githubusercontent.com/webpack-contrib/coffee-loader/master/README.md","edit":"https://github.com/webpack-contrib/coffee-loader/edit/master/README.md","repo":"https://github.com/webpack-contrib/coffee-loader","thirdParty":true},{"path":"src/content/loaders/_exports-loader.mdx","name":"exports-loader.mdx","size":13710,"type":"file","extension":".mdx","url":"/loaders/exports-loader/","anchors":[{"title":"Getting Started","id":"getting-started","level":2},{"title":"Inline","id":"inline","level":3},{"title":"Using Configuration","id":"using-configuration","level":3},{"title":"Options","id":"options","level":2},{"title":"type","id":"type","level":3},{"title":"exports","id":"exports","level":3},{"title":"Contributing","id":"contributing","level":2},{"title":"License","id":"license","level":2}],"title":"exports-loader","source":"https://raw.githubusercontent.com/webpack-contrib/exports-loader/master/README.md","edit":"https://github.com/webpack-contrib/exports-loader/edit/master/README.md","repo":"https://github.com/webpack-contrib/exports-loader","thirdParty":true},{"path":"src/content/loaders/_expose-loader.mdx","name":"expose-loader.mdx","size":11316,"type":"file","extension":".mdx","url":"/loaders/expose-loader/","anchors":[{"title":"Getting Started","id":"getting-started","level":2},{"title":"Inline","id":"inline","level":2},{"title":"Using Configuration","id":"using-configuration","level":2},{"title":"Options","id":"options","level":2},{"title":"exposes","id":"exposes","level":3},{"title":"globalObject","id":"globalobject","level":3},{"title":"Examples","id":"examples","level":2},{"title":"Expose a local module","id":"expose-a-local-module","level":3},{"title":"Contributing","id":"contributing","level":2},{"title":"License","id":"license","level":2}],"title":"expose-loader","source":"https://raw.githubusercontent.com/webpack-contrib/expose-loader/master/README.md","edit":"https://github.com/webpack-contrib/expose-loader/edit/master/README.md","repo":"https://github.com/webpack-contrib/expose-loader","thirdParty":true},{"path":"src/content/loaders/_html-loader.mdx","name":"html-loader.mdx","size":27536,"type":"file","extension":".mdx","url":"/loaders/html-loader/","anchors":[{"title":"Getting Started","id":"getting-started","level":2},{"title":"Options","id":"options","level":2},{"title":"sources","id":"sources","level":3},{"title":"preprocessor","id":"preprocessor","level":3},{"title":"postprocessor","id":"postprocessor","level":3},{"title":"minimize","id":"minimize","level":3},{"title":"esModule","id":"esmodule","level":3},{"title":"Examples","id":"examples","level":2},{"title":"Disable URL resolving using the <!-- webpackIgnore: true --> comment","id":"disable-url-resolving-using-the----webpackignore-true----comment","level":3},{"title":"roots","id":"roots","level":3},{"title":"CDN","id":"cdn","level":3},{"title":"Process script and link tags","id":"process-script-and-link-tags","level":3},{"title":"Templating","id":"templating","level":3},{"title":"PostHTML","id":"posthtml","level":3},{"title":"Export into HTML files","id":"export-into-html-files","level":3},{"title":"Contributing","id":"contributing","level":2},{"title":"License","id":"license","level":2}],"title":"html-loader","source":"https://raw.githubusercontent.com/webpack-contrib/html-loader/master/README.md","edit":"https://github.com/webpack-contrib/html-loader/edit/master/README.md","repo":"https://github.com/webpack-contrib/html-loader","thirdParty":true},{"path":"src/content/loaders/_imports-loader.mdx","name":"imports-loader.mdx","size":17822,"type":"file","extension":".mdx","url":"/loaders/imports-loader/","anchors":[{"title":"Getting Started","id":"getting-started","level":2},{"title":"Inline","id":"inline","level":3},{"title":"Using Configuration","id":"using-configuration","level":3},{"title":"Options","id":"options","level":2},{"title":"type","id":"type","level":3},{"title":"imports","id":"imports","level":3},{"title":"wrapper","id":"wrapper","level":3},{"title":"additionalCode","id":"additionalcode","level":3},{"title":"Contributing","id":"contributing","level":2},{"title":"License","id":"license","level":2}],"title":"imports-loader","source":"https://raw.githubusercontent.com/webpack-contrib/imports-loader/master/README.md","edit":"https://github.com/webpack-contrib/imports-loader/edit/master/README.md","repo":"https://github.com/webpack-contrib/imports-loader","thirdParty":true},{"path":"src/content/loaders/index.mdx","name":"index.mdx","size":4115,"type":"file","extension":".mdx","url":"/loaders/","anchors":[{"title":"Files","id":"files","level":2},{"title":"JSON","id":"json","level":2},{"title":"Transpiling","id":"transpiling","level":2},{"title":"Templating","id":"templating","level":2},{"title":"Styling","id":"styling","level":2},{"title":"Frameworks","id":"frameworks","level":2},{"title":"Awesome","id":"awesome","level":2}],"title":"Loaders","sort":-1,"contributors":["simon04","bajras","rhys-vdw","EugeneHlushko","hemal7735","snitin315","anshumanv","jamesgeorge007","chenxsan"]},{"path":"src/content/loaders/_node-loader.mdx","name":"node-loader.mdx","size":5343,"type":"file","extension":".mdx","url":"/loaders/node-loader/","anchors":[{"title":"node-loader","id":"node-loader","level":1},{"title":"Getting Started","id":"getting-started","level":2},{"title":"Inline","id":"inline","level":3},{"title":"Configuration","id":"configuration","level":3},{"title":"Options","id":"options","level":2},{"title":"flags","id":"flags","level":3},{"title":"name","id":"name","level":3},{"title":"Contributing","id":"contributing","level":2},{"title":"License","id":"license","level":2}],"title":"node-loader","source":"https://raw.githubusercontent.com/webpack-contrib/node-loader/master/README.md","edit":"https://github.com/webpack-contrib/node-loader/edit/master/README.md","repo":"https://github.com/webpack-contrib/node-loader","thirdParty":true},{"path":"src/content/loaders/printable.mdx","name":"printable.mdx","size":1599,"type":"file","extension":".mdx","url":"/loaders/printable/","anchors":[{"title":"babel-loader","id":"babel-loader","level":1},{"title":"coffee-loader","id":"coffee-loader","level":1},{"title":"css-loader","id":"css-loader","level":1},{"title":"exports-loader","id":"exports-loader","level":1},{"title":"expose-loader","id":"expose-loader","level":1},{"title":"html-loader","id":"html-loader","level":1},{"title":"imports-loader","id":"imports-loader","level":1},{"title":"less-loader","id":"less-loader","level":1},{"title":"node-loader","id":"node-loader","level":1},{"title":"postcss-loader","id":"postcss-loader","level":1},{"title":"remark-loader","id":"remark-loader","level":1},{"title":"sass-loader","id":"sass-loader","level":1},{"title":"source-map-loader","id":"source-map-loader","level":1},{"title":"style-loader","id":"style-loader","level":1},{"title":"stylus-loader","id":"stylus-loader","level":1},{"title":"thread-loader","id":"thread-loader","level":1},{"title":"val-loader","id":"val-loader","level":1},{"title":"Loaders","id":"loaders","level":1}],"title":"Printable","sort":999,"contributors":["webpack"]},{"path":"src/content/loaders/_remark-loader.mdx","name":"remark-loader.mdx","size":8226,"type":"file","extension":".mdx","url":"/loaders/remark-loader/","anchors":[{"title":"Usage","id":"usage","level":2},{"title":"Options","id":"options","level":2},{"title":"remarkOptions","id":"remarkoptions","level":3},{"title":"removeFrontMatter","id":"removefrontmatter","level":3},{"title":"Inspiration","id":"inspiration","level":2},{"title":"Examples","id":"examples","level":2},{"title":"Markdown to HTML","id":"markdown-to-html","level":3},{"title":"Markdown to Markdown","id":"markdown-to-markdown","level":3},{"title":"Contributing","id":"contributing","level":2},{"title":"License","id":"license","level":2}],"title":"remark-loader","source":"https://raw.githubusercontent.com/webpack-contrib/remark-loader/master/README.md","edit":"https://github.com/webpack-contrib/remark-loader/edit/master/README.md","repo":"https://github.com/webpack-contrib/remark-loader","thirdParty":true},{"path":"src/content/loaders/_source-map-loader.mdx","name":"source-map-loader.mdx","size":5576,"type":"file","extension":".mdx","url":"/loaders/source-map-loader/","anchors":[{"title":"Getting Started","id":"getting-started","level":2},{"title":"Options","id":"options","level":2},{"title":"filterSourceMappingUrl","id":"filtersourcemappingurl","level":3},{"title":"Examples","id":"examples","level":2},{"title":"Ignoring Warnings","id":"ignoring-warnings","level":3},{"title":"Contributing","id":"contributing","level":2},{"title":"License","id":"license","level":2}],"title":"source-map-loader","source":"https://raw.githubusercontent.com/webpack-contrib/source-map-loader/master/README.md","edit":"https://github.com/webpack-contrib/source-map-loader/edit/master/README.md","repo":"https://github.com/webpack-contrib/source-map-loader","thirdParty":true},{"path":"src/content/loaders/_thread-loader.mdx","name":"thread-loader.mdx","size":4535,"type":"file","extension":".mdx","url":"/loaders/thread-loader/","anchors":[{"title":"Getting Started","id":"getting-started","level":2},{"title":"Examples","id":"examples","level":3},{"title":"Contributing","id":"contributing","level":2},{"title":"License","id":"license","level":2}],"title":"thread-loader","source":"https://raw.githubusercontent.com/webpack-contrib/thread-loader/master/README.md","edit":"https://github.com/webpack-contrib/thread-loader/edit/master/README.md","repo":"https://github.com/webpack-contrib/thread-loader","thirdParty":true},{"path":"src/content/loaders/_val-loader.mdx","name":"val-loader.mdx","size":10157,"type":"file","extension":".mdx","url":"/loaders/val-loader/","anchors":[{"title":"Getting Started","id":"getting-started","level":2},{"title":"Options","id":"options","level":2},{"title":"executableFile","id":"executablefile","level":3},{"title":"Return Object Properties","id":"return-object-properties","level":2},{"title":"code","id":"code","level":3},{"title":"sourceMap","id":"sourcemap","level":3},{"title":"ast","id":"ast","level":3},{"title":"dependencies","id":"dependencies","level":3},{"title":"contextDependencies","id":"contextdependencies","level":3},{"title":"buildDependencies","id":"builddependencies","level":3},{"title":"cacheable","id":"cacheable","level":3},{"title":"Examples","id":"examples","level":2},{"title":"Simple","id":"simple","level":3},{"title":"Modernizr","id":"modernizr","level":3},{"title":"Figlet","id":"figlet","level":3},{"title":"Contributing","id":"contributing","level":2},{"title":"License","id":"license","level":2}],"title":"val-loader","source":"https://raw.githubusercontent.com/webpack-contrib/val-loader/master/README.md","edit":"https://github.com/webpack-contrib/val-loader/edit/master/README.md","repo":"https://github.com/webpack-contrib/val-loader","thirdParty":true},{"path":"src/content/loaders/_css-loader.mdx","name":"css-loader.mdx","size":55292,"type":"file","extension":".mdx","url":"/loaders/css-loader/","anchors":[{"title":"Getting Started","id":"getting-started","level":2},{"title":"Options","id":"options","level":2},{"title":"url","id":"url","level":3},{"title":"import","id":"import","level":3},{"title":"modules","id":"modules","level":3},{"title":"importLoaders","id":"importloaders","level":3},{"title":"sourceMap","id":"sourcemap","level":3},{"title":"esModule","id":"esmodule","level":3},{"title":"exportType","id":"exporttype","level":3},{"title":"Examples","id":"examples","level":2},{"title":"Recommend","id":"recommend","level":3},{"title":"Disable URL resolving using the /* webpackIgnore: true */ comment","id":"disable-url-resolving-using-the--webpackignore-true--comment","level":3},{"title":"Assets","id":"assets","level":3},{"title":"Extract","id":"extract","level":3},{"title":"Pure CSS, CSS Modules and PostCSS","id":"pure-css-css-modules-and-postcss","level":3},{"title":"Resolve unresolved URLs using an alias","id":"resolve-unresolved-urls-using-an-alias","level":3},{"title":"Named export with custom export names","id":"named-export-with-custom-export-names","level":3},{"title":"Separating Interoperable CSS-only and CSS Module features","id":"separating-interoperable-css-only-and-css-module-features","level":3},{"title":"Contributing","id":"contributing","level":2},{"title":"License","id":"license","level":2}],"title":"css-loader","source":"https://raw.githubusercontent.com/webpack-contrib/css-loader/master/README.md","edit":"https://github.com/webpack-contrib/css-loader/edit/master/README.md","repo":"https://github.com/webpack-contrib/css-loader","thirdParty":true,"group":"CSS"},{"path":"src/content/loaders/_less-loader.mdx","name":"less-loader.mdx","size":17003,"type":"file","extension":".mdx","url":"/loaders/less-loader/","anchors":[{"title":"Getting Started","id":"getting-started","level":2},{"title":"Options","id":"options","level":2},{"title":"lessOptions","id":"lessoptions","level":3},{"title":"additionalData","id":"additionaldata","level":3},{"title":"sourceMap","id":"sourcemap","level":3},{"title":"webpackImporter","id":"webpackimporter","level":3},{"title":"implementation","id":"implementation","level":3},{"title":"lessLogAsWarnOrErr","id":"lesslogaswarnorerr","level":3},{"title":"Examples","id":"examples","level":2},{"title":"Normal usage","id":"normal-usage","level":3},{"title":"Source maps","id":"source-maps","level":3},{"title":"In production","id":"in-production","level":3},{"title":"Imports","id":"imports","level":3},{"title":"Plugins","id":"plugins","level":3},{"title":"Extracting style sheets","id":"extracting-style-sheets","level":3},{"title":"CSS modules gotcha","id":"css-modules-gotcha","level":3},{"title":"Contributing","id":"contributing","level":2},{"title":"License","id":"license","level":2}],"title":"less-loader","source":"https://raw.githubusercontent.com/webpack-contrib/less-loader/master/README.md","edit":"https://github.com/webpack-contrib/less-loader/edit/master/README.md","repo":"https://github.com/webpack-contrib/less-loader","thirdParty":true,"group":"CSS"},{"path":"src/content/loaders/_postcss-loader.mdx","name":"postcss-loader.mdx","size":26337,"type":"file","extension":".mdx","url":"/loaders/postcss-loader/","anchors":[{"title":"Getting Started","id":"getting-started","level":2},{"title":"Options","id":"options","level":2},{"title":"execute","id":"execute","level":3},{"title":"postcssOptions","id":"postcssoptions","level":3},{"title":"sourceMap","id":"sourcemap","level":3},{"title":"implementation","id":"implementation","level":3},{"title":"Examples","id":"examples","level":2},{"title":"SugarSS","id":"sugarss","level":3},{"title":"Autoprefixer","id":"autoprefixer","level":3},{"title":"PostCSS Preset Env","id":"postcss-preset-env","level":3},{"title":"CSS Modules","id":"css-modules","level":3},{"title":"Extract CSS","id":"extract-css","level":3},{"title":"Emit assets","id":"emit-assets","level":3},{"title":"Add dependencies, contextDependencies, buildDependencies, missingDependencies","id":"add-dependencies-contextdependencies-builddependencies-missingdependencies","level":3},{"title":"Contributing","id":"contributing","level":2},{"title":"License","id":"license","level":2}],"title":"postcss-loader","source":"https://raw.githubusercontent.com/webpack-contrib/postcss-loader/master/README.md","edit":"https://github.com/webpack-contrib/postcss-loader/edit/master/README.md","repo":"https://github.com/webpack-contrib/postcss-loader","thirdParty":true,"group":"CSS"},{"path":"src/content/loaders/_sass-loader.mdx","name":"sass-loader.mdx","size":23327,"type":"file","extension":".mdx","url":"/loaders/sass-loader/","anchors":[{"title":"Getting Started","id":"getting-started","level":2},{"title":"The style (new API, by default since 16 version) and outputStyle (old API) options in production mode","id":"the-style-new-api-by-default-since-16-version-and-outputstyle-old-api-options-in-production-mode","level":3},{"title":"Resolving import and use at-rules","id":"resolving-import-and-use-at-rules","level":3},{"title":"Problems with url(...)","id":"problems-with-url","level":3},{"title":"Options","id":"options","level":2},{"title":"implementation","id":"implementation","level":3},{"title":"sassOptions","id":"sassoptions","level":3},{"title":"sourceMap","id":"sourcemap","level":3},{"title":"additionalData","id":"additionaldata","level":3},{"title":"webpackImporter","id":"webpackimporter","level":3},{"title":"warnRuleAsWarning","id":"warnruleaswarning","level":3},{"title":"api","id":"api","level":3},{"title":"How to enable @debug output","id":"how-to-enable-debug-output","level":2},{"title":"Examples","id":"examples","level":2},{"title":"Extracts CSS into separate files","id":"extracts-css-into-separate-files","level":3},{"title":"Source maps","id":"source-maps","level":3},{"title":"Contributing","id":"contributing","level":2},{"title":"License","id":"license","level":2}],"title":"sass-loader","source":"https://raw.githubusercontent.com/webpack-contrib/sass-loader/master/README.md","edit":"https://github.com/webpack-contrib/sass-loader/edit/master/README.md","repo":"https://github.com/webpack-contrib/sass-loader","thirdParty":true,"group":"CSS"},{"path":"src/content/loaders/_style-loader.mdx","name":"style-loader.mdx","size":27812,"type":"file","extension":".mdx","url":"/loaders/style-loader/","anchors":[{"title":"Getting Started","id":"getting-started","level":2},{"title":"Security Warning","id":"security-warning","level":2},{"title":"Options","id":"options","level":2},{"title":"injectType","id":"injecttype","level":3},{"title":"attributes","id":"attributes","level":3},{"title":"insert","id":"insert","level":3},{"title":"styleTagTransform","id":"styletagtransform","level":3},{"title":"base","id":"base","level":3},{"title":"esModule","id":"esmodule","level":3},{"title":"Examples","id":"examples","level":2},{"title":"Recommended","id":"recommended","level":3},{"title":"Named export for CSS Modules","id":"named-export-for-css-modules","level":3},{"title":"Source maps","id":"source-maps","level":3},{"title":"Nonce","id":"nonce","level":3},{"title":"Contributing","id":"contributing","level":2},{"title":"License","id":"license","level":2}],"title":"style-loader","source":"https://raw.githubusercontent.com/webpack-contrib/style-loader/master/README.md","edit":"https://github.com/webpack-contrib/style-loader/edit/master/README.md","repo":"https://github.com/webpack-contrib/style-loader","thirdParty":true,"group":"CSS"},{"path":"src/content/loaders/_stylus-loader.mdx","name":"stylus-loader.mdx","size":18469,"type":"file","extension":".mdx","url":"/loaders/stylus-loader/","anchors":[{"title":"Getting Started","id":"getting-started","level":2},{"title":"Options","id":"options","level":2},{"title":"stylusOptions","id":"stylusoptions","level":3},{"title":"sourceMap","id":"sourcemap","level":3},{"title":"webpackImporter","id":"webpackimporter","level":3},{"title":"additionalData","id":"additionaldata","level":3},{"title":"implementation","id":"implementation","level":3},{"title":"Examples","id":"examples","level":2},{"title":"Normal Usage","id":"normal-usage","level":3},{"title":"Source maps","id":"source-maps","level":3},{"title":"Using nib with stylus","id":"using-nib-with-stylus","level":3},{"title":"Import JSON files","id":"import-json-files","level":3},{"title":"In production","id":"in-production","level":3},{"title":"webpack resolver","id":"webpack-resolver","level":3},{"title":"Stylus resolver","id":"stylus-resolver","level":3},{"title":"Extracting style sheets","id":"extracting-style-sheets","level":3},{"title":"Contributing","id":"contributing","level":2},{"title":"License","id":"license","level":2}],"title":"stylus-loader","source":"https://raw.githubusercontent.com/webpack-contrib/stylus-loader/master/README.md","edit":"https://github.com/webpack-contrib/stylus-loader/edit/master/README.md","repo":"https://github.com/webpack-contrib/stylus-loader","thirdParty":true,"group":"CSS"}],"size":297887,"type":"directory","url":"/loaders/"},{"path":"src/content/migrate","name":"migrate","children":[{"path":"src/content/migrate/index.mdx","name":"index.mdx","size":161,"type":"file","extension":".mdx","url":"/migrate/","anchors":[],"title":"Migrate","sort":-1,"contributors":["EugeneHlushko"]},{"path":"src/content/migrate/5.mdx","name":"5.mdx","size":15701,"type":"file","extension":".mdx","url":"/migrate/5/","anchors":[{"title":"Preparations","id":"preparations","level":2},{"title":"Upgrade webpack 4 and its plugins/loaders","id":"upgrade-webpack-4-and-its-pluginsloaders","level":2},{"title":"Make sure your build has no errors or warnings","id":"make-sure-your-build-has-no-errors-or-warnings","level":3},{"title":"Make sure to use mode","id":"make-sure-to-use-mode","level":3},{"title":"Update outdated options","id":"update-outdated-options","level":3},{"title":"Test webpack 5 compatibility","id":"test-webpack-5-compatibility","level":3},{"title":"Upgrade webpack to 5","id":"upgrade-webpack-to-5","level":2},{"title":"Clean up configuration","id":"clean-up-configuration","level":3},{"title":"Need to support an older browser like IE 11?","id":"need-to-support-an-older-browser-like-ie-11","level":3},{"title":"Cleanup the code","id":"cleanup-the-code","level":3},{"title":"Run a single build and follow advice","id":"run-a-single-build-and-follow-advice","level":3},{"title":"Everything works?","id":"everything-works","level":2},{"title":"It is not working?","id":"it-is-not-working","level":2},{"title":"Something missing in this guide?","id":"something-missing-in-this-guide","level":2},{"title":"Changes to internals","id":"changes-to-internals","level":2},{"title":"getOptions method for Loaders","id":"getoptions-method-for-loaders","level":3}],"title":"To v5 from v4","sort":1,"contributors":["sokra","salemhilal","keichinger","EugeneHlushko","MattGoldwater","rramaa","chenxsan","jamesgeorge007","getsnoopy","yevhen-logosha"]},{"path":"src/content/migrate/4.mdx","name":"4.mdx","size":4115,"type":"file","extension":".mdx","url":"/migrate/4/","anchors":[{"title":"Node.js v4","id":"nodejs-v4","level":2},{"title":"CLI","id":"cli","level":2},{"title":"Update plugins","id":"update-plugins","level":2},{"title":"mode","id":"mode","level":2},{"title":"Deprecated/Removed plugins","id":"deprecatedremoved-plugins","level":2},{"title":"CommonsChunkPlugin","id":"commonschunkplugin","level":2},{"title":"import() and CommonJS","id":"import-and-commonjs","level":2},{"title":"json and loaders","id":"json-and-loaders","level":2},{"title":"module.loaders","id":"moduleloaders","level":2}],"title":"To v4 from v3","sort":2,"contributors":["sokra","EugeneHlushko","Kolhar730"],"related":[{"title":"To v2 or v3 from v1","url":"https://webpack.js.org/migrate/3/"},{"title":"RIP CommonChunkPlugin","url":"https://gist.github.com/sokra/1522d586b8e5c0f5072d7565c2bee693"},{"title":"webpack 4: migration guide for plugins/loaders","url":"https://medium.com/webpack/webpack-4-migration-guide-for-plugins-loaders-20a79b927202"}]},{"path":"src/content/migrate/3.mdx","name":"3.mdx","size":16052,"type":"file","extension":".mdx","url":"/migrate/3/","anchors":[{"title":"resolve.root, resolve.fallback, resolve.modulesDirectories","id":"resolveroot-resolvefallback-resolvemodulesdirectories","level":2},{"title":"resolve.extensions","id":"resolveextensions","level":2},{"title":"resolve.*","id":"resolve","level":2},{"title":"module.loaders is now module.rules","id":"moduleloaders-is-now-modulerules","level":2},{"title":"Chaining loaders","id":"chaining-loaders","level":2},{"title":"Automatic -loader module name extension removed","id":"automatic--loader-module-name-extension-removed","level":2},{"title":"json-loader is not required anymore","id":"json-loader-is-not-required-anymore","level":2},{"title":"Loaders in configuration resolve relative to context","id":"loaders-in-configuration-resolve-relative-to-context","level":2},{"title":"module.preLoaders and module.postLoaders were removed:","id":"modulepreloaders-and-modulepostloaders-were-removed","level":2},{"title":"UglifyJsPlugin sourceMap","id":"uglifyjsplugin-sourcemap","level":2},{"title":"UglifyJsPlugin warnings","id":"uglifyjsplugin-warnings","level":2},{"title":"UglifyJsPlugin minimize loaders","id":"uglifyjsplugin-minimize-loaders","level":2},{"title":"DedupePlugin has been removed","id":"dedupeplugin-has-been-removed","level":2},{"title":"BannerPlugin - breaking change","id":"bannerplugin---breaking-change","level":2},{"title":"OccurrenceOrderPlugin is now on by default","id":"occurrenceorderplugin-is-now-on-by-default","level":2},{"title":"ExtractTextWebpackPlugin - breaking change","id":"extracttextwebpackplugin---breaking-change","level":2},{"title":"ExtractTextPlugin.extract","id":"extracttextpluginextract","level":3},{"title":"new ExtractTextPlugin({options})","id":"new-extracttextpluginoptions","level":3},{"title":"Full dynamic requires now fail by default","id":"full-dynamic-requires-now-fail-by-default","level":2},{"title":"Using custom arguments in CLI and configuration","id":"using-custom-arguments-in-cli-and-configuration","level":3},{"title":"require.ensure and AMD require are asynchronous","id":"requireensure-and-amd-require-are-asynchronous","level":2},{"title":"Loader configuration is through options","id":"loader-configuration-is-through-options","level":2},{"title":"What are options?","id":"what-are-options","level":3},{"title":"LoaderOptionsPlugin context","id":"loaderoptionsplugin-context","level":2},{"title":"debug","id":"debug","level":2},{"title":"Code Splitting with ES2015","id":"code-splitting-with-es2015","level":2},{"title":"Dynamic expressions","id":"dynamic-expressions","level":2},{"title":"Mixing ES2015 with AMD and CommonJS","id":"mixing-es2015-with-amd-and-commonjs","level":2},{"title":"Hints","id":"hints","level":2},{"title":"Template strings","id":"template-strings","level":3},{"title":"Configuration Promise","id":"configuration-promise","level":3},{"title":"Advanced loader matching","id":"advanced-loader-matching","level":3},{"title":"More CLI options","id":"more-cli-options","level":3},{"title":"Loader changes","id":"loader-changes","level":2},{"title":"Cacheable","id":"cacheable","level":3},{"title":"Complex options","id":"complex-options","level":3}],"title":"To v2 or v3 from v1","sort":3,"contributors":["sokra","jhnns","grgur","domfarolino","johnnyreilly","jouni-kantola","frederikprijck","chrisVillanueva","bebraw","howdy39","selbekk","ndelangen","EugeneHlushko","byzyk"]},{"path":"src/content/migrate/printable.mdx","name":"printable.mdx","size":286,"type":"file","extension":".mdx","url":"/migrate/printable/","anchors":[{"title":"Migrate","id":"migrate","level":1},{"title":"To v5 from v4","id":"to-v5-from-v4","level":1},{"title":"To v4 from v3","id":"to-v4-from-v3","level":1},{"title":"To v2 or v3 from v1","id":"to-v2-or-v3-from-v1","level":1}],"title":"Printable","sort":999,"contributors":["webpack"]}],"size":36315,"type":"directory","url":"/migrate/"},{"path":"src/content/plugins","name":"plugins","children":[{"path":"src/content/plugins/index.mdx","name":"index.mdx","size":4929,"type":"file","extension":".mdx","url":"/plugins/","anchors":[],"title":"Plugins","sort":-1,"contributors":["simon04","gonzoyumo","rouzbeh84","aretecode","eko3alpha","refactorized","byzyk","EugeneHlushko","snitin315","chenxsan"]},{"path":"src/content/plugins/printable.mdx","name":"printable.mdx","size":4723,"type":"file","extension":".mdx","url":"/plugins/printable/","anchors":[{"title":"AutomaticPrefetchPlugin","id":"automaticprefetchplugin","level":1},{"title":"BannerPlugin","id":"bannerplugin","level":1},{"title":"CommonsChunkPlugin","id":"commonschunkplugin","level":1},{"title":"CompressionWebpackPlugin","id":"compressionwebpackplugin","level":1},{"title":"ContextExclusionPlugin","id":"contextexclusionplugin","level":1},{"title":"ContextReplacementPlugin","id":"contextreplacementplugin","level":1},{"title":"CopyWebpackPlugin","id":"copywebpackplugin","level":1},{"title":"CssMinimizerWebpackPlugin","id":"cssminimizerwebpackplugin","level":1},{"title":"DefinePlugin","id":"defineplugin","level":1},{"title":"DllPlugin","id":"dllplugin","level":1},{"title":"EnvironmentPlugin","id":"environmentplugin","level":1},{"title":"EslintWebpackPlugin","id":"eslintwebpackplugin","level":1},{"title":"EvalSourceMapDevToolPlugin","id":"evalsourcemapdevtoolplugin","level":1},{"title":"HashedModuleIdsPlugin","id":"hashedmoduleidsplugin","level":1},{"title":"HotModuleReplacementPlugin","id":"hotmodulereplacementplugin","level":1},{"title":"HtmlMinimizerWebpackPlugin","id":"htmlminimizerwebpackplugin","level":1},{"title":"HtmlWebpackPlugin","id":"htmlwebpackplugin","level":1},{"title":"IgnorePlugin","id":"ignoreplugin","level":1},{"title":"ImageMinimizerWebpackPlugin","id":"imageminimizerwebpackplugin","level":1},{"title":"InstallWebpackPlugin","id":"installwebpackplugin","level":1},{"title":"Internal webpack plugins","id":"internal-webpack-plugins","level":1},{"title":"JsonMinimizerWebpackPlugin","id":"jsonminimizerwebpackplugin","level":1},{"title":"LimitChunkCountPlugin","id":"limitchunkcountplugin","level":1},{"title":"MinChunkSizePlugin","id":"minchunksizeplugin","level":1},{"title":"MiniCssExtractPlugin","id":"minicssextractplugin","level":1},{"title":"ModuleConcatenationPlugin","id":"moduleconcatenationplugin","level":1},{"title":"Plugins","id":"plugins","level":1},{"title":"ModuleFederationPlugin","id":"modulefederationplugin","level":1},{"title":"NoEmitOnErrorsPlugin","id":"noemitonerrorsplugin","level":1},{"title":"NormalModuleReplacementPlugin","id":"normalmodulereplacementplugin","level":1},{"title":"PrefetchPlugin","id":"prefetchplugin","level":1},{"title":"ProfilingPlugin","id":"profilingplugin","level":1},{"title":"ProgressPlugin","id":"progressplugin","level":1},{"title":"ProvidePlugin","id":"provideplugin","level":1},{"title":"SourceMapDevToolPlugin","id":"sourcemapdevtoolplugin","level":1},{"title":"SplitChunksPlugin","id":"splitchunksplugin","level":1},{"title":"StylelintWebpackPlugin","id":"stylelintwebpackplugin","level":1},{"title":"SvgChunkWebpackPlugin","id":"svgchunkwebpackplugin","level":1},{"title":"TerserWebpackPlugin","id":"terserwebpackplugin","level":1},{"title":"WatchIgnorePlugin","id":"watchignoreplugin","level":1}],"title":"Printable","sort":999,"contributors":["webpack"]},{"path":"src/content/plugins/html-webpack-plugin.mdx","name":"html-webpack-plugin.mdx","size":2010,"type":"file","extension":".mdx","url":"/plugins/html-webpack-plugin/","anchors":[{"title":"Installation","id":"installation","level":2},{"title":"Basic Usage","id":"basic-usage","level":2},{"title":"Configuration","id":"configuration","level":2},{"title":"Third party addons","id":"third-party-addons","level":2}],"title":"HtmlWebpackPlugin","group":"Community","contributors":["ampedandwired","simon04","Sibiraj-S","EugeneHlushko"]},{"path":"src/content/plugins/_svg-chunk-webpack-plugin.mdx","name":"svg-chunk-webpack-plugin.mdx","size":9140,"type":"file","extension":".mdx","url":"/plugins/svg-chunk-webpack-plugin/","anchors":[{"title":"When to use this plugin","id":"when-to-use-this-plugin","level":2},{"title":"Zero config","id":"zero-config","level":2},{"title":"Installation","id":"installation","level":2},{"title":"Example","id":"example","level":2},{"title":"Basic usage","id":"basic-usage","level":2},{"title":"Using a configuration","id":"using-a-configuration","level":2},{"title":"Loader","id":"loader","level":3},{"title":"Plugin","id":"plugin","level":3},{"title":"filename","id":"filename","level":3},{"title":"svgstoreConfig","id":"svgstoreconfig","level":3},{"title":"generateSpritesManifest","id":"generatespritesmanifest","level":3},{"title":"generateSpritesPreview","id":"generatespritespreview","level":3},{"title":"Caching","id":"caching","level":2},{"title":"[contenthash]","id":"contenthash","level":3},{"title":"[fullhash]","id":"fullhash","level":3},{"title":"License","id":"license","level":2}],"title":"SvgChunkWebpackPlugin","group":"Community","contributors":["yoriiis","alexander-akait"],"source":"https://raw.githubusercontent.com/yoriiis/svg-chunk-webpack-plugin/main/README.md","edit":"https://github.com/yoriiis/svg-chunk-webpack-plugin/edit/main/README.md","repo":"https://github.com/yoriiis/svg-chunk-webpack-plugin","thirdParty":true},{"path":"src/content/plugins/automatic-prefetch-plugin.mdx","name":"automatic-prefetch-plugin.mdx","size":591,"type":"file","extension":".mdx","url":"/plugins/automatic-prefetch-plugin/","anchors":[],"title":"AutomaticPrefetchPlugin","group":"webpack","contributors":["sokra","EugeneHlushko"]},{"path":"src/content/plugins/banner-plugin.mdx","name":"banner-plugin.mdx","size":1650,"type":"file","extension":".mdx","url":"/plugins/banner-plugin/","anchors":[{"title":"Options","id":"options","level":2},{"title":"Usage","id":"usage","level":2},{"title":"Placeholders","id":"placeholders","level":2}],"title":"BannerPlugin","group":"webpack","contributors":["simon04","byzyk","chenxsan"],"related":[{"title":"banner-plugin-hashing test","url":"https://github.com/webpack/webpack/blob/main/test/configCases/plugins/banner-plugin-hashing/webpack.config.js"}]},{"path":"src/content/plugins/commons-chunk-plugin.mdx","name":"commons-chunk-plugin.mdx","size":9403,"type":"file","extension":".mdx","url":"/plugins/commons-chunk-plugin/","anchors":[{"title":"Options","id":"options","level":2},{"title":"Examples","id":"examples","level":2},{"title":"Commons chunk for entries","id":"commons-chunk-for-entries","level":3},{"title":"Explicit vendor chunk","id":"explicit-vendor-chunk","level":3},{"title":"Move common modules into the parent chunk","id":"move-common-modules-into-the-parent-chunk","level":3},{"title":"Extra async commons chunk","id":"extra-async-commons-chunk","level":3},{"title":"Passing the minChunks property a function","id":"passing-the-minchunks-property-a-function","level":3},{"title":"Manifest file","id":"manifest-file","level":2},{"title":"Combining implicit common vendor chunks and manifest file","id":"combining-implicit-common-vendor-chunks-and-manifest-file","level":2},{"title":"More Examples","id":"more-examples","level":2}],"title":"CommonsChunkPlugin","group":"webpack","contributors":["bebraw","simon04","christopher4lis","kevinzwhuang","jdbevan","jeremenichelli","byzyk","madhavarshney","snitin315"]},{"path":"src/content/plugins/context-exclusion-plugin.mdx","name":"context-exclusion-plugin.mdx","size":516,"type":"file","extension":".mdx","url":"/plugins/context-exclusion-plugin/","anchors":[],"title":"ContextExclusionPlugin","group":"webpack","contributors":["jeffin"]},{"path":"src/content/plugins/context-replacement-plugin.mdx","name":"context-replacement-plugin.mdx","size":3107,"type":"file","extension":".mdx","url":"/plugins/context-replacement-plugin/","anchors":[{"title":"Usage","id":"usage","level":2},{"title":"Content Callback","id":"content-callback","level":2},{"title":"Other Options","id":"other-options","level":2}],"title":"ContextReplacementPlugin","group":"webpack","contributors":["simon04","byzyk","masives","chenxsan"],"related":[{"title":"Issue 2783 - ContextReplacementPlugin Description","url":"https://github.com/webpack/webpack/issues/2783#issuecomment-234137265"},{"title":"Using context replacement module for date-fns","url":"https://github.com/date-fns/date-fns/blob/master/docs/webpack.md"}]},{"path":"src/content/plugins/define-plugin.mdx","name":"define-plugin.mdx","size":4474,"type":"file","extension":".mdx","url":"/plugins/define-plugin/","anchors":[{"title":"Usage","id":"usage","level":2},{"title":"Feature Flags","id":"feature-flags","level":2},{"title":"Service URLs","id":"service-urls","level":2},{"title":"Runtime values via runtimeValue","id":"runtime-values-via-runtimevalue","level":2}],"title":"DefinePlugin","group":"webpack","contributors":["simon04","rouzbeh84","byzyk","EugeneHlushko","smonusbonus","chenxsan"]},{"path":"src/content/plugins/dll-plugin.mdx","name":"dll-plugin.mdx","size":5586,"type":"file","extension":".mdx","url":"/plugins/dll-plugin/","anchors":[{"title":"DllPlugin","id":"dllplugin","level":2},{"title":"DllReferencePlugin","id":"dllreferenceplugin","level":2},{"title":"Modes","id":"modes","level":3},{"title":"Usage","id":"usage","level":2},{"title":"Examples","id":"examples","level":2},{"title":"References","id":"references","level":2},{"title":"Source","id":"source","level":3},{"title":"Tests","id":"tests","level":3}],"title":"DllPlugin","group":"webpack","contributors":["aretecode","sokra","opiepj","simon04","skipjack","byzyk","EugeneHlushko","EslamHiko","snitin315"],"related":[{"title":"Code Splitting Example","url":"https://github.com/webpack/webpack/blob/main/examples/explicit-vendor-chunk/README.md"}]},{"path":"src/content/plugins/environment-plugin.mdx","name":"environment-plugin.mdx","size":3629,"type":"file","extension":".mdx","url":"/plugins/environment-plugin/","anchors":[{"title":"Usage","id":"usage","level":2},{"title":"Usage with default values","id":"usage-with-default-values","level":2},{"title":"Use Case: Git Version","id":"use-case-git-version","level":2},{"title":"DotenvPlugin","id":"dotenvplugin","level":2}],"title":"EnvironmentPlugin","group":"webpack","contributors":["simon04","einarlove","rouzbeh84","byzyk"]},{"path":"src/content/plugins/eval-source-map-dev-tool-plugin.mdx","name":"eval-source-map-dev-tool-plugin.mdx","size":2779,"type":"file","extension":".mdx","url":"/plugins/eval-source-map-dev-tool-plugin/","anchors":[{"title":"Options","id":"options","level":2},{"title":"Examples","id":"examples","level":2},{"title":"Basic Use Case","id":"basic-use-case","level":3},{"title":"Exclude Vendor Maps","id":"exclude-vendor-maps","level":3}],"title":"EvalSourceMapDevToolPlugin","group":"webpack","contributors":["johnnyreilly","simon04","kinseyost","byzyk","madhavarshney","koke","jamesgeorge007","anshumanv","EugeneHlushko"],"related":[{"title":"Building Eval Source Maps","url":"https://survivejs.com/webpack/building/source-maps/#sourcemapdevtoolplugin-and-evalsourcemapdevtoolplugin"}]},{"path":"src/content/plugins/hashed-module-ids-plugin.mdx","name":"hashed-module-ids-plugin.mdx","size":1288,"type":"file","extension":".mdx","url":"/plugins/hashed-module-ids-plugin/","anchors":[{"title":"Options","id":"options","level":2},{"title":"Usage","id":"usage","level":2}],"title":"HashedModuleIdsPlugin","group":"webpack","contributors":["shaodahong","byzyk","EslamHiko"]},{"path":"src/content/plugins/hot-module-replacement-plugin.mdx","name":"hot-module-replacement-plugin.mdx","size":608,"type":"file","extension":".mdx","url":"/plugins/hot-module-replacement-plugin/","anchors":[{"title":"Basic Usage","id":"basic-usage","level":2}],"title":"HotModuleReplacementPlugin","group":"webpack","contributors":["skipjack","byzyk","chenxsan","snitin315"],"related":[{"title":"Concepts - Hot Module Replacement","url":"/concepts/hot-module-replacement"},{"title":"API - Hot Module Replacement","url":"/api/hot-module-replacement"}]},{"path":"src/content/plugins/ignore-plugin.mdx","name":"ignore-plugin.mdx","size":2077,"type":"file","extension":".mdx","url":"/plugins/ignore-plugin/","anchors":[{"title":"Using regular expressions","id":"using-regular-expressions","level":2},{"title":"Using filter functions","id":"using-filter-functions","level":2},{"title":"Example of ignoring Moment Locales","id":"example-of-ignoring-moment-locales","level":2}],"title":"IgnorePlugin","group":"webpack","contributors":["simon04","byzyk","DullReferenceException","EugeneHlushko","FadySamirSadek","iamakulov","chenxsan"]},{"path":"src/content/plugins/internal-plugins.mdx","name":"internal-plugins.mdx","size":9140,"type":"file","extension":".mdx","url":"/plugins/internal-plugins/","anchors":[{"title":"environment","id":"environment","level":2},{"title":"NodeEnvironmentPlugin","id":"nodeenvironmentplugin","level":3},{"title":"compiler","id":"compiler","level":2},{"title":"MemoryCachePlugin","id":"memorycacheplugin","level":3},{"title":"ProgressPlugin","id":"progressplugin","level":3},{"title":"RecordIdsPlugin","id":"recordidsplugin","level":3},{"title":"entry","id":"entry","level":2},{"title":"EntryPlugin","id":"entryplugin","level":3},{"title":"PrefetchPlugin","id":"prefetchplugin","level":3},{"title":"output","id":"output","level":2},{"title":"JsonpTemplatePlugin","id":"jsonptemplateplugin","level":3},{"title":"NodeTemplatePlugin","id":"nodetemplateplugin","level":3},{"title":"LibraryTemplatePlugin","id":"librarytemplateplugin","level":3},{"title":"WebWorkerTemplatePlugin","id":"webworkertemplateplugin","level":3},{"title":"EvalDevToolModulePlugin","id":"evaldevtoolmoduleplugin","level":3},{"title":"SourceMapDevToolPlugin","id":"sourcemapdevtoolplugin","level":3},{"title":"HotModuleReplacementPlugin","id":"hotmodulereplacementplugin","level":3},{"title":"source","id":"source","level":2},{"title":"APIPlugin","id":"apiplugin","level":3},{"title":"CompatibilityPlugin","id":"compatibilityplugin","level":3},{"title":"ConstPlugin","id":"constplugin","level":3},{"title":"ProvidePlugin","id":"provideplugin","level":3},{"title":"NodeStuffPlugin","id":"nodestuffplugin","level":3},{"title":"RequireJsStuffPlugin","id":"requirejsstuffplugin","level":3},{"title":"NodeSourcePlugin","id":"nodesourceplugin","level":3},{"title":"NodeTargetPlugin","id":"nodetargetplugin","level":3},{"title":"AMDPlugin","id":"amdplugin","level":3},{"title":"CommonJsPlugin","id":"commonjsplugin","level":3},{"title":"RequireContextPlugin","id":"requirecontextplugin","level":3},{"title":"RequireEnsurePlugin","id":"requireensureplugin","level":3},{"title":"RequireIncludePlugin","id":"requireincludeplugin","level":3},{"title":"DefinePlugin","id":"defineplugin","level":3},{"title":"optimize","id":"optimize","level":2},{"title":"LimitChunkCountPlugin","id":"limitchunkcountplugin","level":3},{"title":"MergeDuplicateChunksPlugin","id":"mergeduplicatechunksplugin","level":3},{"title":"RemoveEmptyChunksPlugin","id":"removeemptychunksplugin","level":3},{"title":"MinChunkSizePlugin","id":"minchunksizeplugin","level":3},{"title":"ModuleConcatenationPlugin","id":"moduleconcatenationplugin","level":3},{"title":"FlagIncludedChunksPlugin","id":"flagincludedchunksplugin","level":3},{"title":"RealContentHashPlugin","id":"realcontenthashplugin","level":3}],"title":"Internal webpack plugins","group":"webpack","contributors":["iAziz786","EugeneHlushko","ooflorent","Legends","chenxsan"]},{"path":"src/content/plugins/limit-chunk-count-plugin.mdx","name":"limit-chunk-count-plugin.mdx","size":1278,"type":"file","extension":".mdx","url":"/plugins/limit-chunk-count-plugin/","anchors":[{"title":"Options","id":"options","level":2},{"title":"maxChunks","id":"maxchunks","level":3},{"title":"minChunkSize","id":"minchunksize","level":3},{"title":"Usage via CLI","id":"usage-via-cli","level":2}],"title":"LimitChunkCountPlugin","group":"webpack","contributors":["rouzbeh84","skipjack","tbroadley","byzyk","EugeneHlushko","erykpiast"]},{"path":"src/content/plugins/min-chunk-size-plugin.mdx","name":"min-chunk-size-plugin.mdx","size":449,"type":"file","extension":".mdx","url":"/plugins/min-chunk-size-plugin/","anchors":[{"title":"Usage via CLI","id":"usage-via-cli","level":2}],"title":"MinChunkSizePlugin","group":"webpack","contributors":["byzyk","erykpiast"]},{"path":"src/content/plugins/module-concatenation-plugin.mdx","name":"module-concatenation-plugin.mdx","size":4259,"type":"file","extension":".mdx","url":"/plugins/module-concatenation-plugin/","anchors":[{"title":"Optimization Bailouts","id":"optimization-bailouts","level":2},{"title":"Module Grouping Algorithm","id":"module-grouping-algorithm","level":3},{"title":"Debugging Optimization Bailouts","id":"debugging-optimization-bailouts","level":3}],"title":"ModuleConcatenationPlugin","group":"webpack","contributors":["skipjack","TheLarkInn","byzyk"]},{"path":"src/content/plugins/module-federation-plugin.mdx","name":"module-federation-plugin.mdx","size":8517,"type":"file","extension":".mdx","url":"/plugins/module-federation-plugin/","anchors":[{"title":"Options","id":"options","level":2},{"title":"runtime","id":"runtime","level":3},{"title":"Sharing libraries","id":"sharing-libraries","level":3}],"title":"ModuleFederationPlugin","group":"webpack","contributors":["XiaofengXie16","chenxsan","burhanuday","christian24"],"related":[{"title":"Module Federation","url":"/concepts/module-federation/"}]},{"path":"src/content/plugins/NoEmitOnErrorsPlugin.mdx","name":"NoEmitOnErrorsPlugin.mdx","size":434,"type":"file","extension":".mdx","url":"/plugins/NoEmitOnErrorsPlugin/","anchors":[],"title":"NoEmitOnErrorsPlugin","group":"webpack","contributors":["jeffin","chenxsan","snitin315"]},{"path":"src/content/plugins/normal-module-replacement-plugin.mdx","name":"normal-module-replacement-plugin.mdx","size":2723,"type":"file","extension":".mdx","url":"/plugins/normal-module-replacement-plugin/","anchors":[{"title":"Basic Example","id":"basic-example","level":2},{"title":"Advanced Example","id":"advanced-example","level":2}],"title":"NormalModuleReplacementPlugin","group":"webpack","contributors":["gonzoyumo","byzyk","chenxsan"]},{"path":"src/content/plugins/prefetch-plugin.mdx","name":"prefetch-plugin.mdx","size":503,"type":"file","extension":".mdx","url":"/plugins/prefetch-plugin/","anchors":[{"title":"Options","id":"options","level":2}],"title":"PrefetchPlugin","group":"webpack","contributors":["skipjack","byzyk"]},{"path":"src/content/plugins/profiling-plugin.mdx","name":"profiling-plugin.mdx","size":937,"type":"file","extension":".mdx","url":"/plugins/profiling-plugin/","anchors":[{"title":"Options","id":"options","level":2},{"title":"Usage: default","id":"usage-default","level":2},{"title":"Usage: custom outputPath","id":"usage-custom-outputpath","level":2}],"title":"ProfilingPlugin","group":"webpack","contributors":["EugeneHlushko","byzyk","akgupta0777"]},{"path":"src/content/plugins/progress-plugin.mdx","name":"progress-plugin.mdx","size":4984,"type":"file","extension":".mdx","url":"/plugins/progress-plugin/","anchors":[{"title":"Usage","id":"usage","level":2},{"title":"Providing function","id":"providing-function","level":3},{"title":"Providing object","id":"providing-object","level":3},{"title":"webpack.ProgressPlugin.createDefaultHandler","id":"webpackprogressplugincreatedefaulthandler","level":3},{"title":"Percentage calculation","id":"percentage-calculation","level":2},{"title":"Supported Hooks","id":"supported-hooks","level":2},{"title":"Source","id":"source","level":2}],"title":"ProgressPlugin","group":"webpack","contributors":["elliottsj","EugeneHlushko","byzyk","smelukov","chenxsan"]},{"path":"src/content/plugins/provide-plugin.mdx","name":"provide-plugin.mdx","size":1893,"type":"file","extension":".mdx","url":"/plugins/provide-plugin/","anchors":[{"title":"Usage: jQuery","id":"usage-jquery","level":2},{"title":"Usage: jQuery with Angular 1","id":"usage-jquery-with-angular-1","level":2},{"title":"Usage: Lodash Map","id":"usage-lodash-map","level":2},{"title":"Usage: Vue.js","id":"usage-vuejs","level":3}],"title":"ProvidePlugin","group":"webpack","contributors":["sokra","simon04","re-fort","byzyk","seckin92"]},{"path":"src/content/plugins/source-map-dev-tool-plugin.mdx","name":"source-map-dev-tool-plugin.mdx","size":4597,"type":"file","extension":".mdx","url":"/plugins/source-map-dev-tool-plugin/","anchors":[{"title":"Options","id":"options","level":2},{"title":"Examples","id":"examples","level":2},{"title":"Basic Use Case","id":"basic-use-case","level":3},{"title":"Exclude Vendor Maps","id":"exclude-vendor-maps","level":3},{"title":"Host Source Maps Externally","id":"host-source-maps-externally","level":3}],"title":"SourceMapDevToolPlugin","group":"webpack","contributors":["johnnyreilly","simon04","neilkennedy","byzyk","EugeneHlushko","chenxsan"],"related":[{"title":"Building Source Maps","url":"https://survivejs.com/webpack/building/source-maps/#-sourcemapdevtoolplugin-and-evalsourcemapdevtoolplugin-"}]},{"path":"src/content/plugins/split-chunks-plugin.mdx","name":"split-chunks-plugin.mdx","size":21409,"type":"file","extension":".mdx","url":"/plugins/split-chunks-plugin/","anchors":[{"title":"Defaults","id":"defaults","level":2},{"title":"Configuration","id":"configuration","level":2},{"title":"optimization.splitChunks","id":"optimizationsplitchunks","level":2},{"title":"splitChunks.automaticNameDelimiter","id":"splitchunksautomaticnamedelimiter","level":3},{"title":"splitChunks.chunks","id":"splitchunkschunks","level":3},{"title":"splitChunks.maxAsyncRequests","id":"splitchunksmaxasyncrequests","level":3},{"title":"splitChunks.maxInitialRequests","id":"splitchunksmaxinitialrequests","level":3},{"title":"splitChunks.defaultSizeTypes","id":"splitchunksdefaultsizetypes","level":3},{"title":"splitChunks.minChunks","id":"splitchunksminchunks","level":3},{"title":"splitChunks.hidePathInfo","id":"splitchunkshidepathinfo","level":3},{"title":"splitChunks.minSize","id":"splitchunksminsize","level":3},{"title":"splitChunks.minSizeReduction","id":"splitchunksminsizereduction","level":3},{"title":"splitChunks.enforceSizeThreshold","id":"splitchunksenforcesizethreshold","level":3},{"title":"splitChunks.minRemainingSize","id":"splitchunksminremainingsize","level":3},{"title":"splitChunks.layer","id":"splitchunkslayer","level":3},{"title":"splitChunks.maxSize","id":"splitchunksmaxsize","level":3},{"title":"splitChunks.maxAsyncSize","id":"splitchunksmaxasyncsize","level":3},{"title":"splitChunks.maxInitialSize","id":"splitchunksmaxinitialsize","level":3},{"title":"splitChunks.name","id":"splitchunksname","level":3},{"title":"splitChunks.usedExports","id":"splitchunksusedexports","level":3},{"title":"splitChunks.cacheGroups","id":"splitchunkscachegroups","level":3},{"title":"Examples","id":"examples","level":2},{"title":"Defaults: Example 1","id":"defaults-example-1","level":3},{"title":"Defaults: Example 2","id":"defaults-example-2","level":3},{"title":"Split Chunks: Example 1","id":"split-chunks-example-1","level":3},{"title":"Split Chunks: Example 2","id":"split-chunks-example-2","level":3},{"title":"Split Chunks: Example 3","id":"split-chunks-example-3","level":3}],"title":"SplitChunksPlugin","group":"webpack","contributors":["sokra","jeremenichelli","Priestch","chrisdothtml","EugeneHlushko","byzyk","jacobangel","madhavarshney","sakhisheikh","superburrito","ryandrew14","snitin315","chenxsan","rohrlaf","jamesgeorge007","anshumanv","snitin315"],"related":[{"title":"webpack\'s automatic deduplication algorithm example","url":"https://github.com/webpack/webpack/blob/main/examples/many-pages/README.md"},{"title":"webpack 4: Code Splitting, chunk graph and the splitChunks optimization","url":"https://medium.com/webpack/webpack-4-code-splitting-chunk-graph-and-the-splitchunks-optimization-be739a861366"}]},{"path":"src/content/plugins/watch-ignore-plugin.mdx","name":"watch-ignore-plugin.mdx","size":552,"type":"file","extension":".mdx","url":"/plugins/watch-ignore-plugin/","anchors":[{"title":"Options","id":"options","level":2}],"title":"WatchIgnorePlugin","group":"webpack","contributors":["skipjack","byzyk","EugeneHlushko"]},{"path":"src/content/plugins/_compression-webpack-plugin.mdx","name":"compression-webpack-plugin.mdx","size":13061,"type":"file","extension":".mdx","url":"/plugins/compression-webpack-plugin/","anchors":[{"title":"Getting Started","id":"getting-started","level":2},{"title":"Options","id":"options","level":2},{"title":"test","id":"test","level":3},{"title":"include","id":"include","level":3},{"title":"exclude","id":"exclude","level":3},{"title":"algorithm","id":"algorithm","level":3},{"title":"compressionOptions","id":"compressionoptions","level":3},{"title":"threshold","id":"threshold","level":3},{"title":"minRatio","id":"minratio","level":3},{"title":"filename","id":"filename","level":3},{"title":"deleteOriginalAssets","id":"deleteoriginalassets","level":3},{"title":"Examples","id":"examples","level":2},{"title":"Using Zopfli","id":"using-zopfli","level":3},{"title":"Using Brotli","id":"using-brotli","level":3},{"title":"Multiple compressed versions of assets for different algorithm","id":"multiple-compressed-versions-of-assets-for-different-algorithm","level":3},{"title":"Contributing","id":"contributing","level":2},{"title":"License","id":"license","level":2}],"title":"CompressionWebpackPlugin","group":"webpack contrib","source":"https://raw.githubusercontent.com/webpack-contrib/compression-webpack-plugin/master/README.md","edit":"https://github.com/webpack-contrib/compression-webpack-plugin/edit/master/README.md","repo":"https://github.com/webpack-contrib/compression-webpack-plugin","thirdParty":true},{"path":"src/content/plugins/_copy-webpack-plugin.mdx","name":"copy-webpack-plugin.mdx","size":28477,"type":"file","extension":".mdx","url":"/plugins/copy-webpack-plugin/","anchors":[{"title":"Getting Started","id":"getting-started","level":2},{"title":"Options","id":"options","level":2},{"title":"Patterns","id":"patterns","level":3},{"title":"noErrorOnMissing","id":"noerroronmissing","level":3},{"title":"Options","id":"options-1","level":3},{"title":"Examples","id":"examples","level":3},{"title":"Contributing","id":"contributing","level":2},{"title":"License","id":"license","level":2}],"title":"CopyWebpackPlugin","group":"webpack contrib","source":"https://raw.githubusercontent.com/webpack-contrib/copy-webpack-plugin/master/README.md","edit":"https://github.com/webpack-contrib/copy-webpack-plugin/edit/master/README.md","repo":"https://github.com/webpack-contrib/copy-webpack-plugin","thirdParty":true},{"path":"src/content/plugins/_css-minimizer-webpack-plugin.mdx","name":"css-minimizer-webpack-plugin.mdx","size":17011,"type":"file","extension":".mdx","url":"/plugins/css-minimizer-webpack-plugin/","anchors":[{"title":"Getting Started","id":"getting-started","level":2},{"title":"Note about source maps","id":"note-about-source-maps","level":2},{"title":"Options","id":"options","level":2},{"title":"test","id":"test","level":3},{"title":"include","id":"include","level":3},{"title":"exclude","id":"exclude","level":3},{"title":"parallel","id":"parallel","level":3},{"title":"minify","id":"minify","level":3},{"title":"minimizerOptions","id":"minimizeroptions","level":3},{"title":"warningsFilter","id":"warningsfilter","level":3},{"title":"Examples","id":"examples","level":2},{"title":"Use sourcemaps","id":"use-sourcemaps","level":3},{"title":"Remove all comments","id":"remove-all-comments","level":3},{"title":"Contributing","id":"contributing","level":2},{"title":"License","id":"license","level":2}],"title":"CssMinimizerWebpackPlugin","group":"webpack contrib","source":"https://raw.githubusercontent.com/webpack-contrib/css-minimizer-webpack-plugin/master/README.md","edit":"https://github.com/webpack-contrib/css-minimizer-webpack-plugin/edit/master/README.md","repo":"https://github.com/webpack-contrib/css-minimizer-webpack-plugin","thirdParty":true},{"path":"src/content/plugins/_eslint-webpack-plugin.mdx","name":"eslint-webpack-plugin.mdx","size":8434,"type":"file","extension":".mdx","url":"/plugins/eslint-webpack-plugin/","anchors":[{"title":"Getting Started","id":"getting-started","level":2},{"title":"Options","id":"options","level":2},{"title":"cache","id":"cache","level":3},{"title":"cacheLocation","id":"cachelocation","level":3},{"title":"configType","id":"configtype","level":3},{"title":"context","id":"context","level":3},{"title":"eslintPath","id":"eslintpath","level":3},{"title":"extensions","id":"extensions","level":3},{"title":"exclude","id":"exclude","level":3},{"title":"resourceQueryExclude","id":"resourcequeryexclude","level":3},{"title":"files","id":"files","level":3},{"title":"fix","id":"fix","level":3},{"title":"formatter","id":"formatter","level":3},{"title":"lintDirtyModulesOnly","id":"lintdirtymodulesonly","level":3},{"title":"threads","id":"threads","level":3},{"title":"Errors and Warning","id":"errors-and-warning","level":3},{"title":"Changelog","id":"changelog","level":2},{"title":"Contributing","id":"contributing","level":2},{"title":"License","id":"license","level":2}],"title":"EslintWebpackPlugin","group":"webpack contrib","source":"https://raw.githubusercontent.com/webpack-contrib/eslint-webpack-plugin/master/README.md","edit":"https://github.com/webpack-contrib/eslint-webpack-plugin/edit/master/README.md","repo":"https://github.com/webpack-contrib/eslint-webpack-plugin","thirdParty":true},{"path":"src/content/plugins/_html-minimizer-webpack-plugin.mdx","name":"html-minimizer-webpack-plugin.mdx","size":15965,"type":"file","extension":".mdx","url":"/plugins/html-minimizer-webpack-plugin/","anchors":[{"title":"Getting Started","id":"getting-started","level":2},{"title":"Options","id":"options","level":2},{"title":"test","id":"test","level":3},{"title":"include","id":"include","level":3},{"title":"exclude","id":"exclude","level":3},{"title":"parallel","id":"parallel","level":3},{"title":"minify","id":"minify","level":3},{"title":"minimizerOptions","id":"minimizeroptions","level":3},{"title":"Examples","id":"examples","level":2},{"title":"swc/html","id":"swchtml","level":3},{"title":"@minify-html/node","id":"minify-htmlnode","level":3},{"title":"Contributing","id":"contributing","level":2},{"title":"License","id":"license","level":2}],"title":"HtmlMinimizerWebpackPlugin","group":"webpack contrib","source":"https://raw.githubusercontent.com/webpack-contrib/html-minimizer-webpack-plugin/master/README.md","edit":"https://github.com/webpack-contrib/html-minimizer-webpack-plugin/edit/master/README.md","repo":"https://github.com/webpack-contrib/html-minimizer-webpack-plugin","thirdParty":true},{"path":"src/content/plugins/_image-minimizer-webpack-plugin.mdx","name":"image-minimizer-webpack-plugin.mdx","size":66339,"type":"file","extension":".mdx","url":"/plugins/image-minimizer-webpack-plugin/","anchors":[{"title":"Getting Started","id":"getting-started","level":2},{"title":"Install an Optimization/Generation Tool","id":"install-an-optimizationgeneration-tool","level":3},{"title":"Advanced setup","id":"advanced-setup","level":3},{"title":"Plugin Options","id":"plugin-options","level":2},{"title":"test","id":"test","level":3},{"title":"include","id":"include","level":3},{"title":"exclude","id":"exclude","level":3},{"title":"minimizer","id":"minimizer","level":3},{"title":"generator","id":"generator","level":3},{"title":"severityError","id":"severityerror","level":3},{"title":"loader","id":"loader","level":3},{"title":"concurrency","id":"concurrency","level":3},{"title":"deleteOriginalAssets","id":"deleteoriginalassets","level":3},{"title":"Loader Options","id":"loader-options","level":2},{"title":"minimizer","id":"minimizer-1","level":3},{"title":"generator","id":"generator-1","level":3},{"title":"severityError","id":"severityerror-1","level":3},{"title":"Additional API","id":"additional-api","level":2},{"title":"imageminNormalizeConfig(config)","id":"imageminnormalizeconfigconfig","level":3},{"title":"Examples","id":"examples","level":2},{"title":"Optimize images based on size","id":"optimize-images-based-on-size","level":3},{"title":"Optimize and generate webp images","id":"optimize-and-generate-webp-images","level":3},{"title":"Generate webp images from copied assets","id":"generate-webp-images-from-copied-assets","level":3},{"title":"Contributing","id":"contributing","level":2},{"title":"License","id":"license","level":2}],"title":"ImageMinimizerWebpackPlugin","group":"webpack contrib","source":"https://raw.githubusercontent.com/webpack-contrib/image-minimizer-webpack-plugin/master/README.md","edit":"https://github.com/webpack-contrib/image-minimizer-webpack-plugin/edit/master/README.md","repo":"https://github.com/webpack-contrib/image-minimizer-webpack-plugin","thirdParty":true},{"path":"src/content/plugins/_install-webpack-plugin.mdx","name":"install-webpack-plugin.mdx","size":5303,"type":"file","extension":".mdx","url":"/plugins/install-webpack-plugin/","anchors":[{"title":"Usage","id":"usage","level":1},{"title":"Options","id":"options","level":1},{"title":"dependencies","id":"dependencies","level":2},{"title":"peer","id":"peer","level":3},{"title":"packageManager","id":"packagemanager","level":2},{"title":"type","id":"type","level":3},{"title":"options","id":"options-1","level":3},{"title":"arguments","id":"arguments","level":3},{"title":"dev","id":"dev","level":3},{"title":"quiet","id":"quiet","level":3},{"title":"prompt","id":"prompt","level":2},{"title":"Demo","id":"demo","level":1},{"title":"Features","id":"features","level":1},{"title":"Contributing","id":"contributing","level":2}],"title":"InstallWebpackPlugin","group":"webpack contrib","source":"https://raw.githubusercontent.com/webpack-contrib/install-webpack-plugin/master/README.md","edit":"https://github.com/webpack-contrib/install-webpack-plugin/edit/master/README.md","repo":"https://github.com/webpack-contrib/install-webpack-plugin","thirdParty":true},{"path":"src/content/plugins/_json-minimizer-webpack-plugin.mdx","name":"json-minimizer-webpack-plugin.mdx","size":5055,"type":"file","extension":".mdx","url":"/plugins/json-minimizer-webpack-plugin/","anchors":[{"title":"Getting Started","id":"getting-started","level":2},{"title":"Options","id":"options","level":2},{"title":"test","id":"test","level":3},{"title":"include","id":"include","level":3},{"title":"exclude","id":"exclude","level":3},{"title":"minimizerOptions","id":"minimizeroptions","level":3},{"title":"Contributing","id":"contributing","level":2},{"title":"License","id":"license","level":2}],"title":"JsonMinimizerWebpackPlugin","group":"webpack contrib","source":"https://raw.githubusercontent.com/webpack-contrib/json-minimizer-webpack-plugin/master/README.md","edit":"https://github.com/webpack-contrib/json-minimizer-webpack-plugin/edit/master/README.md","repo":"https://github.com/webpack-contrib/json-minimizer-webpack-plugin","thirdParty":true},{"path":"src/content/plugins/_mini-css-extract-plugin.mdx","name":"mini-css-extract-plugin.mdx","size":31601,"type":"file","extension":".mdx","url":"/plugins/mini-css-extract-plugin/","anchors":[{"title":"Getting Started","id":"getting-started","level":2},{"title":"Options","id":"options","level":2},{"title":"Plugin Options","id":"plugin-options","level":3},{"title":"Loader Options","id":"loader-options","level":3},{"title":"Examples","id":"examples","level":2},{"title":"Recommended","id":"recommended","level":3},{"title":"Minimal example","id":"minimal-example","level":3},{"title":"Named export for CSS Modules","id":"named-export-for-css-modules","level":3},{"title":"The publicPath option as function","id":"the-publicpath-option-as-function","level":3},{"title":"Advanced configuration example","id":"advanced-configuration-example","level":3},{"title":"Hot Module Reloading (HMR)","id":"hot-module-reloading-hmr","level":3},{"title":"Minimizing For Production","id":"minimizing-for-production","level":3},{"title":"Using preloaded or inlined CSS","id":"using-preloaded-or-inlined-css","level":3},{"title":"Extracting all CSS in a single file","id":"extracting-all-css-in-a-single-file","level":3},{"title":"Extracting CSS based on entry","id":"extracting-css-based-on-entry","level":3},{"title":"Filename Option as function","id":"filename-option-as-function","level":3},{"title":"Long Term Caching","id":"long-term-caching","level":3},{"title":"Remove Order Warnings","id":"remove-order-warnings","level":3},{"title":"Multiple Themes","id":"multiple-themes","level":3},{"title":"Media Query Plugin","id":"media-query-plugin","level":3},{"title":"Hooks","id":"hooks","level":2},{"title":"beforeTagInsert","id":"beforetaginsert","level":3},{"title":"Contributing","id":"contributing","level":2},{"title":"License","id":"license","level":2}],"title":"MiniCssExtractPlugin","group":"webpack contrib","source":"https://raw.githubusercontent.com/webpack-contrib/mini-css-extract-plugin/master/README.md","edit":"https://github.com/webpack-contrib/mini-css-extract-plugin/edit/master/README.md","repo":"https://github.com/webpack-contrib/mini-css-extract-plugin","thirdParty":true},{"path":"src/content/plugins/_stylelint-webpack-plugin.mdx","name":"stylelint-webpack-plugin.mdx","size":7934,"type":"file","extension":".mdx","url":"/plugins/stylelint-webpack-plugin/","anchors":[{"title":"Getting Started","id":"getting-started","level":2},{"title":"Options","id":"options","level":2},{"title":"cache","id":"cache","level":3},{"title":"cacheLocation","id":"cachelocation","level":3},{"title":"configFile","id":"configfile","level":3},{"title":"context","id":"context","level":3},{"title":"exclude","id":"exclude","level":3},{"title":"extensions","id":"extensions","level":3},{"title":"files","id":"files","level":3},{"title":"fix","id":"fix","level":3},{"title":"formatter","id":"formatter","level":3},{"title":"lintDirtyModulesOnly","id":"lintdirtymodulesonly","level":3},{"title":"stylelintPath","id":"stylelintpath","level":3},{"title":"threads","id":"threads","level":3},{"title":"Errors and Warning","id":"errors-and-warning","level":3},{"title":"Changelog","id":"changelog","level":2},{"title":"Contributing","id":"contributing","level":2},{"title":"License","id":"license","level":2}],"title":"StylelintWebpackPlugin","group":"webpack contrib","source":"https://raw.githubusercontent.com/webpack-contrib/stylelint-webpack-plugin/master/README.md","edit":"https://github.com/webpack-contrib/stylelint-webpack-plugin/edit/master/README.md","repo":"https://github.com/webpack-contrib/stylelint-webpack-plugin","thirdParty":true},{"path":"src/content/plugins/_terser-webpack-plugin.mdx","name":"terser-webpack-plugin.mdx","size":21861,"type":"file","extension":".mdx","url":"/plugins/terser-webpack-plugin/","anchors":[{"title":"Getting Started","id":"getting-started","level":2},{"title":"Note about source maps","id":"note-about-source-maps","level":2},{"title":"Options","id":"options","level":2},{"title":"test","id":"test","level":3},{"title":"include","id":"include","level":3},{"title":"exclude","id":"exclude","level":3},{"title":"parallel","id":"parallel","level":3},{"title":"minify","id":"minify","level":3},{"title":"terserOptions","id":"terseroptions","level":3},{"title":"extractComments","id":"extractcomments","level":3},{"title":"Examples","id":"examples","level":2},{"title":"Preserve Comments","id":"preserve-comments","level":3},{"title":"Remove Comments","id":"remove-comments","level":3},{"title":"Custom Minify Function","id":"custom-minify-function","level":3},{"title":"Typescript","id":"typescript","level":3},{"title":"Contributing","id":"contributing","level":2},{"title":"License","id":"license","level":2}],"title":"TerserWebpackPlugin","group":"webpack contrib","source":"https://raw.githubusercontent.com/webpack-contrib/terser-webpack-plugin/master/README.md","edit":"https://github.com/webpack-contrib/terser-webpack-plugin/edit/master/README.md","repo":"https://github.com/webpack-contrib/terser-webpack-plugin","thirdParty":true}],"size":339226,"type":"directory","url":"/plugins/"},{"path":"src/content/index.mdx","name":"index.mdx","size":940,"type":"file","extension":".mdx","url":"/","anchors":[{"title":"Write Your Code","id":"write-your-code","level":2},{"title":"Bundle It","id":"bundle-it","level":2},{"title":"Awesome isn\'t it? Let\'s dive in!","id":"awesome-isnt-it-lets-dive-in","level":2}],"title":"webpack","sort":-1},{"path":"src/content/comparison.mdx","name":"comparison.mdx","size":18878,"type":"file","extension":".mdx","url":"/comparison/","anchors":[{"title":"Bundling vs. Loading","id":"bundling-vs-loading","level":2}],"title":"Comparison","sort":1,"contributors":["pksjce","bebraw","chrisVillanueva","tashian","simon04","byzyk"],"related":[{"title":"JSPM vs. webpack","url":"https://ilikekillnerds.com/2015/07/jspm-vs-webpack/"},{"title":"webpack vs. Browserify vs. SystemJS","url":"https://engineering.velocityapp.com/webpack-vs-browersify-vs-systemjs-for-spas-95b349a41fa0"}]},{"path":"src/content/awesome-webpack.mdx","name":"awesome-webpack.mdx","size":43299,"type":"file","extension":".mdx","url":"/awesome-webpack/","anchors":[{"title":"Webpack Ecosystem","id":"webpack-ecosystem","level":2},{"title":"Support Webpack","id":"support-webpack","level":3},{"title":"Community","id":"community","level":3},{"title":"Twitter","id":"twitter","level":3},{"title":"Libraries","id":"libraries","level":2},{"title":"Loaders","id":"loaders","level":3},{"title":"Integration Libraries","id":"integration-libraries","level":3},{"title":"Webpack Plugins","id":"webpack-plugins","level":3},{"title":"Webpack Tools","id":"webpack-tools","level":3},{"title":"Research & Training","id":"research--training","level":2},{"title":"Articles","id":"articles","level":3},{"title":"Videos","id":"videos","level":3},{"title":"Courses","id":"courses","level":3},{"title":"Books","id":"books","level":3},{"title":"Webpack Examples","id":"webpack-examples","level":3},{"title":"Community Examples","id":"community-examples","level":3},{"title":"Other","id":"other","level":3}],"title":"Awesome webpack","sort":2,"contributors":["snitin315","licg9999","evenstensberg"]},{"path":"src/content/branding.mdx","name":"branding.mdx","size":5677,"type":"file","extension":".mdx","url":"/branding/","anchors":[{"title":"The Name","id":"the-name","level":2},{"title":"Logo","id":"logo","level":2},{"title":"Icon only","id":"icon-only","level":2},{"title":"Color Palette","id":"color-palette","level":2},{"title":"License","id":"license","level":2}],"title":"Branding Guidelines","sort":2,"contributors":["jhnns","skipjack","rouzbeh84","byzyk"]},{"path":"src/content/glossary.mdx","name":"glossary.mdx","size":5804,"type":"file","extension":".mdx","url":"/glossary/","anchors":[{"title":"A","id":"a","level":2},{"title":"B","id":"b","level":2},{"title":"C","id":"c","level":2},{"title":"D","id":"d","level":2},{"title":"E","id":"e","level":2},{"title":"H","id":"h","level":2},{"title":"L","id":"l","level":2},{"title":"M","id":"m","level":2},{"title":"O","id":"o","level":2},{"title":"P","id":"p","level":2},{"title":"R","id":"r","level":2},{"title":"S","id":"s","level":2},{"title":"T","id":"t","level":2},{"title":"V","id":"v","level":2},{"title":"W","id":"w","level":2}],"title":"Glossary","sort":3,"contributors":["kryptokinght","rouzbeh84","bebraw","skipjack","byzyk","pranshuchittora","jamesgeorge007"]},{"path":"src/content/license.mdx","name":"license.mdx","size":770,"type":"file","extension":".mdx","url":"/license/","anchors":[{"title":"webpack","id":"webpack","level":2},{"title":"webpack logo and icon","id":"webpack-logo-and-icon","level":2},{"title":"webpack documentation","id":"webpack-documentation","level":2},{"title":"webpack code samples","id":"webpack-code-samples","level":2}],"title":"License","sort":5,"contributors":["EugeneHlushko","pranshuchittora"]},{"path":"src/content/printable.mdx","name":"printable.mdx","size":505,"type":"file","extension":".mdx","url":"/printable/","anchors":[{"title":"webpack","id":"webpack","level":1},{"title":"Comparison","id":"comparison","level":1},{"title":"Awesome webpack","id":"awesome-webpack","level":1},{"title":"Branding Guidelines","id":"branding-guidelines","level":1},{"title":"Glossary","id":"glossary","level":1},{"title":"License","id":"license","level":1}],"title":"Printable","sort":999,"contributors":["webpack"]}],"size":1717104,"type":"directory","url":"/"}');
 ;// CONCATENATED MODULE: ./components/Site/clientSideRedirections.js
 // RedirectWebpackPlugin won't work for URI fragments
 // hence we redirect them with client side script
@@ -306240,7 +306505,7 @@ function PrintScript() {
   });
 }
 ;// CONCATENATED MODULE: ../dist/prod-assets-manifest.json
-const prod_assets_manifest_namespaceObject = JSON.parse('{"js":["/vendor.a8883abd3205da0f.js","/index.c5b7df671d879009.js"],"i":["/index.164e87ee23c5f6e9.css","/5701.1dee01a036acb042.css"]}');
+const prod_assets_manifest_namespaceObject = JSON.parse('{"js":["/vendor.a8883abd3205da0f.js","/index.069d94385bd73fdd.js"],"i":["/index.164e87ee23c5f6e9.css","/5701.1dee01a036acb042.css"]}');
 ;// CONCATENATED MODULE: ./server.jsx
 // Import External Dependencies
 
